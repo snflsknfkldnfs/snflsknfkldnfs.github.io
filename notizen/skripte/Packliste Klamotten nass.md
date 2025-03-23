@@ -1,0 +1,3 @@
+___
+- [ ] Regenjacke 💧
+- [ ] wasserfeste Schuhe 💧

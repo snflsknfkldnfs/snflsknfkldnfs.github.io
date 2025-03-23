@@ -1,0 +1,2 @@
+An der Tafel hängt ein Schild mit einem Haltestellen-Zeichen. 
+Wenn die Schüler fertig mit der Einzelarbeit sind, gehen sie zu diesem Punkt und warten, bis ein zweiter Schüler kommt, mit dem sie dann die Ergebnisse vergleichen. Die beiden können die Ergebnisse entweder am Platz, oder an der Tafel vergleichen. Auch möglich die Haltestelle in den Gang zu machen. 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leben im alten Ägypten - Bildkarten</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .bildkarten-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .karten-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .bildkarte {
+            width: 200px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .bildkarte img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .bildkarte h3 {
+            margin: 10px 0;
+            color: #2980b9;
+        }
+        .emoji {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .kategorie {
+            background-color: #e3f2fd;
+            padding: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bildkarten-container">
+        <h1>Leben im alten Ägypten - Bildkarten</h1>
+        
+        <div class="instructions">
+            <h3>Aufgabe:</h3>
+            <p>Ordne die Bildkarten den verschiedenen Gruppen im alten Ägypten zu.</p>
+        </div>
+        
+        <h2 class="kategorie">Wohnen</h2>
+        <div class="karten-grid">
+            <div class="bildkarte">
+                <div class="emoji">🏰</div>
+                <h3>Palast</h3>
+                <p>Großes, prächtiges Haus des Pharao</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">🏠</div>
+                <h3>Großes Haus</h3>
+                <p>Haus der Beamten mit vielen Räumen</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">🏘️</div>
+                <h3>Reihenhaus</h3>
+                <p>Haus der Handwerker in Handwerkerdörfern</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">🏚️</div>
+                <h3>Lehmhütte</h3>
+                <p>Kleine Hütte der Bauern mit nur zwei Räumen</p>
+            </div>
+        </div>
+        
+        <h2 class="kategorie">Kleidung</h2>
+        <div class="karten-grid">
+            <div class="bildkarte">
+                <div class="emoji">👑</div>
+                <h3>Feine Stoffe</h3>
+                <p>Kostbare Kleidung für den Pharao</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">💍</div>
+                <h3>Schmuck</h3>
+                <p>Getragen von Pharao und Beamten</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">👕</div>
+                <h3>Einfache Kleidung</h3>
+                <p>Getragen von Handwerkern</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">🧵</div>
+                <h3>Selbstgemachte Kleidung</h3>
+                <p>Einfache Kleidung der Bauern</p>
+            </div>
+        </div>
+        
+        <h2 class="kategorie">Nahrung</h2>
+        <div class="karten-grid">
+            <div class="bildkarte">
+                <div class="emoji">🍗</div>
+                <h3>Bestes Essen</h3>
+                <p>Für den Pharao - alles was er will</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">🍇</div>
+                <h3>Gutes Essen</h3>
+                <p>Für Beamte - oft Fleisch und Obst</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">🍞</div>
+                <h3>Normales Essen</h3>
+                <p>Für Handwerker - genug zum Leben</p>
+            </div>
+            <div class="bildkarte">
+                <div class="emoji">🥔</div>
+                <h3>Wenig Essen</h3>
+                <p>Für Bauern - eigenes Gemüse, selten Fleisch</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

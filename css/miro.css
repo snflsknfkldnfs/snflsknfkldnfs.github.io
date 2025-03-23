@@ -1,0 +1,54 @@
+body.miro-embed {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.miro-container {
+    box-shadow: none;
+    border: none;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.miro-embed .nav, 
+.miro-embed .footer,
+.miro-embed .instructions {
+    display: none;
+}
+
+.miro-embed .tabelle-container,
+.miro-embed .bildkarten-container,
+.miro-embed .arbeitsblatt-container {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.miro-embed table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.miro-embed th, 
+.miro-embed td {
+    padding: 8px;
+    border: 2px solid #3498db;
+    font-size: 14px;
+}
+
+.miro-embed .karten-grid {
+    gap: 10px;
+}
+
+.miro-embed .bildkarte {
+    width: 160px;
+    padding: 10px;
+}
+
+.miro-embed .antwortfeld {
+    min-height: 40px;
+}

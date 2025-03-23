@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{THEMA}} - Vergleichstabelle</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+        th, td {
+            border: 2px solid #3498db;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        .tabelle-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2980b9;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabelle-container">
+        <h1>{{THEMA}} - Vergleichstabelle</h1>
+        
+        <table>
+            <tr>
+                <th>{{SPALTE1}}</th>
+                <th>{{SPALTE2}}</th>
+                <th>{{SPALTE3}}</th>
+                <th>{{SPALTE4}}</th>
+                <th>{{SPALTE5}}</th>
+            </tr>
+            <!-- {{TABELLENINHALT}} -->
+        </table>
+    </div>
+</body>
+</html>

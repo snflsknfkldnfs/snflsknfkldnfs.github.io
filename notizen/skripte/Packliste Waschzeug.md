@@ -1,0 +1,11 @@
+___
+- [ ] Zahnbürste 🧼
+- [ ] Zahnpasta 🧼
+- [ ] Deo 🧼
+- [ ] Creme 🧼
+- [ ] Salben 🧼
+- [ ] Handtuch 🧼
+- [ ] Shampoo 🧼
+- [ ] Seife 🧼
+- [ ] Labello 🧼
+- [ ] Anti-Brumm 🧼

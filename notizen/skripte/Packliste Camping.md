@@ -1,0 +1,14 @@
+___
+- [ ] Isomatte ⛺
+- [ ] Schlafsack ⛺
+- [ ] Zelt ⛺
+- [ ] Tarp ⛺
+- [ ] Paracord ⛺
+- [ ] Messer ⛺
+- [ ] Besteck ⛺
+- [ ] Taschenlampe ⛺
+- [ ] Geschirrhandtuch ⛺
+- [ ] Feuerzeug ⛺
+- [ ] Campingstuhl ⛺
+- [ ] Hängematte ⛺
+- [ ] Powerbank ⛺

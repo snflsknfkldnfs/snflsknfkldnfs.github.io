@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{THEMA}} - Arbeitsblatt</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .arbeitsblatt-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .aufgabe {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2980b9;
+        }
+        .antwortfeld {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            min-height: 60px;
+        }
+        .bild-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="arbeitsblatt-container">
+        <h1>{{THEMA}} - Arbeitsblatt</h1>
+        
+        <div class="aufgabe">
+            <h3>Aufgabe:</h3>
+            <p>{{AUFGABENSTELLUNG}}</p>
+        </div>
+        
+        <!-- {{AUFGABENINHALT}} -->
+    </div>
+</body>
+</html>

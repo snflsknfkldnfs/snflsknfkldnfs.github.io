@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="ALLOW">
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors *">
+    <title>Verlaufsplan: Leben im alten Ägypten</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .verlaufsplan-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #2980b9;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .phase {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 46%;
+        }
+        .phase::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #3498db;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .links {
+            left: 0;
+        }
+        .rechts {
+            left: 50%;
+        }
+        .links::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #e3f2fd;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #e3f2fd;
+        }
+        .rechts::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #e3f2fd;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #e3f2fd transparent transparent;
+        }
+        .rechts::after {
+            left: -16px;
+        }
+        .phase-content {
+            padding: 20px 30px;
+            background-color: #e3f2fd;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .zeit {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .phase-title {
+            margin: 0;
+            color: #2980b9;
+        }
+        .methoden-container {
+            display: flex;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .methode {
+            padding: 3px 8px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        .materialien {
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .schueleraktivitaet {
+            color: #16a085;
+            margin-top: 10px;
+        }
+        .lehreraktivitaet {
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .phase {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .phase::before {
+                left: 60px;
+                border: medium solid #e3f2fd;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #e3f2fd transparent transparent;
+            }
+            .links::after, .rechts::after {
+                left: 15px;
+            }
+            .rechts {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="verlaufsplan-container">
+        <h1>Verlaufsplan: Leben im alten Ägypten</h1>
+        
+        <div class="instructions">
+            <h3>Klasse: 5b | Dauer: 45 Minuten | Datum: </h3>
+            <p><strong>Stundenziel:</strong> Die SuS vergleichen den Alltag verschiedener Bevölkerungsgruppen im alten Ägypten, indem sie Informationen aus dem Schulbuch strukturieren und in eine Übersichtstabelle übertragen.</p>
+        </div>
+        
+        <div class="timeline">
+            <div class="phase links">
+                <div class="phase-content">
+                    <span class="zeit">3 Min</span>
+                    <h3 class="phase-title">1. Problembegegnung</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Plenum</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> "Guten Morgen, heute unternehmen wir eine Zeitreise ins alte Ägypten..."
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> Begrüßen zurück
+                    </div>
+                    <div class="materialien">
+                        Materialien: -
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase rechts">
+                <div class="phase-content">
+                    <span class="zeit">5 Min</span>
+                    <h3 class="phase-title">2. Vorwissen aktivieren</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Miro/Tafel</span>
+                        <span class="methode">Plenum</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> Zeigt vereinfachtes Schaubild zur Gesellschaftsordnung
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> "Der Pharao stand ganz oben." <br>
+                        "Es gab wichtige Beamte." <br>
+                        "Die Bauern waren ganz unten."
+                    </div>
+                    <div class="materialien">
+                        Materialien: Miro-Board mit Gesellschaftspyramide
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase links">
+                <div class="phase-content">
+                    <span class="zeit">4 Min</span>
+                    <h3 class="phase-title">3. Problemstellung</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Tafel/Miro</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> "Wie haben diese Menschen tatsächlich gelebt?"
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> "Bestimmt hatte der Pharao ein Schloss." <br>
+                        "Die Bauern waren sicher arm."
+                    </div>
+                    <div class="materialien">
+                        Materialien: Tafel mit Leitfrage
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase rechts">
+                <div class="phase-content">
+                    <span class="zeit">3 Min</span>
+                    <h3 class="phase-title">4. Arbeitsvorbereitung</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Plenum</span>
+                        <span class="methode">Miro/AB</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> Erklärt Arbeitsauftrag und zeigt Tabellenstruktur
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> "Sollen wir alles ausfüllen oder nur unsere Gruppe?" <br>
+                        "Können wir die Bilder auch nutzen?"
+                    </div>
+                    <div class="materialien">
+                        Materialien: Buch S. 114-117, Arbeitsblatt/Miro-Tabelle
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase links">
+                <div class="phase-content">
+                    <span class="zeit">15 Min</span>
+                    <h3 class="phase-title">5. Erarbeitung</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Partnerarbeit</span>
+                        <span class="methode">Buch</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> Beobachtet, gibt Hilfestellungen: "Schaut besonders auf die Bilder und Sprechblasen."
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> Arbeiten in Partnerarbeit, suchen und markieren Informationen im Buch, diskutieren miteinander
+                    </div>
+                    <div class="materialien">
+                        Materialien: Schulbuch S. 114-117, Arbeitsblätter
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase rechts">
+                <div class="phase-content">
+                    <span class="zeit">12 Min</span>
+                    <h3 class="phase-title">6. Sicherung I</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Plenum</span>
+                        <span class="methode">Miro/Tafel</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> "Jetzt präsentiert jede Gruppe ihre Ergebnisse."
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> Präsentieren ihre Erkenntnisse zu jeweils einer Gesellschaftsschicht
+                    </div>
+                    <div class="materialien">
+                        Materialien: Miro-Tabelle/Tafel
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase links">
+                <div class="phase-content">
+                    <span class="zeit">5 Min</span>
+                    <h3 class="phase-title">7. Besinnung</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Lehrer-Schüler-Gespräch</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> "Welche Unterschiede fallen euch besonders auf?"
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> "Die Bauern mussten am härtesten arbeiten..." <br>
+                        "Der Pharao und die Beamten hatten ein leichtes Leben."
+                    </div>
+                    <div class="materialien">
+                        Materialien: -
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase rechts">
+                <div class="phase-content">
+                    <span class="zeit">3 Min</span>
+                    <h3 class="phase-title">8. Sicherung II</h3>
+                    <div class="methoden-container">
+                        <span class="methode">Einzelarbeit</span>
+                        <span class="methode">Hefteintrag</span>
+                    </div>
+                    <div class="lehreraktivitaet">
+                        <strong>L:</strong> "Übertragt nun die Tabelle in euer Merkheft."
+                    </div>
+                    <div class="schueleraktivitaet">
+                        <strong>SuS:</strong> Beginnen mit der Übertragung
+                    </div>
+                    <div class="materialien">
+                        Materialien: Merkheft, Vorlage für Hefteintrag
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

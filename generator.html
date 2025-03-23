@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UE Material Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .generator-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+        .template-group {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: none;
+        }
+        #export-buttons {
+            margin-top: 20px;
+            display: none;
+        }
+        #content-preview {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="generator-container">
+        <h1>UE Material Generator</h1>
+        
+        <div class="instructions">
+            <h2>Anleitung</h2>
+            <p>Wähle einen Template-Typ, gib die benötigten Informationen ein und generiere Inhalte mit KI-Unterstützung.</p>
+        </div>
+        
+        <div class="form-group">
+            <label for="template-type">Template-Typ:</label>
+            <select id="template-type" onchange="showTemplateOptions()">
+                <option value="">-- Bitte wählen --</option>
+                <option value="tabelle">Vergleichstabelle</option>
+                <option value="bildkarten">Bildkarten</option>
+                <option value="arbeitsblatt">Arbeitsblatt</option>
+            </select>
+        </div>
+        
+        <div id="tabelle-template" class="template-group">
+            <h3>Vergleichstabelle erstellen</h3>
+            
+            <div class="form-group">
+                <label for="tabelle-thema">Thema:</label>
+                <input type="text" id="tabelle-thema" placeholder="z.B. Leben im alten Ägypten">
+            </div>
+            
+            <div class="form-group">
+                <label for="tabelle-spalten">Spaltenüberschriften (mit Komma getrennt):</label>
+                <input type="text" id="tabelle-spalten" placeholder="z.B. Gruppe, Wohnen, Kleidung, Essen, Arbeit">
+            </div>
+            
+            <div class="form-group">
+                <label for="tabelle-zeilen">Zeilenüberschriften (mit Komma getrennt):</label>
+                <input type="text" id="tabelle-zeilen" placeholder="z.B. Pharao, Beamte, Handwerker, Bauern">
+            </div>
+            
+            <button class="button" onclick="generateTablePrompt()">Inhalt generieren</button>
+        </div>
+        
+        <div id="bildkarten-template" class="template-group">
+            <h3>Bildkarten erstellen</h3>
+            
+            <div class="form-group">
+                <label for="bildkarten-thema">Thema:</label>
+                <input type="text" id="bildkarten-thema" placeholder="z.B. Leben im alten Ägypten">
+            </div>
+            
+            <div class="form-group">
+                <label for="bildkarten-kategorien">Kategorien (mit Komma getrennt):</label>
+                <input type="text" id="bildkarten-kategorien" placeholder="z.B. Wohnen, Kleidung, Nahrung">
+            </div>
+            
+            <div class="form-group">
+                <label for="bildkarten-anzahl">Anzahl der Karten pro Kategorie:</label>
+                <input type="number" id="bildkarten-anzahl" min="1" max="10" value="4">
+            </div>
+            
+            <button class="button" onclick="generateImageCardPrompt()">Inhalt generieren</button>
+        </div>
+        
+        <div id="arbeitsblatt-template" class="template-group">
+            <h3>Arbeitsblatt erstellen</h3>
+            
+            <div class="form-group">
+                <label for="arbeitsblatt-thema">Thema:</label>
+                <input type="text" id="arbeitsblatt-thema" placeholder="z.B. Leben im alten Ägypten">
+            </div>
+            
+            <div class="form-group">
+                <label for="arbeitsblatt-aufgabe">Aufgabenstellung:</label>
+                <textarea id="arbeitsblatt-aufgabe" rows="3" placeholder="z.B. Lies im Buch auf den Seiten 114-117 über deine Gruppe und fülle die Felder aus."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="arbeitsblatt-fragen">Fragen (mit Komma getrennt):</label>
+                <textarea id="arbeitsblatt-fragen" rows="3" placeholder="z.B. Wo wohnten sie?, Was trugen sie an?, Was aßen sie?, Was machten sie?"></textarea>
+            </div>
+            
+            <button class="button" onclick="generateWorksheetPrompt()">Inhalt generieren</button>
+        </div>
+        
+        <div id="prompt-container"></div>
+        
+        <div id="content-preview"></div>
+        
+        <div id="export-buttons">
+            <button class="button" onclick="exportHTML()">HTML exportieren</button>
+            <button class="button" onclick="copyHTML()">HTML kopieren</button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/ai-integration.js"></script>
+    <script>
+        function showTemplateOptions() {
+            const templateType = document.getElementById('template-type').value;
+            
+            document.getElementById('tabelle-template').style.display = 'none';
+            document.getElementById('bildkarten-template').style.display = 'none';
+            document.getElementById('arbeitsblatt-template').style.display = 'none';
+            
+            if (templateType) {
+                document.getElementById(`${templateType}-template`).style.display = 'block';
+            }
+        }
+        
+        function generateTablePrompt() {
+            const thema = document.getElementById('tabelle-thema').value;
+            const spalten = document.getElementById('tabelle-spalten').value.split(',').map(s => s.trim());
+            const zeilen = document.getElementById('tabelle-zeilen').value.split(',').map(z => z.trim());
+            
+            if (!thema || spalten.length < 2 || zeilen.length < 1) {
+                alert('Bitte fülle alle Felder aus!');
+                return;
+            }
+            
+            const prompt = `Erstelle mir Inhalte für eine Vergleichstabelle zum Thema "${thema}". 
+Die Tabelle hat folgende Spalten:
+${spalten.map((spalte, index) => `${index + 1}. ${spalte}`).join('\n')}
+
+Die Zeilen repräsentieren:
+${zeilen.map(zeile => `- ${zeile}`).join('\n')}
+
+Bitte formuliere die Inhalte einfach und schülergerecht (5. Klasse).
+Gib mir den Inhalt als HTML-Tabellenzeilen ohne Header.`;
+            
+            generateContent(prompt, 'tabelle');
+        }
+        
+        function generateImageCardPrompt() {
+            const thema = document.getElementById('bildkarten-thema').value;
+            const kategorien = document.getElementById('bildkarten-kategorien').value.split(',').map(k => k.trim());
+            const anzahl = document.getElementById('bildkarten-anzahl').value;
+            
+            if (!thema || kategorien.length < 1 || !anzahl) {
+                alert('Bitte fülle alle Felder aus!');
+                return;
+            }
+            
+            const prompt = `Erstelle mir Inhalte für Bildkarten zum Thema "${thema}".
+Ich benötige Karten für folgende Kategorien:
+${kategorien.map(kategorie => `- ${kategorie}`).join('\n')}
+
+Pro Kategorie brauche ich ${anzahl} Karten.
+
+Jede Karte sollte folgende Elemente haben:
+1. Ein passendes Emoji (Unicode-Emoji)
+2. Eine kurze Überschrift (1-3 Wörter)
+3. Eine kurze Beschreibung (max. 1 Satz)
+
+Bitte formuliere die Inhalte einfach und schülergerecht (5. Klasse).
+Gib mir den HTML-Code für alle Bildkarten, strukturiert nach Kategorien.`;
+            
+            generateContent(prompt, 'bildkarten');
+        }
+        
+        function generateWorksheetPrompt() {
+            const thema = document.getElementById('arbeitsblatt-thema').value;
+            const aufgabe = document.getElementById('arbeitsblatt-aufgabe').value;
+            const fragen = document.getElementById('arbeitsblatt-fragen').value.split(',').map(f => f.trim());
+            
+            if (!thema || !aufgabe || fragen.length < 1) {
+                alert('Bitte fülle alle Felder aus!');
+                return;
+            }
+            
+            const prompt = `Erstelle mir ein interaktives Arbeitsblatt zum Thema "${thema}".
+Die Hauptaufgabe lautet: "${aufgabe}"
+
+Das Arbeitsblatt soll folgende Fragen/Abschnitte enthalten:
+${fragen.map(frage => `- ${frage}`).join('\n')}
+
+Für jede Frage soll ein Antwortfeld vorgesehen sein.
+Bitte stelle dir vor, dass dieses Arbeitsblatt digital ausgefüllt werden kann.
+Bitte füge für jede Frage ein passendes Emoji hinzu.
+
+Bitte formuliere die Inhalte einfach und schülergerecht (5. Klasse).
+Gib mir den HTML-Code für das komplette Arbeitsblatt.`;
+            
+            generateContent(prompt, 'arbeitsblatt');
+        }
+    </script>
+</body>
+</html>
