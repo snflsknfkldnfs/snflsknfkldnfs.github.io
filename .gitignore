@@ -1,0 +1,6 @@
+node_modules/
+*.pdf
+*.pptx
+node_modules/
+.DS_Store
+notizen/anleitungen/03_Bücherregal/
