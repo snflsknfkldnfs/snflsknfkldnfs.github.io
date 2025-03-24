@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leben im alten Ägypten - Vergleichstabelle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .tabelle-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #2980b9;
+            text-align: center;
+        }
+        .instructions {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 14px;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 2px solid #3498db;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .gruppe {
+            background-color: #e3f2fd;
+            font-weight: bold;
+            width: 140px;
+        }
+        .linie {
+            height: 20px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 3px;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+        .frage {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid #ddd;
+        }
+        .antwortfeld {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            min-height: 60px;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .tabelle-container {
+                box-shadow: none;
+                padding: 10px;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 5px;
+            }
+        }
+        /* Für Miro-Optimierung */
+        body.miro-embed {
+            background: transparent;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .miro-embed .tabelle-container {
+            box-shadow: none;
+            padding: 10px;
+        }
+        .miro-embed .instructions,
+        .miro-embed .frage {
+            display: none;
+        }
+    </style>
+    <script>
+        function detectMiroEmbed() {
+            try {
+                return window.parent && window.parent !== window;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function optimizeForMiro() {
+            if (detectMiroEmbed()) {
+                document.body.classList.add('miro-embed');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', optimizeForMiro);
+    </script>
+</head>
+<body>
+    <div class="tabelle-container">
+        <h1>Leben im alten Ägypten - Vergleichstabelle</h1>
+        
+        <div class="instructions">
+            <h3>Aufgabe:</h3>
+            <p>Trage die Informationen zu allen Bevölkerungsgruppen in die Tabelle ein. Die Tabelle hilft dir, Gemeinsamkeiten und Unterschiede zu erkennen.</p>
+        </div>
+        
+        <table>
+            <tr>
+                <th>Gruppe / Kategorie</th>
+                <th><span class="emoji">🏠</span> Wohnen</th>
+                <th><span class="emoji">👕</span> Kleidung</th>
+                <th><span class="emoji">🍽️</span> Essen</th>
+                <th><span class="emoji">⚒️</span> Arbeit</th>
+                <th><span class="emoji">✨</span> Besonderheiten</th>
+            </tr>
+            <tr>
+                <td class="gruppe"><span class="emoji">👑</span> Pharao</td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="gruppe"><span class="emoji">📋</span> Beamte</td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="gruppe"><span class="emoji">🔨</span> Handwerker</td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="gruppe"><span class="emoji">🌾</span> Bauern</td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+                <td>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                    <div class="linie"></div>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="frage">
+            <h3>Meine Erkenntnisse:</h3>
+            <p>1. Welche Unterschiede fallen dir besonders auf?</p>
+            <div class="antwortfeld"></div>
+            
+            <p>2. Welche Gemeinsamkeiten erkennst du zwischen den Gruppen?</p>
+            <div class="antwortfeld"></div>
+            
+            <p>3. Wie bewertest du diese Gesellschaftsordnung? War sie gerecht?</p>
+            <div class="antwortfeld"></div>
+            
+            <p>4. Gibt es auch heute noch Unterschiede zwischen Menschen in der Gesellschaft? Worin unterscheidet sich unsere heutige Gesellschaft von der im alten Ägypten?</p>
+            <div class="antwortfeld"></div>
+        </div>
+    </div>
+</body>
+</html>
