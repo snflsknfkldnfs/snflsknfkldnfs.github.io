@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leben im alten Ägypten - Arbeitsblatt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .arbeitsblatt-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #2980b9;
+        }
+        .aufgabe {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2980b9;
+        }
+        .hilfskasten {
+            background-color: #f9f9f9;
+            border: 1px dashed #999;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .tabelle {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .tabelle th, .tabelle td {
+            border: 1px solid #3498db;
+            padding: 8px;
+            text-align: left;
+        }
+        .tabelle th {
+            background-color: #3498db;
+            color: white;
+        }
+        .antwortfeld {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            min-height: 60px;
+        }
+        .zeichnung {
+            border: 1px dashed #999;
+            padding: 10px;
+            margin-bottom: 15px;
+            height: 200px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        .emoji {
+            font-size: 2em;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .version {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+        .hinweis {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .arbeitsblatt-container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .version {
+                display: none;
+            }
+        }
+        /* Version B Styles (ausgeblendet bei Version A) */
+        .version-b {
+            display: none;
+        }
+        /* Version A Styles (sichtbar bei Version A) */
+        .version-a {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleVersion() {
+            const versionA = document.getElementsByClassName('version-a');
+            const versionB = document.getElementsByClassName('version-b');
+            
+            for (let element of versionA) {
+                element.style.display = element.style.display === 'none' ? 'block' : 'none';
+            }
+            
+            for (let element of versionB) {
+                element.style.display = element.style.display === 'none' ? 'block' : 'none';
+            }
+            
+            const versionIndicator = document.getElementById('version-indicator');
+            versionIndicator.textContent = versionIndicator.textContent === 'A' ? 'B' : 'A';
+        }
+    </script>
+</head>
+<body>
+    <div class="version">
+        Version <span id="version-indicator">A</span> | <a href="#" onclick="toggleVersion(); return false;">Version wechseln</a>
+    </div>
+    
+    <div class="arbeitsblatt-container">
+        <h1>Leben im alten Ägypten</h1>
+        
+        <div class="aufgabe">
+            <h3>Aufgabe:</h3>
+            <p>Lies im Buch auf den Seiten 114-117 über deine Bevölkerungsgruppe und fülle die Tabelle mit den wichtigsten Informationen aus.</p>
+            <p class="hinweis">Beachte die Bilder und Sprechblasen im Buch! Sie enthalten wichtige Hinweise.</p>
+        </div>
+        
+        <h2>Meine Gruppe: <span class="emoji">❓</span></h2>
+        <div class="antwortfeld"></div>
+        
+        <!-- Version A: Mit Hilfestellungen -->
+        <div class="version-a">
+            <div class="hilfskasten">
+                <h3>Hilfskasten mit wichtigen Begriffen:</h3>
+                <p>
+                    Palast | Lehmhütte | Reihenhäuser | große Häuser | feine Stoffe | einfache Kleidung | Schmuck |
+                    selbstgemacht | feinste Speisen | Festmahl | Fleisch | Gemüse und Obst | herrschen | verwalten |
+                    bauen | Feld bearbeiten | Steuern | Abgaben | arm | reich
+                </p>
+            </div>
+            
+            <table class="tabelle">
+                <tr>
+                    <th>Kategorie</th>
+                    <th>Informationen</th>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🏠</span> Wo wohnten sie?</td>
+                    <td class="antwortfeld">Sie wohnten in ...</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">👕</span> Was trugen sie?</td>
+                    <td class="antwortfeld">Sie trugen ...</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🍽️</span> Was aßen sie?</td>
+                    <td class="antwortfeld">Sie aßen ...</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">⚒️</span> Was arbeiteten sie?</td>
+                    <td class="antwortfeld">Sie arbeiteten als ...</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">✨</span> Was war besonders?</td>
+                    <td class="antwortfeld">Besonders war ...</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Version B: Ohne Hilfestellungen -->
+        <div class="version-b">
+            <table class="tabelle">
+                <tr>
+                    <th>Kategorie</th>
+                    <th>Informationen</th>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🏠</span> Wohnen</td>
+                    <td class="antwortfeld"></td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">👕</span> Kleidung</td>
+                    <td class="antwortfeld"></td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🍽️</span> Nahrung</td>
+                    <td class="antwortfeld"></td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">⚒️</span> Tätigkeiten</td>
+                    <td class="antwortfeld"></td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">✨</span> Besonderheiten</td>
+                    <td class="antwortfeld"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <h3><span class="emoji">🖌️</span> Zeichne ein Bild von deiner Gruppe:</h3>
+        <div class="zeichnung">Hier kannst du zeichnen</div>
+        
+        <h3>Die Gesellschaft im alten Ägypten</h3>
+        <table class="tabelle">
+            <tr>
+                <th>Bevölkerungsgruppe</th>
+                <th>Stellung in der Gesellschaft</th>
+            </tr>
+            <tr>
+                <td><span class="emoji">👑</span> Pharao</td>
+                <td>Oberste Position, galt als Gott</td>
+            </tr>
+            <tr>
+                <td><span class="emoji">📋</span> Beamte</td>
+                <td>Hohe Position, konnten lesen und schreiben</td>
+            </tr>
+            <tr>
+                <td><span class="emoji">🔨</span> Handwerker</td>
+                <td>Mittlere Position, stellten wichtige Dinge her</td>
+            </tr>
+            <tr>
+                <td><span class="emoji">🌾</span> Bauern</td>
+                <td>Unterste Position, mussten hart arbeiten</td>
+            </tr>
+        </table>
+        
+        <div class="aufgabe">
+            <h3>Vergleich:</h3>
+            <p>Welche Unterschiede fallen dir zwischen den Bevölkerungsgruppen auf?</p>
+            <div class="antwortfeld"></div>
+            
+            <p>Welche Gruppe hatte es deiner Meinung nach am besten? Warum?</p>
+            <div class="antwortfeld"></div>
+            
+            <p>Welche Gruppe hatte es am schlechtesten? Warum?</p>
+            <div class="antwortfeld"></div>
+        </div>
+    </div>
+</body>
+</html>
