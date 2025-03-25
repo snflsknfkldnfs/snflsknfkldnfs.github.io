@@ -84,3 +84,25 @@ sed -i "s/            <!-- Weitere UEs hier hinzufügen -->/$CARD_ENTRY\n       
 echo "UE \"$UE_TITEL\" ($UE_NAME) wurde erfolgreich erstellt."
 echo "Dateien wurden unter unterricht/$UE_NAME/ abgelegt."
 echo "Die Hauptindex-Datei wurde aktualisiert."
+
+# Funktion zum Erstellen einer editierbaren Vergleichstabelle
+create_editable_table() {
+  local UE_NAME=$1
+  local UE_TITEL=$2
+  
+  # Erstelle Verzeichnis falls es nicht existiert
+  mkdir -p "unterricht/$UE_NAME"
+  
+  # Kopiere Template
+  cp "unterricht/template/components/editable-table-template.html" "unterricht/$UE_NAME/editable-tabelle.html"
+  
+  # Ersetze Platzhalter
+  sed -i "s/{{THEMA}}/$UE_TITEL/g" "unterricht/$UE_NAME/editable-tabelle.html"
+  
+  echo "Editierbare Vergleichstabelle für '$UE_TITEL' erstellt unter unterricht/$UE_NAME/editable-tabelle.html"
+  echo "Vergessen Sie nicht, die Kategorien und Emojis in der Datei anzupassen."
+}
+
+# Beispielaufruf:
+# create_editable_table "ue_name" "UE Titel"
+

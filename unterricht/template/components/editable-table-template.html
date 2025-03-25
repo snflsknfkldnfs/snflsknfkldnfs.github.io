@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{THEMA}} - Editierbare Vergleichstabelle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .tabelle-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 14px;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 2px solid #3498db;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .gruppe {
+            background-color: #e3f2fd;
+            font-weight: bold;
+            width: 140px;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+        .textfeld {
+            width: 95%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-color: transparent;
+            resize: none;
+            height: 20px;
+            overflow: hidden;
+        }
+        .textfeld:focus {
+            outline: none;
+            border-bottom: 1px solid #3498db;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .tabelle-container {
+                box-shadow: none;
+                padding: 0;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 5px;
+            }
+            .textfeld {
+                font-size: 12px;
+            }
+        }
+        /* Für Miro-Optimierung */
+        body.miro-embed {
+            background: transparent;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .miro-embed .tabelle-container {
+            padding: 0;
+        }
+    </style>
+    <script>
+        function detectMiroEmbed() {
+            try {
+                return window.parent && window.parent !== window;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function optimizeForMiro() {
+            if (detectMiroEmbed()) {
+                document.body.classList.add('miro-embed');
+            }
+        }
+
+        // Funktion zum automatischen Anpassen der Höhe der Textfelder
+        function autoResize(element) {
+            element.style.height = "20px";
+            element.style.height = (element.scrollHeight) + "px";
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            optimizeForMiro();
+            
+            // Alle Textfelder auswählen und Event-Handler hinzufügen
+            const textfelder = document.querySelectorAll('.textfeld');
+            textfelder.forEach(function(textfeld) {
+                textfeld.addEventListener('input', function() {
+                    autoResize(this);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="tabelle-container">
+        <table>
+            <tr>
+                <th>{{KATEGORIE0}}</th>
+                <th><span class="emoji">{{EMOJI1}}</span> {{KATEGORIE1}}</th>
+                <th><span class="emoji">{{EMOJI2}}</span> {{KATEGORIE2}}</th>
+                <th><span class="emoji">{{EMOJI3}}</span> {{KATEGORIE3}}</th>
+                <th><span class="emoji">{{EMOJI4}}</span> {{KATEGORIE4}}</th>
+                <th><span class="emoji">{{EMOJI5}}</span> {{KATEGORIE5}}</th>
+            </tr>
+            <!-- {{ZEILENINHALT}} -->
+        </table>
+    </div>
+</body>
+</html>

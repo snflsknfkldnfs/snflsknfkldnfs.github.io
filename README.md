@@ -50,3 +50,22 @@ Eine vollständige Übersicht aller verfügbaren Leitfäden findest du unter [`n
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Lizenz. Siehe LICENSE für Details.
+
+## Typische Materialien und deren Verwendung
+
+### Vergleichstabellen
+Für Vergleichstabellen gibt es zwei Vorlagen:
+- `tabelle-template.html`: Standard-Tabelle für statische Inhalte
+- `components/editable-table-template.html`: Tabelle mit editierbaren Textfeldern für den Unterrichtseinsatz
+
+Tipps für Vergleichstabellen:
+1. Platzieren Sie Kategorien in der Kopfzeile und Vergleichsobjekte in der ersten Spalte
+2. Für Unterrichtspräsentationen nutzen Sie die editierbare Variante
+3. Für Arbeitsblätter zum Einkleben vermeiden Sie Überschriften und überflüssige Elemente
+4. Passen Sie Zellgrößen an den erwarteten Inhalt an
+
+Beispiel-Befehl zur Erstellung:
+```bash
+./create_ue.sh aegypten "Leben im alten Ägypten"
+# Für editierbare Tabelle ergänzen:
+create_editable_table "aegypten" "Leben im alten Ägypten"
