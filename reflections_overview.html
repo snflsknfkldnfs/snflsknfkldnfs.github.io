@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexionsübersicht - GPG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-container {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .filter-container select, 
+        .filter-container input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .reflections-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .reflection-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+        .reflection-card h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        .reflection-card .meta {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .reflection-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .reflection-card .tag {
+            background-color: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        .reflection-card .rating {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .reflection-card .rating-value {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reflexionsübersicht</h1>
+        
+        <div class="filter-container">
+            <select id="filter-unit">
+                <option value="">Alle Unterrichtseinheiten</option>
+                <!-- Dynamisch gefüllt -->
+            </select>
+            
+            <select id="filter-class">
+                <option value="">Alle Klassen</option>
+                <!-- Dynamisch gefüllt -->
+            </select>
+            
+            <input type="text" id="filter-tag" placeholder="Nach Tag filtern...">
+            
+            <input type="month" id="filter-month" placeholder="Monat auswählen">
+        </div>
+        
+        <div class="reflections-container" id="reflections-list">
+            <!-- Dynamisch gefüllt mit Reflexionskarten -->
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lade alle Reflexionen
+            loadReflections();
+            
+            // Event-Listener für Filter
+            document.getElementById('filter-unit').addEventListener('change', filterReflections);
+            document.getElementById('filter-class').addEventListener('change', filterReflections);
+            document.getElementById('filter-tag').addEventListener('input', filterReflections);
+            document.getElementById('filter-month').addEventListener('change', filterReflections);
+        });
+        
+        function loadReflections() {
+            fetch('api/get_reflections.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Filter-Optionen füllen
+                    populateFilterOptions(data);
+                    
+                    // Reflexionen anzeigen
+                    displayReflections(data);
+                })
+                .catch(error => {
+                    console.error('Fehler beim Laden der Reflexionen:', error);
+                    document.getElementById('reflections-list').innerHTML = 
+                        '<p>Fehler beim Laden der Reflexionen. Bitte versuchen Sie es später erneut.</p>';
+                });
+        }
+        
+        function populateFilterOptions(reflections) {
+            const unitSelect = document.getElementById('filter-unit');
+            const classSelect = document.getElementById('filter-class');
+            
+            const units = new Set();
+            const classes = new Set();
+            
+            reflections.forEach(reflection => {
+                if (reflection.unit) units.add(reflection.unit);
+                if (reflection.class) classes.add(reflection.class);
+            });
+            
+            // Units hinzufügen
+            units.forEach(unit => {
+                const option = document.createElement('option');
+                option.value = unit;
+                option.textContent = unit;
+                unitSelect.appendChild(option);
+            });
+            
+            // Classes hinzufügen
+            classes.forEach(cls => {
+                const option = document.createElement('option');
+                option.value = cls;
+                option.textContent = cls;
+                classSelect.appendChild(option);
+            });
+        }
+        
+        function displayReflections(reflections) {
+            const container = document.getElementById('reflections-list');
+            container.innerHTML = '';
+            
+            if (reflections.length === 0) {
+                container.innerHTML = '<p>Keine Reflexionen gefunden.</p>';
+                return;
+            }
+            
+            reflections.forEach(reflection => {
+                const card = document.createElement('div');
+                card.className = 'reflection-card';
+                
+                // Extract title from full title
+                let title = reflection.title;
+                if (title.startsWith('Reflexion: ')) {
+                    title = title.substring('Reflexion: '.length);
+                }
+                
+                card.innerHTML = `
+                    <h3>${title}</h3>
+                    <div class="meta">
+                        ${reflection.date}
+                        ${reflection.class ? ' | Klasse: ' + reflection.class : ''}
+                        ${reflection.success_rating ? 
+                            '<span class="rating">Erfolg: <span class="rating-value">' + 
+                            reflection.success_rating + '</span></span>' : ''}
+                    </div>
+                    <p>${getExcerpt(reflection.successes || '', 100)}</p>
+                    <div class="tags">
+                        ${(reflection.tags || []).map(tag => 
+                            `<span class="tag">${tag}</span>`).join('')}
+                        ${(reflection.methods || []).map(method => 
+                            `<span class="tag method">${method}</span>`).join('')}
+                    </div>
+                    <a href="${reflection.url}" class="button">Details</a>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+        
+        function getExcerpt(text, maxLength) {
+            if (text.length <= maxLength) return text;
+            return text.substring(0, maxLength) + '...';
+        }
+        
+        function filterReflections() {
+            const unitFilter = document.getElementById('filter-unit').value;
+            const classFilter = document.getElementById('filter-class').value;
+            const tagFilter = document.getElementById('filter-tag').value.toLowerCase();
+            const monthFilter = document.getElementById('filter-month').value;
+            
+            fetch('api/get_reflections.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Filter anwenden
+                    const filtered = data.filter(reflection => {
+                        // Einheit filtern
+                        if (unitFilter && reflection.unit !== unitFilter) return false;
+                        
+                        // Klasse filtern
+                        if (classFilter && reflection.class !== classFilter) return false;
+                        
+                        // Tag filtern
+                        if (tagFilter) {
+                            const tags = [...(reflection.tags || []), ...(reflection.methods || [])];
+                            const hasMatchingTag = tags.some(tag => 
+                                tag.toLowerCase().includes(tagFilter));
+                            if (!hasMatchingTag) return false;
+                        }
+                        
+                        // Monat filtern
+                        if (monthFilter) {
+                            const reflectionMonth = reflection.date.substring(0, 7);
+                            if (reflectionMonth !== monthFilter) return false;
+                        }
+                        
+                        return true;
+                    });
+                    
+                    // Gefilterte Reflexionen anzeigen
+                    displayReflections(filtered);
+                })
+                .catch(error => {
+                    console.error('Fehler beim Filtern der Reflexionen:', error);
+                });
+        }
+    </script>
+</body>
+</html>
