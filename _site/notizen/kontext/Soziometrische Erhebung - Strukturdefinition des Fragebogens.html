@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soziometrische Erhebung - Strukturdefinition des
+Fragebogens - Notizen</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Soziometrische Erhebung - Strukturdefinition des
+Fragebogens</h1>
+        <p class="date">2025-03-23</p>
+    </header>
+    <main>
+        <h1
+        id="soziometrische-erhebung---strukturdefinition-des-fragebogens">Soziometrische
+        Erhebung - Strukturdefinition des Fragebogens</h1>
+        <h2 id="metadaten">Metadaten</h2>
+        <ul>
+        <li>survey_id: “soziometrie_[klassenname]_[datum]”</li>
+        <li>response_type: “matrix_multiple”</li>
+        <li>scale_type: “nominal” &amp; “ordinal”</li>
+        </ul>
+        <h2 id="einleitung">Einleitung</h2>
+        <p>[Standardtext wie im vorherigen Fragebogen]</p>
+        <h2 id="dimensionen-und-operationalisierung">Dimensionen und
+        Operationalisierung</h2>
+        <h3 id="sympathie-dimension">1. Sympathie-Dimension</h3>
+        <h4 id="direkte-arbeitsbeziehungen-sym_arb">1.1 Direkte
+        Arbeitsbeziehungen [SYM_ARB]</h4>
+        <p>“Mit wem arbeitest du im Unterricht gerne zusammen?” - Typ:
+        Multiple Choice (3 Wahlen) - Ranking: 1-3 (Priorität) -
+        Variable: sym_arb_[1-3] - Zusatzskala: Intensität der Präferenz
+        (1-5)</p>
+        <h4 id="soziale-beziehungen-sym_soz">1.2 Soziale Beziehungen
+        [SYM_SOZ]</h4>
+        <p>“Mit wem verbringst du in den Pausen gerne Zeit?” - Typ:
+        Multiple Choice (3 Wahlen) - Ranking: 1-3 (Priorität) -
+        Variable: sym_soz_[1-3] - Zusatzskala: Häufigkeit (1-5)</p>
+        <h3 id="experten-dimension">2. Experten-Dimension</h3>
+        <h4 id="fachliche-unterstützung-exp_fach">2.1 Fachliche
+        Unterstützung [EXP_FACH]</h4>
+        <p>“Wen würdest du bei Fachfragen um Hilfe bitten?” - Typ:
+        Matrix-Frage - Fächer: Deutsch, Mathe, Englisch - Ranking: 1-3
+        pro Fach - Variable: exp_fach_[fach]_[1-3]</p>
+        <h4 id="organisatorische-kompetenz-exp_org">2.2 Organisatorische
+        Kompetenz [EXP_ORG]</h4>
+        <p>“Wer kann gut…” - Typ: Matrix-Frage - Items: - “…eine
+        Gruppenarbeit organisieren?” - “…schwierige Aufgaben erklären?”
+        - “…bei Konflikten vermitteln?” - Ranking: 1-3 pro Item -
+        Variable: exp_org_[item]_[1-3]</p>
+        <h3 id="arbeitsverhalten-dimension-arb_stil">3.
+        Arbeitsverhalten-Dimension [ARB_STIL]</h3>
+        <p>“Wie arbeitest du am liebsten?” - Typ: Likert-Skala (1-5) -
+        Items: - “Ich arbeite gerne in der Gruppe” - “Ich erkläre
+        anderen gerne etwas” - “Ich lerne am besten alleine” - “Ich
+        helfe anderen gerne” - Variable: arb_stil_[item]</p>
+        <h2 id="technische-spezifikationen-für-limesurvey">Technische
+        Spezifikationen für LimeSurvey</h2>
+        <h3 id="fragengruppen">Fragengruppen</h3>
+        <ol type="1">
+        <li>Einleitung und Demographie</li>
+        <li>Sympathie-Matrix</li>
+        <li>Experten-Matrix</li>
+        <li>Arbeitsstil-Skalen</li>
+        </ol>
+        <h3 id="antwortcodierung">Antwortcodierung</h3>
+        <ul>
+        <li>Nominale Wahlen: [schüler_id]</li>
+        <li>Ordinale Skalen: 1-5</li>
+        <li>Rankings: 1-3</li>
+        <li>Fehlende Werte: -99</li>
+        </ul>
+        <h3 id="exportformat">Exportformat</h3>
+        <ul>
+        <li>CSV mit Semikolon-Trennung</li>
+        <li>UTF-8 Kodierung</li>
+        <li>Vollständige Variablenlabels</li>
+        <li>Zeitstempel</li>
+        </ul>
+        <h3 id="datenvalidierung">Datenvalidierung</h3>
+        <ul>
+        <li>Pflichtfelder: Mindestens eine Wahl pro Dimension</li>
+        <li>Plausibilitätschecks: Keine Selbstwahl</li>
+        <li>Konsistenzprüfung: Unterschiedliche Namen pro Ranking</li>
+        </ul>
+        <h2
+        id="visualisierungsanforderungen">Visualisierungsanforderungen</h2>
+        <h3 id="netzwerkanalyse">Netzwerkanalyse</h3>
+        <ul>
+        <li>Gerichtete Kanten für Wahlen</li>
+        <li>Gewichtung durch Ranking</li>
+        <li>Farbcodierung nach Dimensionen</li>
+        <li>Filter nach Beziehungstypen</li>
+        </ul>
+        <h3 id="metriken">Metriken</h3>
+        <ul>
+        <li>Zentralitätsmaße</li>
+        <li>Reziprozität von Wahlen</li>
+        <li>Cluster-Koeffizienten</li>
+        <li>Dichte des Netzwerks</li>
+        </ul>
+        <h3 id="interaktive-features">Interaktive Features</h3>
+        <ul>
+        <li>Dimensionsfilter</li>
+        <li>Teilgruppen-Analyse</li>
+        <li>Zeitliche Entwicklung</li>
+        <li>Individuelle Profile</li>
+        </ul>
+        <h2 id="datenschutz">Datenschutz</h2>
+        <ul>
+        <li>Pseudonymisierung durch ID-Mapping</li>
+        <li>Verschlüsselte Speicherung</li>
+        <li>Zugriffsprotokollierung</li>
+        <li>Löschkonzept</li>
+        </ul>
+    </main>
+    <footer>
+        <p><a href="/notizen">Zurück zur Notizenübersicht</a></p>
+    </footer>
+</body>
+</html>

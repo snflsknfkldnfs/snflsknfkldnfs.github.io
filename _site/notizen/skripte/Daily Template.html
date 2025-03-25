@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[[Dayplanner/&lt;%tp.date.now("YYYY-MM-DD", -1,
+tp.file.title, "YYYY-MM-DD") %&gt;|Tag davor]] -
+[[Dayplanner/&lt;%tp.date.now("YYYY-MM-DD",1, tp.file.title,
+"YYYY-MM-DD") %&gt;|Tag danach]]  - Notizen</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>[[Dayplanner/&lt;%tp.date.now("YYYY-MM-DD", -1,
+tp.file.title, "YYYY-MM-DD") %&gt;|Tag davor]] -
+[[Dayplanner/&lt;%tp.date.now("YYYY-MM-DD",1, tp.file.title,
+"YYYY-MM-DD") %&gt;|Tag danach]] </h1>
+        <p class="date">2025-03-23</p>
+    </header>
+    <main>
+        <p>[[Dayplanner/&lt;%tp.date.now(“YYYY-MM-DD”, -1,
+        tp.file.title, “YYYY-MM-DD”) %&gt;|Tag davor]] -
+        [[Dayplanner/&lt;%tp.date.now(“YYYY-MM-DD”,1, tp.file.title,
+        “YYYY-MM-DD”) %&gt;|Tag danach]]</p>
+        <h2 id="tasks-due-today">Tasks due today</h2>
+        <pre class="tasks"><code>not done
+due &lt;%tp.file.title,%&gt;</code></pre>
+        <hr />
+    </main>
+    <footer>
+        <p><a href="/notizen">Zurück zur Notizenübersicht</a></p>
+    </footer>
+</body>
+</html>

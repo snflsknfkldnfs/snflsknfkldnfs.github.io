@@ -1,126 +1,151 @@
-// Speichere in: js/soziometrie-processor.js
-
-/**
- * Verarbeitet soziometrische Daten und erstellt anonymisierte Versionen
- * für die Verwendung in KI-Prompts
- */
-class SoziometrieProcessor {
-  constructor() {
-    this.rawData = null;
-    this.anonymizedData = null;
-    this.metadata = null;
-    this.mappings = null;
-  }
-  
-  // Verarbeitet CSV-Daten und erstellt anonymisierte Version
-  processCSV(csvContent, nameField) {
-    // CSV parsen
-    const data = this.parseCSV(csvContent);
-    this.rawData = data;
-    
-    // Pseudonymisierung mit Mapping
-    const processed = this.pseudonymizeData(data.data, nameField);
-    this.anonymizedData = processed.processedData;
-    this.mappings = processed.mappings;
-    
-    // Metadaten erstellen (keine personenbezogenen Daten)
-    this.metadata = this.generateMetadata(data, processed);
-    
-    return {
-      anonymizedData: this.anonymizedData,
-      metadata: this.metadata
-    };
-  }
-  
-  // Speichert Daten lokal (Browser Storage, kein Server)
-  saveLocally() {
-    // Speichere anonymisierte Daten und Metadaten
-    localStorage.setItem('soziometrie_anonymized', JSON.stringify(this.anonymizedData));
-    localStorage.setItem('soziometrie_metadata', JSON.stringify(this.metadata));
-    
-    // Verschlüsselte Speicherung der Mappings (nur für den Lehrer)
-    const encryptedMappings = this.encryptForTeacher(this.mappings);
-    localStorage.setItem('soziometrie_mappings', encryptedMappings);
-    
-    return {
-      anonymizedFilePath: 'data/soziometrie/class-data.anonymous.json',
-      metadataFilePath: 'data/soziometrie/class-data.metadata.json'
-    };
-  }
-  
-  // Pseudonymisierung mit Lehrer-Entschlüsselung
-  pseudonymizeData(data, nameField) {
-    const pseudonyms = {};
-    const reverseMapping = {};
-    
-    // Prozessierte Daten mit Vornamen oder Vorname + Initial
-    const processedData = data.map(row => {
-      const newRow = {...row};
-      
-      if (newRow[nameField]) {
-        const fullName = newRow[nameField];
-        let displayName = this.getFirstName(fullName);
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soziometrie-Prozessor (Lokal)</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .processor-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .privacy-notice {
+            background-color: #ffe6e6;
+            border-left: 5px solid #ff4d4d;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .data-preview {
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .analysis-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-left: 5px solid #3498db;
+        }
+        .file-input {
+            border: 2px dashed #3498db;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="processor-container">
+        <h1>Soziometrie-Prozessor (Lokale Verarbeitung)</h1>
         
-        // Vornamenduplikate mit Nachnameninitial versehen
-        if (pseudonyms[displayName]) {
-          const initial = this.getLastNameInitial(fullName);
-          displayName = `${displayName} ${initial}.`;
+        <div class="privacy-notice">
+            <h3>Datenschutzhinweis</h3>
+            <p>Alle Daten werden ausschließlich lokal auf diesem Gerät verarbeitet. Es erfolgt keine Übertragung an externe Server.</p>
+            <p>Die generierten Prompt-Ergänzungen sind anonymisiert und enthalten keine personenbezogenen Daten.</p>
+        </div>
+        
+        <div class="file-input">
+            <input type="file" id="csv-upload" accept=".csv">
+            <p>CSV-Datei hier hochladen oder per Drag & Drop ablegen</p>
+        </div>
+        
+        <div class="data-preview" id="data-preview" style="display: none;">
+            <h3>Datenvorschau</h3>
+            <div id="preview-content"></div>
+        </div>
+        
+        <div class="analysis-options" id="analysis-options" style="display: none;">
+            <h3>Analyseoptionen</h3>
+            <div class="form-group">
+                <label for="analysis-type">Analyseart:</label>
+                <select id="analysis-type">
+                    <option value="group-formation">Gruppenbildung</option>
+                    <option value="social-structure">Sozialstruktur</option>
+                    <option value="preferences">Präferenzen und Interessen</option>
+                </select>
+            </div>
+            <button id="analyze-button" class="button">Daten analysieren</button>
+        </div>
+        
+        <div class="analysis-result" id="analysis-result" style="display: none;">
+            <h3>Analyseergebnis</h3>
+            <div id="result-content"></div>
+            <h4>Prompt-Ergänzung für KI</h4>
+            <textarea id="prompt-suggestion" rows="10" style="width: 100%; padding: 10px;"></textarea>
+            <button id="copy-prompt" class="button">In Zwischenablage kopieren</button>
+        </div>
+    </div>
+    
+    <script src="../js/soziometrie-utils.js"></script>
+    <script src="../js/privacy-guard.js"></script>
+    <script>
+        // Alle Verarbeitungsschritte erfolgen lokal im Browser
+        document.getElementById('csv-upload').addEventListener('change', handleFileSelect);
+        document.getElementById('analyze-button').addEventListener('click', analyzeData);
+        document.getElementById('copy-prompt').addEventListener('click', copyPromptToClipboard);
+        
+        let parsedData = null;
+        
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const csvContent = e.target.result;
+                parsedData = parseCSV(csvContent);
+                
+                // Vorschau anzeigen (anonymisiert)
+                showDataPreview(parsedData);
+                
+                // Analyseoptionen anzeigen
+                document.getElementById('analysis-options').style.display = 'block';
+            };
+            reader.readAsText(file);
         }
         
-        pseudonyms[displayName] = fullName;
-        reverseMapping[fullName] = displayName;
-        newRow[nameField] = displayName;
-      }
-      
-      return newRow;
-    });
-    
-    return {
-      processedData,
-      mappings: {
-        original: pseudonyms, // Anzeigename -> Originalname
-        display: reverseMapping // Originalname -> Anzeigename
-      }
-    };
-  }
-  
-  // Erzeugt nicht-personenbezogene Metadaten
-  generateMetadata(rawData, processedData) {
-    return {
-      classSize: rawData.data.length,
-      timestamp: new Date().toISOString(),
-      socialMetrics: {
-        isolatedCount: this.countIsolatedStudents(processedData.processedData),
-        popularCount: this.countPopularStudents(processedData.processedData),
-        groupCount: this.identifyGroups(processedData.processedData).length
-      },
-      preferenceDistribution: this.analyzePreferences(processedData.processedData),
-      version: "1.0"
-    };
-  }
-  
-  // Hilfsmethoden
-  getFirstName(fullName) {
-    return fullName.split(' ')[0];
-  }
-  
-  getLastNameInitial(fullName) {
-    const parts = fullName.split(' ');
-    return parts.length > 1 ? parts[parts.length - 1].charAt(0) : '';
-  }
-  
-  // Verschlüsselung nur für lokale Speicherung
-  encryptForTeacher(data) {
-    // Einfache Verschlüsselung für lokale Speicherung
-    return btoa(JSON.stringify(data));
-  }
-  
-  // Analytische Methoden
-  countIsolatedStudents(data) { /* Implementierung */ }
-  countPopularStudents(data) { /* Implementierung */ }
-  identifyGroups(data) { /* Implementierung */ }
-  analyzePreferences(data) { /* Implementierung */ }
-  
-  // CSV-Parser
-  parseCSV(csvContent) { /* Implementierung */ }
-}
+        function showDataPreview(data) {
+            // Anonymisierte Vorschau generieren
+            const previewContent = document.getElementById('preview-content');
+            previewContent.innerHTML = generateAnonymizedPreview(data);
+            document.getElementById('data-preview').style.display = 'block';
+        }
+        
+        function analyzeData() {
+            if (!parsedData) return;
+            
+            const analysisType = document.getElementById('analysis-type').value;
+            let result, promptSuggestion;
+            
+            switch (analysisType) {
+                case 'group-formation':
+                    [result, promptSuggestion] = analyzeGroupFormation(parsedData);
+                    break;
+                case 'social-structure':
+                    [result, promptSuggestion] = analyzeSocialStructure(parsedData);
+                    break;
+                case 'preferences':
+                    [result, promptSuggestion] = analyzePreferences(parsedData);
+                    break;
+            }
+            
+            document.getElementById('result-content').innerHTML = result;
+            document.getElementById('prompt-suggestion').value = promptSuggestion;
+            document.getElementById('analysis-result').style.display = 'block';
+        }
+        
+        function copyPromptToClipboard() {
+            const promptText = document.getElementById('prompt-suggestion');
+            promptText.select();
+            document.execCommand('copy');
+            alert('Prompt-Ergänzung wurde in die Zwischenablage kopiert!');
+        }
+    </script>
+</body>
+</html>

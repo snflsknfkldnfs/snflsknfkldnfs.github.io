@@ -575,13 +575,15 @@
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/UE-Geschichte-Notebook-LM.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/Unterrichtseinheiten-Properties.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/Wissensinhalt.md
+/Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/anleitung-template.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/neue Unterrichtsvorbereitung.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/neue-Sequenzplanung.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/neue-UE-Geographie.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/neue-UE-Geschichte.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/neues-Deckblatt-Fach.md
+/Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/reflexion-template.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/🛠️ Project Frontmatter.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/🛠️ Project Template.md
 /Users/paulad/snflsknfkldnfs.github.io/notizen/skripte/🛠️ Unterrichtseinheit Project.md
 /Users/paulad/snflsknfkldnfs.github.io/processed_notes/README_allgemein.md
-Letzte Aktualisierung: So 23 Mär 2025 19:33:56 CET
+Letzte Aktualisierung: Di 25 Mär 2025 14:53:54 CET
