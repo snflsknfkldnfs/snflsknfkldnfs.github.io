@@ -1,0 +1,158 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[ngerman]{babel}
+\usepackage{framed}
+\usepackage{multicol}
+\usepackage{tgbonum}
+
+% Define colors
+\definecolor{headercolor}{RGB}{142, 68, 173}
+\definecolor{boxcolor}{RGB}{155, 89, 182}
+\definecolor{contentcolor}{RGB}{245, 238, 248}
+
+% Define environments
+\newenvironment{cardbox}[1]{%
+    \begin{framed}
+        \noindent\colorbox{boxcolor}{\makebox[\dimexpr\linewidth-2\fboxsep\relax][c]{\textbf{\textcolor{white}{#1}}}}
+        \par\vspace{0.5em}
+    }{%
+    \end{framed}
+}
+
+\newenvironment{hintbox}{%
+    \begin{framed}
+        \setlength{\fboxsep}{10pt}
+        \color{black}
+        \itshape
+    }{%
+    \end{framed}
+}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    \begin{center}
+        \vspace{0.3cm}
+        {\color{headercolor}\LARGE\textbf{HILFSKARTEN FÜR REGELENTWICKLUNG}}\\
+        (Für Gruppen mit erhöhtem Unterstützungsbedarf)
+    \end{center}
+
+    \vspace{0.3cm}
+    
+    \begin{multicols}{2}
+        \begin{cardbox}{BEREICH: ALTER}
+            \textbf{Beispielregeln:}
+            \begin{itemize}[leftmargin=*]
+                \item Kinder unter \_\_\_ Jahren dürfen gar nicht arbeiten.
+                \item Kinder ab \_\_\_ Jahren dürfen leichte Arbeiten machen.
+                \item Kinder ab \_\_\_ Jahren dürfen auch etwas schwerere Arbeiten machen.
+            \end{itemize}
+            
+            \textbf{Begründungshilfen:}
+            \begin{hintbox}
+            \begin{itemize}[leftmargin=*]
+                \item Jüngere Kinder sind körperlich schwächer und können sich verletzen.
+                \item Jüngere Kinder brauchen mehr Zeit zum Spielen und Lernen.
+                \item Jüngere Kinder können Gefahren noch nicht richtig einschätzen.
+            \end{itemize}
+            \end{hintbox}
+        \end{cardbox}
+
+        \begin{cardbox}{BEREICH: ZEIT}
+            \textbf{Beispielregeln:}
+            \begin{itemize}[leftmargin=*]
+                \item Kinder dürfen höchstens \_\_\_ Stunden am Tag arbeiten.
+                \item Kinder dürfen nur zwischen \_\_\_ und \_\_\_ Uhr arbeiten.
+                \item Kinder dürfen nicht an Wochenenden arbeiten.
+                \item Kinder brauchen alle \_\_\_ Stunden eine Pause von \_\_\_ Minuten.
+            \end{itemize}
+            
+            \textbf{Begründungshilfen:}
+            \begin{hintbox}
+            \begin{itemize}[leftmargin=*]
+                \item Kinder brauchen ausreichend Schlaf zum Wachsen und Erholen.
+                \item Zu lange Arbeit ist zu anstrengend für Kinder.
+                \item Kinder müssen Zeit für Schule, Hausaufgaben und Freizeit haben.
+            \end{itemize}
+            \end{hintbox}
+        \end{cardbox}
+
+        \begin{cardbox}{BEREICH: TÄTIGKEITEN}
+            \textbf{Beispielregeln:}
+            \begin{itemize}[leftmargin=*]
+                \item Kinder dürfen keine Arbeit machen, bei der sie sich verletzen könnten.
+                \item Kinder dürfen keine schweren Sachen (über \_\_\_ kg) tragen.
+                \item Verbotene Tätigkeiten: \_\_\_\_\_\_\_\_\_\_\_\_\_\_, \_\_\_\_\_\_\_\_\_\_\_\_\_\_, \_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+            \end{itemize}
+            
+            \textbf{Begründungshilfen:}
+            \begin{hintbox}
+            \begin{itemize}[leftmargin=*]
+                \item Der Körper von Kindern wächst noch und kann durch schwere Arbeiten geschädigt werden.
+                \item Kinder haben weniger Erfahrung und können Unfälle nicht so gut vermeiden.
+                \item Bestimmte Tätigkeiten sind zu gefährlich für Kinder.
+            \end{itemize}
+            \end{hintbox}
+        \end{cardbox}
+
+        \begin{cardbox}{BEREICH: GESUNDHEIT}
+            \textbf{Beispielregeln:}
+            \begin{itemize}[leftmargin=*]
+                \item Kinder müssen Schutzkleidung bekommen (Handschuhe, Masken, etc.).
+                \item Kinder dürfen nicht mit giftigen Stoffen arbeiten.
+                \item Arbeitgeber müssen auf die Gesundheit der Kinder achten.
+                \item Kranke Kinder dürfen nicht arbeiten müssen.
+            \end{itemize}
+            
+            \textbf{Begründungshilfen:}
+            \begin{hintbox}
+            \begin{itemize}[leftmargin=*]
+                \item Die Gesundheit der Kinder ist besonders wichtig.
+                \item Kinder können krank werden, wenn sie ohne Schutz arbeiten.
+                \item Kinder brauchen mehr Schutz als Erwachsene.
+            \end{itemize}
+            \end{hintbox}
+        \end{cardbox}
+
+        \begin{cardbox}{BEREICH: BILDUNG}
+            \textbf{Beispielregeln:}
+            \begin{itemize}[leftmargin=*]
+                \item Kinder müssen zur Schule gehen können.
+                \item Die Arbeit darf erst nach der Schule beginnen.
+                \item Kinder brauchen Zeit für Hausaufgaben.
+            \end{itemize}
+            
+            \textbf{Begründungshilfen:}
+            \begin{hintbox}
+            \begin{itemize}[leftmargin=*]
+                \item Bildung ist wichtig für die Zukunft der Kinder.
+                \item Ohne Schule haben Kinder später weniger Chancen.
+                \item Lernen ist genauso wichtig wie Arbeiten.
+            \end{itemize}
+            \end{hintbox}
+        \end{cardbox}
+
+        \begin{cardbox}{BEREICH: FREIZEIT}
+            \textbf{Beispielregeln:}
+            \begin{itemize}[leftmargin=*]
+                \item Kinder brauchen jeden Tag mindestens \_\_\_ Stunden Freizeit.
+                \item Kinder müssen Zeit zum Spielen haben.
+                \item Kinder sollten nicht den ganzen Tag arbeiten müssen.
+            \end{itemize}
+            
+            \textbf{Begründungshilfen:}
+            \begin{hintbox}
+            \begin{itemize}[leftmargin=*]
+                \item Spielen ist wichtig für die Entwicklung von Kindern.
+                \item Freizeit hilft Kindern, sich zu erholen.
+                \item Kinder brauchen Zeit für Freunde und Familie.
+            \end{itemize}
+            \end{hintbox}
+        \end{cardbox}
+    \end{multicols}
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[ngerman]{babel}
+\usepackage{framed}
+\usepackage{tgbonum}
+
+% Define colors
+\definecolor{headercolor}{RGB}{231, 76, 60}
+\definecolor{boxcolor}{RGB}{249, 235, 234}
+
+% Define environments
+\newenvironment{taskbox}{%
+    \begin{framed}
+        \color{black}
+    }{%
+    \end{framed}
+}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    \begin{center}
+        \vspace{0.3cm}
+        {\color{headercolor}\Huge\textbf{HAUSAUFGABE: REGIERUNGSPLANSPIEL}}\\[0.5cm]
+        \textbf{Name: \rule{4cm}{0.4pt} \hspace{1cm} Datum: \rule{3cm}{0.4pt}}
+    \end{center}
+
+    \vspace{0.3cm}
+
+    \begin{taskbox}
+        \Large\textbf{Du bist jetzt Teil der Regierung eines neuen Landes!}\\
+        \vspace{0.5cm}
+        \textbf{Deine Aufgabe:}\\[0.3cm]
+        \large\textbf{👉 Entwickle ein vollständiges Regelwerk zum Schutz von Kindern bei der Arbeit.}
+    \end{taskbox}
+
+    \vspace{0.5cm}
+
+    \textbf{Dein Regelwerk sollte enthalten:}
+
+    \vspace{0.3cm}
+
+    \begin{taskbox}
+        \textbf{1. Ab welchem Alter dürfen Kinder arbeiten?}\\
+        \rule{\linewidth}{0.4pt}
+
+        \vspace{0.5cm}
+        \textbf{2. Wie viele Stunden dürfen Kinder maximal arbeiten?}\\
+        \rule{\linewidth}{0.4pt}
+
+        \vspace{0.5cm}
+        \textbf{3. Welche Arbeiten sind für Kinder verboten?}\\
+        \rule{\linewidth}{0.4pt}\\
+        \rule{\linewidth}{0.4pt}
+
+        \vspace{0.5cm}
+        \textbf{4. Wie wird sichergestellt, dass Kinder zur Schule gehen können?}\\
+        \rule{\linewidth}{0.4pt}\\
+        \rule{\linewidth}{0.4pt}
+
+        \vspace{0.5cm}
+        \textbf{5. Was passiert, wenn jemand die Regeln nicht einhält?}\\
+        \rule{\linewidth}{0.4pt}\\
+        \rule{\linewidth}{0.4pt}
+    \end{taskbox}
+
+    \vspace{0.5cm}
+
+    \colorbox{boxcolor}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \textit{Gestalte dein Regelwerk im Heft. Du kannst es auch als Plakat gestalten oder mit Bildern und Beispielen ergänzen. Sei kreativ!}
+        \end{minipage}%
+    }
+
+    \vspace{0.5cm}
+    \begin{flushright}
+        \textbf{Abgabe: \rule{4cm}{0.4pt}}
+    \end{flushright}
+\end{document}

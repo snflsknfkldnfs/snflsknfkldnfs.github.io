@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heftcheckkarte</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px auto;
+        }
+        .header {
+            background-color: #4472C4;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            margin: -20px -20px 15px -20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .item {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #4472C4;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .footer {
+            margin-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">✅ MEINE WiB-AKTE ZUM JUGENDARBEITSSCHUTZGESETZ ✅</div>
+        
+        <div class="item">
+            <div class="checkbox"></div>
+            <span class="icon">📄</span>
+            <span>AB 1: Tom (12 Jahre) - ausgefüllt</span>
+        </div>
+        
+        <div class="item">
+            <div class="checkbox"></div>
+            <span class="icon">📄</span>
+            <span>AB 2: Lena (14 Jahre) - ausgefüllt</span>
+        </div>
+        
+        <div class="item">
+            <div class="checkbox"></div>
+            <span class="icon">📄</span>
+            <span>AB 3: Max (16 Jahre) - ausgefüllt</span>
+        </div>
+        
+        <div class="item">
+            <div class="checkbox"></div>
+            <span class="icon">📝</span>
+            <span>Hefteintrag mit Altersübersicht vollständig</span>
+        </div>
+        
+        <div class="item">
+            <div class="checkbox"></div>
+            <span class="icon">❓</span>
+            <span>Mindestens 3 Schutzgründe für Kinder notiert</span>
+        </div>
+        
+        <div class="item">
+            <div class="checkbox"></div>
+            <span class="icon">✍️</span>
+            <span>Merksatz zum Jugendarbeitsschutzgesetz</span>
+        </div>
+        
+        <div class="footer">
+            <p>Fehlt etwas? → Nach der Stunde nachholen!</p>
+            <p>Alles vollständig? → Super! 👍</p>
+        </div>
+    </div>
+</body>
+</html>

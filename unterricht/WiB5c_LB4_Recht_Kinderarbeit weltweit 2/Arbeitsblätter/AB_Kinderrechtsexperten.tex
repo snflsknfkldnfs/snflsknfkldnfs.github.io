@@ -1,0 +1,143 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[ngerman]{babel}
+\usepackage{framed}
+\usepackage{tgbonum}
+
+% Define colors
+\definecolor{headercolor}{RGB}{52, 152, 219}
+\definecolor{examplecolor}{RGB}{46, 204, 113}
+\definecolor{sectioncolor}{RGB}{41, 128, 185}
+
+% Define environments
+\newenvironment{taskbox}{%
+    \begin{framed}
+        \color{black}
+    }{%
+    \end{framed}
+}
+
+\newenvironment{examplebox}{%
+    \begin{framed}
+        \setlength{\fboxsep}{10pt}
+        \color{black}
+        \itshape
+    }{%
+    \end{framed}
+}
+
+% Define checkbox symbol
+\newcommand{\checkbox}{\framebox[1em]{\phantom{X}}}
+
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+    \begin{center}
+        \vspace{0.3cm}
+        {\color{headercolor}\Huge\textbf{Wir sind Kinderrechtsexperten!}}\\[0.5cm]
+        \textbf{Name: \rule{4cm}{0.4pt} \hspace{1cm} Team: \rule{4cm}{0.4pt}}
+    \end{center}
+
+    \vspace{0.3cm}
+
+    \section*{\large\color{headercolor}Auftrag:}
+    
+    \begin{taskbox}
+        Ihr seid ein Team von Kinderrechtsexperten und sollt Regeln entwickeln, die arbeitende Kinder schützen.
+    \end{taskbox}
+
+    \vspace{0.3cm}
+
+    \section*{\large\color{headercolor}Schritt 1: Wählt 3 Schutzbereiche aus}
+    
+    \begin{taskbox}
+        \begin{tabular}{ll}
+            \checkbox & Alter (Ab wann dürfen Kinder arbeiten?) \\
+            \checkbox & Zeit (Wie lange und wann dürfen Kinder arbeiten?) \\
+            \checkbox & Tätigkeiten (Welche Arbeit dürfen Kinder machen oder nicht machen?) \\
+            \checkbox & Gesundheit (Wie schützen wir die Gesundheit der Kinder?) \\
+            \checkbox & Bildung (Wie stellen wir sicher, dass Kinder zur Schule gehen können?) \\
+            \checkbox & Freizeit (Wie stellen wir sicher, dass Kinder noch spielen können?) \\
+        \end{tabular}
+    \end{taskbox}
+
+    \vspace{0.3cm}
+
+    \textbf{\color{sectioncolor}Euer 1. Schutzbereich:} \rule{8cm}{0.4pt}
+
+    \begin{taskbox}
+        Regel 1: \rule{\linewidth}{0.4pt}
+
+        Begründung: \rule{\linewidth}{0.4pt}
+        \rule{\linewidth}{0.4pt}
+
+        \vspace{0.5cm}
+
+        Regel 2: \rule{\linewidth}{0.4pt}
+
+        Begründung: \rule{\linewidth}{0.4pt}
+        \rule{\linewidth}{0.4pt}
+    \end{taskbox}
+
+    \vspace{0.3cm}
+
+    \textbf{\color{sectioncolor}Euer 2. Schutzbereich:} \rule{8cm}{0.4pt}
+
+    \begin{taskbox}
+        Regel 1: \rule{\linewidth}{0.4pt}
+
+        Begründung: \rule{\linewidth}{0.4pt}
+        \rule{\linewidth}{0.4pt}
+
+        \vspace{0.5cm}
+
+        Regel 2: \rule{\linewidth}{0.4pt}
+
+        Begründung: \rule{\linewidth}{0.4pt}
+        \rule{\linewidth}{0.4pt}
+    \end{taskbox}
+    \vspace{0.3cm}
+\pagebreak
+
+    \textbf{\color{sectioncolor}Euer 3. Schutzbereich:} \rule{8cm}{0.4pt}
+
+    \begin{taskbox}
+        Regel 1: \rule{\linewidth}{0.4pt}
+
+        Begründung: \rule{\linewidth}{0.4pt}
+        \rule{\linewidth}{0.4pt}
+
+        \vspace{0.5cm}
+
+        Regel 2: \rule{\linewidth}{0.4pt}
+
+        Begründung: \rule{\linewidth}{0.4pt}
+        \rule{\linewidth}{0.4pt}
+    \end{taskbox}
+
+    \vspace{0.3cm}
+
+    \section*{\large\color{headercolor}Schritt 3: Wählt eure wichtigste Regel aus}
+    
+    \begin{taskbox}
+        Welche eurer Regeln findet ihr am wichtigsten? Unterstreicht sie und bereitet euch vor, sie der Klasse vorzustellen!
+
+        \vspace{0.3cm}
+        \textbf{Hilfen für Begründungen:}
+        \begin{itemize}
+            \item "Diese Regel ist wichtig, weil..."
+            \item "Kinder brauchen diese Regel, damit..."
+            \item "Ohne diese Regel könnte es passieren, dass..."
+            \item "Wir müssen Kinder schützen vor..."
+        \end{itemize}
+    \end{taskbox}
+
+    \vspace{0.5cm}
+    \centering\large\textbf{Zeit: 15 Minuten | Präsentation: 1 Minute pro Gruppe}
+\end{document}

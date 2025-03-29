@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinderrechtsexperten</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .worksheet {
+            width: 800px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 20px auto;
+        }
+        .header {
+            background-color: #3498DB;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .mission {
+            background-color: #EBF5FB;
+            border-left: 5px solid #3498DB;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .mission-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2874A6;
+        }
+        .step {
+            margin-bottom: 25px;
+        }
+        .step-title {
+            background-color: #2874A6;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .checkboxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #3498DB;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .section {
+            background-color: #F8F9F9;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2874A6;
+        }
+        .example {
+            background-color: #D4EFDF;
+            border-left: 5px solid #27AE60;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .time-info {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #E74C3C;
+        }
+    </style>
+</head>
+<body>
+    <div class="worksheet">
+        <div class="header">Wir sind Kinderrechtsexperten!</div>
+        
+        <div class="mission">
+            <div class="mission-title">Auftrag:</div>
+            <p>Ihr seid ein Team von Kinderrechtsexperten und sollt Regeln entwickeln, die arbeitende Kinder schützen.</p>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">Schritt 1: Wählt 3 Schutzbereiche aus</div>
+            
+            <div class="checkboxes">
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <span>Alter (Ab wann dürfen Kinder arbeiten?)</span>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <span>Zeit (Wie lange und wann dürfen Kinder arbeiten?)</span>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <span>Tätigkeiten (Welche Arbeit dürfen Kinder machen oder nicht machen?)</span>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <span>Gesundheit (Wie schützen wir die Gesundheit der Kinder?)</span>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <span>Bildung (Wie stellen wir sicher, dass Kinder zur Schule gehen können?)</span>
+                </div>
+                
+                <div class="checkbox-item">
+                    <div class="checkbox"></div>
+                    <span>Freizeit (Wie stellen wir sicher, dass Kinder noch spielen können?)</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">Schritt 2: Entwickelt für jeden Bereich 1-2 Regeln</div>
+            
+            <div class="example">
+                <div class="section-title">Beispiel:</div>
+                <p><strong>Bereich:</strong> Gesundheit</p>
+                <p><strong>Regel:</strong> Kinder dürfen nicht mit giftigen Stoffen arbeiten.</p>
+                <p><strong>Begründung:</strong> Giftige Stoffe können Kinder krank machen und ihrem Körper, der noch wächst, schaden.</p>
+            </div>
+            
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">Euer 1. Schutzbereich:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Regel 1:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Begründung:</div>
+                    <textarea class="form-input" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Regel 2:</div>
+                    <input type="text" class="form-input">
+                </div>
+<div class="form-group">
+                    <div class="form-label">Begründung:</div>
+                    <textarea class="form-input" rows="2"></textarea>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">Euer 2. Schutzbereich:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Regel 1:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Begründung:</div>
+                    <textarea class="form-input" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Regel 2:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Begründung:</div>
+                    <textarea class="form-input" rows="2"></textarea>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="form-group">
+                    <div class="form-label">Euer 3. Schutzbereich:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Regel 1:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Begründung:</div>
+                    <textarea class="form-input" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Regel 2:</div>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Begründung:</div>
+                    <textarea class="form-input" rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">Schritt 3: Wählt eure wichtigste Regel aus</div>
+            <p>Welche eurer Regeln findet ihr am wichtigsten? Unterstreicht sie und bereitet euch vor, sie der Klasse vorzustellen!</p>
+        </div>
+        
+        <div class="mission">
+            <div class="mission-title">Hilfen für Begründungen:</div>
+            <ul>
+                <li>"Diese Regel ist wichtig, weil..."</li>
+                <li>"Kinder brauchen diese Regel, damit..."</li>
+                <li>"Ohne diese Regel könnte es passieren, dass..."</li>
+                <li>"Wir müssen Kinder schützen vor..."</li>
+            </ul>
+        </div>
+        
+        <div class="time-info">Zeit: 15 Minuten | Präsentation: 1 Minute pro Gruppe</div>
+    </div>
+</body>
+</html>

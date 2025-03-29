@@ -1,0 +1,14 @@
+/Users/paulad/snflsknfkldnfs.github.io/scripts
+/Users/paulad/snflsknfkldnfs.github.io/scripts/_site
+/Users/paulad/snflsknfkldnfs.github.io/scripts/_site/notizen
+/Users/paulad/snflsknfkldnfs.github.io/scripts/embeddings
+/Users/paulad/snflsknfkldnfs.github.io/scripts/logs
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen/didaktik
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen/gpg
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen/gpg/5
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen/gpg/6
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen/gpg/7
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen/leitfaden
+/Users/paulad/snflsknfkldnfs.github.io/scripts/notizen/methodik
+Letzte Aktualisierung: Sa 29 Mär 2025 12:26:05 CET
