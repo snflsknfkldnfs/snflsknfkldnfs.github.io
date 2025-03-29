@@ -128,7 +128,119 @@ Die Schülerinnen und Schüler...
 
 Das Fach Wirtschaft und Beruf leistet wichtige Beiträge zu folgenden übergreifenden Bildungs- und Erziehungszielen:
 
-### 3.1 Beruf 
-EOF
-'EOF
-<< EOF
+### 3.1 Berufliche Orientierung
+- Kernaufgabe des Faches WiB
+- Systematische Begleitung des Berufswahlprozesses
+- Entwicklung von Entscheidungs- und Handlungskompetenz für die Berufswahl
+- Förderung realistischer Selbsteinschätzung und Berufserkundung
+
+### 3.2 Alltagskompetenz und Lebensökonomie
+- Verbraucherbildung und finanzielle Grundbildung
+- Haushaltsbezogene Kompetenzen
+- Umgang mit Ressourcen
+- Entwicklung von Konsumkompetenz
+
+### 3.3 Technische Bildung
+- Technisches Grundverständnis
+- Funktionsweisen und Wirkprinzipien technischer Geräte und Systeme
+- Technische Problemlösestrategien
+- Kritische Technikfolgenabschätzung
+
+### 3.4 Bildung für Nachhaltige Entwicklung
+- Nachhaltiges Wirtschaften
+- Bewusstsein für ökologische, ökonomische und soziale Verantwortung
+- Reflektierter Umgang mit Ressourcen
+- Globale Zusammenhänge in der Wirtschaft
+
+### 3.5 Soziales Lernen
+- Teamarbeit in Projekten
+- Kommunikations- und Kooperationsfähigkeit
+- Konfliktlösung
+- Verantwortungsbewusstsein
+
+### 3.6 Medienbildung
+- Umgang mit digitalen Medien im beruflichen Kontext
+- Recherche und Informationsbeschaffung
+- Kritische Medienreflexion
+- Digitale Präsentationstechniken
+
+### 3.7 Werteerziehung
+- Wirtschaftsethik
+- Verantwortungsvolles Handeln in wirtschaftlichen Zusammenhängen
+- Rechtskonformes Verhalten
+- Solidaritätsprinzip
+
+## 4. Integration in die Methodik und Didaktik
+
+Bei der Umsetzung des Lehrplans im Unterricht sollten folgende methodisch-didaktische Prinzipien beachtet werden:
+
+### 4.1 Handlungsorientierung
+- Praktisches Tun im Mittelpunkt
+- Reale Problemstellungen und Aufgaben
+- Selbstständiges Arbeiten
+- Produktorientierung
+
+### 4.2 Projektorientierung
+- Projekte als zentrale Methode (jahrgangsspezifische Progression)
+- Leittextmethode ab Jahrgangsstufe 7
+- Vorbereitung auf die Projektprüfung
+- Ganzheitliches Lernen
+
+### 4.3 Kompetenzorientierung
+- Entwicklung prozessbezogener Kompetenzen
+- Verknüpfung von Wissen und Können
+- Anwendungs- und Transferorientierung
+- Reflexion des eigenen Lernprozesses
+
+### 4.4 Kooperation mit Partnern
+- Einbeziehung der Berufsberatung
+- Zusammenarbeit mit Betrieben
+- Kooperation mit berufsorientierenden Wahlpflichtfächern
+- Externe Experten
+
+## 5. Differenzierung nach Schulartprofilen
+
+Der LehrplanPLUS bietet Differenzierungsmöglichkeiten für verschiedene Leistungsniveaus:
+
+### 5.1 Regelklassen
+- Grundlegende Kompetenzen
+- Praxisorientierter Zugang
+- Strukturierte Lernprozesse
+- Fokus auf unmittelbare Anwendung
+
+### 5.2 Mittlere-Reife-Klassen
+- Erweiterte und vertiefte Kompetenzen
+- Höherer Abstraktionsgrad
+- Mehr Selbstständigkeit
+- Komplexere Zusammenhänge
+
+## 6. Integration einer kompetenzorientierten Leistungsbewertung
+
+Die Leistungsbewertung im Fach WiB sollte kompetenzorientiert erfolgen und verschiedene Dimensionen berücksichtigen:
+
+### 6.1 Fachliche Kompetenzen
+- Kenntnisse in den Gegenstandsbereichen
+- Anwendung von Fachwissen
+- Transferleistungen
+- Kreative Problemlösungen
+
+### 6.2 Prozessbezogene Kompetenzen
+- Qualität des Handelns
+- Analysefähigkeit
+- Kommunikationsfähigkeit
+- Beurteilungskompetenz
+
+### 6.3 Bewertung von Projektarbeit
+- Planungsqualität
+- Durchführungsqualität
+- Reflexionsqualität
+- Präsentationsqualität
+
+### 6.4 Instrumente der Leistungsbewertung
+- Schriftliche Leistungsnachweise
+- Praktische Leistungen
+- Mündliche Beiträge
+- Projektpräsentationen
+- Portfolio-Arbeit
+
+Die Lehrplanbezugsmatrix bietet eine strukturierte Übersicht über die im LehrplanPLUS verankerten Inhalte und Kompetenzen für das Fach Wirtschaft und Beruf. Sie dient als Orientierungshilfe für die systematische Unterrichtsplanung und -gestaltung und stellt sicher, dass alle relevanten Aspekte des Lehrplans berücksichtigt werden.
