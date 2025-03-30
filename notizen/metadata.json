@@ -2709,6 +2709,13 @@
     "date": "2025-03-29"
   },
   {
+    "path": "notizen/wib/berufsorientierung/praxis/Checkliste_Betriebspraktikum.md",
+    "title": "Checkliste: Organisation und Durchführung von Betriebspraktika",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
     "path": "notizen/wib/berufsorientierung/praxis/Praxisleitfaden_Betriebspraktikum.md",
     "title": "Praxisleitfaden: Vorbereitung, Durchführung und Nachbereitung von Betriebspraktika",
     "category": "wib",
@@ -2742,6 +2749,13 @@
     "category": "wib",
     "tags": "",
     "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/evaluation/Evaluationsinstrumente_WiB_Uebersicht.md",
+    "title": "Evaluationsinstrumente für den WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
   },
   {
     "path": "notizen/wib/kompetenzmodell/Kompetenzstrukturmodell_WiB_Detailanalyse.md",
@@ -2793,6 +2807,13 @@
     "date": "2025-03-29"
   },
   {
+    "path": "notizen/wib/methodik/Leitfaden_Methoden_Gegenstandsbereiche.md",
+    "title": "Leitfaden: Einsatz fachtypischer Methoden in den Gegenstandsbereichen des WiB-Unterrichts",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
     "path": "notizen/wib/methodik/Methodenfinder_WiB.md",
     "title": "Methodenfinder für den WiB-Unterricht",
     "category": "wib",
@@ -2807,6 +2828,13 @@
     "date": "2025-03-29"
   },
   {
+    "path": "notizen/wib/methodik/WiB_Methodenmatrix_Kompetenzorientiert.md",
+    "title": "Diese Matrix ordnet spezifische Unterrichtsmethoden den prozessbezogenen Kompetenzen des Faches Wirtschaft und Beruf zu und hilft bei der systematischen Methodenauswahl in der Unterrichtsplanung.",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
     "path": "notizen/wib/methodik/fachspezifisch/Checkliste_Realbegegnungen.md",
     "title": "Checkliste für Realbegegnungen im WiB-Unterricht",
     "category": "wib",
@@ -2816,6 +2844,20 @@
   {
     "path": "notizen/wib/methodik/fachspezifisch/Realbegegnungsverfahren.md",
     "title": "Realbegegnungsverfahren im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/methodik/fachspezifisch/Synopse_Realbegegnungsverfahren.md",
+    "title": "Synopse der Realbegegnungsverfahren im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/methodik/fachtypisch/Integration_Simulationsverfahren.md",
+    "title": "Leitfaden: Integration von Simulationsverfahren in WiB-Unterrichtssequenzen",
     "category": "wib",
     "tags": "",
     "date": "2025-03-30"
@@ -2865,6 +2907,13 @@
   {
     "path": "notizen/wib/unterrichtsplanung/Projektorientierte_Unterrichtsplanung.md",
     "title": "Leitfaden für projektorientierte Unterrichtsplanung im Fach WiB",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/unterrichtsplanung/Sequenzplanung_Projektunterricht_WiB.md",
+    "title": "Sequenzplanung für projektorientierten WiB-Unterricht",
     "category": "wib",
     "tags": "",
     "date": "2025-03-30"
