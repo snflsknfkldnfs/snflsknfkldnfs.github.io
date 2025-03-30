@@ -1607,7 +1607,7 @@
     "title": "Notizen-Übersicht",
     "category": "index.md",
     "tags": "",
-    "date": "2025-03-25"
+    "date": "2025-03-30"
   },
   {
     "path": "notizen/index/GPG_Leitfaeden_Index.md",
@@ -2686,5 +2686,201 @@
     "category": "skripte",
     "tags": "",
     "date": "2025-03-23"
+  },
+  {
+    "path": "notizen/wib/WiB_Leitfaeden_Index.md",
+    "title": "Übersicht der Leitfäden für den WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/beispielsequenzen/Beispiel_WiB_Sequenzplan_Klasse7.md",
+    "title": "Beispiel für eine WiB-Sequenzplanung Klasse 7",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/berufsorientierung/Berufsorientierung_im_WiB.md",
+    "title": "Berufsorientierung im Fach Wirtschaft und Beruf: Leitfaden für die praktische Umsetzung",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/berufsorientierung/praxis/Praxisleitfaden_Betriebspraktikum.md",
+    "title": "Praxisleitfaden: Vorbereitung, Durchführung und Nachbereitung von Betriebspraktika",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/best_practices/Best_Practices_Differenzierung_WiB.md",
+    "title": "Best Practices für Differenzierung im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/best_practices/wirtschaft/Best_Practices_Wirtschaftsunterricht.md",
+    "title": "",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/didaktik/Didaktische_Grundsaetze_WiB.md",
+    "title": "Didaktische Grundsätze für den Unterricht in Wirtschaft und Beruf",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/evaluation/Evaluation_WiB_Unterricht.md",
+    "title": "Leitfaden zur Evaluation im Fach Wirtschaft und Beruf",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/kompetenzmodell/Kompetenzstrukturmodell_WiB_Detailanalyse.md",
+    "title": "Detailanalyse des Kompetenzstrukturmodells im Fach Wirtschaft und Beruf",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/kontext/Fachprofil_WiB_Grundlagen.md",
+    "title": "Fachprofil Wirtschaft und Beruf: Grundlagen und Überblick",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/kontextdateien/Methoden_WiB_Kontext.md",
+    "title": "Kontext für den Einsatz von Methoden im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/lehrplanbezug/Lehrplanbezugsmatrix_WiB.md",
+    "title": "Lehrplanbezugsmatrix für das Fach Wirtschaft und Beruf",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/lernziele/Lernziele_WiB_Leitfaden.md",
+    "title": "Leitfaden zur Formulierung kompetenzorientierter Lernziele im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/materialvorlagen/Berufswahlportfolio_Vorlage.md",
+    "title": "Berufswahlportfolio für die Mittelschule",
+    "category": "wib",
+    "tags": "",
+    "date": "**Datum:_______________****Datum:_______________****Datum:_______________****Datum:_______________****Datum:_______________****Datum:_______________**"
+  },
+  {
+    "path": "notizen/wib/methodik/Aktivierende_Methoden_WiB.md",
+    "title": "Aktivierende Methoden für den WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/methodik/Methodenfinder_WiB.md",
+    "title": "Methodenfinder für den WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/methodik/Projektarbeit_WiB.md",
+    "title": "Leitfaden zur Planung und Durchführung von Projekten im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/methodik/fachspezifisch/Checkliste_Realbegegnungen.md",
+    "title": "Checkliste für Realbegegnungen im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/methodik/fachspezifisch/Realbegegnungsverfahren.md",
+    "title": "Realbegegnungsverfahren im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/methodik/fachtypisch/Simulationsverfahren.md",
+    "title": "Simulationsverfahren im WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/methodik/projektunterricht/Projektorientierter_Unterricht_WiB_Leitfaden.md",
+    "title": "Leitfaden für projektorientierten Unterricht im Fach Wirtschaft und Beruf",
+    "category": "wib",
+    "tags": "",
+    "date": "Datum:__________________________________"
+  },
+  {
+    "path": "notizen/wib/qualitaetskriterien/WiB_Unterrichtsqualitaet.md",
+    "title": "Qualitätskriterien für den WiB-Unterricht",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/sequenzplanung/Standardisierte_Vorlage_Sequenzplanung_WiB.md",
+    "title": "Sequenzplanung für WiB (LehrplanPLUS)",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/unterrichtsplanung/Leitfaden_Projektdokumentation.md",
+    "title": "Leitfaden zur Dokumentation von WiB-Projekten",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/unterrichtsplanung/Praktischer_Leitfaden_WiB_Unterrichtseinheit.md",
+    "title": "Praktischer Leitfaden zur Planung und Durchführung von WiB-Unterrichtseinheiten",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/unterrichtsplanung/Projektorientierte_Unterrichtsplanung.md",
+    "title": "Leitfaden für projektorientierte Unterrichtsplanung im Fach WiB",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-30"
+  },
+  {
+    "path": "notizen/wib/unterrichtsplanung/Unterrichtseinheit_WiB_Leitfaden.md",
+    "title": "Leitfaden zur Planung einer Unterrichtseinheit im Fach Wirtschaft und Beruf",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
+  },
+  {
+    "path": "notizen/wib/unterrichtsvorlagen/Detaillierte_Unterrichtseinheit_Vorlage_WiB.md",
+    "title": "Detaillierte Vorlage für eine WiB-Unterrichtseinheit",
+    "category": "wib",
+    "tags": "",
+    "date": "2025-03-29"
   },
 ]

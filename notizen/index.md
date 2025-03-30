@@ -1,6 +1,6 @@
 # Notizen-Übersicht
 
-Letzte Aktualisierung: 29.03.2025 12:25
+Letzte Aktualisierung: 30.03.2025 12:47
 
 ## allgemein
 
@@ -1030,4 +1030,35 @@ Letzte Aktualisierung: 29.03.2025 12:25
 - [](skripte/🛠️)
 - [](Unterrichtseinheit)
 - [](Project.md)
+
+## wib
+
+- [Übersicht der Leitfäden für den WiB-Unterricht](wib/WiB_Leitfaeden_Index.md)
+- [Beispiel für eine WiB-Sequenzplanung Klasse 7](wib/beispielsequenzen/Beispiel_WiB_Sequenzplan_Klasse7.md)
+- [Berufsorientierung im Fach Wirtschaft und Beruf: Leitfaden für die praktische Umsetzung](wib/berufsorientierung/Berufsorientierung_im_WiB.md)
+- [Praxisleitfaden: Vorbereitung, Durchführung und Nachbereitung von Betriebspraktika](wib/berufsorientierung/praxis/Praxisleitfaden_Betriebspraktikum.md)
+- [Best Practices für Differenzierung im WiB-Unterricht](wib/best_practices/Best_Practices_Differenzierung_WiB.md)
+- [](wib/best_practices/wirtschaft/Best_Practices_Wirtschaftsunterricht.md)
+- [Didaktische Grundsätze für den Unterricht in Wirtschaft und Beruf](wib/didaktik/Didaktische_Grundsaetze_WiB.md)
+- [Leitfaden zur Evaluation im Fach Wirtschaft und Beruf](wib/evaluation/Evaluation_WiB_Unterricht.md)
+- [Detailanalyse des Kompetenzstrukturmodells im Fach Wirtschaft und Beruf](wib/kompetenzmodell/Kompetenzstrukturmodell_WiB_Detailanalyse.md)
+- [Fachprofil Wirtschaft und Beruf: Grundlagen und Überblick](wib/kontext/Fachprofil_WiB_Grundlagen.md)
+- [Kontext für den Einsatz von Methoden im WiB-Unterricht](wib/kontextdateien/Methoden_WiB_Kontext.md)
+- [Lehrplanbezugsmatrix für das Fach Wirtschaft und Beruf](wib/lehrplanbezug/Lehrplanbezugsmatrix_WiB.md)
+- [Leitfaden zur Formulierung kompetenzorientierter Lernziele im WiB-Unterricht](wib/lernziele/Lernziele_WiB_Leitfaden.md)
+- [Berufswahlportfolio für die Mittelschule](wib/materialvorlagen/Berufswahlportfolio_Vorlage.md)
+- [Aktivierende Methoden für den WiB-Unterricht](wib/methodik/Aktivierende_Methoden_WiB.md)
+- [Methodenfinder für den WiB-Unterricht](wib/methodik/Methodenfinder_WiB.md)
+- [Leitfaden zur Planung und Durchführung von Projekten im WiB-Unterricht](wib/methodik/Projektarbeit_WiB.md)
+- [Checkliste für Realbegegnungen im WiB-Unterricht](wib/methodik/fachspezifisch/Checkliste_Realbegegnungen.md)
+- [Realbegegnungsverfahren im WiB-Unterricht](wib/methodik/fachspezifisch/Realbegegnungsverfahren.md)
+- [Simulationsverfahren im WiB-Unterricht](wib/methodik/fachtypisch/Simulationsverfahren.md)
+- [Leitfaden für projektorientierten Unterricht im Fach Wirtschaft und Beruf](wib/methodik/projektunterricht/Projektorientierter_Unterricht_WiB_Leitfaden.md)
+- [Qualitätskriterien für den WiB-Unterricht](wib/qualitaetskriterien/WiB_Unterrichtsqualitaet.md)
+- [Sequenzplanung für WiB (LehrplanPLUS)](wib/sequenzplanung/Standardisierte_Vorlage_Sequenzplanung_WiB.md)
+- [Leitfaden zur Dokumentation von WiB-Projekten](wib/unterrichtsplanung/Leitfaden_Projektdokumentation.md)
+- [Praktischer Leitfaden zur Planung und Durchführung von WiB-Unterrichtseinheiten](wib/unterrichtsplanung/Praktischer_Leitfaden_WiB_Unterrichtseinheit.md)
+- [Leitfaden für projektorientierte Unterrichtsplanung im Fach WiB](wib/unterrichtsplanung/Projektorientierte_Unterrichtsplanung.md)
+- [Leitfaden zur Planung einer Unterrichtseinheit im Fach Wirtschaft und Beruf](wib/unterrichtsplanung/Unterrichtseinheit_WiB_Leitfaden.md)
+- [Detaillierte Vorlage für eine WiB-Unterrichtseinheit](wib/unterrichtsvorlagen/Detaillierte_Unterrichtseinheit_Vorlage_WiB.md)
 
