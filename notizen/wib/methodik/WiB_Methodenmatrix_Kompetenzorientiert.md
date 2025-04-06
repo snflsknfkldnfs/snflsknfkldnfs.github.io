@@ -2,22 +2,22 @@ Diese Matrix ordnet spezifische Unterrichtsmethoden den prozessbezogenen Kompete
 
 ## Zuordnung von Methoden zu prozessbezogenen Kompetenzen
 
-| Methode | Handeln | Analysieren | Kommunizieren | Beurteilen | Geeignete Jahrgangsstufen |
-|---------|---------|-------------|---------------|------------|--------------------------|
-| **Betriebserkundung** | ++ | +++ | ++ | + | 5-10 |
-| **Arbeitsplatzerkundung** | ++ | +++ | ++ | + | 7-10 |
-| **Technikerkundung** | ++ | +++ | + | + | 7-10 |
-| **Betriebspraktikum** | +++ | ++ | ++ | ++ | 8-10 |
-| **Schülerfirma** | +++ | ++ | ++ | ++ | 8-10 |
-| **Rollenspiel** | +++ | + | +++ | ++ | 5-10 |
-| **Planspiel** | +++ | ++ | ++ | +++ | 7-10 |
-| **Fallstudie** | ++ | +++ | + | +++ | 7-10 |
-| **Zukunftswerkstatt** | +++ | + | +++ | ++ | 8-10 |
-| **Szenario** | + | ++ | + | +++ | 8-10 |
-| **Projekt** | +++ | ++ | ++ | ++ | 5-10 |
-| **Pro-Kontra-Debatte** | + | ++ | +++ | +++ | 7-10 |
-| **Leittextmethode** | +++ | ++ | + | + | 7-10 |
-| **Portfolioarbeit** | ++ | ++ | ++ | +++ | 5-10 |
+| Methode                   | Handeln | Analysieren | Kommunizieren | Beurteilen | Geeignete Jahrgangsstufen |
+| ------------------------- | ------- | ----------- | ------------- | ---------- | ------------------------- |
+| **Betriebserkundung**     | ++      | +++         | ++            | +          | 7-10                      |
+| **Arbeitsplatzerkundung** | ++      | +++         | ++            | +          | 5-10                      |
+| **Technikerkundung**      | ++      | +++         | +             | +          | 7-10                      |
+| **Betriebspraktikum**     | +++     | ++          | ++            | ++         | 8-10                      |
+| **Schülerfirma**          | +++     | ++          | ++            | ++         | 8-10                      |
+| **Rollenspiel**           | +++     | +           | +++           | ++         | 5-10                      |
+| **Planspiel**             | +++     | ++          | ++            | +++        | 7-10                      |
+| **Fallstudie**            | ++      | +++         | +             | +++        | 7-10                      |
+| **Zukunftswerkstatt**     | +++     | +           | +++           | ++         | 8-10                      |
+| **Szenario**              | +       | ++          | +             | +++        | 8-10                      |
+| **Projekt**               | +++     | ++          | ++            | ++         | 5-10                      |
+| **Pro-Kontra-Debatte**    | +       | ++          | +++           | +++        | 7-10                      |
+| **Leittextmethode**       | +++     | ++          | +             | +          | 7-10                      |
+| **Portfolioarbeit**       | ++      | ++          | ++            | +++        | 5-10                      |
 
 Legende: 
 - +++ = besonders geeignet

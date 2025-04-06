@@ -1,0 +1,277 @@
+<!-- timer-widget.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer für Kinderrechte-Detektive</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        
+        .timer-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .timer-header {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .timer-display {
+            font-size: 32px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #6c5ce7;
+        }
+        
+        .timer-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .timer-btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .start-btn {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .pause-btn {
+            background-color: #f39c12;
+            color: white;
+        }
+        
+        .reset-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .timer-btn:hover {
+            opacity: 0.9;
+        }
+        
+        .timer-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .phase-select {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .phase-select select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            width: 80%;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: #6c5ce7;
+            width: 0%;
+            transition: width 1s;
+        }
+        
+        .checkpoints {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .checkpoint {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checkpoint-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #6c5ce7;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .checkpoint-box.checked {
+            background-color: #6c5ce7;
+            color: white;
+        }
+        
+        .checkpoint-box.checked::after {
+            content: "✓";
+            font-weight: bold;
+        }
+        
+        .checkpoint-text {
+            flex: 1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-container">
+        <div class="timer-header">
+            ZEIT-DETEKTIV
+        </div>
+        
+        <div class="phase-select">
+            <select id="phase-dropdown">
+                <option value="5">Schritt 1: Video schauen (5 Min)</option>
+                <option value="10">Schritt 2: Arbeitsblatt lesen (10 Min)</option>
+                <option value="15">Schritt 3: Gruppenarbeit (15 Min)</option>
+                <option value="7">Schritt 4: Präsentation (7 Min)</option>
+            </select>
+        </div>
+        
+        <div class="timer-display" id="timer">
+            00:00
+        </div>
+        
+        <div class="timer-controls">
+            <button class="timer-btn start-btn" id="start-btn">Start</button>
+            <button class="timer-btn pause-btn" id="pause-btn">Pause</button>
+            <button class="timer-btn reset-btn" id="reset-btn">Reset</button>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress-fill"></div>
+        </div>
+        
+        <div class="checkpoints">
+            <div class="checkpoint">
+                <div class="checkpoint-box" id="checkpoint-1"></div>
+                <div class="checkpoint-text">Video angeschaut</div>
+            </div>
+            <div class="checkpoint">
+                <div class="checkpoint-box" id="checkpoint-2"></div>
+                <div class="checkpoint-text">Arbeitsblatt gelesen</div>
+            </div>
+            <div class="checkpoint">
+                <div class="checkpoint-box" id="checkpoint-3"></div>
+                <div class="checkpoint-text">Plakat begonnen</div>
+            </div>
+            <div class="checkpoint">
+                <div class="checkpoint-box" id="checkpoint-4"></div>
+                <div class="checkpoint-text">Plakat fertig</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timer;
+        let seconds = 0;
+        let totalSeconds = 0;
+        let isRunning = false;
+
+        const timerDisplay = document.getElementById('timer');
+        const startBtn = document.getElementById('start-btn');
+        const pauseBtn = document.getElementById('pause-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const phaseDropdown = document.getElementById('phase-dropdown');
+        const progressFill = document.getElementById('progress-fill');
+        const checkpoints = document.querySelectorAll('.checkpoint-box');
+
+        function updateTimer() {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+            
+            const percentage = Math.min((seconds / totalSeconds) * 100, 100);
+            progressFill.style.width = `${percentage}%`;
+            
+            if (seconds <= 0) {
+                clearInterval(timer);
+                isRunning = false;
+                timerDisplay.style.color = '#e74c3c';
+                new Audio('https://assets.mixkit.co/active_storage/sfx/933/933-preview.mp3').play();
+                alert('Zeit ist um! ⏰');
+            } else {
+                seconds--;
+            }
+        }
+
+        startBtn.addEventListener('click', function() {
+            if (!isRunning) {
+                isRunning = true;
+                timerDisplay.style.color = '#6c5ce7';
+                timer = setInterval(updateTimer, 1000);
+            }
+        });
+
+        pauseBtn.addEventListener('click', function() {
+            clearInterval(timer);
+            isRunning = false;
+        });
+
+        resetBtn.addEventListener('click', function() {
+            clearInterval(timer);
+            isRunning = false;
+            seconds = parseInt(phaseDropdown.value) * 60;
+            totalSeconds = seconds;
+            updateTimer();
+        });
+
+        phaseDropdown.addEventListener('change', function() {
+            clearInterval(timer);
+            isRunning = false;
+            seconds = parseInt(phaseDropdown.value) * 60;
+            totalSeconds = seconds;
+            updateTimer();
+        });
+
+        // Initialize timer with the first option
+        seconds = parseInt(phaseDropdown.value) * 60;
+        totalSeconds = seconds;
+        updateTimer();
+
+        // Checkbox functionality
+        checkpoints.forEach(checkpoint => {
+            checkpoint.addEventListener('click', function() {
+                this.classList.toggle('checked');
+            });
+        });
+    </script>
+</body>
+</html>

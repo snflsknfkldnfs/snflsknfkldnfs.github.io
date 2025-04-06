@@ -1,0 +1,181 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[ngerman]{babel}
+\usepackage{wasysym}
+\usepackage{framed}
+\usepackage{tgbonum}
+
+% Define colors
+\definecolor{taskblue}{RGB}{0,127,175}
+\definecolor{taskgreen}{RGB}{124,179,66}
+\definecolor{taskbeige}{RGB}{237,201,175}
+\definecolor{taskgold}{RGB}{212,175,55}
+\definecolor{acceptgreen}{RGB}{0,150,0}
+\definecolor{rejectred}{RGB}{200,0,0}
+
+% Define environments
+\newenvironment{taskbox}{%
+    \begin{framed}
+        \color{black}
+    }{%
+    \end{framed}
+}
+
+\newenvironment{infobox}{%
+    \begin{framed}
+        \color{black}
+    }{%
+    \end{framed}
+}
+
+\newenvironment{helpbox}{%
+    \begin{framed}
+        \setlength{\fboxsep}{10pt}
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            \color{black}
+            \setlength{\parindent}{0pt}
+            \setlength{\parskip}{0.5em}
+    }{%
+        \end{minipage}
+    \end{framed}
+}
+
+% Define checkbox symbol
+\newcommand{\checkbox}{\raisebox{-0.2ex}{\Large$\square$}}
+
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.5}
+
+% Define missing symbols if not available in marvosym
+\providecommand{\MVCheckmark}{\checkmark}
+\providecommand{\MVCross}{\texttimes}
+\providecommand{\Square}{\square}
+
+\begin{document}
+    \begin{center}
+        \vspace{0.3cm}
+        {\color{taskblue}\Huge\textbf{Detektivauftrag für Kinderrechte}}\\[0.3cm]
+        {\Large\textbf{Fallbeispiel: Tom (12 Jahre)}}\\[0.5cm]
+        \textbf{Name: \rule{4cm}{0.4pt} \hspace{1cm} Klasse: \rule{2cm}{0.4pt}}
+    \end{center}
+
+    \vspace{0.3cm}
+
+    \section*{\color{taskgold}Deine Mission}
+    
+    \begin{infobox}
+        \textit{„Hallo Rechtsdetektiv!\\
+        Tom ist 12 Jahre alt und möchte sich etwas Taschengeld verdienen. Ein Bioladen in seiner Straße sucht Hilfe beim Einräumen von Regalen. Der Chef bietet an:}
+        
+        \begin{itemize}[leftmargin=*]
+            \item \textbf{Arbeit:} Obst/Gemüse in Regale sortieren
+            \item \textbf{Zeit:} Jeden Samstag von 8 bis 12 Uhr
+            \item \textbf{Bezahlung:} 5 Euro pro Stunde
+        \end{itemize}
+        
+        \textit{Deine Aufgabe: Überprüfe mit dem Gesetzes-Check, ob Tom diesen Job annehmen darf.}
+    \end{infobox}
+
+    \vspace{0.3cm}
+
+    \section*{\color{taskgreen}Schritt 1: Fakten sammeln}
+    
+    \begin{taskbox}
+        \begin{tabular}{|p{7.5cm}|p{7.5cm}|}
+            \hline
+            \textbf{Frage} & \textbf{Antwort (kurz)} \\
+            \hline
+            Wo arbeitet Tom? & \hrulefill \\
+            \hline
+            Was macht er? & \hrulefill \\
+            \hline
+            Wann und wie lange arbeitet er? & \hrulefill \\
+            \hline
+            Wie alt ist Tom? & \hrulefill \\
+            \hline
+        \end{tabular}
+    \end{taskbox}
+
+    \vspace{0.3cm}
+
+	\pagebreak
+	
+    \section*{\color{taskblue}Schritt 2: Gesetzes-Check}
+    
+    \begin{taskbox}
+        \textit{Prüfe jede Regel – trifft sie auf Tom zu?}
+        
+        \begin{tabular}{|p{4cm}|p{8cm}|p{3cm}|}
+            \hline
+            \textbf{Wo steht das Gesetz?} & \textbf{Was steht im Gesetz?} & \textbf{Stimmmt das bei Tom?} \\ 
+            \hline
+            JArbSchG §5 & \begin{minipage}[t]{8cm}
+                \begin{itemize}[leftmargin=*,nosep]
+                    \item Kinder unter 13 Jahren dürfen nicht arbeiten
+                    \item Nur Zeitungsausträger ab 12 Jahren sind erlaubt
+                \end{itemize}
+            \end{minipage} & \checkbox \\ 
+            \hline
+            JArbSchG §7 & \begin{minipage}[t]{8cm}
+                \begin{itemize}[leftmargin=*,nosep]
+                    \item 13-14 Jährige dürfen maximal 2 Stunden pro Tag arbeiten
+                    \item Arbeit nur an 5 Tagen pro Woche
+                    \item Nicht vor 6 Uhr morgens (vor der Schule)
+                \end{itemize}
+            \end{minipage} & \checkbox \\ 
+            \hline
+            JArbSchG §22 & \begin{minipage}[t]{8cm}
+                \begin{itemize}[leftmargin=*,nosep]
+                    \item Keine gefährlichen Arbeiten (z.B. schwere Sachen tragen)
+                    \item Keine Arbeiten mit Maschinen
+                    \item Nur leichte Hilfsarbeiten sind erlaubt
+                \end{itemize}
+            \end{minipage} & \checkbox \\ 
+            \hline
+            MiLoG §1 & \begin{minipage}[t]{8cm}
+                \begin{itemize}[leftmargin=*,nosep]
+                    \item Mindestlohn (12,41 €/h) erst ab 18 Jahren
+                    \item Unter 18 Jahren: Chef kann frei entscheiden, wie viel er zahlt
+                \end{itemize}
+            \end{minipage} & \checkbox \\ 
+            \hline
+        \end{tabular}
+    \end{taskbox}
+
+    \vspace{0.3cm}
+
+    \section*{\color{taskgold}Schritt 3: Urteil fällen}
+    
+    \begin{taskbox}
+        \textit{Setze das Puzzle zusammen!}
+        
+        \textbf{Tom darf diesen Job:}
+        \begin{itemize}[leftmargin=*]
+            \item \checkbox\ \textcolor{acceptgreen}{ANNEHMEN} (wenn alle Regeln eingehalten sind)
+            \item \checkbox\ \textcolor{rejectred}{NICHT ANNEHMEN} (wenn eine oder mehrere Regeln verletzt sind)
+        \end{itemize}
+        
+        \textbf{Begründung:} Unterstreiche die zutreffenden Gründe:\\
+        1. [Alter zu niedrig] 2. [Arbeitszeit zu lang] 3. [Arbeit zu schwer] 4. [Lohn zu niedrig]
+    \end{taskbox}
+
+    \vspace{0.3cm}
+
+    \section*{\color{taskgreen}Reflexionsfragen für Schnelldenker}
+    
+    \begin{taskbox}
+        \begin{enumerate}
+            \item Warum gibt es Altersgrenzen für Arbeit?
+            \item Was könnte passieren, wenn Tom trotzdem arbeitet?
+            \item Wie könnte Tom sein Taschengeld legal verdienen? (Tipp: Ab 13 erlaubt?)
+        \end{enumerate}
+    \end{taskbox}
+
+\end{document}
