@@ -1,0 +1,569 @@
+<!-- improved-navigation.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinderrechte-Mission - Übersicht</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
+            background-color: #f0f8ff;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mission-board {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        .board-header {
+            background-color: #6a0dad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .help-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: #6a0dad;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background-color: #f0e6f6;
+            border-bottom: 3px solid #6a0dad;
+        }
+        
+        .nav-tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #6a0dad;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -3px;
+        }
+        
+        .nav-tab.active {
+            background-color: white;
+            border-bottom: 3px solid #6a0dad;
+        }
+        
+        .nav-tab:hover {
+            background-color: #e0d6e6;
+        }
+        
+        .content-area {
+            padding: 20px;
+        }
+        
+        .mission-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .mission-step {
+            background-color: white;
+            border: 2px solid #6a0dad;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .mission-step:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #6a0dad;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #6a0dad;
+        }
+        
+        .step-description {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .step-button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-family: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background-color 0.3s;
+        }
+        
+        .step-button:hover {
+            background-color: #5a0c9d;
+        }
+        
+        .status-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .status-pending {
+            background-color: #f39c12;
+            color: white;
+        }
+        
+        .status-completed {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .status-optional {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .resource-header {
+            background-color: #6a0dad;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .resource-content {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .resource-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+        }
+        
+        .resource-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .resource-button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .support-section {
+            margin-top: 30px;
+            background-color: #e8f4f8;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .support-title {
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .support-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .support-option {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            flex: 1;
+            min-width: 150px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .option-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+        }
+        
+        .option-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #2980b9;
+        }
+        
+        .option-description {
+            font-size: 12px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        
+        .progress-section {
+            margin-top: 30px;
+            background-color: #f9ebea;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .progress-title {
+            font-weight: bold;
+            color: #c0392b;
+            margin-bottom: 15px;
+        }
+        
+        .progress-bar-container {
+            height: 20px;
+            background-color: #e8e8e8;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #c0392b;
+            width: 25%; /* Example progress */
+        }
+        
+        .checkpoint-list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .checkpoint {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            width: 60px;
+            text-align: center;
+        }
+        
+        .checkpoint-marker {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        
+        .checkpoint-completed {
+            background-color: #c0392b;
+        }
+        
+        .checkpoint-current {
+            background-color: #e67e22;
+        }
+        
+        .checkpoint-pending {
+            background-color: #e8e8e8;
+            border: 1px solid #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="mission-board">
+        <div class="board-header">
+            <div class="title">KINDERRECHTE-MISSION</div>
+            <div class="subtitle">Wie werden Kinder bei der Arbeit geschützt?</div>
+            <button class="help-button">?</button>
+        </div>
+        
+        <div class="nav-tabs">
+            <div class="nav-tab active">Mission</div>
+            <div class="nav-tab">Material</div>
+            <div class="nav-tab">Hilfe</div>
+            <div class="nav-tab">Fortschritt</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="mission-steps">
+                <div class="mission-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Schaut das Video</div>
+                        <div class="step-description">Lernt, was Kinderrechte sind und warum es sie gibt. Notiert euch, was euch besonders wichtig erscheint.</div>
+                        <button class="step-button">Video starten</button>
+                    </div>
+                    <div class="status-badge status-pending">Ausstehend</div>
+                </div>
+                
+                <div class="mission-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Entdeckt die Kinderrechte</div>
+                        <div class="step-description">Lest die Kinderrechte auf dem Arbeitsblatt und markiert wichtige Stellen. Füllt die Detektiv-Notizen aus.</div>
+                        <button class="step-button">Zum Arbeitsblatt</button>
+                    </div>
+                    <div class="status-badge status-pending">Ausstehend</div>
+                </div>
+                
+                <div class="mission-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Gruppenarbeit: Vergleicht eure Regeln</div>
+                        <div class="step-description">Vergleicht eure Regelvorschläge aus der letzten Stunde mit den Kinderrechten. Erstellt ein Plakat.</div>
+                        <button class="step-button">Zum Vergleichsplakat</button>
+                    </div>
+                    <div class="status-badge status-pending">Ausstehend</div>
+                </div>
+                
+                <div class="mission-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Präsentiert eure Ergebnisse</div>
+                        <div class="step-description">Stellt euer Vergleichsplakat der Klasse vor und erklärt eure wichtigsten Erkenntnisse.</div>
+                        <button class="step-button">Präsentationstipps</button>
+                    </div>
+                    <div class="status-badge status-pending">Ausstehend</div>
+                </div>
+                
+                <div class="mission-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Bonus: Lerne mehr über Kinderarbeit</div>
+                        <div class="step-description">Wenn du schon fertig bist, kannst du hier mehr über Kinderarbeit weltweit erfahren.</div>
+                        <button class="step-button">Entdecken</button>
+                    </div>
+                    <div class="status-badge status-optional">Freiwillig</div>
+                </div>
+            </div>
+            
+            <div class="support-section">
+                <div class="support-title">Unterstützung bei der Mission</div>
+                <div class="support-options">
+                    <div class="support-option">
+                        <div class="option-icon">⏱️</div>
+                        <div class="option-title">Zeit-Detektiv</div>
+                        <div class="option-description">Timer für jede Aufgabe</div>
+                        <button class="resource-button">Öffnen</button>
+                    </div>
+                    
+                    <div class="support-option">
+                        <div class="option-icon">📚</div>
+                        <div class="option-title">Wörterbuch</div>
+                        <div class="option-description">Erklärung schwieriger Begriffe</div>
+                        <button class="resource-button">Öffnen</button>
+                    </div>
+                    
+                    <div class="support-option">
+                        <div class="option-icon">🎧</div>
+                        <div class="option-title">Vorlesen</div>
+                        <div class="option-description">Texte anhören</div>
+                        <button class="resource-button">Öffnen</button>
+                    </div>
+                    
+                    <div class="support-option">
+                        <div class="option-icon">🙋</div>
+                        <div class="option-title">Hilfe holen</div>
+                        <div class="option-description">Frage deine Lehrkraft</div>
+                        <button class="resource-button">SOS</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-section">
+                <div class="progress-title">Dein Fortschritt bei der Mission:</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <div class="checkpoint-list">
+                    <div class="checkpoint">
+                        <div class="checkpoint-marker checkpoint-completed"></div>
+                        <div>Start</div>
+                    </div>
+                    <div class="checkpoint">
+                        <div class="checkpoint-marker checkpoint-current"></div>
+                        <div>Video</div>
+                    </div>
+                    <div class="checkpoint">
+                        <div class="checkpoint-marker checkpoint-pending"></div>
+                        <div>Arbeitsblatt</div>
+                    </div>
+                    <div class="checkpoint">
+                        <div class="checkpoint-marker checkpoint-pending"></div>
+                        <div>Plakat</div>
+                    </div>
+                    <div class="checkpoint">
+                        <div class="checkpoint-marker checkpoint-pending"></div>
+                        <div>Präsentation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.nav-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                // In a real implementation, this would show/hide different content sections
+            });
+        });
+        
+        // Help button functionality
+        document.querySelector('.help-button').addEventListener('click', function() {
+            window.open('Hilfekarten.html', '_blank');
+        });
+        
+        // Step buttons functionality
+        const stepButtons = document.querySelectorAll('.step-button');
+        stepButtons[0].addEventListener('click', function() {
+            window.open('https://www.youtube
+.com/embed/hGrb4T3xnJc', '_blank');
+        });
+        
+        stepButtons[1].addEventListener('click', function() {
+            window.open('arbeitsblatt_optimiert.html', '_blank');
+        });
+        
+        stepButtons[2].addEventListener('click', function() {
+            window.open('Vergleichsplakate.html', '_blank');
+        });
+        
+        stepButtons[3].addEventListener('click', function() {
+            alert('Präsentationstipps: 1. Sprecht laut und deutlich. 2. Erklärt die wichtigsten Punkte auf eurem Plakat. 3. Jedes Teammitglied sollte etwas sagen.');
+        });
+        
+        stepButtons[4].addEventListener('click', function() {
+            window.open('https://www.unicef.de/informieren/aktuelles/blog/kinderarbeit-fragen-und-antworten/166982', '_blank');
+        });
+        
+        // Support buttons functionality
+        const resourceButtons = document.querySelectorAll('.resource-button');
+        resourceButtons[0].addEventListener('click', function() {
+            window.open('timer-widget.html', '_blank');
+        });
+        
+        resourceButtons[1].addEventListener('click', function() {
+            const wordDict = {
+                'Ausbeutung': 'Wenn Kinder zu viel oder zu schwer arbeiten müssen und zu wenig dafür bekommen.',
+                'Kinderrechtskonvention': 'Ein wichtiges Gesetz, das in fast allen Ländern der Welt gilt und Kinder schützen soll.',
+                'Artikel': 'Ein Abschnitt in einem Gesetz mit einer bestimmten Regel.',
+                'UN': 'United Nations (Vereinte Nationen) - eine Organisation, in der fast alle Länder der Welt zusammenarbeiten.',
+                'Konvention': 'Eine Vereinbarung zwischen vielen Ländern.',
+                'Bildung': 'Alles, was man in der Schule und im Leben lernt.',
+                'Wirtschaftlich': 'Hat mit Geld, Arbeit und Handel zu tun.',
+                'Recht auf Gesundheit': 'Kinder sollen gesund bleiben und medizinische Hilfe bekommen.',
+                'Freizeit': 'Zeit, in der man nicht arbeiten oder lernen muss, sondern spielen und sich erholen kann.'
+            };
+            
+            let word = prompt('Welches Wort möchtest du erklärt haben?');
+            if (word && wordDict[word]) {
+                alert(word + ': ' + wordDict[word]);
+            } else {
+                alert('Dieses Wort ist nicht in unserem Wörterbuch. Frage deine Lehrkraft!');
+            }
+        });
+        
+        resourceButtons[2].addEventListener('click', function() {
+            alert('Wähle den Text, den du vorlesen lassen möchtest und klicke dann auf das Lautsprecher-Symbol auf dem Arbeitsblatt.');
+        });
+        
+        resourceButtons[3].addEventListener('click', function() {
+            alert('Du hast um Hilfe gebeten. Deine Lehrkraft wird gleich zu dir kommen. In der Zwischenzeit kannst du die Hilfekarten anschauen.');
+        });
+    </script>
+</body>
+</html>

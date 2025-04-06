@@ -1,0 +1,365 @@
+<!-- reflection-form.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexionsbogen: Kinderrechte-Mission</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .reflection-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        .form-header {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .form-header h1 {
+            color: #6a0dad;
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        .form-header p {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .section-title {
+            color: #6a0dad;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #6a0dad;
+            border-radius: 50%;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+        }
+        
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .option input {
+            margin: 0;
+        }
+        
+        .text-answer {
+            width: 100%;
+            min-height: 80px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        .emoji-options {
+            display: flex;
+            justify-content: space-between;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+        
+        .emoji-option {
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .emoji {
+            font-size: 28px;
+            margin-bottom: 5px;
+            transition: transform 0.2s;
+        }
+        
+        .emoji-option:hover .emoji {
+            transform: scale(1.2);
+        }
+        
+        .emoji-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .emoji-option.selected .emoji {
+            transform: scale(1.2);
+        }
+        
+        .learning-checkboxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .learning-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        
+        .learning-option:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .submit-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .submit-button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 25px;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-button:hover {
+            background-color: #5a0c9d;
+        }
+        
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="reflection-form">
+        <div class="form-header">
+            <h1>MEINE GEDANKEN ZUR KINDERRECHTE-MISSION</h1>
+            <p>Hier kannst du aufschreiben, was du heute gelernt hast und wie es dir bei der Mission ging.</p>
+        </div>
+        
+        <div class="form-section">
+            <div class="section-title">Wie hat dir die Mission gefallen?</div>
+            
+            <div class="question">
+                <div class="question-text">Wie hat dir die Arbeit mit den Kinderrechten gefallen?</div>
+                <div class="emoji-options">
+                    <div class="emoji-option">
+                        <div class="emoji">😞</div>
+                        <div class="emoji-label">Gar nicht gut</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">😐</div>
+                        <div class="emoji-label">Geht so</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">🙂</div>
+                        <div class="emoji-label">Gut</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">😃</div>
+                        <div class="emoji-label">Sehr gut</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">🤩</div>
+                        <div class="emoji-label">Super!</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Was hat dir besonders gut gefallen?</div>
+                <textarea class="text-answer" placeholder="Schreibe hier..."></textarea>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Was war schwierig für dich?</div>
+                <textarea class="text-answer" placeholder="Schreibe hier..."></textarea>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <div class="section-title">Was hast du gelernt?</div>
+            
+            <div class="question">
+                <div class="question-text">Kreuze an, was du heute über Kinderrechte gelernt hast:</div>
+                <div class="learning-checkboxes">
+                    <div class="learning-option">
+                        <input type="checkbox" id="learning1">
+                        <label for="learning1">Was Kinderrechte sind</label>
+                    </div>
+                    <div class="learning-option">
+                        <input type="checkbox" id="learning2">
+                        <label for="learning2">Wie Kinderrechte arbeitende Kinder schützen</label>
+                    </div>
+                    <div class="learning-option">
+                        <input type="checkbox" id="learning3">
+                        <label for="learning3">Das Recht auf Bildung (Artikel 28)</label>
+                    </div>
+                    <div class="learning-option">
+                        <input type="checkbox" id="learning4">
+                        <label for="learning4">Das Recht auf Gesundheit (Artikel 24)</label>
+                    </div>
+                    <div class="learning-option">
+                        <input type="checkbox" id="learning5">
+                        <label for="learning5">Das Recht auf Freizeit und Spiel (Artikel 31)</label>
+                    </div>
+                    <div class="learning-option">
+                        <input type="checkbox" id="learning6">
+                        <label for="learning6">Das Recht auf Schutz vor Ausbeutung (Artikel 32)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Welches Kinderrecht findest du besonders wichtig und warum?</div>
+                <textarea class="text-answer" placeholder="Schreibe hier..."></textarea>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <div class="section-title">Bewerte deine Mitarbeit</div>
+            
+            <div class="question">
+                <div class="question-text">Wie gut habe ich in der Gruppe mitgearbeitet?</div>
+                <div class="emoji-options">
+                    <div class="emoji-option">
+                        <div class="emoji">😞</div>
+                        <div class="emoji-label">Wenig</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">😐</div>
+                        <div class="emoji-label">Etwas</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">🙂</div>
+                        <div class="emoji-label">Gut</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">😃</div>
+                        <div class="emoji-label">Sehr gut</div>
+                    </div>
+                    <div class="emoji-option">
+                        <div class="emoji">🤩</div>
+                        <div class="emoji-label">Super!</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Was habe ich zum Gruppenergebnis beigetragen?</div>
+                <textarea class="text-answer" placeholder="Schreibe hier..."></textarea>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <div class="section-title">Fragen und Ideen</div>
+            
+            <div class="question">
+                <div class="question-text">Hast du noch Fragen zum Thema Kinderrechte?</div>
+                <textarea class="text-answer" placeholder="Schreibe hier..."></textarea>
+            </div>
+            
+            <div class="question">
+                <div class="question-text">Wie können wir die Kinderrechte in unserer Schule stärken?</div>
+                <textarea class="text-answer" placeholder="Schreibe hier..."></textarea>
+            </div>
+        </div>
+        
+        <div class="submit-section">
+            <button class="submit-button" id="submit-btn">Absenden</button>
+            <div class="success-message" id="success-message">Vielen Dank für deine Gedanken! Deine Antworten wurden gespeichert.</div>
+        </div>
+    </div>
+
+    <script>
+        // Emoji selection
+        const emojiOptions = document.querySelectorAll('.emoji-option');
+        emojiOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected class from all siblings
+                const parent = this.parentNode;
+                const siblings = parent.querySelectorAll('.emoji-option');
+                siblings.forEach(sib => sib.classList.remove('selected'));
+                
+                // Add selected class to this option
+                this.classList.add('selected');
+            });
+        });
+        
+        // Submit button
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            // In a real application, this would send data to a server
+            // Here we just show the success message
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Scroll to the success message
+            document.getElementById('success-message').scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // For demonstration purposes, log the form data
+            const textareas = document.querySelectorAll('.text-answer');
+            const texts = Array.from(textareas).map(ta => ta.value);
+            console.log('Form data:', {
+                'Text answers': texts,
+                'Selected emojis': document.querySelectorAll('.emoji-option.selected').length,
+                'Checked learnings': document.querySelectorAll('.learning-option input:checked').length
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Kinderrechte-Detektive</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            background-color: #4b9cd3;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .audio-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: #4b9cd3;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .audio-icon {
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234b9cd3"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .mission-card {
+            background-color: #fff8dc;
+            border: 2px dashed #ff8c00;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .mission-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff8c00"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .mission-content {
+            flex: 1;
+        }
+
+        .mission-title {
+            color: #ff8c00;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .rights-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .right-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .right-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .right-header {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .right-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .article-32 .right-header {
+            background-color: #e74c3c;
+        }
+
+        .article-32 .right-icon {
+            color: #e74c3c;
+        }
+
+        .article-28 .right-header {
+            background-color: #3498db;
+        }
+
+        .article-28 .right-icon {
+            color: #3498db;
+        }
+
+        .article-24 .right-header {
+            background-color: #2ecc71;
+        }
+
+        .article-24 .right-icon {
+            color: #2ecc71;
+        }
+
+        .article-31 .right-header {
+            background-color: #f39c12;
+        }
+
+        .article-31 .right-icon {
+            color: #f39c12;
+        }
+
+        .right-content {
+            padding: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .right-image {
+            flex: 0 0 100px;
+            height: 100px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .right-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .right-text {
+            flex: 1;
+        }
+
+        .right-description {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        .right-description strong {
+            color: #333;
+            font-size: 17px;
+        }
+
+        .detective-notes {
+            background-color: #fffde7;
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            padding: 10px;
+            min-height: 60px;
+        }
+
+        .notes-label {
+            color: #ff8c00;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .notes-label::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff8c00"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V9z"/></svg>');
+            background-size: contain;
+        }
+
+        .task-container {
+            background-color: #e8f4f8;
+            border-left: 5px solid #4b9cd3;
+            padding: 15px;
+            border-radius: 0 10px 10px 0;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .task-title {
+            color: #4b9cd3;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .task-title::before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234b9cd3"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>');
+            background-size: contain;
+        }
+
+        .task-steps {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-steps li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            counter-increment: step-counter;
+        }
+
+        .task-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 22px;
+            height: 22px;
+            background-color: #4b9cd3;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .help-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: #f8f8f8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23555"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .help-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .language-support {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 5px solid #8e44ad;
+        }
+        
+        .language-title {
+            color: #8e44ad;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .language-title::before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238e44ad"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>');
+            background-size: contain;
+        }
+        
+        .word-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .word-item {
+            background-color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        
+        .word-term {
+            font-weight: bold;
+            color: #8e44ad;
+            margin-right: 5px;
+        }
+        
+        .simplified-version {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0e6f6;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .simplified-title {
+            font-weight: bold;
+            color: #8e44ad;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        
+        .right-list {
+            padding-left: 25px;
+        }
+        
+        .right-list li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .right-list li::before {
+            content: "✓";
+            position: absolute;
+            left: -20px;
+            color: inherit;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DIE KINDERRECHTE-DETEKTIVE</h1>
+            <button class="audio-button" title="Text vorlesen">
+                <div class="audio-icon"></div>
+            </button>
+        </div>
+
+        <div class="mission-card">
+            <div class="mission-icon"></div>
+            <div class="mission-content">
+                <div class="mission-title">Eure Mission:</div>
+                <p>Rahul ist 12 Jahre alt und arbeitet jeden Tag in einer Fabrik. Er und viele andere Kinder brauchen Hilfe! Entdeckt die wichtigsten Kinderrechte, die Kinder bei der Arbeit schützen könnten.</p>
+            </div>
+        </div>
+
+        <div class="rights-container">
+            <div class="right-card article-32">
+                <div class="help-icon" title="Hilfe zu diesem Recht"></div>
+                <div class="right-header">
+                    <div class="right-icon">32</div>
+                    <div>Schutz vor wirtschaftlicher Ausbeutung</div>
+                </div>
+                <div class="right-content">
+                    <div class="right-image">
+                        <img src="https://placehold.co/100x100/e74c3c/FFF?text=Kind+bei+Arbeit" alt="Kind bei der Arbeit">
+                    </div>
+                    <div class="right-text">
+                        <div class="right-description">
+                            <strong>Kinder haben das Recht, nicht ausgenutzt zu werden!</strong> Das bedeutet:
+                            <ul class="right-list">
+                                <li>Kinder dürfen nicht zu früh arbeiten</li>
+                                <li>Kinder dürfen nicht zu lange arbeiten</li>
+                                <li>Die Arbeit darf nicht gefährlich sein</li>
+                                <li>Die Arbeit darf nicht die Gesundheit schädigen</li>
+                                <li>Die Arbeit darf nicht vom Schulbesuch abhalten</li>
+                            </ul>
+                        </div>
+                        <div class="detective-notes">
+                            <div class="notes-label">Detektiv-Notizen: Wie schützt dieses Recht arbeitende Kinder?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-card article-28">
+                <div class="help-icon" title="Hilfe zu diesem Recht"></div>
+                <div class="right-header">
+                    <div class="right-icon">28</div>
+                    <div>Recht auf Bildung</div>
+                </div>
+                <div class="right-content">
+                    <div class="right-image">
+                        <img src="https://placehold.co/100x100/3498db/FFF?text=Kind+in+Schule" alt="Kind in Schule">
+                    </div>
+                    <div class="right-text">
+                        <div class="right-description">
+                            <strong>Jedes Kind hat das Recht auf Bildung!</strong> Das bedeutet:
+                            <ul class="right-list">
+                                <li>Die Grundschule soll kostenlos für alle sein</li>
+                                <li>Alle Kinder müssen zur Schule gehen können</li>
+                                <li>Weiterführende Schulen sollen allen offen stehen</li>
+                                <li>Jedes Kind soll seine Fähigkeiten entwickeln können</li>
+                            </ul>
+                        </div>
+                        <div class="detective-notes">
+                            <div class="notes-label">Detektiv-Notizen: Wie schützt dieses Recht arbeitende Kinder?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-card article-24">
+                <div class="help-icon" title="Hilfe zu diesem Recht"></div>
+                <div class="right-header">
+                    <div class="right-icon">24</div>
+                    <div>Recht auf Gesundheit</div>
+                </div>
+                <div class="right-content">
+                    <div class="right-image">
+                        <img src="https://placehold.co/100x100/2ecc71/FFF?text=Gesundes+Kind" alt="Gesundes Kind">
+                    </div>
+                    <div class="right-text">
+                        <div class="right-description">
+                            <strong>Jedes Kind hat das Recht, gesund zu sein und zu bleiben!</strong> Das bedeutet:
+                            <ul class="right-list">
+                                <li>Kinder sollen sauberes Trinkwasser haben</li>
+                                <li>Kinder sollen gesunde Nahrung bekommen</li>
+                                <li>Kinder haben ein Recht auf medizinische Versorgung</li>
+                                <li>Kinder sollen vor Umweltverschmutzung geschützt werden</li>
+                            </ul>
+                        </div>
+                        <div class="detective-notes">
+                            <div class="notes-label">Detektiv-Notizen: Wie schützt dieses Recht arbeitende Kinder?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-card article-31">
+                <div class="help-icon" title="Hilfe zu diesem Recht"></div>
+                <div class="right-header">
+                    <div class="right-icon">31</div>
+                    <div>Recht auf Freizeit, Spiel und Erholung</div>
+                </div>
+                <div class="right-content">
+                    <div class="right-image">
+                        <img src="https://placehold.co/100x100/f39c12/FFF?text=Spielende+Kinder" alt="
+Spielende Kinder">
+                    </div>
+                    <div class="right-text">
+                        <div class="right-description">
+                            <strong>Jedes Kind hat das Recht auf freie Zeit zum Spielen!</strong> Das bedeutet:
+                            <ul class="right-list">
+                                <li>Kinder brauchen Zeit zum Ausruhen</li>
+                                <li>Kinder müssen spielen können</li>
+                                <li>Kinder sollen an Freizeitaktivitäten teilnehmen können</li>
+                                <li>Kinder haben ein Recht auf kulturelle Aktivitäten</li>
+                            </ul>
+                        </div>
+                        <div class="detective-notes">
+                            <div class="notes-label">Detektiv-Notizen: Wie schützt dieses Recht arbeitende Kinder?</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-container">
+            <div class="task-title">Euer Detektivauftrag:</div>
+            <ol class="task-steps">
+                <li>Lest zusammen mit eurem Partner die Kinderrechte.</li>
+                <li>Markiert mit <span style="color:green;font-weight:bold;">grün</span>, welche Teile besonders mit Arbeit zu tun haben.</li>
+                <li>Füllt die Detektiv-Notizen aus: Wie schützt jedes Recht arbeitende Kinder?</li>
+                <li>Seid bereit, eure Entdeckungen mit der Klasse zu teilen!</li>
+            </ol>
+        </div>
+
+        <div class="language-support">
+            <div class="language-title">Wörterhilfe</div>
+            <div class="word-list">
+                <div class="word-item">
+                    <span class="word-term">Ausbeutung:</span> wenn jemand unfair behandelt wird
+                </div>
+                <div class="word-item">
+                    <span class="word-term">Kinderrechtskonvention:</span> weltweites Gesetz für Kinder
+                </div>
+                <div class="word-item">
+                    <span class="word-term">Artikel:</span> Teil eines Gesetzes
+                </div>
+                <div class="word-item">
+                    <span class="word-term">schädigen:</span> etwas kaputt machen oder verletzen
+                </div>
+                <div class="word-item">
+                    <span class="word-term">Erholung:</span> Pause und Ausruhen
+                </div>
+            </div>
+            
+            <div class="simplified-version">
+                <div class="simplified-title">Einfache Zusammenfassung:</div>
+                <p>Kinder haben Rechte, die sie schützen sollen. Wenn Kinder arbeiten, dürfen sie nicht zu viel und nicht zu schwer arbeiten. Sie müssen zur Schule gehen können. Sie brauchen Zeit zum Spielen und Ausruhen. Sie sollen gesund bleiben.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Einfache Vorlesefunktion für die Texte
+        document.querySelector('.audio-button').addEventListener('click', function() {
+            const mainText = document.querySelector('.mission-content p').textContent;
+            const utterance = new SpeechSynthesisUtterance(mainText);
+            utterance.lang = 'de-DE';
+            window.speechSynthesis.speak(utterance);
+        });
+
+        // Hilfefunktion für die Kinderrechte
+        const helpIcons = document.querySelectorAll('.help-icon');
+        helpIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                const rightCard = this.closest('.right-card');
+                const articleNumber = rightCard.querySelector('.right-icon').textContent;
+                alert(`Hilfe zu Artikel ${articleNumber}: Klicke auf den Link in der Navigation, um zur Hilfeseite zu gelangen.`);
+                window.open('#hilfe-zone', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
