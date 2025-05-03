@@ -8,5 +8,5 @@ echo "Starte Update-Prozess..."
 ./scripts/convert_notes.sh
 ./scripts/integrate_notes.sh
 ./scripts/update_structure.sh  # Hinzufügen dieser Zeile
-
+node ./scripts/generators/generate_tuv_overview.js
 echo "Update abgeschlossen!"
