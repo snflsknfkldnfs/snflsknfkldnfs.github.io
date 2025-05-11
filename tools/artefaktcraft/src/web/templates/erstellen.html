@@ -1,0 +1,162 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">{{ artefakt_type_config.name }} erstellen</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('erstellen', artefakt_type=artefakt_type) }}">
+                    {% for field in artefakt_type_config.metadata_schema %}
+                    <div class="mb-3">
+                        <label for="{{ field.name }}" class="form-label">
+                            {{ field.prompt }}
+                            {% if field.required %}
+                            <span class="text-danger">*</span>
+                            {% endif %}
+                        </label>
+                        
+                        {% if field.type == "string" %}
+                        <input type="text" class="form-control" id="{{ field.name }}" name="{{ field.name }}" 
+                               {% if field.required %}required{% endif %}>
+                        
+                        {% elif field.type == "number" %}
+                        <input type="number" class="form-control" id="{{ field.name }}" name="{{ field.name }}" 
+                               {% if field.required %}required{% endif %}>
+                        
+                        {% elif field.type == "boolean" %}
+                        <select class="form-select" id="{{ field.name }}" name="{{ field.name }}"
+                                {% if field.required %}required{% endif %}>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="true">Ja</option>
+                            <option value="false">Nein</option>
+                        </select>
+                        
+                        {% elif field.type == "enum" and field.options %}
+                        <select class="form-select" id="{{ field.name }}" name="{{ field.name }}"
+                                {% if field.required %}required{% endif %}>
+                            <option value="">-- Bitte wählen --</option>
+                            {% for option in field.options %}
+                            <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                        {% endif %}
+                        
+                        {% if field.description %}
+                        <div class="form-text">{{ field.description }}</div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{{ url_for('artefakte') }}" class="btn btn-secondary">Abbrechen</a>
+                        <button type="button" class="btn btn-info" id="preview-btn">Vorschau</button>
+                        <button type="submit" class="btn btn-primary">Erstellen</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                Hinweise
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Tipps zur Erstellung</h5>
+                <ul>
+                    <li>Felder mit <span class="text-danger">*</span> sind Pflichtfelder.</li>
+                    <li>Verwenden Sie aussagekräftige Titel für Ihre Artefakte.</li>
+                    <li>Die Feldtypen (String, Number, Boolean, Enum) bestimmen, welche Eingaben möglich sind.</li>
+                    <li>Klicken Sie auf "Vorschau", um das Artefakt vor dem Erstellen zu überprüfen.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vorschau-Modal -->
+<div class="modal fade" id="preview-modal" tabindex="-1" aria-labelledby="preview-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="preview-modal-label">Artefakt-Vorschau</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center" id="preview-loading">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Wird geladen...</span>
+                    </div>
+                    <p>Vorschau wird generiert...</p>
+                </div>
+                <pre id="preview-content" class="bg-light p-3" style="display: none;"></pre>
+                <div id="preview-error" class="alert alert-danger" style="display: none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const previewBtn = document.getElementById('preview-btn');
+    const previewModal = new bootstrap.Modal(document.getElementById('preview-modal'));
+    const previewLoading = document.getElementById('preview-loading');
+    const previewContent = document.getElementById('preview-content');
+    const previewError = document.getElementById('preview-error');
+    
+    previewBtn.addEventListener('click', function() {
+        // Formular-Daten sammeln
+        const form = document.querySelector('form');
+        const formData = new FormData(form);
+        const metadata = {};
+        
+        // Formular-Daten in JSON-Objekt umwandeln
+        for (const [key, value] of formData.entries()) {
+            metadata[key] = value;
+        }
+        
+        // Vorschau-Modal öffnen
+        previewModal.show();
+        previewLoading.style.display = 'block';
+        previewContent.style.display = 'none';
+        previewError.style.display = 'none';
+        
+        // Vorschau anfordern
+        fetch('{{ url_for("api_artefakt_vorschau") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                artefakt_type: '{{ artefakt_type }}',
+                metadata: metadata
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            previewLoading.style.display = 'none';
+            
+            if (data.success) {
+                previewContent.textContent = data.content;
+                previewContent.style.display = 'block';
+            } else {
+                previewError.textContent = data.error;
+                previewError.style.display = 'block';
+            }
+        })
+        .catch(error => {
+            previewLoading.style.display = 'none';
+            previewError.textContent = 'Fehler bei der Anfrage: ' + error.message;
+            previewError.style.display = 'block';
+        });
+    });
+});
+</script>
+{% endblock %}

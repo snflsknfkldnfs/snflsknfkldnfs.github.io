@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Verfügbare Artefakt-Typen</h1>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for artefakt_type in artefakt_types %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ artefakt_type.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">ID: {{ artefakt_type.id }}</h6>
+                
+                <p class="card-text">
+                    <strong>Metadaten-Schema:</strong>
+                </p>
+                <ul class="list-group list-group-flush mb-3">
+                    {% for field in artefakt_type.metadata_schema %}
+                    <li class="list-group-item">
+                        {{ field.name }} 
+                        <span class="badge bg-primary">{{ field.type }}</span>
+                        {% if field.required %}
+                        <span class="badge bg-danger">Erforderlich</span>
+                        {% else %}
+                        <span class="badge bg-secondary">Optional</span>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                
+                <a href="{{ url_for('erstellen', artefakt_type=artefakt_type.id) }}" class="btn btn-primary">Artefakt erstellen</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

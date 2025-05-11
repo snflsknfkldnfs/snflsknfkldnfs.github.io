@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Unterrichtseinheit",
+  "description": "Schema für Unterrichtseinheiten im ArtefaktCraft-System",
+  "type": "object",
+  "required": ["type", "title", "subject", "grade", "topic", "learningAreas", "competencyAreas", "processCompetencies", "duration", "author", "created"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["unterrichtseinheit"],
+      "description": "Typ des Dokuments"
+    },
+    "title": {
+      "type": "string",
+      "description": "Titel der Unterrichtseinheit"
+    },
+    "subject": {
+      "type": "string",
+      "enum": ["WiB", "GPG"],
+      "description": "Unterrichtsfach"
+    },
+    "grade": {
+      "type": "string",
+      "pattern": "^([5-9]|10)$",
+      "description": "Jahrgangsstufe (5-10)"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Hauptthema der Unterrichtseinheit"
+    },
+    "subtopic": {
+      "type": "string",
+      "description": "Unterthema der Unterrichtseinheit"
+    },
+    "learningAreas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^LB[1-5]$"
+      },
+      "description": "Lernbereiche gemäß Lehrplan (LB1-LB5)"
+    },
+    "competencyAreas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Arbeit", "Berufsorientierung", "Wirtschaft", "Technik", "Recht"]
+      },
+      "description": "Gegenstandsbereiche gemäß Kompetenzstrukturmodell"
+    },
+    "processCompetencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Handeln", "Analysieren", "Kommunizieren", "Beurteilen"]
+      },
+      "description": "Prozessbezogene Kompetenzen gemäß Kompetenzstrukturmodell"
+    },
+    "duration": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "Dauer der Unterrichtseinheit in Minuten"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Voraussetzungen für die Durchführung der Unterrichtseinheit"
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Verknüpfte Ressourcen (Arbeitsblätter, Tafelbilder, etc.)"
+    },
+    "author": {
+      "type": "string",
+      "description": "Autor der Unterrichtseinheit"
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "description": "Erstellungsdatum (YYYY-MM-DD)"
+    },
+    "modified": {
+      "type": "string",
+      "format": "date",
+      "description": "Änderungsdatum (YYYY-MM-DD)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Version im Semver-Format (MAJOR.MINOR.PATCH)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "final"],
+      "description": "Status des Dokuments"
+    }
+  },
+  "additionalProperties": false
+}

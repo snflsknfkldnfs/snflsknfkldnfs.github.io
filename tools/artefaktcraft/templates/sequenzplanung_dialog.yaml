@@ -1,0 +1,50 @@
+
+# Dialog-Flow für die Erstellung einer Sequenzplanung
+
+introduction: |
+  Willkommen zur Erstellung einer Sequenzplanung für {artefakt_name}!
+  
+  Dieser Dialog wird Sie durch die Erstellung einer strukturierten Sequenzplanung führen.
+  Einige Felder sind Pflichtfelder (mit * gekennzeichnet), andere können Sie optional ausfüllen.
+
+steps:
+  - id: title
+    prompt: "Bitte geben Sie den Titel der Sequenzplanung ein (*)"
+    type: string
+    required: true
+    ai_assisted: true
+    ai_prompt: "Basierend auf den bisherigen Informationen, schlage einen präzisen, fachlichen Titel für eine Sequenzplanung in {artefakt_type} vor."
+
+  - id: fach
+    prompt: "Für welches Fach ist die Sequenzplanung bestimmt? (*)"
+    type: enum
+    options: ["WiB", "GPG"]
+    required: true
+    
+  - id: jahrgangsstufe
+    prompt: "Für welche Jahrgangsstufe ist die Sequenzplanung gedacht? (*)"
+    type: enum
+    options: ["5", "6", "7", "8", "9", "10"]
+    required: true
+    
+  - id: umfang
+    prompt: "Wie viele Unterrichtsstunden umfasst die Sequenz? (*)"
+    type: number
+    required: true
+    
+  - id: zeitraum
+    prompt: "In welchem Zeitraum soll die Sequenz stattfinden? (z.B. 'November-Dezember 2025')"
+    type: string
+    required: false
+    
+  - id: lernbereich
+    prompt: "Auf welchen Lernbereich bezieht sich die Sequenzplanung hauptsächlich? (*)"
+    type: string
+    required: true
+    ai_assisted: true
+    ai_prompt: "Basierend auf dem Fach {fach} und der Jahrgangsstufe {jahrgangsstufe}, schlage einen passenden Lernbereich aus dem LehrplanPLUS vor."
+
+conclusion: |
+  Vielen Dank für Ihre Eingaben! Die Sequenzplanung "{title}" für {fach} (Jahrgangsstufe {jahrgangsstufe}) wurde erfolgreich erstellt.
+  
+  Sie können die Sequenzplanung nun im vorgesehenen Verzeichnis finden und weiter bearbeiten.

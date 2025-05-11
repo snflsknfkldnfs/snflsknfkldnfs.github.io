@@ -1,0 +1,192 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Repository-Status</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Basis-Informationen</h5>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Basis-Pfad</th>
+                            <td>{{ result.base_path_exists }}</td>
+                            <td>
+                                {% if result.base_path_exists %}
+                                <span class="badge bg-success">OK</span>
+                                {% else %}
+                                <span class="badge bg-danger">Fehlt</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Templates-Pfad</th>
+                            <td>{{ result.templates_path_exists }}</td>
+                            <td>
+                                {% if result.templates_path_exists %}
+                                <span class="badge bg-success">OK</span>
+                                {% else %}
+                                <span class="badge bg-danger">Fehlt</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Ausgabepfade</h5>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Fach</th>
+                            <th scope="col">Pfad</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for fach, info in result.output_paths.items() %}
+                        <tr>
+                            <th scope="row">{{ fach }}</th>
+                            <td>{{ info.path }}</td>
+                            <td>
+                                {% if info.exists %}
+                                <span class="badge bg-success">OK</span>
+                                {% else %}
+                                <span class="badge bg-danger">Fehlt</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Templates</h5>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Artefakt-Typ</th>
+                            <th scope="col">Pfad</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for template in result.templates %}
+                        <tr>
+                            <th scope="row">{{ template.artefakt_type }}</th>
+                            <td>{{ template.path }}</td>
+                            <td>
+                                {% if template.exists %}
+                                <span class="badge bg-success">OK</span>
+                                {% else %}
+                                <span class="badge bg-danger">Fehlt</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Gesamtstatus</h5>
+            </div>
+            <div class="card-body">
+                {% set all_ok = result.base_path_exists and result.templates_path_exists and all(info.exists for info in result.output_paths.values()) and all(template.exists for template in result.templates) %}
+                
+                {% if all_ok %}
+                <div class="alert alert-success">
+                    <h4 class="alert-heading">Alles in Ordnung!</h4>
+                    <p>Die Repository-Struktur ist vollständig und korrekt.</p>
+                </div>
+                {% else %}
+                <div class="alert alert-warning">
+                    <h4 class="alert-heading">Probleme festgestellt</h4>
+                    <p>Es wurden Probleme in der Repository-Struktur festgestellt. Klicken Sie auf den Button unten, um die fehlenden Elemente zu erstellen.</p>
+                </div>
+                
+                <button id="init-btn" class="btn btn-primary btn-lg w-100">Struktur initialisieren</button>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Hilfe</h5>
+            </div>
+            <div class="card-body">
+                <p>Die Repository-Struktur ist für die korrekte Funktion von ArtefaktCraft essentiell. Sie umfasst:</p>
+                <ul>
+                    <li>Einen Basis-Pfad für alle Dateien</li>
+                    <li>Ausgabepfade für die erstellten Artefakte</li>
+                    <li>Template-Dateien für die verschiedenen Artefakt-Typen</li>
+                </ul>
+                <p>Wenn Probleme festgestellt werden, können Sie die fehlenden Elemente mit dem Button "Struktur initialisieren" erstellen lassen.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const initBtn = document.getElementById('init-btn');
+    
+    if (initBtn) {
+        initBtn.addEventListener('click', function() {
+            // Button deaktivieren und Text ändern
+            initBtn.disabled = true;
+            initBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Wird initialisiert...';
+            
+            // API-Anfrage senden
+            fetch('{{ url_for("api_repository_init") }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Erfolg
+                    alert('Repository-Struktur erfolgreich initialisiert: ' + data.created_dirs.join(', '));
+                    // Seite neu laden
+                    window.location.reload();
+                } else {
+                    // Fehler
+                    alert('Fehler bei der Initialisierung: ' + data.error);
+                    // Button wieder aktivieren
+                    initBtn.disabled = false;
+                    initBtn.textContent = 'Struktur initialisieren';
+                }
+            })
+            .catch(error => {
+                // Netzwerkfehler
+                alert('Fehler bei der Anfrage: ' + error.message);
+                // Button wieder aktivieren
+                initBtn.disabled = false;
+                initBtn.textContent = 'Struktur initialisieren';
+            });
+        });
+    }
+});
+</script>
+{% endblock %}

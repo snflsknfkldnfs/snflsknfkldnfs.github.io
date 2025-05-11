@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtefaktCraft - KI-gestützte Unterrichtsmaterialerstellung</title>
+    <link rel="stylesheet" href="css/artefaktcraft.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <img src="assets/logo.svg" alt="ArtefaktCraft Logo" class="logo">
+            <h1>ArtefaktCraft</h1>
+            <p class="tagline">Automatisierte Materialerstellung für den Unterricht</p>
+        </header>
+
+        <div class="app-content">
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#" data-section="material-generator">Material erstellen</a></li>
+                        <li><a href="#" data-section="templates">Vorlagen verwalten</a></li>
+                        <li><a href="#" data-section="settings">Einstellungen</a></li>
+                        <li><a href="#" data-section="help">Hilfe</a></li>
+                    </ul>
+                </nav>
+                <div class="user-info">
+                    <div class="user-icon">👤</div>
+                    <span id="username">Standardnutzer</span>
+                </div>
+            </div>
+
+            <main>
+                <section id="material-generator" class="active">
+                    <h2>Neue Materialien erstellen</h2>
+                    
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h3>1. Grunddaten</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-group">
+                                <label for="subject">Fach:</label>
+                                <select id="subject" class="form-control">
+                                    <option value="WiB">WiB</option>
+                                    <option value="GPG">GPG</option>
+                                    <option value="D">Deutsch</option>
+                                    <option value="M">Mathematik</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="grade">Jahrgangsstufe:</label>
+                                    <select id="grade" class="form-control">
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="class-designation">Klasse:</label>
+                                    <input type="text" id="class-designation" class="form-control" placeholder="z.B. c" maxlength="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h3>2. Lernbereich & Thema</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="lb-number">LB-Nummer:</label>
+                                    <input type="number" id="lb-number" class="form-control" min="1" max="10" placeholder="z.B. 4">
+                                </div>
+                                
+                                <div class="form-group flex-grow">
+                                    <label for="lb-theme">Lernbereichsthema:</label>
+                                    <input type="text" id="lb-theme" class="form-control" placeholder="z.B. Recht">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specific-theme">Konkretes Thema der Einheit:</label>
+                                <input type="text" id="specific-theme" class="form-control" placeholder="z.B. Kinderrechte weltweit">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="uvp-file">Name der UVP-Datei (falls vorhanden):</label>
+                                <input type="text" id="uvp-file" class="form-control" placeholder="z.B. WiB5c_LB4_3_Kinderrechte_weltweit_UVP.md">
+                                <small class="form-help">Leer lassen, wenn keine UVP-Datei existiert</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h3>3. Zu erstellende Materialien</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="create-uvp" class="material-checkbox">
+                                    <span class="checkbox-label">Unterrichtsvorbereitung (UVP)</span>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="create-klnw" class="material-checkbox" checked>
+                                    <span class="checkbox-label">Leistungsnachweis (KLNW)</span>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="create-solution" class="material-checkbox" checked>
+                                    <span class="checkbox-label">Lösungsbogen</span>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="create-helpcards" class="material-checkbox" checked>
+                                    <span class="checkbox-label">Hilfekarten für Differenzierung</span>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="create-materials" class="material-checkbox">
+                                    <span class="checkbox-label">Arbeitsmaterialien</span>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="create-index" class="material-checkbox" checked>
+                                    <span class="checkbox-label">Index-Datei</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h3>4. Systemeinstellungen</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-group">
+                                <label for="system-username">Nutzername im System:</label>
+                                <input type="text" id="system-username" class="form-control" value="paulad" placeholder="Ihr Benutzername im System">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="base-path">Basis-Pfad:</label>
+                                <input type="text" id="base-path" class="form-control" value="/Users/paulad/snflsknfkldnfs.github.io" placeholder="z.B. /Users/username/repository">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button id="generate-prompt" class="btn btn-primary">Prompt generieren</button>
+                        <button id="save-settings" class="btn btn-secondary">Einstellungen speichern</button>
+                    </div>
+                    
+                    <div id="result-container" class="form-card result-card" style="display: none;">
+                        <div class="card-header">
+                            <h3>Generierter Prompt für Claude</h3>
+                        </div>
+                        <div class="card-content">
+                            <p class="instruction">Kopieren Sie diesen Text und fügen Sie ihn in einen Claude-Chat ein:</p>
+                            <div class="textarea-container">
+                                <textarea id="prompt-result" class="form-control monospace" rows="12"></textarea>
+                            </div>
+                            <button id="copy-prompt" class="btn btn-highlight">In Zwischenablage kopieren</button>
+                            <div id="copy-confirmation" class="confirmation-message" style="display: none;">Prompt in die Zwischenablage kopiert!</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="templates" style="display: none;">
+                    <h2>Vorlagen verwalten</h2>
+                    <p class="section-description">Hier können Sie die Prompt-Vorlagen für verschiedene Materialtypen anpassen und verwalten.</p>
+                    
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h3>Vorlage auswählen</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="template-subject">Fach:</label>
+                                    <select id="template-subject" class="form-control">
+                                        <option value="WiB">WiB</option>
+                                        <option value="GPG">GPG</option>
+                                        <option value="D">Deutsch</option>
+                                        <option value="M">Mathematik</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="template-type">Materialtyp:</label>
+                                    <select id="template-type" class="form-control">
+                                        <option value="UVP">Unterrichtsvorbereitung</option>
+                                        <option value="KLNW">Leistungsnachweis</option>
+                                        <option value="HILFEKARTEN">Hilfekarten</option>
+                                        <option value="INDEX">Index-Datei</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="template-editor">
+                                <label for="template-content">Vorlage bearbeiten:</label>
+                                <textarea id="template-content" class="form-control monospace" rows="20"></textarea>
+                            </div>
+                            
+                            <div class="template-actions">
+                                <button id="save-template" class="btn btn-primary">Vorlage speichern</button>
+                                <button id="reset-template" class="btn btn-secondary">Auf Standard zurücksetzen</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="settings" style="display: none;">
+                    <h2>Einstellungen</h2>
+                    <p class="section-description">Konfigurieren Sie das System nach Ihren Bedürfnissen.</p>
+                    
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h3>Systemeinstellungen</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-group">
+                                <label for="settings-username">Standard-Nutzername:</label>
+                                <input type="text" id="settings-username" class="form-control" placeholder="Ihr Standard-Benutzername im System">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="settings-base-path">Repository-Pfad:</label>
+                                <input type="text" id="settings-base-path" class="form-control" placeholder="z.B. /Users/username/repository">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="settings-templates-path">Vorlagen-Pfad:</label>
+                                <input type="text" id="settings-templates-path" class="form-control" value="tools/artefaktcraft/templates" placeholder="Relativer Pfad zu den Vorlagen">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-card">
+                        <div class="card-header">
+                            <h3>Datei-Einstellungen</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="settings-auto-index" checked>
+                                    <span class="checkbox-label">Automatisch Index-Dateien erstellen</span>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="settings-auto-directory" checked>
+                                    <span class="checkbox-label">Ordner bei Bedarf automatisch erstellen</span>
+                                </label>
+                                
+                                <label class="checkbox-container">
+                                    <input type="checkbox" id="settings-backup-files" checked>
+                                    <span class="checkbox-label">Backup vor Überschreiben erstellen</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="settings-prompt-length">Maximale Prompt-Länge:</label>
+                                <input type="number" id="settings-prompt-length" class="form-control" value="8000" min="1000" max="20000">
+                                <small class="form-help">Empfohlen: 8000 Zeichen für beste Ergebnisse mit Claude</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button id="save-all-settings" class="btn btn-primary">Einstellungen speichern</button>
+                        <button id="reset-all-settings" class="btn btn-secondary">Auf Standard zurücksetzen</button>
+                    </div>
+                </section>
+                
+                <section id="help" style="display: none;">
+                    <h2>Hilfe & Dokumentation</h2>
+                    <p class="section-description">Lernen Sie, wie Sie ArtefaktCraft optimal nutzen können.</p>
+                    
+                    <div class="help-container">
+                        <div class="help-card">
+                            <div class="help-icon">🚀</div>
+                            <h3>Schnellstart-Anleitung</h3>
+                            <p>So erstellen Sie Ihre ersten Materialien mit ArtefaktCraft:</p>
+                            <ol>
+                                <li>Füllen Sie die Grunddaten zum Fach und zur Klasse aus</li>
+                                <li>Definieren Sie den Lernbereich und das konkrete Thema</li>
+                                <li>Wählen Sie die zu erstellenden Materialien aus</li>
+                                <li>Klicken Sie auf "Prompt generieren"</li>
+                                <li>Kopieren Sie den generierten Prompt und fügen Sie ihn in Claude ein</li>
+                                <li>Die erstellten Materialien finden Sie im angegebenen Ordner</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="help-card">
+                            <div class="help-icon">⚙️</div>
+                            <h3>Systemkonfiguration</h3>
+                            <p>Für eine optimale Nutzung sollten Sie sicherstellen, dass:</p>
+                            <ul>
+                                <li>Ihr Benutzername im System korrekt eingetragen ist</li>
+                                <li>Der Basis-Pfad zu Ihrem Repository stimmt</li>
+                                <li>Claude Zugriff auf das entsprechende Verzeichnis hat</li>
+                                <li>Die MCP-Funktionen in Claude aktiviert sind</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="help-card">
+                            <div class="help-icon">✏️</div>
+                            <h3>Vorlagen anpassen</h3>
+                            <p>So passen Sie die Prompt-Vorlagen an Ihre Bedürfnisse an:</p>
+                            <ol>
+                                <li>Wechseln Sie zum Tab "Vorlagen verwalten"</li>
+                                <li>Wählen Sie das Fach und den Materialtyp aus</li>
+                                <li>Bearbeiten Sie die Vorlage nach Ihren Wünschen</li>
+                                <li>Nutzen Sie Platzhalter wie {{GRADE}} oder {{THEME}}</li>
+                                <li>Speichern Sie Ihre Änderungen</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="help-card">
+                            <div class="help-icon">❓</div>
+                            <h3>FAQ</h3>
+                            <p><strong>F: Wo werden die Materialien gespeichert?</strong><br>
+                            A: Im Verzeichnis unter dem angegebenen Basispfad, im entsprechenden Fach- und Themenordner.</p>
+                            
+                            <p><strong>F: Kann ich bestehende Materialien überschreiben?</strong><br>
+                            A: Ja, aber es wird standardmäßig ein Backup erstellt. Dies können Sie in den Einstellungen ändern.</p>
+                            
+                            <p><strong>F: Wie kann ich Claude mit diesem System verbinden?</strong><br>
+                            A: Sie benötigen lediglich einen Claude-Account. Kopieren Sie den generierten Prompt und fügen Sie ihn in ein Claude-Gespräch ein.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 ArtefaktCraft | Version 1.0.0 | <a href="#" id="show-about">Über ArtefaktCraft</a></p>
+        </footer>
+    </div>
+    
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Über ArtefaktCraft</h2>
+            <p>ArtefaktCraft ist ein Tool zur automatisierten Erstellung von Unterrichtsmaterialien mittels KI. Es wurde entwickelt, um Lehrkräften Zeit zu sparen und die Qualität der Materialien zu verbessern.</p>
+            <p>Version: 1.0.0</p>
+            <p>Entwickelt mit ❤️ für Pädagogen</p>
+        </div>
+    </div>
+    
+    <script src="js/artefaktcraft.js"></script>
+</body>
+</html>

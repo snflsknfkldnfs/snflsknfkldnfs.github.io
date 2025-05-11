@@ -1,0 +1,20 @@
+
+# ArtefaktCraft Abhängigkeiten
+
+# Kernfunktionalität
+pyyaml>=6.0
+jinja2>=3.0.0
+colorama>=0.4.4
+
+# Web-Interface
+flask>=2.0.0
+
+# Integrationen
+requests>=2.25.0
+
+# Optionale Abhängigkeiten
+# Für KI-Unterstützung (OpenAI)
+# openai>=0.27.0
+
+# Für erweiterte Git-Integration
+# gitpython>=3.1.30

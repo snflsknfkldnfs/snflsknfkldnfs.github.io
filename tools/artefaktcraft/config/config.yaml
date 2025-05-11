@@ -1,0 +1,134 @@
+
+# ArtefaktCraft Konfiguration
+# Version 2.0.0
+
+# OpenAI API-Konfiguration
+openai:
+  api_key: ${OPENAI_API_KEY}  # Aus Umgebungsvariable
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 4000
+
+# Repository-Konfiguration
+repository:
+  base_path: "/Users/paulad/snflsknfkldnfs.github.io"
+  template_path: "/Users/paulad/snflsknfkldnfs.github.io/tools/artefaktcraft/templates"
+  output_paths:
+    wib: "/Users/paulad/snflsknfkldnfs.github.io/notizen/wib"
+    gpg: "/Users/paulad/snflsknfkldnfs.github.io/notizen/gpg"
+    methodik: "/Users/paulad/snflsknfkldnfs.github.io/notizen/methodik"
+    leitfaden: "/Users/paulad/snflsknfkldnfs.github.io/notizen/leitfaden"
+
+# Artefakt-Typen
+artefakt_types:
+  - id: "sequenzplanung"
+    name: "Sequenzplanung"
+    template: "sequenzplanung_template.md"
+    output_dir: "${fach}/sequenzplanung"
+    dialog_flow: "sequenzplanung_dialog.yaml"
+    metadata_schema:
+      - name: "title"
+        type: "string"
+        required: true
+        prompt: "Titel der Sequenzplanung"
+      - name: "fach"
+        type: "enum"
+        options: ["WiB", "GPG"]
+        required: true
+        prompt: "Für welches Fach ist die Sequenzplanung?"
+      - name: "jahrgangsstufe"
+        type: "enum"
+        options: ["5", "6", "7", "8", "9", "10"]
+        required: true
+        prompt: "Für welche Jahrgangsstufe ist die Sequenzplanung?"
+      - name: "umfang"
+        type: "number"
+        required: true
+        prompt: "Wie viele Unterrichtsstunden umfasst die Sequenz?"
+      - name: "zeitraum"
+        type: "string"
+        required: false
+        prompt: "In welchem Zeitraum soll die Sequenz stattfinden?"
+      - name: "lernbereich"
+        type: "string"
+        required: true
+        prompt: "Auf welchen Lernbereich bezieht sich die Sequenzplanung?"
+      
+  - id: "unterrichtseinheit"
+    name: "Unterrichtseinheit"
+    template: "unterrichtseinheit_template.md"
+    output_dir: "${fach}/unterrichtseinheiten"
+    dialog_flow: "unterrichtseinheit_dialog.yaml"
+    metadata_schema:
+      - name: "title"
+        type: "string"
+        required: true
+        prompt: "Titel der Unterrichtseinheit"
+      - name: "fach"
+        type: "enum"
+        options: ["WiB", "GPG"]
+        required: true
+        prompt: "Für welches Fach ist die Unterrichtseinheit?"
+      - name: "jahrgangsstufe"
+        type: "enum"
+        options: ["5", "6", "7", "8", "9", "10"]
+        required: true
+        prompt: "Für welche Jahrgangsstufe ist die Unterrichtseinheit?"
+      - name: "dauer"
+        type: "number"
+        required: true
+        prompt: "Wie viele Unterrichtsstunden umfasst die Einheit?"
+      - name: "lernbereich"
+        type: "string"
+        required: true
+        prompt: "Auf welchen Lernbereich bezieht sich die Unterrichtseinheit?"
+
+# Benutzeroberflächen-Konfiguration
+ui:
+  web_interface:
+    port: 8080
+    host: "127.0.0.1"
+    templates_dir: "/Users/paulad/snflsknfkldnfs.github.io/tools/artefaktcraft/src/web/templates"
+    static_dir: "/Users/paulad/snflsknfkldnfs.github.io/tools/artefaktcraft/src/web/static"
+  cli:
+    prompt_color: "green"
+    response_color: "blue"
+    error_color: "red"
+
+# Logging-Konfiguration
+logging:
+  level: "INFO"
+  file: "/Users/paulad/snflsknfkldnfs.github.io/tools/artefaktcraft/logs/artefaktcraft.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  max_size: 10485760  # 10 MB
+  backup_count: 5
+
+# Integration mit bestehenden Systemen
+integration:
+  git:
+    enabled: true
+    commit_message_template: "ArtefaktCraft: Erstelle {artefakt_type} '{title}'"
+    auto_commit: false
+  
+  # MCP-Server-Integration (nun standardmäßig aktiviert)
+  mcp_server:
+    enabled: true
+    url: "http://localhost:3000"  # Standard-MCP-Server-Port
+    auth_token: "${MCP_AUTH_TOKEN}"  # Aus Umgebungsvariable
+    synchronization:
+      interval: 300  # Synchronisationsintervall in Sekunden (5 Minuten)
+      auto_sync: true  # Automatische Synchronisation
+      resources:
+        - type: "templates"
+          source: "templates"
+          destination: "${repository.template_path}"
+        - type: "lehrplan"
+          source: "lehrplan"
+          destination: "${repository.base_path}/notizen/lehrplanbezug"
+        - type: "kompetenzmodell"
+          source: "kompetenzmodell"
+          destination: "${repository.base_path}/notizen/kompetenzmodell"
+      cache:
+        enabled: true
+        max_age: 3600  # Cache-Gültigkeit in Sekunden (1 Stunde)
+        path: "${repository.base_path}/.cache/mcp"

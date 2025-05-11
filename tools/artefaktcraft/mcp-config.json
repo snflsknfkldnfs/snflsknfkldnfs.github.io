@@ -1,0 +1,39 @@
+{
+  "repositoryRoot": "/Users/paulad/snflsknfkldnfs.github.io/tools/artefaktcraft",
+  "resourcePaths": [
+    "notizen/wib",
+    "notizen/gpg",
+    "notizen/methodik",
+    "notizen/leitfaden"
+  ],
+  "metadataSchemas": {
+    "unterrichtseinheit": "./schemas/unterrichtseinheit-schema.json",
+    "sequenzplanung": "./schemas/sequenzplanung-schema.json",
+    "tafelbild": "./schemas/tafelbild-schema.json"
+  },
+  "templatePaths": [
+    "./templates"
+  ],
+  "curriculumSources": {
+    "WiB": "./data/curriculum/wib",
+    "GPG": "./data/curriculum/gpg"
+  },
+  "dynamicLinkPattern": "mcp://resource/:resourceId",
+  "resourceIndex": {
+    "rebuildInterval": 300000,
+    "similarityThreshold": 0.6,
+    "storeIndexPath": "./data/resource-index.json"
+  },
+  "server": {
+    "port": 3000,
+    "cors": true,
+    "apiPrefix": "/api",
+    "staticPath": "./public"
+  },
+  "logging": {
+    "level": "info",
+    "file": "./logs/mcp-server.log",
+    "maxSize": "10m",
+    "maxFiles": 5
+  }
+}

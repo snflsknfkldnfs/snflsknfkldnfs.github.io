@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sequenzplanung",
+  "description": "Schema für Sequenzplanungen im ArtefaktCraft-System",
+  "type": "object",
+  "required": ["type", "title", "subject", "grade", "topic", "learningAreas", "duration", "lessons", "author", "created"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["sequenzplanung"],
+      "description": "Typ des Dokuments"
+    },
+    "title": {
+      "type": "string",
+      "description": "Titel der Sequenzplanung"
+    },
+    "subject": {
+      "type": "string",
+      "enum": ["WiB", "GPG"],
+      "description": "Unterrichtsfach"
+    },
+    "grade": {
+      "type": "string",
+      "pattern": "^([5-9]|10)$",
+      "description": "Jahrgangsstufe (5-10)"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Hauptthema der Sequenz"
+    },
+    "learningAreas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^LB[1-5]$"
+      },
+      "description": "Lernbereiche gemäß Lehrplan (LB1-LB5)"
+    },
+    "competencyExpectations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Kompetenzerwartungen aus dem Lehrplan"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Gesamtdauer der Sequenz (z.B. '4 Wochen', '8 Unterrichtsstunden')"
+    },
+    "lessons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["number", "title", "focus"],
+        "properties": {
+          "number": {
+            "type": "integer",
+            "description": "Nummer der Unterrichtsstunde in der Sequenz"
+          },
+          "title": {
+            "type": "string",
+            "description": "Titel der Unterrichtsstunde"
+          },
+          "focus": {
+            "type": "string",
+            "description": "Inhaltlicher Schwerpunkt der Stunde"
+          },
+          "processCompetencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["Handeln", "Analysieren", "Kommunizieren", "Beurteilen"]
+            },
+            "description": "Prozessbezogene Kompetenzen in dieser Stunde"
+          },
+          "methods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Eingesetzte Methoden"
+          },
+          "materials": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Benötigte Materialien"
+          },
+          "resourceId": {
+            "type": "string",
+            "description": "ID der verknüpften Unterrichtseinheit, falls vorhanden"
+          }
+        }
+      },
+      "minItems": 1,
+      "description": "Liste der Unterrichtsstunden in der Sequenz"
+    },
+    "differentiationConcept": {
+      "type": "string",
+      "description": "Konzept zur Differenzierung in der Sequenz"
+    },
+    "assessmentConcept": {
+      "type": "string",
+      "description": "Konzept zur Leistungserhebung in der Sequenz"
+    },
+    "crossCurricularLinks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "Verknüpftes Fach"
+          },
+          "topic": {
+            "type": "string",
+            "description": "Verknüpftes Thema"
+          },
+          "description": {
+            "type": "string",
+            "description": "Beschreibung der Verknüpfung"
+          }
+        }
+      },
+      "description": "Fächerübergreifende Verknüpfungen"
+    },
+    "author": {
+      "type": "string",
+      "description": "Autor der Sequenzplanung"
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "description": "Erstellungsdatum (YYYY-MM-DD)"
+    },
+    "modified": {
+      "type": "string",
+      "format": "date",
+      "description": "Änderungsdatum (YYYY-MM-DD)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Version im Semver-Format (MAJOR.MINOR.PATCH)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "final"],
+      "description": "Status des Dokuments"
+    }
+  },
+  "additionalProperties": false
+}

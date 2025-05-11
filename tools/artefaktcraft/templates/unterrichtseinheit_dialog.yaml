@@ -1,0 +1,54 @@
+
+# Dialog-Flow für die Erstellung einer Unterrichtseinheit
+
+introduction: |
+  Willkommen zur Erstellung einer Unterrichtseinheit!
+  
+  Dieser Dialog wird Sie durch die Erstellung einer strukturierten Unterrichtseinheit führen.
+  Bitte geben Sie die erforderlichen Informationen ein, um ein konsistentes Dokument zu erstellen.
+
+steps:
+  - id: title
+    prompt: "Bitte geben Sie den Titel der Unterrichtseinheit ein (*)"
+    type: string
+    required: true
+    ai_assisted: true
+    ai_prompt: "Basierend auf den bisherigen Informationen, schlage einen präzisen, fachlichen Titel für eine Unterrichtseinheit vor."
+
+  - id: fach
+    prompt: "Für welches Fach ist die Unterrichtseinheit bestimmt? (*)"
+    type: enum
+    options: ["WiB", "GPG"]
+    required: true
+    
+  - id: jahrgangsstufe
+    prompt: "Für welche Jahrgangsstufe ist die Unterrichtseinheit gedacht? (*)"
+    type: enum
+    options: ["5", "6", "7", "8", "9", "10"]
+    required: true
+    post_process: "Jahrgangsstufe {jahrgangsstufe} ausgewählt."
+    
+  - id: lernbereich
+    prompt: "Auf welchen Lernbereich bezieht sich die Unterrichtseinheit hauptsächlich? (*)"
+    type: string
+    required: true
+    ai_assisted: true
+    ai_prompt: "Basierend auf dem Fach {fach} und der Jahrgangsstufe {jahrgangsstufe}, schlage einen passenden Lernbereich aus dem LehrplanPLUS vor."
+    
+  - id: dauer
+    prompt: "Wie viele Unterrichtsstunden umfasst die Einheit? (*)"
+    type: number
+    required: true
+    post_process: "Eine Unterrichtseinheit mit {dauer} Stunde(n) geplant."
+
+conclusion: |
+  Vielen Dank für Ihre Eingaben! Die Unterrichtseinheit "{title}" für {fach} (Jahrgangsstufe {jahrgangsstufe}) wurde erfolgreich erstellt.
+  
+  Sie können die Unterrichtseinheit nun im vorgesehenen Verzeichnis finden und weiter bearbeiten. Die Vorlage enthält alle wichtigen Abschnitte, die Sie ausfüllen sollten:
+  
+  - Lehrplanbezug
+  - Lernziel
+  - Verlaufsplanung
+  - Materialien
+  - Differenzierung
+  - Reflexion

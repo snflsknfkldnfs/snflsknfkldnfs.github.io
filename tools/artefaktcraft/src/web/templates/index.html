@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Willkommen bei ArtefaktCraft</h1>
+    <p class="lead">Ein Tool zur standardisierten Erstellung pädagogischer Artefakte.</p>
+    <hr class="my-4">
+    <p>ArtefaktCraft unterstützt Sie bei der Erstellung von Unterrichtsmaterialien, Sequenzplanungen und anderen pädagogischen Dokumenten nach einheitlichen Standards.</p>
+    <div class="mt-4">
+        <a class="btn btn-primary btn-lg" href="{{ url_for('artefakte') }}" role="button">Artefakt erstellen</a>
+        <a class="btn btn-secondary btn-lg" href="{{ url_for('repository') }}" role="button">Repository-Status</a>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Standardisierte Vorlagen</h5>
+                <p class="card-text">Verwenden Sie einheitliche Vorlagen für verschiedene Arten von pädagogischen Artefakten, um Konsistenz und Qualität zu gewährleisten.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Dialoggestützte Erstellung</h5>
+                <p class="card-text">Erstellen Sie Artefakte durch einen geführten Dialog, der Ihnen hilft, alle relevanten Informationen zu erfassen.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Git-Integration</h5>
+                <p class="card-text">Automatische Versionierung Ihrer Artefakte mit Git für eine transparente Änderungsverfolgung und Zusammenarbeit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <h2>Schnelleinstieg</h2>
+    <ol>
+        <li>Wählen Sie einen <a href="{{ url_for('artefakte') }}">Artefakt-Typ</a> aus</li>
+        <li>Füllen Sie die erforderlichen Metadaten aus</li>
+        <li>Lassen Sie ArtefaktCraft das Artefakt für Sie generieren</li>
+        <li>Bearbeiten Sie das generierte Artefakt bei Bedarf nach</li>
+    </ol>
+</div>
+{% endblock %}
