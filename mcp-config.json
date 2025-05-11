@@ -1,0 +1,15 @@
+{
+  "repositoryRoot": "/Users/paulad/snflsknfkldnfs.github.io",
+  "resourcePaths": [
+    "notizen/wib",
+    "notizen/gpg",
+    "notizen/methodik",
+    "notizen/leitfaden"
+  ],
+  "metadataSchemas": {
+    "unterrichtseinheit": "schemas/unterrichtseinheit-schema.json",
+    "sequenzplanung": "schemas/sequenzplanung-schema.json",
+    "tafelbild": "schemas/tafelbild-schema.json"
+  },
+  "port": 3000
+}

@@ -5,17 +5,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs').promises;
 const path = require('path');
+const config = require(path.join(__dirname, 'mcp-config.json'));
 const matter = require('gray-matter');
 const cors = require('cors');
 
-// Konfiguration laden
-let config;
-try {
-    config = require('./mcp-config.json');
-} catch (error) {
-    console.error('Fehler beim Laden der Konfiguration:', error.message);
-    process.exit(1);
-}
 
 const app = express();
 const PORT = config.server?.port || 3000;
