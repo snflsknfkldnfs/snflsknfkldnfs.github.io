@@ -5,3 +5,5 @@ node_modules/
 .DS_Store
 notizen/anleitungen/03_Bücherregal/
 .env
+LMStudio-MCP/
+fetch-mcp/
