@@ -42,7 +42,6 @@
       "disabled": false,
       "autoApprove": [],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "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",
         "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin"
       }
     },
