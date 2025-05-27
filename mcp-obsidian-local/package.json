@@ -1,0 +1,14 @@
+{
+  "name": "mcp-obsidian-local",
+  "version": "1.0.0",
+  "description": "Lokale Version des Obsidian MCP-Servers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.12.0"
+  }
+}

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehrer-Steuerung: Das Herz als Pumpe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .teacher-interface {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 80px 1fr 100px;
+            grid-template-columns: 250px 1fr;
+            grid-template-areas: 
+                "sidebar header"
+                "sidebar main"
+                "sidebar controls";
+        }
+        
+        /* Left Sidebar - Navigation */
+        .sidebar {
+            grid-area: sidebar;
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            border-right: 3px solid #2c3e50;
+        }
+        
+        .lesson-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #4a6fa5;
+        }
+        
+        .lesson-title {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .lesson-subtitle {
+            font-size: 11pt;
+            opacity: 0.8;
+        }
+        
+        .section-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .nav-item {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 11pt;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-item:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .nav-item.active {
+            background: #3498db;
+            border-color: #2980b9;
+            font-weight: bold;
+        }
+        
+        .nav-item.completed {
+            background: #27ae60;
+            border-color: #229954;
+        }
+        
+        .nav-number {
+            background: rgba(255,255,255,0.2);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        
+        .nav-text {
+            flex: 1;
+            font-size: 10pt;
+        }
+        
+        /* Header - Timer und Status */
+        .header {
+            grid-area: header;
+            background: white;
+            border-bottom: 2px solid #bdc3c7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+        }
+        
+        .current-phase {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .timer-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .timer-display {
+            font-size: 28pt;
+            font-weight: bold;
+            color: #2c3e50;
+            background: #ecf0f1;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid #bdc3c7;
+            min-width: 140px;
+            text-align: center;
+        }
+        
+        .timer-display.warning {
+            background: #f39c12;
+            color: white;
+            border-color: #e67e22;
+        }
+        
+        .timer-display.danger {
+            background: #e74c3c;
+            color: white;
+            border-color: #c0392b;
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .timer-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .timer-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .timer-presets {
+            display: flex;
+            gap: 3px;
+        }
+        
+        .btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 10pt;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .btn.success {
+            background: #27ae60;
+        }
+        
+        .btn.success:hover {
+            background: #229954;
+        }
+        
+        .btn.warning {
+            background: #f39c12;
+        }
+        
+        .btn.warning:hover {
+            background: #e67e22;
+        }
+        
+        .btn.danger {
+            background: #e74c3c;
+        }
+        
+        .btn.danger:hover {
+            background: #c0392b;
+        }
+        
+        .btn.small {
+            padding: 4px 8px;
+            font-size: 9pt;
+        }
+        
+        .custom-timer {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        
+        .time-input {
+            width: 40px;
+            padding: 4px;
+            border: 1px solid #bdc3c7;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 10pt;
+        }
+        
+        /* Main Display Area */
+        .main-display {
+            grid-area: main;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 40px;
+        }
+        
+        .section-content {
+            display: none;
+            text-align: center;
+            max-width: 90%;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .section-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .main-title {
+            font-size: 48pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .main-subtitle {
+            font-size: 24pt;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+        
+        .instruction-box {
+            background: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            font-size: 18pt;
+            line-height: 1.4;
+            color: #2c3e50;
+        }
+        
+        .big-question {
+            background: #3498db;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            font-size: 36pt;
+            font-weight: bold;
+            margin: 30px 0;
+            line-height: 1.2;
+        }
+        
+        .analogy-display {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 40px 0;
+            font-size: 20pt;
+        }
+        
+        .analogy-item {
+            background: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            flex: 1;
+            margin: 0 15px;
+        }
+        
+        .analogy-icon {
+            font-size: 60pt;
+            margin-bottom: 15px;
+        }
+        
+        .analogy-arrow {
+            font-size: 48pt;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .measurement-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .measurement-item {
+            background: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .measurement-icon {
+            font-size: 40pt;
+            margin-bottom: 10px;
+        }
+        
+        .measurement-title {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .measurement-desc {
+            font-size: 14pt;
+            color: #7f8c8d;
+        }
+        
+        .hypothesis-list {
+            text-align: left;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+        
+        .hypothesis-item {
+            background: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-left: 6px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-size: 16pt;
+            line-height: 1.4;
+        }
+        
+        .conclusion-highlight {
+            background: #f39c12;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            font-size: 32pt;
+            font-weight: bold;
+            margin: 30px 0;
+            line-height: 1.2;
+        }
+        
+        /* Bottom Controls */
+        .bottom-controls {
+            grid-area: controls;
+            background: #34495e;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-top: 2px solid #2c3e50;
+        }
+        
+        .navigation-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .shortcuts-display {
+            font-size: 10pt;
+            opacity: 0.8;
+            text-align: right;
+        }
+        
+        .shortcuts-display div {
+            margin: 2px 0;
+        }
+        
+        /* Responsive Design für verschiedene Projektoren */
+        @media (max-width: 1200px) {
+            .main-title { font-size: 40pt; }
+            .main-subtitle { font-size: 20pt; }
+            .big-question { font-size: 28pt; }
+        }
+        
+        @media (max-width: 900px) {
+            .teacher-interface {
+                grid-template-columns: 200px 1fr;
+            }
+            .main-title { font-size: 32pt; }
+            .measurement-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="teacher-interface">
+        <!-- Left Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="lesson-info">
+                <div class="lesson-title">Das Herz als Pumpe</div>
+                <div class="lesson-subtitle">NT7 • 45 Min</div>
+            </div>
+            
+            <div class="section-nav">
+                <div class="nav-item active" onclick="goToSection(1)">
+                    <div class="nav-number">1</div>
+                    <div class="nav-text">Herzschlag spüren</div>
+                </div>
+                <div class="nav-item" onclick="goToSection(2)">
+                    <div class="nav-number">2</div>
+                    <div class="nav-text">Forscherfrage</div>
+                </div>
+                <div class="nav-item" onclick="goToSection(3)">
+                    <div class="nav-number">3</div>
+                    <div class="nav-text">Pipettenexperiment</div>
+                </div>
+                <div class="nav-item" onclick="goToSection(4)">
+                    <div class="nav-number">4</div>
+                    <div class="nav-text">Analogiebildung</div>
+                </div>
+                <div class="nav-item" onclick="goToSection(5)">
+                    <div class="nav-number">5</div>
+                    <div class="nav-text">Pulsexperiment</div>
+                </div>
+                <div class="nav-item" onclick="goToSection(6)">
+                    <div class="nav-number">6</div>
+                    <div class="nav-text">Hypothesen</div>
+                </div>
+                <div class="nav-item" onclick="goToSection(7)">
+                    <div class="nav-number">7</div>
+                    <div class="nav-text">Zusammenfassung</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Header with Timer -->
+        <div class="header">
+            <div class="current-phase" id="currentPhase">Phase 1: Herzschlag spüren</div>
+            
+            <div class="timer-section">
+                <div class="timer-display" id="timerDisplay">00:00</div>
+                
+                <div class="timer-controls">
+                    <div class="timer-buttons">
+                        <button class="btn success" onclick="startTimer()" id="startBtn">▶ Start</button>
+                        <button class="btn warning" onclick="pauseTimer()" id="pauseBtn">⏸ Pause</button>
+                        <button class="btn danger" onclick="stopTimer()">⏹ Stop</button>
+                        <button class="btn" onclick="resetTimer()">↻ Reset</button>
+                    </div>
+                    
+                    <div class="timer-presets">
+                        <button class="btn small" onclick="setTimer(3)">3 Min</button>
+                        <button class="btn small" onclick="setTimer(5)">5 Min</button>
+                        <button class="btn small" onclick="setTimer(8)">8 Min</button>
+                        <button class="btn small" onclick="setTimer(10)">10 Min</button>
+                        <button class="btn small" onclick="setTimer(12)">12 Min</button>
+                    </div>
+                    
+                    <div class="custom-timer">
+                        <input type="number" class="time-input" id="customMin" placeholder="Min" min="1" max="60">
+                        <span>:</span>
+                        <input type="number" class="time-input" id="customSec" placeholder="Sek" min="0" max="59">
+                        <button class="btn small" onclick="setCustomTimer()">Set</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Display Area -->
+        <div class="main-display">
+            <!-- Section 1: Sensory Engagement -->
+            <div class="section-content active" id="section1">
+                <div class="main-title">💓 Mein Herz arbeitet jetzt</div>
+                <div class="instruction-box">
+                    <strong>Aufgabe für alle Schülerinnen und Schüler:</strong><br><br>
+                    Legt beide Hände fest auf eure Brust.<br>
+                    Konzentriert euch 30 Sekunden lang nur auf euren Herzschlag.<br><br>
+                    <strong>Frage:</strong> Was spürt ihr? Wie fühlt sich das an?
+                </div>
+                <div class="main-subtitle">→ Tragt eure Beobachtungen in Abschnitt 1 des Arbeitsblatts ein</div>
+            </div>
+            
+            <!-- Section 2: Problem Formulation -->
+            <div class="section-content" id="section2">
+                <div class="main-title">🎯 Unsere Forscherfrage</div>
+                <div class="big-question">
+                    WIE arbeitet unser Herz?<br>
+                    Was macht es genau?
+                </div>
+                <div class="main-subtitle">Entwickelt eure ersten Vermutungen!</div>
+                <div class="instruction-box">
+                    → Arbeitsblatt Abschnitt 2: "Meine erste Vermutung"
+                </div>
+            </div>
+            
+            <!-- Section 3: Experiential Learning -->
+            <div class="section-content" id="section3">
+                <div class="main-title">🔬 Experiment: Pipette als Herzmodell</div>
+                <div class="instruction-box">
+                    <strong>Ablauf:</strong><br>
+                    1. Ich demonstriere den Versuch zuerst<br>
+                    2. Ihr experimentiert selbst in Partnerarbeit<br>
+                    3. Beobachtet beide Phasen genau!<br>
+                    4. Dokumentiert in der Tabelle
+                </div>
+                <div class="main-subtitle">
+                    <strong>Fokus:</strong> Was passiert beim Zusammendrücken? Was beim Loslassen?
+                </div>
+            </div>
+            
+            <!-- Section 4: Conceptual Bridging -->
+            <div class="section-content" id="section4">
+                <div class="main-title">🫀 Übertragung: Pipette ↔ Herz</div>
+                <div class="analogy-display">
+                    <div class="analogy-item">
+                        <div class="analogy-icon">💉</div>
+                        <div><strong>Pipette</strong><br>Zusammendrücken<br>↓<br>Wasser fließt raus</div>
+                    </div>
+                    <div class="analogy-arrow">↔</div>
+                    <div class="analogy-item">
+                        <div class="analogy-icon">❤️</div>
+                        <div><strong>Herz</strong><br>Systole<br>↓<br>Blut wird gepumpt</div>
+                    </div>
+                </div>
+                <div class="instruction-box">
+                    <strong>Neue Fachbegriffe:</strong> Systole (Anspannung) und Diastole (Entspannung)
+                </div>
+            </div>
+            
+            <!-- Section 5: Authentic Assessment -->
+            <div class="section-content" id="section5">
+                <div class="main-title">🏃‍♂️ Experiment: Mein Herz bei Belastung</div>
+                <div class="measurement-grid">
+                    <div class="measurement-item">
+                        <div class="measurement-icon">🛋️</div>
+                        <div class="measurement-title">Ruhepuls</div>
+                        <div class="measurement-desc">15 Sek zählen<br>× 4 rechnen</div>
+                    </div>
+                    <div class="measurement-item">
+                        <div class="measurement-icon">💪</div>
+                        <div class="measurement-title">Nach Sport</div>
+                        <div class="measurement-desc">20 Kniebeugen<br>sofort messen</div>
+                    </div>
+                    <div class="measurement-item">
+                        <div class="measurement-icon">😌</div>
+                        <div class="measurement-title">Nach Erholung</div>
+                        <div class="measurement-desc">2 Min warten<br>nochmals messen</div>
+                    </div>
+                </div>
+                <div class="instruction-box">
+                    <strong>Beobachtet:</strong> Wie verändert sich euer Herzschlag?<br>
+                    Was bedeutet das für die Pumpfunktion?
+                </div>
+            </div>
+            
+            <!-- Section 6: Hypothesis Generation -->
+            <div class="section-content" id="section6">
+                <div class="main-title">🤔 Forscherhypothesen entwickeln</div>
+                <div class="big-question">
+                    Warum pumpt das Herz<br>bei Sport schneller?
+                </div>
+                <div class="hypothesis-list">
+                    <div class="hypothesis-item">
+                        <strong>Hypothese 1:</strong> Der Körper braucht mehr Blut, weil...
+                    </div>
+                    <div class="hypothesis-item">
+                        <strong>Hypothese 2:</strong> Das Blut transportiert...
+                    </div>
+                    <div class="hypothesis-item">
+                        <strong>Hypothese 3:</strong> Bei Anstrengung...
+                    </div>
+                </div>
+                <div class="main-subtitle">→ Was macht das Blut so wichtig für unseren Körper?</div>
+            </div>
+            
+            <!-- Section 7: Knowledge Consolidation -->
+            <div class="section-content" id="section7">
+                <div class="main-title">🎉 Was wir gelernt haben</div>
+                <div class="conclusion-highlight">
+                    Das Herz ist eine PUMPE<br>
+                    mit RHYTHMUS!
+                </div>
+                <div class="instruction-box">
+                    <strong>Systole → Diastole → Systole → Diastole...</strong><br><br>
+                    Die Frequenz passt sich an den Bedarf an!
+                </div>
+                <div class="main-subtitle">
+                    <strong>Nächste Stunde:</strong><br>
+                    "Das Blut - Geheimnisvoller Transporteur des Lebens"
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Controls -->
+        <div class="bottom-controls">
+            <div class="navigation-controls">
+                <button class="btn" onclick="previousSection()">◀ Zurück</button>
+                <button class="btn success" onclick="nextSection()">Weiter ▶</button>
+            </div>
+            
+            <div class="shortcuts-display">
+                <div><strong>Tastatur-Shortcuts:</strong></div>
+                <div>← → Navigation • Space: Weiter • 1-7: Direkt zu Phase</div>
+                <div>T: Timer starten • P: Pause • R: Reset</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global Variables
+        let currentSection = 1;
+        const totalSections = 7;
+        let timerInterval = null;
+        let isPaused = false;
+        let timeRemaining = 0; // in seconds
+        let isRunning = false;
+        
+        const sectionTitles = [
+            "Phase 1: Herzschlag spüren",
+            "Phase 2: Forscherfrage entwickeln", 
+            "Phase 3: Pipettenexperiment",
+            "Phase 4: Analogiebildung Herz",
+            "Phase 5: Pulsexperiment",
+            "Phase 6: Hypothesen entwickeln",
+            "Phase 7: Zusammenfassung"
+        ];
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDisplay();
+            updateTimerDisplay();
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                switch(e.key) {
+                    case 'ArrowRight':
+                    case ' ':
+                        e.preventDefault();
+                        nextSection();
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        previousSection();
+                        break;
+                    case 't':
+                    case 'T':
+                        e.preventDefault();
+                        if (isRunning) pauseTimer();
+                        else startTimer();
+                        break;
+                    case 'p':
+                    case 'P':
+                        e.preventDefault();
+                        pauseTimer();
+                        break;
+                    case 'r':
+                    case 'R':
+                        e.preventDefault();
+                        resetTimer();
+                        break;
+                }
+                
+                // Number keys for direct navigation
+                if (e.key >= '1' && e.key <= '7') {
+                    e.preventDefault();
+                    goToSection(parseInt(e.key));
+                }
+            });
+        });
+        
+        // Section Navigation
+        function goToSection(sectionNum) {
+            if (sectionNum >= 1 && sectionNum <= totalSections) {
+                currentSection = sectionNum;
+                updateDisplay();
+            }
+        }
+        
+        function nextSection() {
+            if (currentSection < totalSections) {
+                currentSection++;
+                updateDisplay();
+            }
+        }
+        
+        function previousSection() {
+            if (currentSection > 1) {
+                currentSection--;
+                updateDisplay();
+            }
+        }
+        
+        function updateDisplay() {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show current section
+            document.getElementById(`section${currentSection}`).classList.add('active');
+            
+            // Update navigation
+            document.querySelectorAll('.nav-item').forEach((item, index) => {
+                item.classList.remove('active', 'completed');
+                const sectionNum = index + 1;
+                
+                if (sectionNum === currentSection) {
+                    item.classList.add('active');
+                } else if (sectionNum < currentSection) {
+                    item.classList.add('completed');
+                }
+            });
+            
+            // Update phase indicator
+            document.getElementById('currentPhase').textContent = sectionTitles[currentSection - 1];
+        }
+        
+        // Timer Functions
+        function setTimer(minutes) {
+            timeRemaining = minutes * 60;
+            updateTimerDisplay();
+            stopTimer(); // Reset any running timer
+        }
+        
+        function setCustomTimer() {
+            const minutes = parseInt(document.getElementById('customMin').value) || 0;
+            const seconds = parseInt(document.getElementById('customSec').value) || 0;
+            timeRemaining = minutes * 60 + seconds;
+            updateTimerDisplay();
+            stopTimer();
+        }
+        
+        function startTimer() {
+            if (timeRemaining <= 0) {
+                setTimer(5); // Default 5 minutes if no time set
+            }
+            
+            isRunning = true;
+            isPaused = false;
+            
+            document.getElementById('startBtn').textContent = '⏸ Pause';
+            document.getElementById('startBtn').onclick = pauseTimer;
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                
+                if (timeRemaining <= 0) {
+                    timerFinished();
+                }
+            }, 1000);
+        }
+        
+        function pauseTimer() {
+            if (isRunning) {
+                clearInterval(timerInterval);
+                isRunning = false;
+                isPaused = true;
+                
+                document.getElementById('startBtn').textContent = '▶ Start';
+                document.getElementById('startBtn').onclick = startTimer;
+            }
+        }
+        
+        function stopTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            isPaused = false;
+            
+            document.getElementById('startBtn').textContent = '▶ Start';
+            document.getElementById('startBtn').onclick = startTimer;
+            
+            // Reset timer display style
+            const display = document.getElementById('timerDisplay');
+            display.classList.remove('warning', 'danger');
+        }
+        
+        function resetTimer() {
+            stopTimer();
+            timeRemaining = 0;
+            updateTimerDisplay();
+        }
+        
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const display = document.getElementById('timerDisplay');
+            
+            display.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Update display style based on remaining time
+            display.classList.remove('warning', 'danger');
+            
+            if (timeRemaining <= 30 && timeRemaining > 0) {
+                display.classList.add('danger');
+            } else if (timeRemaining <= 60 && timeRemaining > 30) {
+                display.classList.add('warning');
+            }
+        }
+        
+        function timerFinished() {
+            stopTimer();
+            
+            // Visual and audio notification
+            const display = document.getElementById('timerDisplay');
+            display.textContent = 'ZEIT!';
+            display.classList.add('danger');
+            
+            // Flash effect
+            let flashCount = 0;
+            const flashInterval = setInterval(() => {
+                display.style.opacity = display.style.opacity === '0.3' ? '1' : '0.3';
+                flashCount++;
+                if (flashCount > 8) {
+                    clearInterval(flashInterval);
+                    display.style.opacity = '1';
+                    display.textContent = '00:00';
+                    display.classList.remove('danger');
+                }
+            }, 300);
+            
+            // Try to play audio notification if available
+            try {
+                const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+LvymcdBjiRz/LLfS0FJIf');
+                audio.play().catch(() => {}); // Ignore errors
+            } catch (e) {}
+        }
+    </script>
+</body>
+</html>

@@ -6,25 +6,8 @@
       "disabled": false,
       "autoApprove": [],
       "env": {
-        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin"
-      }
-    },
-    "github.com/AgentDeskAI/browser-tools-mcp": {
-      "command": "node", 
-      "args": ["/Users/paulad/.npm/_npx/662acb47f9505fc3/node_modules/@agentdeskai/browser-tools-mcp/dist/mcp-server.js"],
-      "disabled": false,
-      "autoApprove": [],
-      "env": {
-        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin"
-      }
-    },
-    "github.com/modelcontextprotocol/servers/tree/main/src/git": {
-      "command": "uvx",
-      "args": ["mcp-server-git", "--repository", "/Users/paulad/snflsknfkldnfs.github.io"],
-      "disabled": false,
-      "autoApprove": [],
-      "env": {
-        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin"
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1"
       }
     },
     "github.com/modelcontextprotocol/servers/tree/main/src/filesystem": {
@@ -33,25 +16,8 @@
       "disabled": false,
       "autoApprove": [],
       "env": {
-        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin"
-      }
-    },
-    "github.com/modelcontextprotocol/servers/tree/main/src/github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "disabled": false,
-      "autoApprove": [],
-      "env": {
-        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin"
-      }
-    },
-    "github.com/zcaceres/fetch-mcp": {
-      "command": "node",
-      "args": ["/Users/paulad/snflsknfkldnfs.github.io/fetch-mcp/dist/index.js"],
-      "disabled": false,
-      "autoApprove": [],
-      "env": {
-        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin"
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1"
       }
     }
   }

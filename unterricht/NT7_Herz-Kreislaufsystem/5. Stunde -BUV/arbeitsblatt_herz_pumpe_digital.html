@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeitsblatt: Das Herz als Pumpe (Druckversion)</title>
+    <style>
+        /* Optimiert für DIN A4 Ausdruck */
+        @page {
+            size: A4;
+            margin: 2cm 1.5cm;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            font-size: 11pt;
+        }
+        
+        .worksheet {
+            width: 100%;
+            max-width: none;
+        }
+        
+        /* Header */
+        .header {
+            border-bottom: 3px solid #000;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 10pt;
+        }
+        
+        .info-line {
+            border-bottom: 1px solid #000;
+            min-width: 3cm;
+            height: 1.2em;
+            display: inline-block;
+        }
+        
+        /* Section Styling */
+        .section {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            page-break-inside: avoid;
+        }
+        
+        .section-header {
+            background: #f0f0f0;
+            padding: 8px 12px;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+            font-size: 12pt;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-number {
+            background: #000;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11pt;
+            font-weight: bold;
+        }
+        
+        .section-content {
+            padding: 12px;
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin: 10px 0;
+        }
+        
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 3px;
+            display: block;
+        }
+        
+        .input-line {
+            border-bottom: 1px solid #000;
+            min-height: 1.2em;
+            display: inline-block;
+            margin: 2px;
+            padding-bottom: 1px;
+        }
+        
+        .short { min-width: 3cm; }
+        .medium { min-width: 5cm; }
+        .long { min-width: 8cm; }
+        .full { min-width: 12cm; }
+        
+        /* Tables */
+        .observation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 10pt;
+        }
+        
+        .observation-table th,
+        .observation-table td {
+            border: 1px solid #000;
+            padding: 6px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .observation-table th {
+            background: #e0e0e0;
+            font-weight: bold;
+        }
+        
+        .observation-table td {
+            height: 2.5cm;
+        }
+        
+        /* Special Boxes */
+        .instruction-box {
+            border: 1px solid #666;
+            background: #f9f9f9;
+            padding: 8px;
+            margin: 8px 0;
+            font-size: 10pt;
+        }
+        
+        .instruction-box h4 {
+            margin: 0 0 5px 0;
+            font-size: 11pt;
+        }
+        
+        .conclusion-box {
+            border: 2px solid #000;
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .analogy-section {
+            border: 1px dashed #666;
+            background: #fafafa;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .analogy-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            gap: 8px;
+        }
+        
+        .arrow {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        
+        /* Measurement Grid */
+        .measurement-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        
+        .measurement-item {
+            flex: 1;
+            border: 1px solid #666;
+            padding: 8px;
+            margin: 0 5px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+        
+        .measurement-title {
+            font-weight: bold;
+            font-size: 10pt;
+            margin-bottom: 5px;
+        }
+        
+        .measurement-value {
+            border-bottom: 1px solid #000;
+            min-height: 1.5em;
+            margin: 5px auto;
+            width: 2cm;
+        }
+        
+        /* Hypothesis Section */
+        .hypothesis-list {
+            counter-reset: hypothesis;
+        }
+        
+        .hypothesis-item {
+            counter-increment: hypothesis;
+            margin: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .hypothesis-item::before {
+            content: counter(hypothesis);
+            background: #666;
+            color: white;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9pt;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            border-top: 1px solid #666;
+            padding-top: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+            font-size: 10pt;
+        }
+        
+        /* Print specific */
+        @media print {
+            .section {
+                break-inside: avoid;
+            }
+            
+            .measurement-row {
+                display: table;
+                width: 100%;
+            }
+            
+            .measurement-item {
+                display: table-cell;
+                width: 33.33%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="worksheet">
+        <!-- Header -->
+        <div class="header">
+            <h1>Das Herz als Pumpe</h1>
+            <div style="text-align: center; font-size: 12pt; margin: 5px 0;">
+                Forscherjournal • NT7 • Von der Beobachtung zur Hypothese
+            </div>
+            <div class="header-info">
+                <div>Name: <span class="info-line"></span></div>
+                <div>Datum: <span class="info-line"></span></div>
+                <div>Klasse: <span class="info-line"></span></div>
+            </div>
+        </div>
+        
+        <!-- Section 1: Sensory Engagement -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <div>💓 Mein Herz arbeitet jetzt</div>
+            </div>
+            <div class="section-content">
+                <div class="instruction-box">
+                    <h4>🖐️ Aufgabe:</h4>
+                    <p>Lege beide Hände fest auf deine Brust. Konzentriere dich 30 Sekunden lang nur auf deinen Herzschlag.</p>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Was spürst du? Beschreibe das Gefühl:</div>
+                    <div>Mein Herz <span class="input-line long"></span></div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Wie oft schlägt dein Herz ungefähr in einer Minute?</div>
+                    <div>ca. <span class="input-line short"></span> Schläge pro Minute</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 2: Problem Formulation -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <div>🎯 Unsere Forscherfrage</div>
+            </div>
+            <div class="section-content">
+                <div class="conclusion-box">
+                    WIE arbeitet unser Herz? Was macht es genau?
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Meine erste Vermutung:</div>
+                    <div>Das Herz <span class="input-line long"></span></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 3: Experiential Learning -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <div>🔬 Experiment: Pipette als Herzmodell</div>
+            </div>
+            <div class="section-content">
+                <div class="instruction-box">
+                    <h4>🧪 Durchführung:</h4>
+                    <ol style="margin: 5px 0; padding-left: 15px;">
+                        <li>Schaue der Lehrerin bei der Demonstration zu</li>
+                        <li>Drücke die Pipette zusammen und tauche sie ins Wasser</li>
+                        <li>Lasse sie langsam los und beobachte genau</li>
+                        <li>Hebe die Pipette und drücke sie über dem anderen Becher zusammen</li>
+                        <li>Wiederhole das 5x und achte auf beide Phasen!</li>
+                    </ol>
+                </div>
+                
+                <h4 style="margin: 10px 0 5px 0;">👁️ Meine Beobachtungen:</h4>
+                <table class="observation-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Phase</th>
+                            <th style="width: 40%;">Was passiert mit dem Wasser?</th>
+                            <th style="width: 35%;">Wohin/Woher bewegt es sich?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Phase 1:<br>Zusammen-<br>drücken</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 2:<br>Loslassen</strong></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Section 4: Conceptual Bridging -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <div>🫀 Übertragung: Pipette ↔ Herz</div>
+            </div>
+            <div class="section-content">
+                <h4 style="margin: 10px 0 5px 0;">🔄 Analogie-Vergleich:</h4>
+                
+                <div class="analogy-section">
+                    <div class="analogy-item">
+                        <div style="flex: 1;"><strong>💉 Pipette zusammendrücken:</strong><br>Das Wasser wird herausgedrückt</div>
+                        <div class="arrow">→</div>
+                        <div style="flex: 1;"><strong>❤️ Herz Systole:</strong><br>Das Herz <span class="input-line medium"></span></div>
+                    </div>
+                    
+                    <div class="analogy-item">
+                        <div style="flex: 1;"><strong>💉 Pipette loslassen:</strong><br>Das Wasser wird angesaugt</div>
+                        <div class="arrow">→</div>
+                        <div style="flex: 1;"><strong>❤️ Herz Diastole:</strong><br>Das Herz <span class="input-line medium"></span></div>
+                    </div>
+                </div>
+                
+                <div class="conclusion-box">
+                    <strong>Fazit:</strong> Das Herz arbeitet wie eine <span class="input-line short"></span> 
+                    mit einem <span class="input-line short"></span>!
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 5: Authentic Assessment -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <div>🏃‍♂️ Experiment: Mein Herz bei Belastung</div>
+            </div>
+            <div class="section-content">
+                <div class="instruction-box">
+                    <h4>📊 Ablauf der Messung:</h4>
+                    <ol style="margin: 5px 0; padding-left: 15px;">
+                        <li><strong>Ruhepuls:</strong> 15 Sekunden zählen, mal 4 rechnen</li>
+                        <li><strong>Belastung:</strong> 20 Kniebeugen machen</li>
+                        <li><strong>Belastungspuls:</strong> Sofort wieder 15 Sekunden messen</li>
+                        <li><strong>Erholung:</strong> 2 Minuten warten und nochmal messen</li>
+                    </ol>
+                </div>
+                
+                <div class="measurement-row">
+                    <div class="measurement-item">
+                        <div class="measurement-title">🛋️ Ruhepuls</div>
+                        <div class="measurement-value"></div>
+                        <div style="font-size: 9pt;">Schläge/Min</div>
+                    </div>
+                    
+                    <div class="measurement-item">
+                        <div class="measurement-title">💪 Nach Sport</div>
+                        <div class="measurement-value"></div>
+                        <div style="font-size: 9pt;">Schläge/Min</div>
+                    </div>
+                    
+                    <div class="measurement-item">
+                        <div class="measurement-title">😌 Nach Erholung</div>
+                        <div class="measurement-value"></div>
+                        <div style="font-size: 9pt;">Schläge/Min</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="form-label">Was beobachtest du? Wie hat sich dein Herzschlag verändert?</div>
+                    <div>Bei Sport wurde mein Herzschlag <span class="input-line long"></span></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 6: Hypothesis Generation -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">6</div>
+                <div>🤔 Forscherhypothesen entwickeln</div>
+            </div>
+            <div class="section-content">
+                <div class="conclusion-box" style="background: #f0f0f0;">
+                    🧠 Die große Frage: Warum pumpt das Herz bei Sport schneller?
+                </div>
+                
+                <div style="margin: 10px 0; text-align: center;">
+                    Das Herz pumpt <span class="input-line short"></span> durch den Körper.
+                </div>
+                
+                <div style="margin: 10px 0; font-weight: bold;">
+                    Aber WOZU braucht der Körper bei Sport mehr oder schneller gepumptes Blut?
+                </div>
+                
+                <div class="hypothesis-list">
+                    <div class="hypothesis-item">
+                        <div style="flex: 1;">
+                            Meine erste Hypothese: Der Körper braucht mehr Blut, weil<br>
+                            <span class="input-line full"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="hypothesis-item">
+                        <div style="flex: 1;">
+                            Meine zweite Hypothese: Das Blut transportiert<br>
+                            <span class="input-line full"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="hypothesis-item">
+                        <div style="flex: 1;">
+                            Meine dritte Hypothese: Bei Anstrengung<br>
+                            <span class="input-line full"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 7: Knowledge Consolidation -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">7</div>
+                <div>🎉 Was ich heute gelernt habe</div>
+            </div>
+            <div class="section-content">
+                <div style="border: 2px solid #666; background: #f9f9f9; padding: 10px; margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 10px 0;">💡 Meine wichtigsten Erkenntnisse:</h4>
+                    
+                    <div class="form-group">
+                        <div>1. Das Herz arbeitet wie eine <span class="input-line medium"></span></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div>2. Die zwei Phasen heißen <span class="input-line short"></span> und <span class="input-line short"></span></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div>3. Bei Sport schlägt das Herz schneller, weil <span class="input-line medium"></span></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid #666; background: #fafafa; padding: 10px;">
+                    <h4 style="margin: 0 0 10px 0;">🔬 Meine Forscherfragen für die nächste Stunde:</h4>
+                    
+                    <div class="form-group">
+                        <div>Was möchte ich über das Blut herausfinden?</div>
+                        <div>Ich will wissen <span class="input-line long"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <strong>📖 Ausblick nächste Stunde:</strong><br>
+            "Das Blut - Geheimnisvoller Transporteur des Lebens"<br>
+            <em>Wir erforschen, was das Blut so lebenswichtig macht!</em>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehrer-Steuerung: Das Herz als Pumpe</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            overflow: hidden;
+        }
+        
+        .teacher-dashboard {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Top Control Bar */
+        .control-bar {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lesson-title {
+            font-size: 24pt;
+            font-weight: bold;
+        }
+        
+        .timer-display {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .phase-indicator {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14pt;
+        }
+        
+        /* Navigation */
+        .section-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+        }
+        
+        .nav-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 18pt;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-button:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+        
+        .nav-button.active {
+            background: #28a745;
+            border-color: #28a745;
+            box-shadow: 0 0 20px rgba(40,167,69,0.5);
+        }
+        
+        .nav-button.completed {
+            background: #007bff;
+            border-color: #007bff;
+        }
+        
+        /* Main Display Area */
+        .main-display {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .section-display {
+            display: none;
+            text-align: center;
+            max-width: 90%;
+            animation: slideIn 0.5s ease;
+        }
+        
+        .section-display.active {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section-title {
+            font-size: 48pt;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .section-subtitle {
+            font-size: 24pt;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .big-question {
+            font-size: 36pt;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .instruction-display {
+            font-size: 20pt;
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            line-height: 1.5;
+        }
+        
+        .analogy-visual {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 40px 0;
+            font-size: 24pt;
+        }
+        
+        .analogy-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            margin: 0 20px;
+        }
+        
+        .analogy-arrow {
+            font-size: 48pt;
+            color: #ffd700;
+        }
+        
+        .measurement-display {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .measurement-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 18pt;
+        }
+        
+        .measurement-title {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .hypothesis-display {
+            font-size: 18pt;
+            text-align: left;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+        
+        .hypothesis-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #ffd700;
+        }
+        
+        /* Bottom Controls */
+        .bottom-controls {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .control-button {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 14pt;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .control-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .control-button.primary {
+            background: #28a745;
+            border-color: #28a745;
+        }
+        
+        .phase-timer {
+            font-size: 16pt;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .timer-control {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        /* Special Displays */
+        .emoji-large {
+            font-size: 120pt;
+            margin: 30px 0;
+        }
+        
+        .conclusion-highlight {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #000;
+            padding: 40px;
+            border-radius: 20px;
+            font-size: 28pt;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        
+        /* Keyboard Shortcuts Display */
+        .shortcuts {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 10pt;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="teacher-dashboard">
+        <!-- Top Control Bar -->
+        <div class="control-bar">
+            <div class="lesson-title">Das Herz als Pumpe</div>
+            <div class="phase-indicator" id="phaseIndicator">Phase 1/7</div>
+            <div class="timer-display" id="timerDisplay">00:00</div>
+        </div>
+        
+        <!-- Section Navigation -->
+        <div class="section-navigation">
+            <div class="nav-button active" onclick="goToSection(1)">1</div>
+            <div class="nav-button" onclick="goToSection(2)">2</div>
+            <div class="nav-button" onclick="goToSection(3)">3</div>
+            <div class="nav-button" onclick="goToSection(4)">4</div>
+            <div class="nav-button" onclick="goToSection(5)">5</div>
+            <div class="nav-button" onclick="goToSection(6)">6</div>
+            <div class="nav-button" onclick="goToSection(7)">7</div>
+        </div>
+        
+        <!-- Main Display Area -->
+        <div class="main-display">
+            <!-- Section 1: Sensory Engagement -->
+            <div class="section-display active" id="section1">
+                <div class="emoji-large">💓</div>
+                <div class="section-title">Mein Herz arbeitet jetzt</div>
+                <div class="instruction-display">
+                    <strong>Aufgabe für alle:</strong><br><br>
+                    Legt beide Hände fest auf eure Brust.<br>
+                    Konzentriert euch 30 Sekunden lang nur auf euren Herzschlag.<br><br>
+                    <em>Was spürt ihr? Wie fühlt sich das an?</em>
+                </div>
+            </div>
+            
+            <!-- Section 2: Problem Formulation -->
+            <div class="section-display" id="section2">
+                <div class="emoji-large">🎯</div>
+                <div class="section-title">Unsere Forscherfrage</div>
+                <div class="big-question">
+                    WIE arbeitet unser Herz?<br>
+                    Was macht es genau?
+                </div>
+                <div class="section-subtitle">
+                    Tragt eure ersten Vermutungen ins Arbeitsblatt ein!
+                </div>
+            </div>
+            
+            <!-- Section 3: Experiential Learning -->
+            <div class="section-display" id="section3">
+                <div class="emoji-large">🔬</div>
+                <div class="section-title">Experiment: Pipette als Herzmodell</div>
+                <div class="instruction-display">
+                    <strong>Ablauf:</strong><br>
+                    1. Ich zeige euch zuerst die Demonstration<br>
+                    2. Ihr experimentiert selbst in Partnerarbeit<br>
+                    3. Beobachtet beide Phasen genau!<br><br>
+                    <em>→ Dokumentiert eure Beobachtungen in der Tabelle</em>
+                </div>
+            </div>
+            
+            <!-- Section 4: Conceptual Bridging -->
+            <div class="section-display" id="section4">
+                <div class="emoji-large">🫀</div>
+                <div class="section-title">Übertragung: Pipette ↔ Herz</div>
+                <div class="analogy-visual">
+                    <div class="analogy-item">
+                        <div style="font-size: 36pt;">💉</div>
+                        <div>Pipette<br>zusammendrücken</div>
+                    </div>
+                    <div class="analogy-arrow">↔</div>
+                    <div class="analogy-item">
+                        <div style="font-size: 36pt;">❤️</div>
+                        <div>Herz<br>Systole</div>
+                    </div>
+                </div>
+                <div class="section-subtitle">
+                    Neue Fachbegriffe: <strong>Systole</strong> und <strong>Diastole</strong>
+                </div>
+            </div>
+            
+            <!-- Section 5: Authentic Assessment -->
+            <div class="section-display" id="section5">
+                <div class="emoji-large">🏃‍♂️</div>
+                <div class="section-title">Mein Herz bei Belastung</div>
+                <div class="measurement-display">
+                    <div class="measurement-card">
+                        <div class="measurement-title">🛋️ Ruhepuls</div>
+                        <div>15 Sek zählen<br>× 4 rechnen</div>
+                    </div>
+                    <div class="measurement-card">
+                        <div class="measurement-title">💪 Nach Sport</div>
+                        <div>20 Kniebeugen<br>sofort messen</div>
+                    </div>
+                    <div class="measurement-card">
+                        <div class="measurement-title">😌 Nach Erholung</div>
+                        <div>2 Min warten<br>nochmals messen</div>
+                    </div>
+                </div>
+                <div class="instruction-display">
+                    <strong>Beobachtet:</strong> Wie verändert sich euer Herzschlag?
+                </div>
+            </div>
+            
+            <!-- Section 6: Hypothesis Generation -->
+            <div class="section-display" id="section6">
+                <div class="emoji-large">🤔</div>
+                <div class="section-title">Forscherhypothesen entwickeln</div>
+                <div class="big-question">
+                    Warum pumpt das Herz<br>bei Sport schneller?
+                </div>
+                <div class="hypothesis-display">
+                    <div class="hypothesis-item">
+                        <strong>1.</strong> Der Körper braucht mehr Blut, weil...
+                    </div>
+                    <div class="hypothesis-item">
+                        <strong>2.</strong> Das Blut transportiert...
+                    </div>
+                    <div class="hypothesis-item">
+                        <strong>3.</strong> Bei Anstrengung...
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 7: Knowledge Consolidation -->
+            <div class="section-display" id="section7">
+                <div class="emoji-large">🎉</div>
+                <div class="section-title">Was wir gelernt haben</div>
+                <div class="conclusion-highlight">
+                    Das Herz ist eine PUMPE<br>
+                    mit RHYTHMUS!
+                </div>
+                <div class="section-subtitle">
+                    Systole → Diastole → Systole → Diastole...
+                </div>
+                <div class="instruction-display">
+                    <strong>Nächste Stunde:</strong><br>
+                    "Das Blut - Geheimnisvoller Transporteur des Lebens"<br>
+                    <em>Was macht das Blut so wichtig?</em>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Controls -->
+        <div class="bottom-controls">
+            <div class="phase-timer">
+                <div>Phase:</div>
+                <button class="timer-control" onclick="startPhaseTimer(3)">3 min</button>
+                <button class="timer-control" onclick="startPhaseTimer(5)">5 min</button>
+                <button class="timer-control" onclick="startPhaseTimer(10)">10 min</button>
+                <button class="timer-control" onclick="resetTimer()">Reset</button>
+            </div>
+            
+            <div>
+                <button class="control-button" onclick="previousSection()">◀ Zurück</button>
+                <button class="control-button primary" onclick="nextSection()">Weiter ▶</button>
+            </div>
+        </div>
+        
+        <!-- Keyboard Shortcuts -->
+        <div class="shortcuts">
+            <div><strong>Tastatur:</strong></div>
+            <div>←→ Navigation</div>
+            <div>Leertaste: Weiter</div>
+            <div>T: Timer</div>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = 1;
+        const totalSections = 7;
+        let timer = null;
+        let timeElapsed = 0;
+        let phaseStartTime = 0;
+        
+        // Section titles for navigation
+        const sectionTitles = [
+            "Herzschlag spüren",
+            "Forscherfrage",
+            "Pipettenexperiment", 
+            "Analogiebildung",
+            "Pulsexperiment",
+            "Hypothesen",
+            "Zusammenfassung"
+        ];
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDisplay();
+            startMainTimer();
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                switch(e.key) {
+                    case 'ArrowRight':
+                    case ' ':
+                        e.preventDefault();
+                        nextSection();
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        previousSection();
+                        break;
+                    case 't':
+                    case 'T':
+                        e.preventDefault();
+                        startPhaseTimer(5);
+                        break;
+                    case 'r':
+                    case 'R':
+                        e.preventDefault();
+                        resetTimer();
+                        break;
+                }
+                
+                // Number keys for direct navigation
+                if (e.key >= '1' && e.key <= '7') {
+                    e.preventDefault();
+                    goToSection(parseInt(e.key));
+                }
+            });
+        });
+        
+        function goToSection(sectionNum) {
+            if (sectionNum >= 1 && sectionNum <= totalSections) {
+                currentSection = sectionNum;
+                updateDisplay();
+                phaseStartTime = Date.now();
+            }
+        }
+        
+        function nextSection() {
+            if (currentSection < totalSections) {
+                currentSection++;
+                updateDisplay();
+                phaseStartTime = Date.now();
+            }
+        }
+        
+        function previousSection() {
+            if (currentSection > 1) {
+                currentSection--;
+                updateDisplay();
+                phaseStartTime = Date.now();
+            }
+        }
+        
+        function updateDisplay() {
+            // Hide all sections
+            document.querySelectorAll('.section-display').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show current section
+            document.getElementById(`section${currentSection}`).classList.add('active');
+            
+            // Update navigation
+            document.querySelectorAll('.nav-button').forEach((btn, index) => {
+                btn.classList.remove('active', 'completed');
+                const sectionNum = index + 1;
+                
+                if (sectionNum === currentSection) {
+                    btn.classList.add('active');
+                } else if (sectionNum < currentSection) {
+                    btn.classList.add('completed');
+                }
+            });
+            
+            // Update phase indicator
+            document.getElementById('phaseIndicator').textContent = 
+                `Phase ${currentSection}/7: ${sectionTitles[currentSection - 1]}`;
+        }
+        
+        function startMainTimer() {
+            setInterval(() => {
+                timeElapsed++;
+                const minutes = Math.floor(timeElapsed / 60);
+                const seconds = timeElapsed % 60;
+                document.getElementById('timerDisplay').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+        
+        function startPhaseTimer(minutes) {
+            if (timer) clearInterval(timer);
+            
+            let timeLeft = minutes * 60;
+            document.getElementById('timerDisplay').style.color = '#ffd700';
+            
+            timer = setInterval(() => {
+                timeLeft--;
+                const mins = Math.floor(timeLeft / 60);
+                const secs = timeLeft % 60;
+                
+                if (timeLeft <= 30) {
+                    document.getElementById('timerDisplay').style.color = '#ff6b6b';
+                }
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('timerDisplay').style.color = '#ff4757';
+                    document.getElementById('timerDisplay').textContent = 'ZEIT!';
+                    
+                    // Flash effect
+                    let flashCount = 0;
+                    const flashInterval = setInterval(() => {
+                        document.getElementById('timerDisplay').style.opacity = 
+                            document.getElementById('timerDisplay').style.opacity === '0.3' ? '1' : '0.3';
+                        flashCount++;
+                        if (flashCount > 6) {
+                            clearInterval(flashInterval);
+                            document.getElementById('timerDisplay').style.opacity = '1';
+                        }
+                    }, 500);
+                    
+                    timer = null;
+                } else {
+                    document.getElementById('timerDisplay').textContent = 
+                        `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+                }
+            }, 1000);
+        }
+        
+        function resetTimer() {
+            if (timer) clearInterval(timer);
+            timer = null;
+            document.getElementById('timerDisplay').style.color = '#ffd700';
+            document.getElementById('timerDisplay').textContent = '00:00';
+        }
+        
+        // Additional features for presentation mode
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+        
+        // Auto-advance features (optional)
+        function enableAutoAdvance(delay = 30000) {
+            setInterval(() => {
+                if (currentSection < totalSections) {
+                    nextSection();
+                }
+            }, delay);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1",
+        "DEBUG": "false",
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

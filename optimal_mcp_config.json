@@ -1,0 +1,105 @@
+{
+  "mcpServers": {
+    "github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1",
+        "DEBUG": "false",
+        "NODE_ENV": "production"
+      }
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/paulad"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1",
+        "DEBUG": "false",
+        "NODE_ENV": "production"
+      }
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1",
+        "DEBUG": "false",
+        "NODE_ENV": "production"
+      }
+    },
+    "github.com/AgentDeskAI/browser-tools-mcp": {
+      "command": "npx",
+      "args": ["-y", "@agentdeskai/browser-tools-mcp"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1",
+        "DEBUG": "false",
+        "NODE_ENV": "production"
+      }
+    },
+    "github.com/paulad/simple-mcp-server-v16": {
+      "command": "node",
+      "args": ["/Users/paulad/snflsknfkldnfs.github.io/simple_mcp_server_v16.js"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1"
+      },
+      "meta": {
+        "namespace": "Simple_Server_V16"
+      }
+    }
+,
+    "github.com/smithery-ai/mcp-obsidian": {
+      "command": "npx",
+      "args": ["-y", "mcp-obsidian", "/Users/paulad/Documents/Obsidian"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1",
+        "DEBUG": "false",
+        "NODE_ENV": "production"
+      }
+    },
+    "github.com/paulad/mcp-obsidian-local": {
+      "command": "node",
+      "args": ["/Users/paulad/snflsknfkldnfs.github.io/mcp-obsidian-local/index.js", "/Users/paulad/Documents/Obsidian"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1"
+      },
+      "meta": {
+        "namespace": "Local_Obsidian"
+      }
+    }
+,
+    "github.com/paulad/canva-integration": {
+      "command": "node",
+      "args": ["/Users/paulad/Documents/Cline/MCP/openrouter-canva/index.js"],
+      "disabled": false,
+      "autoApprove": [],
+      "env": {
+        "PATH": "/Users/paulad/.local/bin:/usr/local/bin:/usr/bin:/bin",
+        "NODE_NO_WARNINGS": "1"
+      },
+      "meta": {
+        "namespace": "Canva_Integration"
+      }
+    }
+  }
+}

@@ -1,32 +1,15 @@
 {
-  "name": "snflsknfkldnfs.github.io",
+  "name": "simple-mcp-server",
   "version": "1.0.0",
-  "description": "<!-- **snflsknfkldnfs/snflsknfkldnfs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
-  "main": "index.js",
+  "description": "Ein einfacher MCP-Server für Claude Desktop",
+  "main": "simple_mcp_server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node simple_mcp_server.js",
+    "test": "echo '{ \"id\": \"test\", \"jsonrpc\": \"2.0\", \"method\": \"list_tools\", \"params\": {} }' | node simple_mcp_server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/snflsknfkldnfs/snflsknfkldnfs.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/snflsknfkldnfs/snflsknfkldnfs.github.io/issues"
-  },
-  "homepage": "https://github.com/snflsknfkldnfs/snflsknfkldnfs.github.io#readme",
+  "author": "Claude",
+  "license": "MIT",
   "dependencies": {
-    "@dqbd/tiktoken": "^1.0.20",
-    "axios": "^1.8.4",
-    "body-parser": "^1.20.3",
-    "chokidar": "^4.0.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "fs-extra": "^11.3.0",
-    "mcp-server": "^0.0.9",
-    "nomic": "^1.0.0"
+    "@modelcontextprotocol/sdk": "1.12.0"
   }
 }
