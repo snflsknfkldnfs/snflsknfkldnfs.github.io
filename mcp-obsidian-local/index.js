@@ -1,24 +1,22 @@
 #!/usr/bin/env node
 
 // Vereinfachter MCP-Server für Obsidian
-// Basierend auf github.com/smithery-ai/mcp-obsidian, aber mit weniger Abhängigkeiten
-// Für Claude Desktop Kompatibilität optimiert
-
+// Optimiert für Claude Desktop Kompatibilität
 const fs = require('fs');
 const path = require('path');
 const { createMcpServer } = require('@modelcontextprotocol/sdk');
 
-// Konfigurierbare Variablen
-const OBSIDIAN_VAULT_PATH = process.argv[2] || path.join(process.env.HOME, 'Documents', 'Obsidian');
+// Konfiguriere Obsidian-Pfad
+const OBSIDIAN_PATH = process.argv[2] || path.join(process.env.HOME, 'Documents', 'Obsidian');
 
 // Prüfe, ob Obsidian-Verzeichnis existiert
-if (!fs.existsSync(OBSIDIAN_VAULT_PATH)) {
-  console.error(`Fehler: Obsidian Vault-Verzeichnis nicht gefunden: ${OBSIDIAN_VAULT_PATH}`);
-  console.error('Bitte geben Sie den korrekten Pfad als Parameter an: node index.js /pfad/zu/obsidian_vault');
+if (!fs.existsSync(OBSIDIAN_PATH)) {
+  console.error(`Fehler: Obsidian-Verzeichnis nicht gefunden: ${OBSIDIAN_PATH}`);
+  console.error('Bitte geben Sie den korrekten Pfad als Parameter an: node index.js /pfad/zu/obsidian');
   process.exit(1);
 }
 
-// Server erstellen
+// Erstelle Server
 const server = createMcpServer({
   tools: {
     read_notes: {
@@ -43,7 +41,7 @@ const server = createMcpServer({
         
         for (const notePath of paths) {
           try {
-            const fullPath = path.join(OBSIDIAN_VAULT_PATH, notePath);
+            const fullPath = path.join(OBSIDIAN_PATH, notePath);
             
             if (fs.existsSync(fullPath)) {
               results[notePath] = fs.readFileSync(fullPath, 'utf8');
@@ -92,7 +90,7 @@ const server = createMcpServer({
         }
         
         try {
-          searchDirectory(OBSIDIAN_VAULT_PATH);
+          searchDirectory(OBSIDIAN_PATH);
           return results;
         } catch (error) {
           return { error: error.message };
@@ -103,5 +101,5 @@ const server = createMcpServer({
   resources: {}
 });
 
-// Server starten
+// Starte Server
 server.listen();

@@ -1,0 +1,32 @@
+# Sachanalyse im Mathematikunterricht (5. Klasse)
+<span style="font-size:10;"> Created 202502251503 {{time}} </span>
+
+---
+- **Ziel:** Der KI ein detailliertes Verständnis der relevanten mathematischen Inhalte für die 5. Jahrgangsstufe der Auen Mittelschule Schweinfurt vermitteln.
+- **Inhaltsbereiche (beispielhaft):**
+    - **Zahlen und Operationen:**
+        - Natürliche Zahlen: Stellenwertsystem, Größenvergleiche, Runden.
+        - Grundrechenarten: Addition, Subtraktion, Multiplikation, Division (auch schriftlich).
+        - Rechengesetze: Kommutativ-, Assoziativ-, Distributivgesetz.
+        - Brüche: Vorstellung, Erweitern, Kürzen, Vergleichen, Rechnen mit Brüchen.
+        - Dezimalbrüche: Umwandlung, Größenvergleiche, Runden, Rechnen mit Dezimalbrüchen.
+    - **Größen und Messen:**
+        - Längen, Flächen, Volumina: Messen, Einheiten, Umrechnen.
+        - Zeit: Einheiten, Umrechnen, Zeitspannen berechnen.
+        - Geld: Rechnen mit Geldbeträgen.
+    - **Raum und Form:**
+        - Geometrische Grundformen: Punkt, Gerade, Strecke, Winkel, Dreieck, Viereck, Kreis.
+        - Körper: Würfel, Quader, Pyramide, Zylinder, Kegel, Kugel.
+        - Symmetrie: Achsensymmetrie, Punktsymmetrie.
+    - **Daten und Zufall:**
+        - Erheben und Darstellen von Daten: Tabellen, Diagramme.
+        - Wahrscheinlichkeit: Grundbegriffe.
+- **Prozessbezogene Kompetenzen:**
+    - **Problemlösen:** Aufgaben verstehen, Lösungsstrategien entwickeln, Ergebnisse überprüfen.
+    - **Modellieren:** Reale Situationen in mathematische Modelle übersetzen.
+    - **Argumentieren:** математические Aussagen begründen und überprüfen.
+    - **Kommunizieren:** Mathematische Sachverhalte darstellen und erklären.
+- **Verknüpfung mit anderen .md-Notizen:**
+    - Bedingungsanalyse
+    - Methodische Analyse
+    - Allgemeine Grundlagen der Unterrichtsplanung
