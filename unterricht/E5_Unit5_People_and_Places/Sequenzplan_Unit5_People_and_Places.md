@@ -42,13 +42,14 @@ Die Schülerinnen und Schüler erweitern ihre interkulturelle Kompetenz durch Gr
 |8|27.06.25|Fr|LAA Cebulla|Yesterday activities S. 88|Sprechen/Anwendung|Kommunikativ|Die SuS berichten über vergangene Aktivitäten, indem sie simple past in eigenen Sätzen verwenden, was daran erkennbar wird, dass sie einen kurzen Monolog über ihr Wochenende halten können.|Anwendung S. 88, freie Sprechzeit, Festigung der Sequenz|LB S. 88, Bildkarten|Lebenswelt SuS|
 
 **Zusätzliche Stunden bei Mentorin Frau Katzenberger (Di/Do):**
-|UZE|Datum|Lehrkraft|Stundenthema|Schwerpunkt|
-|---|---|---|---|---|
-|A|29.05.25|Frau Katzenberger|Wiederholung Unit 4|Festigung|
-|B|03.06.25|Frau Katzenberger|Vocabulary building Unit 5|Wortschatz|
-|C|05.06.25|Frau Katzenberger|Reading skills practice|Leseverstehen|
-|D|24.06.25|Frau Katzenberger|Grammar practice simple past|Grammatik|
-|E|26.06.25|Frau Katzenberger|Project work Britain|Anwendung|
+
+| UZE | Datum    | Lehrkraft         | Stundenthema                   | Schwerpunkt   |
+|-----|----------|-------------------|-------------------------------|--------------|
+| A   | 29.05.25 | Frau Katzenberger | Wiederholung Unit 4           | Festigung    |
+| B   | 03.06.25 | Frau Katzenberger | Vocabulary building Unit 5    | Wortschatz   |
+| C   | 05.06.25 | Frau Katzenberger | Reading skills practice       | Leseverstehen|
+| D   | 24.06.25 | Frau Katzenberger | Grammar practice simple past  | Grammatik    |
+| E   | 26.06.25 | Frau Katzenberger | Project work Britain          | Anwendung    |
 
 ## 3. Didaktisch-methodische Überlegungen zur Sequenz
 
