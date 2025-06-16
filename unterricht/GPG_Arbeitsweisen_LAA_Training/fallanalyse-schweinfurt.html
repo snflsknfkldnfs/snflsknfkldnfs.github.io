@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallanalyse: Stadionausbau Schweinfurt</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .phase-container {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .phase-header {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .phase-content {
+            padding: 20px;
+            display: none;
+        }
+        .phase-content.active {
+            display: block;
+        }
+        .group-task {
+            background: #f1f8e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .materials-box {
+            background: #fff3e0;
+            border: 1px solid #ffb74d;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .reflection-prompt {
+            background: #e1f5fe;
+            border-left: 4px solid #0277bd;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .timer {
+            background: #ffebee;
+            border: 1px solid #ef5350;
+            padding: 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .lehrplan-box {
+            background: #f3e5f5;
+            border: 1px solid #9c27b0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .kompetenz-check {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .kompetenz-item {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #4caf50;
+        }
+        .beutelsbacher-box {
+            background: #e8eaf6;
+            border: 1px solid #3f51b5;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏟️ Fallanalyse: Stadionausbau Schweinfurt</h1>
+        <p class="subtitle">Praxisbeispiel für kasuistisches Verfahren im GPG-Unterricht</p>
+        
+        <div class="lehrplan-box">
+            <h3>📋 Lehrplananbindung</h3>
+            <p><strong>Fach:</strong> GPG (Sozialwissenschaftliche Perspektive)<br>
+            <strong>Jahrgangsstufe:</strong> 6<br>
+            <strong>Lernbereich:</strong> LB4 Lebenswelt - Kommunalpolitische Entscheidungsprozesse<br>
+            <strong>Kompetenzerwartung:</strong> Die Schülerinnen und Schüler erläutern ausgehend von einem aktuellen Fallbeispiel aus ihrem Umfeld die kommunalpolitischen Entscheidungsprozesse und erproben ihre Mitwirkungsmöglichkeiten bei exemplarischen Fällen an ihrem Wohnort.</p>
+        </div>
+
+        <div class="instructions">
+            <h2>🎯 Der Fall</h2>
+            <div class="materials-box">
+                <h4>"Stadionausbau spaltet Schweinfurt"</h4>
+                <p>Die Stadt Schweinfurt plant den Ausbau des Sportparks für <strong>2,8 Millionen Euro</strong>. Während die Sportvereine jubeln und neue Trainingsmöglichkeiten erwarten, gehen Anwohner auf die Barrikaden. Sie befürchten mehr Lärm, Verkehrsprobleme und Parkplatzmangel. Gleichzeitig ist die Stadtkasse angespannt - andere wichtige Projekte wie die Sanierung von Schulen und der Ausbau von Radwegen müssen möglicherweise verschoben werden.</p>
+                
+                <p><strong>Kernkonflikt:</strong> Interessenabwägung zwischen verschiedenen Bürgern bei begrenzten kommunalen Ressourcen.</p>
+                
+                <p><em>In drei Wochen entscheidet der Stadtrat. Bürgermeister Sebastian Remelé muss zwischen den Fronten vermitteln.</em></p>
+            </div>
+        </div>
+
+        <h2>📚 Verlaufsmodell nach kasuistischem Verfahren</h2>
+        <p class="timer">⏱️ Gesamtdauer: 90 Minuten (Doppelstunde)</p>
+
+        <!-- Phase 0: Vorkurs -->
+        <div class="phase-container">
+            <div class="phase-header" onclick="togglePhase(0)">
+                <span>Phase 0: Vorkurs - Systematisches Vorwissen aktivieren</span>
+                <span class="timer">10 Min.</span>
+                <span id="arrow0">▼</span>
+            </div>
+            <div class="phase-content" id="phase0">
+                <h4>🎯 Ziel: Aktivierung systematischen Vorwissens</h4>
+                
+                <div class="materials-box">
+                    <h5>📖 Lehrerzentrierte Informationsvermittlung:</h5>
+                    <ul>
+                        <li>Grundlagen der Kommunalpolitik (Stadtrat, Bürgermeister, Verwaltung)</li>
+                        <li>Haushaltsplanung und Prioritätensetzung</li>
+                        <li>Bürgerbeteiligung als demokratisches Prinzip</li>
+                    </ul>
+                    
+                    <p><strong>Material:</strong> Schaubild "Aufbau der Kommunalverwaltung Schweinfurt"</p>
+                </div>
+                
+                <div class="reflection-prompt">
+                    💡 <strong>Didaktische Reflexion:</strong> Notwendiges Grundwissen wird kompakt vermittelt, um komplexe Zusammenhänge in der Fallanalyse verstehen zu können.
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 1: Konfrontation -->
+        <div class="phase-container">
+            <div class="phase-header" onclick="togglePhase(1)">
+                <span>Phase 1: Konfrontation - Problemaufriss</span>
+                <span class="timer">15 Min.</span>
+                <span id="arrow1">▼</span>
+            </div>
+            <div class="phase-content" id="phase1">
+                <h4>🎯 Ziel: Problemstrukturierung durch Schüler</h4>
+                
+                <div class="materials-box">
+                    <h5>📰 Falldarstellung mit Originalquellen:</h5>
+                    <ul>
+                        <li>Zeitungsartikel zur Kontroverse (Mainpost)</li>
+                        <li>Stellungnahmen der Interessengruppen</li>
+                        <li>Haushaltsdaten der Stadt Schweinfurt (vereinfacht)</li>
+                        <li>Fotomaterial vom aktuellen Sportpark</li>
+                    </ul>
+                </div>
+                
+                <div class="group-task">
+                    <h5>👥 Schüleraktivität: Problemanalyse</h5>
+                    <p><strong>Arbeitsauftrag:</strong> "Lest den Zeitungsartikel und identifiziert das Kernproblem. Was macht diesen Fall schwierig zu entscheiden?"</p>
+                    
+                    <p><strong>Erwartete Erkenntnisse:</strong></p>
+                    <ul>
+                        <li>Interessenkonflikt zwischen verschiedenen Bürgergruppen</li>
+                        <li>Budgetknappheit und Prioritätensetzung</li>
+                        <li>Demokratische Entscheidungsfindung unter Zeitdruck</li>
+                    </ul>
+                    
+                    <p><strong>Kernfrage entwickeln:</strong> "Wie kann eine faire und demokratische Lösung aussehen?"</p>
+                </div>
+                
+                <div class="reflection-prompt">
+                    💡 <strong>Arbeitsweise "Interpretieren":</strong> Schüler deuten den Interessenkonflikt und erkennen die demokratische Herausforderung.
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 2: Information -->
+        <div class="phase-container">
+            <div class="phase-header" onclick="togglePhase(2)">
+                <span>Phase 2: Information - Arbeitsteilige Recherche</span>
+                <span class="timer">25 Min.</span>
+                <span id="arrow2">▼</span>
+            </div>
+            <div class="phase-content" id="phase2">
+                <h4>🎯 Ziel: Systematische Informationsbeschaffung</h4>
+                
+                <div class="group-task">
+                    <h5>👥 Gruppenarbeit mit spezifischen Rechercheaufträgen:</h5>
+                    
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                        <tr style="background: #f5f5f5;">
+                            <th style="border: 1px solid #ddd; padding: 10px;">Gruppe</th>
+                            <th style="border: 1px solid #ddd; padding: 10px;">Rechercheauftrag</th>
+                            <th style="border: 1px solid #ddd; padding: 10px;">Quellen</th>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px;"><strong>🏃 Sportvereine</strong></td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Argumente und Bedürfnisse sammeln</td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Vereinswebsites, Interviews mit Trainern</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px;"><strong>🏠 Anwohner</strong></td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Bedenken und Alternativen</td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Bürgerinitiativen, Lärmschutzverordnung</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px;"><strong>🏛️ Stadtverwaltung</strong></td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Finanzlage und Planungsalternativen</td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Haushaltsplan, Stadtratsprotokolle</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 10px;"><strong>🎓 Jugendliche</strong></td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Bedürfnisse junger Menschen</td>
+                            <td style="border: 1px solid #ddd; padding: 10px;">Jugendbefragung, Jugendbeirat</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="materials-box">
+                    <h5>❓ Leitfragen für alle Gruppen:</h5>
+                    <ul>
+                        <li>Welche Interessen stehen hinter den Positionen?</li>
+                        <li>Welche Kompromisse sind denkbar?</li>
+                        <li>Wie können alle Beteiligten gehört werden?</li>
+                        <li>Was sind die wichtigsten Argumente?</li>
+                    </ul>
+                </div>
+                
+                <div class="reflection-prompt">
+                    💡 <strong>Arbeitsweise "Sich informieren":</strong> Systematische Recherche zu verschiedenen Interessenlagen. Schüler lernen Perspektivenvielfalt kennen.
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 3: Resolution -->
+        <div class="phase-container">
+            <div class="phase-header" onclick="togglePhase(3)">
+                <span>Phase 3: Resolution - Lösungsentwicklung</span>
+                <span class="timer">20 Min.</span>
+                <span id="arrow3">▼</span>
+            </div>
+            <div class="phase-content" id="phase3">
+                <h4>🎯 Ziel: Kreative Lösungsfindung in Expertengruppen</h4>
+                
+                <div class="group-task">
+                    <h5>💡 Lösungsansätze entwickeln:</h5>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="background: #e3f2fd; padding: 15px; border-radius: 5px;">
+                            <h6>💰 Finanzierungsalternativen</h6>
+                            <ul>
+                                <li>Sponsoring</li>
+                                <li>EU-Fördermittel</li>
+                                <li>Bürgerbonds</li>
+                                <li>Etappierte Finanzierung</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f1f8e9; padding: 15px; border-radius: 5px;">
+                            <h6>🤝 Kompromisslösungen</h6>
+                            <ul>
+                                <li>Teilausbau</li>
+                                <li>Lärmschutzmaßnahmen</li>
+                                <li>Verkehrskonzept</li>
+                                <li>Nutzungszeitbegrenzung</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #fff3e0; padding: 15px; border-radius: 5px;">
+                            <h6>🗳️ Beteiligungsverfahren</h6>
+                            <ul>
+                                <li>Bürgerversammlung</li>
+                                <li>Online-Abstimmung</li>
+                                <li>Mediation</li>
+                                <li>Bürgergutachten</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #fce4ec; padding: 15px; border-radius: 5px;">
+                            <h6>⏰ Zeitplanung</h6>
+                            <ul>
+                                <li>Pilotprojekt</li>
+                                <li>Testphase</li>
+                                <li>Bürgerfeedback</li>
+                                <li>Anpassungen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="materials-box">
+                    <h5>⚖️ Bewertungskriterien entwickeln:</h5>
+                    <ul>
+                        <li><strong>Demokratische Legitimität:</strong> Wurden alle Betroffenen gehört?</li>
+                        <li><strong>Finanzielle Nachhaltigkeit:</strong> Ist die Lösung langfristig tragbar?</li>
+                        <li><strong>Interessenausgleich:</strong> Profitieren verschiedene Gruppen?</li>
+                        <li><strong>Zukunftsfähigkeit:</strong> Passt die Lösung zu Stadtentwicklungszielen?</li>
+                    </ul>
+                </div>
+                
+                <div class="reflection-prompt">
+                    💡 <strong>Arbeitsweise "Meinungen äußern":</strong> Schüler entwickeln eigene Lösungsvorschläge und begründen diese systematisch.
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 4: Disputation -->
+        <div class="phase-container">
+            <div class="phase-header" onclick="togglePhase(4)">
+                <span>Phase 4: Disputation - Demokratische Aushandlung</span>
+                <span class="timer">15 Min.</span>
+                <span id="arrow4">▼</span>
+            </div>
+            <div class="phase-content" id="phase4">
+                <h4>🎯 Ziel: Simulation demokratischer Entscheidungsprozesse</h4>
+                
+                <div class="group-task">
+                    <h5>🏛️ Simulation einer Stadtratssitzung:</h5>
+                    
+                    <p><strong>Rollenverteilung:</strong></p>
+                    <ul>
+                        <li><strong>Bürgermeister (Lehrkraft):</strong> Moderation und Entscheidungsvorbereitung</li>
+                        <li><strong>Stadträte (Schüler):</strong> Interessenvertretung verschiedener Positionen</li>
+                        <li><strong>Bürger (Beobachter):</strong> Bewertung der Argumente</li>
+                    </ul>
+                    
+                    <p><strong>Ablauf der Sitzung:</strong></p>
+                    <ol>
+                        <li><strong>Stellungnahmen der Interessengruppen</strong> (je 2 Min.)</li>
+                        <li><strong>Nachfragen und Diskussion</strong> (8 Min.)</li>
+                        <li><strong>Abstimmung über Lösungsalternativen</strong> (5 Min.)</li>
+                    </ol>
+                </div>
+                
+                <div class="materials-box">
+                    <h5>🎓 Demokratische Lernziele:</h5>
+                    <ul>
+                        <li><strong>Kompromissfindung</strong> als politische Notwendigkeit verstehen</li>
+                        <li><strong>Mehrheitsentscheidung vs. Minderheitenschutz</strong> erleben</li>
+                        <li><strong>Rolle der Moderation</strong> in demokratischen Prozessen</li>
+                        <li><strong>Argumentative Überzeugungsarbeit</strong> praktizieren</li>
+                    </ul>
+                </div>
+                
+                <div class="reflection-prompt">
+                    💡 <strong>Arbeitsweise "Argumentieren/Diskutieren/Kooperieren":</strong> Strukturierte demokratische Meinungsbildung mit Kompromissfindung.
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 5: Kollation -->
+        <div class="phase-container">
+            <div class="phase-header" onclick="togglePhase(5)">
+                <span>Phase 5: Kollation - Realitätsabgleich und Transfer</span>
+                <span class="timer">15 Min.</span>
+                <span id="arrow5">▼</span>
+            </div>
+            <div class="phase-content" id="phase5">
+                <h4>🎯 Ziel: Transfer auf reale demokratische Prozesse</h4>
+                
+                <div class="group-task">
+                    <h5>🔍 Vergleich mit tatsächlicher Entwicklung:</h5>
+                    <ul>
+                        <li>Recherche zur realen Stadtratsentscheidung</li>
+                        <li>Bewertung der eigenen Lösungsansätze</li>
+                        <li>Identifikation von Faktoren, die nicht berücksichtigt wurden</li>
+                    </ul>
+                </div>
+                
+                <div class="materials-box">
+                    <h5>🌍 Transfer und Generalisierung:</h5>
+                    <ul>
+                        <li>Übertragung auf andere kommunalpolitische Konflikte</li>
+                        <li>Prinzipien demokratischer Entscheidungsfindung ableiten</li>
+                        <li>Eigene Handlungsmöglichkeiten als zukünftige Bürger</li>
+                    </ul>
+                    
+                    <h6>❓ Reflexionsfragen:</h6>
+                    <ul>
+                        <li>Was macht demokratische Entscheidungen legitimiert?</li>
+                        <li>Welche Rolle spielen Kompromisse in der Demokratie?</li>
+                        <li>Wie können sich Jugendliche in kommunalpolitische Prozesse einbringen?</li>
+                    </ul>
+                </div>
+                
+                <div class="reflection-prompt">
+                    💡 <strong>Arbeitsweisen "Reflektieren" und "Handeln":</strong> Bewertung des Lernprozesses und Entwicklung von Handlungsoptionen für die Zukunft.
+                </div>
+            </div>
+        </div>
+
+        <!-- Kompetenzcheck -->
+        <div class="kompetenz-check">
+            <div class="kompetenz-item">
+                <h4>✅ Erkenntnisse gewinnen</h4>
+                <p>Analyse lokaler politischer Prozesse durch systematische Fallbearbeitung</p>
+            </div>
+            <div class="kompetenz-item">
+                <h4>⚖️ Beurteilen/Bewerten</h4>
+                <p>Interessenabwägung und Werteorientierung bei kommunalpolitischen Entscheidungen</p>
+            </div>
+            <div class="kompetenz-item">
+                <h4>🎯 Anwenden/Handeln</h4>
+                <p>Simulation demokratischer Teilhabe und Entwicklung von Handlungsoptionen</p>
+            </div>
+        </div>
+
+        <!-- Beutelsbacher Konsens -->
+        <div class="beutelsbacher-box">
+            <h3>🏛️ Beutelsbacher Konsens - Compliance Check</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                <div>
+                    <p><strong>✅ Überwältigungsverbot:</strong><br>
+                    Verschiedene Interessenlagen werden gleichberechtigt dargestellt. Die Lehrkraft nimmt keine vorgegebene Position ein.</p>
+                </div>
+                <div>
+                    <p><strong>✅ Kontroversität:</strong><br>
+                    Realer gesellschaftlicher Konflikt als Ausgangspunkt. Unterschiedliche Meinungen werden sichtbar gemacht.</p>
+                </div>
+                <div>
+                    <p><strong>✅ Schülerorientierung:</strong><br>
+                    Lokaler Lebensweltbezug zu Schweinfurt. Zukunftsrelevanz für die Schüler als Bürger.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>📝 Materialien für die Durchführung</h3>
+            <ul>
+                <li>📰 Zeitungsartikel zum Stadionausbau (Mainpost)</li>
+                <li>📊 Haushaltsplan der Stadt Schweinfurt (vereinfacht)</li>
+                <li>📋 Stellungnahmen der Interessengruppen</li>
+                <li>📜 Stadtratsprotokolle (Auszüge)</li>
+                <li>🔊 Lärmschutzverordnung (relevante Passagen)</li>
+                <li>🏗️ Planungsunterlagen zum Sportpark</li>
+            </ul>
+            
+            <h3>💻 Digitale Tools</h3>
+            <ul>
+                <li><strong>Padlet:</strong> Kollaborative Materialsammlung</li>
+                <li><strong>Mentimeter:</strong> Spontane Meinungsabfragen</li>
+                <li><strong>Google Maps:</strong> Stadtplan Schweinfurt interaktiv</li>
+                <li><strong>Kahoot:</strong> Abschlussquiz zu kommunalpolitischen Begriffen</li>
+            </ul>
+        </div>
+
+        <p><a href="index.html">← Zurück zum Arbeitsweisen-Training</a></p>
+    </div>
+
+    <script>
+        function togglePhase(phaseNum) {
+            const content = document.getElementById('phase' + phaseNum);
+            const arrow = document.getElementById('arrow' + phaseNum);
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                arrow.textContent = '▼';
+            } else {
+                content.classList.add('active');
+                arrow.textContent = '▲';
+            }
+        }
+        
+        // Erste Phase standardmäßig öffnen
+        document.addEventListener('DOMContentLoaded', function() {
+            togglePhase(0);
+        });
+    </script>
+</body>
+</html>
