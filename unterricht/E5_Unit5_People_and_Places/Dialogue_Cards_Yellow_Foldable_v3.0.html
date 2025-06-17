@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogue Cards YELLOW - Foldable</title>
+    <style>
+        @page { size: A4; margin: 0; }
+        @media print { 
+            body { margin: 0; }
+            .no-print { display: none; }
+            .card-container { page-break-after: always; }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .card-container {
+            width: 210mm;
+            height: 297mm;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .partner-section {
+            height: 50%;
+            padding: 20mm;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .partner-a {
+            border-bottom: 2px dashed #999;
+        }
+        
+        .partner-b {
+            transform: rotate(180deg);
+        }
+        
+        .header {
+            background-color: #FFC107;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        
+        .task-box {
+            background-color: #FFF8E1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #FFA000;
+            font-size: 18px;
+        }
+        
+        .task-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #FF6F00;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+        
+        .task-description {
+            font-weight: bold;
+            color: #E65100;
+            margin-bottom: 5px;
+        }
+        
+        .task-hint {
+            font-size: 16px;
+            color: #666;
+            margin-left: 40px;
+            font-style: italic;
+        }
+        
+        .structure-help {
+            background-color: #E3F2FD;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        
+        .structure-title {
+            font-weight: bold;
+            color: #1565C0;
+            margin-bottom: 10px;
+        }
+        
+        .example {
+            color: #0D47A1;
+            margin-left: 20px;
+        }
+        
+        .fold-line-text {
+            position: absolute;
+            top: 50%;
+            left: 10mm;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 12px;
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body>
+    <!-- Set 1 -->
+    <div class="card-container">
+        <div class="fold-line-text no-print">FOLD HERE ↓</div>
+        
+        <!-- Partner A - Top Half -->
+        <div class="partner-section partner-a">
+            <div class="header">PARTNER A - Level YELLOW (Standard)</div>
+            
+            <div class="task-box">
+                <span class="task-number">1</span>
+                <div class="task-description">Greeting + Ask for name</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">2</span>
+                <div class="task-description">Say your name + Ask about weekend</div>
+                <div class="task-hint">→ "How was...?"</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">3</span>
+                <div class="task-description">Ask about Saturday activities</div>
+                <div class="task-hint">→ "What did you...?"</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">4</span>
+                <div class="task-description">Ask about Sunday activities</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">5</span>
+                <div class="task-description">Give positive feedback + Say goodbye</div>
+                <div class="task-hint">→ React to what you heard!</div>
+            </div>
+        </div>
+        
+        <!-- Partner B - Bottom Half (Rotated 180°) -->
+        <div class="partner-section partner-b">
+            <div class="header">PARTNER B - Level YELLOW (Standard)</div>
+            
+            <div class="task-box">
+                <span class="task-number">1</span>
+                <div class="task-description">Answer with name + Return question</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">2</span>
+                <div class="task-description">Describe feeling + Give reason</div>
+                <div class="task-hint">→ "It was... because..."</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">3</span>
+                <div class="task-description">Name 2 Saturday activities + places</div>
+                <div class="task-hint">→ Use past tense!</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">4</span>
+                <div class="task-description">Name 2 Sunday activities + places</div>
+                <div class="task-hint">→ "I... and I..."</div>
+            </div>
+            
+            <div class="task-box">
+                <span class="task-number">5</span>
+                <div class="task-description">Thank + Say goodbye</div>
+            </div>
+            
+            <div class="structure-help">
+                <div class="structure-title">REMEMBER TO USE:</div>
+                <div class="example">✓ was/were for places</div>
+                <div class="example">✓ Past tense verbs: played, watched, visited...</div>
+                <div class="example">✓ Time markers: On Saturday, In the morning...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional sets would follow the same pattern -->
+</body>
+</html>

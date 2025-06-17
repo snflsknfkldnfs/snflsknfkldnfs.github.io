@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogue Cards GREEN - Foldable</title>
+    <style>
+        @page { size: A4; margin: 0; }
+        @media print { 
+            body { margin: 0; }
+            .no-print { display: none; }
+            .card-container { page-break-after: always; }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .card-container {
+            width: 210mm;
+            height: 297mm;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .partner-section {
+            height: 50%;
+            padding: 20mm;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .partner-a {
+            border-bottom: 2px dashed #999;
+        }
+        
+        .partner-b {
+            transform: rotate(180deg);
+        }
+        
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        
+        .dialogue-line {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #2196F3;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+        
+        .fill-blank {
+            display: inline-block;
+            border-bottom: 2px solid #333;
+            min-width: 150px;
+            margin: 0 5px;
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .options {
+            color: #4CAF50;
+            font-size: 14px;
+            margin-left: 45px;
+            font-style: italic;
+        }
+        
+        .help-box {
+            background-color: #FFF9C4;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 2px solid #F9A825;
+        }
+        
+        .help-title {
+            font-weight: bold;
+            color: #F57C00;
+            margin-bottom: 10px;
+        }
+        
+        .word-bank {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .word {
+            background-color: #E3F2FD;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .fold-line-text {
+            position: absolute;
+            top: 50%;
+            left: 10mm;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 12px;
+            writing-mode: vertical-rl;
+        }
+    </style>
+</head>
+<body>
+    <!-- Set 1 -->
+    <div class="card-container">
+        <div class="fold-line-text no-print">FOLD HERE ↓</div>
+        
+        <!-- Partner A - Top Half -->
+        <div class="partner-section partner-a">
+            <div class="header">PARTNER A - Level GREEN (Easy)</div>
+            
+            <div class="dialogue-line">
+                <span class="number">1</span>
+                Hello! What's your name?
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">2</span>
+                I'm <span class="fill-blank">________</span>. How was your weekend?
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">3</span>
+                What did you do on Saturday?
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">4</span>
+                And on Sunday?
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">5</span>
+                That sounds nice! / cool! / interesting!
+                <div class="options">→ Choose one</div>
+            </div>
+        </div>
+        
+        <!-- Partner B - Bottom Half (Rotated 180°) -->
+        <div class="partner-section partner-b">
+            <div class="header">PARTNER B - Level GREEN (Easy)</div>
+            
+            <div class="dialogue-line">
+                <span class="number">1</span>
+                I'm <span class="fill-blank">________</span>. And you?
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">2</span>
+                It was <span class="fill-blank">________</span>!
+                <div class="options">→ great / OK / boring</div>
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">3</span>
+                On Saturday I <span class="fill-blank">________</span>.
+                <div class="options">→ played / watched / visited + ...</div>
+                I was at <span class="fill-blank">________</span>.
+                <div class="options">→ home / the park / the cinema...</div>
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">4</span>
+                On Sunday I <span class="fill-blank">________</span>.
+                <div class="options">→ helped / listened to / finished + ...</div>
+                I was at <span class="fill-blank">________</span>.
+            </div>
+            
+            <div class="dialogue-line">
+                <span class="number">5</span>
+                Thank you! Bye!
+            </div>
+            
+            <div class="help-box">
+                <div class="help-title">WORD HELP:</div>
+                <div class="word-bank">
+                    <span class="word">played football</span>
+                    <span class="word">watched TV</span>
+                    <span class="word">visited grandma</span>
+                    <span class="word">at home</span>
+                    <span class="word">at the sports centre</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional sets would follow the same pattern -->
+    <!-- This creates 10 identical cards when printed -->
+</body>
+</html>

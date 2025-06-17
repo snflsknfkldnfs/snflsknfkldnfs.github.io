@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUV English 5b - My Weekend</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .timer-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0,0,0,0.4);
+            padding: 15px 25px;
+            border-radius: 10px;
+        }
+        
+        .timer {
+            font-size: 2.5em;
+            font-weight: bold;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .timer-controls {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .timer-btn {
+            background: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .timer-btn:hover {
+            background: #45a049;
+        }
+        
+        .timer-btn.pause {
+            background: #ff9800;
+        }
+        
+        .timer-btn.reset {
+            background: #f44336;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .left-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .phase-indicator {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .current-phase {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        
+        .phase-progress {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .phase-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .phase-dot.active {
+            background: #4CAF50;
+        }
+        
+        .phase-dot.completed {
+            background: #8BC34A;
+        }
+        
+        .task-card {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .task-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .task-icon {
+            font-size: 1.2em;
+        }
+        
+        .task-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .task-step {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .right-panel {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .language-focus {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .focus-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f44336;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .grammar-box {
+            background: #FFF9C4;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 2px solid #F9A825;
+        }
+        
+        .verb-pairs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .verb-pair {
+            background: #E3F2FD;
+            padding: 8px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .dialogue-preview {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .dialogue-line {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        
+        .speaker-a {
+            border-left: 4px solid #2196F3;
+        }
+        
+        .speaker-b {
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .timer-input {
+            display: none;
+            background: white;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .timer-input input {
+            width: 50px;
+            padding: 5px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        
+        .sound-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">🗣️ Speaking: My Weekend</div>
+        <div class="timer-container">
+            <div class="timer" id="timer">05:00</div>
+            <div class="timer-controls">
+                <button class="timer-btn" onclick="toggleTimer()">⏸️</button>
+                <button class="timer-btn reset" onclick="resetTimer()">🔄</button>
+                <button class="timer-btn" onclick="showTimerInput()">⏱️</button>
+            </div>
+            <div class="timer-input" id="timerInput">
+                <input type="number" id="minutesInput" value="5" min="0" max="59">:
+                <input type="number" id="secondsInput" value="0" min="0" max="59">
+                <button class="timer-btn" onclick="setCustomTime()">✓</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="left-panel">
+            <div class="phase-indicator">
+                <div class="current-phase" id="currentPhase">Phase 1: Teacher's Weekend</div>
+                <div class="phase-progress">
+                    <div class="phase-dot active"></div>
+                    <div class="phase-dot"></div>
+                    <div class="phase-dot"></div>
+                    <div class="phase-dot"></div>
+                    <div class="phase-dot"></div>
+                    <div class="phase-dot"></div>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-title">
+                    <span class="task-icon">📸</span>
+                    <span id="taskTitle">Show Your Weekend Photos</span>
+                </div>
+                <div class="task-content" id="taskContent">
+                    <div class="task-step">
+                        <strong>1.</strong> Show 3 photos from your weekend
+                    </div>
+                    <div class="task-step">
+                        <strong>2.</strong> Students ask: "Where were you?" / "What did you do?"
+                    </div>
+                    <div class="task-step">
+                        <strong>3.</strong> Answer with past tense: "I was at..." / "I played..."
+                    </div>
+                    <div class="task-step">
+                        <strong>Success:</strong> 4-5 student questions answered
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="language-focus">
+                <div class="focus-title">⚠️ LANGUAGE FOCUS</div>
+                <div class="grammar-box">
+                    <strong>Past Tense Forms:</strong>
+                    <div class="verb-pairs">
+                        <div class="verb-pair">play → played</div>
+                        <div class="verb-pair">watch → watched</div>
+                        <div class="verb-pair">visit → visited</div>
+                        <div class="verb-pair">help → helped</div>
+                        <div class="verb-pair">am/is → was</div>
+                        <div class="verb-pair">are → were</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dialogue-preview">
+                <div class="focus-title">Target Dialogue</div>
+                <div class="dialogue-line speaker-a">A: "How was your weekend?"</div>
+                <div class="dialogue-line speaker-b">B: "It was great!"</div>
+                <div class="dialogue-line speaker-a">A: "What did you do?"</div>
+                <div class="dialogue-line speaker-b">B: "I played football."</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sound-indicator" id="soundIndicator">🔔 Time's up!</div>
+    
+    <audio id="timerSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBTGH0fPTgjMGHm7A7+OZURE" type="audio/wav">
+    </audio>
+    
+    <script>
+        // Phase data
+        const phases = [
+            {
+                name: "Teacher's Weekend",
+                icon: "📸",
+                duration: 5,
+                taskTitle: "Show Your Weekend Photos",
+                tasks: [
+                    "Show 3 photos from your weekend",
+                    'Students ask: "Where were you?" / "What did you do?"',
+                    'Answer with past tense: "I was at..." / "I played..."',
+                    "Success: 4-5 student questions answered"
+                ]
+            },
+            {
+                name: "Verb Review",
+                icon: "✔️",
+                duration: 5,
+                taskTitle: "Quick Verb Check",
+                tasks: [
+                    "Show verb cards one by one",
+                    "Every 2nd student answers (10 students)",
+                    "Others listen and help if needed",
+                    "Keep verbs visible on board"
+                ]
+            },
+            {
+                name: "Dialogue Demo",
+                icon: "👥",
+                duration: 8,
+                taskTitle: "Model the Dialogue",
+                tasks: [
+                    "Choose a strong student as partner",
+                    "Demonstrate with foldable card",
+                    "Show: Read → Turn → Memory",
+                    "Students understand the method"
+                ]
+            },
+            {
+                name: "Partner Practice",
+                icon: "💬",
+                duration: 17,
+                taskTitle: "Controlled Dialogue Practice",
+                tasks: [
+                    "Round 1: A reads, B answers (5 min)",
+                    "Round 2: Switch roles (5 min)",
+                    "Round 3: Without reading (7 min)",
+                    "Teacher monitors all pairs"
+                ]
+            },
+            {
+                name: "Presentations",
+                icon: "🎭",
+                duration: 7,
+                taskTitle: "Show Your Dialogues",
+                tasks: [
+                    "Ask for 3-4 volunteer pairs",
+                    "Class counts past tense forms",
+                    "Applause after each pair",
+                    "Positive correction only"
+                ]
+            },
+            {
+                name: "Exit Tickets",
+                icon: "✍️",
+                duration: 5,
+                taskTitle: "Write Your Weekend",
+                tasks: [
+                    "Complete 4 sentences on ticket",
+                    "Use past tense correctly",
+                    "Hand in when finished",
+                    "Pack up quietly"
+                ]
+            }
+        ];
+        
+        let currentPhase = 0;
+        let timeLeft = phases[0].duration * 60;
+        let timerInterval;
+        let isPaused = false;
+        
+        function updateDisplay() {
+            // Update phase indicator
+            document.getElementById('currentPhase').textContent = 
+                `Phase ${currentPhase + 1}: ${phases[currentPhase].name}`;
+            
+            // Update phase dots
+            document.querySelectorAll('.phase-dot').forEach((dot, index) => {
+                dot.classList.remove('active', 'completed');
+                if (index < currentPhase) {
+                    dot.classList.add('completed');
+                } else if (index === currentPhase) {
+                    dot.classList.add('active');
+                }
+            });
+            
+            // Update task card
+            document.getElementById('taskTitle').textContent = phases[currentPhase].taskTitle;
+            const taskContent = document.getElementById('taskContent');
+            taskContent.innerHTML = phases[currentPhase].tasks.map((task, index) => `
+                <div class="task-step">
+                    <strong>${index + 1}.</strong> ${task}
+                </div>
+            `).join('');
+        }
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft <= 0 && !isPaused) {
+                playSound();
+                nextPhase();
+            } else if (!isPaused) {
+                timeLeft--;
+            }
+        }
+        
+        function toggleTimer() {
+            isPaused = !isPaused;
+            event.target.textContent = isPaused ? '▶️' : '⏸️';
+        }
+        
+        function resetTimer() {
+            timeLeft = phases[currentPhase].duration * 60;
+            updateTimer();
+        }
+        
+        function showTimerInput() {
+            const input = document.getElementById('timerInput');
+            input.style.display = input.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        function setCustomTime() {
+            const minutes = parseInt(document.getElementById('minutesInput').value) || 0;
+            const seconds = parseInt(document.getElementById('secondsInput').value) || 0;
+            timeLeft = minutes * 60 + seconds;
+            updateTimer();
+            document.getElementById('timerInput').style.display = 'none';
+        }
+        
+        function playSound() {
+            document.getElementById('timerSound').play();
+            const indicator = document.getElementById('soundIndicator');
+            indicator.style.display = 'block';
+            setTimeout(() => {
+                indicator.style.display = 'none';
+            }, 3000);
+        }
+        
+        function nextPhase() {
+            if (currentPhase < phases.length - 1) {
+                currentPhase++;
+                timeLeft = phases[currentPhase].duration * 60;
+                updateDisplay();
+            }
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextPhase();
+            if (e.key === 'ArrowLeft' && currentPhase > 0) {
+                currentPhase--;
+                timeLeft = phases[currentPhase].duration * 60;
+                updateDisplay();
+            }
+            if (e.key === ' ') {
+                e.preventDefault();
+                toggleTimer();
+            }
+        });
+        
+        // Initialize
+        updateDisplay();
+        timerInterval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
