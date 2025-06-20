@@ -1,0 +1,51 @@
+Unterrichtsentwurf
+
+# Ist Fliegen Nachhaltig?
+
+#### Unterrichtsvorbereitung
+
+- Klasse: 6
+- Fach: Geographie
+- Datum: [Datum einfügen]
+- Uhrzeit: 07:45 - 08:30 Uhr
+
+### Lehrplanverankerung
+
+"stellen exemplarisch einzelne unterschiedliche Tourismusregionen in Europa unter ökologischen, ökonomischen und sozialen Gesichtspunkten einander gegenüber." Inhalte: Tourismus (z. B. Mittelmeerraum, Alpen) (Lehrplan+:)
+
+### Stundenziel: 
+
+Die Schülerinnen und Schüler beurteilen die Nachhaltigkeit verschiedener Reisemöglichkeiten, insbesondere des Flugverkehrs, und erkennen die Auswirkungen des Tourismus auf die Umwelt und zukünftige Generationen.
+
+### Teilziele:
+
+1. Die Schülerinnen und Schüler wiederholen die Definition von Nachhaltigkeit, indem sie im Unterrichtsgespräch die Bedeutung erklären und auf das Problem des Klimawandels anwenden. 
+2. Die Schülerinnen und Schüler **analysieren** ein Diagramm zum CO2-Verbrauch verschiedener Verkehrsmittel, indem sie in Partnerarbeit die Informationen des Diagramms auswerten und vergleichen.
+3. Die Schülerinnen und Schüler **bewerten** die Nachhaltigkeit des Fliegens im Urlaub, indem sie in Partnerarbeit die Vor- und Nachteile des Flugverkehrs im Hinblick auf die Definition von Nachhaltigkeit diskutieren und eigene Handlungsalternativen entwickeln.
+
+##### Medien
+
+1. Diagramm zum CO2-Verbrauch verschiedener Verkehrsmittel (z.B. aus dem CO2-Rechner von Quarks)
+2. Tafel
+3. Arbeitsblatt (optional)
+
+| Zeit        | Artikulation                                           | Unterrichtsform/Medien                          | Inhaltlicher Handlungsablauf                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------- | ------------------------------------------------------ | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 07:45-07:50 | 1. **Hinführung**                                      | Impuls/Bild (Schaubild: Nachhaltiger Tourismus) | Wiederholung letzte Stunde: Was ist Nachhaltiger Tourismus. Lehrkraft zeigt Schaubild (Hausaufgabe)<br>S: "Man kann zum Beispiel Rücksicht auf die Umwelt nehmen, wenn man wandern geht"<br>S: "Man kann auch nachhaltige Lebensmittel essen, die zum Beispiel in der Gegend angebaut werden"<br>L weißt auf die Abbildung einer Bushaltestelle hin: "Warum ist denn hier eine Bushaltestelle abgebildet?" |
+| 07:50-07:52 | 2.1: Situationskonfrontation:<br>**Ausgangssituation** | S lesen Text von PPT laut vor                   | lesen eine kurze Geschichte von einer Familie vor, die überlegt, in den Urlaub zu fliegen. Die Kinder sind begeistert, aber die Eltern machen sich Sorgen um die Umweltbelastung.                                                                                                                                                                                                                          |
+| 07:52-07:53 | 2.2 Situationskonfrontation: <br>**Problematisierung** | UG                                              | L: "Was ist das Problem in dieser Situation?"<br>S: "Die Familie möchte in den Urlaub fliegen"<br>S: "Die Mutter meint, dass es schlecht für die Umwelt ist, mit dem Flugzeug zu fliegen"<br>S: "Der Vater meint, dass ein Flug gar nicht so schlimm ist"                                                                                                                                                  |
+| 07:53-07:54 | 2.3 Situationskonfrontation: <br>**Zielformulierung**  | UG/Tafel                                        | L: Mit welcher Frage könnten wir uns denn dann heute beschäftigen?<br>S: "Ob Fliegen schlecht für die Umwelt ist?"<br>S: "**Ist Fliegen Nachhaltig**?"                                                                                                                                                                                                                                                     |
+| 07:54-07:55 | 3.1 Situationsanalyse: <br>**Vermutungen**             | UG/Seitentafel                                  | L: Was sind denn eure Vermutungen?<br>S: "Fliegen ist glaube ich gar nicht so schlimm, da sitzen doch voll viele Leute drin"<br>S: "Ich glaube das Fliegen voll schlecht für die Umwelt ist, weil die Motoren ganz viel CO2 Ausstoßen"                                                                                                                                                                     |
+| 07:55-07:56 | 3.2 Situationsanalyse: <br>**Zielklärung**             | UG/PPT                                          | L: "Damit alles klar ist, was wir für das Ziel wissen müssen: Was bedeutet denn nochmal Nachhaltigkeit?"<br>S: "Das man nicht auf Kosten anderer Menschen oder Generationen lebt"<br>S: "Das man Rücksicht nimmt auf andere Menschen, auch in der Zukunft"                                                                                                                                                 |
+| 07:56-07:57 | 3.3 Situationsanalyse: <br>**Organisationsplanung**    | UG                                              | L: Um die Antwort auf unsere Frage zu finden, habe ich ein kurzes Video und ein Diagramm auf einem Arbeitsblatt, dass ihr in Partnerarbeit bearbeitet.                                                                                                                                                                                                                                                     |
+| 07:57-08:15 | 3.4 Situationsanalyse:<br>**Bearbeitung**              | PA/AB/Diagramm/Video                            | S bearbeiten das Arbeitsblatt in Partnerarbeit.<br>Zu Beginn wird das Video gezeigt.                                                                                                                                                                                                                                                                                                                       |
+| 08:15-08:20 | 3.5 Situationsanalyse: <br>**Ergebnispräsentation**    | UG                                              | L: Was habt ihr gelernt?<br>S: "Flugzeuge stoßen ganz schön viel CO2 aus"<br>S: "Durch das CO2 gibt es mehr Klimawandel und das ist nicht nachhaltig, weil das ganz schlecht für die Umwelt ist."<br>L hält die Ergebnisse an der Tafel fest                                                                                                                                                               |
+| 08:20-08:21 | 4.1 Situationsbeurteilung:<br>**Erkenntnisbildung**    | UG                                              | L: "Schaut nochmal auf die Stundenfrage und eure Vermutungen: Wie könnt ihr die Frage jetzt beantworten?"<br>S: "Fliegen ist nicht nachhaltig, weil das CO2 schlecht für die Umwelt ist"<br>S: "Man sollte lieber anders in den Urlaub fahren"<br>L schreibt einen abschließenden Satz an die Tafel.                                                                                                       |
+| 08:21-08.22 | 4.2 Situationsbeurteilung:<br>**Integration/Transfer** | UG                                              | L: "Wie sieht das denn mit den anderen Verkehrsmitteln aus, die ihr kennengelernt habt?"<br>S: "Manche verbrauchen nur ganz wenig CO2"<br>S: "Mit dem Fahrrad zum Beispiel braucht man aber sehr lange um weite Strecken zu fahren"<br>S: "Ein guter Mittelweg ist der ICE: Er ist schnell und verbraucht nur wenig CO2"                                                                                   |
+| 08:22-08:23 | 4.3 Situationsbeurteilung:<br>**Wertung**              | Murmelphase                                     | L: "Was glaubt ihr, warum fliegen dann Menschen trotzdem in den Urlaub?"                                                                                                                                                                                                                                                                                                                                   |
+| 08:23-08:25 | 5.1 Sicherung: <br>**Zusammenfassung**                 | UG                                              | L: "Was haben wir heute denn gelernt?"<br>S: "Das Fliegen schlecht für die Umwelt ist und deshalb auch nicht Nachhaltig"<br>S: "Das es andere Fahrzeuge gibt, die nachhaltiger sind"                                                                                                                                                                                                                       |
+| 08:25-08:30 | 5.2 Sicherung: <br>**Schriftliche Sicherung**          | EA/Tafel                                        | Die S schreiben den Hefteintrag von der Tafel ab                                                                                                                                                                                                                                                                                                                                                           |
+|             | 5.3 Sicherung: <br>**Hausaufgabe**                     | EA                                              | Suche ein Urlaubsziel heraus, das man gut mit dem Zug erreichen kann.                                                                                                                                                                                                                                                                                                                                      |
+
+
+
