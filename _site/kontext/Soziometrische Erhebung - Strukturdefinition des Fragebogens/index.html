@@ -1,0 +1,121 @@
+<h1>Soziometrische Erhebung - Strukturdefinition des Fragebogens</h1>
+<h2>Metadaten</h2>
+<ul>
+<li>survey_id: &quot;soziometrie_[klassenname]_[datum]&quot;</li>
+<li>response_type: &quot;matrix_multiple&quot;</li>
+<li>scale_type: &quot;nominal&quot; &amp; &quot;ordinal&quot;</li>
+</ul>
+<h2>Einleitung</h2>
+<p>[Standardtext wie im vorherigen Fragebogen]</p>
+<h2>Dimensionen und Operationalisierung</h2>
+<h3>1. Sympathie-Dimension</h3>
+<h4>1.1 Direkte Arbeitsbeziehungen [SYM_ARB]</h4>
+<p>&quot;Mit wem arbeitest du im Unterricht gerne zusammen?&quot;</p>
+<ul>
+<li>Typ: Multiple Choice (3 Wahlen)</li>
+<li>Ranking: 1-3 (Priorität)</li>
+<li>Variable: sym_arb_[1-3]</li>
+<li>Zusatzskala: Intensität der Präferenz (1-5)</li>
+</ul>
+<h4>1.2 Soziale Beziehungen [SYM_SOZ]</h4>
+<p>&quot;Mit wem verbringst du in den Pausen gerne Zeit?&quot;</p>
+<ul>
+<li>Typ: Multiple Choice (3 Wahlen)</li>
+<li>Ranking: 1-3 (Priorität)</li>
+<li>Variable: sym_soz_[1-3]</li>
+<li>Zusatzskala: Häufigkeit (1-5)</li>
+</ul>
+<h3>2. Experten-Dimension</h3>
+<h4>2.1 Fachliche Unterstützung [EXP_FACH]</h4>
+<p>&quot;Wen würdest du bei Fachfragen um Hilfe bitten?&quot;</p>
+<ul>
+<li>Typ: Matrix-Frage</li>
+<li>Fächer: Deutsch, Mathe, Englisch</li>
+<li>Ranking: 1-3 pro Fach</li>
+<li>Variable: exp_fach_[fach]_[1-3]</li>
+</ul>
+<h4>2.2 Organisatorische Kompetenz [EXP_ORG]</h4>
+<p>&quot;Wer kann gut...&quot;</p>
+<ul>
+<li>Typ: Matrix-Frage</li>
+<li>Items:
+<ul>
+<li>&quot;...eine Gruppenarbeit organisieren?&quot;</li>
+<li>&quot;...schwierige Aufgaben erklären?&quot;</li>
+<li>&quot;...bei Konflikten vermitteln?&quot;</li>
+</ul>
+</li>
+<li>Ranking: 1-3 pro Item</li>
+<li>Variable: exp_org_[item]_[1-3]</li>
+</ul>
+<h3>3. Arbeitsverhalten-Dimension [ARB_STIL]</h3>
+<p>&quot;Wie arbeitest du am liebsten?&quot;</p>
+<ul>
+<li>Typ: Likert-Skala (1-5)</li>
+<li>Items:
+<ul>
+<li>&quot;Ich arbeite gerne in der Gruppe&quot;</li>
+<li>&quot;Ich erkläre anderen gerne etwas&quot;</li>
+<li>&quot;Ich lerne am besten alleine&quot;</li>
+<li>&quot;Ich helfe anderen gerne&quot;</li>
+</ul>
+</li>
+<li>Variable: arb_stil_[item]</li>
+</ul>
+<h2>Technische Spezifikationen für LimeSurvey</h2>
+<h3>Fragengruppen</h3>
+<ol>
+<li>Einleitung und Demographie</li>
+<li>Sympathie-Matrix</li>
+<li>Experten-Matrix</li>
+<li>Arbeitsstil-Skalen</li>
+</ol>
+<h3>Antwortcodierung</h3>
+<ul>
+<li>Nominale Wahlen: [schüler_id]</li>
+<li>Ordinale Skalen: 1-5</li>
+<li>Rankings: 1-3</li>
+<li>Fehlende Werte: -99</li>
+</ul>
+<h3>Exportformat</h3>
+<ul>
+<li>CSV mit Semikolon-Trennung</li>
+<li>UTF-8 Kodierung</li>
+<li>Vollständige Variablenlabels</li>
+<li>Zeitstempel</li>
+</ul>
+<h3>Datenvalidierung</h3>
+<ul>
+<li>Pflichtfelder: Mindestens eine Wahl pro Dimension</li>
+<li>Plausibilitätschecks: Keine Selbstwahl</li>
+<li>Konsistenzprüfung: Unterschiedliche Namen pro Ranking</li>
+</ul>
+<h2>Visualisierungsanforderungen</h2>
+<h3>Netzwerkanalyse</h3>
+<ul>
+<li>Gerichtete Kanten für Wahlen</li>
+<li>Gewichtung durch Ranking</li>
+<li>Farbcodierung nach Dimensionen</li>
+<li>Filter nach Beziehungstypen</li>
+</ul>
+<h3>Metriken</h3>
+<ul>
+<li>Zentralitätsmaße</li>
+<li>Reziprozität von Wahlen</li>
+<li>Cluster-Koeffizienten</li>
+<li>Dichte des Netzwerks</li>
+</ul>
+<h3>Interaktive Features</h3>
+<ul>
+<li>Dimensionsfilter</li>
+<li>Teilgruppen-Analyse</li>
+<li>Zeitliche Entwicklung</li>
+<li>Individuelle Profile</li>
+</ul>
+<h2>Datenschutz</h2>
+<ul>
+<li>Pseudonymisierung durch ID-Mapping</li>
+<li>Verschlüsselte Speicherung</li>
+<li>Zugriffsprotokollierung</li>
+<li>Löschkonzept</li>
+</ul>

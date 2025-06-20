@@ -39,12 +39,10 @@ description: "Standard-Template für WiB-Sequenzplanungen"
 ## Bezug zum Kompetenzstrukturmodell
 
 ### Gegenstandsbereiche
-{{#each competencyAreas}}
-- {{ item }}
-{{/each}}
+- Competency Areas will be listed here
 
 ### Prozessbezogene Kompetenzen
-{{#each processCompetencies}}
+{{#each seq_wib_standard_processCompetencies}}
 - {{ item }}
 {{/each}}
 

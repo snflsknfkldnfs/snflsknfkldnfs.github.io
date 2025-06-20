@@ -1,0 +1,97 @@
+<h1>Dokumentation: Automatisierte TUV-Übersicht</h1>
+<p>Diese Dokumentation beschreibt das System zur automatischen Generierung einer Übersicht aller Unterrichtsvorbereitungen (TUVs) im Repository.</p>
+<h2>Überblick</h2>
+<p>Das System besteht aus zwei Hauptkomponenten:</p>
+<ol>
+<li>
+<p><strong>TUV-Übersicht Generator</strong> (<code>generate_tuv_overview.js</code>): Ein Node.js-Script, das alle TUV-Dateien im Repository findet, Metadaten extrahiert und eine strukturierte Markdown-Übersicht generiert.</p>
+</li>
+<li>
+<p><strong>Workflow-Integration</strong> (<code>update-tuv-workflow.sh</code>): Ein Bash-Script zur Integration des Generators in den bestehenden Workflow, inklusive optionalem Git Pre-Commit Hook.</p>
+</li>
+</ol>
+<h2>Funktionsweise</h2>
+<h3>TUV-Erkennung</h3>
+<p>Der Generator sucht TUV-Dateien anhand folgender Kriterien:</p>
+<ul>
+<li><strong>Pfade</strong>: Alle <code>.md</code>-Dateien in den Verzeichnissen <code>/notizen/gpg</code>, <code>/notizen/wib</code> und <code>/unterricht</code></li>
+<li><strong>Dateinamen</strong>: Dateien, die bestimmte Muster im Namen enthalten (<code>_UE_</code>, <code>_TB_</code>, <code>_TUV_</code>)</li>
+</ul>
+<h3>Metadaten-Extraktion</h3>
+<p>Für jede TUV-Datei werden Metadaten aus verschiedenen Quellen extrahiert:</p>
+<ol>
+<li><strong>Frontmatter</strong>: YAML-Metadaten am Anfang der Datei (höchste Priorität)</li>
+<li><strong>Dateiname</strong>: Informationen aus dem Dateinamen (z.B. Jahrgangsstufe, Thema)</li>
+<li><strong>Pfadstruktur</strong>: Informationen aus dem Dateipfad (z.B. Fach)</li>
+<li><strong>Dateiinhalt</strong>: Titel aus der ersten Überschrift</li>
+</ol>
+<p>Extrahierte Metadaten umfassen:</p>
+<ul>
+<li>Titel</li>
+<li>Fach (GPG, WiB, etc.)</li>
+<li>Jahrgangsstufe</li>
+<li>Thema</li>
+<li>Materialtyp (Unterrichtseinheit, Tafelbild, etc.)</li>
+<li>Letztes Änderungsdatum</li>
+</ul>
+<h3>Übersichtsstruktur</h3>
+<p>Die generierte Übersicht (<code>notizen/index/TUV_Uebersicht.md</code>) enthält:</p>
+<ol>
+<li><strong>Filterbereich</strong>: Links zu Listen nach Fach, Jahrgangsstufe und Materialtyp</li>
+<li><strong>Statistikbereich</strong>: Anzahl der Materialien nach Fach</li>
+<li><strong>Fachspezifische Übersichten</strong>: Strukturiert nach Jahrgangsstufen mit Tabellen</li>
+<li><strong>Aktualisierungsbereich</strong>: Die zuletzt bearbeiteten TUVs</li>
+</ol>
+<h2>Metadaten-Schema</h2>
+<p>Für optimale Ergebnisse sollten TUV-Dateien ein konsistentes Frontmatter enthalten:</p>
+<pre><code class="language-yaml">---
+title: &quot;Titel der Unterrichtseinheit&quot;
+subject: &quot;GPG&quot;  # oder &quot;WiB&quot;
+grade: &quot;5&quot;      # Jahrgangsstufe
+topic: &quot;Europa&quot; # Themenbereich
+type: &quot;Unterrichtseinheit&quot; # oder &quot;Tafelbild&quot;, &quot;Arbeitsblatt&quot;, etc.
+---
+</code></pre>
+<p>Frontmatter-Angaben haben immer Vorrang vor automatisch extrahierten Informationen.</p>
+<h2>Integration in den Workflow</h2>
+<h3>Automatische Aktualisierung</h3>
+<p>Die TUV-Übersicht kann auf drei Arten aktualisiert werden:</p>
+<ol>
+<li><strong>Als Teil von <code>update_all.sh</code></strong>: Die Übersicht wird bei jedem Aufruf von <code>update_all.sh</code> aktualisiert.</li>
+<li><strong>Manuell</strong>: Durch Aufruf von <code>./scripts/generate_tuv_overview.sh</code>.</li>
+<li><strong>Git Pre-Commit Hook</strong>: Automatische Aktualisierung vor jedem Commit, wenn TUV-Dateien geändert wurden.</li>
+</ol>
+<h3>Vorteile der Integration</h3>
+<ul>
+<li><strong>Konsistente Dokumentation</strong>: Die Übersicht bleibt immer aktuell.</li>
+<li><strong>Effizienter Workflow</strong>: Keine manuelle Pflege der Übersicht notwendig.</li>
+<li><strong>Verbesserte Navigation</strong>: Schneller Zugriff auf alle TUVs, kategorisiert und durchsuchbar.</li>
+</ul>
+<h2>Anpassung und Erweiterung</h2>
+<p>Der Generator kann leicht angepasst werden:</p>
+<ul>
+<li><strong>Suchpfade</strong>: Weitere Verzeichnisse in <code>config.searchPaths</code> hinzufügen.</li>
+<li><strong>TUV-Muster</strong>: Muster für TUV-Dateien in <code>config.tuvPatterns</code> anpassen.</li>
+<li><strong>Ausgabeformat</strong>: Die <code>generateOverview</code>-Funktion für andere Ausgabeformate anpassen.</li>
+</ul>
+<h2>Fehlerbehebung</h2>
+<p>Falls Probleme auftreten:</p>
+<ol>
+<li><strong>Fehlende Metadaten</strong>: Füge passende Frontmatter zu den TUV-Dateien hinzu.</li>
+<li><strong>Nicht erkannte TUVs</strong>: Überprüfe die Dateinamen und Pfade gemäß der Konfiguration.</li>
+<li><strong>Fehler bei der Generierung</strong>: Prüfe, ob Node.js installiert ist und das Paket <code>gray-matter</code> verfügbar ist.</li>
+</ol>
+<h2>Empfohlene Namenskonventionen</h2>
+<p>Für optimale automatische Erkennung empfehlen wir folgende Namenskonventionen:</p>
+<ul>
+<li><strong>Unterrichtseinheiten</strong>: <code>XX_UE_Thema.md</code> (XX = Nummer der UE in der Sequenz)</li>
+<li><strong>Tafelbilder</strong>: <code>XX_TB_Thema.md</code></li>
+<li><strong>Arbeitsblätter</strong>: <code>XX_AB_Thema.md</code></li>
+</ul>
+<p>Beispiel: <code>03_UE_Klimazonen-in-Europa.md</code></p>
+<h2>Nächste Schritte zur Verbesserung</h2>
+<ol>
+<li><strong>Lehrplanbezug</strong>: Erweiterung um direkte Verknüpfung mit LehrplanPLUS-Kompetenzerwartungen.</li>
+<li><strong>Materialzusammenhänge</strong>: Visualisierung von Beziehungen zwischen TUVs innerhalb einer Sequenz.</li>
+<li><strong>Metadaten-Validierung</strong>: Prüfung und Vorschläge zur Vervollständigung fehlender Metadaten.</li>
+</ol>

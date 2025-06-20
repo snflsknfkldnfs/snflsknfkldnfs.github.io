@@ -1,0 +1,189 @@
+<h1>E-Dokumentationsprozess: Systematische Metastruktur für Englischdidaktik</h1>
+<hr>
+<p>typ: konzept
+fach: E
+jahrgangsstufen: alle
+kompetenzbereiche:</p>
+<ul>
+<li>Hörverstehen</li>
+<li>Leseverstehen</li>
+<li>Sprechen</li>
+<li>Schreiben</li>
+<li>Sprachliche Mittel</li>
+<li>Interkulturelle Kompetenzen</li>
+<li>Text- und Medienkompetenzen</li>
+<li>Methodische Kompetenzen
+verknüpfte_dokumente:</li>
+<li>E_Implementierungsplan.md</li>
+<li>E_Kompetenzstrukturmodell_Analyse.md
+bearbeitungsstand: In Bearbeitung
+letzte_aktualisierung: &quot;2025-06-02&quot;
+autor: &quot;LAA Paul Cebulla&quot;
+version: &quot;1.0.0&quot;</li>
+</ul>
+<hr>
+<h2>1. Grundlagen und Zielsetzung</h2>
+<h3>1.1 Systemische Einordnung</h3>
+<p>Der E-Dokumentationsprozess bildet das methodische Rahmenwerk für die systematische Erstellung, Kategorisierung und Verknüpfung aller Inhalte im Fachbereich Englisch. Er stellt die strukturelle Konsistenz, inhaltliche Kohärenz und funktionale Vernetzung aller Dokumente sicher und ermöglicht dadurch einen systematischen Zugriff auf die englischdidaktische Wissensbasis.</p>
+<p><strong>Adaptation der WiB-Metastruktur:</strong>
+Diese Struktur adaptiert bewährte Elemente aus der WiB-Dokumentation für die spezifischen Anforderungen des Englischunterrichts, insbesondere die Integration der vier Fertigkeiten, die Schulbuch-Orientierung und die Berücksichtigung interkultureller Kompetenzen.</p>
+<h3>1.2 Kernprinzipien Englischdidaktik</h3>
+<ul>
+<li><strong>Kompetenzorientierung</strong>: Systematische Ausrichtung an den vier Fertigkeiten und sprachlichen Mitteln</li>
+<li><strong>Kommunikative Ausrichtung</strong>: Fokus auf authentische Kommunikationssituationen</li>
+<li><strong>Interkulturelle Sensibilität</strong>: Berücksichtigung der interkulturellen Dimension</li>
+<li><strong>Schulbuch-Integration</strong>: Enge Verzahnung mit dem Lehrwerk Blue Line 1</li>
+<li><strong>Differenzierung</strong>: Anpassung an heterogene Lerngruppen (DaZ, LRS, verschiedene Leistungsniveaus)</li>
+<li><strong>Handlungsorientierung</strong>: Aufgaben- und projektorientiertes Lernen</li>
+<li><strong>Authentizität</strong>: Verwendung authentischer Materialien und Situationen</li>
+<li><strong>Progressivität</strong>: Systematischer Kompetenzaufbau über die Jahrgangsstufen</li>
+</ul>
+<h2>2. Dokumententypologie für Englischdidaktik</h2>
+<h3>2.1 Primäre Dokumenttypen</h3>
+<ul>
+<li><strong>Konzeptdokumente</strong>: Definieren didaktische und methodische Grundlagen (Metaebene)</li>
+<li><strong>Inhaltsdokumente</strong>: Enthalten fachliche Inhalte gemäß LehrplanPLUS Englisch</li>
+<li><strong>Prozessdokumente</strong>: Beschreiben methodische Vorgehensweisen und Unterrichtsabläufe</li>
+<li><strong>Anwendungsdokumente</strong>: Konkretisieren die praktische Implementierung (Sequenzen, UE)</li>
+<li><strong>Indexdokumente</strong>: Bieten Navigation und Systematisierung der Dokumentenlandschaft</li>
+<li><strong>Materialdokumente</strong>: Enthalten konkrete Unterrichtsmaterialien und Templates</li>
+</ul>
+<h3>2.2 Metadatenschema für Englisch</h3>
+<p>Jedes Dokument beginnt mit einem standardisierten Metadatenblock:</p>
+<pre><code class="language-yaml">---
+typ: [konzept|inhalt|prozess|anwendung|index|material]
+fach: E
+jahrgangsstufen: [5|6|7|8|9|10] # kann mehrere oder &quot;alle&quot; enthalten
+kompetenzbereiche:
+  - [Hörverstehen|Leseverstehen|Sprechen|Schreiben]
+sprachliche_mittel:
+  - [Wortschatz|Grammatik|Aussprache|Intonation]
+weitere_kompetenzen:
+  - [Interkulturelle_Kompetenzen|Text_Medienkompetenzen|Methodische_Kompetenzen]
+schulbuch_bezug:
+  - [Blue_Line_1|Unit_1|Unit_2|Unit_3|Unit_4|Unit_5]
+differenzierung:
+  - [DaZ|LRS|Leistungsniveaus|Lerntypen]
+verknüpfte_dokumente:
+  - relativer/pfad/zu/dokument.md
+bearbeitungsstand: [Entwurf|In Bearbeitung|Abgeschlossen|Archiviert]
+letzte_aktualisierung: &quot;YYYY-MM-DD&quot;
+autor: &quot;Name&quot;
+version: &quot;X.Y.Z&quot; # Major.Minor.Patch
+---
+</code></pre>
+<h2>3. Englisch-spezifische Kategorisierung</h2>
+<h3>3.1 Kompetenzbereiche (nach LehrplanPLUS)</h3>
+<ol>
+<li>
+<p><strong>Kommunikative Fertigkeiten</strong></p>
+<ul>
+<li>Hör-/Hörsehverstehen</li>
+<li>Leseverstehen</li>
+<li>Sprechen</li>
+<li>Schreiben</li>
+<li>Sprachmittlung</li>
+</ul>
+</li>
+<li>
+<p><strong>Sprachliche Mittel</strong></p>
+<ul>
+<li>Wortschatz</li>
+<li>Grammatik</li>
+<li>Aussprache und Intonation</li>
+</ul>
+</li>
+<li>
+<p><strong>Interkulturelle Kompetenzen</strong></p>
+<ul>
+<li>Kulturelles Wissen</li>
+<li>Kulturelle Sensibilität</li>
+<li>Interkulturelle Kommunikation</li>
+</ul>
+</li>
+<li>
+<p><strong>Text- und Medienkompetenzen</strong></p>
+<ul>
+<li>Texterschließung</li>
+<li>Textproduktion</li>
+<li>Medienkompetenz</li>
+</ul>
+</li>
+<li>
+<p><strong>Methodische Kompetenzen</strong></p>
+<ul>
+<li>Lernstrategien</li>
+<li>Arbeitstechniken</li>
+<li>Selbststeuerung</li>
+</ul>
+</li>
+</ol>
+<h3>3.2 Schulbuch-Integration</h3>
+<ul>
+<li><strong>Blue Line 1 Struktur</strong>: Units 1-6 mit spezifischen Themen und Grammatikprogression</li>
+<li><strong>Systematische Materialergänzung</strong>: Differenzierte Arbeitsblätter, Spiele, Projekte</li>
+<li><strong>Audio-/Videomaterialien</strong>: Integration authentischer Medien</li>
+<li><strong>Digitale Ergänzungen</strong>: Klett Augmented, Online-Ressourcen</li>
+</ul>
+<h2>4. Implementierungsschritte für Englisch-Metastruktur</h2>
+<h3>4.1 Phase I: Grundstruktur etablieren (Juni 2025)</h3>
+<ol>
+<li>
+<p><strong>Verzeichnisstruktur vervollständigen</strong></p>
+<ul>
+<li>Überprüfung und Ergänzung der vorhandenen Ordner</li>
+<li>Erstellung fehlender Unterverzeichnisse</li>
+<li>Integration mit bestehender Materialsammlung</li>
+</ul>
+</li>
+<li>
+<p><strong>Template-System entwickeln</strong></p>
+<ul>
+<li>Sequenzplanungsvorlage für Englisch</li>
+<li>Unterrichtseinheit-Template</li>
+<li>Material-Dokumentationsvorlage</li>
+<li>Evaluationsbogen-Templates</li>
+</ul>
+</li>
+</ol>
+<h3>4.2 Phase II: Schulbuch-Integration (Juli 2025)</h3>
+<ol>
+<li>
+<p><strong>Blue Line 1 systematisch erfassen</strong></p>
+<ul>
+<li>Unit-für-Unit Dokumentation</li>
+<li>Grammatikprogression mapping</li>
+<li>Wortschatz-Systematik</li>
+<li>Audio-/Videomaterial-Integration</li>
+</ul>
+</li>
+<li>
+<p><strong>Materialergänzungen entwickeln</strong></p>
+<ul>
+<li>Differenzierte Arbeitsblätter</li>
+<li>Spielesammlung für Vokabelarbeit</li>
+<li>Projekte und erweiterte Aufgaben</li>
+<li>Evaluationsinstrumente</li>
+</ul>
+</li>
+</ol>
+<h3>4.3 Phase III: Klassenspezifische Anpassung (August 2025)</h3>
+<ol>
+<li><strong>Klasse 5b Dokumentation</strong>
+<ul>
+<li>Klassenprofil und Lernvoraussetzungen</li>
+<li>Spezifische Differenzierungsansätze</li>
+<li>DaZ- und LRS-Berücksichtigung</li>
+<li>Organisatorische Besonderheiten</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Systemtheoretische Metadaten:</strong></p>
+<ul>
+<li><strong>Erstellt:</strong> 02.06.2025</li>
+<li><strong>Basis:</strong> WiB-Dokumentationsprozess (adaptiert für Englischdidaktik)</li>
+<li><strong>Autor:</strong> LAA Paul Cebulla</li>
+<li><strong>Systemversion:</strong> 1.0 (Englisch-Metastruktur)</li>
+<li><strong>Integration:</strong> DiSoAn-Standards, WiB-Erfahrungen, Englischdidaktik</li>
+</ul>

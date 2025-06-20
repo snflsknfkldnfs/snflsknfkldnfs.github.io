@@ -28,5 +28,9 @@ module.exports = {
         }
       ]
     }
-  ]
+  ],
+  competencyAreas: ["Kompetenzbereich 1", "Kompetenzbereich 2"],
+  processCompetencies: ["Prozesskompetenz 1", "Prozesskompetenz 2"],
+  seq_wib_standard_competencyAreas: ["Kompetenzbereich A", "Kompetenzbereich B"],
+  seq_wib_standard_processCompetencies: ["Prozesskompetenz X", "Prozesskompetenz Y"]
 };

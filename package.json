@@ -1,15 +1,17 @@
 {
-  "name": "simple-mcp-server",
+  "name": "website",
   "version": "1.0.0",
-  "description": "Ein einfacher MCP-Server für Claude Desktop",
-  "main": "simple_mcp_server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node simple_mcp_server.js",
-    "test": "echo '{ \"id\": \"test\", \"jsonrpc\": \"2.0\", \"method\": \"list_tools\", \"params\": {} }' | node simple_mcp_server.js"
+    "dev": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Claude",
-  "license": "MIT",
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "1.12.0"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "date-fns": "^4.1.0"
   }
 }

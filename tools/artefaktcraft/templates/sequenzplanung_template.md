@@ -9,7 +9,7 @@
 
 ## Lehrplanbezug
 
-{{ mcp_link("lehrplan", fach + jahrgangsstufe + "_Lehrplan_Ueberblick") }}
+{{ mcp_link("lehrplan", "Deutsch5_Lehrplan_Ueberblick") }}
 
 **Kompetenzerwartungen (LehrplanPLUS):**
 - {{ lernbereich }}
