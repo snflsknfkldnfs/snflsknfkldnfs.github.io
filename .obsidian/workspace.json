@@ -104,12 +104,14 @@
             "id": "5ea09067202d79f6",
             "type": "leaf",
             "state": {
-              "type": "html-view",
+              "type": "markdown",
               "state": {
-                "file": "unterricht/WiB5b_Technik_Sequenz/02_Classroom_Screen_Interactive.html"
+                "file": "notizen/meta_prozesse/GPG/GPG_PATA_KONTEXT_MEMORY_MANAGEMENT.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "code-glyph",
-              "title": "02_Classroom_Screen_Interactive"
+              "icon": "lucide-file",
+              "title": "GPG_PATA_KONTEXT_MEMORY_MANAGEMENT"
             }
           }
         ],
@@ -311,11 +313,23 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "85c6e86c6f472718",
+  "active": "5ea09067202d79f6",
   "lastOpenFiles": [
+    "notizen/meta_prozesse/GPG/GPG_PATA_CONTEXT_DISCOVERY_SYSTEM.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_Quick_Reference.md",
+    "notizen/meta_prozesse/GPG/KRITISCH_Planungshierarchie_Zwangscheck_GPG.md",
+    "website/node_modules/array-differ/readme.md",
+    "unterricht/WiB5b_Technik_Sequenz/02_Classroom_Screen_Interactive.html",
+    "notizen/meta_prozesse/GPG/GPG_PATA_KONTEXT_MEMORY_MANAGEMENT.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_TEMPLATE_KOMBINATORIK.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_WARGAME_USER_PROFILES.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_USER_JOURNEY_OPTIMIZATION.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_REVERSE_PROMPTING_Standards.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_KOMMUNIKATION_3_Systemische_Reflexion.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_KOMMUNIKATION_2_Meta_Optimierung.md",
+    "notizen/meta_prozesse/GPG/GPG_PATA_KOMMUNIKATION_1_User_Interface_Standard.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_PATA_PATA_Systemische_Reflexion.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_PATA_Meta_Optimierung.md",
-    "notizen/meta_prozesse/GPG/KRITISCH_Planungshierarchie_Zwangscheck_GPG.md",
     "notizen/meta_prozesse/GPG/Chat_Transition_GPG_Standard.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_Selbstueberwachung.md",
     "notizen/meta_prozesse/GPG/Prompt_Templates_GPG_Standardisiert.md",
@@ -335,7 +349,6 @@
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/SCR-20250624-qrdp.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/03_Arbeitsblatt_Amos.html",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/02_Arbeitsblatt_Georgius.html",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/01_Ueberblick_Polis_Athen.html",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/TUV_Polis_Vorstunde_FINALE_v2.0.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/qr_codes_perplexity.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/haendler_athen_info.md",
@@ -344,20 +357,9 @@
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/Neuer Ordner mit Objekten/qr_codes_perplexity.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/Neuer Ordner mit Objekten/haendler_athen_info.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/Neuer Ordner mit Objekten/TUV_Vorstunde_23-06-2025_Haendlerleben_Athen.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/Neuer Ordner mit Objekten/MATERIAL_UEBERSICHT_KOMPLETT.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Atmos.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/SCR-20250624-qlhg.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/components_png/SCR-20250624-qlhg.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Georgius.png",
-    "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/README_iPad_Artefakte.md",
-    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/session_2_to_3_prompt.md",
-    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/offene_aufgaben_session_3.md",
-    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/session_2_status.md",
-    "unterricht/WiB5b_Technik_Sequenz/02_Material_Integration_Check.md",
-    "unterricht/WiB5b_Technik_Sequenz/02_Praktische_Hilfsmittel.md",
-    "unterricht/WiB5b_Technik_Sequenz/02_Assessment_Toolkit.md",
-    "unterricht/WiB5b_Technik_Sequenz/02_Differenzierung_Komplett.md",
-    "notizen/meta_prozesse/UE_Vollausarbeitung_Standard.md",
-    "notizen/meta_prozesse/Quick_Reference_PATA_Standards.md"
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Georgius.png"
   ]
 }
