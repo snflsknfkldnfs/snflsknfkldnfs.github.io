@@ -4,51 +4,167 @@
     "type": "split",
     "children": [
       {
-        "id": "dedba940aa56f1f0",
+        "id": "5efc95c3a28a5a39",
         "type": "tabs",
         "children": [
-          {
-            "id": "1a2d1980ea33d2fb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notizen/gpg/6/BUV_Reflexionen/GPG6_Geographie_Flächenersiegelung und Überschwemmung/Unterrichtsbeobachtung_2025-06-05_Silas_GPG_Geographie_Situationsbeurteilung.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Unterrichtsbeobachtung_2025-06-05_Silas_GPG_Geographie_Situationsbeurteilung"
-            }
-          },
           {
             "id": "4331cbdf840e3e3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/E5_Unit5_People_and_Places/BUV_v4.0_Finale_Dokumentation.md",
+                "file": "unterricht/GPG5b_LB4_2_Antikes Griechenland/GPG5b_LB4_Piraten_BUV/GPG5b_Piraten_BUV_Komplett.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BUV_v4.0_Finale_Dokumentation"
+              "title": "GPG5b_Piraten_BUV_Komplett"
             }
           },
           {
-            "id": "f00bd523fa19b734",
+            "id": "eb12bd1f3a2840fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/GPG5b_LB4_2_Antikes Griechenland/GPG5b_LB4_Polis_und_Gesellschaft/GPG5b_Polis_Gesellschaft_TUV_NEU.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GPG5b_Polis_Gesellschaft_TUV_NEU"
+            }
+          },
+          {
+            "id": "9463001d0b5b102f",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "notizen/gpg/6/BUV_Reflexionen/GPG6_Geographie_Flächenersiegelung und Überschwemmung/2025-06-05_Beobachtungsschwerpunkte_Ek 6.pdf"
+                "file": "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/36299_TieS_142-143.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "2025-06-05_Beobachtungsschwerpunkte_Ek 6"
+              "title": "36299_TieS_142-143"
+            }
+          },
+          {
+            "id": "1e0ab43e9da20897",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/507_36249_LOE_SB_069.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "507_36249_LOE_SB_069"
+            }
+          },
+          {
+            "id": "38b9c194599d810a",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.19.52.png"
+              },
+              "icon": "lucide-image",
+              "title": "Bildschirmfoto 2025-05-27 um 17.19.52"
+            }
+          },
+          {
+            "id": "3de2e39458671c98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/BUV_Habu_Zeitreise_Enhanced_v7.0.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BUV_Habu_Zeitreise_Enhanced_v7.0"
+            }
+          },
+          {
+            "id": "f4a986a088dafa19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BUV_Final_Abgabe_v6.2"
+            }
+          },
+          {
+            "id": "5ea09067202d79f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/WiB5b_Technik_Sequenz/00_Jahresplan_Sequenz4_Kontext_v2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00_Jahresplan_Sequenz4_Kontext_v2"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 7
+      },
+      {
+        "id": "ca2a68dbadcd1cf5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e26fdffa0b1435a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_Vorstunde_23-06-2025_Haendlerleben_Athen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TUV_Vorstunde_23-06-2025_Haendlerleben_Athen"
+            }
+          },
+          {
+            "id": "34714c01732f5aef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0"
+            }
+          }
+        ]
+      },
+      {
+        "id": "d7d77edab2ebb232",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a3a38202eedd336",
+            "type": "leaf",
+            "state": {
+              "type": "differences-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "File Diff: BUV_FINALE_Ausarbeitung_v7.1_optimiert.md and BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0.md"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,50 +312,53 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "4331cbdf840e3e3a",
+  "active": "5ea09067202d79f6",
   "lastOpenFiles": [
-    "unterricht/E5_Unit5_People_and_Places/STATUS_QUO_BUV_v4.0_17062025.md",
-    "node_modules/date-fns/locale/zh-TW.d.ts",
-    "node_modules/date-fns/locale/zh-HK.d.ts",
-    "node_modules/date-fns/locale/zh-CN.d.ts",
-    "node_modules/date-fns/yearsToQuarters.d.ts",
-    "node_modules/date-fns/fp/yearsToMonths.d.ts",
-    "node_modules/date-fns/fp/yearsToQuarters.d.ts",
-    "node_modules/date-fns/yearsToMonths.d.ts",
-    "node_modules/date-fns/yearsToDays.d.ts",
-    "node_modules/date-fns/fp/yearsToDays.d.ts",
-    "node_modules/date-fns/weeksToDays.d.ts",
-    "node_modules/date-fns/SECURITY.md",
-    "node_modules/date-fns/README.md",
-    "node_modules/date-fns/LICENSE.md",
-    "node_modules/date-fns/CHANGELOG.md",
-    "node_modules/date-fns/docs/webpack.md",
-    "node_modules/date-fns/docs/unicodeTokens.md",
-    "node_modules/date-fns/docs/timeZones.md",
-    "node_modules/date-fns/docs/release.md",
-    "node_modules/date-fns/docs/logotype.svg",
-    "node_modules/date-fns/docs/logo.svg",
-    "node_modules/date-fns/docs/i18nContributionGuide.md",
-    "node_modules/date-fns/docs/i18n.md",
-    "node_modules/date-fns/docs/gettingStarted.md",
-    "node_modules/date-fns/docs/fp.md",
-    "node_modules/date-fns/docs/cdn.md",
-    "node_modules/handlebars/release-notes.md",
-    "node_modules/neo-async/README.md",
-    "node_modules/resolve/SECURITY.md",
-    "node_modules/uglify-js/README.md",
-    "node_modules/async/README.md",
-    "node_modules/async/CHANGELOG.md",
-    "node_modules/@iarna/toml/README.md",
-    "node_modules/@iarna/toml/CHANGELOG.md",
-    "node_modules/mdurl/CHANGELOG.md",
-    "node_modules/mustache/README.md",
-    "node_modules/ssri/CHANGELOG.md",
-    "node_modules/mustache/CHANGELOG.md",
-    "notizen/classroom management/Seminar_Lehrerpersönlichkeit.svg",
-    "notizen/Classroom Management/Seminar_Lehrerpersönlichkeit.svg",
-    "unterricht/WiB5c_LB4_Recht_Kinderarbeit weltweit 2/Bilder/rahul_kinderarbeit.jpg",
-    "unterricht/WiB5c_LB4_Recht_Kinderarbeit weltweit/Bilder/rahul_kinderarbeit.jpg",
-    "unterricht/WiB5c_LB4_Recht_Kinderarbeit_weltweit/Bilder/rahul_kinderarbeit.jpg"
+    "unterricht/WiB5b_Technik_Sequenz/README.md",
+    "unterricht/WiB5b_Technik_Sequenz/00_Jahresplan_Sequenz4_Kontext.md",
+    "unterricht/WiB5b_Technik_Sequenz/01_UE_Technik_ueberall_entdecken.md",
+    "unterricht/WiB5b_Technik_Sequenz/00_Jahresplan_Sequenz4_Kontext_v2.md",
+    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/session_1_status.md",
+    "unterricht/WiB5b_Technik_Sequenz/alternative_materialien/WiB5c_Alternative_Gruppenkarten.md",
+    "unterricht/WiB5b_Technik_Sequenz/alternative_materialien/WiB5c_Alternative_UE_Kulturtechniken.md",
+    "unterricht/WiB5b_Technik_Sequenz/alternative_materialien",
+    "notizen/meta_prozesse/Git_Management_Vollstaendig.md",
+    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/session_1_to_2_prompt.md",
+    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/offene_aufgaben_session_2.md",
+    "unterricht/WiB5b_Technik_Sequenz/00_Sequenzplan_Technik_veraendert_uns.md",
+    "unterricht/WiB5b_Technik_Sequenz/02_UE_Social_Media_Kulturtechnik.md",
+    "unterricht/WiB5b_Technik_Sequenz/02_Material_Dreischritt_Forschungsbogen.md",
+    "unterricht/WiB5b_Technik_Sequenz/02_Material_Hilfekarten_Kommunikation.md",
+    "unterricht/WiB5b_Technik_Sequenz/02_Checkliste_UE2_heute.md",
+    "notizen/meta_prozesse/Chat_Transition_PATA_Standard.md",
+    "unterricht/Jahrespläne/WiB5b_Jahresplan 202425.md",
+    "unterricht/WiB5b_Technik_Sequenz/chat_transitions",
+    "unterricht/WiB5b_Sequenz_Technik_veraendert_uns.md",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/haendler_athen_info.md",
+    "unterricht/WiB5c_LB5_Technik_Kulturtechniken/01_Unterrichtsvorbereitung_NEU.md",
+    "notizen/meta_prozesse/PATA_PATA_Selbstueberwachung.md",
+    "unterricht/Jahrespläne/WiB5b_Jahresplan 202425_ÜBERARBEITET.md",
+    "notizen/meta_prozesse/Nachdokumentation_UE_Standard.md",
+    "unterricht/WiB5b_Technik_Sequenz",
+    "notizen/meta_prozesse/Git_Repository_Management_PATA.md",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_Vorstunde_23-06-2025_Haendlerleben_Athen.md",
+    "notizen/meta_prozesse/KRITISCH_Planungshierarchie_Zwangscheck.md",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/GPG5b_LB4_2_Antikes_Griechenland_Dialog_materialien_Erarbeitung_v7.html",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/miro_board_template.html",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/hefteintrag_polis.html",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/arbeitsblatt_amos.html",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/arbeitsblatt_georgius.html",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/Classroom screen einstieg Polis.html",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-06-23 um 10.13.40.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.16.22.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.16.29.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.16.38.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.16.52.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.16.58.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.17.10.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.17.16.png",
+    "unterricht/GPG5b_LB4_2_Antikes Griechenland/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.17.24.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/components_png/Elemente_Miro_Board_v7/Bildschirmfoto 2025-06-22 um 15.41.01.png"
   ]
 }

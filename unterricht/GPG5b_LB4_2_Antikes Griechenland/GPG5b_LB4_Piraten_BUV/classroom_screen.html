@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piraten bedrohen unseren Handel! - GPG 5b</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        header {
+            background: rgba(0,0,0,0.4);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            color: #ffd700;
+        }
+        
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 15px;
+            padding: 15px;
+            flex: 1;
+            height: calc(100vh - 100px);
+        }
+        
+        .panel {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .timer-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        #timer {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .timer-controls button {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid #ffd700;
+            color: white;
+            padding: 8px 15px;
+            margin: 3px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        .timer-controls button:hover {
+            background: rgba(255,215,0,0.3);
+            transform: scale(1.05);
+        }
+        
+        .phase-indicator {
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .phase-indicator.active {
+            background: rgba(255,215,0,0.3);
+            border-left: 5px solid #ffd700;
+            transform: translateX(5px);
+        }
+        
+        .phase-indicator h3 {
+            font-size: 1.1em;
+            margin-bottom: 3px;
+        }
+        
+        .phase-indicator p {
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+        
+        .phase-time {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.3);
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.9em;
+        }
+        
+        #map-container {
+            position: relative;
+            flex: 1;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        #map-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .pirate-warning {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(220,20,60,0.8);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+            display: none;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .question-box {
+            background: rgba(255,215,0,0.2);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .question-box h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        .question-box ol {
+            margin-left: 20px;
+        }
+        
+        .question-box li {
+            margin: 8px 0;
+        }
+        
+        .process-steps {
+            display: none;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        .process-step {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .process-step.completed {
+            background: rgba(76,175,80,0.3);
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .step-number {
+            background: #ffd700;
+            color: #1e3c72;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .voting-section {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .vote-option {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .vote-option:hover {
+            border-color: #ffd700;
+            transform: scale(1.02);
+        }
+        
+        .vote-count {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+        
+        .help-cards {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .help-card {
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+        
+        .help-card:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+        }
+        
+        .concept-box {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        .concept {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            padding: 5px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+        
+        .concept-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        .concept-text {
+            flex: 1;
+        }
+        
+        .concept-term {
+            font-weight: bold;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚓ Piraten bedrohen unseren Handel! ⚓</h1>
+        <p class="subtitle">Wie bekommen wir Hilfe in Athen?</p>
+    </header>
+    
+    <div class="main-container">
+        <!-- Linke Spalte: Timer und Phasen -->
+        <div class="panel">
+            <div class="timer-container">
+                <h2>⏱️ Zeit</h2>
+                <div id="timer">08:00</div>
+                <div class="timer-controls">
+                    <button onclick="setTimer(5)">5'</button>
+                    <button onclick="setTimer(7)">7'</button>
+                    <button onclick="setTimer(10)">10'</button>
+                    <button onclick="setTimer(15)">15'</button>
+                    <button onclick="toggleTimer()" id="startBtn">▶️</button>
+                    <button onclick="resetTimer()">🔄</button>
+                </div>
+            </div>
+            
+            <h2>📋 Ablauf</h2>
+            <div class="phase-indicator" onclick="setPhase(0)">
+                <h3>1. Wir sind Händler</h3>
+                <p>Orientierung & Identifikation</p>
+                <span class="phase-time">8'</span>
+            </div>
+            <div class="phase-indicator" onclick="setPhase(1)">
+                <h3>2. Das Problem</h3>
+                <p>Piraten bedrohen uns!</p>
+                <span class="phase-time">7'</span>
+            </div>
+            <div class="phase-indicator" onclick="setPhase(2)">
+                <h3>3. Die Lösung finden</h3>
+                <p>Bucharbeit mit iPads</p>
+                <span class="phase-time">15'</span>
+            </div>
+            <div class="phase-indicator" onclick="setPhase(3)">
+                <h3>4. Der Prozess</h3>
+                <p>So funktioniert's</p>
+                <span class="phase-time">5'</span>
+            </div>
+            <div class="phase-indicator" onclick="setPhase(4)">
+                <h3>5. Wir entscheiden</h3>
+                <p>Mini-Volksversammlung</p>
+                <span class="phase-time">10'</span>
+            </div>
+            <div class="phase-indicator" onclick="setPhase(5)">
+                <h3>6. Was haben wir gelernt?</h3>
+                <p>Reflexion & Transfer</p>
+                <span class="phase-time">5'</span>
+            </div>
+        </div>
+        
+        <!-- Mittlere Spalte: Hauptinhalt -->
+        <div class="panel">
+            <div id="map-container">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iIzNhNWY4YyIvPgogIDxwYXRoIGQ9Ik0yMDAgMjAwIEwyNTAgMTgwIEwzMDAgMjIwIEwzNTAgMjAwIEw0MDAgMjQwIEw0NTAgMjIwIEw1MDAgMjYwIEw1NTAgMjQwIEw2MDAgMjgwIiBzdHJva2U9IiNmZmQ3MDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWRhc2hhcnJheT0iNSw1Ii8+CiAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIxNSIgZmlsbD0iI2ZmZDcwMCIvPgogIDx0ZXh0IHg9IjE4MCIgeT0iMTcwIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiPkF0aGVuPC90ZXh0PgogIDxjaXJjbGUgY3g9IjYwMCIgY3k9IjI4MCIgcj0iMTUiIGZpbGw9IiNmZmQ3MDAiLz4KICA8dGV4dCB4PSI1NzAiIHk9IjMxNSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSJib2xkIj7DhGd5cHRlbjwvdGV4dD4KICA8dGV4dCB4PSIzNTAiIHk9IjE1MCIgZmlsbD0iI2ZmMDAwMCIgZm9udC1zaXplPSI0MCI+4pi04b2P77iPPC90ZXh0Pgo8L3N2Zz4=" alt="Handelsroute Athen-Ägypten">
+                <div class="pirate-warning" id="pirateWarning">⚠️ PIRATEN! ⚠️</div>
+            </div>
+            
+            <div class="question-box" id="questionBox" style="display: none;">
+                <h3>📚 Leitfragen für die Bucharbeit (S. 142-143)</h3>
+                <ol>
+                    <li>WO treffen sich die Bürger Athens?</li>
+                    <li>WIE läuft eine Entscheidung ab?</li>
+                    <li>WER entscheidet am Ende?</li>
+                </ol>
+            </div>
+            
+            <div class="process-steps" id="processSteps">
+                <h3>Der demokratische Prozess:</h3>
+                <div class="process-step" id="step1">
+                    <div class="step-number">1</div>
+                    <div>AGORA - Alle Bürger treffen sich auf dem Marktplatz</div>
+                </div>
+                <div class="process-step" id="step2">
+                    <div class="step-number">2</div>
+                    <div>DISKUSSION - Jeder darf seine Meinung sagen</div>
+                </div>
+                <div class="process-step" id="step3">
+                    <div class="step-number">3</div>
+                    <div>ABSTIMMUNG - Alle heben die Hand</div>
+                </div>
+                <div class="process-step" id="step4">
+                    <div class="step-number">4</div>
+                    <div>MEHRHEIT ENTSCHEIDET - Die meisten Stimmen gewinnen</div>
+                </div>
+            </div>
+            
+            <div class="voting-section" id="votingSection">
+                <h3>🗳️ Unsere Abstimmung: Was tun gegen die Piraten?</h3>
+                <div class="vote-option" onclick="vote('schiffe')">
+                    <h4>⛵ Kriegsschiffe bauen</h4>
+                    <div class="vote-count" id="voteSchiffe">0</div>
+                </div>
+                <div class="vote-option" onclick="vote('soeldner')">
+                    <h4>⚔️ Söldner anheuern</h4>
+                    <div class="vote-count" id="voteSoeldner">0</div>
+                </div>
+                <div class="vote-option" onclick="vote('tribut')">
+                    <h4>💰 Tribut zahlen</h4>
+                    <div class="vote-count" id="voteTribut">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rechte Spalte: Begriffe und Hilfen -->
+        <div class="panel">
+            <h2>📖 Wichtige Begriffe</h2>
+            <div class="concept-box">
+                <div class="concept">
+                    <span class="concept-icon">🏛️</span>
+                    <div class="concept-text">
+                        <span class="concept-term">POLIS</span><br>
+                        Stadtstaat (wie Athen)
+                    </div>
+                </div>
+                <div class="concept">
+                    <span class="concept-icon">🏪</span>
+                    <div class="concept-text">
+                        <span class="concept-term">AGORA</span><br>
+                        Marktplatz & Versammlungsort
+                    </div>
+                </div>
+                <div class="concept">
+                    <span class="concept-icon">🗳️</span>
+                    <div class="concept-text">
+                        <span class="concept-term">DEMOKRATIE</span><br>
+                        Volksherrschaft (alle entscheiden)
+                    </div>
+                </div>
+                <div class="concept">
+                    <span class="concept-icon">✋</span>
+                    <div class="concept-text">
+                        <span class="concept-term">ABSTIMMUNG</span><br>
+                        Gemeinsame Entscheidung
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h3>💡 Denkt daran:</h3>
+                <ul style="margin-left: 20px; font-size: 0.9em;">
+                    <li>Wir sind HÄNDLER</li>
+                    <li>Kein PHARAO hier!</li>
+                    <li>ALLE Bürger entscheiden</li>
+                    <li>MEHRHEIT gewinnt</li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: auto; text-align: center;">
+                <button onclick="showHelp()" style="
+                    background: rgba(255,215,0,0.3);
+                    border: 2px solid #ffd700;
+                    color: white;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-size: 1.1em;
+                    margin-top: 20px;
+                ">
+                    🆘 Hilfe
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let timerInterval;
+        let currentTime = 480; // 8 Minuten
+        let isRunning = false;
+        let currentPhase = 0;
+        
+        const votes = {
+            schiffe: 0,
+            soeldner: 0,
+            tribut: 0
+        };
+        
+        const phases = [
+            { name: "Orientierung", time: 8, showMap: true },
+            { name: "Problem", time: 7, showMap: true, showPirates: true },
+            { name: "Erarbeitung", time: 15, showQuestions: true },
+            { name: "Prozess", time: 5, showProcess: true },
+            { name: "Abstimmung", time: 10, showVoting: true },
+            { name: "Reflexion", time: 5, showProcess: true }
+        ];
+        
+        function updateTimer() {
+            const minutes = Math.floor(currentTime / 60);
+            const seconds = currentTime % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (currentTime <= 0) {
+                clearInterval(timerInterval);
+                document.getElementById('timer').style.color = '#ff0000';
+                playSound();
+            }
+        }
+        
+        function setTimer(minutes) {
+            currentTime = minutes * 60;
+            updateTimer();
+            document.getElementById('timer').style.color = '#ffd700';
+        }
+        
+        function toggleTimer() {
+            const btn = document.getElementById('startBtn');
+            if (isRunning) {
+                clearInterval(timerInterval);
+                isRunning = false;
+                btn.textContent = '▶️';
+            } else {
+                timerInterval = setInterval(() => {
+                    if (currentTime > 0) {
+                        currentTime--;
+                        updateTimer();
+                    }
+                }, 1000);
+                isRunning = true;
+                btn.textContent = '⏸️';
+            }
+        }
+        
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            currentTime = phases[currentPhase].time * 60;
+            updateTimer();
+            document.getElementById('timer').style.color = '#ffd700';
+            document.getElementById('startBtn').textContent = '▶️';
+        }
+        
+        function setPhase(index) {
+            currentPhase = index;
+            
+            // Update phase indicators
+            document.querySelectorAll('.phase-indicator').forEach((el, i) => {
+                el.classList.toggle('active', i === index);
+            });
+            
+            // Reset and set timer
+            setTimer(phases[index].time);
+            
+            // Show/hide elements based on phase
+            const phase = phases[index];
+            document.getElementById('pirateWarning').style.display = 
+                phase.showPirates ? 'block' : 'none';
+            document.getElementById('questionBox').style.display = 
+                phase.showQuestions ? 'block' : 'none';
+            document.getElementById('processSteps').style.display = 
+                phase.showProcess ? 'block' : 'none';
+            document.getElementById('votingSection').style.display = 
+                phase.showVoting ? 'block' : 'none';
+                
+            // Animate process steps
+            if (phase.showProcess) {
+                animateSteps();
+            }
+        }
+        
+        function animateSteps() {
+            const steps = ['step1', 'step2', 'step3', 'step4'];
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    document.getElementById(step).classList.add('completed');
+                }, index * 500);
+            });
+        }
+        
+        function vote(option) {
+            votes[option]++;
+            document.getElementById('vote' + option.charAt(0).toUpperCase() + option.slice(1))
+                .textContent = votes[option];
+        }
+        
+        function showHelp() {
+            alert('Brauchst du Hilfe?\n\n' +
+                  '1. Schau ins Buch S. 142-143\n' +
+                  '2. Frag deinen Partner\n' +
+                  '3. Hebe die Hand für Lehrerhilfe');
+        }
+        
+        function playSound() {
+            // Placeholder for timer sound
+            const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLaiTYIF2m98OScTgwOUanz1KleFAtTqOXztmEcBjiS1/LNeSsFJHfH8N+RQAoUXrTp66hVFApGnt/yvmwhBSuBzvLaiTYIGGm78OScTgwOUqn026heFAtPoOfyvGsgBCh+zPLaiTYIF2i88OacTw0OU6n01KleFAtPoODyvGsgBCh+zPDaiTYIF2i78OacTw0OU6r01KleFAtPoODyvGsgBCh+zPDaiTYIF2m98OacTw0OU6r006leFAtPoODyvGsgBCh+zPDaiTYIF2m98OacTw0OU6r006leFAtPoODyvGsgBCh+zPDaiTYIF2m98OacTw0OU6r006leFAtPoODyvGsgBCh+zPDaiTYIF2m98OacTw0OU6r006leFAtPoODyvGsgBCh+zPDaiTYIF2m98OacTw0OU6r006leFAtPoODyvGsgBCh+zPDaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAzfDaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0OU6r006leFAtQoeXtjGMYBiuAz/DaiTYIF2m98OacTw0=');
+            audio.play();
+        }
+        
+        // Initialize
+        setPhase(0);
+    </script>
+</body>
+</html>

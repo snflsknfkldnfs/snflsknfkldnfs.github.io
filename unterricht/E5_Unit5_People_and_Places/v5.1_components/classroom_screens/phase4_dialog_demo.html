@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, height=768">
+    <title>Dialog Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1024px;
+            height: 768px;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .title {
+            font-size: 44px;
+            font-weight: 700;
+            color: #2E7D32;
+            margin: 0;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #424242;
+            margin-top: 8px;
+        }
+        
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        
+        .dialog-demo {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            max-width: 700px;
+            width: 100%;
+        }
+        
+        .speakers {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+        
+        .speaker {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: #F5F5F5;
+            min-width: 150px;
+        }
+        
+        .speaker.active {
+            background: #E3F2FD;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+        
+        .speaker-avatar {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .speaker-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .dialog-box {
+            background: #F8F9FA;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .dialog-text {
+            font-size: 32px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        
+        .dialog-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .dialog-translation {
+            font-size: 18px;
+            color: #666;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .dialog-translation.visible {
+            opacity: 1;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .control-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .control-btn:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+        
+        .control-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .step-indicator {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: rgba(255,255,255,0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">💬 Dialog Demo</h1>
+        <p class="subtitle">Watch how to talk about weekends!</p>
+    </div>
+    
+    <div class="step-indicator">
+        Step <span id="current-step">1</span> of <span id="total-steps">4</span>
+    </div>
+    
+    <div class="content">
+        <div class="dialog-demo">
+            <div class="speakers">
+                <div class="speaker" id="speaker-a">
+                    <div class="speaker-avatar">👦</div>
+                    <div class="speaker-name">Alex</div>
+                </div>
+                <div class="speaker" id="speaker-b">
+                    <div class="speaker-avatar">👧</div>
+                    <div class="speaker-name">Ben</div>
+                </div>
+            </div>
+            
+            <div class="dialog-box">
+                <div class="dialog-text" id="dialog-text">Click "Start Demo" to begin!</div>
+                <div class="dialog-translation" id="dialog-translation"></div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" id="start-btn" onclick="startDemo()">
+                    ▶️ Start Demo
+                </button>
+                <button class="control-btn" id="next-btn" onclick="nextStep()" disabled>
+                    ⏭️ Next
+                </button>
+                <button class="control-btn" id="replay-btn" onclick="replayDemo()" disabled>
+                    🔄 Replay
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const dialogSteps = [
+            {
+                speaker: 'a',
+                text: 'How was your weekend?',
+                translation: 'Wie war dein Wochenende?'
+            },
+            {
+                speaker: 'b', 
+                text: 'It was great!',
+                translation: 'Es war toll!'
+            },
+            {
+                speaker: 'a',
+                text: 'Where were you?',
+                translation: 'Wo warst du?'
+            },
+            {
+                speaker: 'b',
+                text: 'I was at the swimming pool.',
+                translation: 'Ich war im Schwimmbad.'
+            }
+        ];
+        
+        let currentStep = 0;
+        let demoRunning = false;
+        
+        function startDemo() {
+            demoRunning = true;
+            currentStep = 0;
+            
+            document.getElementById('start-btn').disabled = true;
+            document.getElementById('next-btn').disabled = false;
+            document.getElementById('replay-btn').disabled = true;
+            
+            showStep();
+        }
+        
+        function showStep() {
+            const step = dialogSteps[currentStep];
+            const speakerA = document.getElementById('speaker-a');
+            const speakerB = document.getElementById('speaker-b');
+            const dialogText = document.getElementById('dialog-text');
+            const dialogTranslation = document.getElementById('dialog-translation');
+            const currentStepSpan = document.getElementById('current-step');
+            
+            // Reset speaker highlighting
+            speakerA.classList.remove('active');
+            speakerB.classList.remove('active');
+            
+            // Highlight active speaker
+            if (step.speaker === 'a') {
+                speakerA.classList.add('active');
+            } else {
+                speakerB.classList.add('active');
+            }
+            
+            // Show dialog text with animation
+            dialogText.classList.remove('visible');
+            dialogTranslation.classList.remove('visible');
+            
+            setTimeout(() => {
+                dialogText.textContent = step.text;
+                dialogTranslation.textContent = step.translation;
+                dialogText.classList.add('visible');
+                
+                setTimeout(() => {
+                    dialogTranslation.classList.add('visible');
+                }, 500);
+            }, 200);
+            
+            currentStepSpan.textContent = currentStep + 1;
+            
+            // Check if this is the last step
+            if (currentStep === dialogSteps.length - 1) {
+                document.getElementById('next-btn').textContent = '🎉 Finish';
+            }
+        }
+        
+        function nextStep() {
+            if (currentStep < dialogSteps.length - 1) {
+                currentStep++;
+                showStep();
+            } else {
+                // Demo finished
+                finishDemo();
+            }
+        }
+        
+        function finishDemo() {
+            demoRunning = false;
+            document.getElementById('next-btn').disabled = true;
+            document.getElementById('replay-btn').disabled = false;
+            
+            // Reset speakers
+            document.getElementById('speaker-a').classList.remove('active');
+            document.getElementById('speaker-b').classList.remove('active');
+            
+            // Show completion message
+            document.getElementById('dialog-text').textContent = '🎉 Perfect! Now you try!';
+            document.getElementById('dialog-translation').textContent = 'Perfekt! Jetzt seid ihr dran!';
+        }
+        
+        function replayDemo() {
+            document.getElementById('start-btn').disabled = false;
+            document.getElementById('next-btn').disabled = true;
+            document.getElementById('next-btn').textContent = '⏭️ Next';
+            document.getElementById('replay-btn').disabled = true;
+            
+            document.getElementById('dialog-text').textContent = 'Click "Start Demo" to begin!';
+            document.getElementById('dialog-translation').textContent = '';
+            document.getElementById('current-step').textContent = '1';
+            
+            // Reset speakers
+            document.getElementById('speaker-a').classList.remove('active');
+            document.getElementById('speaker-b').classList.remove('active');
+        }
+        
+        // Initialize
+        document.getElementById('total-steps').textContent = dialogSteps.length;
+    </script>
+</body>
+</html>

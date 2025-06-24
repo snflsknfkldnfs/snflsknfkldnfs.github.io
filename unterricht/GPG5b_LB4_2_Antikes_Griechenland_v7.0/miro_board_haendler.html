@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Händler in Athen - Habus Forschung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #E6F3FF 0%, #CCE7FF 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 3px solid #4682B4;
+        }
+        
+        .header h1 {
+            color: #8B4513;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #4682B4;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .habu-icon {
+            font-size: 3em;
+            margin: 0 10px;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .category-section {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 3px solid;
+            min-height: 400px;
+        }
+        
+        .waren-section {
+            border-color: #32CD32;
+        }
+        
+        .kunden-section {
+            border-color: #FF6347;
+        }
+        
+        .probleme-section {
+            border-color: #FFD700;
+        }
+        
+        .category-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .category-header h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .waren-section h2 {
+            color: #228B22;
+        }
+        
+        .kunden-section h2 {
+            color: #DC143C;
+        }
+        
+        .probleme-section h2 {
+            color: #FF8C00;
+        }
+        
+        .category-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .post-it-area {
+            min-height: 300px;
+            background: rgba(255,255,255,0.3);
+            border: 2px dashed #cccccc;
+            border-radius: 10px;
+            padding: 15px;
+            position: relative;
+        }
+        
+        .post-it {
+            background: #FFFF99;
+            border: 1px solid #E6E600;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px;
+            font-size: 0.9em;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            position: relative;
+            min-height: 60px;
+            display: inline-block;
+            width: calc(50% - 16px);
+            vertical-align: top;
+        }
+        
+        .post-it:hover {
+            transform: rotate(1deg) scale(1.02);
+        }
+        
+        .post-it.waren {
+            background: #98FB98;
+            border-color: #32CD32;
+        }
+        
+        .post-it.kunden {
+            background: #FFB6C1;
+            border-color: #FF6347;
+        }
+        
+        .post-it.probleme {
+            background: #FFEB9C;
+            border-color: #FFD700;
+        }
+        
+        .add-note-btn {
+            background: #4682B4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .add-note-btn:hover {
+            background: #5F9EA0;
+        }
+        
+        .sources-section {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 3px solid #8A2BE2;
+        }
+        
+        .sources-section h3 {
+            color: #8A2BE2;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .source-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .source-btn {
+            background: #E6E6FA;
+            border: 2px solid #8A2BE2;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #8A2BE2;
+            font-weight: bold;
+        }
+        
+        .source-btn:hover {
+            background: #8A2BE2;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .instructions {
+            background: #F0F8FF;
+            border: 2px solid #4682B4;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .instructions h3 {
+            color: #4682B4;
+            margin-bottom: 10px;
+        }
+        
+        .instructions p {
+            color: #2F4F4F;
+            font-size: 1.1em;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .source-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .post-it {
+                width: calc(100% - 16px);
+            }
+        }
+        
+        .editable {
+            background: white;
+            border: 1px dashed #999;
+            min-height: 20px;
+            padding: 5px;
+            border-radius: 3px;
+            outline: none;
+        }
+        
+        .editable:focus {
+            border-color: #4682B4;
+            box-shadow: 0 0 5px rgba(70, 130, 180, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><span class="habu-icon">🧙‍♂️</span>Händler in Athen - Habus Forschung<span class="habu-icon">🏺</span></h1>
+        <div class="subtitle">Sammelt Informationen über das Händlerleben in der Polis!</div>
+    </div>
+    
+    <div class="instructions">
+        <h3>📋 So geht's:</h3>
+        <p>Arbeitet zu zweit! Lest im Schulbuch S. 142-143 und sammelt Informationen. Klickt auf "Notiz hinzufügen" und schreibt eure Erkenntnisse auf die digitalen Post-Its!</p>
+    </div>
+    
+    <div class="main-grid">
+        <!-- Waren Sektion -->
+        <div class="category-section waren-section">
+            <div class="category-header">
+                <div class="category-icon">🏺</div>
+                <h2>WAREN</h2>
+                <p>Was verkauften die Händler?</p>
+            </div>
+            <div class="post-it-area" id="waren-area">
+                <div class="post-it waren">
+                    <div class="editable" contenteditable="true">Getreide aus Ägypten</div>
+                </div>
+                <div class="post-it waren">
+                    <div class="editable" contenteditable="true">Olivenöl aus Athen</div>
+                </div>
+                <div class="post-it waren">
+                    <div class="editable" contenteditable="true">Klicke hier und füge eigene Waren hinzu...</div>
+                </div>
+            </div>
+            <button class="add-note-btn" onclick="addNote('waren')">Notiz hinzufügen</button>
+        </div>
+        
+        <!-- Kunden Sektion -->
+        <div class="category-section kunden-section">
+            <div class="category-header">
+                <div class="category-icon">👥</div>
+                <h2>KUNDEN</h2>
+                <p>Wer kaufte auf der Agora ein?</p>
+            </div>
+            <div class="post-it-area" id="kunden-area">
+                <div class="post-it kunden">
+                    <div class="editable" contenteditable="true">Reiche Bürger</div>
+                </div>
+                <div class="post-it kunden">
+                    <div class="editable" contenteditable="true">Normale Familien</div>
+                </div>
+                <div class="post-it kunden">
+                    <div class="editable" contenteditable="true">Klicke hier und füge eigene Kunden hinzu...</div>
+                </div>
+            </div>
+            <button class="add-note-btn" onclick="addNote('kunden')">Notiz hinzufügen</button>
+        </div>
+        
+        <!-- Probleme Sektion -->
+        <div class="category-section probleme-section">
+            <div class="category-header">
+                <div class="category-icon">❓</div>
+                <h2>PROBLEME</h2>
+                <p>Welche Schwierigkeiten hatten Händler?</p>
+            </div>
+            <div class="post-it-area" id="probleme-area">
+                <div class="post-it probleme">
+                    <div class="editable" contenteditable="true">Steuern zahlen</div>
+                </div>
+                <div class="post-it probleme">
+                    <div class="editable" contenteditable="true">Konkurrenz</div>
+                </div>
+                <div class="post-it probleme">
+                    <div class="editable" contenteditable="true">Klicke hier und füge eigene Probleme hinzu...</div>
+                </div>
+            </div>
+            <button class="add-note-btn" onclick="addNote('probleme')">Notiz hinzufügen</button>
+        </div>
+    </div>
+    
+    <div class="sources-section">
+        <h3>📖 QUELLEN</h3>
+        <div class="source-links">
+            <div class="source-btn" onclick="alert('Öffnet euer Schulbuch auf Seite 142-143!')">
+                📚 Schulbuch S. 142-143<br>
+                <small>(Hauptquelle!)</small>
+            </div>
+            <div class="source-btn" onclick="window.open('https://perplexity.ai', '_blank')">
+                🔍 Perplexity-Recherche<br>
+                <small>(für Details)</small>
+            </div>
+            <div class="source-btn" onclick="alert('Fragt euren Lehrer!')">
+                🙋‍♂️ Nachfragen<br>
+                <small>(bei Unklarheiten)</small>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function addNote(category) {
+            const area = document.getElementById(category + '-area');
+            const newNote = document.createElement('div');
+            newNote.className = 'post-it ' + category;
+            newNote.innerHTML = '<div class="editable" contenteditable="true">Neue Notiz - klicke hier zum Bearbeiten...</div>';
+            
+            // Füge vor dem letzten Post-It ein (das ist der Platzhalter)
+            const placeholder = area.lastElementChild.previousElementSibling;
+            area.insertBefore(newNote, placeholder);
+            
+            // Fokussiere das neue Post-It
+            const editableDiv = newNote.querySelector('.editable');
+            editableDiv.focus();
+            editableDiv.select();
+        }
+        
+        // Speichere Änderungen automatisch (lokal im Browser)
+        function saveNotes() {
+            const data = {
+                waren: [],
+                kunden: [],
+                probleme: []
+            };
+            
+            ['waren', 'kunden', 'probleme'].forEach(category => {
+                const area = document.getElementById(category + '-area');
+                const postIts = area.querySelectorAll('.post-it');
+                postIts.forEach(postIt => {
+                    const text = postIt.querySelector('.editable').textContent.trim();
+                    if (text && !text.includes('Klicke hier')) {
+                        data[category].push(text);
+                    }
+                });
+            });
+            
+            localStorage.setItem('habu-haendler-notes', JSON.stringify(data));
+        }
+        
+        // Lade gespeicherte Notizen
+        function loadNotes() {
+            const saved = localStorage.getItem('habu-haendler-notes');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    // Hier könnte man gespeicherte Daten laden, aber für die Unterrichtsstunde
+                    // ist es besser, wenn die SuS neu anfangen
+                } catch (e) {
+                    console.log('Keine gespeicherten Notizen gefunden');
+                }
+            }
+        }
+        
+        // Auto-Save bei Änderungen
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('editable')) {
+                setTimeout(saveNotes, 1000); // Speichere nach 1 Sekunde
+            }
+        });
+        
+        // Verhindere, dass Enter eine neue Zeile erstellt
+        document.addEventListener('keydown', function(e) {
+            if (e.target.classList.contains('editable') && e.key === 'Enter') {
+                e.preventDefault();
+                e.target.blur(); // Entferne den Fokus
+            }
+        });
+        
+        // Initialisierung
+        document.addEventListener('DOMContentLoaded', function() {
+            loadNotes();
+        });
+    </script>
+</body>
+</html>

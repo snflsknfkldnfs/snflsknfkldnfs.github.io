@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, height=768">
+    <title>Weekend Activities Mind Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1024px;
+            height: 768px;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .title {
+            font-size: 44px;
+            font-weight: 700;
+            color: #7B1FA2;
+            margin: 0;
+        }
+        
+        .question {
+            font-size: 22px;
+            color: #424242;
+            margin-top: 8px;
+        }
+        
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        
+        .mind-map {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+        }
+        
+        .center-node {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        
+        .center-icon {
+            font-size: 48px;
+            margin-bottom: 8px;
+        }
+        
+        .center-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .branch {
+            position: absolute;
+            background: white;
+            border-radius: 15px;
+            padding: 15px 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        
+        .branch.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .branch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        }
+        
+        .branch-icon {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .branch-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        /* Branch positions */
+        .branch-1 { top: 10%; left: 20%; }
+        .branch-2 { top: 10%; right: 20%; }
+        .branch-3 { top: 40%; left: 5%; }
+        .branch-4 { top: 40%; right: 5%; }
+        .branch-5 { bottom: 20%; left: 15%; }
+        .branch-6 { bottom: 20%; right: 15%; }
+        
+        /* Connection lines */
+        .line {
+            position: absolute;
+            background: #ddd;
+            height: 2px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .line.visible {
+            opacity: 1;
+        }
+        
+        .add-button {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .add-button:hover {
+            background: #45a049;
+            transform: translateX(-50%) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">🧠 Weekend Activities</h1>
+        <p class="question">What can we do on weekends?</p>
+    </div>
+    
+    <div class="content">
+        <div class="mind-map">
+            <div class="center-node">
+                <div class="center-icon">🎯</div>
+                <div class="center-text">Weekend</div>
+            </div>
+            
+            <div class="branch branch-1" onclick="addBranch(1)">
+                <div class="branch-icon">🏀</div>
+                <div class="branch-text">Sports</div>
+            </div>
+            
+            <div class="branch branch-2" onclick="addBranch(2)">
+                <div class="branch-icon">🎬</div>
+                <div class="branch-text">Cinema</div>
+            </div>
+            
+            <div class="branch branch-3" onclick="addBranch(3)">
+                <div class="branch-icon">🛍️</div>
+                <div class="branch-text">Shopping</div>
+            </div>
+            
+            <div class="branch branch-4" onclick="addBranch(4)">
+                <div class="branch-icon">🏊</div>
+                <div class="branch-text">Swimming</div>
+            </div>
+            
+            <div class="branch branch-5" onclick="addBranch(5)">
+                <div class="branch-icon">👥</div>
+                <div class="branch-text">Friends</div>
+            </div>
+            
+            <div class="branch branch-6" onclick="addBranch(6)">
+                <div class="branch-icon">🏡</div>
+                <div class="branch-text">Home</div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="add-button" onclick="showAll()">
+        ✨ Show All Ideas
+    </button>
+    
+    <script>
+        let visibleBranches = 0;
+        const totalBranches = 6;
+        
+        function addBranch(index) {
+            const branch = document.querySelector(`.branch-${index}`);
+            if (!branch.classList.contains('visible')) {
+                branch.classList.add('visible');
+                visibleBranches++;
+                
+                // Add some celebration
+                branch.style.background = '#E8F5E8';
+                setTimeout(() => {
+                    branch.style.background = 'white';
+                }, 500);
+                
+                if (visibleBranches === totalBranches) {
+                    document.querySelector('.add-button').textContent = '🎉 Perfect! All ideas collected!';
+                    document.querySelector('.add-button').style.background = '#FF9800';
+                }
+            }
+        }
+        
+        function showAll() {
+            for (let i = 1; i <= totalBranches; i++) {
+                setTimeout(() => {
+                    addBranch(i);
+                }, i * 200);
+            }
+        }
+        
+        // Auto-reveal one by one for demo
+        setTimeout(() => {
+            addBranch(1);
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1: Ben's Weekend</title>
+    <style>
+        /* Apple-Style Design für 4:3 Beamer */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .container {
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .title {
+            font-size: 72px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .emoji {
+            font-size: 80px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        .mindmap-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 90%;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .mindmap-node {
+            position: relative;
+            padding: 20px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .mindmap-node img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #fff;
+        }
+
+        .mindmap-connections {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #fff;
+            z-index: -1;
+        }
+
+        .date-banner {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.5rem;
+            margin: 2rem auto;
+            width: fit-content;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .photo-label {
+            text-align: center;
+        }
+        
+        .photo-frame {
+            width: 400px;
+            height: 300px;
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            object-fit: contain;
+            filter: blur(20px);
+            transition: filter 1s ease-out;
+        }
+        
+        .photo-frame:hover {
+            transform: scale(1.05);
+        }
+        
+        .mindmap-node img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            filter: blur(15px);
+            transition: all 0.3s ease;
+        }
+        
+        .mindmap-node.revealed img {
+            filter: none;
+        }
+        
+        .time-marker {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2c3e50;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 18px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .photo.revealed {
+            filter: blur(0);
+        }
+        
+        .photo-label {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.5s ease-out 0.5s;
+        }
+        
+        .photo.revealed + .photo-label {
+            opacity: 1;
+        }
+        
+        .instruction {
+            font-size: 36px;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1s forwards;
+            background: rgba(255,255,255,0.2);
+            padding: 20px 40px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .question {
+            font-size: 48px;
+            color: white;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 2s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Placeholder für echte Bilder */
+        .placeholder-img {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            border-radius: 12px;
+        }
+        
+        .click-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px;
+            opacity: 0.8;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date-banner">📅 Weekend Timeline: June 20-22, 2025</div>
+        
+        <div class="mindmap-container">
+            <div class="mindmap-node">
+                <div class="time-marker">Friday Evening</div>
+            <div class="photo-frame" onclick="revealPhoto(1)">
+                <div class="photo" id="photo1">
+                    <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Bamberg_Cathedral_Dom_1.jpg" alt="Bamberg Cathedral">
+                </div>
+                <div class="photo-label">Bamberg Cathedral (Ben <em>visited</em> Bamberg Cathedral)</div>
+            </div>
+            
+            <div class="photo-frame" onclick="revealPhoto(2)">
+                <div class="photo" id="photo2">
+                    <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Basketball_Ben_Selfie_on_Bench.jpeg" alt="Basketball Game">
+                </div>
+                <div class="photo-label">Basketball Game (Ben <em>played</em> basketball)</div>
+            </div>
+            
+            <div class="photo-frame" onclick="revealPhoto(3)">
+                <div class="photo" id="photo3">
+                    <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Ben_Eating_Doener.png" alt="German Food">
+                </div>
+                <div class="photo-label">German Food (Ben <em>ate</em> Döner)</div>
+            </div>
+        </div>
+        
+        <div class="instruction">Click the photos to reveal!</div>
+        
+        <div class="question">Ben had a great weekend! Where did he go and what did he do? </div>
+<div id="calendar" style="margin-top: 20px; font-style: italic; color: grey;">Weekend of June 20th - 22nd, 2025</div>
+<button id="toggleQuestion">Show Question</button>
+<div id="questionBox" style="display: none;">Where was Ben this Weekend?</div>
+<div id="finalInsight" style="display: none; margin-top: 20px; font-weight: bold;">This weekend Ben played basketball in Bamberg!</div>
+        
+        <div class="click-hint">👆 Click to unblur</div>
+
+    </div>
+    
+    <script>
+        function revealPhoto(num) {
+            const photo = document.getElementById(`photo${num}`);
+            photo.classList.add('revealed');
+            
+            // Check if all photos are revealed
+            const allRevealed = document.querySelectorAll('.photo.revealed').length === 3;
+            if (allRevealed) {
+                setTimeout(() => {
+                    document.querySelector('.click-hint').style.display = 'none';
+                    showAnswer();
+                }, 1000);
+            }
+        }
+        
+        function showAnswer() {
+            const answer = document.createElement('div');
+            answer.style.cssText = `
+                position: absolute;
+                bottom: 50px;
+                font-size: 60px;
+                font-weight: 700;
+                color: white;
+                text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+                animation: fadeIn 1s ease-out forwards;
+            `;
+            answer.textContent = 'Ben was in Bamberg! 🎉';
+            document.body.appendChild(answer);
+        }
+    </script>
+</body>
+</html>

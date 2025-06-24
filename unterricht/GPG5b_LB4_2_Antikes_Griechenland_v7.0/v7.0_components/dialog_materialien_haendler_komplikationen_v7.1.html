@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog-Materialien - Händler Habu GPG 5b</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            margin: 10px 0 0 0;
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            background: #f8f9fa;
+            border: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .tab:hover {
+            background: #e9ecef;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .dialog-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .dialog-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .dialog-box {
+            background: #f8f9fa;
+            border-left: 5px solid #28a745;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .habu-speech {
+            border-left-color: #ffc107;
+            background: #fff8dc;
+        }
+        
+        .greek-speech {
+            border-left-color: #007bff;
+            background: #f0f8ff;
+        }
+        
+        .speaker {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .speech {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .context-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .context-title {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #1976d2;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .working-instructions {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .instruction-title {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #856404;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instruction-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .instruction-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .complication {
+            background: #ffe6e6;
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .complication-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #d63031;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .solution-hint {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .level-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .level-basic {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .level-standard {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .level-advanced {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .vocabulary-help {
+            background: #f0f4ff;
+            border: 1px solid #c8d6ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .vocab-title {
+            font-weight: bold;
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+        
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px;
+        }
+        
+        .print-friendly {
+            background: white !important;
+            color: black !important;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .tabs { display: none; }
+            .dialog-section { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏺 Händler Habu in Griechenland 🏛️</h1>
+            <p class="subtitle">Dialog-Materialien für die Erarbeitungsphase</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showDialog(1)">Team 1: Steuern-Problem</button>
+            <button class="tab" onclick="showDialog(2)">Team 2: Regel-Problem</button>
+            <button class="tab" onclick="showDialog(3)">Team 3: Mitsprache-Problem</button>
+        </div>
+        
+        <div class="content">
+            <!-- Team 1: Steuern-Problem -->
+            <div class="dialog-section active" id="dialog1">
+                <div class="level-indicator level-basic">Basis-Niveau</div>
+                
+                <div class="context-box">
+                    <div class="context-title">🎯 Situation</div>
+                    <p>Händler Habu steht mit seinen Waren in Athen und will sie verkaufen. In Ägypten musste er dem Pharao Steuern zahlen. Aber hier in Griechenland gibt es keinen Pharao!</p>
+                </div>
+                
+                <div class="complication">
+                    <div class="complication-title">⚠️ Habus Problem</div>
+                    <p><strong>Habu denkt:</strong> "Ich will meine Amphoren und Gewürze verkaufen. Aber wem muss ich Steuern zahlen? Wo ist der Pharao von Griechenland?"</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Entschuldigung! Ich bin Händler aus Ägypten und möchte meine Waren verkaufen. Wem muss ich denn hier Steuern zahlen? Bei uns zahlt jeder Händler dem Pharao!"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">👨‍💼 Kleisthenes (Athener Bürger)</div>
+                    <p class="speech">"Pharao? Wir haben keinen Pharao in Athen! Hier entscheiden die Bürger selbst über Steuern. Du musst zur Volksversammlung gehen!"</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Volksversammlung? Was ist das denn? Bei uns sagt der Pharao einfach: '5 Goldstücke Steuer!' - und fertig!"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">👨‍💼 Kleisthenes</div>
+                    <p class="speech">"Hier diskutieren 6000 Bürger zusammen! Sie treffen alle Entscheidungen gemeinsam - auch über deine Steuern. Das nennen wir Demokratie!"</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"6000 Menschen?! Das dauert ja ewig! In Ägypten ist das viel schneller..."</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">👨‍💼 Kleisthenes</div>
+                    <p class="speech">"Ja, es dauert länger. Aber dafür ist es gerecht! Jeder Bürger hat eine Stimme, nicht nur einer allein wie euer Pharao."</p>
+                </div>
+                
+                <div class="solution-hint">
+                    <strong>💡 Lösung für Habu:</strong> In Griechenland gibt es keinen Pharao. Die Volksversammlung (6000 Bürger) entscheidet gemeinsam über Steuern. Das ist demokratisch, aber dauert länger als in Ägypten.
+                </div>
+                
+                <div class="vocabulary-help">
+                    <div class="vocab-title">📚 Wichtige Wörter (DaZ-Hilfe)</div>
+                    <div class="vocab-grid">
+                        <div class="vocab-item">🏛️ Volksversammlung = Treffen aller Bürger</div>
+                        <div class="vocab-item">🗳️ Demokratie = Volk entscheidet</div>
+                        <div class="vocab-item">👥 Bürger = Einwohner mit Rechten</div>
+                        <div class="vocab-item">💰 Steuern = Geld für den Staat</div>
+                    </div>
+                </div>
+                
+                <div class="working-instructions">
+                    <div class="instruction-title">📝 Arbeitsauftrag</div>
+                    <ul class="instruction-list">
+                        <li>✅ Lest den Dialog zwischen Habu und Kleisthenes</li>
+                        <li>✅ Ergänzt mit Schulbuch Seite 142 (Volksversammlung)</li>
+                        <li>✅ Findet heraus: Wer entscheidet in Griechenland über Steuern?</li>
+                        <li>✅ Notiert die Antwort für das Tafelbild</li>
+                        <li>✅ Bereitet eure Präsentation vor</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Team 2: Regel-Problem -->
+            <div class="dialog-section" id="dialog2">
+                <div class="level-indicator level-standard">Standard-Niveau</div>
+                
+                <div class="context-box">
+                    <div class="context-title">🎯 Situation</div>
+                    <p>Händler Habu hat erfahren, dass es eine Volksversammlung gibt. Aber er braucht schnell eine Entscheidung für seine Handelsgeschäfte. In Ägypten gab der Pharao sofort Antworten!</p>
+                </div>
+                
+                <div class="complication">
+                    <div class="complication-title">⚠️ Habus Problem</div>
+                    <p><strong>Habu ist ungeduldig:</strong> "Ich bin Händler! Ich brauche HEUTE eine Antwort: Darf ich hier Gewürze verkaufen oder nicht? Wer macht denn die Handelsregeln?"</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Ich verstehe das nicht! Bei uns in Ägypten frage ich den Pharao: 'Darf ich Gewürze verkaufen?' - und er sagt sofort ja oder nein. Wer macht hier die Regeln für den Handel?"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">⚖️ Ephialtes (Ratsherr)</div>
+                    <p class="speech">"Das ist komplizierter bei uns! Zuerst macht der Rat der 500 einen Vorschlag für neue Handelsregeln. Dann diskutiert die Volksversammlung darüber."</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Rat der 500? Volksversammlung? Das sind ja zwei Schritte! Wie lange dauert das denn? Meine Waren werden schlecht!"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">⚖️ Ephialtes</div>
+                    <p class="speech">"Der Rat der 500 wird jedes Jahr neu gewählt. Sie bereiten die Entscheidungen vor. Dann stimmt die Volksversammlung ab. Das kann Wochen dauern..."</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Wochen?! Der Pharao entscheidet in einer Stunde! Warum macht ihr das so kompliziert?"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">⚖️ Ephialtes</div>
+                    <p class="speech">"Weil wir wollen, dass alle mitreden können! Der Rat der 50 regiert jeden Tag, aber die großen Entscheidungen trifft das ganze Volk. Das ist gerecht!"</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Gerecht... aber langsam! Für Geschäfte ist das schwierig..."</p>
+                </div>
+                
+                <div class="solution-hint">
+                    <strong>💡 Lösung für Habu:</strong> In Griechenland machen der Rat der 500 und die Volksversammlung zusammen die Regeln. Das dauert länger als beim Pharao, aber alle dürfen mitentscheiden.
+                </div>
+                
+                <div class="vocabulary-help">
+                    <div class="vocab-title">📚 Wichtige Wörter (DaZ-Hilfe)</div>
+                    <div class="vocab-grid">
+                        <div class="vocab-item">⚖️ Rat der 500 = 500 gewählte Vertreter</div>
+                        <div class="vocab-item">👥 Rat der 50 = Tägliche Regierung</div>
+                        <div class="vocab-item">🗳️ Wählen = Bestimmen, wer regiert</div>
+                        <div class="vocab-item">📜 Vorschlag = Idee für Gesetz</div>
+                    </div>
+                </div>
+                
+                <div class="working-instructions">
+                    <div class="instruction-title">📝 Arbeitsauftrag</div>
+                    <ul class="instruction-list">
+                        <li>✅ Lest den Dialog zwischen Habu und Ephialtes</li>
+                        <li>✅ Ergänzt mit Schulbuch Seite 142-143 (Rat der 500/50)</li>
+                        <li>✅ Findet heraus: Wie lange dauern Entscheidungen in Griechenland?</li>
+                        <li>✅ Vergleicht: Pharao vs. griechisches System</li>
+                        <li>✅ Bereitet eure Präsentation vor</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Team 3: Mitsprache-Problem -->
+            <div class="dialog-section" id="dialog3">
+                <div class="level-indicator level-advanced">Fortgeschritten</div>
+                
+                <div class="context-box">
+                    <div class="context-title">🎯 Situation</div>
+                    <p>Händler Habu hat verstanden, dass die Bürger in Griechenland mitentscheiden. Als erfolgreicher Händler möchte er auch bei wichtigen Entscheidungen mitreden. Aber darf er das überhaupt?</p>
+                </div>
+                
+                <div class="complication">
+                    <div class="complication-title">⚠️ Habus Problem</div>
+                    <p><strong>Habu wird mutig:</strong> "Ich zahle Steuern, ich bringe Waren nach Athen, ich helfe der Wirtschaft! Dann darf ich doch auch mitentscheiden, oder? Kann ich zur Volksversammlung?"</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Moment mal! Ihr sagt, hier dürfen alle mitentscheiden. Ich zahle Steuern und handle hier - kann ich dann auch zur Volksversammlung gehen und abstimmen?"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">🏛️ Perikles (Athener Politiker)</div>
+                    <p class="speech">"Das tut mir leid, aber nein. Du bist ein Metöke - ein Fremder. Nur Athener Bürger dürfen in der Volksversammlung abstimmen."</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Aber das ist ungerecht! Ich zahle eure Steuern, kaufe bei euren Handwerkern und bringe Waren aus aller Welt! Warum darf ich nicht mitreden?"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">🏛️ Perikles</div>
+                    <p class="speech">"Du hast recht, das ist ein Problem. Aber nur wer in Athen geboren wurde oder das Bürgerrecht erhält, darf abstimmen. Auch Frauen und Sklaven sind ausgeschlossen."</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Auch Frauen nicht?! Bei uns in Ägypten gab es sogar Pharaoninnen wie Hatschepsut! Wie kann das gerecht sein?"</p>
+                </div>
+                
+                <div class="dialog-box greek-speech">
+                    <div class="speaker">🏛️ Perikles</div>
+                    <p class="speech">"Du stellst gute Fragen, Habu. Unsere Demokratie ist noch nicht perfekt. Vielleicht wird sie sich eines Tages ändern... Aber momentan entscheiden nur männliche Athener Bürger."</p>
+                </div>
+                
+                <div class="dialog-box habu-speech">
+                    <div class="speaker">🏺 Händler Habu</div>
+                    <p class="speech">"Dann ist eure Demokratie also nur für wenige Menschen da... Das muss ich erst mal verstehen..."</p>
+                </div>
+                
+                <div class="solution-hint">
+                    <strong>💡 Lösung für Habu:</strong> Die griechische Demokratie gilt nur für männliche Athener Bürger. Fremde (Metöken), Frauen und Sklaven sind ausgeschlossen. Die Demokratie war noch nicht für alle da.
+                </div>
+                
+                <div class="vocabulary-help">
+                    <div class="vocab-title">📚 Wichtige Wörter (DaZ-Hilfe)</div>
+                    <div class="vocab-grid">
+                        <div class="vocab-item">🌍 Metöke = Fremder in Athen</div>
+                        <div class="vocab-item">👨‍💼 Bürger = Vollwertiges Mitglied der Polis</div>
+                        <div class="vocab-item">🚫 Ausgeschlossen = Darf nicht mitmachen</div>
+                        <div class="vocab-item">⚖️ Bürgerrecht = Erlaubnis, mitzuentscheiden</div>
+                    </div>
+                </div>
+                
+                <div class="working-instructions">
+                    <div class="instruction-title">📝 Arbeitsauftrag</div>
+                    <ul class="instruction-list">
+                        <li>✅ Lest den Dialog zwischen Habu und Perikles</li>
+                        <li>✅ Ergänzt mit Schulbuch Seite 144 (Vergleich heute/damals)</li>
+                        <li>✅ Diskutiert: Ist es gerecht, dass nicht alle mitentscheiden dürfen?</li>
+                        <li>✅ Vergleicht: Wer darf heute in Deutschland wählen?</li>
+                        <li>✅ Bereitet eure kritische Präsentation vor</li>
+                    </ul>
+                </div>
+                
+                <div class="complication">
+                    <div class="complication-title">🤔 Zusatz-Frage für starke SuS</div>
+                    <p>Recherchiert mit QR-Code: Welche anderen Gruppen waren in der athenischen Demokratie ausgeschlossen? Wie ist das heute in Deutschland?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showDialog(dialogNumber) {
+            // Hide all dialogs
+            document.querySelectorAll('.dialog-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected dialog
+            document.getElementById(`dialog${dialogNumber}`).classList.add('active');
+            
+            // Activate corresponding tab
+            document.querySelectorAll('.tab')[dialogNumber - 1].classList.add('active');
+        }
+        
+        // Print functionality
+        function printDialog(dialogNumber) {
+            showDialog(dialogNumber);
+            window.print();
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            if (event.key >= '1' && event.key <= '3') {
+                showDialog(parseInt(event.key));
+            }
+        });
+    </script>
+</body>
+</html>

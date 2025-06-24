@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogue Cards - Complete Set</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .level-section {
+            margin-bottom: 40px;
+        }
+        
+        .level-title {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .dialogue-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 3px solid transparent;
+            position: relative;
+            min-height: 350px;
+        }
+        
+        .green-card {
+            border-color: #22c55e;
+            background: linear-gradient(145deg, #f0fdf4, #dcfce7);
+        }
+        
+        .yellow-card {
+            border-color: #eab308;
+            background: linear-gradient(145deg, #fffbeb, #fef3c7);
+        }
+        
+        .partner-label {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+        }
+        
+        .partner-a {
+            background: #1e40af;
+        }
+        
+        .partner-b {
+            background: #dc2626;
+        }
+        
+        .instruction-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.05);
+        }
+        
+        .instruction-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #374151;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .instruction-title::before {
+            content: "💬";
+            margin-right: 8px;
+        }
+        
+        .question-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        .question-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #cbd5e1;
+            font-size: 14px;
+            color: #475569;
+        }
+        
+        .question-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .answer-template {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 8px 0;
+            font-style: italic;
+            color: #1e40af;
+        }
+        
+        .bonus-section {
+            background: rgba(168, 85, 247, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #a855f7;
+            margin-top: 15px;
+        }
+        
+        .bonus-title {
+            font-weight: bold;
+            color: #7c3aed;
+            margin-bottom: 8px;
+        }
+        
+        .print-note {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .header, .print-note {
+                display: none;
+            }
+            .dialogue-card {
+                break-inside: avoid;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dialogue Cards: "My Weekend"</h1>
+            <p>Echte Dialoge mit mindestens 3 Aktivitäten</p>
+        </div>
+        
+        <div class="print-note">
+            📋 <strong>Druckhinweis:</strong> Diese Karten sind optimiert für A4-Druck. Jede Karte sollte auf eine eigene Seite gedruckt werden.
+        </div>
+        
+        <!-- GREEN LEVEL CARDS -->
+        <div class="level-section">
+            <div class="level-title">🟢 GREEN LEVEL</div>
+            
+            <div class="cards-grid">
+                <!-- Green Card A -->
+                <div class="dialogue-card green-card">
+                    <div class="partner-label partner-a">PARTNER A - FRAGER</div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Your Job: ASK 3 Questions</div>
+                        <ul class="question-list">
+                            <li><strong>Question 1:</strong> "Where did you go last weekend?"</li>
+                            <li><strong>Question 2:</strong> "What did you do there?"</li>
+                            <li><strong>Question 3:</strong> "How was it?"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Help - If Partner needs more:</div>
+                        <ul class="question-list">
+                            <li>"Who was with you?"</li>
+                            <li>"When did you go?"</li>
+                            <li>"Why did you go there?"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bonus-section">
+                        <div class="bonus-title">Remember:</div>
+                        Listen carefully! Ask follow-up questions to keep the conversation going!
+                    </div>
+                </div>
+                
+                <!-- Green Card B -->
+                <div class="dialogue-card green-card">
+                    <div class="partner-label partner-b">PARTNER B - ANTWORTGEBER</div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Your Job: ANSWER with Details</div>
+                        <div class="answer-template">
+                            <strong>Answer 1:</strong> "I went to the ____."<br>
+                            <em>(park / cinema / shopping centre / swimming pool)</em>
+                        </div>
+                        <div class="answer-template">
+                            <strong>Answer 2:</strong> "I ______ with ______."<br>
+                            <em>(played football / watched a film / went shopping + friend/family)</em>
+                        </div>
+                        <div class="answer-template">
+                            <strong>Answer 3:</strong> "It was ______!"<br>
+                            <em>(great / good / OK / fun / exciting)</em>
+                        </div>
+                    </div>
+                    
+                    <div class="bonus-section">
+                        <div class="bonus-title">Extra Details you can add:</div>
+                        • When: "On Saturday morning..."<br>
+                        • Who: "...with my best friend Tom"<br>
+                        • Why: "...because I love football"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- YELLOW LEVEL CARDS -->
+        <div class="level-section">
+            <div class="level-title">🟡 YELLOW LEVEL</div>
+            
+            <div class="cards-grid">
+                <!-- Yellow Card A -->
+                <div class="dialogue-card yellow-card">
+                    <div class="partner-label partner-a">PARTNER A - FRAGER</div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Your Mission: Get 3 Weekend Activities</div>
+                        <div class="answer-template">
+                            Ask about <strong>3 different things</strong> your partner did:
+                        </div>
+                        <ul class="question-list">
+                            <li><strong>Activity 1:</strong> "What did you do on Saturday?"</li>
+                            <li><strong>Activity 2:</strong> "And what about Sunday?"</li>
+                            <li><strong>Activity 3:</strong> "Did you do anything else?"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Follow-up Questions (Important!):</div>
+                        <ul class="question-list">
+                            <li>"Where exactly?" (place details)</li>
+                            <li>"Who was with you?" (people)</li>
+                            <li>"How long did you stay?" (time)</li>
+                            <li>"Why did you choose that?" (reasons)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bonus-section">
+                        <div class="bonus-title">Dialog Goal:</div>
+                        Keep asking until you know about <strong>3 activities + places + people</strong>!
+                    </div>
+                </div>
+                
+                <!-- Yellow Card B -->
+                <div class="dialogue-card yellow-card">
+                    <div class="partner-label partner-b">PARTNER B - STORY TELLER</div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Your Mission: Tell about 3 Weekend Activities</div>
+                        <div class="answer-template">
+                            <strong>Activity 1:</strong> "On Saturday morning I went to... with... We..."
+                        </div>
+                        <div class="answer-template">
+                            <strong>Activity 2:</strong> "In the afternoon I... at the... It was..."
+                        </div>
+                        <div class="answer-template">
+                            <strong>Activity 3:</strong> "On Sunday I visited... and we..."
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Include These Details:</div>
+                        <ul class="question-list">
+                            <li><strong>WHERE:</strong> specific places (stadium, shopping centre, grandma's house)</li>
+                            <li><strong>WHO:</strong> people you were with (friends, family, team)</li>
+                            <li><strong>HOW:</strong> how it felt (exciting, boring, funny, great)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bonus-section">
+                        <div class="bonus-title">Bonus Points:</div>
+                        Add time details: "for 2 hours", "all morning", "until 6 o'clock"<br>
+                        Add reasons: "because I love football", "because it was sunny"
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- EXTENSION CARDS -->
+        <div class="level-section">
+            <div class="level-title">⭐ EXTENSION LEVEL </div>
+            
+            <div class="cards-grid">
+                <!-- Extension Card A -->
+                <div class="dialogue-card" style="border-color: #8b5cf6; background: linear-gradient(145deg, #faf5ff, #f3e8ff);">
+                    <div class="partner-label" style="background: #8b5cf6;">PARTNER A - INVESTIGATOR</div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Your Challenge: Deep Conversation</div>
+                        <div class="answer-template">
+                            Don't just ask basic questions - dig deeper!
+                        </div>
+                        <ul class="question-list">
+                            <li>"What was the best part of your weekend?"</li>
+                            <li>"If you could change one thing, what would it be?"</li>
+                            <li>"Which activity do you want to do again?"</li>
+                            <li>"What made it so special/boring/funny?"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Advanced Follow-ups:</div>
+                        <ul class="question-list">
+                            <li>"Compared to last weekend, how was this one?"</li>
+                            <li>"Would you recommend it to me? Why?"</li>
+                            <li>"What's your plan for next weekend?"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bonus-section">
+                        <div class="bonus-title">Goal:</div>
+                        Create a natural conversation that flows for <strong>5+ minutes</strong>!
+                    </div>
+                </div>
+                
+                <!-- Extension Card B -->
+                <div class="dialogue-card" style="border-color: #8b5cf6; background: linear-gradient(145deg, #faf5ff, #f3e8ff);">
+                    <div class="partner-label" style="background: #8b5cf6;">PARTNER B - STORYTELLER</div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Your Challenge: Rich Stories</div>
+                        <div class="answer-template">
+                            Don't just list activities - tell engaging stories!
+                        </div>
+                        <ul class="question-list">
+                            <li>Start each story with setting: "You know what happened on Saturday?"</li>
+                            <li>Add emotions: "I was so excited because..."</li>
+                            <li>Include problems/surprises: "But then..."</li>
+                            <li>End with reflection: "Looking back, I think..."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="instruction-group">
+                        <div class="instruction-title">Story Elements to Include:</div>
+                        <ul class="question-list">
+                            <li><strong>Sequence:</strong> First... then... after that... finally...</li>
+                            <li><strong>Contrast:</strong> Usually I... but this time...</li>
+                            <li><strong>Evaluation:</strong> The best/worst part was...</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bonus-section">
+                        <div class="bonus-title">Advanced Features:</div>
+                        • Use past continuous: "While I was playing..."<br>
+                        • Add direct speech: "My friend said: 'Let's go!'"<br>
+                        • Connect to personal interests: "Since I love music..."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

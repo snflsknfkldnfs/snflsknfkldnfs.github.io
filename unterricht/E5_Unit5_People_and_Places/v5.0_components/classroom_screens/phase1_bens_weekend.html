@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1: Ben's Weekend Review</title>
+    <style>
+        /* Meta-versioning */
+        :root {
+            --version: "5.1";
+            --release-date: "2024-06-20";
+        }
+        
+        /* Base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2c3e50;
+        }
+
+        /* Timeline container */
+        .timeline-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 1rem 0;
+            scroll-snap-type: none;
+            gap: 0.5rem;
+            margin-top: 80px;
+            padding-bottom: 100px;
+            scroll-behavior: smooth;
+        }
+
+        /* Timeline connection line */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            bottom: 100px;
+            width: 4px;
+            background: rgba(255,255,255,0.5);
+            transform: translateX(-50%);
+        }
+
+        /* Event cards */
+        .event-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 0.5rem;
+            flex: 0 0 260px;
+            width: 260px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 0 0.3rem;
+            position: relative;
+            height: fit-content;
+        }
+
+        .event-card:nth-child(odd) {
+            margin-left: 5%;
+        }
+
+        .event-card:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        .event-image {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            border-radius: 12px;
+            margin: 0.5rem 0;
+            filter: blur(8px) brightness(0.9);
+            transition: filter 0.5s ease-out;
+            cursor: pointer;
+            background: #f8f9fa;
+        }
+        
+        .event-image.revealed {
+            filter: none;
+        }
+
+        /* Date header */
+        .date-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(40, 50, 70, 0.95);
+            color: white;
+            padding: 1.5rem;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .date-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Interactive elements */
+        .toggle-button {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1.5rem 3rem;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            z-index: 1001;
+            white-space: nowrap;
+        }
+        
+        .toggle-button:hover {
+            transform: translateX(-50%) scale(1.05);
+            background: #45a049;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.05);
+        }
+
+        .final-insight {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 80%;
+            max-width: 600px;
+            display: none;
+            z-index: 1000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Version metadata -->
+    <div style="position:fixed; top:10px; right:10px; color:white; opacity:0.5;">
+        v5.2 (2024-06-20)
+    </div>
+
+    <div class="date-header">
+        <h1 style="font-size: 2.4rem; text-align: center; margin: 0;">🌍 Ben's Weekend Adventure</h1>
+        <div style="display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; font-size: 1.1rem;">
+            <div>🗓️ 20 June - Friday</div>
+            <div>🗓️ 21 June - Saturday</div>
+            <div>🗓️ 22 June - Sunday</div>
+        </div>
+    </div>
+
+    <div class="timeline-container">
+        <!-- Friday Events -->
+        <div class="event-card">
+            <h2 style="font-size: 1.3rem;">📅 Friday Morning, 20 June</h2>
+            <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Bamberg_Cathedral_Dom_2.jpg" 
+                 alt="Bamberg Streets" 
+                 class="event-image">
+            <p style="font-style: italic; color: #4a5568;">Ben _____ (explore) the historic streets</p>
+        </div>
+
+        <div class="event-card">
+            <h2 style="font-size: 1.3rem;">📅 Friday Evening, 20 June</h2>
+            <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Bamberg_Cathedral_Dom_1.jpg" 
+                 alt="Bamberg Cathedral" 
+                 class="event-image">
+            <p style="font-style: italic; color: #4a5568;">He _____ (visit) the cathedral</p>
+        </div>
+
+        <!-- Saturday Event -->
+        <div class="event-card">
+            <h2>Saturday Afternoon</h2>
+            <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Basketball_Ben_Selfie_on_Bench.jpeg" 
+                 alt="Basketball Game" 
+                 class="event-image">
+            <p style="font-style: italic; color: #4a5568;">They _____ (play) basketball</p>
+        </div>
+
+        <!-- Saturday Events -->
+        <div class="event-card">
+            <h2>Saturday Morning</h2>
+            <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Basketball_Team_Photo.jpg" 
+                 alt="Team Preparation" 
+                 class="event-image">
+            <p style="font-style: italic; color: #4a5568;">The team _____ (plan) their strategy</p>
+        </div>
+
+        <!-- Sunday Events -->
+        <div class="event-card">
+            <h2>Sunday Lunch</h2>
+            <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Ben_Eating_Doener.png" 
+                 alt="German Food" 
+                 class="event-image">
+            <p style="font-style: italic; color: #4a5568;">Ben _____ (try) local food</p>
+        </div>
+
+        <div class="event-card">
+            <h2>Team Celebration</h2>
+            <img src="/Users/paulad/snflsknfkldnfs.github.io/unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Basketball_Team_Photo.jpg" 
+                 alt="Team Photo" 
+                 class="event-image">
+            <p style="font-style: italic; color: #4a5568;">They _____ (celebrate) their win</p>
+        </div>
+    </div>
+
+    <button class="toggle-button" onclick="toggleInsight()">
+    🧩 You probably have an idea about Ben's weekend... Click to verify!
+</button>
+    <div class="final-insight" id="insight">
+        <strong>Key Learning:</strong> Ben spent his weekend in Bamberg where he visited historical sites, played sports, and tried local food.
+    </div>
+
+    <script>
+        // Interactive image reveal
+        document.querySelectorAll('.event-image').forEach(img => {
+            img.addEventListener('click', function() {
+                this.classList.toggle('revealed');
+            });
+        });
+
+        // Answer reveal functionality
+        let insightVisible = false;
+        const insightContent = `
+            <div style="text-align: center; padding: 1rem;">
+                <div style="font-size: 1.5rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600;">Create sentences about Ben's weekend:</div>
+                <div style="display: grid; gap: 1rem; font-size: 1.2rem;">
+                    <div>🏰 Bamberg → He _____ (visit)</div>
+                    <div>🏀 Court → They _____ (play)</div>
+                    <div>🌯 Shop → He _____ (eat)</div>
+                </div>
+                <div style="margin-top: 1.5rem; color: #4a5568;">
+                    Tip: Use the simple past form of the verbs!
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, auto); 
+                        justify-content: center; gap: 2rem; font-size: 3rem;">
+                    <div>🏰 → 🏃♂️</div>
+                    <div>🏀 → ⛹️♂️</div>
+                    <div>🌯 → 🍽️</div>
+                </div>
+                <div style="margin-top: 1.5rem; font-size: 1.1rem; color: #666;">
+                    Icons show where Ben was and what he did there
+                </div>
+            </div>
+                <h2 style="color: #2c3e50; margin-bottom: 2rem;">🏆 Ben's Weekend Activities</h2>
+                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+                    <div style="background: #f0f4f8; padding: 1.5rem; border-radius: 12px; min-width: 200px;">
+                        <h3 style="color: #2c3e50; margin: 0 0 1rem 0;">📍 Places</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                            <div>🏛️ Bamberg</div>
+                            <div>🏀 Court</div>
+                            <div>🌯 Shop</div>
+                        </div>
+                    </div>
+                    <div style="background: #f0f4f8; padding: 1.5rem; border-radius: 12px; min-width: 200px;">
+                        <h3 style="color: #2c3e50; margin: 0 0 1rem 0;">📝 Actions</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                            <div>🏃♂️ Visited</div>
+                            <div>⛹️♂️ Played</div>
+                            <div>🍽️ Ate</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem; color: #4CAF50; font-weight: 500;">
+                    💡 Key Insight: Ben explored, played, and tasted!
+                </div>
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 12px;">
+                    <h3 style="color: #2c3e50; margin-bottom: 1rem;">⏱️ Timeline</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;">🗓️ Friday: City Exploration</li>
+                        <li style="margin-bottom: 0.8rem;">🗓️ Saturday: Sports Activities</li>
+                        <li style="margin-bottom: 0.8rem;">🗓️ Sunday: Cultural Experience</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 2rem; background: #e3f2fd; padding: 1.5rem; border-radius: 12px;">
+                <p style="margin: 0; color: #1976d2; font-weight: 500;">
+                    🔍 Key Insight: Ben combined historical exploration with physical activities and local cuisine!
+                </p>
+            </div>
+            <div style="margin: 1.5rem 0;">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                    <div>
+                        <h3>📍 Locations</h3>
+                        <ul style="text-align: left; list-style: none;">
+                            <li>🏛️ Bamberg Cathedral</li>
+                            <li>🏀 Basketball Court</li>
+                            <li>🌯 Döner Shop</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>🎯 Activities</h3>
+                        <ul style="text-align: left; list-style: none;">
+                            <li>🚶♂️ City tour</li>
+                            <li>⛹️♂️ Basketball match</li>
+                            <li>🍴 Food tasting</li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 1.2rem;">
+                    <em>Key insight:</em> Ben combined cultural exploration with sports and local cuisine!
+                </p>
+            </div>
+        `;
+
+        function toggleInsight() {
+            const insight = document.getElementById('insight');
+            insightVisible = !insightVisible;
+            
+            if(insightVisible) {
+                insight.innerHTML = insightContent;
+                insight.style.display = 'block';
+                document.querySelector('.toggle-button').textContent = '🔼 Hide Summary';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                insight.style.display = 'none';
+                document.querySelector('.toggle-button').textContent = '🔽 Show Full Summary';
+            }
+        }
+
+        // Version metadata injection
+        document.querySelector('[style*="version"]').innerHTML = 
+            `v${CSS.escape('5.1')} (2024-06-20)`;
+    </script>
+</body>
+</html>
