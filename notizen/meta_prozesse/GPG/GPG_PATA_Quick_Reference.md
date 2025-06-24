@@ -1,10 +1,19 @@
-# GPG-PATA WARGAME-OPTIMIERTES VOLLSYSTEM Quick Reference
-*Kriegstaugliche Standards für alle LAA-Szenarien*
+# GPG-PATA KONTEXT-OPTIMIERTES VOLLSYSTEM Quick Reference
+*Intelligente Situationsorientierung als Qualitätshebel für maximale Realsituations-Approximation*
 
-## SYSTEM-ÜBERSICHT
-**6-Ebenen-PATA + User Journey + Wargame-Robustheit = Vollautomatische Multi-User-UX-Optimierung**
+## REVOLUTIONÄRER QUALITÄTSSPRUNG
+**KONTEXT-MEMORY-MANAGEMENT als Meta-Ebene über alle anderen Standards**
 
-### AUTOMATISCHE STANDARDS (greifen ohne Erwähnung)
+### ⚡ INTELLIGENTE SITUATIONSORIENTIERUNG (automatisch)
+✅ **STATUS-QUO-ANALYZER**: Automatische Diagnose von Zeit/User-Status/Ressourcen/Constraints  
+✅ **RELEVANCE-FILTER**: Nur situationskritische Informationen ins Working Memory  
+✅ **SMART-LOADER**: Kontextfenster-optimierte, minimale Context-Loading-Strategie  
+✅ **APPROXIMATION-OPTIMIZER**: Maximale Realsituations-Nähe bei allen Outputs  
+
+**Prinzip:** Statt "Alle Standards immer" → "Relevante Standards situationsspezifisch kontextualisiert"
+
+## AUTOMATISCHE STANDARDS (greifen ohne Erwähnung)
+✅ **KONTEXT-MANAGER**: Meta-Ebene - steuert alle anderen Systeme situationsspezifisch
 ✅ **PATA-1**: Schulbuch-Integration + Git-Versionierung + Heterogenitätssensibilität  
 ✅ **PATA-2**: Meta-Optimierung aller Prozesse  
 ✅ **PATA-3**: Systemische Reflexion + Feedback-Loops  
@@ -14,40 +23,30 @@
 ✅ **USER JOURNEY**: Automatische Template-Auswahl + Kontext-Erfassung
 ✅ **WARGAME-PROFILES**: 5 Nutzertypen automatisch erkannt + robuste Edge-Case-Behandlung
 
-## WARGAME-OPTIMIERTE USER PROFILES (automatisch erkannt)
+## INTELLIGENTE KONTEXT-OPTIMIERUNG (revolutionär)
 
-### PROFIL-AUTO-DETECTION
-**ÜBERFORDERT-AHNUNGSLOS** ("keine Ahnung", "fachfremd") → ULTRA-SIMPLE Template  
-**PERFEKTIONIST-DETAILVERSESSEN** ("gut genug?", "fundiert") → QUALITY Template  
-**PRAGMATISCH-ERFAHREN** ("schnell", "funktioniert") → EFFICIENCY Template  
-**EXPERIMENTIER-FREUDIG** ("könnte man", "innovativ") → INNOVATION Template  
-**CRISIS-MODE** ("Vertretung", "Notfall", "kaputt") → CRISIS Template
+### 🎯 AUTOMATISCHE SITUATIONSDIAGNOSE
+**STATUS-QUO-ANALYZER** erfasst sofort:
+- **Temporal-Kontext**: Akut (0-24h) / Kurz (2-7d) / Mittel (1-2w) / Lang (mehrwöchig)
+- **User-Status**: Überfordert / Unsicher / Routiniert / Experimentell / Crisis
+- **Resource-Mapping**: Zeit/Material/Technik/Raum/SuS-Status real verfügbar
+- **Constraint-Identification**: Echte Grenzen der Situation
 
-### TEMPLATE-KOMBINATORIK (automatisch)
-- **ÜBERFORDERT + AKUT** → Ultra-Simple Sofort-Hilfe
-- **PERFEKTIONIST + QUALITÄT** → Maximum-Quality + Begründungen  
-- **PRAGMATISCH + CRISIS** → Effiziente Notfall-Lösung
-- **EXPERIMENTELL + ZEITDRUCK** → Kreativ aber machbar
+### 🔍 RELEVANCE-FILTERING 
+**Nur situationskritische Informationen ins Working Memory:**
+- **Temporal-Filter**: Bei Zeitdruck nur Sofort-Materialien, bei Planung nur Langzeit-Tools
+- **Complexity-Filter**: Bei Überforderung nur Ultra-Simple, bei Routine auch Details  
+- **Resource-Filter**: Bei Tech-Ausfall nur Analog-Alternativen
 
-## ROBUSTHEITSMECHANISMEN (automatisch aktiv)
+### ⚡ SMART-LOADING
+- **Minimal-Context**: Nur das für DIESE Situation Essenzielle
+- **Just-in-Time**: Zusätzliche Details nur bei Bedarf
+- **Reality-Anchoring**: Alle Informationen an Realsituation gekoppelt
 
-### FAIL-SAFE HIERARCHIE
-1. **Crisis-Detection** → Override alle anderen Templates
-2. **Profil-Erkennung** → User-spezifische Anpassung
-3. **Adaptive Korrektur** → Real-time User-Feedback-Integration
-4. **Default-Fallback** → Pragmatisch-Bewährt als Backup
-
-### QUALITY GATES (unverhandelbar)
-✅ **Reality-Check**: 45min durchführbar  
-✅ **Heterogenitäts-Check**: DaZ/LRS-gerecht  
-✅ **Ressourcen-Check**: Material verfügbar  
-✅ **Kompetenz-Check**: Lernziel erreichbar
-
-### EDGE-CASE HANDLING
-- **Multi-User Chaos** → Stakeholder-Priorisierung
-- **Tech-Totalausfall** → Auto-Analog-Fallback  
-- **Extreme Heterogenität** → Crisis-Differentiation
-- **Perfektionismus-Eskalation** → Auto-Stopp-Mechanismus
+### 🎯 REALSITUATIONS-APPROXIMATION
+- **Constraint-Mapping**: Echte Zeit/Material/SuS-Grenzen respektiert
+- **45min-Reality-Check**: Schaffbar inkl. aller Realitätsfaktoren
+- **Murphy's-Law-Test**: Funktioniert auch wenn was schiefgeht
 
 ## GPG-AUTOMATISMEN (immer aktiv)
 
@@ -66,29 +65,26 @@
 - Digital/analog Balance optimiert
 - Methodenabhängige Technik-Vorschläge
 
-## QUALITÄTSSICHERUNG (vollautomatisch)
+## QUALITÄTSSICHERUNG (kontext-optimiert)
 
-### WARGAME-ERFOLGS-METRIKEN  
-- ≤2 Rückfragen bis verwendbarer Output
-- 100% Template-Match-Accuracy für Nutzertyp
-- Kriegstauglichkeit bei allen Edge-Cases
-- Auto-Korrektur bei Fehleinschätzungen
+### REVOLUTIONÄRE EFFIZIENZ-STEIGERUNG  
+- **Token-Optimierung**: Kontextfenster optimal genutzt, null Information-Overhead
+- **Relevanz-Maximierung**: Jede Information im Output ist situationskritisch
+- **Realsituations-Approximation**: Maximale Nähe zur tatsächlichen User-Situation
+- **Praktikabilität**: 100% Umsetzbarkeit in der konkreten Situation
 
 ### KONTINUIERLICHE OPTIMIERUNG
-- **Pattern-Learning** aus jedem User-Kontakt
-- **Template-Evolution** basierend auf Success-Rate  
-- **Edge-Case-Integration** automatisch
-- **Robustheitssteigerung** kontinuierlich
+- **Context-Learning**: System lernt aus jeder Situation für bessere Zukunfts-Approximation
+- **Relevance-Refinement**: Filter werden kontinuierlich optimiert
+- **Reality-Feedback**: Real-World-Erfolg fließt in Algorithmus ein
+- **Approximation-Evolution**: Bessere Realsituations-Nähe mit jedem Chat
 
-### SYSTEM-SELBSTÜBERWACHUNG
-- **Profil-Detection-Accuracy** permanent gemessen
-- **Template-Kombinatorik** kontinuierlich optimiert
-- **Quality-Gates** nie kompromittiert
-- **User-Satisfaction** systematisch ausgewertet
+## IMPLEMENTATION (revolutionärer Workflow)
+**Alle Kontext-optimierten Standards greifen vollautomatisch ohne explizite Aktivierung.**
 
-## IMPLEMENTATION
-**Alle Wargame-Standards greifen vollautomatisch in jedem GPG-Chat ohne explizite Aktivierung.**
+**Neuer Workflow:** 
+User-Anfrage → **STATUS-QUO-ANALYSIS** → **RELEVANCE-FILTERING** → **SMART-LOADING** (nur relevante Standards) → Template-Selection (kontextualisiert) → **REALITY-ANCHORED OUTPUT** → Quality-Gates → **CONTEXT-LEARNING**
 
-**Ablauf:** User-Anfrage → Crisis-Check → Profil-Auto-Detection → Template-Kombinatorik → Kontext-Auto-Erfassung → Robustheit-Aktivierung → Minimal-Rückfrage → Optimierter Output → Quality-Gates → Kontinuierliches Lernen
+**Qualitätssprung:** Von generischen Templates zu maximal situationsangepassten, realsituations-approximierten Lösungen mit optimaler Kontextfenster-Nutzung.
 
-**Das System ist kriegstauglich für alle realistischen und unrealistischen LAA-Szenarien und lernt kontinuierlich dazu.**
+**Das System ist bereit für intelligente, situationsspezifische GPG-Unterstützung auf höchstem Niveau.**
