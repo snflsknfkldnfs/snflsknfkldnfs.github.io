@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafelbild UE2: Social Media als Kulturtechnik</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif;
+            background: #2c3e50;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .tafel {
+            background: #34495e;
+            border: 8px solid #7f8c8d;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 80vh;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 40px;
+            color: #f39c12;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .dreischritt-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            gap: 30px;
+        }
+        
+        .dreischritt-spalte {
+            flex: 1;
+            background: rgba(52, 152, 219, 0.2);
+            border: 3px solid #3498db;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .dreischritt-header {
+            font-size: 2.2em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .emoji-gross {
+            font-size: 4em;
+            margin: 15px 0;
+        }
+        
+        .beispiele {
+            font-size: 1.4em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+        
+        .zentrale-erkenntnis {
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 40px 0;
+            text-align: center;
+            border: 4px solid #fff;
+        }
+        
+        .kulturtechnik-box {
+            background: rgba(46, 204, 113, 0.3);
+            border: 4px solid #2ecc71;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .definition {
+            font-size: 1.8em;
+            color: #f1c40f;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .beispiele-liste {
+            font-size: 1.4em;
+            margin: 15px 0;
+        }
+        
+        .pfeil {
+            font-size: 3em;
+            color: #e74c3c;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .sammlung-bereich {
+            background: rgba(155, 89, 182, 0.2);
+            border: 3px dashed #9b59b6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 100px;
+        }
+        
+        .sammlung-titel {
+            color: #9b59b6;
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .hausaufgabe {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: #f39c12;
+            color: #2c3e50;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+            border: 3px solid #fff;
+        }
+        
+        .interaktiv {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .interaktiv:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .versteckt {
+            opacity: 0.3;
+        }
+        
+        .sichtbar {
+            opacity: 1;
+            animation: erscheinen 0.5s ease-in;
+        }
+        
+        @keyframes erscheinen {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="tafel">
+        <div class="title">📱 Social Media - neue Kulturtechnik? 🏔️</div>
+        
+        <!-- Dreischritt-Analyse -->
+        <div class="dreischritt-container">
+            <div class="dreischritt-spalte">
+                <div class="dreischritt-header">📱 HEUTE</div>
+                <div class="emoji-gross">📱</div>
+                <div class="beispiele">
+                    TikTok<br>
+                    Instagram<br>
+                    WhatsApp<br>
+                    Snapchat
+                </div>
+            </div>
+            
+            <div class="dreischritt-spalte">
+                <div class="dreischritt-header">🎯 FUNKTION</div>
+                <div class="emoji-gross">❓</div>
+                <div class="sammlung-bereich interaktiv" onclick="zeigeBeispiele('funktion')">
+                    <div class="sammlung-titel">Was machen wir damit?</div>
+                    <div id="funktion-beispiele" class="versteckt">
+                        • Spaß haben<br>
+                        • Freunden zeigen<br>
+                        • Geschichten erzählen<br>
+                        • Berühmt werden<br>
+                        • Informationen teilen
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dreischritt-spalte">
+                <div class="dreischritt-header">🏔️ FRÜHER</div>
+                <div class="emoji-gross">⏰</div>
+                <div class="sammlung-bereich interaktiv" onclick="zeigeBeispiele('frueher')">
+                    <div class="sammlung-titel">Wie ging das ohne TikTok?</div>
+                    <div id="frueher-beispiele" class="versteckt">
+                        🎨 Höhlenmalerei<br>
+                        📜 Briefe<br>
+                        ☎️ Telefon<br>
+                        📺 Fernsehen<br>
+                        🔔 Kirchenglocken
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Zentrale Erkenntnis -->
+        <div class="zentrale-erkenntnis interaktiv" onclick="zeigeErkenntnis()">
+            <div style="font-size: 2.5em; margin-bottom: 15px;">💡 ERKENNTNIS</div>
+            <div id="erkenntnis-text" class="versteckt" style="font-size: 1.8em;">
+                Menschen wollen schon seit der STEINZEIT kommunizieren!<br>
+                Nur die TECHNIK hat sich verändert!
+            </div>
+        </div>
+        
+        <div class="pfeil">⬇️</div>
+        
+        <!-- Kulturtechnik-Definition -->
+        <div class="kulturtechnik-box">
+            <div class="definition">KULTURTECHNIK = Eine grundlegende menschliche Fähigkeit</div>
+            
+            <div class="beispiele-liste">
+                <strong>Beispiele:</strong><br>
+                🗣️ <strong>KOMMUNIZIEREN</strong> (Geschichten erzählen, Nachrichten senden)<br>
+                🔢 <strong>RECHNEN</strong> (Mengen bestimmen, Handel treiben)<br>
+                ✍️ <strong>SCHREIBEN</strong> (Gedanken festhalten, Wissen übertragen)
+            </div>
+            
+            <div class="pfeil">⬇️</div>
+            
+            <div style="background: rgba(231, 76, 60, 0.8); padding: 20px; border-radius: 10px; font-size: 1.6em; text-align: center; margin-top: 20px;">
+                ➡️ Die <strong>KULTURTECHNIK</strong> bleibt gleich<br>
+                ➡️ Die <strong>TECHNIK</strong> verändert nur, WIE wir es machen
+            </div>
+        </div>
+        
+        <!-- Transfer-Sammlung -->
+        <div class="sammlung-bereich">
+            <div class="sammlung-titel">🔗 Andere Apps für KOMMUNIZIEREN:</div>
+            <div id="transfer-sammlung" style="font-size: 1.3em; line-height: 1.8;">
+                <!-- Hier werden Schülerantworten gesammelt -->
+                <div class="interaktiv" onclick="hinzufuegenTransfer('WhatsApp')">+ WhatsApp</div>
+                <div class="interaktiv" onclick="hinzufuegenTransfer('E-Mail')">+ E-Mail</div>
+                <div class="interaktiv" onclick="hinzufuegenTransfer('Telefon')">+ Telefon</div>
+                <div class="interaktiv" onclick="hinzufuegenTransfer('Brief')">+ Brief</div>
+            </div>
+        </div>
+        
+        <!-- Ausblick -->
+        <div style="background: rgba(52, 152, 219, 0.3); border: 3px solid #3498db; border-radius: 15px; padding: 20px; margin-top: 30px; text-align: center;">
+            <div style="font-size: 1.8em; color: #f1c40f; margin-bottom: 15px;">🚀 AUSBLICK UE3</div>
+            <div style="font-size: 1.4em;">
+                Welche anderen Kulturtechniken verstecken sich hinter eurer Technik?
+            </div>
+        </div>
+        
+        <!-- Hausaufgabe -->
+        <div class="hausaufgabe">
+            📝 HA: Welche Technik nutzt ihr zum RECHNEN?<br>
+            (Taschenrechner, Handy, Kopf...)
+        </div>
+    </div>
+    
+    <script>
+        function zeigeBeispiele(bereich) {
+            const element = document.getElementById(bereich + '-beispiele');
+            element.classList.remove('versteckt');
+            element.classList.add('sichtbar');
+        }
+        
+        function zeigeErkenntnis() {
+            const element = document.getElementById('erkenntnis-text');
+            element.classList.remove('versteckt');
+            element.classList.add('sichtbar');
+        }
+        
+        let transferItems = [];
+        
+        function hinzufuegenTransfer(item) {
+            if (!transferItems.includes(item)) {
+                transferItems.push(item);
+                const sammlung = document.getElementById('transfer-sammlung');
+                const neuesItem = document.createElement('div');
+                neuesItem.textContent = '✓ ' + item;
+                neuesItem.style.color = '#2ecc71';
+                neuesItem.style.fontWeight = 'bold';
+                neuesItem.style.animation = 'erscheinen 0.5s ease-in';
+                sammlung.appendChild(neuesItem);
+            }
+        }
+        
+        // Keyboard Shortcuts für Lehrkraft
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1') zeigeBeispiele('funktion');
+            if (e.key === '2') zeigeBeispiele('frueher');
+            if (e.key === '3') zeigeErkenntnis();
+            if (e.key === 'w') hinzufuegenTransfer('WhatsApp');
+            if (e.key === 'e') hinzufuegenTransfer('E-Mail');
+            if (e.key === 't') hinzufuegenTransfer('Telefon');
+            if (e.key === 'b') hinzufuegenTransfer('Brief');
+        });
+        
+        // Auto-Reveal für Demo
+        setTimeout(() => {
+            zeigeBeispiele('funktion');
+        }, 2000);
+        
+        setTimeout(() => {
+            zeigeBeispiele('frueher');
+        }, 4000);
+        
+        setTimeout(() => {
+            zeigeErkenntnis();
+        }, 6000);
+    </script>
+</body>
+</html>

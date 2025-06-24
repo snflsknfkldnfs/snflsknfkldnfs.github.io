@@ -2,19 +2,19 @@
 
 ## 1. Unterrichtsvorbereitung
 
-- [WiB5c_LB4_3_Kinderrechte_weltweit_UVP.md](unterricht/WiB5c_LB4_Recht_Fallanalyse_global/WiB5c_LB4_3_Kinderrechte_weltweit_TUV.md) - Unterrichtsvorbereitung zur Fallanalyse zu Kinderrechten im globalen Kontext
+- [WiB5c_LB4_3_Kinderrechte_weltweit_UVP.md](unterricht/WiB5c_LB4_Recht_Sequenz/WiB5c_LB4_Recht_Fallanalyse_global/WiB5c_LB4_3_Kinderrechte_weltweit_TUV.md) - Unterrichtsvorbereitung zur Fallanalyse zu Kinderrechten im globalen Kontext
 
 ## 2. Fallmaterialien
 
-- [Amara_Fallbeispiel.html](unterricht/WiB5c_LB4_Recht_Fallanalyse_global/Amara_Fallbeispiel.html) - Fallbeispiel von Amara aus Indien (Textilfabrik)
-- [Detektivbogen_global.html](unterricht/WiB5c_LB4_Recht_Fallanalyse_global/Detektivbogen_global.html) - Grundlegender Detektivbogen für die Fallanalyse
-- [Detektivbogen_erweitert.html](unterricht/WiB5c_LB4_Recht_Fallanalyse_global/Detektivbogen_erweitert.html) - Erweiterter Detektivbogen für leistungsstärkere Schüler
+- [Amara_Fallbeispiel.html](unterricht/WiB5c_LB4_Recht_Sequenz/WiB5c_LB4_Recht_Fallanalyse_global/Amara_Fallbeispiel.html) - Fallbeispiel von Amara aus Indien (Textilfabrik)
+- [Detektivbogen_global.html](unterricht/WiB5c_LB4_Recht_Sequenz/WiB5c_LB4_Recht_Fallanalyse_global/Detektivbogen_global.html) - Grundlegender Detektivbogen für die Fallanalyse
+- [Detektivbogen_erweitert.html](unterricht/WiB5c_LB4_Recht_Sequenz/WiB5c_LB4_Recht_Fallanalyse_global/Detektivbogen_erweitert.html) - Erweiterter Detektivbogen für leistungsstärkere Schüler
 
 ## 3. Leistungsnachweis
 
-- [WiB5c_LB4_Recht_Kinderrechte_KLNW.html](unterricht/WiB5c_LB4_Recht_Fallanalyse_global/WiB5c_LB4_Recht_Kinderrechte_KLNW.html) - Kleiner Leistungsnachweis zu Kinderrechten weltweit
-- [WiB5c_LB4_Recht_Kinderrechte_KLNW_Loesung.html](unterricht/WiB5c_LB4_Recht_Fallanalyse_global/WiB5c_LB4_Recht_Kinderrechte_KLNW_Loesung.html) - Lösungsbogen für den Leistungsnachweis
-- [Hilfekarten_KLNW.html](unterricht/WiB5c_LB4_Recht_Fallanalyse_global/Hilfekarten_KLNW.html) - Differenzierte Hilfekarten für den Leistungsnachweis
+- [WiB5c_LB4_Recht_Kinderrechte_KLNW.html](unterricht/WiB5c_LB4_Recht_Sequenz/WiB5c_LB4_Recht_Fallanalyse_global/WiB5c_LB4_Recht_Kinderrechte_KLNW.html) - Kleiner Leistungsnachweis zu Kinderrechten weltweit
+- [WiB5c_LB4_Recht_Kinderrechte_KLNW_Loesung.html](unterricht/WiB5c_LB4_Recht_Sequenz/WiB5c_LB4_Recht_Fallanalyse_global/WiB5c_LB4_Recht_Kinderrechte_KLNW_Loesung.html) - Lösungsbogen für den Leistungsnachweis
+- [Hilfekarten_KLNW.html](unterricht/WiB5c_LB4_Recht_Sequenz/WiB5c_LB4_Recht_Fallanalyse_global/Hilfekarten_KLNW.html) - Differenzierte Hilfekarten für den Leistungsnachweis
 
 ## 4. Methodik
 

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UE2: Social Media als Kulturtechnik - Classroom Screen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        
+        .screen-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .phase-indicator {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #fff, #e0e6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            margin: 30px 0 20px 0;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .emoji-big {
+            font-size: 4em;
+            text-align: center;
+            margin: 20px 0;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+        }
+        
+        .content-box {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .content-box:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .question-large {
+            font-size: 1.8em;
+            text-align: center;
+            font-weight: bold;
+            color: #fff3cd;
+            margin: 25px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .answer-examples {
+            font-size: 1.4em;
+            text-align: center;
+            color: #d1ecf1;
+            font-style: italic;
+        }
+        
+        .timer {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        
+        .dreischritt-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            gap: 20px;
+        }
+        
+        .dreischritt-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .dreischritt-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #fff3cd;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            color: #333;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #ff6b6b;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="phase-indicator" id="phaseIndicator">Phase 1: Einstieg</div>
+    <div class="timer" id="timer">8:00</div>
+    
+    <div class="screen-container">
+        <!-- Phase 1: Einstieg -->
+        <div id="phase1" class="phase-content">
+            <h1>📱 Social Media - neue Kulturtechnik?</h1>
+            
+            <div class="emoji-big">🤔💭</div>
+            
+            <div class="content-box">
+                <div class="question-large">
+                    Ihr habt in UE1 SO VIEL Technik gefunden!<br>
+                    Aber welche Technik nutzt ihr JEDEN TAG am meisten?
+                </div>
+                <div class="answer-examples">
+                    Smartphone, TikTok, Instagram, WhatsApp...
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                🎯 LEITFRAGE: TikTok ist erst 7 Jahre alt - aber Menschen wollten schon IMMER kommunizieren.<br>
+                Ist TikTok wirklich eine NEU-ERFINDUNG - oder etwas sehr ALTES in neuer Form?
+            </div>
+        </div>
+        
+        <!-- Phase 2: Dreischritt-Analyse -->
+        <div id="phase2" class="phase-content hidden">
+            <h1>🔬 Dreischritt-Forschung</h1>
+            
+            <div class="dreischritt-container">
+                <div class="dreischritt-box">
+                    <h3>📱 HEUTE</h3>
+                    <div class="emoji-big">📱</div>
+                    <p>TikTok/Instagram</p>
+                </div>
+                <div class="dreischritt-box">
+                    <h3>🎯 FUNKTION</h3>
+                    <div class="emoji-big">❓</div>
+                    <p>Was machen wir damit?</p>
+                </div>
+                <div class="dreischritt-box">
+                    <h3>🏔️ FRÜHER</h3>
+                    <div class="emoji-big">⏰</div>
+                    <p>Wie ging das VOR TikTok?</p>
+                </div>
+            </div>
+            
+            <div class="content-box">
+                <h2>⏱️ Partnerarbeit - 20 Minuten</h2>
+                <p style="font-size: 1.3em; text-align: center;">
+                    ✅ Dreischritt-Forschungsbogen ausfüllen<br>
+                    ✅ Hilfekarten nutzen<br>
+                    ✅ Präsentation vorbereiten (2 Min.)
+                </p>
+            </div>
+        </div>
+        
+        <!-- Phase 3: Begriffsbildung -->
+        <div id="phase3" class="phase-content hidden">
+            <h1>💡 KULTURTECHNIK entdeckt!</h1>
+            
+            <div class="content-box">
+                <h2 style="text-align: center; color: #fff3cd;">
+                    KULTURTECHNIK = Eine grundlegende menschliche Fähigkeit
+                </h2>
+                
+                <div style="font-size: 1.4em; margin: 30px 0;">
+                    <strong>Beispiele:</strong><br>
+                    🗣️ KOMMUNIZIEREN (Geschichten erzählen, Nachrichten senden)<br>
+                    🔢 RECHNEN (Mengen bestimmen, Handel treiben)<br>
+                    ✍️ SCHREIBEN (Gedanken festhalten, Wissen übertragen)
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                ➡️ Die KULTURTECHNIK bleibt gleich<br>
+                ➡️ Die TECHNIK verändert nur, WIE wir es machen
+            </div>
+            
+            <div class="content-box">
+                <div class="question-large">
+                    TikTok ist KEINE neue Erfindung!<br>
+                    Es ist eine neue ART der uralten Kulturtechnik KOMMUNIZIEREN!
+                </div>
+            </div>
+        </div>
+        
+        <!-- Phase 4: Transfer -->
+        <div id="phase4" class="phase-content hidden">
+            <h1>🔗 Transfer & Ausblick</h1>
+            
+            <div class="content-box">
+                <div class="question-large">
+                    Welche anderen Apps/Geräte verwenden die gleiche<br>
+                    Kulturtechnik KOMMUNIZIEREN?
+                </div>
+                
+                <div style="text-align: center; margin: 30px 0;">
+                    <div style="font-size: 1.5em; margin: 15px 0;">
+                        💭 <strong>THINK</strong> - Still überlegen (1 Min.)<br>
+                        👥 <strong>PAIR</strong> - Austausch mit Partner (1 Min.)<br>
+                        🗣️ <strong>SHARE</strong> - Sammlung im Plenum (2 Min.)
+                    </div>
+                </div>
+                
+                <div class="answer-examples">
+                    WhatsApp, Telefon, E-Mail, Brief, Zeitung...
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                🚀 AUSBLICK: Nächste Woche schauen wir:<br>
+                Welche anderen Kulturtechniken verstecken sich hinter eurer Technik!
+            </div>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousPhase()">◀ Zurück</button>
+        <button class="nav-btn" onclick="nextPhase()">Weiter ▶</button>
+        <button class="nav-btn" onclick="resetTimer()">Timer Reset</button>
+    </div>
+    
+    <script>
+        let currentPhase = 1;
+        const totalPhases = 4;
+        const phaseTimes = [8, 20, 12, 5]; // Zeiten in Minuten
+        let timeLeft = phaseTimes[0] * 60; // In Sekunden
+        let timerInterval;
+        
+        const phaseNames = [
+            "Phase 1: Einstieg",
+            "Phase 2: Dreischritt-Forschung", 
+            "Phase 3: Begriffsbildung",
+            "Phase 4: Transfer"
+        ];
+        
+        function showPhase(phase) {
+            // Alle Phasen verstecken
+            for (let i = 1; i <= totalPhases; i++) {
+                document.getElementById(`phase${i}`).classList.add('hidden');
+            }
+            
+            // Aktuelle Phase zeigen
+            document.getElementById(`phase${phase}`).classList.remove('hidden');
+            document.getElementById('phaseIndicator').textContent = phaseNames[phase - 1];
+        }
+        
+        function nextPhase() {
+            if (currentPhase < totalPhases) {
+                currentPhase++;
+                showPhase(currentPhase);
+                timeLeft = phaseTimes[currentPhase - 1] * 60;
+                updateTimer();
+            }
+        }
+        
+        function previousPhase() {
+            if (currentPhase > 1) {
+                currentPhase--;
+                showPhase(currentPhase);
+                timeLeft = phaseTimes[currentPhase - 1] * 60;
+                updateTimer();
+            }
+        }
+        
+        function resetTimer() {
+            timeLeft = phaseTimes[currentPhase - 1] * 60;
+            updateTimer();
+        }
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimer();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('timer').style.background = '#28a745';
+                    document.getElementById('timer').textContent = 'Zeit!';
+                }
+                
+                // Warnung bei 2 Minuten
+                if (timeLeft === 120) {
+                    document.getElementById('timer').style.background = '#ffc107';
+                }
+                
+                // Warnung bei 30 Sekunden
+                if (timeLeft === 30) {
+                    document.getElementById('timer').style.background = '#dc3545';
+                }
+            }, 1000);
+        }
+        
+        // Initial setup
+        showPhase(1);
+        updateTimer();
+        
+        // Timer automatisch starten
+        setTimeout(startTimer, 2000);
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextPhase();
+            } else if (e.key === 'ArrowLeft') {
+                previousPhase();
+            } else if (e.key === 'r' || e.key === 'R') {
+                resetTimer();
+            }
+        });
+    </script>
+</body>
+</html>
