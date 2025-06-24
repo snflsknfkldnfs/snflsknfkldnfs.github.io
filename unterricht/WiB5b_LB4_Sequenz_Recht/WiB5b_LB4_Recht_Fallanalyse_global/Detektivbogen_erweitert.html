@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erweiterter Detektivbogen für internationale Kinderrechte</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .detective-sheet {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: #8e44ad;
+            color: white;
+            padding: 15px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+        }
+        
+        .detective-icon {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .subheader {
+            background-color: #e8daef;
+            color: #6c3483;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .expert-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #ffd700;
+            color: #333;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .info-box {
+            padding: 15px;
+            margin: 10px 20px;
+            background-color: #f5eef8;
+            border-radius: 8px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .info-icon {
+            flex-shrink: 0;
+            width: 25px;
+            height: 25px;
+            background-color: #8e44ad;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .step {
+            margin-bottom: 30px;
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            background-color: #8e44ad;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+        }
+        
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: #8e44ad;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .facts-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .facts-table th {
+            background-color: #e8daef;
+            color: #6c3483;
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #d2b4de;
+        }
+        
+        .facts-table td {
+            border: 1px solid #d2b4de;
+            padding: 8px;
+            min-height: 30px;
+        }
+        
+        .facts-table tr:nth-child(even) {
+            background-color: #f9f4fa;
+        }
+        
+        .rights-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .rights-table th {
+            background-color: #e8daef;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #d2b4de;
+        }
+        
+        .rights-table td {
+            border: 1px solid #d2b4de;
+            padding: 10px;
+        }
+        
+        .right-article {
+            font-weight: bold;
+            color: #6c3483;
+        }
+        
+        .right-check {
+            width: 120px;
+            text-align: center;
+        }
+        
+        .checkbox-container {
+            width: 25px;
+            height: 25px;
+            border: 2px solid #8e44ad;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-table th {
+            background-color: #e8daef;
+            color: #6c3483;
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #d2b4de;
+        }
+        
+        .comparison-table td {
+            border: 1px solid #d2b4de;
+            padding: 8px;
+            min-height: 30px;
+        }
+        
+        .conclusion-box {
+            background-color: #fff2cc;
+            border: 2px solid #ffd966;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .conclusion-title {
+            color: #b7850b;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .violation-line {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .violation-right {
+            width: 200px;
+            font-weight: bold;
+        }
+        
+        .violation-reason {
+            flex: 1;
+            border-bottom: 1px dashed #ffd966;
+            padding: 5px;
+            min-height: 20px;
+        }
+        
+        .solutions-box {
+            background-color: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .solutions-title {
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .solution-option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .solution-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #28a745;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .reflection-box {
+            background-color: #d6e9f8;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .reflection-title {
+            color: #2470a2;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .reflection-question {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .reflection-answer {
+            border-bottom: 1px dashed #3498db;
+            min-height: 40px;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+        
+        .team-box {
+            margin: 20px;
+            border-top: 1px dashed #d2b4de;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .team-label {
+            font-weight: bold;
+            color: #8e44ad;
+            margin-right: 10px;
+        }
+        
+        .team-names {
+            flex: 1;
+            border-bottom: 1px solid #8e44ad;
+            min-height: 25px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="detective-sheet">
+        <div class="header">
+            <div class="detective-icon">🔍</div>
+            Internationaler Kinderrechte-Detektivbogen
+            <div class="expert-badge">Experten-Version</div>
+        </div>
+        
+        <div class="subheader">
+            Fall: Amara aus Indien (12 Jahre)
+        </div>
+        
+        <div class="info-box">
+            <div class="info-icon">i</div>
+            <div>
+                Mit diesem erweiterten Detektivbogen untersuchst du, ob die UN-Kinderrechtskonvention in einem Fall eingehalten wird, und vergleichst internationale Regelungen mit dem deutschen Jugendarbeitsschutzgesetz.
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Fakten sammeln und analysieren</div>
+                </div>
+                
+                <table class="facts-table">
+                    <tr>
+                        <th>Frage</th>
+                        <th>Antwort aus dem Fallbeispiel</th>
+                        <th>Bewertung der Situation</th>
+                    </tr>
+                    <tr>
+                        <td>Wie alt ist Amara?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Wo arbeitet sie?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Wie lange arbeitet sie?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Geht sie zur Schule?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Wie sind die Arbeitsbedingungen?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Hat sie Freizeit?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Warum arbeitet sie?</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Kinderrechte-Check mit UN-Konvention</div>
+                </div>
+                
+                <table class="rights-table">
+                    <tr>
+                        <th>Kinderrecht</th>
+                        <th>Was bedeutet es?</th>
+                        <th class="right-check">Wird verletzt?<br>Wenn ja, wie stark?</th>
+                    </tr>
+                    <tr>
+                        <td class="right-article">Artikel 24: Recht auf Gesundheit</td>
+                        <td>Kinder haben das Recht, gesund zu sein und zu bleiben. Sie haben Anspruch auf die bestmögliche Gesundheitsversorgung.</td>
+                        <td class="right-check">
+                            □ Nicht verletzt<br>
+                            □ Leicht verletzt<br>
+                            □ Stark verletzt
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right-article">Artikel 27: Recht auf angemessenen Lebensstandard</td>
+                        <td>Jedes Kind hat das Recht auf einen Lebensstandard, der seiner körperlichen, geistigen, seelischen, sittlichen und sozialen Entwicklung angemessen ist.</td>
+                        <td class="right-check">
+                            □ Nicht verletzt<br>
+                            □ Leicht verletzt<br>
+                            □ Stark verletzt
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right-article">Artikel 28: Recht auf Bildung</td>
+                        <td>Jedes Kind muss zur Schule gehen können. Die Grundschule soll für alle Kinder kostenlos sein.</td>
+                        <td class="right-check">
+                            □ Nicht verletzt<br>
+                            □ Leicht verletzt<br>
+                            □ Stark verletzt
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right-article">Artikel 31: Recht auf Freizeit</td>
+                        <td>Kinder müssen Zeit zum Spielen und Ausruhen haben. Sie haben ein Recht auf kulturelle und künstlerische Aktivitäten.</td>
+                        <td class="right-check">
+                            □ Nicht verletzt<br>
+                            □ Leicht verletzt<br>
+                            □ Stark verletzt
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="right-article">Artikel 32: Schutz vor wirtschaftlicher Ausbeutung</td>
+                        <td>Kinder dürfen nicht zu früh, zu viel oder zu gefährlich arbeiten. Die Arbeit darf nicht ihre Gesundheit oder ihre Schulbildung gefährden.</td>
+                        <td class="right-check">
+                            □ Nicht verletzt<br>
+                            □ Leicht verletzt<br>
+                            □ Stark verletzt
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Vergleich mit deutschem Jugendarbeitsschutzgesetz</div>
+                </div>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>Aspekt</th>
+                        <th>Situation in Amaras Fall</th>
+                        <th>Regelung in Deutschland</th>
+                        <th>Unterschied</th>
+                    </tr>
+                    <tr>
+                        <td>Mindestalter</td>
+                        <td></td>
+                        <td>Unter 13 Jahren keine Arbeit erlaubt</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Arbeitszeit</td>
+                        <td></td>
+                        <td>13-14 Jahre: max. 2 Std./Tag<br>15-18 Jahre: max. 8 Std./Tag</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Schulbildung</td>
+                        <td></td>
+                        <td>Schulpflicht geht vor Arbeit</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Arbeitsbedingungen</td>
+                        <td></td>
+                        <td>Keine gefährlichen oder gesundheitsschädlichen Arbeiten</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Beurteilung und Begründung</div>
+                </div>
+                
+                <div class="conclusion-box">
+                    <div class="conclusion-title">Welche Kinderrechte werden verletzt? Warum?</div>
+                    
+                    <div class="violation-line">
+                        <div class="violation-right">Amaras Recht auf Gesundheit</div>
+                        <div class="violation-reason"></div>
+                    </div>
+                    
+                    <div class="violation-line">
+                        <div class="violation-right">Amaras Recht auf angemessenen Lebensstandard</div>
+                        <div class="violation-reason"></div>
+                    </div>
+                    
+                    <div class="violation-line">
+                        <div class="violation-right">Amaras Recht auf Bildung</div>
+                        <div class="violation-reason"></div>
+                    </div>
+                    
+                    <div class="violation-line">
+                        <div class="violation-right">Amaras Recht auf Freizeit</div>
+                        <div class="violation-reason"></div>
+                    </div>
+                    
+                    <div class="violation-line">
+                        <div class="violation-right">Amaras Schutz vor Ausbeutung</div>
+                        <div class="violation-reason"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <div class="step-title">Lösungsvorschläge</div>
+                </div>
+                
+                <div class="solutions-box">
+                    <div class="solutions-title">Was müsste sich ändern, damit Amaras Rechte eingehalten werden?</div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Amara sollte wieder zur Schule gehen können.</div>
+                    </div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Kinderarbeit sollte erst ab 15 Jahren erlaubt sein, wie in Deutschland.</div>
+                    </div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Wenn Kinder arbeiten, sollten sie maximal 2-3 Stunden pro Tag arbeiten dürfen.</div>
+                    </div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Die Arbeitsbedingungen müssten verbessert werden (saubere Luft, Pausen).</div>
+                    </div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Amaras Familie bräuchte mehr Geld, damit Amara nicht arbeiten muss.</div>
+                    </div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Menschen in Deutschland sollten keine Kleidung kaufen, die von Kindern hergestellt wurde.</div>
+                    </div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Die UN-Kinderrechtskonvention müsste in Indien besser durchgesetzt werden.</div>
+                    </div>
+                    
+                    <div class="solution-option">
+                        <div class="solution-checkbox"></div>
+                        <div>Eigene Idee: 
+                            <span style="border-bottom: 1px solid #28a745; width: 100%; display: inline-block; min-height: 20px; padding: 0 5px;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                    <div class="step-title">Reflexion und Transfer</div>
+                </div>
+                
+                <div class="reflection-box">
+                    <div class="reflection-title">Vertiefende Fragen</div>
+                    
+                    <div class="reflection-question">1. Was hat Amaras Situation mit dir und deinem Leben zu tun?</div>
+                    <div class="reflection-answer"></div>
+                    
+                    <div class="reflection-question">2. Warum gibt es in verschiedenen Ländern unterschiedliche Regeln für Kinderarbeit?</div>
+                    <div class="reflection-answer"></div>
+                    
+                    <div class="reflection-question">3. Was könntest du persönlich tun, um Kinderarbeit zu verringern?</div>
+                    <div class="reflection-answer"></div>
+                </div>
+            </div>
+            
+            <div class="team-box">
+                <div class="team-label">Kinderrechte-Detektive:</div>
+                <div class="team-names"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

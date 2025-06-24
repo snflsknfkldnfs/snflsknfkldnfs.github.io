@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lösungen: Leistungsnachweis Kinderrechte weltweit</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 48px;
+            color: rgba(255, 0, 0, 0.2);
+            font-weight: bold;
+            letter-spacing: 5px;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+        
+        .school-info {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .teacher-info {
+            background-color: #e6f2ff;
+            padding: 10px 15px;
+            border-left: 4px solid #4682B4;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .main-content {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            background-color: #4682B4;
+            color: white;
+            padding: 8px 15px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .solution-header {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .task {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        
+        .task-number {
+            font-weight: bold;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #4682B4;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 10px;
+        }
+        
+        .task-text {
+            font-weight: bold;
+        }
+        
+        .task-points {
+            float: right;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .comparison-table th {
+            background-color: #eee;
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .comparison-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .correct-answer {
+            background-color: #e8f6e8;
+            color: #285b2a;
+            font-weight: bold;
+        }
+        
+        .solution-box {
+            background-color: #e8f6e8;
+            border: 1px solid #28a745;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        .criteria-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .criteria-table th {
+            background-color: #e6f2ff;
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #4682B4;
+        }
+        
+        .criteria-table td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .grading-rubric {
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        
+        .grading-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .main-content {
+                box-shadow: none;
+                border: none;
+            }
+            
+            .section-title {
+                background-color: #4682B4 !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .solution-header {
+                background-color: #28a745 !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .task-number {
+                background-color: #4682B4 !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .correct-answer {
+                background-color: #e8f6e8 !important;
+                color: #285b2a !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .solution-box {
+                background-color: #e8f6e8 !important;
+                border: 1px solid #28a745 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .teacher-info {
+                background-color: #e6f2ff !important;
+                border-left: 4px solid #4682B4 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .watermark {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="watermark">NUR FÜR LEHRKRÄFTE</div>
+        <div class="school-info">Mittelschule XYZSTADT • Schuljahr 2024/25</div>
+        <div class="title">Lösungen: Kleiner Leistungsnachweis WiB - Klasse 5c</div>
+        <div class="subtitle">Thema: Kinderrechte weltweit - Fallanalyse</div>
+    </div>
+    
+    <div class="teacher-info">
+        <strong>Hinweise für Lehrkräfte:</strong>
+        <ul>
+            <li>Dieser Lösungsbogen enthält Musterlösungen und Bewertungskriterien für den Leistungsnachweis.</li>
+            <li>Bei den offenen Aufgaben sind alternative Formulierungen möglich, solange die Kernaussagen enthalten sind.</li>
+            <li>Für die Bewertung gilt das Punktesystem auf der letzten Seite.</li>
+            <li>Bearbeitungszeit: 30 Minuten, Maximalpunktzahl: 20 Punkte</li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="section">
+            <div class="solution-header">MUSTERLÖSUNGEN</div>
+            
+            <div class="task">
+                <span class="task-number">1</span>
+                <span class="task-text">Sammle die wichtigsten Fakten aus dem Fall von Carlos. Fülle die Tabelle vollständig aus.</span>
+                <span class="task-points">5 P.</span>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>Frage</th>
+                        <th>Antwort aus dem Fall</th>
+                    </tr>
+                    <tr>
+                        <td>Wie alt ist Carlos?</td>
+                        <td class="correct-answer">14 Jahre alt</td>
+                    </tr>
+                    <tr>
+                        <td>Wo arbeitet Carlos?</td>
+                        <td class="correct-answer">In einer Silbermine in Bolivien</td>
+                    </tr>
+                    <tr>
+                        <td>Wie viel Zeit verbringt Carlos mit Arbeit?</td>
+                        <td class="correct-answer">8 Stunden am Tag, 5 Tage pro Woche (= 40 Stunden pro Woche)</td>
+                    </tr>
+                    <tr>
+                        <td>Wie viel Zeit verbringt Carlos in der Schule?</td>
+                        <td class="correct-answer">2 Tage pro Woche</td>
+                    </tr>
+                    <tr>
+                        <td>Warum arbeitet Carlos?</td>
+                        <td class="correct-answer">Um seine Schulbildung zu finanzieren</td>
+                    </tr>
+                </table>
+                
+                <div class="solution-box">
+                    <strong>Bewertung:</strong> Je richtige Antwort 1 Punkt, maximal 5 Punkte.
+                </div>
+            </div>
+            
+            <div class="task">
+                <span class="task-number">2</span>
+                <span class="task-text">Prüfe, welche Kinderrechte in diesem Fall verletzt werden. Kreuze an und begründe.</span>
+                <span class="task-points">6 P.</span>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>Kinderrecht</th>
+                        <th>Verletzt? (Ja/Nein)</th>
+                        <th>Begründung (mit Beispiel aus dem Fall)</th>
+                    </tr>
+                    <tr>
+                        <td>Recht auf Gesundheit</td>
+                        <td class="correct-answer">JA</td>
+                        <td class="correct-answer">In der Mine ist es dunkel, staubig und gefährlich. Er muss mit Sprengstoff arbeiten und schwere Lasten tragen. Dies gefährdet seine Gesundheit.</td>
+                    </tr>
+                    <tr>
+                        <td>Recht auf Bildung</td>
+                        <td class="correct-answer">JA</td>
+                        <td class="correct-answer">Carlos geht nur 2 Tage pro Woche zur Schule, statt jeden Tag. Er kann nicht vollständig am Unterricht teilnehmen.</td>
+                    </tr>
+                    <tr>
+                        <td>Recht auf Freizeit</td>
+                        <td class="correct-answer">JA</td>
+                        <td class="correct-answer">Carlos arbeitet 40 Stunden pro Woche plus Schule. Das ist zu viel für ein Kind und lässt wenig Zeit für Freizeit, Erholung und Spiel.</td>
+                    </tr>
+                </table>
+                
+                <div class="solution-box">
+                    <strong>Bewertung:</strong> 
+                    <ul>
+                        <li>Für jedes richtige Ja/Nein: je 1 Punkt (max. 3 Punkte)</li>
+                        <li>Für jede sachlich richtige Begründung mit Bezug zum Fall: je 1 Punkt (max. 3 Punkte)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="task">
+                <span class="task-number">3</span>
+                <span class="task-text">Vergleiche Carlos' Situation mit dem deutschen Jugendarbeitsschutzgesetz. Was wäre in Deutschland anders?</span>
+                <span class="task-points">5 P.</span>
+                
+                <table class="comparison-table">
+                    <tr>
+                        <th>Aspekt</th>
+                        <th>In Deutschland</th>
+                    </tr>
+                    <tr>
+                        <td>Dürfte Carlos in diesem Alter überhaupt arbeiten?</td>
+                        <td class="correct-answer">Mit 14 Jahren dürfte er nur leichte Tätigkeiten ausüben, maximal 2 Stunden pro Tag, nicht in Bergwerken oder Minen.</td>
+                    </tr>
+                    <tr>
+                        <td>Wäre diese Art von Arbeit (Minenarbeit) erlaubt?</td>
+                        <td class="correct-answer">Nein, Minenarbeit ist für Minderjährige grundsätzlich verboten, da sie als gefährlich gilt.</td>
+                    </tr>
+                    <tr>
+                        <td>Wie viele Stunden dürfte er maximal arbeiten?</td>
+                        <td class="correct-answer">Mit 14 Jahren max. 2 Stunden pro Tag (nicht während der Schulzeit), mit 15-18 Jahren max. 8 Stunden pro Tag und 40 Stunden pro Woche.</td>
+                    </tr>
+                    <tr>
+                        <td>Welche Regelung gilt für Schulbesuch?</td>
+                        <td class="correct-answer">In Deutschland gilt Schulpflicht, die Vorrang vor Arbeit hat. Schüler müssen jeden Schultag zur Schule gehen.</td>
+                    </tr>
+                    <tr>
+                        <td>Dürften die Eltern dieser Arbeit zustimmen?</td>
+                        <td class="correct-answer">Nein, auch mit Zustimmung der Eltern wäre diese Arbeit in Deutschland verboten, da sie gefährlich ist und gegen das Jugendarbeitsschutzgesetz verstößt.</td>
+                    </tr>
+                </table>
+                
+                <div class="solution-box">
+                    <strong>Bewertung:</strong> Je sachlich richtige Antwort 1 Punkt, maximal 5 Punkte.
+                </div>
+            </div>
+            
+            <div class="task">
+                <span class="task-number">4</span>
+                <span class="task-text">Was müsste sich ändern, damit Carlos' Kinderrechte besser geschützt werden? Nenne mindestens zwei konkrete Vorschläge und erkläre, wie sie helfen würden.</span>
+                <span class="task-points">4 P.</span>
+                
+                <div class="solution-box">
+                    <strong>Mögliche Lösungsvorschläge (mindestens zwei werden erwartet):</strong>
+                    <ol>
+                        <li>Carlos müsste jeden Tag zur Schule gehen können, um sein Recht auf Bildung zu erfüllen. Dafür bräuchte seine Familie finanzielle Unterstützung (z.B. Stipendien, staatliche Hilfe).</li>
+                        <li>Wenn Carlos arbeiten muss, sollte er eine ungefährliche Tätigkeit ausüben, die seine Gesundheit nicht gefährdet (keine Minenarbeit, kein Umgang mit Sprengstoff).</li>
+                        <li>Die Arbeitszeit müsste deutlich reduziert werden (z.B. auf maximal 2-3 Stunden täglich), damit Carlos genug Zeit für Schule, Hausaufgaben und Freizeit hat.</li>
+                        <li>Bolivien müsste strengere Gesetze gegen Kinderarbeit erlassen und diese auch durchsetzen, ähnlich wie in Deutschland.</li>
+                        <li>Unternehmen, die Silber aus bolivianischen Minen kaufen, sollten sicherstellen, dass keine Kinder an der Produktion beteiligt waren (Lieferkettengesetz, faire Handelsbedingungen).</li>
+                        <li>Internationale Hilfsprogramme könnten die Situation armer Familien verbessern, damit Kinder nicht arbeiten müssen.</li>
+                    </ol>
+                    
+                    <strong>Bewertung:</strong>
+                    <ul>
+                        <li>Je sinnvoller, konkreter Vorschlag: 1 Punkt (max. 2 Punkte)</li>
+                        <li>Je schlüssige Erklärung, wie der Vorschlag helfen würde: 1 Punkt (max. 2 Punkte)</li>
+                    </ul>
+                    
+                    <strong>Hinweis:</strong> Andere sinnvolle Lösungsvorschläge sind ebenfalls zu akzeptieren, sofern sie realistisch sind und erkennbar zum Schutz der Kinderrechte beitragen würden.
+                </div>
+            </div>
+        </div>
+        
+        <div class="grading-rubric">
+            <div class="grading-title">Bewertungsschlüssel</div>
+            
+            <table class="criteria-table">
+                <tr>
+                    <th>Punkte</th>
+                    <th>Note</th>
+                    <th>Leistungsbeschreibung</th>
+                </tr>
+                <tr>
+                    <td>19-20</td>
+                    <td>1</td>
+                    <td>Die Leistung entspricht den Anforderungen in besonderem Maße.</td>
+                </tr>
+                <tr>
+                    <td>17-18</td>
+                    <td>2</td>
+                    <td>Die Leistung entspricht vollumfänglich den Anforderungen.</td>
+                </tr>
+                <tr>
+                    <td>14-16</td>
+                    <td>3</td>
+                    <td>Die Leistung entspricht im Allgemeinen den Anforderungen.</td>
+                </tr>
+                <tr>
+                    <td>11-13</td>
+                    <td>4</td>
+                    <td>Die Leistung entspricht noch den Anforderungen.</td>
+                </tr>
+                <tr>
+                    <td>7-10</td>
+                    <td>5</td>
+                    <td>Die Leistung entspricht nicht den Anforderungen, zeigt jedoch Grundkenntnisse.</td>
+                </tr>
+                <tr>
+                    <td>0-6</td>
+                    <td>6</td>
+                    <td>Die Leistung entspricht nicht den Anforderungen und zeigt keine Grundkenntnisse.</td>
+                </tr>
+            </table>
+            
+            <p><strong>Gesamtpunktzahl: 20 Punkte</strong></p>
+            <ul>
+                <li>Aufgabe 1: 5 Punkte</li>
+                <li>Aufgabe 2: 6 Punkte</li>
+                <li>Aufgabe 3: 5 Punkte</li>
+                <li>Aufgabe 4: 4 Punkte</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Ende der Musterlösung • Nur für Lehrkräfte bestimmt
+    </div>
+</body>
+</html>

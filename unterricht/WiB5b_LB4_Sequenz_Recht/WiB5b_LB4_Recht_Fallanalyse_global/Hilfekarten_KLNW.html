@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilfekarten: Leistungsnachweis Kinderrechte</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .help-cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .help-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            overflow: hidden;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+        }
+        
+        .card-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            color: #3498db;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .card-title {
+            flex-grow: 1;
+        }
+        
+        .card-icon {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .help-section {
+            margin-bottom: 15px;
+        }
+        
+        .help-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .help-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #3498db;
+            display: flex;
+            align-items: center;
+        }
+        
+        .help-title::before {
+            content: "👉";
+            margin-right: 8px;
+        }
+        
+        .help-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .help-list li {
+            margin-bottom: 5px;
+        }
+        
+        .help-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .example {
+            background-color: #e8f4fc;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .example-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2980b9;
+        }
+        
+        .tips-box {
+            background-color: #e8f8f5;
+            border-left: 4px solid #2ecc71;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        
+        .tips-title {
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .print-instructions {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        
+        .vocabulary-box {
+            background-color: #fff9e6;
+            border: 1px dashed #f39c12;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .vocab-title {
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 5px;
+        }
+        
+        .vocab-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 15px;
+            font-size: 14px;
+        }
+        
+        .vocab-item {
+            display: flex;
+        }
+        
+        .vocab-term {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .help-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+            }
+            
+            .card-header {
+                background-color: #3498db !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .card-number {
+                background-color: white !important;
+                color: #3498db !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .example {
+                background-color: #e8f4fc !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .tips-box {
+                background-color: #e8f8f5 !important;
+                border-left: 4px solid #2ecc71 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .vocabulary-box {
+                background-color: #fff9e6 !important;
+                border: 1px dashed #f39c12 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .print-instructions {
+                display: none;
+            }
+            
+            @page {
+                margin: 1cm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="help-cards-container">
+        <div class="help-card">
+            <div class="card-header">
+                <div class="card-number">1</div>
+                <div class="card-title">Faktensammlung: Informationen im Text finden</div>
+                <div class="card-icon">🔍</div>
+            </div>
+            <div class="card-content">
+                <div class="help-section">
+                    <div class="help-title">So findest du die Fakten im Text</div>
+                    <ol class="help-list">
+                        <li>Lies den Text über Carlos ganz durch.</li>
+                        <li>Suche nach den Informationen, die in der Tabelle gefragt werden.</li>
+                        <li>Schreibe die Information genau so auf, wie sie im Text steht.</li>
+                    </ol>
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">Beispiel:</div>
+                    <p><strong>Frage:</strong> Wie alt ist Carlos?</p>
+                    <p><strong>Im Text steht:</strong> "Carlos ist 14 Jahre alt und lebt mit seiner Familie in Bolivien."</p>
+                    <p><strong>Deine Antwort:</strong> 14 Jahre alt</p>
+                </div>
+                
+                <div class="tips-box">
+                    <div class="tips-title">Tipps:</div>
+                    <ul class="help-list">
+                        <li>Unterstreiche im Text die wichtigen Informationen.</li>
+                        <li>Wenn du unsicher bist, schaue unter "FAKTEN:" nach - dort stehen die wichtigsten Informationen.</li>
+                        <li>Schreibe vollständige Sätze oder Stichpunkte, aber sei genau.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="help-card">
+            <div class="card-header">
+                <div class="card-number">2</div>
+                <div class="card-title">Kinderrechts-Check: Rechte erkennen</div>
+                <div class="card-icon">✅</div>
+            </div>
+            <div class="card-content">
+                <div class="help-section">
+                    <div class="help-title">So erkennst du Rechtsverletzungen</div>
+                    <ol class="help-list">
+                        <li>Lies jedes Kinderrecht in der Tabelle genau durch.</li>
+                        <li>Prüfe, ob dieses Recht in Carlos' Fall eingehalten oder verletzt wird.</li>
+                        <li>Schreibe "JA" wenn das Recht verletzt wird oder "NEIN" wenn es eingehalten wird.</li>
+                        <li>Finde im Text ein Beispiel, das deine Entscheidung begründet.</li>
+                    </ol>
+                </div>
+                
+                <div class="vocabulary-box">
+                    <div class="vocab-title">Die wichtigsten Kinderrechte einfach erklärt:</div>
+                    <div class="vocab-list">
+                        <div class="vocab-item">
+                            <span class="vocab-term">Recht auf Gesundheit:</span> Kinder dürfen nicht krank werden durch Arbeit
+                        </div>
+                        <div class="vocab-item">
+                            <span class="vocab-term">Recht auf Bildung:</span> Kinder müssen zur Schule gehen können
+                        </div>
+                        <div class="vocab-item">
+                            <span class="vocab-term">Recht auf Freizeit:</span> Kinder brauchen Zeit zum Spielen und Erholen
+                        </div>
+                        <div class="vocab-item">
+                            <span class="vocab-term">Schutz vor Ausbeutung:</span> Kinder dürfen nicht zu viel arbeiten
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">Beispiel:</div>
+                    <p><strong>Kinderrecht:</strong> Recht auf Bildung</p>
+                    <p><strong>Wird verletzt?</strong> JA</p>
+                    <p><strong>Begründung:</strong> Carlos geht nur 2 Tage pro Woche zur Schule statt jeden Tag.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="help-card">
+            <div class="card-header">
+                <div class="card-number">3</div>
+                <div class="card-title">Vergleich mit Deutschland: Unterschiede erkennen</div>
+                <div class="card-icon">🔄</div>
+            </div>
+            <div class="card-content">
+                <div class="help-section">
+                    <div class="help-title">So vergleichst du mit deutschen Regeln</div>
+                    <ul class="help-list">
+                        <li>Denke an das, was wir über das deutsche Jugendarbeitsschutzgesetz gelernt haben.</li>
+                        <li>Vergleiche jede Frage in der Tabelle mit den Regeln in Deutschland.</li>
+                        <li>Beschreibe den Unterschied zwischen Carlos' Situation und den deutschen Regeln.</li>
+                    </ul>
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">Beispiel:</div>
+                    <p><strong>Frage:</strong> Dürfte Carlos in diesem Alter überhaupt arbeiten?</p>
+                    <p><strong>Antwort:</strong> In Deutschland dürfen 14-Jährige nur leichte Arbeiten machen (z.B. Zeitung austragen, Nachhilfe geben). Minenarbeit wäre für ein Kind verboten.</p>
+                </div>
+                
+                <div class="vocabulary-box">
+                    <div class="vocab-title">Deutsche Regeln zu Kinderarbeit:</div>
+                    <ul class="help-list">
+                        <li>Kinder unter 13 Jahren dürfen gar nicht arbeiten</li>
+                        <li>Kinder ab 13 Jahren dürfen nur leichte Arbeiten machen (max. 2 Stunden/Tag)</li>
+                        <li>Ab 15 Jahren darf man mehr arbeiten, aber nicht in gefährlichen Berufen</li>
+                        <li>Arbeit darf nicht während der Schulzeit stattfinden</li>
+                        <li>Gefährliche Arbeiten (wie Minenarbeit) sind für Kinder verboten</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="help-card">
+            <div class="card-header">
+                <div class="card-number">4</div>
+                <div class="card-title">Lösungsvorschläge: Wie kann man helfen?</div>
+                <div class="card-icon">💡</div>
+            </div>
+            <div class="card-content">
+                <div class="help-section">
+                    <div class="help-title">So entwickelst du Lösungsvorschläge</div>
+                    <ol class="help-list">
+                        <li>Überlege dir mindestens zwei Vorschläge, wie Carlos' Situation verbessert werden könnte.</li>
+                        <li>Denke daran, welche Rechte verletzt werden und wie man diese schützen könnte.</li>
+                        <li>Erkläre zu jedem Vorschlag, wie genau er Carlos helfen würde.</li>
+                    </ol>
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">Beispiel eines guten Lösungsvorschlags:</div>
+                    <p><strong>Vorschlag:</strong> Carlos sollte jeden Tag zur Schule gehen können, statt nur zwei Tage pro Woche.</p>
+                    <p><strong>Erklärung:</strong> Das würde Carlos' Recht auf Bildung schützen. Mit einer besseren Bildung könnte er später einen sichereren Beruf erlernen und müsste nicht in der gefährlichen Mine arbeiten.</p>
+                </div>
+                
+                <div class="tips-box">
+                    <div class="tips-title">Mögliche Lösungsansätze:</div>
+                    <ul class="help-list">
+                        <li>Wie könnte man Carlos' Schulbesuch verbessern?</li>
+                        <li>Wer könnte Carlos und seiner Familie finanziell helfen?</li>
+                        <li>Wie könnte die Arbeit sicherer gemacht werden?</li>
+                        <li>Welche Gesetze oder Regeln müssten sich ändern?</li>
+                        <li>Was könnten Menschen in Deutschland tun, um zu helfen?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="print-instructions">
+            <strong>Hinweis für Lehrkräfte:</strong> Diese Hilfekarten können für Schülerinnen und Schüler mit Förderbedarf ausgedruckt und als Unterstützung während des Leistungsnachweises bereitgestellt werden.
+        </div>
+    </div>
+    
+    <div class="footer">
+        Hilfekarten für den Leistungsnachweis "Kinderrechte weltweit" - Klasse 5c
+    </div>
+</body>
+</html>
