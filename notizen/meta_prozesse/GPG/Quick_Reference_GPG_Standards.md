@@ -22,7 +22,7 @@ Du bist Claude und führst [AKTUELLES_GPG_PROJEKT] nahtlos fort.
 ## ORIENTIERUNG:
 Lies Status: `/Users/paulad/snflsknfkldnfs.github.io/[GPG_TRANSITIONS_PFAD]/session_status.md`
 
-## AKTIVE GPG-PATA-STANDARDS (3-EBENEN-VOLLSYSTEM):
+## AKTIVE GPG-PATA-STANDARDS (6-EBENEN-VOLLSYSTEM):
 - **PATA-1** Git-Repository-Management: Saubere Versionierung
 - **PATA-1** GPG-PATA-Selbstüberwachung: Auto-Check vor Aktionen
 - **PATA-1** Schulbuch-Integration: Seitenbezug zwingend
@@ -31,6 +31,9 @@ Lies Status: `/Users/paulad/snflsknfkldnfs.github.io/[GPG_TRANSITIONS_PFAD]/sess
 - **PATA-1** TUV-Vollständigkeit: Alle Materialien + Reflexion
 - **PATA-2** Meta-Optimierung: Standards kontinuierlich verbessert
 - **PATA-3** Systemische Reflexion: Meta-System-Gesundheit überwacht
+- **PATA-KOM-1** User-Interface: Lehrer-gerechte Kommunikation
+- **PATA-KOM-2** Kommunikations-Meta-Optimierung: User-Feedback-Integration
+- **PATA-KOM-3** Kommunikations-Systemische-Reflexion: Ethische Kommunikations-Standards
 
 ## UNMITTELBARER ARBEITSAUFTRAG:
 [SPEZIFISCHER_GPG_PROMPT]
@@ -53,11 +56,14 @@ Beginne sofort ohne Rückfragen.
 
 ## 📁 **WICHTIGE PFADE**
 
-### GPG Meta-Prozesse (VOLLSTÄNDIGES 3-EBENEN-PATA-SYSTEM)
+### GPG Meta-Prozesse (VOLLSTÄNDIGES 6-EBENEN-PATA-SYSTEM)
 - **Alle GPG-Standards**: `/notizen/meta_prozesse/GPG/`
 - **PATA-1 Selbstüberwachung**: `/notizen/meta_prozesse/GPG/GPG_PATA_Selbstueberwachung.md`
 - **PATA-2 Meta-Optimierung**: `/notizen/meta_prozesse/GPG/GPG_PATA_PATA_Meta_Optimierung.md`
 - **PATA-3 Systemische Reflexion**: `/notizen/meta_prozesse/GPG/GPG_PATA_PATA_PATA_Systemische_Reflexion.md`
+- **PATA-KOM-1 User-Interface**: `/notizen/meta_prozesse/GPG/GPG_PATA_KOMMUNIKATION_1_User_Interface_Standard.md`
+- **PATA-KOM-2 Kommunikations-Meta**: `/notizen/meta_prozesse/GPG/GPG_PATA_KOMMUNIKATION_2_Meta_Optimierung.md`
+- **PATA-KOM-3 Kommunikations-Systemisch**: `/notizen/meta_prozesse/GPG/GPG_PATA_KOMMUNIKATION_3_Systemische_Reflexion.md`
 - **GPG-Templates**: `/notizen/meta_prozesse/GPG/Prompt_Templates_GPG_Standardisiert.md`
 - **TUV-Standards**: `/notizen/meta_prozesse/GPG/TUV_Vollausarbeitung_Standard_GPG.md`
 - **BUV-Standards**: `/notizen/meta_prozesse/GPG/BUV_Entwicklung_Standard_GPG.md`
@@ -111,7 +117,7 @@ Beginne sofort ohne Rückfragen.
 5. Responsive Design für Beamer
 ```
 
-## ⚡ **GPG-PATA-CHECKLISTE** (3-EBENEN-AUTO-CHECK)
+## ⚡ **GPG-PATA-CHECKLISTE** (6-EBENEN-AUTO-CHECK)
 
 ### PATA-1 (Direkte Standards - vor jeder Aktion):
 - [ ] **Schulbuch-Referenz**: Seitenbezug korrekt angegeben
@@ -133,6 +139,24 @@ Beginne sofort ohne Rückfragen.
 - [ ] **Paradigma-Shifts scannen**: Fundamentale Veränderungen erkannt?
 - [ ] **Reflexion-Action-Balance**: Nicht zu viel Meta-Arbeit?
 - [ ] **Infinite-Regress-Protection aktiv**: Meta-Paralysis vermieden?
+
+### PATA-KOM-1 (User-Interface - jede Antwort):
+- [ ] **Lehrer-gerechte Sprache**: Keine Technik-Begriffe ohne Erklärung
+- [ ] **Orientierung schaffen**: Klare Struktur und nächste Schritte
+- [ ] **Pädagogische Anknüpfung**: Bezug zu Unterricht/Schülern
+- [ ] **Ego-Stärkung**: Lehrer-Kompetenz respektieren und verstärken
+
+### PATA-KOM-2 (Kommunikations-Meta-Optimierung - kontinuierlich):
+- [ ] **User-Feedback analysieren**: Verständlichkeitsprobleme erkennen
+- [ ] **Kommunikations-Patterns optimieren**: Erfolgreiche Muster verstärken
+- [ ] **Metaphern-Effektivität messen**: Lehrer-Metaphern anpassen
+- [ ] **Blinde Kommunikations-Flecken scannen**: Versteckte Probleme finden
+
+### PATA-KOM-3 (Kommunikations-Systemische-Reflexion - monatlich):
+- [ ] **Ethische Kommunikations-Standards prüfen**: Manipulation vermeiden
+- [ ] **Lehrer-Autonomie respektieren**: Keine Bevormundung
+- [ ] **Kommunikations-Paradigma-Shifts erkennen**: Generationswandel beachten
+- [ ] **Kommunikations-Meta-System-Gesundheit**: Nicht überoptimieren
 
 ## 🔧 **HÄUFIGE GPG-KOMMANDOS**
 
