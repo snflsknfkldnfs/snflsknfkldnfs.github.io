@@ -2,25 +2,27 @@
 
 ### Rahmendaten
 
-**Fach:** Wirtschaft und Beruf (WiB)  
-**Lehrkraft:** Paul Cebulla
-**Wochenstunden:** 1 UStd  
-**Stand:** Dezember 2024  
+**Fach:** Wirtschaft und Beruf (WiB)  
+**Lehrkraft:** Paul Cebulla
+**Wochenstunden:** 1 UStd  
+**Stand:** 24.06.2025 (Realitätsanpassung Schuljahresende)  
 **Besonderheiten:**
 - Heterogene Lerngruppe
 - Langsames Lerntempo
+- **Anpassungen:** Sequenz 4 realitätsorientiert gekürzt (Pfingstferien, Schuljahresende)
+
 ### Sequenzübersicht
 
 ## ✓ Sequenz 1: Arbeit (KW 37-48)
 
 **Lernbereich 2: Arbeit**  
-**Umfang:** 12 UZE  
-**Status:** Abgeschlossen mit GLNW Arbeitsplatzerkundung
+**Umfang:** 12 UZE  
+**Status:** Abgeschlossen mit GLNW Arbeitsplatzerkundung
 
-## Sequenz 2: Bedürfnisse und Werbung (KW 49-9)
+## ✓ Sequenz 2: Bedürfnisse und Werbung (KW 49-9)
 
 **Lernbereich 3: Wirtschaft**  
-**Umfang:** 10 UZE
+**Umfang:** 10 UZE
 
 | KW  | Datum  | Thema                                   | Kompetenzen                      | Methoden        | Leistungsnachweise     |
 | --- | ------ | --------------------------------------- | -------------------------------- | --------------- | ---------------------- |
@@ -38,12 +40,12 @@ _Weihnachtsferien_
 |5|29.01.|Klug konsumieren|- Konsumregeln entwickeln|- Plakaterstellung|-|
 |6|05.02.|Grundregeln für Konsum|- Regeln anwenden|- Rollenspiel|-|
 |7|12.02.|Wiederholung|- Gelerntes sichern|- Lernzirkel|-|
-|9|26.02.|Klassenarbeit und Auswertung|- Wissen anwenden|- Test|GLN 1|
+|9|26.02.|Klassenarbeit und Auswertung|- Wissen anwenden|- Test|**GLN 1** ✅|
 
-## Sequenz 3: Kinderarbeit (KW 10-19)
+## ✓ Sequenz 3: Kinderarbeit (KW 10-19)
 
 **Lernbereich 4: Recht**  
-**Umfang:** 10 UZE
+**Umfang:** 10 UZE
 
 | KW  | Datum  | Thema                       | Kompetenzen                      | Methoden            | Leistungsnachweise |
 | --- | ------ | --------------------------- | -------------------------------- | ------------------- | ------------------ |
@@ -56,19 +58,29 @@ _Weihnachtsferien_
 | 16  | 29.04. | Kinderarbeit heute          | - Aktuelle Situation analysieren | - Recherche         | -                  |
 | 17  | 06.05. | Handlungsmöglichkeiten      | - Lösungen entwickeln            | - Projektarbeit     | -                  |
 | 18  | 13.05. | Wiederholung                | - Wissen strukturieren           | - Mind-Mapping      | -                  |
-| 19  | 20.05. | Test und Auswertung         | - Wissen anwenden                | - Test              | GLN 2              |
+| 19  | 20.05. | Test und Auswertung         | - Wissen anwenden                | - Test              | **GLN 2** ✅              |
 
-## Sequenz 4: Technik im Alltag (KW 23-29)
+## Sequenz 4: Technik verändert uns (KW 23-29)
 
 **Lernbereich 5: Technik**  
-**Umfang:** 9 UZE
+**Umfang:** 4 UE + 1 GLNW  
+**Anpassung:** Realitätsorientierte Kürzung aufgrund Schuljahresende  
+**Schwerpunkt:** Kulturtechniken über Social Media einführen
 
 | KW  | Datum  | Thema                           | Kompetenzen                      | Methoden            | Leistungsnachweise |
 | --- | ------ | ------------------------------- | -------------------------------- | ------------------- | ------------------ |
-| 23  | 03.06. | Technik in Schule und Haushalt  | - Technische Geräte erkunden     | - Bestandsaufnahme  | -                  |
-| 24  | 10.06. | Geschichte einer Erfindung I    | - Entwicklung nachvollziehen     | - Zeitstrahl        | -                  |
-| 25  | 17.06. | Geschichte einer Erfindung II   | - Entwicklungsschritte verstehen | - Recherche         | -                  |
-| 26  | 24.06. | Warum gibt es neue Erfindungen? | - Erfindungsmotive verstehen     | - Interview         | KLN: Kurzreferat   |
-| 27  | 01.07. | Chancen von Technik             | - Vorteile analysieren           | - Pro-Diskussion    | -                  |
-| 28  | 08.07. | Risiken von Technik             | - Nachteile bewerten             | - Contra-Diskussion | -                  |
-| 29  | 15.07. | Technikfolgen                   | - Technikfolgen abschätzen       | - Fallanalyse       | GLN 3              |
+| 23  | 03.06. | Technik überall entdecken ✅    | - Technische Geräte erkunden     | - Planum, Partner, iPads, Miro  | -                  |
+| 26  | 24.06. | Social Media - neue Kulturtechnik? | - Erfindungsmotive & Bewusstseinswandel | - Dreischritt-Methode | -                  |
+| 27  | 01.07. | Kulturtechniken entschlüsseln   | - Technik ↔ menschliche Fähigkeiten | - Vereinfachte Analyse | KLN: Steckbrief   |
+| 28  | 08.07. | Technik bewerten + GLNW        | - Chancen/Risiken beurteilen     | - Diskussion + Test | **GLN 3 (GLNW)** 🎯   |
+
+**Ausfälle/Anpassungen:**
+- KW 24/25: Pfingstferien-bedingt ausgefallen  
+- Original 9 UE auf 4 UE + GLNW reduziert
+- Fokus-Shift: Von klassischer Technikgeschichte zu Kulturtechniken
+- KW 29: Schuljahresende-Reserve
+
+### Jahres-Leistungsnachweise Übersicht:
+- **GLN 1:** Sequenz 2 - Bedürfnisse/Werbung (KW 9) ✅
+- **GLN 2:** Sequenz 3 - Kinderarbeit/Recht (KW 19) ✅  
+- **GLN 3:** Sequenz 4 - Technik (KW 28) 🎯
