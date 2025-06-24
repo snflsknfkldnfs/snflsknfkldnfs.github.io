@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilfekarten: Kommunikation durch die Geschichte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .help-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .help-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+        }
+        
+        .help-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--card-color);
+        }
+        
+        .steinzeit {
+            --card-color: #d4a574;
+        }
+        
+        .antike {
+            --card-color: #8e44ad;
+        }
+        
+        .moderne {
+            --card-color: #e74c3c;
+        }
+        
+        .computer {
+            --card-color: #3498db;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .card-icon {
+            font-size: 3em;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .card-title {
+            color: var(--card-color);
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        .card-subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .communication-list {
+            list-style: none;
+        }
+        
+        .communication-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1.1em;
+        }
+        
+        .communication-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-emoji {
+            font-size: 1.5em;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .item-text {
+            flex: 1;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .item-description {
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 2px;
+        }
+        
+        .insight-card {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .insight-title {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .insight-text {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .insight-conclusion {
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 25px;
+            font-size: 1.1em;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .flip-animation {
+            animation: flipIn 0.6s ease-out;
+        }
+        
+        @keyframes flipIn {
+            from {
+                transform: rotateY(-90deg);
+                opacity: 0;
+            }
+            to {
+                transform: rotateY(0deg);
+                opacity: 1;
+            }
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(45deg, var(--card-color), rgba(255,255,255,0.3));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            font-size: 3em;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .help-card {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .card-title {
+                font-size: 1.5em;
+            }
+            
+            .insight-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎭 Hilfekarten: Kommunikation durch die Geschichte</h1>
+            <p>Entdecke, wie Menschen schon immer kommuniziert haben!</p>
+        </div>
+        
+        <div class="cards-grid">
+            <!-- Steinzeit Karte -->
+            <div class="help-card steinzeit" onclick="flipCard(this)">
+                <div class="card-header">
+                    <div class="card-icon">🏔️</div>
+                    <div>
+                        <div class="card-title">STEINZEIT-KARTE</div>
+                        <div class="card-subtitle">Vor 30.000+ Jahren</div>
+                    </div>
+                </div>
+                
+                <div class="image-placeholder">🎨🔥🥁</div>
+                
+                <h3 style="color: #d4a574; margin: 20px 0 15px 0; font-size: 1.3em;">WIE KOMMUNIZIERTEN STEINZEIT-MENSCHEN?</h3>
+                
+                <ul class="communication-list">
+                    <li class="communication-item">
+                        <div class="item-emoji">🎨</div>
+                        <div class="item-text">
+                            <div class="item-title">Höhlenmalerei</div>
+                            <div class="item-description">Bilder an Wände malen</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">🗣️</div>
+                        <div class="item-text">
+                            <div class="item-title">Geschichten erzählen</div>
+                            <div class="item-description">Am Lagerfeuer Erlebnisse berichten</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">🥁</div>
+                        <div class="item-text">
+                            <div class="item-title">Trommel-Signale</div>
+                            <div class="item-description">Nachrichten über weite Strecken</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">🔥</div>
+                        <div class="item-text">
+                            <div class="item-title">Rauchzeichen</div>
+                            <div class="item-description">Warnung vor Gefahren</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Antike/Mittelalter Karte -->
+            <div class="help-card antike" onclick="flipCard(this)">
+                <div class="card-header">
+                    <div class="card-icon">📜</div>
+                    <div>
+                        <div class="card-title">ANTIKE/MITTELALTER-KARTE</div>
+                        <div class="card-subtitle">Vor 500-2000 Jahren</div>
+                    </div>
+                </div>
+                
+                <div class="image-placeholder">✍️🐦🔔</div>
+                
+                <h3 style="color: #8e44ad; margin: 20px 0 15px 0; font-size: 1.3em;">WIE KOMMUNIZIERTEN MENSCHEN VOR 500-2000 JAHREN?</h3>
+                
+                <ul class="communication-list">
+                    <li class="communication-item">
+                        <div class="item-emoji">✍️</div>
+                        <div class="item-text">
+                            <div class="item-title">Briefe schreiben</div>
+                            <div class="item-description">Nachrichten auf Papier</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">🐦</div>
+                        <div class="item-text">
+                            <div class="item-title">Brieftauben</div>
+                            <div class="item-description">Tiere als Postboten</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">🔔</div>
+                        <div class="item-text">
+                            <div class="item-title">Kirchenglocken</div>
+                            <div class="item-description">Wichtige Nachrichten für alle</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">📢</div>
+                        <div class="item-text">
+                            <div class="item-title">Ausrufer</div>
+                            <div class="item-description">Person ruft Neuigkeiten auf dem Marktplatz</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Moderne Zeit Karte -->
+            <div class="help-card moderne" onclick="flipCard(this)">
+                <div class="card-header">
+                    <div class="card-icon">📞</div>
+                    <div>
+                        <div class="card-title">MODERNE ZEIT-KARTE</div>
+                        <div class="card-subtitle">Vor dem Internet</div>
+                    </div>
+                </div>
+                
+                <div class="image-placeholder">☎️📺📻</div>
+                
+                <h3 style="color: #e74c3c; margin: 20px 0 15px 0; font-size: 1.3em;">WIE KOMMUNIZIERTEN EURE GROSSELTERN?</h3>
+                
+                <ul class="communication-list">
+                    <li class="communication-item">
+                        <div class="item-emoji">☎️</div>
+                        <div class="item-text">
+                            <div class="item-title">Telefon</div>
+                            <div class="item-description">Gespräche über Kabel</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">📺</div>
+                        <div class="item-text">
+                            <div class="item-title">Fernsehen</div>
+                            <div class="item-description">Nachrichten für viele Menschen</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">📻</div>
+                        <div class="item-text">
+                            <div class="item-title">Radio</div>
+                            <div class="item-description">Musik und Nachrichten hören</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">✉️</div>
+                        <div class="item-text">
+                            <div class="item-title">Post</div>
+                            <div class="item-description">Briefe mit der Post verschicken</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Computer Zeit Karte -->
+            <div class="help-card computer" onclick="flipCard(this)">
+                <div class="card-header">
+                    <div class="card-icon">💻</div>
+                    <div>
+                        <div class="card-title">COMPUTER-ZEIT-KARTE</div>
+                        <div class="card-subtitle">Vor Social Media</div>
+                    </div>
+                </div>
+                
+                <div class="image-placeholder">📧💬🌐</div>
+                
+                <h3 style="color: #3498db; margin: 20px 0 15px 0; font-size: 1.3em;">WIE KOMMUNIZIERTEN EURE ELTERN ALS JUGENDLICHE?</h3>
+                
+                <ul class="communication-list">
+                    <li class="communication-item">
+                        <div class="item-emoji">📧</div>
+                        <div class="item-text">
+                            <div class="item-title">E-Mail</div>
+                            <div class="item-description">Elektronische Briefe</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">💬</div>
+                        <div class="item-text">
+                            <div class="item-title">SMS</div>
+                            <div class="item-description">Kurze Textnachrichten</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">🌐</div>
+                        <div class="item-text">
+                            <div class="item-title">Internet-Chat</div>
+                            <div class="item-description">Schreiben im Computer</div>
+                        </div>
+                    </li>
+                    <li class="communication-item">
+                        <div class="item-emoji">📱</div>
+                        <div class="item-text">
+                            <div class="item-title">Erste Handys</div>
+                            <div class="item-description">Telefonieren ohne Kabel</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="insight-card">
+            <div class="insight-title">💡 ERKENNTNIS FÜR ALLE KARTEN</div>
+            <div class="insight-text">Menschen wollten <strong>IMMER SCHON</strong>:</div>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 20px 0;">
+                <div style="margin: 10px; font-size: 1.2em;">📖 Geschichten erzählen</div>
+                <div style="margin: 10px; font-size: 1.2em;">👥 Freunde informieren</div>
+                <div style="margin: 10px; font-size: 1.2em;">😄 Spaß teilen</div>
+                <div style="margin: 10px; font-size: 1.2em;">⚠️ Wichtiges weitergeben</div>
+            </div>
+            <div class="insight-conclusion">
+                <strong>→ Nur die TECHNIK hat sich geändert, nicht der WUNSCH zu kommunizieren!</strong>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function flipCard(card) {
+            card.classList.add('flip-animation');
+            
+            // Sound-Feedback simulieren (vibriert auf unterstützten Geräten)
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+            
+            // Animation nach 600ms entfernen
+            setTimeout(() => {
+                card.classList.remove('flip-animation');
+            }, 600);
+        }
+        
+        // Karten beim Laden leicht animieren
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.help-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(50px)';
+                    card.style.transition = 'all 0.6s ease-out';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                }, index * 150);
+            });
+        });
+        
+        // Touch-optimierte Interaktion für iPad
+        document.querySelectorAll('.help-card').forEach(card => {
+            card.addEventListener('touchstart', function(e) {
+                this.style.transform = 'translateY(-5px) scale(0.98)';
+            });
+            
+            card.addEventListener('touchend', function(e) {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
