@@ -48,13 +48,15 @@ Du bist Claude und führst die GPG-Arbeit an [PROJEKT_NAME] aus Chat-Session [N-
 ## SOFORTIGE ORIENTIERUNG:
 Lies vollständigen Status: `[PFAD_ZU_STATUS_MD]`
 
-## AKTIVE GPG-PATA-STANDARDS (automatisch übernommen):
-- **Git-Repository-Management**: Saubere Versionierung, keine "_NEU"-Suffixe
-- **GPG-PATA-Selbstüberwachung**: Automatische Kontrolle aller eigenen Aktionen
-- **Schulbuch-Integration**: Seitenbezug zu GPG5 Trio zwingend
-- **HTML-Artefakt-Standards**: iPad-ausfüllbar, sprachsensibel
-- **Heterogenitäts-Standards**: DaZ/LRS/5b-Spezifika automatisch berücksichtigt
-- **TUV-Vollständigkeit**: Sachanalyse + Lernziele + Verlauf + Materialien + Reflexion
+## AKTIVE GPG-PATA-STANDARDS (3-EBENEN-VOLLSYSTEM automatisch übernommen):
+- **PATA-1 Git-Repository-Management**: Saubere Versionierung, keine "_NEU"-Suffixe
+- **PATA-1 GPG-PATA-Selbstüberwachung**: Automatische Kontrolle aller eigenen Aktionen
+- **PATA-1 Schulbuch-Integration**: Seitenbezug zu GPG5 Trio zwingend
+- **PATA-1 HTML-Artefakt-Standards**: iPad-ausfüllbar, sprachsensibel
+- **PATA-1 Heterogenitäts-Standards**: DaZ/LRS/5b-Spezifika automatisch berücksichtigt
+- **PATA-1 TUV-Vollständigkeit**: Sachanalyse + Lernziele + Verlauf + Materialien + Reflexion
+- **PATA-2 Meta-Optimierung**: Standards kontinuierlich selbst-verbessert
+- **PATA-3 Systemische Reflexion**: Meta-System-Gesundheit permanent überwacht
 
 ## GPG-SPEZIFISCHER KONTEXT (beibehalten):
 - **Klasse**: 5b GPG (heterogen, DaZ, LRS)
@@ -79,7 +81,7 @@ Lies vollständigen Status: `[PFAD_ZU_STATUS_MD]`
 - **Heterogenitäts-Compliance**: DaZ/LRS automatisch berücksichtigt
 - **Fachliche Qualität**: Geschichte/Politik/Geographie integriert
 
-**Beginne sofort mit systematischer GPG-Abarbeitung. Nutze GPG-PATA-Selbstüberwachung für fehlerfreie Execution.**
+**Beginne sofort mit systematischer GPG-Abarbeitung. Nutze vollständiges 3-Ebenen-GPG-PATA-System für optimale, sich selbst-verbessernde Execution.**
 ```
 
 ## 📋 **TEMPLATE 2: TUV-VOLLAUSARBEITUNG GPG**

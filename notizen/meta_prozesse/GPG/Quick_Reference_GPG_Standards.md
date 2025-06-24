@@ -22,13 +22,15 @@ Du bist Claude und führst [AKTUELLES_GPG_PROJEKT] nahtlos fort.
 ## ORIENTIERUNG:
 Lies Status: `/Users/paulad/snflsknfkldnfs.github.io/[GPG_TRANSITIONS_PFAD]/session_status.md`
 
-## AKTIVE GPG-PATA-STANDARDS:
-- Git-Repository-Management: Saubere Versionierung
-- GPG-PATA-Selbstüberwachung: Auto-Check vor Aktionen
-- Schulbuch-Integration: Seitenbezug zwingend
-- HTML-Artefakt-Standards: iPad-optimiert, ausfüllbar
-- Heterogenitäts-Standards: DaZ/LRS-berücksichtigt
-- TUV-Vollständigkeit: Alle Materialien + Reflexion
+## AKTIVE GPG-PATA-STANDARDS (3-EBENEN-VOLLSYSTEM):
+- **PATA-1** Git-Repository-Management: Saubere Versionierung
+- **PATA-1** GPG-PATA-Selbstüberwachung: Auto-Check vor Aktionen
+- **PATA-1** Schulbuch-Integration: Seitenbezug zwingend
+- **PATA-1** HTML-Artefakt-Standards: iPad-optimiert, ausfüllbar
+- **PATA-1** Heterogenitäts-Standards: DaZ/LRS-berücksichtigt
+- **PATA-1** TUV-Vollständigkeit: Alle Materialien + Reflexion
+- **PATA-2** Meta-Optimierung: Standards kontinuierlich verbessert
+- **PATA-3** Systemische Reflexion: Meta-System-Gesundheit überwacht
 
 ## UNMITTELBARER ARBEITSAUFTRAG:
 [SPEZIFISCHER_GPG_PROMPT]
@@ -51,8 +53,11 @@ Beginne sofort ohne Rückfragen.
 
 ## 📁 **WICHTIGE PFADE**
 
-### GPG Meta-Prozesse
+### GPG Meta-Prozesse (VOLLSTÄNDIGES 3-EBENEN-PATA-SYSTEM)
 - **Alle GPG-Standards**: `/notizen/meta_prozesse/GPG/`
+- **PATA-1 Selbstüberwachung**: `/notizen/meta_prozesse/GPG/GPG_PATA_Selbstueberwachung.md`
+- **PATA-2 Meta-Optimierung**: `/notizen/meta_prozesse/GPG/GPG_PATA_PATA_Meta_Optimierung.md`
+- **PATA-3 Systemische Reflexion**: `/notizen/meta_prozesse/GPG/GPG_PATA_PATA_PATA_Systemische_Reflexion.md`
 - **GPG-Templates**: `/notizen/meta_prozesse/GPG/Prompt_Templates_GPG_Standardisiert.md`
 - **TUV-Standards**: `/notizen/meta_prozesse/GPG/TUV_Vollausarbeitung_Standard_GPG.md`
 - **BUV-Standards**: `/notizen/meta_prozesse/GPG/BUV_Entwicklung_Standard_GPG.md`
@@ -106,8 +111,9 @@ Beginne sofort ohne Rückfragen.
 5. Responsive Design für Beamer
 ```
 
-## ⚡ **GPG-PATA-CHECKLISTE** (vor jeder Aktion)
+## ⚡ **GPG-PATA-CHECKLISTE** (3-EBENEN-AUTO-CHECK)
 
+### PATA-1 (Direkte Standards - vor jeder Aktion):
 - [ ] **Schulbuch-Referenz**: Seitenbezug korrekt angegeben
 - [ ] **Heterogenitäts-Check**: DaZ/LRS/5b-Spezifika berücksichtigt
 - [ ] **iPad-Optimierung**: Ausfüllbar mit Apple Pencil
@@ -115,6 +121,18 @@ Beginne sofort ohne Rückfragen.
 - [ ] **LehrplanPLUS-Bezug**: Kompetenzerwartungen eindeutig
 - [ ] **Git-Status geprüft**: Saubere Versionierung
 - [ ] **TUV-Standards erfüllt**: Alle Komponenten vorhanden
+
+### PATA-2 (Meta-Optimierung - kontinuierlich):
+- [ ] **Standards-Performance monitoren**: Success-Rates überwachen
+- [ ] **Template-Effektivität evaluieren**: Verbesserungspotentiale identifizieren
+- [ ] **Blinde Flecken scannen**: Nicht-abgedeckte Bereiche erkennen
+- [ ] **Auto-Learning aktiviert**: Standards basierend auf Erfahrung anpassen
+
+### PATA-3 (Systemische Reflexion - wöchentlich):
+- [ ] **Meta-System-Gesundheit prüfen**: Feedback-Loops stabil?
+- [ ] **Paradigma-Shifts scannen**: Fundamentale Veränderungen erkannt?
+- [ ] **Reflexion-Action-Balance**: Nicht zu viel Meta-Arbeit?
+- [ ] **Infinite-Regress-Protection aktiv**: Meta-Paralysis vermieden?
 
 ## 🔧 **HÄUFIGE GPG-KOMMANDOS**
 
