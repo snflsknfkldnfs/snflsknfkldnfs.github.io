@@ -1,52 +1,56 @@
-# GPG-PATA KONTEXT-OPTIMIERTES VOLLSYSTEM Quick Reference
-*Intelligente Situationsorientierung als Qualitätshebel für maximale Realsituations-Approximation*
+# GPG-PATA PROJECT-INSTRUCTION-GENERATOR VOLLSYSTEM
+*Automatisierte Projektanweisungs-Generierung + Intelligente Situationsorientierung für alle Claude Desktop Projekte*
 
-## REVOLUTIONÄRER QUALITÄTSSPRUNG
-**KONTEXT-MEMORY-MANAGEMENT als Meta-Ebene über alle anderen Standards**
+## REVOLUTIONÄRER DURCHBRUCH
+**PROJECT-INSTRUCTION-GENERATOR als Meta-Meta-Meta-Ebene über alle anderen Standards**
 
-### ⚡ INTELLIGENTE SITUATIONSORIENTIERUNG (automatisch)
-✅ **STATUS-QUO-ANALYZER**: Automatische Diagnose von Zeit/User-Status/Ressourcen/Constraints  
-✅ **RELEVANCE-FILTER**: Nur situationskritische Informationen ins Working Memory  
-✅ **SMART-LOADER**: Kontextfenster-optimierte, minimale Context-Loading-Strategie  
-✅ **APPROXIMATION-OPTIMIZER**: Maximale Realsituations-Nähe bei allen Outputs  
+### ⚡ AUTOMATISCHE PROJEKTANWEISUNGS-GENERIERUNG
+✅ **PROJECT-TYPE-DETECTOR**: Automatische Erkennung GPG/Fach/Universal/Meta-Projekte  
+✅ **TEMPLATE-SELECTOR**: Optimale Standard-Kombination für jeden Projekttyp  
+✅ **STANDARDS-INTEGRATOR**: Alle PATA-Standards projektspezifisch eingebunden  
+✅ **AUTO-UPDATER**: Kontinuierliche Aktualisierung bei Standard-Verbesserungen  
 
-**Prinzip:** Statt "Alle Standards immer" → "Relevante Standards situationsspezifisch kontextualisiert"
+**Prinzip:** Jedes Claude Desktop Projekt erhält automatisch optimale, aktuelle Projektanweisungen
 
 ## AUTOMATISCHE STANDARDS (greifen ohne Erwähnung)
-✅ **KONTEXT-MANAGER**: Meta-Ebene - steuert alle anderen Systeme situationsspezifisch
-✅ **PATA-1**: Schulbuch-Integration + Git-Versionierung + Heterogenitätssensibilität  
-✅ **PATA-2**: Meta-Optimierung aller Prozesse  
-✅ **PATA-3**: Systemische Reflexion + Feedback-Loops  
-✅ **PATA-KOM-1**: Lehrer-gerechte Kommunikation  
-✅ **PATA-KOM-2**: Kommunikations-Meta-Optimierung  
-✅ **PATA-KOM-3**: Ethische Standards + Autonomie-Respekt  
+✅ **PROJECT-INSTRUCTION-GENERATOR**: Meta-Meta-Meta-Ebene - automatisiert alle Projektanweisungen
+✅ **KONTEXT-MANAGER**: Meta-Meta-Ebene - intelligente Situationsorientierung als Qualitätshebel
+✅ **MEMORY-MANAGEMENT**: Meta-Ebene - kontextfenster-optimierte Realsituations-Approximation
+✅ **PATA-1-3**: Fachliche Standards + Meta-Optimierung + Systemische Reflexion  
+✅ **PATA-KOM-1-3**: User Interface + Kommunikations-Optimierung + Ethische Reflexion  
 ✅ **USER JOURNEY**: Automatische Template-Auswahl + Kontext-Erfassung
 ✅ **WARGAME-PROFILES**: 5 Nutzertypen automatisch erkannt + robuste Edge-Case-Behandlung
 
-## INTELLIGENTE KONTEXT-OPTIMIERUNG (revolutionär)
+## AUTOMATISCHE PROJEKTANWEISUNGS-GENERIERUNG (revolutionär)
 
-### 🎯 AUTOMATISCHE SITUATIONSDIAGNOSE
-**STATUS-QUO-ANALYZER** erfasst sofort:
-- **Temporal-Kontext**: Akut (0-24h) / Kurz (2-7d) / Mittel (1-2w) / Lang (mehrwöchig)
-- **User-Status**: Überfordert / Unsicher / Routiniert / Experimentell / Crisis
-- **Resource-Mapping**: Zeit/Material/Technik/Raum/SuS-Status real verfügbar
-- **Constraint-Identification**: Echte Grenzen der Situation
+### 🎯 PROJEKTTYP-AUTO-DETECTION
+**Intelligente Erkennung basierend auf Projektname/Kontext:**
+- **"GPG5b Antikes Griechenland"** → GPG-Vollsystem-Template (alle PATA-Standards)
+- **"Deutsch Klasse 6"** → Fach-adaptiertes Template (PATA-Prinzipien angepasst)
+- **"PATA-Standard-Entwicklung"** → Meta-Entwicklungs-Template (höchste Standards)
+- **"Präsentation erstellen"** → Universal-Template (Basis-Standards)
 
-### 🔍 RELEVANCE-FILTERING 
-**Nur situationskritische Informationen ins Working Memory:**
-- **Temporal-Filter**: Bei Zeitdruck nur Sofort-Materialien, bei Planung nur Langzeit-Tools
-- **Complexity-Filter**: Bei Überforderung nur Ultra-Simple, bei Routine auch Details  
-- **Resource-Filter**: Bei Tech-Ausfall nur Analog-Alternativen
+### 🔧 TEMPLATE-AUTO-GENERATION
+**Modulare Zusammenstellung projektspezifischer Standards:**
+- **Universal-Basis**: Context-Discovery + Memory-Management + User-Journey (alle Projekte)
+- **GPG-Erweiterungen**: PATA-Vollsystem + Wargame-Robustheit + Template-Kombinatorik
+- **Fach-Adaptionen**: PATA-Prinzipien + fachspezifische Anpassungen
+- **Meta-Standards**: System-Entwicklung + höchste Qualitätssicherung
 
-### ⚡ SMART-LOADING
-- **Minimal-Context**: Nur das für DIESE Situation Essenzielle
-- **Just-in-Time**: Zusätzliche Details nur bei Bedarf
-- **Reality-Anchoring**: Alle Informationen an Realsituation gekoppelt
+### ⚡ AUTO-UPDATE-SYSTEM
+**Kontinuierliche Aktualisierung aller Projektanweisungen:**
+- **Standards-Evolution**: Automatische Integration verbesserter PATA-Standards
+- **Template-Optimization**: User-Feedback fließt in Template-Verbesserung ein
+- **Version-Tracking**: Nachvollziehbare Entwicklung aller Standards
+- **Backward-Compatibility**: Bestehende Projekte funktionieren weiter
 
-### 🎯 REALSITUATIONS-APPROXIMATION
-- **Constraint-Mapping**: Echte Zeit/Material/SuS-Grenzen respektiert
-- **45min-Reality-Check**: Schaffbar inkl. aller Realitätsfaktoren
-- **Murphy's-Law-Test**: Funktioniert auch wenn was schiefgeht
+### 🎯 PRAKTISCHE ANWENDUNG
+**Für neues Claude Desktop Projekt:**
+1. **Projekt erstellen** (z.B. "GPG5b Demokratie")
+2. **Projekttyp automatisch erkannt** (GPG-Vollsystem)
+3. **Template automatisch generiert** (alle PATA-Standards integriert)
+4. **In "Projektanweisungen festlegen" kopieren**
+5. **Sofort einsatzbereit** mit optimalen Standards
 
 ## GPG-AUTOMATISMEN (immer aktiv)
 
