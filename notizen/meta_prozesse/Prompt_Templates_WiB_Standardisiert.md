@@ -32,9 +32,52 @@ version: "1.0.0"
 **Einsatz:** Aufräumung und Strukturverbesserung
 **Ziel:** Saubere, navigierbare Dateienorganisation
 
-### 6. Meta-Prozess-Entwicklung
-**Einsatz:** Entwicklung neuer PATA-Standards
-**Ziel:** Kontinuierliche Verbesserung der Arbeitsabläufe
+### 7. DiSoAn-Systemtheoretische Leistungsanalyse
+**Einsatz:** Leistungsbewertung nach systemtheoretischen Standards
+**Ziel:** Wissenschaftlich fundierte, DSGVO-konforme Notenverteilung
+
+## 📋 **TEMPLATE 7: DISOÄN-LEISTUNGSANALYSE**
+
+### Anwendung
+- Normalverteilte Notenverteilung ohne Note 6
+- Systemtheoretische Reflexion nach Luhmann
+- DSGVO-konforme soziometrische Datenanalyse
+- Berücksichtigung aller vier Teilrationalitäten
+
+### Template-Struktur
+```markdown
+# Systemtheoretische Leistungsanalyse: [FACH/KONTEXT]
+
+## DISOÄN-ANALYSE NACH LUHMANN:
+Du bist ein selbstlernendes System und führst eine systemtheoretische Leistungsanalyse nach allen DiSoAn-Richtlinien durch.
+
+## ROHDATEN (pseudonymisiert):
+[LEISTUNGSDATEN_EINGABE]
+
+## OBLIGATORISCHE STANDARDS:
+1. **Systemtheoretische Perspektive**: Teilrationalitäten (pädagogisch, rechtlich-administrativ, wissenschaftlich, technisch)
+2. **Statistische Fundierung**: Z-Score-Transformation + Normalverteilung ohne Note 6
+3. **DSGVO-Konformität**: Pseudonymisierung + Zweckbindung + Datenminimierung
+4. **Explizite Selbstreflexion**: Wissensgrenzen + Annahmen + blinde Flecken transparent machen
+5. **Rückkopplungseffekte**: Systemische Konsequenzen der Bewertung reflektieren
+6. **DiSoAn-Terminologie**: Ausschließlich projektspezifische Begriffe verwenden
+7. **Entscheidungsdokumentation**: Jede methodische Entscheidung begründen
+
+## ERWARTETER OUTPUT:
+- **Vollständige statistische Analyse** mit mathematischer Transparenz
+- **Normalverteilte Notenverteilung** ohne demotivierende Extremnoten
+- **Systemtheoretische Meta-Reflexion** mit echter Erkenntnistiefe
+- **DSGVO-konforme Dokumentation** ohne Datenschutz-Schwachstellen
+- **Interdisziplinäre Perspektiventriangulation** aller Teilrationalitäten
+
+## QUALITÄTS-GARANTIE:
+- Wissenschaftlich fundiert und methodisch transparent
+- Praktisch umsetzbar und pädagogisch sinnvoll
+- Rechtlich korrekt und ethisch vertretbar
+- Systemtheoretisch reflektiert und selbstkritisch
+
+**Führe die Analyse gemäß höchsten DiSoAn-Standards durch. Integriere Luhmannsche Erkenntnistheorie als erkenntnistheoretische Basis.**
+```
 
 ## 📋 **TEMPLATE 1: NAHTLOSE CHAT-FORTSETZUNG**
 

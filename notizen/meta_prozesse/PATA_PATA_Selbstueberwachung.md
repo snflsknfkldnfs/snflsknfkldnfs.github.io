@@ -122,6 +122,15 @@ IF (Sequenz_Planning):
   VERSIONING = "git_only"
 ```
 
+#### DiSoAn-Leistungsanalysen:
+```
+IF (DiSoAn_Leistungsanalyse):
+  ZWINGEND = ["systemtheoretische_reflexion", "teilrationalitäten", "dsgvo_check"]
+  METHODIK = "z_score_transformation + normalverteilung"
+  TERMINOLOGY = "DiSoAn_Glossar_ONLY"
+  SELF_REFLECTION = "luhmannsche_erkenntnistheorie"
+```
+
 ## 🎯 SELBST-EVALUATION-LOOP:
 
 ### Nach jeder Aktion:

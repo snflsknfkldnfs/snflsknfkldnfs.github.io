@@ -6,7 +6,7 @@
       {
         "id": "5efc95c3a28a5a39",
         "type": "tabs",
-        "dimension": 76.93194925028835,
+        "dimension": 51.56453715775749,
         "children": [
           {
             "id": "4331cbdf840e3e3a",
@@ -106,12 +106,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notizen/meta_prozesse/GPG/GPG_PATA_KONTEXT_MEMORY_MANAGEMENT.md",
+                "file": "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GPG_PATA_KONTEXT_MEMORY_MANAGEMENT"
+              "title": "BUV_Final_Abgabe_v6.2"
             }
           }
         ],
@@ -120,7 +120,7 @@
       {
         "id": "ca2a68dbadcd1cf5",
         "type": "tabs",
-        "dimension": 11.534025374855824,
+        "dimension": 48.435462842242494,
         "children": [
           {
             "id": "e26fdffa0b1435a3",
@@ -140,32 +140,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0.md",
+                "file": "unterricht/3. BUV/Reflexion 3. BUV.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0"
+              "title": "Reflexion 3. BUV"
             }
           }
-        ]
-      },
-      {
-        "id": "d7d77edab2ebb232",
-        "type": "tabs",
-        "dimension": 11.534025374855824,
-        "children": [
-          {
-            "id": "9a3a38202eedd336",
-            "type": "leaf",
-            "state": {
-              "type": "differences-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "File Diff: BUV_FINALE_Ausarbeitung_v7.1_optimiert.md and BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0.md"
-            }
-          }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -313,14 +297,30 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "5ea09067202d79f6",
+  "active": "34714c01732f5aef",
   "lastOpenFiles": [
+    "notizen/meta_prozesse/DiSoAn_Systemtheoretische_Leistungsanalyse_Standard.md",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
+    "unterricht/3. BUV/Reflexion 3. BUV.md",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0.md",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/sitzplan5b.pdf",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/GPG5b_LB4_2_Antikes_Griechenland_Dialog_materialien_Erarbeitung_v7.html",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/E5b_My Weekend.pdf",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben swimming.png",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/image",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben ate.png",
+    "unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Bamberg_Cathedral_Dom_2.textClipping",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben 1.png",
+    "unterricht/3. BUV/GPG5b_LB4_2_Das Antike Griechenland_03_Leben in der Polis.pdf",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/E5b_My Weekend_dialogue_cards_set.pdf",
+    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/E5b_My_Weekend_BUV_v6.2.pdf",
+    "notizen/meta_prozesse/GPG/GPG_PATA_KONTEXT_MEMORY_MANAGEMENT.md",
+    "unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Bilder englisch.zip",
+    "unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Archiv.zip",
     "notizen/meta_prozesse/GPG/GPG_PATA_CONTEXT_DISCOVERY_SYSTEM.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_Quick_Reference.md",
     "notizen/meta_prozesse/GPG/KRITISCH_Planungshierarchie_Zwangscheck_GPG.md",
     "website/node_modules/array-differ/readme.md",
-    "unterricht/WiB5b_Technik_Sequenz/02_Classroom_Screen_Interactive.html",
-    "notizen/meta_prozesse/GPG/GPG_PATA_KONTEXT_MEMORY_MANAGEMENT.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_TEMPLATE_KOMBINATORIK.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_WARGAME_USER_PROFILES.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_USER_JOURNEY_OPTIMIZATION.md",
@@ -334,32 +334,16 @@
     "notizen/meta_prozesse/GPG/GPG_PATA_Selbstueberwachung.md",
     "notizen/meta_prozesse/GPG/Prompt_Templates_GPG_Standardisiert.md",
     "notizen/meta_prozesse/GPG/Quick_Reference_GPG_Standards.md",
-    "notizen/meta_prozesse/GPG",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/PA_Zuteilung.html",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/Hefteintrag_Vorlage.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/07_Hefteintrag_Vorlage_Ausfuellbar.html",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/05_Hefteintrag_Vorlage_AUSFUELLBAR.html",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Hector.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/SCR-20250624-qsen.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/components_png/SCR-20250624-qsen.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/06_Miro_Board_Template.html",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/04_Arbeitsblatt_Hector.html",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/05_Hefteintrag_Polis.html",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/Anknüpfung_Die Polis Athen.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/SCR-20250624-qrdp.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/03_Arbeitsblatt_Amos.html",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/02_Arbeitsblatt_Georgius.html",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/TUV_Polis_Vorstunde_FINALE_v2.0.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/qr_codes_perplexity.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/haendler_athen_info.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/TUV_Vorstunde_23-06-2025_Haendlerleben_Athen.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/MATERIAL_UEBERSICHT_KOMPLETT.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/Neuer Ordner mit Objekten/qr_codes_perplexity.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/Neuer Ordner mit Objekten/haendler_athen_info.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/Neuer Ordner mit Objekten/TUV_Vorstunde_23-06-2025_Haendlerleben_Athen.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Atmos.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/SCR-20250624-qlhg.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/components_png/SCR-20250624-qlhg.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Georgius.png"
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Atmos.png"
   ]
 }

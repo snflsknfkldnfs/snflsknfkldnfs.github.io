@@ -39,10 +39,13 @@ Beginne sofort ohne Rückfragen.
 3. `git commit -m "fix: [Problem]"` → Commit
 4. Bei Konflikten → Manuelle Intervention anfordern
 
-### Bei Repository-Unordnung
-1. Template "Repository-Strukturoptimierung" aus `/notizen/meta_prozesse/Prompt_Templates_WiB_Standardisiert.md`
-2. PATA-PATA-Check vor jeder Datei-Aktion
-3. Git-Commit nach Reorganisation
+### Bei DiSoAn-Anfragen
+1. DiSoAn-Terminologie ausschließlich verwenden
+2. Systemtheoretische Perspektive (Luhmann) einhalten
+3. Alle vier Teilrationalitäten berücksichtigen
+4. DSGVO-konforme Datenverarbeitung sicherstellen
+5. Explizite Selbstreflexion mit Wissensgrenzen
+6. Template "DiSoAn-Leistungsanalyse" aus `/notizen/meta_prozesse/DiSoAn_Systemtheoretische_Leistungsanalyse_Standard.md`
 
 ## 📁 **WICHTIGE PFADE**
 
@@ -136,6 +139,7 @@ cd /Users/paulad/snflsknfkldnfs.github.io/
 | Gehaltene Stunde dokumentieren | Nachdokumentation | 30-45 Min |
 | Repository aufräumen | Struktur-Optimierung | 20-40 Min |
 | Neuen Standard entwickeln | Meta-Prozess | 30-60 Min |
+| DiSoAn-Leistungsanalyse | Systemtheoretische Analyse | 30-45 Min |
 
 ## 🚨 **NOTFALL-PROTOKOLLE**
 
