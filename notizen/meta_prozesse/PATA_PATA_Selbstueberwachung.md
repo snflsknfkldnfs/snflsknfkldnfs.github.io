@@ -37,6 +37,13 @@ PRE-ACTION-ZWANGSCHECK:
 - ❌ Git-Hooks für automatische PII-Checks deaktiviert
 - ❌ .gitignore nicht DSGVO-konform (Mappings nicht ausgeschlossen)
 
+#### 🚨 CRITICAL: Datenintegrität BLOCKIEREN wenn:
+- ❌ **BEWERTUNGSRICHTUNG nicht verifiziert** (niedrige/hohe Werte = besser?)
+- ❌ Z-Score-Transformation ohne Richtungs-Bestätigung
+- ❌ Fundamentale Annahmen über Bewertungssysteme automatisch getroffen
+- ❌ Leistungsdaten ohne Plausibilitäts-Check mit User verarbeitet
+- ❌ Extreme Werte nicht mit User besprochen
+
 #### DiSoAn-Anfragen BLOCKIEREN wenn:
 - ❌ Standards-Hierarchie verletzt (Recht > DiSoAn > PATA > User)
 - ❌ DSGVO-Compliance nicht geprüft

@@ -65,6 +65,11 @@ PRE-ANALYSIS-CHECK:
 2. "Ist Zweckbindung gewährleistet?"
 3. "Wurden Datenminimierung beachtet?"
 4. "Erfolgt Verarbeitung rechtmäßig?"
+
+🚨 CRITICAL-FIRST: BEWERTUNGSRICHTUNG-VERIFICATION
+5. "ZWINGEND: Bedeuten niedrigere/höhere Werte bessere Leistung?"
+6. "Extreme Werte plausibel? Mit User besprechen!"
+7. "NIEMALS automatische Annahmen über Bewertungsrichtung!"
 ```
 
 ### Phase 2: Statistische Grundanalyse
