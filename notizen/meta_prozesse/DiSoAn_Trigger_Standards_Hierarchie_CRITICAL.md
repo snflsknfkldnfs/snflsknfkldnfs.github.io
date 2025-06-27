@@ -28,8 +28,10 @@ UNSICHERHEIT-PROTOCOL:
 ### Prioritäten-Kaskade
 ```
 RANG 1: RECHTLICHE COMPLIANCE (unverhandelbar)
-- DSGVO-Konformität
+- DSGVO-Konformität (Art. 4, 25, 32)
 - Datenschutz-Grundverordnung
+- Schülerdaten-Schutz (Schulgesetze)
+- Automatische PII-Anonymisierung
 - Rechtssicherheit
 
 RANG 2: DISOÄN-STANDARDS (wenn aktiviert)

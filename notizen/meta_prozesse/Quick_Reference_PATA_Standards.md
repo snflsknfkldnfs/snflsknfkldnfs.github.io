@@ -39,6 +39,12 @@ Beginne sofort ohne Rückfragen.
 3. `git commit -m "fix: [Problem]"` → Commit
 4. Bei Konflikten → Manuelle Intervention anfordern
 
+### Bei DSGVO-Problemen
+1. `python3 scripts/dsgvo_compliance/dsgvo_manager.py scan` → Repository-Check
+2. `python3 scripts/dsgvo_compliance/dsgvo_manager.py anonymize` → Auto-Anonymisierung
+3. `python3 scripts/dsgvo_compliance/dsgvo_manager.py compliance` → Compliance-Validierung
+4. Bei Notfall: `echo "Grund" > .dsgvo/.emergency_bypass` → Bypass aktivieren
+
 ### Bei DiSoAn-Anfragen
 1. DiSoAn-Terminologie ausschließlich verwenden
 2. Systemtheoretische Perspektive (Luhmann) einhalten
@@ -140,6 +146,7 @@ cd /Users/paulad/snflsknfkldnfs.github.io/
 | Repository aufräumen | Struktur-Optimierung | 20-40 Min |
 | Neuen Standard entwickeln | Meta-Prozess | 30-60 Min |
 | DiSoAn-Leistungsanalyse | Systemtheoretische Analyse | 30-45 Min |
+| DSGVO-Anonymisierung | Schülerdaten-Compliance | 15-30 Min |
 
 ## 🚨 **NOTFALL-PROTOKOLLE**
 

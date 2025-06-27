@@ -30,6 +30,13 @@ PRE-ACTION-ZWANGSCHECK:
 - ❌ Git-Repository-Kontext und keine Versionierung
 - ❌ PATA-Standards ignoriert werden
 
+#### DSGVO-Compliance BLOCKIEREN wenn:
+- ❌ Personenbezogene Daten erkannt aber nicht anonymisiert
+- ❌ DSGVO-System nicht installiert bei Schülerdaten-Repository
+- ❌ Verschlüsselung von Zuordnungstabellen fehlt
+- ❌ Git-Hooks für automatische PII-Checks deaktiviert
+- ❌ .gitignore nicht DSGVO-konform (Mappings nicht ausgeschlossen)
+
 #### DiSoAn-Anfragen BLOCKIEREN wenn:
 - ❌ Standards-Hierarchie verletzt (Recht > DiSoAn > PATA > User)
 - ❌ DSGVO-Compliance nicht geprüft

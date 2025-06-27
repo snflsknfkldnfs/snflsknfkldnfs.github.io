@@ -140,12 +140,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notizen/meta_prozesse/PATA_PATA_Selbstueberwachung.md",
+                "file": "notizen/meta_prozesse/DSGVO_Automatische_Schuelerdaten_Anonymisierung_CRITICAL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PATA_PATA_Selbstueberwachung"
+              "title": "DSGVO_Automatische_Schuelerdaten_Anonymisierung_CRITICAL"
             }
           }
         ],
@@ -299,6 +299,16 @@
   },
   "active": "34714c01732f5aef",
   "lastOpenFiles": [
+    "scripts/dsgvo_compliance/README.md",
+    "scripts/dsgvo_compliance/test_dsgvo_system.py",
+    "scripts/dsgvo_compliance/dsgvo_manager.py",
+    "scripts/setup-dsgvo-compliance.sh",
+    "scripts/dsgvo_compliance/pre-commit-dsgvo.sh",
+    "scripts/dsgvo_compliance/anonymizer.py",
+    "notizen/meta_prozesse/PATA_PATA_Selbstueberwachung.md",
+    "scripts/dsgvo_compliance/pii_scanner.py",
+    "scripts/dsgvo_compliance",
+    "notizen/meta_prozesse/DSGVO_Automatische_Schuelerdaten_Anonymisierung_CRITICAL.md",
     "unterricht/3. BUV/Reflexion 3. BUV.md",
     "notizen/meta_prozesse/DiSoAn_Trigger_Standards_Hierarchie_CRITICAL.md",
     "notizen/meta_prozesse/DiSoAn_Systemtheoretische_Leistungsanalyse_Standard.md",
@@ -308,16 +318,9 @@
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/GPG5b_LB4_2_Antikes_Griechenland_Dialog_materialien_Erarbeitung_v7.html",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/E5b_My Weekend.pdf",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben swimming.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/image",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben ate.png",
-    "unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Bamberg_Cathedral_Dom_2.textClipping",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben 1.png",
-    "unterricht/3. BUV/GPG5b_LB4_2_Das Antike Griechenland_03_Leben in der Polis.pdf",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/E5b_My Weekend_dialogue_cards_set.pdf",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/E5b_My_Weekend_BUV_v6.2.pdf",
     "notizen/meta_prozesse/GPG/GPG_PATA_KONTEXT_MEMORY_MANAGEMENT.md",
-    "unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Bilder englisch.zip",
-    "unterricht/E5_Unit5_People_and_Places/v5.0_components/images/Archiv.zip",
     "notizen/meta_prozesse/GPG/GPG_PATA_CONTEXT_DISCOVERY_SYSTEM.md",
     "notizen/meta_prozesse/GPG/GPG_PATA_Quick_Reference.md",
     "notizen/meta_prozesse/GPG/KRITISCH_Planungshierarchie_Zwangscheck_GPG.md",
@@ -341,9 +344,6 @@
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/components_png/SCR-20250624-qsen.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/Anknüpfung_Die Polis Athen.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/SCR-20250624-qrdp.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/TUV_Polis_Vorstunde_FINALE_v2.0.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/qr_codes_perplexity.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/haendler_athen_info.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Atmos.png"
   ]
 }
