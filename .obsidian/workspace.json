@@ -140,12 +140,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/3. BUV/Reflexion 3. BUV.md",
+                "file": "notizen/meta_prozesse/PATA_PATA_Selbstueberwachung.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reflexion 3. BUV"
+              "title": "PATA_PATA_Selbstueberwachung"
             }
           }
         ],
@@ -299,9 +299,10 @@
   },
   "active": "34714c01732f5aef",
   "lastOpenFiles": [
+    "unterricht/3. BUV/Reflexion 3. BUV.md",
+    "notizen/meta_prozesse/DiSoAn_Trigger_Standards_Hierarchie_CRITICAL.md",
     "notizen/meta_prozesse/DiSoAn_Systemtheoretische_Leistungsanalyse_Standard.md",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
-    "unterricht/3. BUV/Reflexion 3. BUV.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0.md",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/sitzplan5b.pdf",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/v7.0_components/GPG5b_LB4_2_Antikes_Griechenland_Dialog_materialien_Erarbeitung_v7.html",
@@ -343,7 +344,6 @@
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/TUV_Polis_Vorstunde_FINALE_v2.0.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/qr_codes_perplexity.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/haendler_athen_info.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/GPG5b_LB4_2_3_Händlerleben in Athen/TUV_Vorstunde_23-06-2025_Haendlerleben_Athen.md",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland_v7.0/TUV_2025-06-23_UZE01_Polis_Gesellschaftsgruppen_v1.0/Material/Miro/AB_Atmos.png"
   ]
 }

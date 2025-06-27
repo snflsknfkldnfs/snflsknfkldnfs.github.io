@@ -30,11 +30,18 @@ PRE-ACTION-ZWANGSCHECK:
 - ❌ Git-Repository-Kontext und keine Versionierung
 - ❌ PATA-Standards ignoriert werden
 
+#### DiSoAn-Anfragen BLOCKIEREN wenn:
+- ❌ Standards-Hierarchie verletzt (Recht > DiSoAn > PATA > User)
+- ❌ DSGVO-Compliance nicht geprüft
+- ❌ Trigger-Mechanismus ignoriert (bei Unsicherheit nachfragen!)
+- ❌ Systemtheoretische Reflexion übersprungen
+
 #### ERLAUBT nur wenn:
 - ✅ Komplett neues Thema/UE/Dokument
 - ✅ Keine existierende Datei vorhanden
 - ✅ Git-konforme Namensgebung
 - ✅ PATA-Standards befolgt
+- ✅ DiSoAn-Trigger korrekt evaluiert
 
 ### 🤖 AUTOMATISCHER WORKFLOW:
 
