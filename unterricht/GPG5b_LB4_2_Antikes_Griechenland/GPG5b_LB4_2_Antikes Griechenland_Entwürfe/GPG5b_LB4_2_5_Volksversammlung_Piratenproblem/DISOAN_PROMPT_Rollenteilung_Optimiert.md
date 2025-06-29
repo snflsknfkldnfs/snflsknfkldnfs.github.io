@@ -28,33 +28,61 @@
 
 ### **ROLLENZUTEILUNG NACH KOMPETENZ & BEDÜRFNISSEN:**
 
-**HÄNDLER NIKIAS** → **Emma** 
-- *Begründung: Leistungsstark, selbstbewusst, kann komplexe Wirtschaftsargumente entwickeln*
-- *Partner: Siehe Soldat Andreas*
+## 🤖 PROMPT FÜR KI-GESTÜTZTE ROLLENEINTEILUNG
 
-**SOLDAT ANDREAS** → **Amir (DaZ)**
-- *Begründung: Einfache, klare Argumentation ("Wir müssen stark sein!"), wenig Text, männliche Rolle passt*
-- *Partner: Emma (unterstützt sprachlich)*
+**EINGABE-TEMPLATE für anderes KI-System:**
 
-**BAUER ALEXIS** → **Fatima (DaZ)**  
-- *Begründung: Einfache Steuer-Argumentation, sympathische Rolle, überschaubare Sprache*
-- *Partner: Siehe Handwerker Demos*
+```
+AUFGABE: Erstelle optimale Rollenteilung für Volksversammlung-Rollenspiel
 
-**HANDWERKER DEMOS** → **Lukas**
-- *Begründung: Mittlere Komplexität, kann Fatima sprachlich unterstützen, teamfähig*
-- *Partner: Fatima (er hilft, sie trägt authentisch vor)*
+KLASSEN-KONTEXT:
+- Klasse: 5b GPG, 20 SuS
+- DaZ-Kinder: [Namen der DaZ-SuS aus aktueller Klassenliste]
+- LRS-Verdacht: [Namen der LRS-SuS aus aktueller Klassenliste] 
+- Verhaltensauffälligkeiten: [Konkrete SuS mit hohem Beschäftigungsdrang]
+- Leistungsstarke SuS: [Namen der leistungsstarken SuS]
+- Schüchterne SuS: [Namen der zurückhaltenden SuS]
+- Dominante Persönlichkeiten: [Namen der selbstbewussten SuS]
 
-### **TEAM-PAARUNGEN (Argumententwicklung):**
+ZU VERTEILENDE ROLLEN:
+1. HÄNDLER NIKIAS (PRO Kriegsschiffe) - komplexe wirtschaftliche Argumentation
+2. SOLDAT ANDREAS (PRO Kriegsschiffe) - einfache militärische Argumentation  
+3. BAUER ALEXIS (CONTRA Kriegsschiffe) - einfache Steuer-Argumentation
+4. HANDWERKER DEMOS (CONTRA Kriegsschiffe) - mittlere Komplexität
 
-**PRO-KRIEGSSCHIFFE TEAM:**
-- **Emma (Händler)** + **Amir (Soldat)**
-- *Dynamik: Emma entwickelt komplexere Argumente, Amir bringt emotionale Überzeugung*
-- *Sprachunterstützung: Emma hilft Amir bei Formulierungen*
+OPTIMIERUNGSKRITERIEN:
+- DaZ-Kinder: Sprachlich einfachere Rollen (Bauer/Soldat)
+- LRS-Kinder: Rollen mit weniger Lesetext, mehr mündliche Beteiligung
+- Leistungsstarke SuS: Komplexere Argumentationsrollen (Händler)
+- Teams leistungsheterogen aber arbeitsförderlich
+- Keine dominanten Freundschaftsgruppen
+- Schüchterne SuS aktivieren ohne überfordern
 
-**CONTRA-KRIEGSSCHIFFE TEAM:**  
-- **Fatima (Bauer)** + **Lukas (Handwerker)**
-- *Dynamik: Lukas unterstützt Fatima sprachlich, beide entwickeln bodenständige Argumente*
-- *Cultural Bridge: Fatima bringt authentische "einfache Leute"-Perspektive*
+AUSGABE-FORMAT:
+[SuS-Name] → [Rolle] + [2-Satz-Begründung der Passung]
+PRO-Team: [Name 1] + [Name 2] - [Teamdynamik-Beschreibung]
+CONTRA-Team: [Name 3] + [Name 4] - [Teamdynamik-Beschreibung]
+Publikum-Aufteilung: [Strategische Verteilung der 16 übrigen SuS]
+```
+
+### **OPTIMIERUNGS-PARAMETER:**
+
+**FÜR DaZ-KINDER optimal:**
+- Bauer Alexis: "Kriegsschiffe zu teuer!" (einfache Sprache)
+- Soldat Andreas: "Wir müssen stark sein!" (emotionale Klarheit)
+
+**FÜR LRS-KINDER optimal:**
+- Handwerker Demos: Weniger Text, praktische Argumente
+- Publikumsrollen: Aktives Zuhören ohne Lesestress
+
+**FÜR LEISTUNGSSTARKE optimal:**
+- Händler Nikias: Komplexe Wirtschaftsargumentation
+- Zusatzaufgaben: "Alternative Lösungen entwickeln"
+
+**TEAM-BILDUNGS-STRATEGIE:**
+- Heterogene Leistungsverteilung pro Team
+- Sprachliche Unterstützung integrieren
+- Arbeitsförderliche statt freundschaftliche Paarung
 
 ## 📊 PUBLIKUMS-OPTIMIERUNG (15 SuS)
 

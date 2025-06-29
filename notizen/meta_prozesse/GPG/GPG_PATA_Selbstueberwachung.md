@@ -22,6 +22,14 @@ GPG-PRE-ACTION-ZWANGSCHECK:
 3. "Ist Fachintegration (Geschichte/Politik/Geographie) gewährleistet?"
 4. "Sind HTML-Artefakte iPad-ausfüllbar?"
 5. "Befolge ich meine GPG-PATA-Standards?"
+6. "BUV-CHECK: Ist Lernziel transparent für 5b formuliert?"
+7. "BUV-CHECK: Sind maximal 3 Materialtypen verwendet?"
+8. "BUV-CHECK: Ist roter Faden/Kohärenz erkennbar?"
+9. "BUV-CHECK: Basiert das auf bewährten Strukturen?"
+10. "BUV-CHECK: Ist Tafelbild-Entwicklung integriert?"
+11. "BUV-CHECK: Ist Tech-Tool sinnvoll für 5b?"
+12. "BUV-CHECK: Sind SuS in ersten 10min aktiviert?"
+13. "BUV-CHECK: Sind Lehrervortragsphasen ≤5min?"
 ```
 
 ### 🚨 GPG-VERBOTENE AKTIONEN - AUTOMATISCHE BLOCKIERUNG:
@@ -32,6 +40,14 @@ GPG-PRE-ACTION-ZWANGSCHECK:
 - ❌ Nur ein Fach (H oder P oder G) berücksichtigt
 - ❌ HTML-Artefakte nicht iPad-kompatibel
 - ❌ Heterogenität der 5b nicht beachtet
+- ❌ BUV-LEARNING: Lernziel nicht transparent
+- ❌ BUV-LEARNING: Mehr als 3 Materialtypen
+- ❌ BUV-LEARNING: Kein erkennbarer roter Faden
+- ❌ BUV-LEARNING: Innovation ohne bewährte Basis
+- ❌ BUV-LEARNING: Tafelbild-Entwicklung fehlt
+- ❌ BUV-LEARNING: Miro für Material-Erarbeitung
+- ❌ BUV-LEARNING: Lehrervortrag länger als 5min
+- ❌ BUV-LEARNING: SuS-Aktivierung später als 10min
 
 #### GPG-ERLAUBT nur wenn:
 - ✅ GPG5 Trio Seitenbezug explizit angegeben
@@ -39,6 +55,14 @@ GPG-PRE-ACTION-ZWANGSCHECK:
 - ✅ LRS-Anpassungen integriert
 - ✅ Geschichte + Politik + Geographie verknüpft
 - ✅ HTML-Artefakte mit Apple Pencil ausfüllbar
+- ✅ BUV-LEARNING: Lernziel in ersten 5min transparent
+- ✅ BUV-LEARNING: Maximal 3 verschiedene Materialtypen
+- ✅ BUV-LEARNING: Roter Faden durch alle Phasen
+- ✅ BUV-LEARNING: Bewährte Strukturen als Basis
+- ✅ BUV-LEARNING: Schrittweise Tafelbild-Entwicklung
+- ✅ BUV-LEARNING: HTML-Website für Material-Erarbeitung
+- ✅ BUV-LEARNING: SuS-Aktivierung in ersten 10min
+- ✅ BUV-LEARNING: Lehrervortragsphasen ≤5min
 
 ### 🤖 GPG-AUTOMATISCHER WORKFLOW:
 
@@ -58,6 +82,41 @@ BEFORE_MATERIAL_CREATION:
   if (no_DaZ_consideration OR no_LRS_adaptation):
     FORCE_INTEGRATION = True
     ADD_HETEROGENITY_FEATURES = True
+```
+
+#### Schritt 3: BUV-LEARNINGS-CHECK (NEU)
+```
+BEFORE_TUV_FINALIZATION:
+  // Lernziel-Transparenz-Check
+  if (lernziel_not_explicit):
+    FORCE_LERNZIEL_TRANSPARENT = True
+    ADD_TO_EINSTIEG = "Was können Sie nach der Stunde?"
+  
+  // Komplexitäts-Check
+  if (materialtypen > 3):
+    AUTO_REDUCE_COMPLEXITY = True
+    KEEP_ONLY_ESSENTIAL_MATERIALS = True
+  
+  // Bewährte-Strukturen-Check  
+  if (not_based_on_established_structures):
+    PRIORITIZE_BAUSTEINSKRIPT = True
+    SCAN_FOR_PROVEN_TEMPLATES = True
+  
+  // Tech-Tool-Sinnhaftigkeit-Check
+  if (miro_for_material_erarbeitung):
+    SUGGEST_HTML_ALTERNATIVE = True
+    WARNING = "HTML-Website einfacher für 5b"
+  
+  // Aktivierungs-Timing-Check
+  if (sus_aktivierung > 10min):
+    AUTO_RESTRUCTURE_TIMING = True
+    MOVE_ACTIVATION_EARLIER = True
+  
+  // Lehrervortrag-Länge-Check
+  if (lehrervortrag > 5min):
+    AUTO_SPLIT_INTO_CHUNKS = True
+    ADD_ACTIVATION_BREAKS = True
+```
   else:
     PROCEED_WITH_CREATION = True
 ```

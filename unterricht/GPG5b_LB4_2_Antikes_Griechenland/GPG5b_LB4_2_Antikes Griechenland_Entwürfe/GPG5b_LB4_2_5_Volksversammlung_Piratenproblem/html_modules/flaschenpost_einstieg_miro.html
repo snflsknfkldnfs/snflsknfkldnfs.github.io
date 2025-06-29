@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flaschenpost vom Strand von Piräus</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            color: #f4f1de;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .scroll-container {
+            background: linear-gradient(145deg, #f4f1de 0%, #e9c46a 100%);
+            color: #2c1810;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 8px solid #8b4513;
+            position: relative;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #8b4513;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #8b4513;
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            font-weight: bold;
+        }
+        
+        .help-cry {
+            text-align: center;
+            font-size: 2.2em;
+            color: #dc2626;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .message-content {
+            font-size: 1.3em;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 25px 0;
+        }
+        
+        .urgent {
+            background: rgba(220, 38, 38, 0.1);
+            padding: 15px;
+            border-left: 5px solid #dc2626;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .question {
+            background: rgba(44, 90, 160, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 2px dashed #2c5aa0;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="header">
+            <h1>📜 HILFERUF AUS DEM MITTELMEER</h1>
+            <div>Gefunden am Strand von Piräus bei Sonnenaufgang</div>
+        </div>
+        
+        <div class="help-cry">HILFE! HILFE! HILFE!</div>
+        
+        <div class="message-content">
+            Mein Name ist <strong>Nikanor</strong>, Händler aus Athen.
+        </div>
+        
+        <div class="message-content">
+            Ich schreibe diese Zeilen, während unser Schiff brennt.
+        </div>
+        
+        <div class="urgent">
+            🏴‍☠️ <strong>PIRATEN HABEN UNS ÜBERFALLEN!</strong>
+        </div>
+        
+        <div class="message-content">
+            Sie sind gekommen wie ein Sturm aus dem Nichts.<br>
+            Schwarze Segel, wilde Männer mit Schwertern.<br><br>
+            
+            Sie nehmen uns all unsere kostbaren Waren weg:<br>
+            • Silber aus Spanien<br>
+            • Parfüm aus Ägypten<br>
+            • Seide aus dem fernen Osten
+        </div>
+        
+        <div class="message-content">
+            Jetzt verlangen sie auch noch <strong>Lösegeld</strong> für uns!
+        </div>
+        
+        <div class="urgent">
+            Das ist schon das DRITTE SCHIFF diese Woche!<br><br>
+            ⚰️ <strong>Händler Lysander</strong> - tot<br>
+            ❓ <strong>Händler Prokles</strong> - verschollen<br>
+            💸 <strong>Händler Demetrios</strong> - ruiniert
+        </div>
+        
+        <div class="message-content">
+            Keiner von uns traut sich mehr aufs Meer.<br><br>
+            
+            Die Handelsrouten nach <strong>Ägypten</strong> sind gesperrt.<br>
+            Die Wege nach <strong>Kleinasien</strong> sind zu gefährlich.
+        </div>
+        
+        <div class="question">
+            ⚖️ ATHEN MUSS UNS HELFEN!<br><br>
+            
+            Aber wie? Wer soll uns schützen?<br><br>
+            
+            Brauchen wir <strong>KRIEGSSCHIFFE</strong>?<br>
+            Können wir sie bezahlen?<br>
+            Wollen die Bürger dafür Steuern zahlen?
+        </div>
+        
+        <div class="message-content">
+            Bitte... die Volksversammlung muss entscheiden...<br><br>
+            
+            Bevor es zu spät ist...<br>
+            Bevor Athen seine Macht auf dem Meer verliert...<br>
+            Bevor wir alle arm werden...
+        </div>
+        
+        <div style="text-align: right; margin-top: 40px; font-style: italic; color: #8b4513; border-top: 2px solid #8b4513; padding-top: 20px;">
+            <strong>Nikanor, Händler aus Athen</strong><br>
+            <em>Geschrieben in größter Gefahr</em><br>
+            <em>In einer zerbrochenen Amphore gefunden</em>
+        </div>
+    </div>
+</body>
+</html>

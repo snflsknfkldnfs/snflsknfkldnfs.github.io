@@ -13,31 +13,41 @@
 - Heterogenitäts-Differenzierung integriert
 - **→ Das ist Ihr Leitfaden für morgen!**
 
-### 🎭 **2. DRAMATISCHER EINSTIEG**
-**`FLASCHENPOST_Dramatischer_Einstieg.md`**
-- Spannende Flaschenpost von Händler Nikanor
-- Vorlesetipps für maximale Wirkung
-- Übergang zu den Rollen
-- **→ Ausdrucken und dramatisch vorlesen!**
-
-### 👥 **3. SOZIOGRAPHISCHE OPTIMIERUNG**
+### 🤖 **2. KI-GESTÜTZTE ROLLENEINTEILUNG**
 **`DISOAN_PROMPT_Rollenteilung_Optimiert.md`**
-- Konkrete Rollenzuteilung für alle 20 SuS
-- DaZ/LRS-Berücksichtigung  
-- Teambildungs-Strategien
-- Backup-Pläne für alle Situationen
-- **→ Ihre Anleitung für perfekte Gruppeneinteilung!**
+- **Präziser Prompt für anderes KI-System** (keine erfundenen Namen!)
+- Optimierungskriterien für DaZ/LRS/Leistungsstarke SuS
+- Template für Eingabe der echten Klassenliste
+- **→ Für soziographisch perfekte Rollenteilung!**
 
-### ⚔️ **4. ARGUMENTATIONSHILFEN**
-**`ARGUMENTATIONSHILFE_PRO_Kriegsschiffe.md`**
-- Für Händler Nikias & Soldat Andreas
-- Strukturierte Argumente + Gegenargument-Antworten
-- **→ Ausdrucken für PRO-Team!**
+### 🎭 **3. HTML-ARTEFAKTE FÜR MIRO-PRÄSENTATION**
 
-**`ARGUMENTATIONSHILFE_CONTRA_Kriegsschiffe.md`**  
-- Für Bauer Alexis & Handwerker Demos
-- Alternative Lösungsvorschläge
-- **→ Ausdrucken für CONTRA-Team!**
+#### **Flaschenpost-Einstieg:**
+- **HTML-Artefakt:** Dramatische Piraten-Flaschenpost 
+- **Für Miro-Phase:** Einstieg (8-15min)
+- **Wirkung:** Sofortige Aufmerksamkeit + Handlungsdruck
+
+#### **PRO-Team Argumentationshilfe:**
+- **HTML-Artefakt:** Strukturierte PRO-Kriegsschiffe Hilfe
+- **Für Miro-Phase:** Teamarbeit (25-35min)  
+- **Inhalt:** Argumente + Sprechweisen + Gegenargument-Antworten
+
+#### **CONTRA-Team Argumentationshilfe:**
+- **HTML-Artefakt:** Strukturierte CONTRA-Kriegsschiffe Hilfe
+- **Für Miro-Phase:** Teamarbeit (25-35min)
+- **Inhalt:** Argumente + Alternative Lösungen + Sprechweisen
+
+#### **Classroom Screen:**
+- **HTML-Artefakt:** "Willkommen Athener Händler!"
+- **Für Miro-Phase:** Einstieg + Orientierung
+- **Design:** Athen-Atmosphäre mit 450 v.Chr. Setting
+
+#### **Tafelbild-Template:**
+- **HTML-Artefakt:** Argumentesammlung Volksversammlung
+- **Für Miro-Phase:** Demokratie-Erfahrung (35-42min)
+- **Struktur:** PRO vs CONTRA + Entscheidungsfeld
+
+**→ Alle HTML-Artefakte direkt in Miro einbindbar für phasenspezifische Präsentation!**
 
 ---
 
@@ -61,29 +71,30 @@
 
 ---
 
-## 📋 VORBEREITUNG FÜR MORGEN (Checkliste)
+## 📋 VORBEREITUNG FÜR MORGEN (5min Setup)
 
-### **🖨️ AUSDRUCKEN:**
-- [ ] Flaschenpost-Text (für dramatisches Vorlesen)
-- [ ] 2x Argumentationshilfe PRO (für Emma & Amir)
-- [ ] 2x Argumentationshilfe CONTRA (für Fatima & Lukas)
-- [ ] Rollenkarten (falls nicht schon vorhanden)
+### **🤖 KI-GESTÜTZTE ROLLENEINTEILUNG:**
+- [ ] DiSoAn-Prompt mit echter Klassenliste füttern
+- [ ] Konkrete Rollenteilung für alle 20 SuS erhalten
+- [ ] Rollenkarten entsprechend vorbereiten
 
-### **💻 TECHNIK VORBEREITEN:**
-- [ ] Classroom Screen: "Willkommen Athener Händler!"
-- [ ] iPad/Laptop für Screen-Anzeige bereithalten
-- [ ] Beamer testen (falls verwendet)
+### **💻 MIRO-PRÄSENTATION SETUP:**
+- [ ] **Flaschenpost-HTML** in Miro einbinden (Einstieg 8-15min)
+- [ ] **Classroom Screen-HTML** in Miro einbinden (Begrüßung)
+- [ ] **PRO-Argumentationshilfe-HTML** in Miro einbinden (Teamarbeit 25-35min)
+- [ ] **CONTRA-Argumentationshilfe-HTML** in Miro einbinden (Teamarbeit 25-35min) 
+- [ ] **Tafelbild-Template-HTML** in Miro einbinden (Volksversammlung 35-42min)
 
 ### **🏛️ KLASSENZIMMER SETUP:**
-- [ ] Tafel für Argumentesammlung vorbereiten
+- [ ] Beamer/Screen für Miro-Präsentation testen
 - [ ] Stuhlkreis-Möglichkeit schaffen (Tische zur Seite)
 - [ ] Platz für 2 Teamecken (PRO/CONTRA)
+- [ ] Echte Tafel für zusätzliche Notizen bereithalten
 
 ### **📝 MATERIAL BEREITLEGEN:**
-- [ ] Kreide/Marker für Tafelbild
-- [ ] Rollenkarten sortiert
-- [ ] Argumentationshilfen für Teams
+- [ ] Rollenkarten nach KI-Einteilung sortiert
 - [ ] Hefte für Merksatz
+- [ ] Notizblock für spontane Tafel-Ergänzungen
 
 ---
 

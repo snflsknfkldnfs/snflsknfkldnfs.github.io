@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willkommen Athener Händler</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #312e81 100%);
+            color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .main-title {
+            font-size: 4.5em;
+            font-weight: bold;
+            margin: 0 0 30px 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            background-size: 200% 200%;
+            animation: glow 3s ease-in-out infinite alternate, gradient 4s ease-in-out infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 10px rgba(255,215,0,0.5)); }
+            100% { filter: drop-shadow(0 0 20px rgba(255,215,0,0.8)); }
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .subtitle {
+            font-size: 2.2em;
+            margin: 20px 0;
+            color: #e2e8f0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .welcome-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .year {
+            font-size: 1.8em;
+            color: #ffd700;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .instruction {
+            font-size: 1.6em;
+            margin: 25px 0;
+            line-height: 1.4;
+            color: #f1f5f9;
+        }
+        
+        .pulsing {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">WILLKOMMEN</h1>
+        <h2 class="subtitle">ATHENER HÄNDLER!</h2>
+        
+        <div class="welcome-box">
+            <div class="year">🏛️ Jahr 450 vor Christus 🏛️</div>
+            
+            <div class="instruction">
+                👋 Ihr seid jetzt keine Schüler mehr! 🚢
+            </div>
+            
+            <div class="instruction pulsing">
+                ⚖️ <strong>Ihr seid Bürger der Polis Athen</strong> ⚖️
+            </div>
+            
+            <div class="instruction">
+                🏺 Bereit für die Volksversammlung? 🗳️
+            </div>
+        </div>
+    </div>
+</body>
+</html>

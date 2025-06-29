@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hefteintrag Vorlage: Leben in der Polis Athen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+            line-height: 1.4;
+        }
+        .notebook-page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .notebook-page::before {
+            content: '';
+            position: absolute;
+            left: 60px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ff6b6b;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            margin-left: 20px;
+        }
+        .title {
+            font-size: 1.8em;
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .date-line {
+            text-align: right;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2px;
+            width: 200px;
+            margin-left: auto;
+        }
+        .info-section {
+            background: #f0f8ff;
+            border-left: 4px solid #2c5aa0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 1.3em;
+            color: #2c5aa0;
+            font-weight: bold;
+            margin: 30px 0 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 10px;
+        }        .groups-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .group-box {
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 15px;
+            background: #fafafa;
+            min-height: 280px;
+        }
+        .georgius-box {
+            border-color: #8B4513;
+            background: linear-gradient(135deg, #FFF8DC, #F5DEB3);
+        }
+        .amos-box {
+            border-color: #CD853F;
+            background: linear-gradient(135deg, #FDF5E6, #F4A460);
+        }
+        .hector-box {
+            border-color: #1e3a8a;
+            background: linear-gradient(135deg, #dbeafe, #93c5fd);
+        }
+        .group-header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+            padding-bottom: 10px;
+        }
+        .group-icon {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .group-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        .georgius-box .group-name { color: #8B4513; }
+        .amos-box .group-name { color: #CD853F; }
+        .hector-box .group-name { color: #1e3a8a; }
+        .input-field { margin: 12px 0; }
+        .field-label {
+            font-weight: bold;
+            color: #333;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .write-lines {
+            border-bottom: 1px solid #666;
+            min-height: 25px;
+            margin: 3px 0;
+            padding: 2px 0;
+        }        .zusammenleben-section {
+            margin: 40px 0 20px 0;
+            background: #f8f9fa;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .zusammenleben-title {
+            font-size: 1.2em;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid #28a745;
+            padding-bottom: 10px;
+        }
+        .question-block {
+            background: rgba(255,255,255,0.8);
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .question-title {
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        .answer-lines {
+            border-bottom: 1px solid #666;
+            min-height: 20px;
+            margin: 8px 0;
+            padding: 3px 0;
+        }
+        .fazit-section {
+            background: #d1ecf1;
+            border: 2px solid #17a2b8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .fazit-title {
+            font-weight: bold;
+            color: #17a2b8;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .fill-hint {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        .example-hint {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>    <div class="notebook-page">
+        <div class="content">
+            <div class="date-line">Datum: _______________</div>
+            
+            <h1 class="title">Leben in der Polis Athen</h1>
+            
+            <div class="info-section">
+                <strong>Die Polis Athen um 500 v. Chr.:</strong><br>
+                Etwa _________________ Menschen lebten in der Polis<br><br>
+                Drei Bereiche: _________________ | _________________ | _________________
+            </div>
+
+            <div class="section-title">👥 Die drei Gesellschaftsgruppen</div>
+            
+            <div class="groups-grid">
+                <!-- Georgius Box -->
+                <div class="group-box georgius-box">
+                    <div class="group-header">
+                        <div class="group-icon">👨‍🌾</div>
+                        <h3 class="group-name">Georgius<br>der Bauer</h3>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🏡 Wohnort:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🐄 Tiere:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🌱 Pflanzen:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🛒 Verkauft:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                </div>
+                <!-- Amos Box -->
+                <div class="group-box amos-box">
+                    <div class="group-header">
+                        <div class="group-icon">👨‍🎨</div>
+                        <h3 class="group-name">Amos<br>der Töpfer</h3>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🏠 Wohnort:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🔧 Werkzeuge:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🏺 Produkte:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">💰 Verkauf:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                </div>
+
+                <!-- Hector Box -->
+                <div class="group-box hector-box">
+                    <div class="group-header">
+                        <div class="group-icon">🚢</div>
+                        <h3 class="group-name">Hector<br>der Händler</h3>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">⚓ Wohnort:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🌍 Handel:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">📦 Waren:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <div class="field-label">🏺 Transport:</div>
+                        <div class="write-lines"></div>
+                        <div class="write-lines"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="zusammenleben-section">
+                <div class="zusammenleben-title">🤝 Zusammenleben in der Polis</div>
+                
+                <div class="question-block">
+                    <div class="question-title">🔄 Warum waren alle aufeinander angewiesen?</div>
+                    <div class="example-hint">Tipp: Denkt an Spezialisierung, Handel, Tausch...</div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-title">💰 Womit wurde bezahlt?</div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-title">🏛️ Welche gemeinsamen Aufgaben hatten alle Bürger?</div>
+                    <div class="example-hint">Tipp: Was musste die ganze Stadt gemeinsam bauen oder bezahlen?</div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-title">📊 Wie wurden diese Aufgaben finanziert?</div>
+                    <div class="answer-lines"></div>
+                    <div class="answer-lines"></div>
+                </div>
+            </div>
+
+            <div class="fazit-section">
+                <div class="fazit-title">📝 Fazit - Was ist das Wichtigste?</div>
+                <div class="example-hint">Vervollständigt diesen Satz:</div>
+                <div style="margin: 15px 0;">
+                    Durch _________________________ und _________________________<br><br>
+                    entwickelten die Athener Formen des ________________________________<br><br>
+                    Das war die Grundlage für ________________________________
+                </div>
+            </div>
+
+            <div class="fill-hint">
+                💡 <strong>Arbeitsauftrag:</strong> Füllt diesen Hefteintrag in Partnerarbeit aus. Nutzt euer Wissen aus der Gruppenarbeit und das Schulbuch (S. 136-139).
+            </div>
+        </div>
+    </div>
+</body>
+</html>

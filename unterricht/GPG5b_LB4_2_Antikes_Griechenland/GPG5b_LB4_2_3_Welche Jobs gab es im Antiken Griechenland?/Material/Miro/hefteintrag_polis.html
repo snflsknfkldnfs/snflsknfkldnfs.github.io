@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hefteintrag: Leben in der Polis Athen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+            line-height: 1.6;
+        }
+        .notebook-page {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .notebook-page::before {
+            content: '';
+            position: absolute;
+            left: 60px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ff6b6b;
+        }
+        .lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: repeating-linear-gradient(
+                transparent,
+                transparent 24px,
+                #e1e5e9 24px,
+                #e1e5e9 26px
+            );
+            pointer-events: none;
+            margin-top: 80px;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            margin-left: 20px;
+        }
+        .title {
+            font-size: 1.8em;
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .date {
+            text-align: right;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        .section {
+            margin: 25px 0;
+        }
+        .section-title {
+            font-size: 1.2em;
+            color: #2c5aa0;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 5px;
+        }
+        .info-box {
+            background: #f0f8ff;
+            border-left: 4px solid #2c5aa0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .character-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .character-box {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fafafa;
+        }
+        .character-name {
+            font-weight: bold;
+            color: #2c5aa0;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .character-details {
+            font-size: 0.95em;
+        }
+        .character-details strong {
+            color: #333;
+        }
+        .key-concept {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .key-concept h4 {
+            color: #856404;
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+        .conclusion {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+        .fill-line {
+            border-bottom: 1px solid #333;
+            display: inline-block;
+            min-width: 200px;
+            margin: 0 5px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="notebook-page">
+        <div class="lines"></div>
+        <div class="content">
+            <div class="date">Datum: _____________</div>
+            
+            <h1 class="title">Leben in der Polis Athen</h1>
+            
+            <div class="info-box">
+                <strong>Die Polis Athen um 500 v. Chr.:</strong><br>
+                • Etwa <strong>300.000 Menschen</strong> lebten in der Polis<br>
+                • Drei Bereiche: <strong>Stadt Athen</strong>, <strong>Hafen Piräus</strong>, <strong>Umland Attika</strong>
+            </div>
+
+            <div class="section">
+                <div class="section-title">🏛️ Gesellschaftsgruppen in der Polis</div>
+                
+                <div class="character-grid">
+                    <div class="character-box">
+                        <div class="character-name">🌾 Georgius - der Bauer</div>
+                        <div class="character-details">
+                            <strong>Wohnort:</strong> Umland Attika<br>
+                            <strong>Tiere:</strong> Schafe, Ziegen, Hühner, Bienen<br>
+                            <strong>Pflanzen:</strong> Weizen, Oliven, Weinreben, Feigen<br>
+                            <strong>Produkte:</strong> Olivenöl, Honig, Parfüm, Teppiche<br>
+                            <strong>Verkauf:</strong> Überschuss auf dem Markt in Athen
+                        </div>
+                    </div>
+                    
+                    <div class="character-box">
+                        <div class="character-name">🏺 Amos - der Töpfer</div>
+                        <div class="character-details">
+                            <strong>Wohnort:</strong> Stadt Athen (Kerameikos)<br>
+                            <strong>Beruf:</strong> Handwerker (Töpfer)<br>
+                            <strong>Produkte:</strong> Töpfe, Vasen, Teller, Dachziegel<br>
+                            <strong>Besonderheit:</strong> Zweifarbige Vasen mit Bildern<br>
+                            <strong>Verkauf:</strong> Eigener Laden, Familie verkauft
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-concept">
+                <h4>🔄 Warum waren die Menschen aufeinander angewiesen?</h4>
+                <ul>
+                    <li><strong>Spezialisierung:</strong> Jeder hatte einen eigenen Beruf</li>
+                    <li><strong>Handel:</strong> Tausch auf dem Markt in Athen</li>
+                    <li><strong>Beispiel:</strong> Georgius brauchte Tongefäße von Amos, Amos brauchte Nahrung von Georgius</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <div class="section-title">💰 Geld und Handel</div>
+                <p><strong>Zahlungsmittel:</strong> Silbermünzen mit Eulen-Symbol (Zeichen der Göttin Athene)</p>
+                <p><strong>Markt:</strong> Zentrum des Handels in der Stadt Athen</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">🏛️ Gemeinsame Aufgaben</div>
+                <p>Große Bauvorhaben konnten nur <strong>gemeinsam</strong> bewältigt werden:</p>
+                <ul>
+                    <li>Bau der <strong>Verteidigungsanlagen</strong></li>
+                    <li>Bau der <strong>Tempel</strong> für die Götter</li>
+                    <li>Bezahlung der <strong>Kriegsschiffe</strong></li>
+                    <li>Bau des <strong>Hafens</strong></li>
+                </ul>
+                <p>Dafür zahlten alle Bürger <strong>Steuern</strong>.</p>
+            </div>
+
+            <div class="conclusion">
+                <strong>📝 Wichtige Erkenntnis:</strong><br>
+                Durch die Spezialisierung waren die Menschen in der Polis aufeinander angewiesen. 
+                Sie entwickelten Formen des gemeinsamen Handelns und <strong>Miteinanderherrschens</strong>.
+            </div>
+
+            <div class="info-box">
+                <strong>🤔 Nächste Frage:</strong><br>
+                Wie organisierten 300.000 Menschen ihr politisches Zusammenleben? 
+                Wie funktionierte die Demokratie in Athen?
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -83,7 +83,7 @@
 
 - [[/Users/paulad/Projects/DiSoAn/META_DOKU/Entscheidungsdokumentation_Template.md]]
 - [[/Users/paulad/Projects/DiSoAn/META_DOKU/DiSoAn_Dokumentationsprozesse.md]]
-- [[GPG5b_Volksversammlung_BUV_TUV.md]] (zu erstellen)
+- [[GPG5b_Volksversammlung_BUV_TUV]] (zu erstellen)
 
 ## Finale Gestaltungsentscheidungen
 

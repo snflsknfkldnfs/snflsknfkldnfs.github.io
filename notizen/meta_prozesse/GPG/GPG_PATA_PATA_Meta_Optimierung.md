@@ -24,6 +24,9 @@ GPG-PATA-2-ZWANGSCHECK:
 3. "Funktionieren meine Templates in der Praxis?"
 4. "Muss ich meine Meta-Regeln anpassen?"
 5. "Überwache ich die richtigen GPG-Aspekte?"
+6. "NEUE BUV-VALIDATION: Integriere ich reale Unterrichtserfahrungen?"
+7. "NEUE BUV-VALIDATION: Vermeide ich identifizierte Failure-Patterns?"
+8. "NEUE BUV-VALIDATION: Verstärke ich bewährte Success-Patterns?"
 ```
 
 ## 📊 **KONTINUIERLICHES GPG-STANDARDS-MONITORING**
@@ -46,6 +49,30 @@ SCHULBUCH_SUCCESS_RATE:
     if (Fehlerrate < 1%):
       LOCKERE_CHECKS_MINIMAL = True
       FOKUS_AUF_ANDERE_BEREICHE = True
+```
+
+#### BUV-LEARNINGS-INTEGRATION-MONITORING (NEU):
+```bash
+BUV_PATTERNS_SUCCESS_RATE:
+  SUCCESS_PATTERNS_VERSTÄRKUNG:
+    - Narrative Einstiege verwendet? (Habu-Geschichte-Typ)
+    - Bewährte Bausteinskript-Strukturen integriert?
+    - HTML-Website statt Miro empfohlen?
+    - Schrittweise Tafelbild-Entwicklung geplant?
+    - SuS-Aktivierung in ersten 10min?
+  
+  FAILURE_PATTERNS_VERMEIDUNG:
+    - Mehr als 3 Materialtypen? → AUTO-REDUKTION
+    - Implizite Lernziele? → AUTO-TRANSPARENZ
+    - Innovation vor Bewährtem? → AUTO-PRIORITÄTS-SHIFT
+    - Lehrervortrag > 5min? → AUTO-WARNING
+    - Tech-Tool ohne Sinnhaftigkeits-Check? → AUTO-VALIDATION
+  
+  OPTIMIERUNGS-TRIGGER:
+    if (BUV_Failure_Pattern_detected):
+      AKTIVIERE_AUTO_CORRECTION = True
+      UPDATE_QUALITY_GATES = True
+      VERSTÄRKE_PREVENTION = True
 ```
 
 #### HETEROGENITÄTS-STANDARDS-MONITORING:
