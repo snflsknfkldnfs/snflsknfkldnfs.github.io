@@ -20,6 +20,8 @@
 
 ## AUTOMATISCHE STANDARDS (greifen ohne Erwähnung)
 ✅ **INVISIBLE INTELLIGENCE**: Meta⁴-Ebene - ultimative User-Experience ohne sichtbare Komplexität
+✅ **BUV-QUALITY-GATES**: Alle 8 Reality-Learnings automatisch bei jeder GPG-Anfrage angewandt
+✅ **BUV-REFLECTION-PIPELINE**: Kontinuierliche Approximationshoffnung-Steigerung durch Lern-Integration
 ✅ **PROJECT-ROUTING**: Automatische Projekt-Zuordnung für optimale Standard-Nutzung
 ✅ **PROJECT-INSTRUCTION-GENERATOR**: Meta³-Ebene - automatisiert alle Projektanweisungen
 ✅ **CONTEXT-DISCOVERY**: Meta²-Ebene - intelligente Dateisystem-Orientierung  
@@ -78,6 +80,24 @@ User-Anfrage → **INVISIBLE INTELLIGENCE** (Intent-Interpretation + Error-Corre
 **Qualitätsrevolution:** Von komplexen Meta-Systemen zu natürlicher, selbstheilender Intelligenz die sich anfühlt wie ein sehr kompetenter, hilfsbereiter Kollege.
 
 **Das System ist die ultimative KI-User-Experience: Hochintelligent im Hintergrund, einfach und natürlich in der Anwendung.**
+
+## BUV-LEARNINGS AUTOMATISCH INTEGRIERT (Reality-Validation)
+
+### 🎯 8 AUTOMATISCHE QUALITY-CHECKS (bei jeder GPG-TUV-Anfrage)
+✅ **Lernziel-Transparenz**: Auto-Check "Ist Lernziel erste 5min für 5b verständlich?"
+✅ **Material-Komplexität**: Auto-Limit max 3 Materialtypen (5b-Überforderungsschutz)  
+✅ **Roter Faden**: Auto-Check "Zahlt jede Phase erkennbar auf Gesamtziel ein?"
+✅ **Bewährte Strukturen**: Auto-Priorität Bausteinskript/Schulbuch vor Innovation
+✅ **Tafelbild-Integration**: Auto-Add schrittweise Tafelbild-Entwicklung wenn fehlend
+✅ **Tech-Tool-Sinnhaftigkeit**: Auto-Replace Miro durch HTML für Material-Erarbeitung
+✅ **Narrative Verstärkung**: Auto-Suggest bewährte Geschichten-Einstiege
+✅ **SuS-Aktivierung**: Auto-Check "Handlungsaktive SuS erste 10min?"
+
+### 🔄 KONTINUIERLICHE APPROXIMATIONSHOFFNUNG-STEIGERUNG
+✅ **BUV-Reflection-Detection**: Auto-Erkennung von Reflexions-Inhalten
+✅ **Learning-Integration**: Automatische Standard-Updates aus neuen BUV-Erfahrungen  
+✅ **Pattern-Learning**: Success/Failure-Muster fließen in Template-Optimierung
+✅ **Reality-Calibration**: Kontinuierliche Verbesserung der Realsituations-Approximation
 
 ## GPG-AUTOMATISMEN (immer aktiv)
 
