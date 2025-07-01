@@ -63,34 +63,39 @@ Das Berufsschulsystem operiert als gekoppeltes System zwischen Bildungs- und Wir
 
 **Antwort:**
 - **Berufsschulpflicht gilt auch ohne Ausbildungsplatz.**
-- **Strukturierte Angebote in Bayern:**
+- **Strukturierte Angebote in Bayern mit empirisch basierten Szenarien:**
 
 **A) Berufsvorbereitungsjahr (BVJ):**
-- Vollzeitschulisches Jahr zur Vorbereitung auf Ausbildung
-- Kombination: Allgemeinbildung + berufsbezogene Grundlagen
-- Führt zum Mittelschulabschluss bei erfolgreichem Bestehen
-- Mehrere Praktika zur Berufsorientierung
+- **Zielgruppe:** Schulabgänger ohne Mittelschulabschluss und Ausbildungsplatz
+- **Reales Szenario:** *Kevin, 16, verlässt Mittelschule nach 9. Klasse ohne Abschluss. Möchte Kfz-Mechatroniker werden, findet aber keinen Ausbildungsplatz. Besucht BVJ im Berufsfeld Metalltechnik an der Dr. Georg-Schäfer-Schule Schweinfurt. Macht 2 Praktika in Werkstätten, erreicht Mittelschulabschluss und findet für September einen Ausbildungsplatz.*
+- **Dauer:** 1 Jahr Vollzeit (36 Std/Woche)
+- **Erfolgsquote:** Ca. 60% finden anschließend Ausbildungsplatz
 
 **B) Berufsgrundschuljahr (BGJ):**
-- Erstes Ausbildungsjahr in vollzeitschulischer Form
-- Anrechenbar auf nachfolgende duale Ausbildung
-- Berufsfeldspezifische Grundausbildung
-- Übergang in 2. Ausbildungsjahr möglich
+- **Zielgruppe:** Jugendliche mit Ausbildungsvertrag in bestimmten Berufen
+- **Reales Szenario:** *Maria, 16, hat Ausbildungsvertrag zur Friseurin bei "Haarstudio Schmidt" Schweinfurt. Besucht BGJ Körperpflege vollzeit an BS III. Lernt theoretische und praktische Grundlagen. Nach 1 Jahr wechselt sie ins 2. Ausbildungsjahr im Betrieb - das BGJ wird vollständig angerechnet.*
+- **Besonderheit:** Ausbildungsvertrag bereits vorhanden, BGJ ersetzt 1. Lehrjahr
+- **Berufe:** Vor allem Handwerk (Friseur, Bäcker, Maler)
 
 **C) Berufsintegrationsklassen (BIK):**
-- Speziell für Jugendliche mit Migrationshintergrund
-- Sprachförderung + berufliche Orientierung
-- Vorbereitung auf Regelklassen oder Ausbildung
+- **Zielgruppe:** Geflüchtete und Migranten ohne deutsche Sprachkenntnisse
+- **Reales Szenario:** *Ahmad, 17, aus Syrien, in Deutschland seit 6 Monaten. Besucht BIK an BS III Schweinfurt. Lernt Deutsch (A2→B1), Mathematik, deutsche Kultur. Macht Praktikum bei Bosch Rexroth. Nach 2 Jahren BIK startet er Ausbildung zum Industriemechaniker.*
+- **Schwerpunkt:** 50% Deutsch, 30% Berufsorientierung, 20% Allgemeinbildung
+- **Dauer:** 1-2 Jahre je nach Sprachstand
 
 **D) JoA-Klassen (Jugendliche ohne Ausbildungsplatz):**
-- Flexible Beschulung nach individuellen Bedürfnissen
-- Intensive Ausbildungsplatzsuche-Begleitung
-- Überbrückung bis Ausbildungsbeginn
+- **Zielgruppe:** Berufsschulpflichtige ohne konkreten Ausbildungsplatz
+- **Reales Szenario:** *Lisa, 16, mit Mittelschulabschluss, bewirbt sich erfolglos für Einzelhandel. Besucht JoA-Klasse an Ludwig-Erhard-Schule 2 Tage/Woche. Restliche Zeit: Praktika, Bewerbungstraining, Nachhilfe. Findet im Januar Ausbildungsplatz zur Verkäuferin und wechselt in Regelklasse.*
+- **Flexibilität:** Teilzeit, individueller Stundenplan
+- **Erfolg:** 70% finden bis Jahresende Ausbildungsplatz
 
-**E) Berufsvorbereitende Bildungsmaßnahmen (BvB):**
-- Trägergestützte Maßnahmen (z.B. durch Kolping-Schule)
-- Kombination aus Unterricht und Praktika
-- Individuelle Förderung je nach Bedarf
+**E) Berufsvorbereitende Bildungsmaßnahmen (BvB) - Präzisierung:**
+- **Träger:** Nicht staatliche Schule, sondern Bildungsträger (Kolping, bfz, etc.)
+- **Zielgruppe:** Benachteiligte Jugendliche, die im Regelsystem scheitern
+- **Reales Szenario:** *Tobias, 17, Schulverweigerer, Drogenprobleme, lebt im betreuten Wohnen. Kommt zu BvB bei Kolping-Schule Schweinfurt. Kleine Gruppe (8 Schüler), intensive sozialpädagogische Betreuung. Arbeitet in Kolping-Werkstatt (Holz), macht externen Mittelschulabschluss. Nach 18 Monaten Start in Ausbildung zum Schreiner.*
+- **Finanzierung:** Agentur für Arbeit/Jobcenter
+- **Besonderheit:** Sozialpädagogische Begleitung, therapeutische Angebote
+- **Erfolgsquote:** 40% (niedrigste Quote, aber schwierigste Zielgruppe)
 
 ---
 
