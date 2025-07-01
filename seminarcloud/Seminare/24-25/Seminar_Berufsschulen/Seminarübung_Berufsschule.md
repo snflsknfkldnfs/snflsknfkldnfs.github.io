@@ -90,12 +90,17 @@ Das Berufsschulsystem operiert als gekoppeltes System zwischen Bildungs- und Wir
 - **Erfolg:** 70% finden bis Jahresende Ausbildungsplatz
 
 **E) Berufsvorbereitende Bildungsmaßnahmen (BvB) - Präzisierung:**
-- **Träger:** Nicht staatliche Schule, sondern Bildungsträger (Kolping, bfz, etc.)
-- **Zielgruppe:** Benachteiligte Jugendliche, die im Regelsystem scheitern
-- **Reales Szenario:** *Tobias, 17, Schulverweigerer, Drogenprobleme, lebt im betreuten Wohnen. Kommt zu BvB bei Kolping-Schule Schweinfurt. Kleine Gruppe (8 Schüler), intensive sozialpädagogische Betreuung. Arbeitet in Kolping-Werkstatt (Holz), macht externen Mittelschulabschluss. Nach 18 Monaten Start in Ausbildung zum Schreiner.*
-- **Finanzierung:** Agentur für Arbeit/Jobcenter
-- **Besonderheit:** Sozialpädagogische Begleitung, therapeutische Angebote
-- **Erfolgsquote:** 40% (niedrigste Quote, aber schwierigste Zielgruppe)
+- **Träger:** Private Bildungsträger (NICHT staatliche Berufsschulen!)
+- **Finanzierung:** Agentur für Arbeit/Jobcenter (NICHT Kultusministerium)
+- **Zielgruppe:** Benachteiligte Jugendliche ab 15, nicht mehr schulpflichtig
+- **Reales Szenario Schweinfurt:** 
+  - *BSI Schweinfurt:* Marco, 17, orientierungslos → 3 Berufsfelder testen (Metall, Handel, Gastronomie) → Praktika → Ausbildung Hotelfachmann
+  - *Kolping-Zentrum:* Tobias, 17, Schulverweigerer/Drogenprobleme → kleine Gruppe (8 TN), Therapeut, Holzwerkstatt → 18 Monate intensiv → Ausbildung Schreiner mit Nachbetreuung
+- **Schweinfurter BvB-Träger:** BSI, Kolping-Zentrum, BFZ, GbF, GbW
+- **Erfolgsquote:** 40-55% (je nach Träger und Zielgruppe)
+
+**📋 Systematischer Überblick aller Programme:**
+*(Siehe detaillierte Übersicht: VOLLSTAENDIGE_Uebersicht_Schweinfurt.md)*
 
 ---
 
@@ -247,27 +252,53 @@ SCHULISCHES SYSTEM (Berufsfachschule)
 ### **🗺️ Systemvisualisierung Schweinfurt:**
 
 ```
-BERUFSBILDUNGSSYSTEM SCHWEINFURT
-├── DUALES SYSTEM
-│   ├── BS I (Dr. Georg-Schäfer): Gewerblich-technisch
-│   ├── BS II (Ludwig-Erhard): Wirtschaft/Verwaltung/Gesundheit  
-│   └── BS III (Alfons Goppel): Ernährung/Hauswirtschaft/Soziales
-├── ÜBERGANGSYSTEM
-│   ├── BVJ/BIK an allen staatlichen BS
-│   └── Kolping-BS: Spezielle Förderung
-├── SCHULISCHES SYSTEM
-│   └── Berufsfachschulen (integriert in BSZ Alfons Goppel)
-└── WEITERBILDUNG
-    └── BFZ: Berufliche Rehabilitation/Umschulung
+BERUFSBILDUNGSSYSTEM SCHWEINFURT - VOLLSTÄNDIG
+├── STAATLICHE BERUFSSCHULEN (Kultusministerium)
+│   ├── BS I (Dr. Georg-Schäfer): BVJ Metalltechnik, BGJ Handwerk
+│   ├── BS II (Ludwig-Erhard): JoA Wirtschaft/Verwaltung, BVJ kaufmännisch
+│   ├── BS III (Alfons Goppel): BIK (Hauptstandort), BGJ Körperpflege/Ernährung
+│   └── Kolping-BS: BVJ/BIK mit sonderpädagogischer Förderung
+├── PRIVATE BvB-TRÄGER (Agentur für Arbeit)
+│   ├── BSI: BvB 3 Berufsfelder (Metall, Handel, Gastronomie)
+│   ├── Kolping-Zentrum: BvB intensiv (Problemlagen, max. 8 TN)
+│   ├── BFZ: BvB Erwachsene + berufliche Rehabilitation
+│   ├── GbF: Aktivierung + Coaching (schwer Vermittelbare)
+│   └── GbW: Technische Qualifizierung (Industrie-Aufträge)
+└── ZUORDNUNGSLOGIK
+    ├── Benachteiligt/Probleme → Kolping-Zentrum (intensiv)
+    ├── Orientierungslos → BSI (3 Felder testen)
+    ├── Migranten → BS III (BIK) oder BFZ (Erwachsene)
+    ├── Ohne Abschluss → BS I/II/III (BVJ)
+    └── Mit Vertrag → BS I/III (BGJ anrechenbar)
 ```
+
+### **📊 Vollständige Träger-Matrix Schweinfurt:**
+
+| **Träger** | **Typ** | **Zielgruppe** | **Finanzierung** | **Besonderheit** |
+|------------|---------|----------------|------------------|------------------|
+| **BS I-III** | Staatlich | Berufsschulpflichtige bis 21 | Kultusministerium | BVJ, BGJ, BIK, JoA |
+| **Kolping-BS** | Staatlich | Mit Förderbedarf | Kultusministerium | Sonderpädagogik |
+| **BSI** | Privat | Ab 15, orientierungslos | Agentur für Arbeit | 3 Berufsfelder-Erprobung |
+| **Kolping-Zentrum** | Privat | Schwer benachteiligt | Agentur für Arbeit | Intensive Betreuung (8 TN) |
+| **BFZ** | Privat | Erwachsene ab 18 | Agentur/Jobcenter | Rehabilitation + Sprache |
+| **GbF** | Privat | Langzeitarbeitslose | Jobcenter | Aktivierung + Coaching |
+| **GbW** | Privat | Technische Qualifizierung | Industrie/Agentur | Firmen-Aufträge |
+
+### **🎯 Schweinfurt-spezifische Erfolgsfaktoren:**
+
+- **Industrielle Prägung:** SKF, ZF, Bosch Rexroth schaffen hohe Nachfrage nach technischen Ausbildungen
+- **Differenzierte Trägerschaft:** Vom flexiblen JoA bis zur intensiven Kolping-Betreuung
+- **Regionale Koordination:** Bildungsportal-sw.de als zentrale Stelle
+- **Bewährte Kooperationen:** BS I ↔ Großbetriebe, Kolping-BS ↔ Jugendamt
+- **Komplette Abdeckung:** Jede Zielgruppe findet passenden Träger
 
 ### **💡 Diskussionsgrundlage für Kleingruppenaustausch:**
 
 **Systemtheoretische Betrachtung der lokalen Struktur:**
-- **Differenzierung:** Drei spezialisierte staatliche BS decken alle Berufsfelder ab
-- **Inklusion:** Förderangebote durch Kolping-BS und BFZ
+- **Funktionale Differenzierung:** Staatliche BS für Regelfälle, private Träger für Spezialfälle
+- **Hierarchische Abstufung:** Von JoA (flexibel) bis Kolping-intensiv (therapeutisch)
 - **Interdependenz:** Industrie-Struktur Schweinfurt ↔ gewerblich-technische Ausrichtung
-- **Rückkopplungen:** Lokaler Fachkräftebedarf ↔ Ausbildungsplatzangebot
+- **Rückkopplungen:** Lokaler Fachkräftebedarf ↔ Ausbildungsplatzangebot ↔ Programm-Schwerpunkte
 
 ---
 
