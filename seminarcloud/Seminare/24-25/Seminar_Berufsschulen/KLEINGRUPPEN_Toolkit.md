@@ -1,4 +1,4 @@
-# Kleingruppen-Toolkit: Berufsschulen Bayern
+# Seminarübung_Berufsschulen Bayern_Kleingruppen_Schweinfurt
 ## Optimale Vorbereitung für produktiven Austausch
 
 > **DiSoAn-konforme Kleingruppenarbeit**  

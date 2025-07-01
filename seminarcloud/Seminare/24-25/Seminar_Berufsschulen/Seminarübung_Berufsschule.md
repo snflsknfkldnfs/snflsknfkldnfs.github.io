@@ -63,13 +63,34 @@ Das Berufsschulsystem operiert als gekoppeltes System zwischen Bildungs- und Wir
 
 **Antwort:**
 - **Berufsschulpflicht gilt auch ohne Ausbildungsplatz.**
-- **Angebote:** Für diese Jugendlichen gibt es das **Berufsvorbereitungsjahr (BVJ)** oder ähnliche vollzeitschulische Maßnahmen, die auf eine Ausbildung oder den Übergang in den Beruf vorbereiten.
+- **Strukturierte Angebote in Bayern:**
 
-**Strukturelle Lösungsansätze:**
-- Berufsvorbereitungsjahr (BVJ) in Vollzeit
-- Berufsorientierung und Praktika
-- Kombination aus allgemeinbildenden und berufsbezogenen Kompetenzen
-- Übergangsbegleitung in duale Ausbildung
+**A) Berufsvorbereitungsjahr (BVJ):**
+- Vollzeitschulisches Jahr zur Vorbereitung auf Ausbildung
+- Kombination: Allgemeinbildung + berufsbezogene Grundlagen
+- Führt zum Mittelschulabschluss bei erfolgreichem Bestehen
+- Mehrere Praktika zur Berufsorientierung
+
+**B) Berufsgrundschuljahr (BGJ):**
+- Erstes Ausbildungsjahr in vollzeitschulischer Form
+- Anrechenbar auf nachfolgende duale Ausbildung
+- Berufsfeldspezifische Grundausbildung
+- Übergang in 2. Ausbildungsjahr möglich
+
+**C) Berufsintegrationsklassen (BIK):**
+- Speziell für Jugendliche mit Migrationshintergrund
+- Sprachförderung + berufliche Orientierung
+- Vorbereitung auf Regelklassen oder Ausbildung
+
+**D) JoA-Klassen (Jugendliche ohne Ausbildungsplatz):**
+- Flexible Beschulung nach individuellen Bedürfnissen
+- Intensive Ausbildungsplatzsuche-Begleitung
+- Überbrückung bis Ausbildungsbeginn
+
+**E) Berufsvorbereitende Bildungsmaßnahmen (BvB):**
+- Trägergestützte Maßnahmen (z.B. durch Kolping-Schule)
+- Kombination aus Unterricht und Praktika
+- Individuelle Förderung je nach Bedarf
 
 ---
 
