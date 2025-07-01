@@ -65,6 +65,13 @@ Das Berufsschulsystem operiert als gekoppeltes System zwischen Bildungs- und Wir
 - **Berufsschulpflicht gilt auch ohne Ausbildungsplatz.**
 - **Strukturierte Angebote in Bayern mit empirisch basierten Szenarien:**
 
+> **📋 ACRONYM-GUIDE Übergangsystem:**
+> - **BVJ** = Berufsvorbereitungsjahr
+> - **BGJ** = Berufsgrundschuljahr  
+> - **BIK** = Berufsintegrationsklassen
+> - **JoA** = Jugendliche ohne Ausbildungsplatz
+> - **BvB** = Berufsvorbereitende Bildungsmaßnahmen
+
 **A) Berufsvorbereitungsjahr (BVJ):**
 - **Zielgruppe:** Schulabgänger ohne Mittelschulabschluss und Ausbildungsplatz
 - **Reales Szenario:** *Kevin, 16, verlässt Mittelschule nach 9. Klasse ohne Abschluss. Möchte Kfz-Mechatroniker werden, findet aber keinen Ausbildungsplatz. Besucht BVJ im Berufsfeld Metalltechnik an der Dr. Georg-Schäfer-Schule Schweinfurt. Macht 2 Praktika in Werkstätten, erreicht Mittelschulabschluss und findet für September einen Ausbildungsplatz.*
@@ -90,6 +97,14 @@ Das Berufsschulsystem operiert als gekoppeltes System zwischen Bildungs- und Wir
 - **Erfolg:** 70% finden bis Jahresende Ausbildungsplatz
 
 **E) Berufsvorbereitende Bildungsmaßnahmen (BvB) - Präzisierung:**
+
+> **📋 ACRONYM-GUIDE Fachbegriffe:**
+> - **TN** = Teilnehmer
+> - **BS III** = Berufsschule III (Alfons Goppel)
+> - **A2→B1** = Sprachniveau nach Europäischem Referenzrahmen
+> - **abH** = ausbildungsbegleitende Hilfen
+> - **BaE** = Berufsausbildung in außerbetrieblichen Einrichtungen
+
 - **Träger:** Private Bildungsträger (NICHT staatliche Berufsschulen!)
 - **Finanzierung:** Agentur für Arbeit/Jobcenter (NICHT Kultusministerium)
 - **Zielgruppe:** Benachteiligte Jugendliche ab 15, nicht mehr schulpflichtig
@@ -174,6 +189,12 @@ SCHULISCHES SYSTEM (Berufsfachschule)
 ---
 
 ## **Systemtheoretische Reflexion (DiSoAn-konform)**
+
+> **📋 ACRONYM-GUIDE DiSoAn-Terminologie:**
+> - **DiSoAn** = Digitale Sozialanalyse
+> - **Teilrationalitäten** = Verschiedene Logiken im System (Luhmann)
+> - **Rückkopplungseffekte** = Systemische Wechselwirkungen
+> - **Blinde Flecken** = Nicht beobachtete Systemaspekte
 
 ### **Interdisziplinäre Perspektiventriangulation:**
 
@@ -271,6 +292,13 @@ BERUFSBILDUNGSSYSTEM SCHWEINFURT - VOLLSTÄNDIG
     ├── Ohne Abschluss → BS I/II/III (BVJ)
     └── Mit Vertrag → BS I/III (BGJ anrechenbar)
 ```
+
+> **📋 ACRONYM-GUIDE Schweinfurter Träger:**
+> - **BS I-III** = Berufsschule I-III (staatlich)
+> - **BSI** = Berufliches Schulungsinstitut (privat)
+> - **BFZ** = Bildungswerk der Bayerischen Wirtschaft
+> - **GbF** = Gesellschaft für berufliche Förderung
+> - **GbW** = Gesellschaft für berufliche Weiterbildung
 
 ### **📊 Vollständige Träger-Matrix Schweinfurt:**
 
