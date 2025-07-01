@@ -4,6 +4,10 @@
 > **Basis:** Reale Erfahrungen aus Schweinfurter Berufsschulen  
 > **Zielgruppe:** Seminar-Teilnehmer für Kleingruppenaustausch
 
+> **📋 QUICK-REFERENCE Acronyme:**
+> **BVJ** = Berufsvorbereitungsjahr | **BGJ** = Berufsgrundschuljahr | **BIK** = Berufsintegrationsklassen  
+> **JoA** = Jugendliche ohne Ausbildungsplatz | **BvB** = Berufsvorbereitende Bildungsmaßnahmen
+
 ---
 
 ## **🎯 SYSTEMATISCHE ÜBERSICHT: Wer kommt wohin?**

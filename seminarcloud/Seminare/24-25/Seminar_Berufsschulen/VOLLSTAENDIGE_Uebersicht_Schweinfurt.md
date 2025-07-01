@@ -4,6 +4,9 @@
 > **Zweck:** Komplette Darstellung aller Träger und Programme  
 > **Basis:** Systematische Recherche lokaler Anbieter
 
+> **📋 QUICK-REFERENCE Acronyme:**
+> **Staatlich:** BVJ, BGJ, BIK, JoA | **Privat:** BvB | **Schweinfurt:** BSI, BFZ, GbF, GbW, Kolping
+
 ---
 
 ## **🏢 STAATLICHE BERUFSSCHULEN - Vollzeitschulische Programme**
