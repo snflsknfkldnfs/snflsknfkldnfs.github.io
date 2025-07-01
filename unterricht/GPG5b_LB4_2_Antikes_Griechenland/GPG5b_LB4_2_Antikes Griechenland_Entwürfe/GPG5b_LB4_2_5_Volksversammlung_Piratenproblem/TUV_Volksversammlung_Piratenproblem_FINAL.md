@@ -65,116 +65,77 @@ Brauchen wir Kriegsschiffe?"
 
 **SuS:** Erste Reaktionen sammeln (2min), Spannung aufbauen
 
-### PHASE 3: ROLLENFINDUNG & TEAMS (15-25min)
-**🎯 SuS-AKTIVIERUNG ab Minute 10**
+### PHASE 3: TEAMBILDUNG NACH KI-OPTIMIERUNG (15-25min)
+**🎯 ALLE 22 SuS werden aktiv in 4 Händler-Teams eingeteilt**
 
-**L:** "Jeder von euch übernimmt eine Rolle eines Athener Bürgers. Aber nicht alle denken gleich über Kriegsschiffe!"
+**L:** "Jeder von euch übernimmt eine Rolle eines Athener Händlers. Aber nicht alle denken gleich über Kriegsschiffe!"
 
-**ROLLENKARTEN VERTEILEN (nach DiSoAn-Prompt):**
-
-```
-DISOAN-PROMPT FÜR ROLLENTEILUNG:
-=================================
-
-Klasse: 5b, 20 SuS (heterogen, DaZ-Kinder: Amir, Fatima; LRS-Verdacht: Leon, Mia, Tim)
-
-Rollen zu verteilen:
-- 2x PRO-Kriegsschiffe (Händler Nikias, Soldat Andreas)
-- 2x CONTRA-Kriegsschiffe (Bauer Alexis, Handwerker Demos) 
-- 1x UNENTSCHIEDEN (Getreidehändler - übernimmt LAA später)
-
-Anforderungen:
-1. DaZ-Kinder bekommen sprachlich einfachere Rollen (Bauer Alexis, Soldat Andreas)
-2. LRS-Kinder bekommen Rollen mit weniger Text (Handwerker Demos)
-3. Leistungsstarke SuS bekommen komplexere Argumentationsrollen (Händler Nikias)
-4. Pro/Contra-Teams sollen leistungsheterogen sein
-5. Keine Freundschaftsgruppen - arbeitsförderliche Mischung
-
-Gib konkrete Zuordnung: [Name] → [Rolle] + Begründung der Paarungen für Argumententwicklung
-```
-
-**TEAMBILDUNG (5min):**
-- PRO-Team: 2 SuS entwickeln gemeinsam Argumente FÜR Kriegsschiffe
-- CONTRA-Team: 2 SuS entwickeln gemeinsam Argumente GEGEN Kriegsschiffe
-
-### PHASE 4: ARGUMENTENTWICKLUNG (25-35min)
-**💡 INTELLIGENT ANREGENDES ARTEFAKT**
-
-**ARGUMENTATIONSHILFE FÜR BEIDE TEAMS:**
+**TEAMBILDUNG NACH DISOAN-PROMPT:**
 
 ```
-🛡️ PRO-KRIEGSSCHIFFE TEAM
-========================
+4 HÄNDLER-TEAMS (je 5-6 SuS):
 
-Eure Charaktere: Händler Nikias & Soldat Andreas
+PRO-KRIEGSSCHIFFE:
+🚢 Team Nikias (Fernhändler): 6 SuS
+⚔️ Team Philon (Waffenhändler): 5 SuS
 
-EUER PROBLEM:
-- Piraten überfallen eure Handelsschiffe
-- Ihr verliert Geld und Waren
-- Athen wird ärmer ohne Handel
+CONTRA-KRIEGSSCHIFFE:  
+🏺 Team Metrodoros (Marktverkäufer): 6 SuS
+💎 Team Aristodemos (Luxushändler): 5 SuS
 
-ARGUMENTATIONSHILFEN:
-💰 "Ohne Schutz können wir nicht handeln!"
-⚔️  "Starke Schiffe = starkes Athen!"
-🏛️ "Andere Städte lachen über uns!"
-💪 "Wir müssen uns wehren können!"
-
-AUFGABE:
-1. Lest eure Rollenkarten
-2. Sammelt 3 starke Argumente
-3. Übt, wie ihr sie vortragt
-4. Einer beginnt, der andere ergänzt
-
-ZUSATZ-GEDANKEN:
-- Was passiert mit Athen ohne Handel?
-- Warum ist eine starke Flotte wichtig?
-- Wie können Kriegsschiffe helfen?
+UNENTSCHIEDEN:
+🌾 Getreidehändler Kleisthenes: LAA übernimmt später
 ```
 
-```
-🌾 CONTRA-KRIEGSSCHIFFE TEAM  
-=============================
+**ROLLENKARTEN VERTEILEN:**
+- Jede Rollenkarte zeigt **alle Teammitglieder-Namen**
+- Jedes Team hat **1-2 benannte Sprecher** für Volksversammlung
+- **Teams finden sich eigenständig** anhand der Rollenkarten
 
-Eure Charaktere: Bauer Alexis & Handwerker Demos
+**L:** "Findet euer Team anhand eurer Rollenkarte. Ihr habt 2 Minuten, dann arbeitet ihr zusammen!"
 
-EUER PROBLEM:
-- Kriegsschiffe kosten sehr viel Geld
-- Das Geld fehlt für andere wichtige Dinge
-- Normale Bürger müssen hohe Steuern zahlen
+**TEAMVERTEILUNG (5min):**
+- PRO-Teams sammeln sich links im Klassenzimmer
+- CONTRA-Teams sammeln sich rechts im Klassenzimmer
+- Jedes Team prüft: "Sind alle da?"
 
-ARGUMENTATIONSHILFEN:
-💸 "Schiffe sind viel zu teuer!"
-🍞 "Wir brauchen Geld für Essen!"
-🏠 "Erst die Stadt, dann die Schiffe!"
-☮️  "Krieg bringt nur neuen Krieg!"
+### PHASE 4: ARGUMENTENTWICKLUNG IN TEAMS (25-35min)
+**💡 4 TEAMS ARBEITEN PARALLEL AN ARGUMENTEN**
 
-AUFGABE:
-1. Lest eure Rollenkarten
-2. Sammelt 3 starke Argumente  
-3. Übt, wie ihr sie vortragt
-4. Einer beginnt, der andere ergänzt
+**ARBEITSAUFTRAG FÜR ALLE TEAMS:**
+"10 Minuten Teamarbeit! Sammelt eure besten Argumente und wählt 1-2 Sprecher für die Volksversammlung."
 
-ZUSATZ-GEDANKEN:
-- Wofür braucht Athen das Geld sonst?
-- Was ist wichtiger als Kriegsschiffe?
-- Gibt es andere Lösungen?
-```
+**TEAM-ARBEITSPLÄTZE:**
+- **Team Nikias (6 SuS):** Vorne links + HTML-Argumentationshilfe PRO
+- **Team Philon (5 SuS):** Hinten links + HTML-Argumentationshilfe PRO  
+- **Team Metrodoros (6 SuS):** Vorne rechts + HTML-Argumentationshilfe CONTRA
+- **Team Aristodemos (5 SuS):** Hinten rechts + HTML-Argumentationshilfe CONTRA
 
-**L:** "10 Minuten Partnerarbeit! Sammelt eure besten Argumente und übt den Vortrag."
+**ARBEITSSCHRITTE FÜR JEDES TEAM:**
+1. **Rollenkarten studieren** (2min) - Was ist unser Standpunkt?
+2. **Argumentationshilfe durcharbeiten** (5min) - Welche Argumente überzeugen?
+3. **Sprecher wählen** (2min) - Wer redet in der Volksversammlung?
+4. **Argumente üben** (1min) - Kurze Probe für Sprecher
+
+**L GEHT DURCH TEAMS:** 
+- Unterstützt bei Verständnisfragen
+- Hilft bei Sprecher-Auswahl
+- Achtet auf Zeitmanagement
 
 ### PHASE 5: VOLKSVERSAMMLUNG (35-42min)
-**🏛️ DEMOKRATIE ERLEBEN**
+**🏛️ ALLE 22 SuS ERLEBEN DEMOKRATIE**
 
-**AUFBAU:** Stuhlkreis bilden, Tafel für Argumentesammlung vorbereiten
+**AUFBAU:** Großer Stuhlkreis, alle SuS sitzen bei ihren Teams, Tafel für Argumentesammlung
 
 **L (als Epistates):** "Bürger von Athen! Die Volksversammlung beginnt. Heute beraten wir: Sollen wir neue Kriegsschiffe bauen gegen die Piraten?"
 
-**ABLAUF:**
-1. **PRO-Team** trägt Argumente vor (3min)
-2. **Argumente an Tafel notieren**
-3. **CONTRA-Team** trägt Argumente vor (3min)  
-4. **Argumente an Tafel notieren**
-5. **L als Getreidehändler:** "Ich bin noch unentschieden... überzeugt mich!"
+**ABLAUF TEAM-PRÄSENTATIONEN:**
+1. **Team Nikias** (Fernhändler PRO): Sprecher trägt vor (1,5min)
+2. **Team Philon** (Waffenhändler PRO): Sprecher trägt vor (1,5min)
+3. **Argumente PRO** an Tafel notieren
+4. **Team Metrodoros** (Marktverkäufer CONTRA): Sprecher trägt vor (1,5min)  
+5. **Team Aristodemos** (Luxushändler CONTRA): Sprecher trägt vor (1,5min)
+6. **Argumente CONTRA** an Tafel notieren
 
 **TAFELBILD WÄHREND DISKUSSION:**
 ```
@@ -183,12 +144,17 @@ VOLKSVERSAMMLUNG: KRIEGSSCHIFFE JA ODER NEIN?
 PRO (dafür) ✅              |    CONTRA (dagegen) ❌
 __________________________|_________________________
 • Schutz vor Piraten      |    • Zu teuer
-• Handel bleibt sicher    |    • Geld für anderes
-• Starkes Athen          |    • Hohe Steuern
+  (Team Nikias)           |      (Team Metrodoros)
+• Arbeitsplätze           |    • Krieg schadet Handel
+  (Team Philon)           |      (Team Aristodemos)
+• Starkes Athen          |    • Geld für anderes
 •                        |    •
 ```
 
-**ABSTIMMUNG:** "Ich entscheide mich für... weil..." (L stimmt ab, zeigt Demokratieprinzip)
+**L als Getreidehändler:** "Ich bin noch unentschieden... überzeugt mich!" 
+→ **Teams dürfen nochmal kurz nachfassen** (je 30 Sekunden)
+
+**ABSTIMMUNG:** "Ich entscheide mich für... weil..." (L zeigt demokratische Meinungsbildung)
 
 ### PHASE 6: SICHERUNG (42-45min)
 **📝 ROTER FADEN ZUM LERNZIEL**
@@ -211,41 +177,51 @@ So entstanden die ersten demokratischen Entscheidungen.
 ## 📋 MATERIAL-CHECKLISTE (max 3 Typen - BUV-optimiert)
 
 ### ✅ 1. ROLLENKARTEN (physisch)
-- PRO: Händler Nikias, Soldat Andreas  
-- CONTRA: Bauer Alexis, Handwerker Demos
-- Getreidehändler (LAA-Rolle)
+- **Team Nikias:** 6x Fernhändler-Rollenkarten (mit allen Teammitglieder-Namen)
+- **Team Philon:** 5x Waffenhändler-Rollenkarten (mit allen Teammitglieder-Namen)  
+- **Team Metrodoros:** 6x Marktverkäufer-Rollenkarten (mit allen Teammitglieder-Namen)
+- **Team Aristodemos:** 5x Luxushändler-Rollenkarten (mit allen Teammitglieder-Namen)
+- **Getreidehändler:** 1x für LAA
 
-### ✅ 2. CLASSROOM SCREEN  
-- "Willkommen Athener Händler!"
-- Einfache Orientierung, keine komplexen Tools
+### ✅ 2. MIRO-PRÄSENTATION MIT HTML-ARTEFAKTEN
+- **Flaschenpost-Einstieg:** Dramatische Piraten-Geschichte
+- **Classroom Screen:** "Willkommen Athener Händler!" 
+- **PRO-Argumentationshilfe:** Für Teams Nikias & Philon
+- **CONTRA-Argumentationshilfe:** Für Teams Metrodoros & Aristodemos
+- **Tafelbild-Template:** Argumentesammlung Volksversammlung
 
-### ✅ 3. ARGUMENTATIONSHILFEN (Arbeitsblätter)
-- PRO-Kriegsschiffe Team
-- CONTRA-Kriegsschiffe Team
-- Je 1 Seite, übersichtlich strukturiert
-
-**📞 ZUSATZMATERIAL:**
-- Flaschenpost-Text (ausgedruckt)
-- Tafel + Kreide für Argumentesammlung
+### ✅ 3. KLASSENZIMMER-SETUP
+- **4 Team-Arbeitsplätze:** Je 5-6 Sitzplätze pro Team
+- **Stuhlkreis für 22 SuS:** Volksversammlung im Plenum
+- **Tafel:** Für Argumentesammlung PRO vs CONTRA
 
 ---
 
-## 🎯 HETEROGENITÄTS-DIFFERENZIERUNG
+## 🎯 HETEROGENITÄTS-DIFFERENZIERUNG (22 SuS in 4 Teams)
 
 ### **DaZ-UNTERSTÜTZUNG:**
-- **Amir, Fatima:** Einfache Rollen (Bauer, Soldat) mit klaren Argumenten
-- **Sprachhilfen:** Bildkarten zu "Piraten", "Kriegsschiff", "Volksversammlung"
-- **Partner-Support:** Leistungsstarke SuS als Gesprächspartner
+- **Teams mit einfacheren Argumenten:** Metrodoros (Marktverkäufer) oder Philon (Waffenhändler)
+- **Team-Support:** Jedes Team hat leistungsstarke SuS als Sprachunterstützung
+- **Sprecher-Wahl:** DaZ-Kinder können unterstützen, müssen nicht unbedingt sprechen
+- **Bildkarten:** Piraten, Kriegsschiff, Volksversammlung als visuelle Hilfen
 
 ### **LRS-ADAPTIONEN:**  
-- **Leon, Mia, Tim:** Rollen mit weniger Text, mehr mündliche Beteiligung
-- **Argumentationshilfen:** Stichpunkte statt ganze Sätze
-- **Tafelarbeit:** Mitschreiben optional, Aufmerksamkeit auf Diskussion
+- **Mündliche Beteiligung:** Teams ermöglichen Diskussion statt Textarbeit
+- **Argumentationshilfen:** Stichpunkte statt ganze Sätze, Teammitglieder lesen vor
+- **Rollen-Flexibilität:** Können Unterstützer statt Sprecher sein
+- **Tafelarbeit:** Fokus auf Zuhören und Diskutieren
 
 ### **LEISTUNGSSTARKE SuS:**
-- **Komplexere Argumentationen:** Händler-Rolle mit wirtschaftlichen Überlegungen
-- **Zusatzaufgabe:** "Welche anderen Lösungen gäbe es noch?"
-- **Diskussionsleitung:** Unterstützung bei Moderation
+- **Komplexere Rollen:** Teams Nikias (Wirtschaft) oder Aristodemos (Kultur)
+- **Sprecher-Funktion:** Können Teams in Volksversammlung vertreten
+- **Team-Coaching:** Helfen schwächeren Teammitgliedern bei Argumenten
+- **Zusatzaufgabe:** "Bereitet Antworten auf Gegenargumente vor"
+
+### **TEAM-BALANCE-GARANTIE:**
+- **Jedes Team** hat mind. 1 leistungsstarke*n SuS als Anker
+- **Sprachmischung:** DaZ-Kinder mit sprachstarken SuS gepaart
+- **Unterstützungsstrukturen:** Schüchterne SuS in sicherer Team-Umgebung
+- **Arbeitsförderlich:** Keine reinen Freundschaftsgruppen durch KI-Optimierung
 
 ---
 

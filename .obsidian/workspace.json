@@ -6,115 +6,107 @@
       {
         "id": "5efc95c3a28a5a39",
         "type": "tabs",
+        "dimension": 61.51260504201681,
         "children": [
           {
-            "id": "4331cbdf840e3e3a",
+            "id": "55687b8810fa48cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Piraten_BUV/GPG5b_Piraten_BUV_Komplett.md",
+                "file": "unterricht/WiB5b_Technik_Sequenz/03_Materialien_WiB/README_UE3_Materialien.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GPG5b_Piraten_BUV_Komplett"
+              "title": "README_UE3_Materialien"
             }
           },
           {
-            "id": "eb12bd1f3a2840fe",
+            "id": "f05dc4346c77f446",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Polis_und_Gesellschaft/GPG5b_Polis_Gesellschaft_TUV_NEU.md",
+                "file": "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/SYSTEM_Orientierung_Musik.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GPG5b_Polis_Gesellschaft_TUV_NEU"
+              "title": "SYSTEM_Orientierung_Musik"
             }
           },
           {
-            "id": "9463001d0b5b102f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/36299_TieS_142-143.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "36299_TieS_142-143"
-            }
-          },
-          {
-            "id": "1e0ab43e9da20897",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/507_36249_LOE_SB_069.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "507_36249_LOE_SB_069"
-            }
-          },
-          {
-            "id": "38b9c194599d810a",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/Westermann_Trio5_Schulbuch_Kapitel_Griechenland/Bildschirmfoto 2025-05-27 um 17.19.52.png"
-              },
-              "icon": "lucide-image",
-              "title": "Bildschirmfoto 2025-05-27 um 17.19.52"
-            }
-          },
-          {
-            "id": "3de2e39458671c98",
+            "id": "7ff15c04d5795ddf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/BUV_Habu_Zeitreise_Enhanced_v7.0.md",
+                "file": "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/META_Analyse_Ressourcen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BUV_Habu_Zeitreise_Enhanced_v7.0"
-            }
-          },
-          {
-            "id": "f4a986a088dafa19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "BUV_Final_Abgabe_v6.2"
-            }
-          },
-          {
-            "id": "5ea09067202d79f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/ARGUMENTATIONSHILFE_PRO_Kriegsschiffe.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ARGUMENTATIONSHILFE_PRO_Kriegsschiffe"
+              "title": "META_Analyse_Ressourcen"
             }
           }
+        ]
+      },
+      {
+        "id": "84c7b356712b6ce6",
+        "type": "split",
+        "dimension": 38.4873949579832,
+        "children": [
+          {
+            "id": "107713a343b2ce3d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "85ebfd049f6d6c29",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/2025-07-01_SÜ zum Fachprofil Musik.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "2025-07-01_SÜ zum Fachprofil Musik"
+                }
+              }
+            ]
+          },
+          {
+            "id": "4affd99074545626",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5c4306ee42f1f67a",
+                "type": "leaf",
+                "state": {
+                  "type": "image",
+                  "state": {
+                    "file": "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/02_Forschungsbogen.png"
+                  },
+                  "icon": "lucide-image",
+                  "title": "02_Forschungsbogen"
+                }
+              },
+              {
+                "id": "4362a7fb4f67fc24",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/MU B2 Lernbereich Musik - Mensch - Zeit.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "MU B2 Lernbereich Musik - Mensch - Zeit"
+                }
+              }
+            ]
+          }
         ],
-        "currentTab": 7
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -171,7 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271.50312423706055
+    "width": 281.50312423706055
   },
   "right": {
     "id": "a198139a98d2334a",
@@ -262,53 +254,53 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "5ea09067202d79f6",
+  "active": "55687b8810fa48cb",
   "lastOpenFiles": [
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/classroom_screen_willkommen_miro.html",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/flaschenpost_einstieg_miro.html",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Merkblatt Volksversammlung.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte_3.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte_2.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte 5.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte 4.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/GPG5b_LB4_2_Das Antike Griechenland_03_Leben in der Polis.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Neuer Ordner",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/FLASCHENPOST_Dramatischer_Einstieg.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/BUV_V3_0_Haendler_Demokratie_FINAL.md",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/MATERIALÜBERSICHT_Komplett_Ready.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/ARGUMENTATIONSHILFE_CONTRA_Kriegsschiffe.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/ARGUMENTATIONSHILFE_PRO_Kriegsschiffe.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/DISOAN_PROMPT_Rollenteilung_Optimiert.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/TUV_Volksversammlung_Piratenproblem_FINAL.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Merkeintrag_Lösung.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.40.12.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.40.02.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.50.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.33.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.26.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.22.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.16.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.12.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.07.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/_Index_BUV_Materialien.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/VERLAUFSPLAN_V2_Haendler_Fokus.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Rollenkarten_Volksversammlung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/QUICK_START_BUV.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Miro_Boards_Praktische_Umsetzung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/INNOVATION_Zusammenfassung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/GPG5b_Volksversammlung_BUV_TUV.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Durchfuehrungsskript_BUV_minutengenau.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/BUV_mit_Miro_Rotation.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/BUV_V4_0_SCHWERPUNKTSTUNDE_FINAL.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/BUV_Checkliste_FINAL.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/AB_Volksversammlung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV Kopie/_Index_BUV_Materialien.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV Kopie/Miro_Boards_Praktische_Umsetzung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV Kopie/QUICK_START_BUV.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV Kopie/BUV_V3_0_Haendler_Demokratie_FINAL.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV Kopie/VERLAUFSPLAN_V2_Haendler_Fokus.md"
+    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/offene_aufgaben_session_4.md",
+    "unterricht/WiB5b_Technik_Sequenz/chat_transitions/session_3_status.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_UE_Technik_bewerten_GLNW.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_Materialien_WiB/03_Portfolio_Kulturtechnik_Forschung.html",
+    "unterricht/WiB5b_Technik_Sequenz/03_Materialien_WiB/03_Beobachtungsbogen_Objekterkundung.html",
+    "unterricht/WiB5b_Technik_Sequenz/03_Materialien_WiB/README_UE3_Materialien.md",
+    "unterricht/WiB5b_Technik_Sequenz/alternative_materialien/WiB5c_Alternative_UE_Kulturtechniken.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_Materialien_WiB",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/html-modules/portfolio_kulturtechniken_5b.html",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/html-modules/beobachtungsbogen_objekterkundung.html",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/html-modules",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute",
+    "unterricht/WiB5b_Technik_Sequenz/03_Informationskarten_Historische_Objekte.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_UE_Kulturtechniken_entschluesseln_v2.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_UE_Kulturtechniken_entschluesseln.md",
+    "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/02_Tafelbild.png",
+    "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/02_Dreischritt_Forschungsbogen_iPad.html",
+    "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/README_iPad_Artefakte.md",
+    "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/02_Hilfekarten.png",
+    "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/02_Forschungsbogen.png",
+    "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/MU B2 Lernbereich Musik - Mensch - Zeit.pdf",
+    "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/Musik aus dem Seminarbuch.pdf",
+    "SYSTEM_MCP_SAFEGUARDS/README.md",
+    "SYSTEM_MCP_SAFEGUARDS/IMPLEMENTATION_COMPLETE.md",
+    "SYSTEM_MCP_SAFEGUARDS/03_USER_GUIDE.md",
+    "SYSTEM_MCP_SAFEGUARDS/02_DISOAN_INTEGRATION.md",
+    "SYSTEM_MCP_SAFEGUARDS/01_SESSION_ONBOARDING.md",
+    "SYSTEM_MCP_SAFEGUARDS/00_MASTER_PROBLEM_DOCUMENTATION.md",
+    "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/UMGEBUNG_Setup_Complete.md",
+    "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/SYSTEM_Orientierung_Musik.md",
+    "seminarcloud/Seminare/24-25/Musik_Seminar/AT_Fachprofil_Musik/META_Analyse_Ressourcen.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/STAKEHOLDER_INTEGRATION_Infrastruktur.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/SCR-20250701-hrql.png",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/VOLLSTAENDIGE_Uebersicht_Schweinfurt.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/ZWISCHENITERATION_Selbstlernende_Prozesse.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/Seminarübung_Berufsschule.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/EMPIRISCHE_Szenarien_Uebergangssystem.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/KLEINGRUPPEN_Toolkit.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/Seminarübung_Berufsschule_v1.0_backup.md",
+    "seminarcloud/Seminare/24-25/Seminar_Berufsschulen/VERSIONIERUNG_Optimierungsprozess.md",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Flaschenpost.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Argumentationshilfe_Contra.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Argumentationshilfe_Pro.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/Argumentationshilfe_Pro.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/Argumentationshilfe_Contra.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-29 um 11.06.23.png"
   ]
 }

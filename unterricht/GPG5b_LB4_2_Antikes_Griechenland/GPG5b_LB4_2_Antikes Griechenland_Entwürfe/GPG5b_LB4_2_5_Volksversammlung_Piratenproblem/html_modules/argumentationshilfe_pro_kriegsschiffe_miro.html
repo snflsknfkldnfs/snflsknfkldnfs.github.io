@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO-Kriegsschiffe Team</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #ffd700;
+            margin-top: 10px;
+        }
+        
+        .task-box {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .roles-section {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .role-card {
+            flex: 1;
+            background: rgba(255, 215, 0, 0.2);
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .role-card h3 {
+            color: #ffd700;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+        
+        .arguments-section {
+            margin: 30px 0;
+        }
+        
+        .argument-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-left: 5px solid #ffd700;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .argument-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .argument-title {
+            color: #ffd700;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .argument-quote {
+            font-size: 1.2em;
+            font-style: italic;
+            background: rgba(255, 215, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .steps-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .steps-section h3 {
+            color: #ffd700;
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .step-item {
+            background: rgba(255, 215, 0, 0.2);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+            font-size: 1.1em;
+        }
+        
+        .step-number {
+            background: #ffd700;
+            color: #1e3c72;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1e3c72;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .roles-section {
+                flex-direction: column;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="timer" id="timer">⏱️ 10:00</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ PRO-Kriegsschiffe Team</h1>
+            <div class="subtitle">Händler Nikias & Soldat Andreas</div>
+        </div>
+        
+        <div class="task-box">
+            <strong>📝 EURE AUFGABE:</strong> Bereitet eure Argumente vor und notiert Stichpunkte auf der <strong>RÜCKSEITE</strong> eurer Rollenkarte!
+        </div>
+        
+        <div class="roles-section">
+            <div class="role-card">
+                <h3>🏺 Händler Nikias</h3>
+                <p>Du handelst mit Waren im ganzen Mittelmeer und bringst Wohlstand nach Athen.</p>
+            </div>
+            <div class="role-card">
+                <h3>⚔️ Soldat Andreas</h3>
+                <p>Du schützt Athen und seine Bürger vor allen Gefahren.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            🏴‍☠️ Das Problem: Piraten überfallen eure Handelsschiffe und bedrohen Athen!
+        </div>
+        
+        <div class="arguments-section">
+            <h2 style="color: #ffd700; text-align: center;">💪 Eure besten Argumente</h2>
+            
+            <div class="argument-card">
+                <div class="argument-title">🚢 ARGUMENT 1: Handel ist lebensnotwendig</div>
+                <div class="argument-quote">"Ohne Handel stirbt Athen!"</div>
+                <ul>
+                    <li>Athen braucht Waren aus anderen Ländern</li>
+                    <li>Getreide, Holz, Metall - alles kommt über das Meer</li>
+                    <li>Ohne Schutz = kein Handel = keine Waren</li>
+                </ul>
+            </div>
+            
+            <div class="argument-card">
+                <div class="argument-title">⚔️ ARGUMENT 2: Verteidigung ist Bürgerpflicht</div>
+                <div class="argument-quote">"Wir müssen uns wehren können!"</div>
+                <ul>
+                    <li>Starke Städte haben starke Flotten</li>
+                    <li>Piraten greifen nur schwache Ziele an</li>
+                    <li>Eine Kriegsflotte schreckt Feinde ab</li>
+                </ul>
+            </div>
+            
+            <div class="argument-card">
+                <div class="argument-title">🏛️ ARGUMENT 3: Ansehen und Macht</div>
+                <div class="argument-quote">"Andere Städte respektieren nur starke Partner!"</div>
+                <ul>
+                    <li>Schwache Städte werden nicht ernst genommen</li>
+                    <li>Handelspartner vertrauen nur geschützten Häfen</li>
+                    <li>Athen muss zeigen: Wir sind stark!</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="steps-section">
+            <h3>✅ Eure 10-Minuten-Aufgaben</h3>
+            <ul class="step-list">
+                <li class="step-item">
+                    <span class="step-number">1</span>
+                    Lest eure Rollenkarten nochmal genau durch
+                </li>
+                <li class="step-item">
+                    <span class="step-number">2</span>
+                    Wählt eure 3 stärksten Argumente aus den obigen aus
+                </li>
+                <li class="step-item">
+                    <span class="step-number">3</span>
+                    <strong>Notiert Stichpunkte auf der RÜCKSEITE eurer Rollenkarte!</strong>
+                </li>
+                <li class="step-item">
+                    <span class="step-number">4</span>
+                    Übt, wie ihr argumentiert: Nikias beginnt (2 Min), Andreas ergänzt (1 Min)
+                </li>
+                <li class="step-item">
+                    <span class="step-number">5</span>
+                    Denkt euch eine starke Schluss-Aussage aus
+                </li>
+            </ul>
+        </div>
+        
+        <div class="highlight-box">
+            🎯 <strong>EUER ZIEL:</strong> Überzeugt den unentschiedenen Getreidehändler!<br>
+            Er muss sagen: <em>"Ja, Athen braucht Kriegsschiffe!"</em>
+        </div>
+        
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 20px; margin-top: 30px;">
+            <h3 style="color: #ffd700; text-align: center;">🗣️ So könntet ihr beginnen:</h3>
+            
+            <div style="background: rgba(255, 215, 0, 0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                <strong>Händler Nikias:</strong><br>
+                <em>"Bürger von Athen! Ich bin Händler Nikias. Meine Schiffe bringen Wohlstand in unsere Stadt. Aber die Piraten zerstören alles! Ohne Schutz können wir nicht handeln!"</em>
+            </div>
+            
+            <div style="background: rgba(255, 215, 0, 0.2); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                <strong>Soldat Andreas:</strong><br>
+                <em>"Ich bin Soldat Andreas. Meine Aufgabe ist es, Athen zu verteidigen. Auf dem Land können wir uns schützen - aber auf dem Meer? Ohne Kriegsschiffe sind wir hilflos!"</em>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; font-size: 1.5em; color: #ffd700;">
+            <strong>💪 IHR SCHAFFT DAS! ATHEN ZÄHLT AUF EUCH!</strong>
+        </div>
+    </div>
+    
+    <script>
+        // Timer-Funktionalität
+        let timeLeft = 600; // 10 Minuten in Sekunden
+        const timerElement = document.getElementById('timer');
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerElement.textContent = `⏱️ ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft <= 120) { // Letzte 2 Minuten
+                timerElement.style.background = '#ff4757';
+                timerElement.style.animation = 'pulse 1s infinite';
+            }
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                timerElement.textContent = '⏰ ZEIT!';
+                timerElement.style.background = '#ff3742';
+            }
+        }
+        
+        // Timer starten
+        updateTimer();
+        
+        // Pulse-Animation für Timer
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

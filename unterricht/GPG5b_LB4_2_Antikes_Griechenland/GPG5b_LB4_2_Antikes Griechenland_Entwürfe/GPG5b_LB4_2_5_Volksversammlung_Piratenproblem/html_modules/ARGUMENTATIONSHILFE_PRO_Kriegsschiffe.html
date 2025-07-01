@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO-Argumentationshilfe: Kriegsschiffe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .header {
+            text-align: center;
+            background: #2c5aa0;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .aufgabe {
+            background: #fffacd;
+            border: 3px solid #ffd700;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .rolle-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .rolle {
+            flex: 1;
+            background: white;
+            border: 3px solid #2c5aa0;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .rolle-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5aa0;
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 10px;
+        }
+        
+        .rolle-emoji {
+            font-size: 40px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .argumente-liste {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .argument {
+            background: white;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+            font-size: 16px;
+        }
+        
+        .zusatz-argumente {
+            background: #e8f5e8;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .anweisung {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 10px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">⏰ 5 Minuten Zeit!</div>
+    
+    <div class="header">
+        <h1>🚢 WIR SIND FÜR KRIEGSSCHIFFE! 🚢</h1>
+        <p>Argumentationshilfe für unsere Volksversammlung</p>
+    </div>
+    
+    <div class="aufgabe">
+        <h2>📝 EURE AUFGABE:</h2>
+        <p><strong>Sammelt in 5 Minuten Argumente für eure Rolle!</strong></p>
+        <p>Schreibt die wichtigsten Punkte als <strong>Stichworte</strong> auf die <strong>Rückseite eurer Rollenkarte</strong>!</p>
+    </div>
+    
+    <div class="rolle-container">
+        <div class="rolle">
+            <div class="rolle-name">NIKIAS</div>
+            <div class="rolle-emoji">🚢</div>
+            <p><strong>Fernhändler</strong></p>
+            
+            <div class="argumente-liste">
+                <h3>🎯 Deine Haupt-Argumente:</h3>
+                <div class="argument">
+                    🏴‍☠️ <strong>Piraten-Problem:</strong> "Meine Handelsschiffe werden ständig überfallen!"
+                </div>
+                <div class="argument">
+                    💰 <strong>Geschäft kaputt:</strong> "Ohne Schutz verliere ich alles!"
+                </div>
+                <div class="argument">
+                    🌍 <strong>Weite Reisen:</strong> "Ich handle bis Ägypten - überall Seeräuber!"
+                </div>
+                <div class="argument">
+                    📈 <strong>Für Athen:</strong> "Mehr Handel = mehr Steuern für die Stadt!"
+                </div>
+            </div>
+        </div>
+        
+        <div class="rolle">
+            <div class="rolle-name">PHILON</div>
+            <div class="rolle-emoji">⚔️</div>
+            <p><strong>Waffenhändler & Schiffbauer</strong></p>
+            
+            <div class="argumente-liste">
+                <h3>🎯 Deine Haupt-Argumente:</h3>
+                <div class="argument">
+                    🔨 <strong>Aufträge:</strong> "Kriegsschiffe = Arbeit für meine Werkstatt!"
+                </div>
+                <div class="argument">
+                    👥 <strong>Arbeitsplätze:</strong> "Meine Arbeiter brauchen Lohn!"
+                </div>
+                <div class="argument">
+                    ⚒️ <strong>Expertise:</strong> "Ich kenne Schiffbau - ich kann das!"
+                </div>
+                <div class="argument">
+                    🏛️ <strong>Für Athen:</strong> "Starke Flotte = starkes Athen!"
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="zusatz-argumente">
+        <h3>💡 ZUSÄTZLICHE ARGUMENTE FÜR BEIDE:</h3>
+        <div class="argument">
+            🛡️ <strong>Schutz für alle:</strong> "Kriegsschiffe schützen ALLE Athener Händler!"
+        </div>
+        <div class="argument">
+            🏆 <strong>Athen wird mächtig:</strong> "Mit starker Flotte respektieren uns alle!"
+        </div>
+        <div class="argument">
+            ⚡ <strong>Schnelle Lösung:</strong> "Piraten-Problem sofort gelöst!"
+        </div>
+        <div class="argument">
+            🤝 <strong>Gemeinsam stark:</strong> "Alle Händler profitieren von Sicherheit!"
+        </div>
+    </div>
+    
+    <div class="anweisung">
+        📝 DENKT DARAN: Schreibt eure besten Argumente als Stichworte auf die Rückseite der Rollenkarte!
+    </div>
+</body>
+</html>
