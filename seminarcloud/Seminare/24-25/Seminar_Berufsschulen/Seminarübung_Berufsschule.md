@@ -180,12 +180,68 @@ SCHULISCHES SYSTEM (Berufsfachschule)
 
 ---
 
-## **Lokaler Bezug: Schweinfurt** 
-*(Für den anschließenden Kleingruppenaustausch zu recherchieren)*
+## **Lokaler Bezug: Berufsschulen in Schweinfurt**
 
-**Forschungsauftrag:**
-- Welche Berufsschulen mit welchen Angeboten gibt es in Schweinfurt?
-- Übersichtliche Zusammenstellung lokaler Strukturen
+### **Systematische Übersicht der lokalen Berufsschullandschaft:**
+
+#### **🏢 Staatliche Berufsschulen:**
+
+**1. Dr. Georg-Schäfer-Schule (Berufsschule I)**
+- **Ausrichtung:** Gewerblich-technisch
+- **Schwerpunkte:** Handwerk und Industrie  
+- **Besonderheit:** Fachschule für Maschinenbautechnik
+- **Zielgruppe:** Auszubildende im gewerblich-technischen Bereich
+
+**2. Ludwig-Erhard-Schule (Berufsschule II)**  
+- **Ausrichtung:** Kaufmännisch
+- **Berufsfelder:** Wirtschaft/Verwaltung, Gesundheit, Monoberufe
+- **Adresse:** Ignaz-Schön-Str. 10, 97421 Schweinfurt
+- **Schulprofil:** Inklusion
+
+**3. Staatliches Berufliches Schulzentrum Alfons Goppel (Berufsschule III)**
+- **Ausrichtung:** Hauswirtschaftlich-sozialpädagogisch  
+- **Berufsfelder:** Ernährung/Hauswirtschaft, Agrarwirtschaft, Textiltechnik/Bekleidung, Körperpflege
+- **Integrierte Berufsfachschulen:** Kinderpflege, Sozialpflege, Pflege, Ernährung und Versorgung
+- **Adresse:** Geschwister-Scholl-Str. 28-32, 97424 Schweinfurt
+
+#### **🎯 Spezialisierte Förderangebote:**
+
+**4. Adolph-Kolping-Berufsschule**
+- **Förderschwerpunkt:** Lernen und emotionale/soziale Entwicklung  
+- **Angebote:** Berufsvorbereitungsjahr (BVJ), Berufsintegration
+- **Einzugsgebiet:** Stadt/Landkreis Schweinfurt, Haßberge, Rhön-Grabfeld, Bad Kissingen
+- **Zielgruppe:** Jugendliche 15-23 Jahre mit besonderem Förderbedarf
+
+**5. BFZ Schweinfurt (Bildungswerk der Bayerischen Wirtschaft)**
+- **Angebote:** Weiterbildung, Umschulung, berufliche Rehabilitation
+- **Schwerpunkte:** Deutschsprachförderung, individuelles Coaching
+- **Standorte:** Schweinfurt, Bad Kissingen, Bad Neustadt, Haßfurt  
+- **Adresse:** Londonstraße 20, 97424 Schweinfurt
+
+### **🗺️ Systemvisualisierung Schweinfurt:**
+
+```
+BERUFSBILDUNGSSYSTEM SCHWEINFURT
+├── DUALES SYSTEM
+│   ├── BS I (Dr. Georg-Schäfer): Gewerblich-technisch
+│   ├── BS II (Ludwig-Erhard): Wirtschaft/Verwaltung/Gesundheit  
+│   └── BS III (Alfons Goppel): Ernährung/Hauswirtschaft/Soziales
+├── ÜBERGANGSYSTEM
+│   ├── BVJ/BIK an allen staatlichen BS
+│   └── Kolping-BS: Spezielle Förderung
+├── SCHULISCHES SYSTEM
+│   └── Berufsfachschulen (integriert in BSZ Alfons Goppel)
+└── WEITERBILDUNG
+    └── BFZ: Berufliche Rehabilitation/Umschulung
+```
+
+### **💡 Diskussionsgrundlage für Kleingruppenaustausch:**
+
+**Systemtheoretische Betrachtung der lokalen Struktur:**
+- **Differenzierung:** Drei spezialisierte staatliche BS decken alle Berufsfelder ab
+- **Inklusion:** Förderangebote durch Kolping-BS und BFZ
+- **Interdependenz:** Industrie-Struktur Schweinfurt ↔ gewerblich-technische Ausrichtung
+- **Rückkopplungen:** Lokaler Fachkräftebedarf ↔ Ausbildungsplatzangebot
 
 ---
 
