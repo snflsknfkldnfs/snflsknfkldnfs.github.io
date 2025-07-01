@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beobachtungsbogen: Objekterkundung Kulturtechniken</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 15px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .header h2 {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .kulturtechnik-selection {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .kulturtechnik-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+        }
+        
+        .kulturtechnik-card {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .kulturtechnik-card:hover {
+            border-color: #4ecdc4;
+            transform: translateY(-2px);
+        }
+        
+        .kulturtechnik-card.selected {
+            border-color: #44a08d;
+            background: #e8f8f5;
+            box-shadow: 0 3px 10px rgba(68, 160, 141, 0.3);
+        }
+        
+        .card-icon {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .card-title {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .instruction {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .instruction h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .instruction p {
+            color: #856404;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        
+        .objekt-section {
+            background: #f8f9ff;
+            border-left: 5px solid #667eea;
+            border-radius: 0 10px 10px 0;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .objekt-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .objekt-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .objekt-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .input-group {
+            margin: 15px 0;
+        }
+        
+        .input-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+            display: block;
+            font-size: 1.1em;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .textarea-field {
+            min-height: 80px;
+        }
+        
+        .zeitreihenfolge-section {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            color: #2d3436;
+        }
+        
+        .zeitreihenfolge-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .timeline-slot {
+            background: rgba(255,255,255,0.7);
+            border: 2px dashed #e17055;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-slot:hover {
+            background: rgba(255,255,255,0.9);
+            border-style: solid;
+        }
+        
+        .slot-label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+        
+        .slot-input {
+            background: transparent;
+            border: none;
+            text-align: center;
+            font-size: 1em;
+            color: #2d3436;
+            font-weight: 500;
+            width: 100%;
+        }
+        
+        .slot-input::placeholder {
+            color: #636e72;
+            font-style: italic;
+        }
+        
+        .reflection-section {
+            background: #e8f4fd;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        
+        .reflection-title {
+            color: #0984e3;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .reflection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .reflection-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .timer-display {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 1000;
+            font-size: 0.9em;
+        }
+        
+        .save-button {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto 0;
+        }
+        
+        .save-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .kulturtechnik-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .reflection-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-display" id="timer">🔬 Experiment: 15 Min</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Objekterkundung: Kulturtechniken</h1>
+            <h2>Untersucht eure Gegenstände wie Detektive!</h2>
+        </div>
+        
+        <div class="kulturtechnik-selection">
+            <h3 style="text-align: center; margin-bottom: 15px; color: #495057;">1️⃣ Wählt eure Kulturtechnik:</h3>
+            <div class="kulturtechnik-cards">
+                <div class="kulturtechnik-card" onclick="selectKulturtechnik(this, 'kommunizieren')" data-tech="kommunizieren">
+                    <div class="card-icon">💬</div>
+                    <div class="card-title">KOMMUNIZIEREN</div>
+                </div>
+                <div class="kulturtechnik-card" onclick="selectKulturtechnik(this, 'informieren')" data-tech="informieren">
+                    <div class="card-icon">📚</div>
+                    <div class="card-title">INFORMIEREN</div>
+                </div>
+                <div class="kulturtechnik-card" onclick="selectKulturtechnik(this, 'unterhalten')" data-tech="unterhalten">
+                    <div class="card-icon">🎭</div>
+                    <div class="card-title">UNTERHALTEN</div>
+                </div>
+                <div class="kulturtechnik-card" onclick="selectKulturtechnik(this, 'produzieren')" data-tech="produzieren">
+                    <div class="card-icon">🎨</div>
+                    <div class="card-title">PRODUZIEREN</div>
+                </div>
+                <div class="kulturtechnik-card" onclick="selectKulturtechnik(this, 'organisieren')" data-tech="organisieren">
+                    <div class="card-icon">📋</div>
+                    <div class="card-title">ORGANISIEREN</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="instruction">
+                <h3>🎯 Euer Forschungsauftrag:</h3>
+                <p><strong>Schaut euch alle Gegenstände in eurer Kiste genau an.</strong> Beschreibt jeden Gegenstand: Wie sieht er aus? Wie funktioniert er? Wann wurde er wohl benutzt?</p>
+            </div>
+            
+            <!-- Objekt 1 -->
+            <div class="objekt-section">
+                <div class="objekt-header">
+                    <div class="objekt-number">1</div>
+                    <div class="objekt-title">GEGENSTAND 1 (nehmt den ältesten)</div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wie sieht er aus? (Farbe, Material, Form)</label>
+                    <input type="text" class="input-field" placeholder="z.B. braun, aus Holz, rechteckig...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wie funktioniert er? (Was muss man damit machen?)</label>
+                    <textarea class="input-field textarea-field" placeholder="z.B. Man drückt Knöpfe, man schreibt damit..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wann wurde er wohl benutzt?</label>
+                    <input type="text" class="input-field" placeholder="z.B. vor 100 Jahren, in den 1980ern...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wofür haben Menschen das benutzt?</label>
+                    <textarea class="input-field textarea-field" placeholder="z.B. um Nachrichten zu schicken..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Objekt 2 -->
+            <div class="objekt-section">
+                <div class="objekt-header">
+                    <div class="objekt-number">2</div>
+                    <div class="objekt-title">GEGENSTAND 2</div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wie sieht er aus?</label>
+                    <input type="text" class="input-field" placeholder="Beschreibt das Aussehen...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wie funktioniert er?</label>
+                    <textarea class="input-field textarea-field" placeholder="Erklärt die Funktionsweise..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wann wurde er wohl benutzt?</label>
+                    <input type="text" class="input-field" placeholder="Schätzt die Zeit...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wofür haben Menschen das benutzt?</label>
+                    <textarea class="input-field textarea-field" placeholder="Erklärt den Zweck..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Objekt 3 -->
+            <div class="objekt-section">
+                <div class="objekt-header">
+                    <div class="objekt-number">3</div>
+                    <div class="objekt-title">GEGENSTAND 3 (nehmt den neuesten)</div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wie sieht er aus?</label>
+                    <input type="text" class="input-field" placeholder="Beschreibt das Aussehen...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wie funktioniert er?</label>
+                    <textarea class="input-field textarea-field" placeholder="Erklärt die Funktionsweise..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wann wurde er wohl benutzt?</label>
+                    <input type="text" class="input-field" placeholder="Schätzt die Zeit...">
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Wofür haben Menschen das benutzt?</label>
+                    <textarea class="input-field textarea-field" placeholder="Erklärt den Zweck..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Zeitreihenfolge -->
+            <div class="zeitreihenfolge-section">
+                <div class="zeitreihenfolge-title">📅 ZEITREIHENFOLGE: Ordnet eure Gegenstände!</div>
+                <p style="text-align: center; margin-bottom: 20px;">Tragt die Namen eurer 3 Gegenstände in der richtigen Reihenfolge ein:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-slot">
+                        <div class="slot-label">🕰️ FRÜHER<br>(vor 50+ Jahren)</div>
+                        <input type="text" class="slot-input" placeholder="Gegenstand...">
+                    </div>
+                    <div class="timeline-slot">
+                        <div class="slot-label">📼 GESTERN<br>(vor 20-30 Jahren)</div>
+                        <input type="text" class="slot-input" placeholder="Gegenstand...">
+                    </div>
+                    <div class="timeline-slot">
+                        <div class="slot-label">📱 HEUTE<br>(jetzt)</div>
+                        <input type="text" class="slot-input" placeholder="Gegenstand...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reflexion -->
+            <div class="reflection-section">
+                <div class="reflection-title">🤔 EURE ENTDECKUNG:</div>
+                
+                <div class="reflection-grid">
+                    <div class="reflection-item">
+                        <label class="input-label">Was ist bei allen 3 Gegenständen GLEICH?</label>
+                        <textarea class="input-field textarea-field" placeholder="z.B. Alle dienen dazu um..."></textarea>
+                    </div>
+                    
+                    <div class="reflection-item">
+                        <label class="input-label">Was hat sich VERÄNDERT?</label>
+                        <textarea class="input-field textarea-field" placeholder="z.B. Früher war es langsam, heute..."></textarea>
+                    </div>
+                    
+                    <div class="reflection-item">
+                        <label class="input-label">Was war für euch NEU?</label>
+                        <textarea class="input-field textarea-field" placeholder="z.B. Ich wusste nicht, dass..."></textarea>
+                    </div>
+                    
+                    <div class="reflection-item">
+                        <label class="input-label">Was fandet ihr SCHWIERIG?</label>
+                        <textarea class="input-field textarea-field" placeholder="z.B. Es war schwer zu verstehen..."></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="save-button" onclick="saveProgress()">💾 Forschung speichern</button>
+        </div>
+    </div>
+    
+    <script>
+        let selectedKulturtechnik = '';
+        
+        function selectKulturtechnik(card, technik) {
+            // Alle Karten deselektieren
+            document.querySelectorAll('.kulturtechnik-card').forEach(c => c.classList.remove('selected'));
+            
+            // Gewählte Karte markieren
+            card.classList.add('selected');
+            selectedKulturtechnik = technik;
+            
+            // Vibration für Touch-Feedback
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+            
+            // Auto-speichern der Auswahl
+            localStorage.setItem('selectedKulturtechnik', technik);
+        }
+        
+        function saveProgress() {
+            const inputs = document.querySelectorAll('input, textarea');
+            const data = {
+                kulturtechnik: selectedKulturtechnik,
+                timestamp: new Date().toISOString(),
+                responses: {}
+            };
+            
+            inputs.forEach((input, index) => {
+                data.responses[`field_${index}`] = input.value;
+            });
+            
+            // Lokale Speicherung
+            localStorage.setItem('objekterkundung_data', JSON.stringify(data));
+            
+            // Erfolgs-Feedback
+            const button = document.querySelector('.save-button');
+            const originalText = button.textContent;
+            button.textContent = '✅ Gespeichert!';
+            button.style.background = '#00b894';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = 'linear-gradient(45deg, #00b894, #00cec9)';
+            }, 2000);
+        }
+        
+        // Timer für Experimentierphase
+        let startTime = new Date();
+        let experimentTime = 15; // 15 Minuten
+        
+        function updateTimer() {
+            let now = new Date();
+            let elapsed = Math.floor((now - startTime) / 1000 / 60);
+            let remaining = experimentTime - elapsed;
+            
+            let timerElement = document.getElementById('timer');
+            
+            if (remaining > 3) {
+                timerElement.textContent = `🔬 Experiment: ${remaining} Min`;
+                timerElement.style.background = 'rgba(0,0,0,0.8)';
+            } else if (remaining > 0) {
+                timerElement.textContent = `⚡ Noch ${remaining} Min - Zeitreihenfolge!`;
+                timerElement.style.background = 'rgba(255, 193, 7, 0.9)';
+            } else if (remaining > -2) {
+                timerElement.textContent = `⏰ Zeit um! Portfolio ausfüllen`;
+                timerElement.style.background = 'rgba(220, 38, 38, 0.9)';
+            } else {
+                timerElement.textContent = `📋 Portfolio-Zeit`;
+                timerElement.style.background = 'rgba(16, 185, 129, 0.9)';
+            }
+        }
+        
+        setInterval(updateTimer, 30000);
+        updateTimer();
+        
+        // Auto-Speicherung bei Eingaben
+        document.addEventListener('input', function(e) {
+            if (e.target.matches('input, textarea')) {
+                // Speichere nach 2 Sekunden Inaktivität
+                clearTimeout(window.autoSaveTimeout);
+                window.autoSaveTimeout = setTimeout(saveProgress, 2000);
+            }
+        });
+        
+        // Gespeicherte Daten beim Laden wiederherstellen
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedKulturtechnik = localStorage.getItem('selectedKulturtechnik');
+            if (savedKulturtechnik) {
+                const card = document.querySelector(`[data-tech="${savedKulturtechnik}"]`);
+                if (card) {
+                    selectKulturtechnik(card, savedKulturtechnik);
+                }
+            }
+            
+            const savedData = localStorage.getItem('objekterkundung_data');
+            if (savedData) {
+                try {
+                    const data = JSON.parse(savedData);
+                    const inputs = document.querySelectorAll('input, textarea');
+                    inputs.forEach((input, index) => {
+                        if (data.responses[`field_${index}`]) {
+                            input.value = data.responses[`field_${index}`];
+                        }
+                    });
+                } catch (e) {
+                    console.log('Fehler beim Laden der gespeicherten Daten');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

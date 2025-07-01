@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: Meine Kulturtechnik-Forschung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%);
+            min-height: 100vh;
+            padding: 15px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '📚';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 2em;
+        }
+        
+        .header::after {
+            content: '🔍';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2em;
+        }
+        
+        .header h1 {
+            font-size: 2.3em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .header h2 {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .name-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-bottom: 3px solid #dee2e6;
+        }
+        
+        .name-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .name-field {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .name-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .name-input {
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: border-color 0.3s ease;
+        }
+        
+        .name-input:focus {
+            outline: none;
+            border-color: #74b9ff;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .portfolio-section {
+            background: #f8f9ff;
+            border-left: 6px solid #74b9ff;
+            border-radius: 0 15px 15px 0;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            background: #74b9ff;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+        
+        .section-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #2d3436;
+        }
+        
+        .kulturtechnik-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .tech-card {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            border-color: #74b9ff;
+            transform: translateY(-2px);
+        }
+        
+        .tech-card.selected {
+            border-color: #0984e3;
+            background: #e3f2fd;
+            box-shadow: 0 4px 12px rgba(116, 185, 255, 0.3);
+        }
+        
+        .tech-icon {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        
+        .tech-name {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .input-group {
+            margin: 20px 0;
+        }
+        
+        .input-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+            display: block;
+            font-size: 1.2em;
+        }
+        
+        .help-text {
+            color: #6c757d;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            line-height: 1.5;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: #74b9ff;
+            box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.1);
+        }
+        
+        .textarea-field {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .sentence-starters {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .starters-title {
+            font-weight: 600;
+            color: #856404;
+            margin-bottom: 8px;
+        }
+        
+        .starters-list {
+            color: #856404;
+            line-height: 1.6;
+        }
+        
+        .timeline-section {
+            background: linear-gradient(135deg, #a8e6cf, #88d8c0);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            color: #2d3436;
+        }
+        
+        .timeline-title {
+            font-size: 1.7em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .timeline-item {
+            background: rgba(255,255,255,0.9);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .timeline-period {
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+        
+        .timeline-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+            background: white;
+        }
+        
+        .insights-section {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .insights-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2d3436;
+        }
+        
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .insight-item {
+            background: rgba(255,255,255,0.8);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .reflection-section {
+            background: #e8f4fd;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .reflection-title {
+            color: #0984e3;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .emoji-rating {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .emoji-option {
+            font-size: 2.5em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            opacity: 0.5;
+        }
+        
+        .emoji-option:hover {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+        
+        .emoji-option.selected {
+            opacity: 1;
+            transform: scale(1.3);
+        }
+        
+        .save-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .save-button {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 184, 148, 0.3);
+        }
+        
+        .save-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 184, 148, 0.4);
+        }
+        
+        .timer-display {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        
+        @media (max-width: 768px) {
+            .name-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .kulturtechnik-selection {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-display" id="timer">📝 Portfolio: 10 Min</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>📖 Mein Kulturtechnik-Portfolio</h1>
+            <h2>Dokumentiere deine Forschungsergebnisse</h2>
+        </div>
+        
+        <div class="name-section">
+            <div class="name-grid">
+                <div class="name-field">
+                    <label class="name-label">Mein Name:</label>
+                    <input type="text" class="name-input" placeholder="Vorname Nachname">
+                </div>
+                <div class="name-field">
+                    <label class="name-label">Mein Partner:</label>
+                    <input type="text" class="name-input" placeholder="Vorname Nachname">
+                </div>
+                <div class="name-field">
+                    <label class="name-label">Datum:</label>
+                    <input type="text" class="name-input" value="25.06.2025" readonly>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Kulturtechnik wählen -->
+            <div class="portfolio-section">
+                <div class="section-header">
+                    <div class="section-icon">🎭</div>
+                    <div class="section-title">1. Meine erforschte Kulturtechnik</div>
+                </div>
+                
+                <p style="margin-bottom: 15px; font-size: 1.1em;">Klicke auf die Kulturtechnik, die deine Gruppe erforscht hat:</p>
+                
+                <div class="kulturtechnik-selection">
+                    <div class="tech-card" onclick="selectTech(this, 'kommunizieren')" data-tech="kommunizieren">
+                        <div class="tech-icon">💬</div>
+                        <div class="tech-name">KOMMUNIZIEREN</div>
+                    </div>
+                    <div class="tech-card" onclick="selectTech(this, 'informieren')" data-tech="informieren">
+                        <div class="tech-icon">📚</div>
+                        <div class="tech-name">INFORMIEREN</div>
+                    </div>
+                    <div class="tech-card" onclick="selectTech(this, 'unterhalten')" data-tech="unterhalten">
+                        <div class="tech-icon">🎭</div>
+                        <div class="tech-name">UNTERHALTEN</div>
+                    </div>
+                    <div class="tech-card" onclick="selectTech(this, 'produzieren')" data-tech="produzieren">
+                        <div class="tech-icon">🎨</div>
+                        <div class="tech-name">PRODUZIEREN</div>
+                    </div>
+                    <div class="tech-card" onclick="selectTech(this, 'organisieren')" data-tech="organisieren">
+                        <div class="tech-icon">📋</div>
+                        <div class="tech-name">ORGANISIEREN</div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Das wollen Menschen mit dieser Kulturtechnik:</label>
+                    <div class="help-text">Erkläre in einem Satz, was Menschen schon immer wollten...</div>
+                    <textarea class="input-field textarea-field" placeholder="z.B. Menschen wollen schon immer mit anderen sprechen und Nachrichten austauschen..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Zeitlinie -->
+            <div class="timeline-section">
+                <div class="timeline-title">⏰ Entwicklung meiner Kulturtechnik</div>
+                <div class="timeline-grid">
+                    <div class="timeline-item">
+                        <div class="timeline-period">🕰️ FRÜHER<br>(vor 50+ Jahren)</div>
+                        <input type="text" class="timeline-input" placeholder="Gegenstand eingeben...">
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-period">📼 GESTERN<br>(vor 20-30 Jahren)</div>
+                        <input type="text" class="timeline-input" placeholder="Gegenstand eingeben...">
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-period">📱 HEUTE<br>(jetzt)</div>
+                        <input type="text" class="timeline-input" placeholder="Gegenstand eingeben...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Erkenntnisse -->
+            <div class="insights-section">
+                <div class="insights-title">💡 Meine Erkenntnisse</div>
+                <div class="insights-grid">
+                    <div class="insight-item">
+                        <label class="input-label">Was ist GLEICH geblieben?</label>
+                        <div class="sentence-starters">
+                            <div class="starters-title">💬 Satzanfänge:</div>
+                            <div class="starters-list">
+                                "Menschen wollten schon immer..."<br>
+                                "Das Ziel war früher und heute..."<br>
+                                "Gleich geblieben ist..."
+                            </div>
+                        </div>
+                        <textarea class="input-field textarea-field" placeholder="Menschen wollten schon immer..."></textarea>
+                    </div>
+                    
+                    <div class="insight-item">
+                        <label class="input-label">Was hat sich VERÄNDERT?</label>
+                        <div class="sentence-starters">
+                            <div class="starters-title">🔄 Satzanfänge:</div>
+                            <div class="starters-list">
+                                "Früher war es..., heute ist es..."<br>
+                                "Die Technik wurde..."<br>
+                                "Verändert hat sich..."
+                            </div>
+                        </div>
+                        <textarea class="input-field textarea-field" placeholder="Früher war es..., heute ist es..."></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reflexion -->
+            <div class="reflection-section">
+                <div class="reflection-title">🤔 Meine Reflexion</div>
+                
+                <div class="input-group">
+                    <label class="input-label">Das war heute NEU für mich:</label>
+                    <div class="sentence-starters">
+                        <div class="starters-title">✨ Satzanfänge:</div>
+                        <div class="starters-list">"Ich wusste nicht, dass..." • "Neu war für mich..." • "Überrascht hat mich..."</div>
+                    </div>
+                    <textarea class="input-field textarea-field" placeholder="Ich wusste nicht, dass..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Das fand ich SCHWIERIG:</label>
+                    <div class="sentence-starters">
+                        <div class="starters-title">😅 Satzanfänge:</div>
+                        <div class="starters-list">"Schwierig war..." • "Ich verstehe noch nicht..." • "Unklar ist mir..."</div>
+                    </div>
+                    <textarea class="input-field textarea-field" placeholder="Schwierig war..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Das verstehe ich jetzt GUT:</label>
+                    <div class="sentence-starters">
+                        <div class="starters-title">✅ Satzanfänge:</div>
+                        <div class="starters-list">"Jetzt verstehe ich..." • "Klar ist mir..." • "Gelernt habe ich..."</div>
+                    </div>
+                    <textarea class="input-field textarea-field" placeholder="Jetzt verstehe ich..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">So fand ich die heutige Stunde:</label>
+                    <div class="emoji-rating">
+                        <div class="emoji-option" data-rating="super" onclick="selectRating(this)">🤩</div>
+                        <div class="emoji-option" data-rating="gut" onclick="selectRating(this)">😊</div>
+                        <div class="emoji-option" data-rating="okay" onclick="selectRating(this)">😐</div>
+                        <div class="emoji-option" data-rating="schwer" onclick="selectRating(this)">😕</div>
+                        <div class="emoji-option" data-rating="langweilig" onclick="selectRating(this)">😴</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="save-section">
+                <button class="save-button" onclick="savePortfolio()">
+                    💾 Portfolio speichern & abgeben
+                </button>
+                <p style="margin-top: 15px; color: #6c757d; font-size: 0.9em;">
+                    Deine Eingaben werden automatisch gespeichert.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let selectedTech = '';
+        let selectedRating = '';
+        
+        function selectTech(card, tech) {
+            document.querySelectorAll('.tech-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            selectedTech = tech;
+            
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+            
+            localStorage.setItem('portfolioTech', tech);
+        }
+        
+        function selectRating(emoji) {
+            document.querySelectorAll('.emoji-option').forEach(e => e.classList.remove('selected'));
+            emoji.classList.add('selected');
+            selectedRating = emoji.dataset.rating;
+            
+            if (navigator.vibrate) {
+                navigator.vibrate(30);
+            }
+            
+            localStorage.setItem('portfolioRating', selectedRating);
+        }
+        
+        function savePortfolio() {
+            const inputs = document.querySelectorAll('input, textarea');
+            const data = {
+                tech: selectedTech,
+                rating: selectedRating,
+                timestamp: new Date().toISOString(),
+                responses: {}
+            };
+            
+            inputs.forEach((input, index) => {
+                data.responses[`field_${index}`] = input.value;
+            });
+            
+            localStorage.setItem('portfolio_data', JSON.stringify(data));
+            
+            // Erfolgs-Feedback
+            const button = document.querySelector('.save-button');
+            const originalText = button.textContent;
+            button.textContent = '✅ Portfolio gespeichert!';
+            button.style.background = '#00b894';
+            
+            // Zusätzliches visuelles Feedback
+            document.body.style.background = 'linear-gradient(135deg, #00b894 0%, #00cec9 100%)';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = 'linear-gradient(45deg, #00b894, #00cec9)';
+                document.body.style.background = 'linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%)';
+            }, 3000);
+        }
+        
+        // Timer für Portfolio-Phase
+        let startTime = new Date();
+        let portfolioTime = 10; // 10 Minuten
+        
+        function updateTimer() {
+            let now = new Date();
+            let elapsed = Math.floor((now - startTime) / 1000 / 60);
+            let remaining = portfolioTime - elapsed;
+            
+            let timerElement = document.getElementById('timer');
+            
+            if (remaining > 2) {
+                timerElement.textContent = `📝 Portfolio: ${remaining} Min`;
+                timerElement.style.background = 'rgba(0,0,0,0.8)';
+            } else if (remaining > 0) {
+                timerElement.textContent = `⚡ Noch ${remaining} Min - Reflexion!`;
+                timerElement.style.background = 'rgba(255, 193, 7, 0.9)';
+            } else if (remaining > -2) {
+                timerElement.textContent = `⏰ Zeit um! Präsentation vorbereiten`;
+                timerElement.style.background = 'rgba(220, 38, 38, 0.9)';
+            } else {
+                timerElement.textContent = `🎤 Präsentations-Zeit`;
+                timerElement.style.background = 'rgba(16, 185, 129, 0.9)';
+            }
+        }
+        
+        setInterval(updateTimer, 30000);
+        updateTimer();
+        
+        // Auto-Speicherung
+        document.addEventListener('input', function(e) {
+            if (e.target.matches('input, textarea')) {
+                clearTimeout(window.autoSaveTimeout);
+                window.autoSaveTimeout = setTimeout(savePortfolio, 1500);
+            }
+        });
+        
+        // Gespeicherte Daten laden
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTech = localStorage.getItem('portfolioTech');
+            if (savedTech) {
+                const card = document.querySelector(`[data-tech="${savedTech}"]`);
+                if (card) selectTech(card, savedTech);
+            }
+            
+            const savedRating = localStorage.getItem('portfolioRating');
+            if (savedRating) {
+                const emoji = document.querySelector(`[data-rating="${savedRating}"]`);
+                if (emoji) selectRating(emoji);
+            }
+            
+            const savedData = localStorage.getItem('portfolio_data');
+            if (savedData) {
+                try {
+                    const data = JSON.parse(savedData);
+                    const inputs = document.querySelectorAll('input, textarea');
+                    inputs.forEach((input, index) => {
+                        if (data.responses[`field_${index}`]) {
+                            input.value = data.responses[`field_${index}`];
+                        }
+                    });
+                } catch (e) {
+                    console.log('Fehler beim Laden der Portfolio-Daten');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
