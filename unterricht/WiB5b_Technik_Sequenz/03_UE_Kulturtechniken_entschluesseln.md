@@ -68,11 +68,11 @@ SuS verstehen, dass Menschen grundlegende Bedürfnisse (Kulturtechniken) schon i
 ### **PHASE 1: Einstieg - Induktives Sammeln (10 Min)**
 **09:45-09:55**
 
-| Zeit | Inhalt | Lehrerhandlung | Schülerhandlung | Material |
-|------|--------|----------------|-----------------|----------|
-| 2 Min | **Begrüßung & Anknüpfung** | "Gestern haben wir verstanden: Social Media ist Technik. Heute schauen wir genauer hin: **Was machen Menschen eigentlich ALLES mit Technik heute?**" | Hören zu, aktivieren Vorwissen aus UE2 | Classroom Screen |
-| 6 Min | **Gemeinsames Sammeln** | Moderiert Sammlung: "Denkt an euren ganzen Tag - Handy, Computer, Apps, Geräte. Was macht ihr damit?" Notiert Beispiele an Smart-Board | Melden sich, nennen konkrete Alltagsbeispiele: "TikTok schauen", "WhatsApp schreiben", "Musik hören" etc. | Sammelbogen (interaktiv) |
-| 2 Min | **Überleitung zu Kategorien** | "Wow, so viele Beispiele! Ich sehe da 5 große Gruppen..." Zeigt 5 Kulturtechnik-Karten | Raten mit, versuchen Zuordnung | Kulturtechnik-Karten |
+| Zeit  | Inhalt                        | Lehrerhandlung                                                                                                                                           | Schülerhandlung                                                                                           | Material                 |
+| ----- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------ |
+| 2 Min | **Begrüßung & Anknüpfung**    | "Letztes mal haben wir verstanden: Social Media ist Technik. Heute schauen wir genauer hin: **Was machen Menschen eigentlich ALLES mit Technik heute?**" | Hören zu, aktivieren Vorwissen aus UE2                                                                    | Classroom Screen         |
+| 6 Min | **Gemeinsames Sammeln**       | Moderiert Sammlung: "Denkt an euren ganzen Tag - Handy, Computer, Apps, Geräte. Was macht ihr damit?" Notiert Beispiele an Smart-Board                   | Melden sich, nennen konkrete Alltagsbeispiele: "TikTok schauen", "WhatsApp schreiben", "Musik hören" etc. | Sammelbogen (interaktiv) |
+| 2 Min | **Überleitung zu Kategorien** | "Wow, so viele Beispiele! Ich sehe da 5 große Gruppen..." Zeigt 5 Kulturtechnik-Karten                                                                   | Raten mit, versuchen Zuordnung                                                                            | Kulturtechnik-Karten     |
 
 **Lehrersprache-Beispiele:**
 - "Kilian, du sagst TikTok-Videos schauen - das ist ja..."
