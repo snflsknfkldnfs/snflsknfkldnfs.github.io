@@ -109,21 +109,21 @@ exclude:
   - .git
   - .github
   - node_modules
-  - package*.json
+  - "package*.json"
   - README.md
   - LICENSE
-  - Gemfile*
+  - "Gemfile*"
   - vendor
   - .DS_Store
   - logs
-  - mcp-*
+  - "mcp-*"
   - development
   - meta
   - _transitions
   - chat_transitions
-  - .env*
-  - *.pid
-  - *.log
+  - ".env*"
+  - "*.pid"
+  - "*.log"
 
 # Include files that start with underscore
 include:
