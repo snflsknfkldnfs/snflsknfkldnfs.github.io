@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 3: Positionierung am Netz</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .station-header {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .station-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .movement-focus {
+            font-size: 1.2em;
+            background: #E91E63;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 0;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .material-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .material-item {
+            background: #8BC34A;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .setup-diagram {
+            background: #f0f8f0;
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .roles {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+        
+        .role {
+            background: #E8F5E8;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+            flex: 1;
+            margin: 0 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .level {
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 8px solid;
+            position: relative;
+        }
+        
+        .level-1 { 
+            background: #e8f5e9; 
+            border-left-color: #4caf50;
+            color: #2e7d32;
+        }
+        .level-2 { 
+            background: #fff8e1; 
+            border-left-color: #ffc107;
+            color: #f57c00;
+        }
+        .level-3 { 
+            background: #fce4ec; 
+            border-left-color: #e91e63;
+            color: #ad1457;
+        }
+        .level-4 { 
+            background: #f3e5f5; 
+            border-left-color: #9c27b0;
+            color: #6a1b9a;
+        }
+        
+        .level-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .level-number {
+            background: white;
+            color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: 3px solid currentColor;
+        }
+        
+        .level-title {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .level-details {
+            margin-left: 55px;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+        
+        .progression-arrow {
+            text-align: center;
+            font-size: 2em;
+            color: #4CAF50;
+            margin: 10px 0;
+        }
+        
+        .rotation-box {
+            background: #FF6F00;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(255,111,0,0.5); }
+            to { box-shadow: 0 0 25px rgba(255,111,0,0.8); }
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            flex: 1;
+            padding: 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .nav-button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">⏱️ 6 Minuten</div>
+    
+    <div class="station-header">
+        <h1 class="station-title">🏐 STATION 3</h1>
+        <h2>Positionierung am Netz</h2>
+        <div class="movement-focus">👟 FOKUS: STOPPSCHRITT + Stellung zum Ball</div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📦 MATERIAL</h3>
+        <div class="material-list">
+            <div class="material-item">2 große Kästen</div>
+            <div class="material-item">2 Volleybälle</div>
+            <div class="material-item">1 Ring (optional)</div>
+            <div class="material-item">Volleyballnetz</div>
+        </div>
+    </div>
+    
+    <div class="setup-diagram">
+        <h3>🎪 AUFBAU</h3>
+        <p style="font-size: 1.1em; color: #333;">Kasten hinter Netz + 3er-Gruppe</p>
+        <div class="roles">
+            <div class="role">
+                <strong>BALLJUNGE</strong><br>
+                auf Kasten<br>
+                (wirft/spielt Ball)
+            </div>
+            <div class="role">
+                <strong>AGIERENDER</strong><br>
+                vor Netz<br>
+                (positioniert sich)
+            </div>
+            <div class="role">
+                <strong>BEOBACHTER</strong><br>
+                seitlich<br>
+                (gibt Feedback)
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📊 4-STUFEN-DIFFERENZIERUNG</h3>
+        
+        <div class="level level-1">
+            <div class="level-header">
+                <div class="level-number">1</div>
+                <div class="level-title">ANFÄNGER: Werfen → Fangen</div>
+            </div>
+            <div class="level-details">
+                <strong>Balljunge:</strong> Wirft Ball sanft über Netz<br>
+                <strong>Agierender:</strong> Stoppschritt zum Ball → Ball fangen<br>
+                <strong>Fokus:</strong> Richtige Position finden
+            </div>
+        </div>
+        
+        <div class="progression-arrow">⬇️</div>
+        
+        <div class="level level-2">
+            <div class="level-header">
+                <div class="level-number">2</div>
+                <div class="level-title">FORTGESCHRITTEN: Pritschen → Baggern</div>
+            </div>
+            <div class="level-details">
+                <strong>Balljunge:</strong> Pritscht Ball über Netz<br>
+                <strong>Agierender:</strong> Stoppschritt → Bagger-Annahme zurück<br>
+                <strong>Fokus:</strong> Technikverknüpfung
+            </div>
+        </div>
+        
+        <div class="progression-arrow">⬇️</div>
+        
+        <div class="level level-3">
+            <div class="level-header">
+                <div class="level-number">3</div>
+                <div class="level-title">GUT: Leichter Schlag → Ring-Ziel</div>
+            </div>
+            <div class="level-details">
+                <strong>Balljunge:</strong> Leichter (!) Schlag über Netz<br>
+                <strong>Agierender:</strong> Baggern durch Ring als Ziel<br>
+                <strong>Fokus:</strong> Präzision unter Druck
+            </div>
+        </div>
+        
+        <div class="progression-arrow">⬇️</div>
+        
+        <div class="level level-4">
+            <div class="level-header">
+                <div class="level-number">4</div>
+                <div class="level-title">PROFI: Echte Annahmen</div>
+            </div>
+            <div class="level-details">
+                <strong>Balljunge:</strong> Verschiedene Bälle (unpräzise!)<br>
+                <strong>Agierender:</strong> Realistische Annahme-Situationen<br>
+                <strong>Fokus:</strong> Spielnahe Anwendung
+            </div>
+        </div>
+    </div>
+    
+    <div class="rotation-box">
+        ↻ 3 VERSUCHE → ROLLENWECHSEL
+        <br>Balljunge → Agierender → Beobachter → Balljunge...
+    </div>
+    
+    <div class="content-section">
+        <h3>✅ BEOBACHTUNGSAUFTRAG</h3>
+        <ul style="font-size: 1.1em;">
+            <li>👟 <strong>STOPPSCHRITT:</strong> Rechtzeitig zum Ball bewegen?</li>
+            <li>🏐 <strong>SPIELBRETT:</strong> Unterarme gestreckt und parallel?</li>
+            <li>📏 <strong>HÜFTHÖHE:</strong> Ball auf richtiger Höhe getroffen?</li>
+            <li>🎯 <strong>ERFOLG:</strong> Ball kontrolliert zurückgespielt?</li>
+        </ul>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-button" onclick="alert('Navigation zu Station 2')">← Station 2</button>
+        <button class="nav-button" onclick="alert('Navigation zu Station 4')">Station 4 →</button>
+    </div>
+</body>
+</html>

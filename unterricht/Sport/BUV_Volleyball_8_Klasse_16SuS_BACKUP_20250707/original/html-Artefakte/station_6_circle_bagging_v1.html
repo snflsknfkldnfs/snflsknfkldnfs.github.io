@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 6: Kreis-Baggern</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #E91E63 0%, #AD1457 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .station-header {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .station-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .movement-focus {
+            font-size: 1.2em;
+            background: #FFC107;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 0;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .material-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .material-item {
+            background: #E91E63;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .circle-demo {
+            background: #fce4ec;
+            border: 3px solid #E91E63;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .circle-center {
+            background: #E91E63;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .player-dot {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #FFC107;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            font-size: 0.8em;
+        }
+        
+        .player-1 { top: 10px; left: 50%; transform: translateX(-50%); }
+        .player-2 { top: 50%; right: 10px; transform: translateY(-50%); }
+        .player-3 { bottom: 10px; left: 50%; transform: translateX(-50%); }
+        
+        .progression {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            gap: 10px;
+        }
+        
+        .progression-stage {
+            flex: 1;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .stage-1 {
+            background: #c8e6c9;
+            color: #2e7d32;
+            border: 2px solid #4caf50;
+        }
+        
+        .stage-2 {
+            background: #fff9c4;
+            color: #f57f17;
+            border: 2px solid #ffc107;
+        }
+        
+        .arrow {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #666;
+        }
+        
+        .challenge-box {
+            background: #ff5722;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .challenge-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .challenge-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .target-display {
+            background: white;
+            color: #ff5722;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin: 10px;
+        }
+        
+        .teamwork-emphasis {
+            background: #e1f5fe;
+            border: 2px solid #03a9f4;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #0277bd;
+            text-align: center;
+        }
+        
+        .gameform-transition {
+            background: linear-gradient(135deg, #9c27b0, #e91e63);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .rotation-box {
+            background: #3F51B5;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            flex: 1;
+            padding: 15px;
+            background: #E91E63;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .nav-button:hover {
+            background: #C2185B;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">⏱️ 6 Minuten</div>
+    
+    <div class="station-header">
+        <h1 class="station-title">⭕ STATION 6</h1>
+        <h2>Kreis-Baggern → Spielformen</h2>
+        <div class="movement-focus">🤝 FOKUS: Transfer + Teamwork</div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📦 MATERIAL</h3>
+        <div class="material-list">
+            <div class="material-item">1 Volleyball pro 3er-Gruppe</div>
+            <div class="material-item">Freie Hallenfläche</div>
+            <div class="material-item">2m Dreiecks-Abstand</div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3>⭕ KREIS-FORMATION</h3>
+        <div class="circle-demo">
+            <div class="circle-center">🏐</div>
+            <div class="player-dot player-1">A</div>
+            <div class="player-dot player-2">B</div>
+            <div class="player-dot player-3">C</div>
+        </div>
+        <p style="text-align: center; font-weight: bold; color: #333; font-size: 1.1em;">
+            3er-Gruppe im Dreieck → Ball NUR mit Baggern im Spiel halten
+        </p>
+    </div>
+    
+    <div class="content-section">
+        <h3>📊 2-STUFEN-PROGRESSION</h3>
+        <div class="progression">
+            <div class="progression-stage stage-1">
+                <strong>STUFE 1: STATISCH</strong>
+                <div class="arrow">→</div>
+                <br><br>
+                • Feste Positionen
+                <br>
+                • Ball kontrolliert zuspielen
+                <br>
+                • Ziel: 8 Ballkontakte
+            </div>
+            <div class="progression-stage stage-2">
+                <strong>STUFE 2: DYNAMISCH</strong>
+                <br><br>
+                • Mit Laufen
+                <br>
+                • Dem Ball hinterherlaufen
+                <br>
+                • Nur wenn Gruppe bereit!
+            </div>
+        </div>
+    </div>
+    
+    <div class="challenge-box">
+        <div class="challenge-title">🎯 GRUPPENHERAUSFORDERUNG</div>
+        <div>Wie viele Ballkontakte schafft ihr gemeinsam?</div>
+        <div class="target-display">Ziel: 8+ Kontakte</div>
+        <div class="target-display">Profi: 15+ Kontakte</div>
+    </div>
+    
+    <div class="teamwork-emphasis">
+        <h4 style="margin-top: 0;">🤝 TEAMWORK-REGELN</h4>
+        <ul style="text-align: left; display: inline-block;">
+            <li><strong>Kommunikation:</strong> "Ich!" oder "Meiner!" rufen</li>
+            <li><strong>Hilfsbereitschaft:</strong> Schwächere Spieler unterstützen</li>
+            <li><strong>Geduld:</strong> Bei Fehlern ermutigen, nicht kritisieren</li>
+            <li><strong>Gemeinsames Ziel:</strong> Alle haben Erfolg, wenn Team Erfolg hat</li>
+        </ul>
+    </div>
+    
+    <div class="rotation-box">
+        ↻ Nach 6 MINUTEN → Übergang zu SPIELFORMEN
+        <br>Kreisbaggern → Baggertennis 3v3
+    </div>
+    
+    <div class="gameform-transition">
+        🎮 SPIELFORMEN-ÜBERGANG
+        <br><br>
+        Nach Stationsbetrieb wird diese Station zu:<br>
+        <strong>• Kreisbaggern (3 Min)</strong><br>
+        <strong>• Baggertennis 3v3 (3 Min)</strong>
+    </div>
+    
+    <div class="content-section">
+        <h3>✅ LERNZIELE</h3>
+        <ul style="font-size: 1.1em;">
+            <li>🤝 <strong>Kooperation:</strong> Als Team zusammenarbeiten</li>
+            <li>🏐 <strong>Transfer:</strong> Alle 3 Bewegungsmerkmale anwenden</li>
+            <li>🎯 <strong>Präzision:</strong> Kontrollierte Ballabgabe zu Partnern</li>
+            <li>💬 <strong>Kommunikation:</strong> Absprachen im Team</li>
+            <li>🎮 <strong>Spielvorbereitung:</strong> Übergang zu echten Spielformen</li>
+        </ul>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-button" onclick="alert('Navigation zu Station 5')">← Station 5</button>
+        <button class="nav-button" onclick="alert('Navigation zu Station 1')">Station 1 →</button>
+    </div>
+</body>
+</html>

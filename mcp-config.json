@@ -4,12 +4,24 @@
     "notizen/wib",
     "notizen/gpg",
     "notizen/methodik",
-    "notizen/leitfaden"
+    "notizen/leitfaden",
+    "extracted_content",
+    "unterricht",
+    "_posts"
   ],
   "metadataSchemas": {
     "unterrichtseinheit": "schemas/unterrichtseinheit-schema.json",
     "sequenzplanung": "schemas/sequenzplanung-schema.json",
     "tafelbild": "schemas/tafelbild-schema.json"
+  },
+  "pdfExtraction": {
+    "enabled": true,
+    "outputDirectory": "extracted_content",
+    "metadataDirectory": "extracted_content/metadata",
+    "autoProcess": true,
+    "maxPages": 10,
+    "supportedLanguages": ["deu", "eng"],
+    "ocrFallback": true
   },
   "port": 3000
 }

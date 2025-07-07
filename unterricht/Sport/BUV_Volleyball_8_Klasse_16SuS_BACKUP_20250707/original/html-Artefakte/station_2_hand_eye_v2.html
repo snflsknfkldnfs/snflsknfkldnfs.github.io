@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 2: Hand-Auge-Koordination</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .station-card {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .station-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2196F3;
+            margin-bottom: 20px;
+        }
+        
+        .station-number {
+            background: #2196F3;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        
+        .station-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+        
+        .video-section {
+            background: #f8f9fa;
+            border: 2px solid #2196F3;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .video-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .movement-focus {
+            background: #FF9800;
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .roles-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .role {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #2196f3;
+        }
+        
+        .role-title {
+            font-weight: bold;
+            color: #1976d2;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .task-section {
+            background: #f0f8f0;
+            border: 2px solid #4caf50;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .task-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .task-steps {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .rotation-box {
+            background: #ff5722;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .movement-checklist {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .movement-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        
+        .movement-icon {
+            background: #ff9800;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .optional-section {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .safety-note {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 15px 0;
+            color: #c62828;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">⏱️ bis Musikwechsel</div>
+    
+    <div class="station-card">
+        <div class="station-header">
+            <div class="station-number">2</div>
+            <h1 class="station-title">Hand-Auge-Koordination</h1>
+        </div>
+        
+        <div class="video-section">
+            <div class="video-icon">📱</div>
+            <strong>SCHAU ZUERST DAS VIDEO!</strong><br>
+            Dann erst mit der Übung starten
+        </div>
+        
+        <div class="movement-focus">
+            🧠 HEUTE WICHTIG: Ballgefühl + Konzentration
+        </div>
+        
+        <div class="roles-section">
+            <div class="role">
+                <div class="role-title">Übender</div>
+                Ball werfen + Handwechsel an Stange + Ball fangen
+            </div>
+        </div>
+        
+        <div class="task-section">
+            <div class="task-title">SO GEHT'S</div>
+            <div class="task-steps">
+                1. Stehe einen Schritt von der Wand weg<br>
+                2. Eine Hand hält Stange oben, andere Hand Ball<br>
+                3. Ball gegen Wand werfen + gleichzeitig Hände wechseln<br>
+                4. Ball mit der anderen Hand fangen
+            </div>
+        </div>
+        
+        <div class="rotation-box">
+            ↻ 3 Versuche (je 30 Sekunden) → Wechsel
+        </div>
+        
+        <div class="movement-checklist">
+            <h3 style="margin-top: 0; color: #e65100;">✅ BEWEGUNGSMERKMALE CHECKEN</h3>
+            <div class="movement-item">
+                <div class="movement-icon">1</div>
+                <div>STOPPSCHRITT: Ruhig stehen bleiben</div>
+            </div>
+            <div class="movement-item">
+                <div class="movement-icon">2</div>
+                <div>SPIELBRETT: Stange kontrolliert halten</div>
+            </div>
+            <div class="movement-item">
+                <div class="movement-icon">3</div>
+                <div>HÜFTHÖHE: Ball auf passender Höhe werfen</div>
+            </div>
+        </div>
+        
+        <div class="safety-note">
+            ⚠️ SICHERHEIT: Abstand zu anderen halten!
+        </div>
+        
+        <div class="optional-section">
+            <strong>Zu einfach?</strong> Schnellerer Rhythmus oder ohne Wandhilfe<br>
+            <strong>Zu schwer?</strong> Erst nur Ball werfen/fangen, später Handwechsel dazu
+        </div>
+    </div>
+</body>
+</html>

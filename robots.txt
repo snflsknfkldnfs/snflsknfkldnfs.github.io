@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+
+# Prioritäre Inhalte für Suchmaschinen
+Allow: /unterricht/Sport/
+Allow: /unterricht/GPG_Arbeitsweisen_LAA_Training/
+Allow: /css/
+Allow: /js/
+
+# Stationskarten besonders hervorheben
+Allow: /unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/
+
+# Administrative Bereiche ausschließen
+Disallow: /_site/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /logs/
+Disallow: /mcp-*
+Disallow: /notizen/meta_prozesse/
+Disallow: /_transitions/
+Disallow: /chat_transitions/
+Disallow: /development/
+Disallow: /meta/
+
+# Tools und experimentelle Bereiche kontrolliert freigeben
+Allow: /generator.html
+Allow: /reflexion.html
+
+# Sitemap-Verweis
+Sitemap: https://paulad.github.io/sitemap.xml
+
+# Crawl-Delay für verantwortungsvolles Indexing
+Crawl-delay: 1
+
+# Spezielle Anweisungen für Bildungsroboter
+User-agent: EduBot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: GoogleBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: BingBot  
+Allow: /
+Crawl-delay: 2

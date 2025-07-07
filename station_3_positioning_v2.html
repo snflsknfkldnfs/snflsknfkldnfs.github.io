@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 3: Positionierung</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .station-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 4px solid #f093fb;
+        }
+
+        .station-header {
+            text-align: center;
+            margin-bottom: 25px;
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: -30px -30px 25px -30px;
+        }
+
+        .station-number {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .station-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .movement-focus {
+            background: rgba(255,255,255,0.2);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .video-box {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .material-section, .roles-section, .exercise-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #f093fb;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f093fb;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .role-item {
+            background: white;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b6b;
+            font-weight: 500;
+        }
+
+        .exercise-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercise-steps li {
+            background: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #f093fb;
+            font-size: 16px;
+        }
+
+        .rotation-box {
+            background: #f093fb;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .movement-reminder {
+            background: #ffe066;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #f1c40f;
+        }
+
+        .movement-reminder strong {
+            color: #e67e22;
+            font-size: 18px;
+        }
+
+        .differentiation {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px dashed #4caf50;
+        }
+
+        .special-note {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="station-card">
+        <div class="station-header">
+            <div class="station-number">STATION 3</div>
+            <div class="station-title">Positionierung</div>
+            <div class="movement-focus">👟 STOPPSCHRITT</div>
+        </div>
+
+        <div class="video-box">
+            🎥 Schau dir das Video an!<br>
+            Das Video zeigt dir die richtige Technik
+        </div>
+
+        <div class="material-section">
+            <div class="section-title">
+                <span class="icon">⚽</span>
+                Material
+            </div>
+            <p><strong>Pro 3er-Team:</strong> 1 Volleyball, Hütchen-Markierungen</p>
+        </div>
+
+        <div class="roles-section">
+            <div class="section-title">
+                <span class="icon">👥</span>
+                Rollen
+            </div>
+            <div class="role-item"><strong>Werfer:</strong> Wirft Ball zur Seite</div>
+            <div class="role-item"><strong>Läufer:</strong> Macht Stoppschritt zum Ball</div>
+            <div class="role-item"><strong>Beobachter:</strong> Kontrolliert Technik</div>
+        </div>
+
+        <div class="exercise-section">
+            <div class="section-title">
+                <span class="icon">🎯</span>
+                Übung
+            </div>
+            <ul class="exercise-steps">
+                <li><strong>1.</strong> Werfer wirft Ball 2 Meter zur Seite</li>
+                <li><strong>2.</strong> Läufer macht schnelle Schritte zum Ball</li>
+                <li><strong>3.</strong> STOPPSCHRITT: Letzter Schritt fest aufsetzen</li>
+                <li><strong>4.</strong> Körper stoppen - Ball mit Unterarmen spielen</li>
+            </ul>
+        </div>
+
+        <div class="movement-reminder">
+            <strong>👟 BEWEGUNGSMERKMAL:</strong><br>
+            STOPPSCHRITT = Letzter Schritt fest, Körper bremsen, Balance halten!
+        </div>
+
+        <div class="special-note">
+            ⚠️ WICHTIG: Erst stoppen, dann Ball spielen!
+        </div>
+
+        <div class="rotation-box">
+            ⏰ 3 Versuche → dann wechseln
+        </div>
+
+        <div class="differentiation">
+            <strong>Anpassungen:</strong><br>
+            • Zu leicht? → Ball weiter weg werfen oder rückwärts laufen<br>
+            • Zu schwer? → Ball näher werfen oder nur gehen statt laufen
+        </div>
+    </div>
+</body>
+</html>

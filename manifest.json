@@ -1,0 +1,190 @@
+{
+  "name": "LAA Unterrichtsmaterialien",
+  "short_name": "LAA Materials",
+  "description": "Innovative Unterrichtsmaterialien für die LAA-Ausbildung mit iPad-Integration und systemtheoretischen Ansätzen",
+  "version": "2.0.0",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2c5282",
+  "orientation": "any",
+  "lang": "de",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "/assets/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-96x96.png", 
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-128x128.png",
+      "sizes": "128x128", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  
+  "categories": [
+    "education",
+    "productivity",
+    "reference"
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Hauptseite mit Fachbereichen"
+    },
+    {
+      "src": "/assets/screenshots/mobile-stations.png", 
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "iPad-Stationskarten für Volleyball"
+    },
+    {
+      "src": "/assets/screenshots/desktop-buv.png",
+      "sizes": "1280x720", 
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "BUV-Dokumentation mit Marc Kunz Standard"
+    }
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "Sport-Materialien",
+      "short_name": "Sport",
+      "description": "iPad-integrierte Volleyball-Stationskarten",
+      "url": "/unterricht/Sport/",
+      "icons": [
+        {
+          "src": "/assets/icons/sport-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Volleyball BUV",
+      "short_name": "Volleyball",
+      "description": "Unteres Zuspiel - Komplette BUV-Ausarbeitung",
+      "url": "/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html",
+      "icons": [
+        {
+          "src": "/assets/icons/volleyball-icon-96x96.png",
+          "sizes": "96x96", 
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Stationskarten",
+      "short_name": "Stationen",
+      "description": "Interaktive iPad-Stationskarten",
+      "url": "/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html",
+      "icons": [
+        {
+          "src": "/assets/icons/station-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "GPG-Arbeitsweisen",
+      "short_name": "GPG",
+      "description": "Systematische Politikdidaktik",
+      "url": "/unterricht/GPG_Arbeitsweisen_LAA_Training/",
+      "icons": [
+        {
+          "src": "/assets/icons/gpg-icon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://paulad.github.io"
+    }
+  ],
+  
+  "prefer_related_applications": false,
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+laa",
+      "url": "/handler/?target=%s"
+    }
+  ],
+  
+  "file_handlers": [
+    {
+      "action": "/generator.html",
+      "accept": {
+        "text/markdown": [".md"],
+        "text/html": [".html"]
+      }
+    }
+  ],
+  
+  "share_target": {
+    "action": "/generator.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

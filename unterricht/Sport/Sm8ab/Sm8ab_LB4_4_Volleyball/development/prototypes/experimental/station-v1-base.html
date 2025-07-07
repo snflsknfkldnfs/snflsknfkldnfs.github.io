@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 5: Wandbaggern</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .station-header {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .station-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .movement-focus {
+            font-size: 1.2em;
+            background: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 0;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .material-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .material-item {
+            background: #FF9800;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .wall-setup {
+            background: #fff3e0;
+            border: 3px solid #FF9800;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .net-simulation {
+            background: #FF9800;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .team-setup {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+        
+        .team-role {
+            background: #fff8e1;
+            border: 2px solid #FF9800;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            margin: 0 5px;
+            text-align: center;
+            font-weight: bold;
+            color: #E65100;
+        }
+        
+        .technique-points {
+            background: #f3e5f5;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .technique-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .technique-item {
+            background: #4CAF50;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .level {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        
+        .level-1 { background: #c8e6c9; color: #2e7d32; }
+        .level-2 { background: #fff9c4; color: #f57f17; }
+        .level-3 { background: #ffcdd2; color: #c62828; }
+        
+        .level-number {
+            background: white;
+            color: #333;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2em;
+            border: 2px solid currentColor;
+        }
+        
+        .distance-indicator {
+            background: rgba(255,255,255,0.8);
+            border: 2px solid #FF9800;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 0 5px;
+            color: #E65100;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .rotation-box {
+            background: #2196F3;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: slide 3s ease-in-out infinite;
+        }
+        
+        @keyframes slide {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .continuous-practice {
+            background: #e8f5e9;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #2e7d32;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            flex: 1;
+            padding: 15px;
+            background: #FF9800;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .nav-button:hover {
+            background: #F57C00;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">⏱️ 6 Minuten</div>
+    
+    <div class="station-header">
+        <h1 class="station-title">🧱 STATION 5</h1>
+        <h2>Wandbaggern mit Netzsimulation</h2>
+        <div class="movement-focus">🎯 FOKUS: ALLE 3 Merkmale kombiniert</div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📦 MATERIAL</h3>
+        <div class="material-list">
+            <div class="material-item">2 Volleybälle</div>
+            <div class="material-item">Kreppband (Wandmarkierung)</div>
+            <div class="material-item">Stirnwand der Halle</div>
+        </div>
+    </div>
+    
+    <div class="wall-setup">
+        <h3 style="color: #E65100;">🏐 WANDBAGGERN-SETUP</h3>
+        <div class="net-simulation">
+            📏 Kreppband-Linie = NETZ-SIMULATION (verschiedene Höhen)
+        </div>
+        <div class="team-setup">
+            <div class="team-role">
+                <strong>BAGGERER A</strong><br>
+                Position 1<br>
+                (parallel)
+            </div>
+            <div class="team-role">
+                <strong>BAGGERER B</strong><br>
+                Position 2<br>
+                (parallel)
+            </div>
+            <div class="team-role">
+                <strong>BALLJUNGE</strong><br>
+                sammelt<br>
+                Fehlbälle
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3>🎯 AUFGABE</h3>
+        <p style="font-size: 1.1em;"><strong>Ball gegen Wand baggern → über Kreppband-"Netz" → zurückprallen lassen</strong></p>
+        
+        <div class="technique-points">
+            <h4 style="color: #9C27B0; text-align: center;">🏐 TECHNIK-PUNKTE</h4>
+            <div class="technique-grid">
+                <div class="technique-item">👟 Stoppschritt</div>
+                <div class="technique-item">🏐 Spielbrett</div>
+                <div class="technique-item">📏 Hüfthöhe</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📊 DIFFERENZIERUNG (Distanz-basiert)</h3>
+        
+        <div class="level level-1">
+            <div class="level-number">1</div>
+            <div>
+                ANFÄNGER: 
+                <span class="distance-indicator">1,5m zur Wand</span>
+                → Kurze Distanz → Ball kontrolliert zurück
+            </div>
+        </div>
+        
+        <div class="level level-2">
+            <div class="level-number">2</div>
+            <div>
+                NORMAL: 
+                <span class="distance-indicator">2,5m zur Wand</span>
+                → Normale Distanz → Ball über Kreppband-Linie
+            </div>
+        </div>
+        
+        <div class="level level-3">
+            <div class="level-number">3</div>
+            <div>
+                PROFI: 
+                <span class="distance-indicator">3,5m zur Wand</span>
+                → Zielgenauigkeit → Ball in bestimmtem Wandbereich
+            </div>
+        </div>
+    </div>
+    
+    <div class="rotation-box">
+        ↻ 3 VERSUCHE → ROLLENWECHSEL
+        <br>Baggerer A → Baggerer B → Balljunge → Baggerer A...
+    </div>
+    
+    <div class="continuous-practice">
+        💪 VORTEIL: Kontinuierliches Baggern ohne Partner-Abhängigkeit!
+        <br>Perfekt für Wiederholung der Bewegung!
+    </div>
+    
+    <div class="content-section">
+        <h3>✅ ERFOLGSKRITERIEN</h3>
+        <ul style="font-size: 1.1em;">
+            <li>🎯 <strong>Netzsimulation:</strong> Ball über Kreppband-Linie</li>
+            <li>🏐 <strong>Alle 3 Merkmale:</strong> Stoppschritt + Spielbrett + Hüfthöhe</li>
+            <li>⚖️ <strong>Kontrolle:</strong> Ball kontrolliert zur Wand</li>
+            <li>🔄 <strong>Kontinuität:</strong> Mehrere Ballkontakte hintereinander</li>
+            <li>🤝 <strong>Teamwork:</strong> Parallel arbeiten + Balljunge hilft</li>
+        </ul>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-button" onclick="alert('Navigation zu Station 4')">← Station 4</button>
+        <button class="nav-button" onclick="alert('Navigation zu Station 6')">Station 6 →</button>
+    </div>
+</body>
+</html>

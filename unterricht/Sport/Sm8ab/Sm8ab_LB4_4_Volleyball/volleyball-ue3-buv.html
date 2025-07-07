@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUV Volleyball UE3 - Unteres Zuspiel (Baggern)</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <meta name="description" content="Besondere Unterrichtsvorbereitung Volleyball: Unteres Zuspiel mit innovativem 6-Stationen-System und iPad-Integration">
+    <meta name="keywords" content="BUV, Volleyball, Unteres Zuspiel, Baggern, Stationstraining, iPad, Mittelschule">
+    <style>
+        .buv-header {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .buv-meta {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #38a169;
+        }
+        
+        .verlaufsplan {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .verlaufsplan table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .verlaufsplan th, .verlaufsplan td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .verlaufsplan th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .verlaufsplan tr:hover {
+            background: var(--bg-secondary);
+        }
+        
+        .phase-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+        }
+        
+        .phase-einstieg { background-color: #3182ce; }
+        .phase-erarbeitung { background-color: #38a169; }
+        .phase-anwendung { background-color: #d69e2e; }
+        .phase-reflexion { background-color: #805ad5; }
+        
+        .competence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .competence-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            border-left: 4px solid #38a169;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .material-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .material-item {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .material-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .innovation-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+        
+        .innovation-highlight h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="buv-header">
+        <div class="container">
+            <h1>🏐 BUV Volleyball UE3: Unteres Zuspiel</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 0;">Innovative 6-Stationen-Methodik mit iPad-Integration</p>
+            <p style="margin-bottom: 0;"><strong>Klasse 8ab (16 SuS)</strong> • <strong>Seminarbezirk SW V</strong> • <strong>Marc Kunz Standard</strong></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Meta-Informationen -->
+        <div class="buv-meta">
+            <div class="grid grid-2">
+                <div>
+                    <h3>📋 Unterrichts-Daten</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>Datum:</strong> 09.07.2025</li>
+                        <li><strong>Stunde:</strong> 1. Stunde (7:55-8:40)</li>
+                        <li><strong>Dauer:</strong> 45 Minuten</li>
+                        <li><strong>Schülerzahl:</strong> 16 SuS (8 männlich, 8 weiblich)</li>
+                        <li><strong>Fach:</strong> Sport</li>
+                        <li><strong>Lernbereich:</strong> LB 4.3 - Spielen und Wetteifern</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>👥 Seminar-Kontext</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>Seminarrektor:</strong> St. Bauer</li>
+                        <li><strong>Seminarbezirk:</strong> SW V (MS)</li>
+                        <li><strong>Seminarjahr:</strong> 2024/25</li>
+                        <li><strong>Seminarist:</strong> Paul Cebulla</li>
+                        <li><strong>Schule:</strong> Auen-Mittelschule Schweinfurt</li>
+                        <li><strong>Status:</strong> <span class="status-badge status-completed">✅ Erfolgreich durchgeführt</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Innovation Highlight -->
+        <div class="innovation-highlight">
+            <h3>🚀 Innovation: iPad-integriertes Stationstraining</h3>
+            <p>Diese UE pioniert die Integration von <strong>HTML-basierten Stationskarten</strong> in den Sportunterricht. Jede der 6 Stationen verfügt über eine <strong>interaktive, differenzierte Lernumgebung</strong>, die über iPads abgerufen wird und <strong>selbstständiges Lernen</strong> in heterogenen Gruppen ermöglicht.</p>
+            <div style="margin-top: 1rem;">
+                <a href="../artifacts/stations/station-01-ring-drill.html" class="btn btn-secondary" target="_blank">🎮 Stationskarten ansehen</a>
+                <a href="../artifacts/presentation/ue03-buv-final.pdf" class="btn btn-secondary" target="_blank">📄 PDF-Version</a>
+            </div>
+        </div>
+
+        <!-- Stundenthema und Ziele -->
+        <section>
+            <h2>🎯 Stundenthema und Lernziele</h2>
+            
+            <div class="card">
+                <h3>Stundenthema</h3>
+                <p style="font-size: 1.1rem; font-weight: 500;">„Wir lernen das untere Zuspiel im Volleyball durch systematisches Stationstraining"</p>
+                
+                <h4>Stundenziel:</h4>
+                <p>Je nach individuellem Leistungsvermögen erlernen die Schüler die Grundtechnik des unteren Zuspiels (Baggern) und wenden diese an, indem sie die Bewegungsmerkmale durch 4-Stationen-Training systematisch üben und in der Gruppenherausforderung "Kreisbaggern" anwenden.</p>
+            </div>
+            
+            <div class="competence-grid">
+                <div class="competence-card">
+                    <h4>TZ1: Stoppschritt-Technik</h4>
+                    <p>...positionieren sich durch Stoppschritt-Technik optimal zum Ball, indem sie bei verschiedenen Übungen bewusst auf die richtige Stellung achten.</p>
+                </div>
+                
+                <div class="competence-card">
+                    <h4>TZ2: Spielbrett-Bildung</h4>
+                    <p>...bilden das "Spielbrett" aus gestreckten, parallelen Unterarmen, indem sie die korrekte Armhaltung des Baggerns in Partnerübungen anwenden.</p>
+                </div>
+                
+                <div class="competence-card">
+                    <h4>TZ3: Ballkontrolle</h4>
+                    <p>...üben die kontrollierte Ballberührung in Hüfthöhe, indem sie den Treffpunkt bei verschiedenen Stationsübungen bewusst beachten.</p>
+                </div>
+                
+                <div class="competence-card">
+                    <h4>TZ4: Kooperative Anwendung</h4>
+                    <p>...wenden das untere Zuspiel in der Gruppenherausforderung "Kreisbaggern" an und kooperieren unter Einhaltung von Regeln und Fairness als Team.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodische Besonderheiten -->
+        <section>
+            <h2>🛠️ Methodische Besonderheiten</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>📱 iPad-Integration</h3>
+                    <ul>
+                        <li><strong>6 HTML-Stationskarten</strong> mit visuellen Anleitungen</li>
+                        <li><strong>QR-Code-Navigation</strong> für schnellen Zugriff</li>
+                        <li><strong>Differenzierte Aufgaben</strong> in 3 Schwierigkeitsstufen</li>
+                        <li><strong>Timer-Integration</strong> für Stationswechsel</li>
+                        <li><strong>Selbstkontrolle</strong> durch Bewegungsmerkmale-Checklisten</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>🎚️ Systematische Differenzierung</h3>
+                    <ul>
+                        <li><strong>Level 1:</strong> Softbälle, kurze Distanzen, statische Übungen</li>
+                        <li><strong>Level 2:</strong> Volleybälle, normale Distanzen, dynamische Elemente</li>
+                        <li><strong>Level 3:</strong> Zusatzaufgaben, Präzisionsziele, Beobachtungsaufträge</li>
+                        <li><strong>Peer-Learning:</strong> Gegenseitige Unterstützung und Feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Verlaufsplan -->
+        <section>
+            <h2>⏱️ Verlaufsplan (45 Minuten)</h2>
+            
+            <div class="verlaufsplan">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 8%;">Zeit</th>
+                            <th style="width: 15%;">Phase</th>
+                            <th style="width: 35%;">Lehrerhandlung</th>
+                            <th style="width: 35%;">Schülerhandlung</th>
+                            <th style="width: 7%;">Sozialform</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3 Min</strong></td>
+                            <td><span class="phase-badge phase-einstieg">Einstieg</span></td>
+                            <td>Begrüßung, Motivation durch Demonstration des unteren Zuspiels mit Wortkarten</td>
+                            <td>Beobachten der Demonstration, identifizieren Bewegungsmerkmale</td>
+                            <td>Plenum</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7 Min</strong></td>
+                            <td><span class="phase-badge phase-einstieg">Erwärmung</span></td>
+                            <td>Leitet allgemeine und spezielle Erwärmung, organisiert Teameinteilung</td>
+                            <td>Laufen mit Variationen, Ball-Transport-Staffel in 6er-Teams</td>
+                            <td>Einzelarbeit → Gruppen</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5 Min</strong></td>
+                            <td><span class="phase-badge phase-erarbeitung">Erarbeitung</span></td>
+                            <td>Stationsbegehung mit Wortkarten, erklärt iPad-Nutzung</td>
+                            <td>Ordnen Bewegungsmerkmale den Stationen zu, verstehen Abläufe</td>
+                            <td>LI → PA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>23 Min</strong></td>
+                            <td><span class="phase-badge phase-anwendung">Stationsbetrieb</span></td>
+                            <td>Begleitet, unterstützt, korrigiert, steuert Wechsel per iPad-Timer</td>
+                            <td>Üben an 6 Stationen mit iPad-Unterstützung, 3x6 Min Rotationen</td>
+                            <td>GA (3er-Teams)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2 Min</strong></td>
+                            <td><span class="phase-badge phase-reflexion">Zwischenreflexion</span></td>
+                            <td>Bewegungsmerkmale-Check mit Wortkarten</td>
+                            <td>Benennen gelungene Merkmale, reflektieren Fortschritte</td>
+                            <td>UGS</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6 Min</strong></td>
+                            <td><span class="phase-badge phase-anwendung">Transfer</span></td>
+                            <td>Organisiert Kreisbaggern und Baggertennis, beobachtet</td>
+                            <td>Wenden Technik in Spielformen an, kooperieren im Team</td>
+                            <td>Großgruppen → Kleinspiel</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3 Min</strong></td>
+                            <td><span class="phase-badge phase-reflexion">Abschluss</span></td>
+                            <td>Lernzuwachs-Verbalisierung, Ausblick auf nächste Stunde</td>
+                            <td>Beschreiben Gelerntes, geben Rückmeldung</td>
+                            <td>Plenum</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Material und Medien -->
+        <section>
+            <h2>📦 Material und Medien</h2>
+            
+            <div class="material-showcase">
+                <div class="material-item">
+                    <h4>🏐 Sportgeräte</h4>
+                    <ul style="text-align: left; font-size: 0.9rem;">
+                        <li>13 Volleybälle</li>
+                        <li>6 Hula-Hoop-Reifen</li>
+                        <li>6 Gymnastikstäbe</li>
+                        <li>1 Kasten</li>
+                        <li>1 Volleyballnetz</li>
+                    </ul>
+                </div>
+                
+                <div class="material-item">
+                    <h4>📱 Digitale Medien</h4>
+                    <ul style="text-align: left; font-size: 0.9rem;">
+                        <li>6 iPads mit Stationskarten</li>
+                        <li>Timer-App mit Musik</li>
+                        <li>QR-Codes für Navigation</li>
+                        <li>Bewegungsvideos</li>
+                    </ul>
+                </div>
+                
+                <div class="material-item">
+                    <h4>🎯 Organisations-Material</h4>
+                    <ul style="text-align: left; font-size: 0.9rem;">
+                        <li>6 Stationsschilder</li>
+                        <li>3 Ballwägen</li>
+                        <li>Kreppband (Markierungen)</li>
+                        <li>Team-Klebestreifen A-F</li>
+                    </ul>
+                </div>
+                
+                <div class="material-item">
+                    <h4>📄 Lernhilfen</h4>
+                    <ul style="text-align: left; font-size: 0.9rem;">
+                        <li><a href="../artifacts/materials/wortkarte-stoppschritt.pdf" target="_blank">Wortkarte Stoppschritt</a></li>
+                        <li><a href="../artifacts/materials/wortkarte-spielbrett.pdf" target="_blank">Wortkarte Spielbrett</a></li>
+                        <li><a href="../artifacts/materials/wortkarte-huefthoehe.pdf" target="_blank">Wortkarte Hüfthöhe</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pädagogische Analyse -->
+        <section>
+            <h2>👥 Lerngruppe und pädagogische Überlegungen</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>📊 Lerngruppen-Charakteristika</h3>
+                    <ul>
+                        <li><strong>Heterogenität:</strong> Ausgeprägte Unterschiede in motorischer Leistungsfähigkeit</li>
+                        <li><strong>Vorerfahrung:</strong> Teilnahme am Volleyball-Pausenturnier als Motivation</li>
+                        <li><strong>Soziale Dynamik:</strong> Grundsätzlich positive Arbeitsatmosphäre</li>
+                        <li><strong>Lernverhalten:</strong> Gewöhnt an Stationentraining, hohe iPad-Affinität</li>
+                        <li><strong>Sprachliche Vielfalt:</strong> Schüler mit Migrationshintergrund profitieren von visuellen Hilfen</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>🎯 Didaktische Konsequenzen</h3>
+                    <ul>
+                        <li><strong>Differenzierung:</strong> 3-Level-System pro Station für alle Leistungsniveaus</li>
+                        <li><strong>Visualisierung:</strong> iPad-Stationskarten mit Bildern und Videos</li>
+                        <li><strong>Peer-Learning:</strong> Partnerarbeit zur gegenseitigen Unterstützung</li>
+                        <li><strong>Kurze Erklärungen:</strong> Fokus auf praktische Demonstration</li>
+                        <li><strong>Positive Verstärkung:</strong> Kontinuierliche Ermutigung und Erfolgs-Feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflexion und Evaluation -->
+        <section>
+            <h2>🔍 Reflexion und Evaluation</h2>
+            
+            <div class="card">
+                <h3>✅ Erfolgs-Indikatoren</h3>
+                <ul>
+                    <li><strong>Hohe Schüleraktivität:</strong> Alle 16 SuS kontinuierlich in Bewegung</li>
+                    <li><strong>Technische Fortschritte:</strong> Sichtbare Verbesserung der Ballkontrolle</li>
+                    <li><strong>iPad-Integration erfolgreich:</strong> Intuitive Nutzung ohne technische Probleme</li>
+                    <li><strong>Differenzierung wirksam:</strong> Alle Leistungsniveaus angemessen gefordert</li>
+                    <li><strong>Kooperatives Lernen:</strong> Gegenseitige Hilfestellung und Feedback</li>
+                    <li><strong>Motivation hoch:</strong> Positive Rückmeldungen zur Stationsarbeit</li>
+                </ul>
+                
+                <h4>🎯 Weiterentwicklung für UE 4:</h4>
+                <p>Aufbauend auf den Erfolg des unteren Zuspiels wird UE 4 die <strong>Kombination von oberem und unterem Zuspiel</strong> thematisieren. Die bewährte iPad-Integration wird fortgesetzt und um <strong>taktische Elemente</strong> erweitert.</p>
+            </div>
+        </section>
+
+        <!-- Navigation zu Stationskarten -->
+        <section style="text-align: center; margin-top: 3rem;">
+            <h2>🎮 Erkunde die interaktiven Stationskarten</h2>
+            <p>Erlebe selbst, wie die iPad-Integration den Sportunterricht revolutioniert!</p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="../artifacts/stations/station-01-ring-drill.html" class="btn btn-primary" target="_blank">🎯 Station 1: Ring-Drill</a>
+                <a href="../artifacts/stations/station-02-hand-eye.html" class="btn btn-primary" target="_blank">🤹 Station 2: Koordination</a>
+                <a href="../artifacts/stations/station-03-positioning.html" class="btn btn-primary" target="_blank">📍 Station 3: Positionierung</a>
+            </div>
+            
+            <div style="margin: 2rem 0;">
+                <a href="../artifacts/stations/station-04-legs-catching.html" class="btn btn-primary" target="_blank">🦵 Station 4: Bein-Fangen</a>
+                <a href="../artifacts/stations/station-05-wall-bagging.html" class="btn btn-primary" target="_blank">🧱 Station 5: Wandbaggern</a>
+                <a href="../artifacts/stations/station-06-wall-bagging-alt.html" class="btn btn-primary" target="_blank">🔄 Station 6: Alternative</a>
+            </div>
+            
+            <div style="margin: 2rem 0;">
+                <a href="../README.md" class="btn btn-secondary">📁 Vollständige Dokumentation</a>
+                <a href="../artifacts/presentation/ue03-buv-final.pdf" class="btn btn-secondary" target="_blank">📄 PDF herunterladen</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>BUV Volleyball UE3 - Unteres Zuspiel</strong> | Entwickelt nach Marc Kunz Standard</p>
+        <p><em>Innovation: iPad-integriertes Stationstraining für heterogene Lerngruppen</em></p>
+        <p><strong>Seminarist:</strong> Paul Cebulla | <strong>Seminarbezirk:</strong> SW V | <strong>Schuljahr:</strong> 2024/25</p>
+    </footer>
+</body>
+</html>

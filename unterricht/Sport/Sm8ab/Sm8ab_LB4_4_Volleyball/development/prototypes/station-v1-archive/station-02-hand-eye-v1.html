@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 2: Hand-Auge-Koordination</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .station-header {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .station-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .movement-focus {
+            font-size: 1.2em;
+            background: #FF9800;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 0;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .material-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .material-item {
+            background: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .technique-demo {
+            background: #e3f2fd;
+            border: 2px solid #2196F3;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .demo-step {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .demo-number {
+            background: #2196F3;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            flex-shrink: 0;
+        }
+        
+        .level {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        
+        .level-1 { background: #c8e6c9; color: #2e7d32; }
+        .level-2 { background: #fff9c4; color: #f57f17; }
+        .level-3 { background: #ffcdd2; color: #c62828; }
+        
+        .level-number {
+            background: white;
+            color: #333;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.1em;
+        }
+        
+        .rotation-box {
+            background: #FF5722;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .safety-note {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #e65100;
+            font-weight: bold;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            flex: 1;
+            padding: 15px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .nav-button:hover {
+            background: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">⏱️ 6 Minuten</div>
+    
+    <div class="station-header">
+        <h1 class="station-title">🎪 STATION 2</h1>
+        <h2>Hand-Auge-Koordination</h2>
+        <div class="movement-focus">🧠 FOKUS: Ballgefühl + Konzentration</div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📦 MATERIAL (pro Person)</h3>
+        <div class="material-list">
+            <div class="material-item">1 Gymnastikstab</div>
+            <div class="material-item">1 Volleyball</div>
+            <div class="material-item">Wandfläche (1m Abstand)</div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3>🎯 AUFGABE</h3>
+        <p><strong>Ball mit Handwechsel an der Stange gegen Wand werfen und fangen</strong></p>
+        
+        <div class="technique-demo">
+            <h4>📋 TECHNIK-SCHRITTE:</h4>
+            <div class="demo-step">
+                <div class="demo-number">1</div>
+                <div><strong>POSITION:</strong> 1m von Wand entfernt, Stange senkrecht halten</div>
+            </div>
+            <div class="demo-step">
+                <div class="demo-number">2</div>
+                <div><strong>START:</strong> Eine Hand hält Stab oben, andere Hand hält Ball</div>
+            </div>
+            <div class="demo-step">
+                <div class="demo-number">3</div>
+                <div><strong>WURF:</strong> Ball gegen Wand, gleichzeitig Hände an Stab wechseln</div>
+            </div>
+            <div class="demo-step">
+                <div class="demo-number">4</div>
+                <div><strong>FANG:</strong> Ball mit gewechselter Hand fangen</div>
+            </div>
+            <div class="demo-step">
+                <div class="demo-number">5</div>
+                <div><strong>WIEDERHOLUNG:</strong> Zurück werfen + wieder Handwechsel</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📈 DIFFERENZIERUNG</h3>
+        <div class="level level-1">
+            <div class="level-number">1</div>
+            <div>ANFÄNGER: Stab still halten → Ball nur werfen und fangen → KEIN Handwechsel</div>
+        </div>
+        <div class="level level-2">
+            <div class="level-number">2</div>
+            <div>NORMAL: Langsamer Handwechsel → Ball sanft gegen Wand → 10 Wiederholungen</div>
+        </div>
+        <div class="level level-3">
+            <div class="level-number">3</div>
+            <div>PROFI: Schneller Rhythmus → 30 Sekunden ohne Unterbrechung → Stab balancieren</div>
+        </div>
+    </div>
+    
+    <div class="rotation-box">
+        ↻ 3 VERSUCHE (je 30 Sek) → ROLLENWECHSEL
+        <br>Person A → Person B → Person C → Person A...
+    </div>
+    
+    <div class="safety-note">
+        ⚠️ SICHERHEIT: Sicherheitsabstand zu anderen! Stab kontrolliert halten!
+    </div>
+    
+    <div class="content-section">
+        <h3>✅ ERFOLGSKRITERIEN</h3>
+        <ul>
+            <li>🎯 <strong>Koordination:</strong> Hand-Auge-Zusammenspiel</li>
+            <li>⚖️ <strong>Kontrolle:</strong> Stab bleibt stabil</li>
+            <li>🎪 <strong>Rhythmus:</strong> Gleichmäßiger Wechsel</li>
+            <li>🧠 <strong>Konzentration:</strong> Fokus auf Aufgabe</li>
+        </ul>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-button" onclick="alert('Navigation zu Station 1')">← Station 1</button>
+        <button class="nav-button" onclick="alert('Navigation zu Station 3')">Station 3 →</button>
+    </div>
+</body>
+</html>

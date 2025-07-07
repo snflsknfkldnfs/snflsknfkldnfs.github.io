@@ -6,80 +6,22 @@
       {
         "id": "5efc95c3a28a5a39",
         "type": "tabs",
-        "dimension": 46.71641791044776,
         "children": [
           {
-            "id": "55687b8810fa48cb",
+            "id": "6994df80d284a5cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_transitions/active_sessions/transition_optimization_session_2/session_3_to_4_transition_buv_optimierung.md",
+                "file": "notizen/meta_prozesse/NAVIGATION_STANDARDS_INTEGRATION_V2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "session_3_to_4_transition_buv_optimierung"
-            }
-          },
-          {
-            "id": "4362a7fb4f67fc24",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/BUV_Volleyball_UE3_Unteres_Zuspiel_VOLLAUSARBEITUNG.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "BUV_Volleyball_UE3_Unteres_Zuspiel_VOLLAUSARBEITUNG"
+              "title": "NAVIGATION_STANDARDS_INTEGRATION_V2"
             }
           }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "84c7b356712b6ce6",
-        "type": "split",
-        "dimension": 53.28358208955224,
-        "children": [
-          {
-            "id": "107713a343b2ce3d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "aedf712a5f506bfe",
-                "type": "leaf",
-                "state": {
-                  "type": "empty",
-                  "state": {},
-                  "icon": "lucide-file",
-                  "title": "New tab"
-                }
-              }
-            ]
-          },
-          {
-            "id": "4affd99074545626",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "5c4306ee42f1f67a",
-                "type": "leaf",
-                "state": {
-                  "type": "image",
-                  "state": {
-                    "file": "unterricht/WiB5b_Technik_Sequenz/02_Materialien_Miro/02_Forschungsbogen.png"
-                  },
-                  "icon": "lucide-image",
-                  "title": "02_Forschungsbogen"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -136,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 440.50312423706055
+    "width": 537.5031242370605
   },
   "right": {
     "id": "a198139a98d2334a",
@@ -227,53 +169,53 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "4362a7fb4f67fc24",
+  "active": "6994df80d284a5cb",
   "lastOpenFiles": [
-    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/BUV_Volleyball_UE3_MarcKunz_Standard.md",
-    "_transitions/active_sessions/transition_optimization_session_2/session_3_to_4_transition_buv_optimierung.md",
-    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/BUV_Volleyball_UE3_Unteres_Zuspiel_VOLLAUSARBEITUNG.md",
-    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/html-modules/beobachtungsbogen_objekterkundung.html",
-    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/chat_transitions/session_1_status_sport.md",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/Sm8ab_LB4_3_Volleyball_Literatur/1384192841_Literaturliste PDF.pdf",
-    "_transitions/standards/meta_kognitive_integration_validierung.md",
-    "_transitions/standards/intelligente_user_prompt_templates.md",
-    "_transitions/standards/meta_kognitives_betriebssystem.md",
-    "_transitions/learning/orientierungstest_erkenntnisse_pata3.md",
-    "_transitions/standards/orientierung_v3_implementation_framework.md",
-    "_transitions/standards/unterricht_orientierung_selbstlernend_v3.md",
-    "_transitions/active_sessions/transition_optimization_session_2/session_3_to_4_transition_makro_meso_mikro.md",
-    "_transitions/active_sessions/transition_optimization_session_2/zwischensicherung_11_30.md",
-    "_transitions/active_sessions/transition_optimization_session_2/critical_learning_navigation_fehler.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.40.12.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.40.02.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.33.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.50.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.26.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.22.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.12.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.16.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.07.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/html_modules/html-modules screenshots/Bildschirmfoto 2025-06-21 um 20.39.02.png",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte_2.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte 5.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte_3.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte 4.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_2_5_Volksversammlung_Piratenproblem/Drucken/Rollenkarten/Rollenkarte 1.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Antikes_Griechenland_Steckbrief/Material Buch/KGEOG_AB_g-003813-l.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Antikes_Griechenland_Steckbrief/Material Buch/KGEOG_AB_g-003812-l.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Antikes_Griechenland_Steckbrief/Material Buch/KGEOG_AB_g-003813-a.pdf",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Polis_und_Gesellschaft/Materialien/Laufzettel_Stationenlernen.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Antikes_Griechenland_Steckbrief/_Index_of_GPG5b_LB4_2_Antikes Griechenland.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/VERLAUFSPLAN_V2_Haendler_Fokus.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/_Index_BUV_Materialien.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/Rollenkarten_Volksversammlung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/QUICK_START_BUV.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/Miro_Boards_Praktische_Umsetzung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/GPG5b_Volksversammlung_BUV_TUV.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/Durchfuehrungsskript_BUV_minutengenau.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/INNOVATION_Zusammenfassung.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/BUV_V3_0_Haendler_Demokratie_FINAL.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/BUV_V4_0_SCHWERPUNKTSTUNDE_FINAL.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_Antikes Griechenland_Entwürfe/GPG5b_LB4_Volksversammlung_BUV/BUV_mit_Miro_Rotation.md"
+    "ACADEMIC/INDEX.md",
+    "ACADEMIC",
+    "CONTINGENCY_AWARE_OPTIMIZATION.md",
+    "REPOSITORY_RESTRUCTURING_PLAN.md",
+    "notizen/meta_prozesse/IMMEDIATE_UNIVERSAL_IMPLEMENTATION_V1.md",
+    "notizen/meta_prozesse/GPG/PROJECT_ROUTING_SYSTEM.md",
+    "infrastructure.md",
+    "_layouts/infrastructure.html",
+    "notizen/meta_prozesse/SYSTEM_RELIABILITY_STANDARDIZATION_V1.md",
+    "notizen/meta_prozesse/SESSION_TRANSITION_CONTEXT_V1.md",
+    "notizen/meta_prozesse/UNIVERSAL_INFRASTRUCTURE_PRINCIPLES_V1.md",
+    "notizen/meta_prozesse/NAVIGATION_STANDARDS_INTEGRATION_V2.md",
+    "notizen/meta_prozesse/RELIABILITY_VALIDATION_SYSTEM_V2.md",
+    "notizen/meta_prozesse/SEMANTIC_NAVIGATION_LAYER_V2.md",
+    "notizen/meta_prozesse/CONTEXT_AWARE_INDEXING_SYSTEM_V2.md",
+    "notizen/meta_prozesse/PDF_Auto_Extraktion_Standard.md",
+    "scripts/extract_pdf_content.py",
+    "notizen/meta_prozesse/GPG/CLAUDE_DESKTOP_PROJECT_INSTRUCTION_GENERATOR.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/docs/ue03-unteres-zuspiel-buv.md",
+    "sw.js",
+    "_includes/meta-tags.html",
+    "manifest.json",
+    "404.html",
+    "_config.yml",
+    "README-web.md",
+    "robots.txt",
+    "sitemap.xml",
+    "unterricht/Sport/Sm8ab/Sm8ab_Jahresplan_202425.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/README.md",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/html-Artefakte/html-artefakte-screenshots/Station2_v2.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/BUV_FINALE_Ausarbeitung_Silas_Standard_v7.0.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/meta/chat-transitions/session-09-to-10-post-migration.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/meta/process-documentation/repository-cleanup-learnings.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/development/drafts/buv-ue3-first-version.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/meta/chat-transitions/session-08-to-09-repository-cleanup.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/meta/chat-transitions/session-01-to-02-prompt-sport.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/meta/chat-transitions/session-01-status-sport.md",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/html-Artefakte/html-artefakte-screenshots/Station2_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/html-Artefakte/html-artefakte-screenshots/Statioon4_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/html-Artefakte/html-artefakte-screenshots/Station5_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/html-Artefakte/html-artefakte-screenshots/Station3_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/html-Artefakte/html-artefakte-screenshots/Station1_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/html-Artefakte/html-artefakte-screenshots/Station 1: Ring-Drill_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/html-Artefakte/html-artefakte-screenshots/Station5_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/html-Artefakte/html-artefakte-screenshots/Statioon4_v2.png",
+    "unterricht/Sport/BUV_Volleyball_8_Klasse_16SuS/html-Artefakte/html-artefakte-screenshots/Station 1: Ring-Drill_v2.png"
   ]
 }

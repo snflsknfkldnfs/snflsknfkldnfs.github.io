@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 4: Ball-Beinen-fangen</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #9C27B0 0%, #673AB7 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .station-header {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .station-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .movement-focus {
+            font-size: 1.2em;
+            background: #FF5722;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 0;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .content-section {
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .material-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .material-item {
+            background: #AB47BC;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .simulation-box {
+            background: #f3e5f5;
+            border: 3px solid #9C27B0;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .simulation-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #9C27B0;
+            margin-bottom: 15px;
+        }
+        
+        .simulation-steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .sim-step {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #9C27B0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .level {
+            margin: 15px 0;
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 6px solid;
+            position: relative;
+        }
+        
+        .level-1 { 
+            background: #e8f5e9; 
+            border-left-color: #4caf50;
+            color: #2e7d32;
+        }
+        .level-2 { 
+            background: #fff3e0; 
+            border-left-color: #ff9800;
+            color: #e65100;
+        }
+        .level-3 { 
+            background: #fce4ec; 
+            border-left-color: #e91e63;
+            color: #ad1457;
+        }
+        .level-4 { 
+            background: #f3e5f5; 
+            border-left-color: #9c27b0;
+            color: #6a1b9a;
+        }
+        
+        .level-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .level-number {
+            background: white;
+            color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: 3px solid currentColor;
+        }
+        
+        .level-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .level-details {
+            margin-left: 55px;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+        
+        .body-position {
+            background: #e1bee7;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            border: 2px solid #9C27B0;
+        }
+        
+        .position-points {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        
+        .position-point {
+            background: #9C27B0;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            flex: 1;
+            margin: 0 5px;
+            font-size: 0.9em;
+        }
+        
+        .rotation-box {
+            background: #E91E63;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-button {
+            flex: 1;
+            padding: 15px;
+            background: #9C27B0;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .nav-button:hover {
+            background: #8E24AA;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">⏱️ 6 Minuten</div>
+    
+    <div class="station-header">
+        <h1 class="station-title">🦵 STATION 4</h1>
+        <h2>Ball-Beinen-fangen + Simulation</h2>
+        <div class="movement-focus">📏 FOKUS: HÜFTHÖHE + Bagger-Haltung</div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📦 MATERIAL</h3>
+        <div class="material-list">
+            <div class="material-item">1 Kasten</div>
+            <div class="material-item">2 Volleybälle</div>
+            <div class="material-item">1 Ring (optional)</div>
+            <div class="material-item">Volleyballnetz</div>
+        </div>
+    </div>
+    
+    <div class="simulation-box">
+        <div class="simulation-title">🎭 SIMULATION: Bagger-Haltung trainieren</div>
+        <p style="color: #333; font-size: 1.1em;">Ball zwischen Beinen "einklemmen" statt echtes Baggern</p>
+        <div class="simulation-steps">
+            <div class="sim-step">1. Ball zuwerfen</div>
+            <div class="sim-step">2. Stoppschritt</div>
+            <div class="sim-step">3. Bagger-Haltung</div>
+            <div class="sim-step">4. Ball "fangen"</div>
+        </div>
+    </div>
+    
+    <div class="body-position">
+        <h4 style="color: #9C27B0; margin-top: 0;">🏐 RICHTIGE KÖRPERHALTUNG</h4>
+        <div class="position-points">
+            <div class="position-point">Knie gebeugt</div>
+            <div class="position-point">Arme gestreckt</div>
+            <div class="position-point">Ball in Hüfthöhe</div>
+            <div class="position-point">Stoppschritt</div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h3>📊 DIFFERENZIERUNG</h3>
+        
+        <div class="level level-1">
+            <div class="level-header">
+                <div class="level-number">1</div>
+                <div class="level-title">BASIS: Ball fangen + Simulation</div>
+            </div>
+            <div class="level-details">
+                Partner wirft sanft → Ball zwischen Beinen fangen → Bagger-Haltung üben
+            </div>
+        </div>
+        
+        <div class="level level-2">
+            <div class="level-header">
+                <div class="level-number">2</div>
+                <div class="level-title">PLUS: Ring als Zusatz-Ziel</div>
+            </div>
+            <div class="level-details">
+                Wie Level 1 + Ring halten → Ball durch Ring "fangen" → Präzision erhöhen
+            </div>
+        </div>
+        
+        <div class="level level-3">
+            <div class="level-header">
+                <div class="level-number">3</div>
+                <div class="level-title">PROFI: Simulierte Annahme-Situation</div>
+            </div>
+            <div class="level-details">
+                Ring + verschiedene Ballhöhen → realistische Positionierung → Bewegung mit Ring
+            </div>
+        </div>
+        
+        <div class="level level-4">
+            <div class="level-header">
+                <div class="level-number">4</div>
+                <div class="level-title">EXPERTE: Erste echte Bagger-Versuche</div>
+            </div>
+            <div class="level-details">
+                Nur wenn Gruppe bereit! → Echtes Baggern statt nur Simulation
+            </div>
+        </div>
+    </div>
+    
+    <div class="rotation-box">
+        ↻ 3 VERSUCHE → ROLLENWECHSEL
+        <br>Werfer → "Fänger" → Beobachter → Werfer...
+    </div>
+    
+    <div class="content-section">
+        <h3>✅ LERNZIELE</h3>
+        <ul style="font-size: 1.1em;">
+            <li>📏 <strong>HÜFTHÖHE:</strong> Ball auf richtiger Körperhöhe "fangen"</li>
+            <li>🏐 <strong>SPIELBRETT:</strong> Unterarme gestreckt und parallel</li>
+            <li>👟 <strong>STELLUNG:</strong> Stoppschritt vor Ball-Kontakt</li>
+            <li>🎭 <strong>SIMULATION:</strong> Bagger-Bewegung ohne echte Ballberührung</li>
+            <li>⚖️ <strong>KONTROLLE:</strong> Ruhige, bewusste Bewegung</li>
+        </ul>
+    </div>
+    
+    <div class="navigation">
+        <button class="nav-button" onclick="alert('Navigation zu Station 3')">← Station 3</button>
+        <button class="nav-button" onclick="alert('Navigation zu Station 5')">Station 5 →</button>
+    </div>
+</body>
+</html>

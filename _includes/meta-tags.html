@@ -1,0 +1,205 @@
+<!-- Enhanced Meta Tags Template -->
+<!-- Insert this into the <head> section of all HTML pages -->
+
+<!-- Basic Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Primary Meta Tags (customize per page) -->
+<title>{{ page.title | default: "LAA Unterrichtsmaterialien - Innovative Bildungsressourcen" }}</title>
+<meta name="title" content="{{ page.title | default: "LAA Unterrichtsmaterialien" }}">
+<meta name="description" content="{{ page.description | default: "Innovative Unterrichtsmaterialien für die LAA-Ausbildung mit iPad-Integration, systemtheoretischen Ansätzen und PATA-Standards. Featured: Volleyball BUV mit interaktiven Stationskarten." }}">
+<meta name="keywords" content="{{ page.keywords | default: "LAA, Unterrichtsmaterialien, iPad-Integration, BUV, Volleyball, Stationskarten, DiSoAn, Systemtheorie, Marc Kunz Standard, Referendariat, Seminarleiter" }}">
+<meta name="author" content="LAA-System">
+<meta name="robots" content="index, follow">
+<meta name="language" content="de">
+<meta name="revisit-after" content="7 days">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ page.og_type | default: "website" }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ page.title | default: "LAA Unterrichtsmaterialien - Innovative Bildungsressourcen" }}">
+<meta property="og:description" content="{{ page.description | default: "Innovative Unterrichtsmaterialien für LAA-Ausbildung mit iPad-Integration. Featured: Volleyball BUV mit 6 interaktiven Stationskarten nach Marc Kunz Standard." }}">
+<meta property="og:image" content="{{ site.url }}/assets/images/og-image-volleyball.jpg">
+<meta property="og:image:alt" content="{{ page.image_alt | default: "LAA Unterrichtsmaterialien - iPad-Stationskarten für Volleyball" }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="LAA Unterrichtsmaterialien">
+<meta property="og:locale" content="de_DE">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:title" content="{{ page.title | default: "LAA Unterrichtsmaterialien" }}">
+<meta name="twitter:description" content="{{ page.description | default: "Innovative iPad-integrierte Unterrichtsmaterialien für LAA-Ausbildung" }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/twitter-card-volleyball.jpg">
+<meta name="twitter:image:alt" content="{{ page.image_alt | default: "Volleyball Stationskarten für iPad" }}">
+<meta name="twitter:site" content="@laa_education">
+<meta name="twitter:creator" content="@laa_education">
+
+<!-- LinkedIn -->
+<meta property="og:image:type" content="image/jpeg">
+<meta name="linkedin:owner" content="LAA Bildungssystem">
+
+<!-- WhatsApp -->
+<meta property="og:image:secure_url" content="{{ site.url }}/assets/images/og-image-volleyball.jpg">
+
+<!-- Education-specific Meta Tags -->
+<meta name="educational-audience" content="teachers, teacher-trainers, student-teachers">
+<meta name="educational-level" content="secondary-education">
+<meta name="educational-subject" content="{{ page.subject | default: "sports, civics, methodology" }}">
+<meta name="educational-type" content="lesson-plan, teaching-material, interactive-content">
+
+<!-- Progressive Web App -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2c5282">
+<meta name="background-color" content="#ffffff">
+<meta name="display" content="standalone">
+<meta name="orientation" content="any">
+
+<!-- Apple Touch Icons -->
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+
+<!-- Standard Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+
+<!-- Microsoft Tiles -->
+<meta name="msapplication-TileColor" content="#2c5282">
+<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+<meta name="msapplication-config" content="/browserconfig.xml">
+
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="LAA Materials">
+
+<!-- Android Chrome -->
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- Security Headers -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.github.com;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ page.schema_type | default: "WebSite" }}",
+  "name": "{{ page.title | default: "LAA Unterrichtsmaterialien" }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "description": "{{ page.description | default: "Innovative Unterrichtsmaterialien für LAA-Ausbildung" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "LAA-System",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Organization", 
+    "name": "LAA Bildungssystem",
+    "url": "{{ site.url }}"
+  },
+  {% if page.subject %}
+  "about": {
+    "@type": "Course",
+    "name": "{{ page.subject }}",
+    "description": "{{ page.course_description | default: "Unterrichtsmaterialien für " | append: page.subject }}"
+  },
+  {% endif %}
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "teacher, student-teacher, teacher-trainer"
+  },
+  "educationalLevel": "SecondaryEducation",
+  "inLanguage": "de-DE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "lesson plan, teaching material, interactive content",
+  "teaches": "{{ page.teaches | default: "iPad-Integration, systematische Unterrichtsplanung, innovative Sportdidaktik" }}"
+}
+</script>
+
+<!-- Page-specific Structured Data for Sports Content -->
+{% if page.subject == "Sport" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Volleyball BUV - Unteres Zuspiel mit iPad-Integration",
+  "description": "Innovative 6-Stationen-Methodik für Volleyball mit HTML-basierten iPad-Stationskarten",
+  "educationalLevel": "Grade 8",
+  "teaches": ["Volleyball Grundtechniken", "iPad-Integration im Sportunterricht", "Differenzierte Stationsarbeit"],
+  "learningResourceType": "lesson plan",
+  "interactivityType": "active",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "teacher"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "LAA-System",
+    "affiliation": "Seminarbezirk SW V"
+  },
+  "educationalUse": "instruction",
+  "typicalAgeRange": "13-14",
+  "timeRequired": "PT45M",
+  "hasPart": [
+    {
+      "@type": "LearningResource",
+      "name": "Station 1: Ring-Drill",
+      "url": "{{ site.url }}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html"
+    },
+    {
+      "@type": "LearningResource", 
+      "name": "Station 2: Hand-Auge-Koordination",
+      "url": "{{ site.url }}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-02-hand-eye.html"
+    }
+  ]
+}
+</script>
+{% endif %}
+
+<!-- Performance and Preloading -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//api.github.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Critical CSS inline (for performance) -->
+<style>
+/* Critical Above-the-fold CSS */
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;margin:0;padding:0}
+.main-nav{background:linear-gradient(135deg,#2c5282,#3182ce);padding:1rem 0;margin-bottom:2rem}
+.nav-container{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 20px}
+.nav-brand{font-size:1.5rem;font-weight:700;color:white}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+h1{font-size:2.5rem;color:#2c5282;text-align:center;margin-bottom:1.5em}
+</style>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="LAA Unterrichtsmaterialien Feed" href="{{ site.url }}/feed.xml">
+
+<!-- Analytics (placeholder for future implementation) -->
+{% if site.google_analytics %}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+{% endif %}

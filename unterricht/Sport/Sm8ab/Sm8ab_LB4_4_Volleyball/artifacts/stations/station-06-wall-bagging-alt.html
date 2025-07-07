@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 6: Bagger-Tennis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .station-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .station-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .station-number {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .station-title {
+            font-size: 32px;
+            color: #333;
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        .exercise-section {
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "🏐";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .exercise-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .key-points {
+            background: rgba(118, 75, 162, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .key-points h3 {
+            color: #764ba2;
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .key-points ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .key-points li {
+            margin-bottom: 8px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .difficulty-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .level-card {
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid;
+            background: rgba(255,255,255,0.8);
+        }
+        
+        .level-easy {
+            border-color: #4CAF50;
+            background: rgba(76, 175, 80, 0.1);
+        }
+        
+        .level-medium {
+            border-color: #FF9800;
+            background: rgba(255, 152, 0, 0.1);
+        }
+        
+        .level-hard {
+            border-color: #F44336;
+            background: rgba(244, 67, 54, 0.1);
+        }
+        
+        .level-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .level-easy .level-title {
+            color: #4CAF50;
+        }
+        
+        .level-medium .level-title {
+            color: #FF9800;
+        }
+        
+        .level-hard .level-title {
+            color: #F44336;
+        }
+        
+        .timer-section {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .timer-text {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .safety-note {
+            background: rgba(244, 67, 54, 0.1);
+            border: 2px solid #F44336;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .safety-note h3 {
+            color: #F44336;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .safety-note h3::before {
+            content: "⚠️";
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .station-card {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .station-title {
+                font-size: 24px;
+            }
+            
+            .timer-text {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="station-card">
+        <div class="station-header">
+            <div class="station-number">Station 6</div>
+            <h1 class="station-title">Bagger-Tennis</h1>
+        </div>
+        
+        <div class="timer-section">
+            <p class="timer-text">⏱️ Zeit: 3 Minuten</p>
+        </div>
+        
+        <div class="exercise-section">
+            <h2 class="section-title">Übungsablauf</h2>
+            <div class="exercise-description">
+                Spielt Bagger-Tennis über das Netz! Ein Spieler auf jeder Seite versucht, den Ball nur mit Baggern über das Netz zu spielen. Der Ball darf einmal auf dem Boden aufkommen, bevor er zurückgespielt wird.
+            </div>
+        </div>
+        
+        <div class="key-points">
+            <h3>🎯 Wichtige Technikelemente</h3>
+            <ul>
+                <li><strong>Grundstellung:</strong> Knie gebeugt, Oberkörper leicht nach vorn</li>
+                <li><strong>Armhaltung:</strong> Arme gestreckt, Hände zusammen, flache Anspielstelle</li>
+                <li><strong>Ballkontakt:</strong> Mit den Unterarmen, nicht mit den Händen</li>
+                <li><strong>Körpereinsatz:</strong> Aus den Beinen heraus arbeiten</li>
+                <li><strong>Zielbewusstsein:</strong> Kontrollierten Bagger über das Netz spielen</li>
+            </ul>
+        </div>
+        
+        <div class="difficulty-levels">
+            <div class="level-card level-easy">
+                <div class="level-title">🟢 Einfach</div>
+                <p>Niedriges Netz (2m Höhe), kurze Distanz, Ball darf 2x aufkommen</p>
+            </div>
+            
+            <div class="level-card level-medium">
+                <div class="level-title">🟡 Standard</div>
+                <p>Normale Netzhöhe, Ball darf 1x aufkommen, präzise Bagger</p>
+            </div>
+            
+            <div class="level-card level-hard">
+                <div class="level-title">🔴 Schwer</div>
+                <p>Direkte Bagger ohne Bodenberührung, Zielbereiche markieren</p>
+            </div>
+        </div>
+        
+        <div class="safety-note">
+            <h3>Sicherheitshinweise</h3>
+            <ul>
+                <li>Ausreichend Abstand zu anderen Stationen halten</li>
+                <li>Bei Netzberührung sofort Spiel unterbrechen</li>
+                <li>Aufmerksam auf heranrollende Bälle von anderen Stationen achten</li>
+                <li>Bei Schmerzen in Handgelenken sofort eine Pause einlegen</li>
+            </ul>
+        </div>
+        
+        <div class="exercise-section">
+            <h2 class="section-title">🏆 Ziele der Übung</h2>
+            <div class="exercise-description">
+                Diese Übung verbindet die Bagger-Technik mit spielerischen Elementen. Ihr entwickelt dabei nicht nur eure Technik weiter, sondern auch das Gefühl für Distanz und Kraftdosierung beim Baggern über das Netz.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

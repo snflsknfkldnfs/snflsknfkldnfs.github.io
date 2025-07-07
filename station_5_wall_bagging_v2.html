@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 5: Wandbaggern</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .station-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 4px solid #a8edea;
+        }
+
+        .station-header {
+            text-align: center;
+            margin-bottom: 25px;
+            background: linear-gradient(90deg, #a8edea, #fed6e3);
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            margin: -30px -30px 25px -30px;
+        }
+
+        .station-number {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .station-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .movement-focus {
+            background: rgba(255,255,255,0.3);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .video-box {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .material-section, .roles-section, .exercise-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #a8edea;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .role-item {
+            background: white;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b6b;
+            font-weight: 500;
+        }
+
+        .exercise-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercise-steps li {
+            background: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #a8edea;
+            font-size: 16px;
+        }
+
+        .rotation-box {
+            background: #a8edea;
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .movement-reminder {
+            background: #ffe066;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 3px solid #f1c40f;
+        }
+
+        .movement-reminder strong {
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .all-three {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .differentiation {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px dashed #4caf50;
+        }
+
+        .continuous-note {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="station-card">
+        <div class="station-header">
+            <div class="station-number">STATION 5</div>
+            <div class="station-title">Wandbaggern</div>
+            <div class="movement-focus">🎯 ALLE 3 Merkmale</div>
+        </div>
+
+        <div class="video-box">
+            🎥 Schau dir das Video an!<br>
+            Das Video zeigt dir die komplette Bewegungskette
+        </div>
+
+        <div class="material-section">
+            <div class="section-title">
+                <span class="icon">⚽</span>
+                Material
+            </div>
+            <p><strong>Pro 3er-Team:</strong> 1 Volleyball, Kreppband an Wand</p>
+        </div>
+
+        <div class="roles-section">
+            <div class="section-title">
+                <span class="icon">👥</span>
+                Rollen
+            </div>
+            <div class="role-item"><strong>Baggerer A:</strong> Spielt gegen Wand</div>
+            <div class="role-item"><strong>Baggerer B:</strong> Wartet auf Wechsel</div>
+            <div class="role-item"><strong>Balljunge:</strong> Holt entlaufene Bälle</div>
+        </div>
+
+        <div class="exercise-section">
+            <div class="section-title">
+                <span class="icon">🎯</span>
+                Übung
+            </div>
+            <ul class="exercise-steps">
+                <li><strong>1.</strong> Ball gegen Wand über Kreppband-Linie</li>
+                <li><strong>2.</strong> Ball prallt zurück - Stoppschritt machen</li>
+                <li><strong>3.</strong> Ball in Hüfthöhe mit Spielbrett fangen</li>
+                <li><strong>4.</strong> Wieder gegen Wand - kontinuierlich weitermachen</li>
+            </ul>
+        </div>
+
+        <div class="all-three">
+            🎯 ALLE 3 BEWEGUNGSMERKMALE:<br>
+            👟 STOPPSCHRITT + 🏐 SPIELBRETT + 📏 HÜFTHÖHE
+        </div>
+
+        <div class="continuous-note">
+            🔄 BESONDERHEIT: Kontinuierliches Training - bis Musikwechsel!
+        </div>
+
+        <div class="rotation-box">
+            ⏰ Bis Musikwechsel → dann Person wechseln
+        </div>
+
+        <div class="differentiation">
+            <strong>Anpassungen:</strong><br>
+            • Zu leicht? → Weiter von der Wand weg oder fester werfen<br>
+            • Zu schwer? → Näher an die Wand oder nur einmal gegen Wand
+        </div>
+    </div>
+</body>
+</html>

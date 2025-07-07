@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Seite nicht gefunden | LAA Unterrichtsmaterialien</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="Diese Seite konnte nicht gefunden werden. Navigiere zu unseren Unterrichtsmaterialien für Sport, GPG und methodischen Ressourcen.">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 4rem 2rem;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .error-message {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .search-suggestions {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: left;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .quick-link-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .quick-link-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+        
+        .quick-link-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .quick-link-card p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-message {
+                font-size: 1.2rem;
+            }
+            
+            .quick-links {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/" style="color: white; text-decoration: none;">LAA Unterrichtsmaterialien</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">🏠 Startseite</a></li>
+                <li><a href="/unterricht/Sport/">🏃‍♂️ Sport</a></li>
+                <li><a href="/unterricht/GPG_Arbeitsweisen_LAA_Training/">🏛️ GPG</a></li>
+                <li><a href="/#tools">🛠️ Tools</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <div class="error-message">
+                Oops! Die gesuchte Seite konnte nicht gefunden werden.
+            </div>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                Möglicherweise wurde die URL falsch eingegeben oder die Seite wurde verschoben.
+            </p>
+
+            <!-- Suchvorschläge -->
+            <div class="search-suggestions">
+                <h3>💡 Häufig gesuchte Inhalte:</h3>
+                <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                    <li style="margin: 0.5rem 0;">🎮 <a href="/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html">iPad-Stationskarten für Volleyball</a></li>
+                    <li style="margin: 0.5rem 0;">📋 <a href="/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html">BUV Volleyball - Unteres Zuspiel</a></li>
+                    <li style="margin: 0.5rem 0;">🏛️ <a href="/unterricht/GPG_Arbeitsweisen_LAA_Training/fallanalyse-schweinfurt.html">GPG Fallanalyse Schweinfurt</a></li>
+                    <li style="margin: 0.5rem 0;">🧠 <a href="/notizen/methodik/arbeitsweisen/sozialwissenschaftliche_perspektive/">Systemtheoretische Methodik</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <a href="/" class="quick-link-card">
+                    <h3>🏠 Startseite</h3>
+                    <p>Zurück zur Hauptübersicht aller Unterrichtsmaterialien</p>
+                </a>
+                
+                <a href="/unterricht/Sport/" class="quick-link-card">
+                    <h3>🏃‍♂️ Sport-Materialien</h3>
+                    <p>iPad-integrierte Stationskarten und BUV-Dokumentationen</p>
+                </a>
+                
+                <a href="/unterricht/GPG_Arbeitsweisen_LAA_Training/" class="quick-link-card">
+                    <h3>🏛️ GPG-Arbeitsweisen</h3>
+                    <p>Systematische Politikdidaktik mit systemtheoretischen Ansätzen</p>
+                </a>
+                
+                <a href="/generator.html" class="quick-link-card">
+                    <h3>⚙️ Materialien-Generator</h3>
+                    <p>Erstelle neue Unterrichtsmaterialien mit standardisierten Templates</p>
+                </a>
+                
+                <a href="/reflexion.html" class="quick-link-card">
+                    <h3>🔍 Reflexionstool</h3>
+                    <p>Dokumentiere und analysiere deinen Unterricht systematisch</p>
+                </a>
+                
+                <a href="/notizen/best_practices/" class="quick-link-card">
+                    <h3>✨ Best Practices</h3>
+                    <p>Erprobte Methoden und bewährte Planungsansätze</p>
+                </a>
+            </div>
+
+            <!-- Hilfe-Bereich -->
+            <div class="instructions" style="max-width: 800px; margin-top: 2rem;">
+                <h3>🤔 Brauchst du Hilfe?</h3>
+                <p>Falls du eine bestimmte Unterrichtseinheit oder ein Material suchst:</p>
+                <ul>
+                    <li><strong>Sport:</strong> Alle Volleyball-Materialien findest du unter <code>/unterricht/Sport/</code></li>
+                    <li><strong>GPG:</strong> Arbeitsweisen und Fallanalysen unter <code>/unterricht/GPG_Arbeitsweisen_LAA_Training/</code></li>
+                    <li><strong>Stationskarten:</strong> Direkte Links zu allen iPad-Stationskarten auf der Sport-Übersichtsseite</li>
+                    <li><strong>Tools:</strong> Generator und Reflexionstools über die Hauptnavigation erreichbar</li>
+                </ul>
+            </div>
+
+            <!-- Back Button -->
+            <div style="margin-top: 3rem;">
+                <a href="/" class="btn btn-primary">🏠 Zur Startseite</a>
+                <button onclick="history.back()" class="btn btn-secondary" style="margin-left: 1rem;">← Zurück</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>404 - Seite nicht gefunden</strong> | LAA Unterrichtsmaterialien</p>
+        <p><em>Alle Materialien sind weiterhin verfügbar - navigiere über die Links oben</em></p>
+    </footer>
+
+    <script>
+        // Enhanced 404 tracking and user experience
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track 404 errors for analytics (when implemented)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    page_title: '404 Error',
+                    page_location: window.location.href,
+                    custom_map: {'dimension1': 'broken_link'}
+                });
+            }
+            
+            // Auto-suggest based on URL path
+            const path = window.location.pathname;
+            const suggestions = document.querySelector('.search-suggestions ul');
+            
+            if (path.includes('volleyball') || path.includes('sport')) {
+                const sportLink = document.createElement('li');
+                sportLink.innerHTML = '🎯 <a href="/unterricht/Sport/">Meintest du die Sport-Übersichtsseite?</a>';
+                sportLink.style.cssText = 'margin: 0.5rem 0; font-weight: bold; color: var(--primary-color);';
+                suggestions.insertBefore(sportLink, suggestions.firstChild);
+            }
+            
+            if (path.includes('gpg') || path.includes('politik')) {
+                const gpgLink = document.createElement('li');
+                gpgLink.innerHTML = '🏛️ <a href="/unterricht/GPG_Arbeitsweisen_LAA_Training/">Meintest du die GPG-Materialien?</a>';
+                gpgLink.style.cssText = 'margin: 0.5rem 0; font-weight: bold; color: var(--primary-color);';
+                suggestions.insertBefore(gpgLink, suggestions.firstChild);
+            }
+            
+            if (path.includes('station')) {
+                const stationLink = document.createElement('li');
+                stationLink.innerHTML = '🎮 <a href="/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/">Meintest du die Stationskarten?</a>';
+                stationLink.style.cssText = 'margin: 0.5rem 0; font-weight: bold; color: var(--primary-color);';
+                suggestions.insertBefore(stationLink, suggestions.firstChild);
+            }
+        });
+    </script>
+</body>
+</html>

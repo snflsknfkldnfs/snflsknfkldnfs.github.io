@@ -1,0 +1,192 @@
+# GitHub Pages Jekyll Configuration
+# LAA Unterrichtsmaterialien - Optimized for Educational Content
+
+# Site Settings
+title: "LAA Unterrichtsmaterialien"
+description: "Innovative Unterrichtsmaterialien für die LAA-Ausbildung mit systemtheoretischen Ansätzen, iPad-Integration und PATA-Standards"
+baseurl: ""
+url: "https://paulad.github.io"
+author: "LAA-System"
+email: "laa-system@education.de"
+
+# Social & SEO
+twitter:
+  username: laa_education
+  card: summary_large_image
+
+facebook:
+  publisher: "LAA Bildungssystem"
+
+social:
+  name: "LAA Unterrichtsmaterialien"
+  links:
+    - "https://github.com/paulad/snflsknfkldnfs.github.io"
+
+# Logo and Favicon
+logo: "/assets/images/logo.png"
+favicon: "/favicon.ico"
+
+# Language and Locale
+lang: de
+locale: de_DE
+
+# GitHub Pages Settings
+repository: "paulad/snflsknfkldnfs.github.io"
+github_username: paulad
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: Europe/Berlin
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+# Plugin Settings
+feed:
+  categories:
+    - unterricht
+    - sport
+    - gpg
+    - methodik
+
+seo_tag:
+  title_template: "%s | LAA Unterrichtsmaterialien"
+
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: true
+
+# Collections for Structured Content
+collections:
+  sport:
+    output: true
+    permalink: /:collection/:name/
+  gpg:
+    output: true
+    permalink: /:collection/:name/
+  methodik:
+    output: true
+    permalink: /:collection/:name/
+
+# Default Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "LAA-System"
+  - scope:
+      path: "unterricht/Sport"
+    values:
+      layout: "default"
+      category: "sport"
+      subject: "Sport"
+  - scope:
+      path: "unterricht/GPG"
+    values:
+      layout: "default"
+      category: "gpg"
+      subject: "GPG"
+
+# Sass Settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - .git
+  - .github
+  - node_modules
+  - package*.json
+  - README.md
+  - LICENSE
+  - Gemfile*
+  - vendor
+  - .DS_Store
+  - logs
+  - mcp-*
+  - development
+  - meta
+  - _transitions
+  - chat_transitions
+  - .env*
+  - *.pid
+  - *.log
+
+# Include files that start with underscore
+include:
+  - _redirects
+  - _headers
+
+# Kramdown Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'codehilite'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# Compression
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [development]
+
+# Custom Variables for Templates
+featured_subjects:
+  - name: "Sport"
+    icon: "🏃‍♂️"
+    description: "iPad-integrierte Unterrichtsmaterialien"
+    url: "/unterricht/Sport/"
+    featured: true
+  - name: "GPG"
+    icon: "🏛️"
+    description: "Systemtheoretische Politikdidaktik"
+    url: "/unterricht/GPG_Arbeitsweisen_LAA_Training/"
+    featured: true
+
+innovation_highlights:
+  - title: "iPad-Stationskarten"
+    description: "6 interaktive HTML-Stationskarten für Volleyball"
+    url: "/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/"
+    icon: "🎮"
+  - title: "BUV Marc Kunz Standard"
+    description: "Seminarleiter-konforme Dokumentation"
+    url: "/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html"
+    icon: "📋"
+
+# Analytics (placeholder for future)
+google_analytics: "G-XXXXXXXXXX"
+
+# Progressive Web App Settings
+manifest: "/manifest.json"
+
+# Security Headers
+security_headers:
+  content_security_policy: "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';"
+  x_frame_options: "SAMEORIGIN"
+  x_content_type_options: "nosniff"
+
+# Performance Settings
+# GitHub Pages handles most of this automatically
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false

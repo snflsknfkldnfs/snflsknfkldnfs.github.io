@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HINWEIS: Station 6</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #37474F 0%, #263238 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .info-card {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .info-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #37474F;
+            margin-bottom: 20px;
+        }
+        
+        .info-icon {
+            background: #FFC107;
+            color: #333;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        
+        .info-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+        
+        .correction-box {
+            background: #ffecb3;
+            border: 3px solid #FFC107;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            color: #e65100;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .phase-explanation {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .phase-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .phase-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .timeline {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 5px solid #2196f3;
+        }
+        
+        .timeline-time {
+            background: #2196f3;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-right: 15px;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .stations-overview {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .stations-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .station-mini {
+            background: #2196f3;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .navigation-hint {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            color: #e65100;
+            font-weight: bold;
+        }
+        
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer">ℹ️ Information</div>
+    
+    <div class="info-card">
+        <div class="info-header">
+            <div class="info-icon">ℹ️</div>
+            <h1 class="info-title">Station 6 - Hinweis</h1>
+        </div>
+        
+        <div class="correction-box">
+            ⚠️ WICHTIG: Es gibt keine Station 6!<br>
+            Kreisbaggern ist KEINE Stationsübung
+        </div>
+        
+        <div class="stations-overview">
+            <h3 style="margin-top: 0; color: #1976d2; text-align: center;">✅ VERFÜGBARE STATIONEN</h3>
+            <div class="stations-grid">
+                <div class="station-mini">Station 1<br>Ring-Drill</div>
+                <div class="station-mini">Station 2<br>Hand-Auge</div>
+                <div class="station-mini">Station 3<br>Positionierung</div>
+                <div class="station-mini">Station 4<br>Ball-Beinen</div>
+                <div class="station-mini">Station 5<br>Wandbaggern</div>
+            </div>
+        </div>
+        
+        <div class="phase-explanation">
+            <div class="phase-title">WANN KOMMT KREISBAGGERN?</div>
+            <div class="phase-content">
+                Kreisbaggern findet <strong>NACH der Stationenphase</strong> statt!<br>
+                Es ist Teil der <strong>Spielformen-Phase</strong>, nicht der Stationen.
+            </div>
+        </div>
+        
+        <div class="timeline">
+            <h3 style="margin-top: 0; color: #333; text-align: center;">🕐 STUNDENABLAUF</h3>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">0-15 Min</div>
+                <div><strong>Aufwärmen</strong> + Bewegungsmerkmale erarbeiten</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">15-35 Min</div>
+                <div><strong>Stationenbetrieb</strong> (5 Stationen, je 4 Minuten)</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">35-42 Min</div>
+                <div><strong>Spielformen:</strong> Kreisbaggern + Baggertennis</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">42-45 Min</div>
+                <div><strong>Reflexion</strong> + Aufräumen</div>
+            </div>
+        </div>
+        
+        <div class="navigation-hint">
+            🔄 Zurück zu Station 1 oder weiter zur Spielphase!<br>
+            Es gibt nur 5 Stationen im Rotationssystem
+        </div>
+    </div>
+</body>
+</html>

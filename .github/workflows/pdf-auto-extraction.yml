@@ -1,0 +1,385 @@
+name: Auto PDF Content Extraction
+
+on:
+  push:
+    paths:
+      - '**/*.pdf'
+  pull_request:
+    paths:
+      - '**/*.pdf'
+  workflow_dispatch:
+    inputs:
+      pdf_path:
+        description: 'Specific PDF path to process (optional)'
+        required: false
+        type: string
+      force_reprocess:
+        description: 'Force reprocess all PDFs'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  extract-pdf-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y tesseract-ocr tesseract-ocr-deu tesseract-ocr-eng
+        sudo apt-get install -y poppler-utils
+    
+    - name: Install PDF extraction dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install PyPDF2 pytesseract Pillow PyMuPDF
+    
+    - name: Create extraction directories
+      run: |
+        mkdir -p extracted_content
+        mkdir -p extracted_content/metadata
+    
+    - name: Find PDFs to process
+      id: find-pdfs
+      run: |
+        echo "Finding PDFs to process..."
+        
+        if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          if [ "${{ inputs.force_reprocess }}" == "true" ]; then
+            echo "Force reprocessing all PDFs"
+            find . -name "*.pdf" -type f | head -20 > pdfs_to_process.txt
+          elif [ -n "${{ inputs.pdf_path }}" ]; then
+            echo "${{ inputs.pdf_path }}" > pdfs_to_process.txt
+          else
+            git diff --name-only HEAD~1 HEAD | grep -E '\.pdf$' || find . -name "*.pdf" -type f | head -10 > pdfs_to_process.txt
+          fi
+        else
+          # Find changed PDFs
+          git diff --name-only HEAD~1 HEAD | grep -E '\.pdf$' || echo "" > pdfs_to_process.txt
+          if [ ! -s pdfs_to_process.txt ]; then
+            find . -name "*.pdf" -type f | head -5 > pdfs_to_process.txt
+          fi
+        fi
+        
+        echo "PDFs to process:"
+        cat pdfs_to_process.txt
+    
+    - name: Extract PDF content
+      run: |
+        python3 << 'EOF'
+import os
+import sys
+import json
+from datetime import datetime
+import hashlib
+import re
+
+# Add PDF extraction dependencies
+try:
+    from PyPDF2 import PdfReader
+    from pytesseract import image_to_string
+    from PIL import Image
+    import fitz  # PyMuPDF
+    import io
+except ImportError as e:
+    print(f"Import error: {e}")
+    sys.exit(1)
+
+class PDFExtractor:
+    def __init__(self):
+        pass
+    
+    def is_scanned_pdf(self, pdf_path):
+        """Check if PDF is scanned (image format)"""
+        try:
+            reader = PdfReader(pdf_path)
+            for page in reader.pages:
+                if page.extract_text().strip():
+                    return False
+            return True
+        except Exception:
+            return False
+    
+    def extract_text_from_scanned(self, pdf_path, pages):
+        """Extract text from scanned PDF using OCR"""
+        try:
+            doc = fitz.open(pdf_path)
+            extracted_text = []
+            
+            for page_num in pages:
+                page = doc.load_page(page_num)
+                pix = page.get_pixmap()
+                img = Image.open(io.BytesIO(pix.tobytes()))
+                
+                # OCR with German and English support
+                text = image_to_string(img, lang='deu+eng')
+                extracted_text.append(f"Page {page_num + 1}:\n{text}")
+            
+            return "\n\n".join(extracted_text)
+        except Exception as e:
+            return f"OCR extraction failed: {str(e)}"
+    
+    def extract_text_from_normal(self, pdf_path, pages):
+        """Extract text from normal PDF"""
+        try:
+            reader = PdfReader(pdf_path)
+            extracted_text = []
+            
+            for page_num in pages:
+                page = reader.pages[page_num]
+                text = page.extract_text()
+                extracted_text.append(f"Page {page_num + 1}:\n{text}")
+            
+            return "\n\n".join(extracted_text)
+        except Exception as e:
+            return f"Normal extraction failed: {str(e)}"
+    
+    def extract_content(self, pdf_path):
+        """Main PDF content extraction method"""
+        if not os.path.exists(pdf_path):
+            raise FileNotFoundError(f"PDF not found: {pdf_path}")
+        
+        try:
+            # Check if scanned
+            is_scanned = self.is_scanned_pdf(pdf_path)
+            
+            # Get page count
+            reader = PdfReader(pdf_path)
+            total_pages = len(reader.pages)
+            selected_pages = list(range(min(10, total_pages)))  # First 10 pages max
+            
+            # Extract based on PDF type
+            if is_scanned:
+                content = self.extract_text_from_scanned(pdf_path, selected_pages)
+            else:
+                content = self.extract_text_from_normal(pdf_path, selected_pages)
+            
+            return content, total_pages, is_scanned
+            
+        except Exception as e:
+            raise Exception(f"PDF extraction failed: {str(e)}")
+
+def sanitize_filename(filename):
+    """Create safe filename for extracted content"""
+    # Remove path and extension
+    base = os.path.splitext(os.path.basename(filename))[0]
+    # Replace spaces and special chars
+    safe = re.sub(r'[^\w\-_.]', '_', base)
+    return safe[:100]  # Limit length
+
+def process_pdf(pdf_path):
+    """Process a single PDF file"""
+    print(f"Processing: {pdf_path}")
+    
+    if not os.path.exists(pdf_path):
+        print(f"  ERROR: File not found: {pdf_path}")
+        return False
+    
+    try:
+        extractor = PDFExtractor()
+        content, total_pages, is_scanned = extractor.extract_content(pdf_path)
+        
+        # Create output filenames
+        safe_name = sanitize_filename(pdf_path)
+        output_file = f"extracted_content/{safe_name}.txt"
+        metadata_file = f"extracted_content/metadata/{safe_name}.json"
+        
+        # Save extracted content
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(f"# Extracted from: {pdf_path}\n")
+            f.write(f"# Extraction date: {datetime.now().isoformat()}\n")
+            f.write(f"# Total pages: {total_pages}\n")
+            f.write(f"# Extraction type: {'OCR' if is_scanned else 'Direct'}\n\n")
+            f.write(content)
+        
+        # Save metadata
+        file_hash = hashlib.md5(open(pdf_path, 'rb').read()).hexdigest()
+        metadata = {
+            'source_file': pdf_path,
+            'extracted_at': datetime.now().isoformat(),
+            'total_pages': total_pages,
+            'extraction_type': 'OCR' if is_scanned else 'Direct',
+            'file_size': os.path.getsize(pdf_path),
+            'content_length': len(content),
+            'file_hash': file_hash,
+            'automated_extraction': True
+        }
+        
+        with open(metadata_file, 'w', encoding='utf-8') as f:
+            json.dump(metadata, f, indent=2, ensure_ascii=False)
+        
+        print(f"  SUCCESS: Extracted {len(content)} characters")
+        return True
+        
+    except Exception as e:
+        print(f"  ERROR: {str(e)}")
+        
+        # Create error file
+        safe_name = sanitize_filename(pdf_path)
+        error_file = f"extracted_content/{safe_name}_ERROR.txt"
+        with open(error_file, 'w', encoding='utf-8') as f:
+            f.write(f"# ERROR extracting from: {pdf_path}\n")
+            f.write(f"# Error date: {datetime.now().isoformat()}\n")
+            f.write(f"# Error: {str(e)}\n")
+        
+        return False
+
+# Main processing
+if __name__ == "__main__":
+    processed_count = 0
+    success_count = 0
+    
+    try:
+        with open('pdfs_to_process.txt', 'r') as f:
+            pdf_files = [line.strip() for line in f if line.strip()]
+    except FileNotFoundError:
+        print("No PDFs to process")
+        sys.exit(0)
+    
+    print(f"Processing {len(pdf_files)} PDF files...")
+    
+    for pdf_file in pdf_files:
+        if pdf_file and os.path.exists(pdf_file):
+            processed_count += 1
+            if process_pdf(pdf_file):
+                success_count += 1
+    
+    print(f"\nProcessing complete:")
+    print(f"  Processed: {processed_count}")
+    print(f"  Successful: {success_count}")
+    print(f"  Failed: {processed_count - success_count}")
+EOF
+    
+    - name: Create extraction index
+      run: |
+        python3 << 'EOF'
+import os
+import json
+from datetime import datetime
+
+# Create comprehensive index
+index = {
+    'generated_at': datetime.now().isoformat(),
+    'extraction_run': 'github_actions_automated',
+    'total_files': 0,
+    'successful_extractions': 0,
+    'failed_extractions': 0,
+    'files': []
+}
+
+# Process extracted content
+if os.path.exists('extracted_content'):
+    for file in os.listdir('extracted_content'):
+        if file.endswith('.txt') and not file.endswith('_ERROR.txt'):
+            base_name = file.replace('.txt', '')
+            metadata_file = f'extracted_content/metadata/{base_name}.json'
+            
+            file_info = {
+                'filename': base_name,
+                'text_file': f'extracted_content/{file}',
+                'metadata_file': metadata_file if os.path.exists(metadata_file) else None,
+                'status': 'success'
+            }
+            
+            if os.path.exists(metadata_file):
+                try:
+                    with open(metadata_file, 'r', encoding='utf-8') as f:
+                        file_info['metadata'] = json.load(f)
+                except:
+                    pass
+            
+            index['files'].append(file_info)
+            index['successful_extractions'] += 1
+        
+        elif file.endswith('_ERROR.txt'):
+            base_name = file.replace('_ERROR.txt', '')
+            file_info = {
+                'filename': base_name,
+                'text_file': f'extracted_content/{file}',
+                'status': 'failed'
+            }
+            index['files'].append(file_info)
+            index['failed_extractions'] += 1
+
+index['total_files'] = len(index['files'])
+
+# Save index
+with open('extracted_content/extraction_index.json', 'w', encoding='utf-8') as f:
+    json.dump(index, f, indent=2, ensure_ascii=False)
+
+print(f"Created index with {index['total_files']} files")
+print(f"Successful: {index['successful_extractions']}")
+print(f"Failed: {index['failed_extractions']}")
+EOF
+    
+    - name: Commit extracted content
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action PDF Extractor"
+        
+        # Add all extracted content
+        git add extracted_content/
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No new content to commit"
+        else
+          echo "Committing extracted PDF content..."
+          git commit -m "🤖 Auto-extract PDF content
+          
+          - Processed PDFs with automated extraction
+          - Generated searchable text content
+          - Created metadata and extraction index
+          
+          Generated with automated PDF extraction workflow"
+          
+          git push
+        fi
+    
+    - name: Create summary comment (on PR)
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          
+          try {
+            const indexData = fs.readFileSync('extracted_content/extraction_index.json', 'utf8');
+            const index = JSON.parse(indexData);
+            
+            const comment = `## 🤖 PDF Content Extraction Summary
+            
+            **Extraction completed successfully!**
+            
+            - **Total files processed**: ${index.total_files}
+            - **Successful extractions**: ${index.successful_extractions}
+            - **Failed extractions**: ${index.failed_extractions}
+            - **Generated at**: ${index.generated_at}
+            
+            ### Extracted Files
+            ${index.files.map(f => `- \`${f.filename}\` - ${f.status}`).join('\n')}
+            
+            The extracted content is now available in the \`extracted_content/\` directory and can be used by Claude with MCP server functionality.
+            `;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+          } catch (error) {
+            console.log('Could not create summary comment:', error);
+          }
