@@ -48,37 +48,50 @@ version: "1.0.0"
 - **Workflow-Status**: Welche Prozesse laufen
 - **User-Präferenzen**: Extrahierte Kommunikationsmuster
 
-### 🎯 NAHTLOS-PROMPT-TEMPLATE:
+### 🎯 NAHTLOS-PROMPT-TEMPLATE (OPTIMIERT):
 
 ```markdown
-# Nahtlose Fortsetzung: [PROJEKT]
-
 Du bist Claude und führst die Arbeit an [PROJEKT] aus Chat-Session [X] nahtlos fort.
 
-## SOFORTIGE ORIENTIERUNG:
-Lies vollständigen Status: `[pfad]/chat_transitions/session_[X]_status.md`
+SOFORTIGE ORIENTIERUNG:
+Lies vollständigen Kontext: [PFAD]/chat_transitions/session_[X]_to_[X+1]_[kontext].md
 
-## AKTIVE PATA-STANDARDS:
+AKTIVE PATA-STANDARDS:
 - Git-Repository-Management mit automatischer Selbstkontrolle
-- Planungshierarchie-Zwangscheck vor jeder Aktion
-- [weitere aktive Standards]
+- Chat-Transition-Automatisierung (nahtlose Sessions)
+- [weitere aktive Standards basierend auf Projekt]
 
-## USER-KONTEXT:
-- Arbeitsweise: [kompakt/intelligent/kontextsensibel]
-- Standards: [WiB-Dokumentation/DiSoAn/etc.]
-- Prioritäten: [Struktur über Geschwindigkeit/etc.]
+USER-KONTEXT:
+- Arbeitsweise: [Präzise/fachlich fundiert/PATA-konform]
+- Standards: [DiSoAn-Dokumentationsstandards/Marc Kunz BUV/etc.]
+- Prioritäten: [Inhaltliche Stringenz über technische Machbarkeit]
+- Repository: [REPOSITORY-PFAD]
 
-## UNMITTELBAR ABZUARBEITENDER USER-PROMPT:
-[Exakter User-Prompt aus vorheriger Session]
+UNMITTELBARER AUFTRAG:
+"[EXAKTER USER-PROMPT AUS VORHERIGER SESSION]"
 
-## ERFOLGS-KRITERIEN:
+VERFÜGBARE ASSETS:
+✅ [KONKRETE LISTE DER VERFÜGBAREN DATEIEN UND RESSOURCEN]
+✅ [PROJEKTSPEZIFISCHE KOMPONENTEN]
+✅ [PATA-KONFORME REPOSITORY-STRUKTUR]
+
+ERFOLGSKRITERIEN:
+- [SPEZIFISCHE ERFOLGSKRITERIEN FÜR DAS PROJEKT]
 - Nahtlose Fortsetzung ohne Informationsverlust
 - Alle PATA-Standards bleiben aktiv
-- User-Präferenzen werden beibehalten
-- Hohe Qualität auf allen Ebenen
+- [PROJEKTSPEZIFISCHE QUALITÄTSZIELE]
 
-Beginne sofort mit der Abarbeitung des User-Prompts.
+STARTAKTION:
+[KONKRETE ERSTE HANDLUNG FÜR SOFORTIGEN ARBEITSBEGINN]
 ```
+
+### 🔄 SELBSTLERNENDE TEMPLATE-OPTIMIERUNG:
+
+**Implementiertes Learning (2025-07-07):**
+- **Copy-Paste-Ready Format**: Direkter Prompt ohne zusätzliche Formatierung
+- **Konkrete Assets-Liste**: Verfügbare Ressourcen explizit aufführen
+- **Spezifische Startaktion**: Klare erste Handlung statt allgemeiner Anweisung
+- **Repository-Pfad**: Absoluter Pfad für sofortige Orientierung
 
 ### 🔄 KONTINUITÄTS-CHECKS:
 

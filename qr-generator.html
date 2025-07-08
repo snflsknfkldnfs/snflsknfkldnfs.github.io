@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Code Generator - Stationskarten</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.3/qrcode.min.js"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">📱 QR-Code Generator</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">🏠 Dashboard</a></li>
+                <li><a href="javascript:history.back()">← Zurück</a></li>
+                <li><a href="unterricht/Sport/">🏐 Volleyball</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <h1>📱 QR-Code Generator für Stationskarten</h1>
+        
+        <div class="instructions">
+            <h2>🎯 Schnell-Zugang für iPad-Classroom</h2>
+            <p>Generiere QR-Codes für direkte Navigation zu den Volleyball-Stationskarten. Ideal für Ausdrucke und iPad-Integration im Sportunterricht.</p>
+        </div>
+
+        <!-- Quick Links für Volleyball Stationen -->
+        <section>
+            <h2>🏐 Volleyball UE3 - Stationskarten</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🎯 Station 1: Ring-Drill</h3>
+                    <div id="qr-station-1" style="text-align: center; margin: 20px 0;"></div>
+                    <div style="text-align: center;">
+                        <button onclick="generateQR('station-1', 'https://paulad.github.io/snflsknfkldnfs.github.io/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html')" class="btn btn-primary">📱 QR-Code erstellen</button>
+                        <button onclick="downloadQR('qr-station-1', 'Station-1-Ring-Drill')" class="btn btn-secondary">💾 Download</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🤹 Station 2: Hand-Auge-Koordination</h3>
+                    <div id="qr-station-2" style="text-align: center; margin: 20px 0;"></div>
+                    <div style="text-align: center;">
+                        <button onclick="generateQR('station-2', 'https://paulad.github.io/snflsknfkldnfs.github.io/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-02-hand-eye.html')" class="btn btn-primary">📱 QR-Code erstellen</button>
+                        <button onclick="downloadQR('qr-station-2', 'Station-2-Hand-Auge')" class="btn btn-secondary">💾 Download</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>📍 Station 3: Positionierung</h3>
+                    <div id="qr-station-3" style="text-align: center; margin: 20px 0;"></div>
+                    <div style="text-align: center;">
+                        <button onclick="generateQR('station-3', 'https://paulad.github.io/snflsknfkldnfs.github.io/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-03-positioning.html')" class="btn btn-primary">📱 QR-Code erstellen</button>
+                        <button onclick="downloadQR('qr-station-3', 'Station-3-Positionierung')" class="btn btn-secondary">💾 Download</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🦵 Station 4: Ball-Beinen-fangen</h3>
+                    <div id="qr-station-4" style="text-align: center; margin: 20px 0;"></div>
+                    <div style="text-align: center;">
+                        <button onclick="generateQR('station-4', 'https://paulad.github.io/snflsknfkldnfs.github.io/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-04-legs-catching.html')" class="btn btn-primary">📱 QR-Code erstellen</button>
+                        <button onclick="downloadQR('qr-station-4', 'Station-4-Ball-Beinen')" class="btn btn-secondary">💾 Download</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🧱 Station 5: Wandbaggern</h3>
+                    <div id="qr-station-5" style="text-align: center; margin: 20px 0;"></div>
+                    <div style="text-align: center;">
+                        <button onclick="generateQR('station-5', 'https://paulad.github.io/snflsknfkldnfs.github.io/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-05-wall-bagging.html')" class="btn btn-primary">📱 QR-Code erstellen</button>
+                        <button onclick="downloadQR('qr-station-5', 'Station-5-Wandbaggern')" class="btn btn-secondary">💾 Download</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🔄 Station 6: Alternative</h3>
+                    <div id="qr-station-6" style="text-align: center; margin: 20px 0;"></div>
+                    <div style="text-align: center;">
+                        <button onclick="generateQR('station-6', 'https://paulad.github.io/snflsknfkldnfs.github.io/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-06-wall-bagging-alt.html')" class="btn btn-primary">📱 QR-Code erstellen</button>
+                        <button onclick="downloadQR('qr-station-6', 'Station-6-Alternative')" class="btn btn-secondary">💾 Download</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sammel-Download -->
+        <section style="text-align: center; margin-top: 3rem;">
+            <div class="card">
+                <h3>📦 Alle QR-Codes auf einmal</h3>
+                <p>Generiere alle 6 QR-Codes gleichzeitig für einfachen Ausdruck</p>
+                <button onclick="generateAllQRs()" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">🚀 Alle QR-Codes erstellen</button>
+                <div style="margin-top: 1rem;">
+                    <button onclick="printAllQRs()" class="btn btn-secondary">🖨️ Drucken</button>
+                    <button onclick="downloadAllQRs()" class="btn btn-secondary">💾 Alle herunterladen</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anleitung -->
+        <section>
+            <h2>📋 Anleitung für iPad-Integration</h2>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🖨️ Für Ausdruck & Laminierung</h3>
+                    <ol>
+                        <li><strong>QR-Codes generieren:</strong> Alle 6 Stationen erstellen</li>
+                        <li><strong>Drucken:</strong> Auf festem Papier (160g/m²)</li>
+                        <li><strong>Laminieren:</strong> Für Sporthallen-Tauglichkeit</li>
+                        <li><strong>Befestigen:</strong> An Stationsschildern oder Kästen</li>
+                        <li><strong>Testen:</strong> Mit iPad-Kamera scannen</li>
+                    </ol>
+                </div>
+                
+                <div class="card">
+                    <h3>📱 Für digitale Nutzung</h3>
+                    <ol>
+                        <li><strong>Miro-Board:</strong> QR-Codes als Bilder einfügen</li>
+                        <li><strong>Präsentation:</strong> In PowerPoint/Keynote einbetten</li>
+                        <li><strong>Teams/Classroom:</strong> Links direkt teilen</li>
+                        <li><strong>iPad-Home:</strong> "Zum Home-Bildschirm hinzufügen"</li>
+                        <li><strong>Offline-Nutzung:</strong> Nach einmaligem Laden verfügbar</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>QR-Code Generator für Stationskarten</strong> | Optimiert für iPad-Classroom Integration</p>
+        <p><em>Alle generierten QR-Codes führen direkt zu den funktionalen HTML-Stationskarten</em></p>
+    </footer>
+
+    <script>
+        // QR-Code Generation
+        function generateQR(stationId, url) {
+            const element = document.getElementById(`qr-${stationId}`);
+            element.innerHTML = ''; // Clear previous QR code
+            
+            QRCode.toCanvas(url, {
+                width: 200,
+                height: 200,
+                margin: 2,
+                color: {
+                    dark: '#000000',
+                    light: '#FFFFFF'
+                }
+            }, function(error, canvas) {
+                if (error) {
+                    console.error(error);
+                    element.innerHTML = '<p style="color: red;">Fehler beim Generieren</p>';
+                } else {
+                    element.appendChild(canvas);
+                }
+            });
+        }
+
+        // Download einzelner QR-Code
+        function downloadQR(elementId, filename) {
+            const canvas = document.querySelector(`#${elementId} canvas`);
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = `${filename}.png`;
+                link.href = canvas.toDataURL();
+                link.click();
+            } else {
+                alert('Bitte erst QR-Code generieren!');
+            }
+        }
+
+        // Generate all QR codes with dynamic URLs
+        function generateAllQRs() {
+            const baseURL = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '');
+            const stations = [
+                { id: 'station-1', url: `${baseURL}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html` },
+                { id: 'station-2', url: `${baseURL}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-02-hand-eye.html` },
+                { id: 'station-3', url: `${baseURL}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-03-positioning.html` },
+                { id: 'station-4', url: `${baseURL}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-04-legs-catching.html` },
+                { id: 'station-5', url: `${baseURL}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-05-wall-bagging.html` },
+                { id: 'station-6', url: `${baseURL}/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-06-wall-bagging-alt.html` }
+            ];
+
+            stations.forEach(station => {
+                generateQR(station.id, station.url);
+            });
+        }
+
+        // Drucken-Funktion
+        function printAllQRs() {
+            window.print();
+        }
+
+        // Alle Downloads
+        function downloadAllQRs() {
+            const stations = ['station-1', 'station-2', 'station-3', 'station-4', 'station-5', 'station-6'];
+            const names = ['Station-1-Ring-Drill', 'Station-2-Hand-Auge', 'Station-3-Positionierung', 
+                          'Station-4-Ball-Beinen', 'Station-5-Wandbaggern', 'Station-6-Alternative'];
+            
+            stations.forEach((station, index) => {
+                setTimeout(() => {
+                    downloadQR(`qr-${station}`, names[index]);
+                }, index * 500); // Verzögerung zwischen Downloads
+            });
+        }
+    </script>
+
+    <style>
+        @media print {
+            .nav-menu, .btn, footer { display: none; }
+            .card { page-break-inside: avoid; margin-bottom: 20px; }
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</body>
+</html>

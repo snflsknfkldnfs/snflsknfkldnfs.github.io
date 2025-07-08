@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball-Sequenz - UE-Navigation</title>
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/hierarchy.css">
+    <meta name="description" content="Volleyball-Sequenz UE-Navigation - Hierarchische Übersicht aller Unterrichtseinheiten mit iPad-Integration">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav">
+            <button class="back-button" onclick="window.location.href='../../index.html'">← Sport-Übersicht</button>
+            <button class="mobile-menu-toggle" style="display: none;">☰</button>
+            <div class="breadcrumb">
+                <a href="../../../../index.html" class="breadcrumb-item">📚 Dashboard</a>
+                <span class="breadcrumb-separator">→</span>
+                <a href="../../index.html" class="breadcrumb-item">🏃‍♂️ Sport</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-item active">🏐 Volleyball-Sequenz</span>
+            </div>
+            <div style="margin-left: auto; display: flex; gap: 1rem;">
+                <button onclick="window.open('../../../../qr-generator.html', '_blank')" class="btn-secondary" style="padding: 0.5rem 1rem;">📱 QR-Codes</button>
+                <button onclick="window.location.href='../../../../index.html'" class="btn-secondary" style="padding: 0.5rem 1rem;">🏠 Dashboard</button>
+            </div>
+        </nav>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Volleyball Navigation</div>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="../../../../index.html" class="nav-link">📚 Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../index.html" class="nav-link">🏃‍♂️ Sport-Übersicht</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">🏐 Volleyball-Sequenz</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <div class="nav-section-title">UE Quick Access</div>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="#ue1" class="nav-link">UE 1 <span class="nav-badge">✅</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ue2" class="nav-link">UE 2 <span class="nav-badge">✅</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ue3" class="nav-link">UE 3 <span class="nav-badge">🚀</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ue4" class="nav-link">UE 4 <span class="nav-badge">📋</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ue5" class="nav-link">UE 5 <span class="nav-badge">📋</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ue6" class="nav-link">UE 6 <span class="nav-badge">📋</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Direktzugriff</div>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="volleyball-ue3-buv.html" class="nav-link">📋 BUV UE3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="artifacts/stations/station-01-ring-drill.html" class="nav-link" target="_blank">🎮 Stationskarten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../../qr-generator.html" class="nav-link" target="_blank">📱 QR-Generator</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sequence Header -->
+            <section style="background: linear-gradient(135deg, #38a169, #2f855a); color: white; padding: 3rem 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h1 style="margin: 0; font-size: 2.5rem; display: flex; align-items: center; gap: 1rem;">
+                            🏐 Volleyball-Sequenz
+                            <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 1rem;">
+                                Klasse Sm8ab
+                            </span>
+                        </h1>
+                        <p style="margin: 0.5rem 0; font-size: 1.2rem; opacity: 0.9;">
+                            Systematische Technik-Einführung mit iPad-Integration
+                        </p>
+                        <div style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                            <span>👥 16 SuS (8m, 8w)</span>
+                            <span>📅 KW 20-30 (2025)</span>
+                            <span>📋 LB 4.3 - Spielen und Wetteifern</span>
+                            <span>🎮 6 iPad-Stationskarten</span>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">3/6</div>
+                        <div style="font-size: 1.1rem; opacity: 0.9;">UE abgeschlossen</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                        <div style="background: rgba(255,255,255,0.8); height: 100%; width: 50%; border-radius: 4px; transition: width 0.3s ease;"></div>
+                    </div>
+                    <small style="opacity: 0.9; margin-top: 0.5rem; display: block;">
+                        🎯 Aktueller Fortschritt: UE 1-3 erfolgreich durchgeführt • UE 4-6 in Planung
+                    </small>
+                </div>
+            </section>
+
+            <!-- Filter and Search -->
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="🔍 Suche in Volleyball-UE..." id="ueSearch">
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">Alle UE</button>
+                <button class="filter-tab" data-filter="completed">Abgeschlossen</button>
+                <button class="filter-tab" data-filter="active">Aktiv</button>
+                <button class="filter-tab" data-filter="planned">Geplant</button>
+            </div>
+
+            <!-- UE Overview Grid -->
+            <h2 style="margin: 2rem 0 1.5rem;">📚 Unterrichtseinheiten-Navigation</h2>
+            
+            <div class="hierarchy-grid">
+                <!-- UE 1: Oberes Zuspiel - Wiederholung -->
+                <div class="hierarchy-card level-3" id="ue1">
+                    <div class="card-header">
+                        <h3 class="card-title">UE 1: Oberes Zuspiel - Wiederholung</h3>
+                        <span class="card-status status-completed">✅ Abgeschlossen</span>
+                    </div>
+                    
+                    <div class="card-meta">
+                        <span>📅 KW 20</span>
+                        <span>⏱️ 45 Min</span>
+                        <span>📦 2 Materialien</span>
+                        <span>🎯 Ballgewöhnung</span>
+                    </div>
+                    
+                    <p class="card-description">
+                        Reaktivierung der Pritschen-Grundlagen nach längerer Pause. 
+                        Fokus auf Ballgewöhnung und einfache Spielformen.
+                    </p>
+                    
+                    <div style="margin: 1rem 0;">
+                        <strong style="color: #4a5568; font-size: 0.9rem;">Kompetenzen:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                            <span style="background: #e2e8f0; color: #4a5568; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Ballgewöhnung
+                            </span>
+                            <span style="background: #e2e8f0; color: #4a5568; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Pritschen-Grundlagen
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="card-btn btn-secondary" disabled style="opacity: 0.6;">📋 Materialien (Archiv)</button>
+                        <button class="card-btn btn-secondary" onclick="alert('UE 1 Reflexion: Erfolgreiche Reaktivierung nach Pause. Gute Ballgewöhnung erreicht.')">
+                            🔍 Reflexion
+                        </button>
+                    </div>
+                </div>
+
+                <!-- UE 2: Oberes Zuspiel - Vertiefung -->
+                <div class="hierarchy-card level-3" id="ue2">
+                    <div class="card-header">
+                        <h3 class="card-title">UE 2: Oberes Zuspiel - Vertiefung</h3>
+                        <span class="card-status status-completed">✅ Verfügbar</span>
+                    </div>
+                    
+                    <div class="card-meta">
+                        <span>📅 KW 22</span>
+                        <span>⏱️ 45 Min</span>
+                        <span>📦 8 Materialien</span>
+                        <span>🎮 6 Stationen</span>
+                        <span>🎯 Präzision & Kontrolle</span>
+                    </div>
+                    
+                    <p class="card-description">
+                        Verbesserung der Pritschen-Technik durch systematisches Stationentraining. 
+                        Entwicklung von Präzision und Kontrolle bei verschiedenen Ballhöhen und -geschwindigkeiten.
+                    </p>
+                    
+                    <div style="margin: 1rem 0;">
+                        <strong style="color: #4a5568; font-size: 0.9rem;">Lernziele:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Stoppschritt-Technik
+                            </span>
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Prisma-Bildung
+                            </span>
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Stirnhöhe-Kontrolle
+                            </span>
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Präzisions-Training
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Stationskarten Preview -->
+                    <div style="margin: 1.5rem 0;">
+                        <strong style="color: #667eea; font-size: 0.9rem; display: block; margin-bottom: 0.75rem;">🎮 Stationskarten verfügbar:</strong>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                            <div style="background: #667eea; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                💎 Finger-Prisma
+                            </div>
+                            <div style="background: #f093fb; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🤹 Hand-Koordination
+                            </div>
+                            <div style="background: #4facfe; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                📍 Positionierung
+                            </div>
+                            <div style="background: #43e97b; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🧠 Ball-Kopf
+                            </div>
+                            <div style="background: #fa709a; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🧱 Wand-Pritschen
+                            </div>
+                            <div style="background: #ffecd2; color: #333; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🎯 Ziel-Pritschen
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="card-btn btn-primary" onclick="window.location.href='volleyball-ue2-buv.html'" style="background: #667eea;">
+                            📋 BUV-Dokumentation
+                        </button>
+                        <button class="card-btn btn-primary" onclick="window.open('UE2_Pritschen/Stationen/Station1_Finger_Prisma_Drill.html', '_blank')">
+                            🎮 Stationskarten
+                        </button>
+                        <button class="card-btn btn-secondary" onclick="window.open('UE2_Pritschen/UE2_Verlaufsplan.html', '_blank')">
+                            📄 Verlaufsplan
+                        </button>
+                        <button class="card-btn btn-secondary" onclick="window.open('UE2_Pritschen/UE2_Materialien.html', '_blank')">
+                            🎯 Materialien
+                        </button>
+                        <button class="card-btn btn-secondary" onclick="alert('UE2 erfolgreich durchgeführt: Deutliche Verbesserung der Präzision durch Stationentraining.')">
+                            🔍 Reflexion
+                        </button>
+                    </div>
+                </div>
+
+                <!-- UE 3: Unteres Zuspiel (BUV) - FEATURED -->
+                <div class="hierarchy-card level-3 featured" id="ue3" style="cursor: pointer;" onclick="window.location.href='volleyball-ue3-buv.html'">
+                    <div class="card-header">
+                        <h3 class="card-title">UE 3: Unteres Zuspiel (Baggern) - BUV</h3>
+                        <span class="card-status status-completed">🚀 Featured</span>
+                    </div>
+                    
+                    <div class="card-meta">
+                        <span>📅 09.07.2025</span>
+                        <span>⏱️ 45 Min</span>
+                        <span>📦 8 Materialien</span>
+                        <span>🎮 6 Stationen</span>
+                        <span>📋 Marc Kunz BUV</span>
+                    </div>
+                    
+                    <p class="card-description">
+                        <strong>🚀 Innovation-Highlight:</strong> Erste vollständige iPad-Integration im Sportunterricht 
+                        mit 6 interaktiven HTML-Stationskarten und 3-Level-Differenzierung.
+                    </p>
+                    
+                    <div style="margin: 1rem 0;">
+                        <strong style="color: #4a5568; font-size: 0.9rem;">Lernziele:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Stoppschritt-Technik
+                            </span>
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Spielbrett-Bildung
+                            </span>
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Hüfthöhe-Kontrolle
+                            </span>
+                            <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Kooperative Anwendung
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Stationskarten Preview -->
+                    <div style="margin: 1.5rem 0;">
+                        <strong style="color: #667eea; font-size: 0.9rem; display: block; margin-bottom: 0.75rem;">🎮 Interaktive Stationskarten:</strong>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+                            <div style="background: #667eea; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🎯 Ring-Drill
+                            </div>
+                            <div style="background: #f093fb; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🤹 Koordination
+                            </div>
+                            <div style="background: #4facfe; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                📍 Positionierung
+                            </div>
+                            <div style="background: #43e97b; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🦵 Bein-Fangen
+                            </div>
+                            <div style="background: #fa709a; color: white; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🧱 Wandbaggern
+                            </div>
+                            <div style="background: #ffecd2; color: #333; padding: 0.5rem; border-radius: 6px; text-align: center; font-size: 0.8rem;">
+                                🔄 Alternative
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="card-btn btn-primary" onclick="event.stopPropagation(); window.location.href='volleyball-ue3-buv.html'" style="background: #667eea;">
+                            📋 BUV-Dokumentation
+                        </button>
+                        <button class="card-btn btn-primary" onclick="event.stopPropagation(); window.open('artifacts/stations/station-01-ring-drill.html', '_blank')">
+                            🎮 Stationskarten
+                        </button>
+                        <button class="card-btn btn-secondary" onclick="event.stopPropagation(); window.open('../../../../qr-generator.html', '_blank')">
+                            📱 QR-Codes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- UE 4: Kombiniertes Spiel -->
+                <div class="hierarchy-card level-3" id="ue4">
+                    <div class="card-header">
+                        <h3 class="card-title">UE 4: Kombiniertes Spiel (OZ + UZ)</h3>
+                        <span class="card-status status-planned">📋 Geplant</span>
+                    </div>
+                    
+                    <div class="card-meta">
+                        <span>📅 KW 28 (geplant)</span>
+                        <span>⏱️ 45 Min</span>
+                        <span>🎯 Technik-Kombination</span>
+                        <span>📦 Template-basiert</span>
+                    </div>
+                    
+                    <p class="card-description">
+                        Situationsgerechte Entscheidung zwischen oberem und unterem Zuspiel. 
+                        Anwendung beider Techniken in komplexeren Übungen.
+                    </p>
+                    
+                    <div style="margin: 1rem 0;">
+                        <strong style="color: #4a5568; font-size: 0.9rem;">Geplante Kompetenzen:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Technik-Kombination
+                            </span>
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Situationsspiel
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff5f5; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #c53030; font-size: 0.9rem;">🔧 In Vorbereitung</strong><br>
+                        <small style="color: #718096;">Aufbauend auf UE3-Erfolg, iPad-Integration geplant</small>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="card-btn btn-secondary" disabled style="opacity: 0.6;">📋 In Planung</button>
+                    </div>
+                </div>
+
+                <!-- UE 5: Spielformen 2v2/3v3 -->
+                <div class="hierarchy-card level-3" id="ue5">
+                    <div class="card-header">
+                        <h3 class="card-title">UE 5: Spielformen 2v2/3v3</h3>
+                        <span class="card-status status-planned">📋 Geplant</span>
+                    </div>
+                    
+                    <div class="card-meta">
+                        <span>📅 KW 30 (geplant)</span>
+                        <span>⏱️ 45 Min</span>
+                        <span>🎯 Taktik</span>
+                        <span>👥 Gruppendynamik</span>
+                    </div>
+                    
+                    <p class="card-description">
+                        Anwendung individualtaktischer Verhaltensweisen und Entwicklung 
+                        einfacher gruppentaktischer Strukturen.
+                    </p>
+                    
+                    <div style="margin: 1rem 0;">
+                        <strong style="color: #4a5568; font-size: 0.9rem;">Geplante Kompetenzen:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Taktisches Denken
+                            </span>
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Positionierung
+                            </span>
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Zusammenspiel
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="card-btn btn-secondary" disabled style="opacity: 0.6;">📋 In Konzeption</button>
+                    </div>
+                </div>
+
+                <!-- UE 6: Mini-Turnier -->
+                <div class="hierarchy-card level-3" id="ue6">
+                    <div class="card-header">
+                        <h3 class="card-title">UE 6: Mini-Turnier & Reflexion</h3>
+                        <span class="card-status status-planned">📋 Geplant</span>
+                    </div>
+                    
+                    <div class="card-meta">
+                        <span>📅 Ende KW 30 (geplant)</span>
+                        <span>⏱️ 45 Min</span>
+                        <span>🎯 Wettkampf</span>
+                        <span>🤝 Fairplay</span>
+                    </div>
+                    
+                    <p class="card-description">
+                        Abschluss der Sequenz mit Turnier-Format. Anwendung aller erlernten 
+                        Techniken und Reflexion des Lernfortschritts.
+                    </p>
+                    
+                    <div style="margin: 1rem 0;">
+                        <strong style="color: #4a5568; font-size: 0.9rem;">Geplante Kompetenzen:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Wettkampf
+                            </span>
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Fairplay
+                            </span>
+                            <span style="background: #fed7d7; color: #742a2a; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem;">
+                                Selbstreflexion
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="card-btn btn-secondary" disabled style="opacity: 0.6;">📋 In Konzeption</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sequence Resources -->
+            <section style="margin-top: 3rem;">
+                <h2 style="margin-bottom: 1.5rem;">🛠️ Sequenz-Ressourcen & Tools</h2>
+                
+                <div class="hierarchy-grid">
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">📊 Sequenz-Dokumentation</h3>
+                            <span class="card-status status-completed">Verfügbar</span>
+                        </div>
+                        
+                        <p class="card-description">
+                            Vollständige Sequenz-Dokumentation mit Lehrplanbezug, 
+                            Kompetenzerwartungen und methodischer Progression.
+                        </p>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-primary" onclick="window.open('README.md', '_blank')">
+                                📖 Dokumentation
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">📈 Lernfortschritt-Tracker</h3>
+                            <span class="card-status status-planned">Geplant</span>
+                        </div>
+                        
+                        <p class="card-description">
+                            Digitale Erfassung des individuellen Lernfortschritts 
+                            für alle SuS mit Kompetenz-Mapping.
+                        </p>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-secondary" disabled style="opacity: 0.6;">🔧 In Entwicklung</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">🎥 Video-Bibliothek</h3>
+                            <span class="card-status status-planned">Konzept</span>
+                        </div>
+                        
+                        <p class="card-description">
+                            Sammlung von Technik-Videos für Stationskarten-Integration 
+                            und Bewegungsanalyse.
+                        </p>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-secondary" disabled style="opacity: 0.6;">📝 Konzeptionsphase</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <strong>Volleyball-Sequenz</strong> • UE-Navigation • Sm8ab (16 SuS) • Marc Kunz Standard
+                </div>
+                <div style="display: flex; gap: 2rem; font-size: 0.9rem;">
+                    <span>🎯 3/6 UE abgeschlossen</span>
+                    <span>🎮 6 Stationskarten</span>
+                    <span>📱 iPad-Integration</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript for UE Navigation -->
+    <script>
+        // Search functionality
+        document.getElementById('ueSearch').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.hierarchy-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const description = card.querySelector('.card-description').textContent.toLowerCase();
+                
+                if (title.includes(query) || description.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = query === '' ? 'block' : 'none';
+                }
+            });
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const cards = document.querySelectorAll('.hierarchy-card');
+                
+                cards.forEach(card => {
+                    const status = card.querySelector('.card-status');
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const statusText = status.textContent.toLowerCase();
+                        const shouldShow = 
+                            (filter === 'completed' && statusText.includes('abgeschlossen')) ||
+                            (filter === 'active' && statusText.includes('featured')) ||
+                            (filter === 'planned' && statusText.includes('geplant'));
+                        
+                        card.style.display = shouldShow ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for sidebar navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced hover effects
+        document.querySelectorAll('.hierarchy-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (this.classList.contains('featured')) {
+                    this.style.transform = 'translateY(-4px) scale(1.02)';
+                    this.style.boxShadow = '0 12px 35px rgba(102, 126, 234, 0.3)';
+                } else {
+                    this.style.transform = 'translateY(-2px) scale(1.01)';
+                    this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+                this.style.boxShadow = '';
+            });
+        });
+
+        // Progress animation on load
+        window.addEventListener('load', function() {
+            const progressFill = document.querySelector('.progress-fill');
+            if (progressFill) {
+                progressFill.style.width = '0%';
+                setTimeout(() => {
+                    progressFill.style.width = '50%';
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>

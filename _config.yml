@@ -1,82 +1,37 @@
-# GitHub Pages Jekyll Configuration
-# LAA Unterrichtsmaterialien - Optimized for Educational Content
+# GitHub Pages Jekyll Configuration - LAA Unterrichtsmaterialien
+# Optimiert für Volleyball BUV mit iPad-Integration
 
 # Site Settings
 title: "LAA Unterrichtsmaterialien"
-description: "Innovative Unterrichtsmaterialien für die LAA-Ausbildung mit systemtheoretischen Ansätzen, iPad-Integration und PATA-Standards"
+description: "Innovative Unterrichtsmaterialien für die LAA-Ausbildung mit iPad-Integration, systemtheoretischen Ansätzen und PATA-Standards"
 baseurl: ""
 url: "https://paulad.github.io"
-author: "LAA-System"
-email: "laa-system@education.de"
+author: "Paul Cebulla"
+email: "paul.cebulla@laa-system.de"
 
-# Social & SEO
-twitter:
-  username: laa_education
-  card: summary_large_image
-
-facebook:
-  publisher: "LAA Bildungssystem"
-
-social:
-  name: "LAA Unterrichtsmaterialien"
-  links:
-    - "https://github.com/paulad/snflsknfkldnfs.github.io"
-
-# Logo and Favicon
-logo: "/assets/images/logo.png"
-favicon: "/favicon.ico"
+# Repository Information
+repository: "paulad/snflsknfkldnfs.github.io"
+github_username: paulad
 
 # Language and Locale
 lang: de
 locale: de_DE
-
-# GitHub Pages Settings
-repository: "paulad/snflsknfkldnfs.github.io"
-github_username: paulad
+timezone: Europe/Berlin
 
 # Build Settings
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-timezone: Europe/Berlin
 
-# Plugins (GitHub Pages compatible)
+# GitHub Pages compatible plugins only
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-optional-front-matter
-  - jekyll-readme-index
-  - jekyll-default-layout
-  - jekyll-titles-from-headings
 
-# Plugin Settings
-feed:
-  categories:
-    - unterricht
-    - sport
-    - gpg
-    - methodik
-
+# SEO and Social
 seo_tag:
   title_template: "%s | LAA Unterrichtsmaterialien"
-
-titles_from_headings:
-  enabled: true
-  strip_title: true
-  collections: true
-
-# Collections for Structured Content
-collections:
-  sport:
-    output: true
-    permalink: /:collection/:name/
-  gpg:
-    output: true
-    permalink: /:collection/:name/
-  methodik:
-    output: true
-    permalink: /:collection/:name/
 
 # Default Front Matter
 defaults:
@@ -85,7 +40,7 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-      author: "LAA-System"
+      author: "Paul Cebulla"
   - scope:
       path: "unterricht/Sport"
     values:
@@ -99,12 +54,23 @@ defaults:
       category: "gpg"
       subject: "GPG"
 
-# Sass Settings
-sass:
-  sass_dir: _sass
-  style: compressed
+# Collections (optional, for future expansion)
+collections:
+  sport:
+    output: true
+    permalink: /:collection/:name/
+  buv:
+    output: true
+    permalink: /:collection/:name/
 
-# Exclude from processing
+# Kramdown Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'codehilite'
+
+# Exclude from processing (GitHub Pages compatible)
 exclude:
   - .git
   - .github
@@ -124,69 +90,69 @@ exclude:
   - ".env*"
   - "*.pid"
   - "*.log"
+  - "*.disabled"
 
 # Include files that start with underscore
 include:
   - _redirects
   - _headers
 
-# Kramdown Settings
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'codehilite'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: false
+# Sass Settings
+sass:
+  sass_dir: _sass
+  style: compressed
 
-# Compression
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  ignore:
-    envs: [development]
+# Custom Variables for Site
+volleyball_buv:
+  title: "Volleyball BUV - UE3: Unteres Zuspiel"
+  status: "completed"
+  date: "2025-07-09"
+  seminar: "SW V"
+  class: "8ab"
+  students: 16
+  stations: 6
 
-# Custom Variables for Templates
-featured_subjects:
-  - name: "Sport"
-    icon: "🏃‍♂️"
-    description: "iPad-integrierte Unterrichtsmaterialien"
-    url: "/unterricht/Sport/"
-    featured: true
-  - name: "GPG"
-    icon: "🏛️"
+featured_materials:
+  - name: "Volleyball BUV"
+    description: "6-Stationen-System mit iPad-Integration"
+    url: "/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html"
+    status: "live"
+    innovation: "iPad-HTML-Stationskarten"
+  - name: "GPG Arbeitsweisen"
     description: "Systemtheoretische Politikdidaktik"
     url: "/unterricht/GPG_Arbeitsweisen_LAA_Training/"
+    status: "available"
+
+# Navigation Structure
+navigation:
+  - title: "Sport"
+    url: "/unterricht/Sport/"
+    icon: "🏃‍♂️"
     featured: true
+  - title: "GPG"
+    url: "/unterricht/GPG_Arbeitsweisen_LAA_Training/"
+    icon: "🏛️"
+    featured: true
+  - title: "Tools"
+    url: "/qr-generator.html"
+    icon: "🛠️"
 
-innovation_highlights:
-  - title: "iPad-Stationskarten"
-    description: "6 interaktive HTML-Stationskarten für Volleyball"
-    url: "/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/"
-    icon: "🎮"
-  - title: "BUV Marc Kunz Standard"
-    description: "Seminarleiter-konforme Dokumentation"
-    url: "/unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html"
-    icon: "📋"
+# GitHub Pages specific settings
+github_pages:
+  environment: "production"
+  branch: "main"
 
-# Analytics (placeholder for future)
-google_analytics: "G-XXXXXXXXXX"
+# Manifest for PWA
+manifest:
+  name: "LAA Unterrichtsmaterialien"
+  short_name: "LAA Materials"
+  description: "Innovative Unterrichtsmaterialien mit iPad-Integration"
+  start_url: "/"
+  display: "standalone"
+  theme_color: "#2c5282"
+  background_color: "#ffffff"
 
-# Progressive Web App Settings
-manifest: "/manifest.json"
-
-# Security Headers
-security_headers:
-  content_security_policy: "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';"
-  x_frame_options: "SAMEORIGIN"
-  x_content_type_options: "nosniff"
-
-# Performance Settings
-# GitHub Pages handles most of this automatically
-liquid:
-  error_mode: warn
-  strict_filters: false
-  strict_variables: false
+# Performance and SEO
+future: false
+show_drafts: false
+limit_posts: 10

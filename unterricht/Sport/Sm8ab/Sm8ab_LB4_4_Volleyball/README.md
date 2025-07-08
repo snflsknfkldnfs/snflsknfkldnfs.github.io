@@ -6,7 +6,7 @@
 **Lernbereich**: LB 4.3 - Spielen und Wetteifern mit und ohne Ball  
 **Sequenz**: Volleyball Grundtechniken  
 **Zeitraum**: KW 20-30 (Schuljahr 2024/25)  
-**Status**: ✅ **UE 3 (BUV) erfolgreich abgeschlossen und abgesendet**
+**Status**: ✅ **UE2 & UE3 vollständig verfügbar und dokumentiert**
 ---
 
 ## 📋 SEQUENZ-ÜBERSICHT
@@ -21,8 +21,8 @@ Die Schülerinnen und Schüler...
 
 ### **Sequenz-Progression:**
 1. **UE 1**: Oberes Zuspiel (Pritschen) - Wiederholung nach Pause
-2. **UE 2**: Oberes Zuspiel (Pritschen) - Vertiefung und Präzision
-3. **🎯 UE 3**: **Unteres Zuspiel (Baggern) - BUV** ← **HAUPTFOKUS**
+2. **✅ UE 2**: **Oberes Zuspiel (Pritschen) - Vertiefung** ← **VOLLSTÄNDIG VERFÜGBAR**
+3. **🎯 UE 3**: **Unteres Zuspiel (Baggern) - BUV** ← **HAUPTFOKUS (COMPLETED)**
 4. **UE 4**: Kombiniertes Spiel (Pritschen + Baggern)
 5. **UE 5**: Spielformen 2v2/3v3 mit taktischen Elementen
 6. **UE 6**: Mini-Turnier und Sequenz-Reflexion
@@ -51,6 +51,31 @@ Die Schülerinnen und Schüler...
 4. **Station 04**: [Ball-Beinen-fangen](artifacts/stations/station-04-legs-catching.html) - Hüfthöhe-Simulation
 5. **Station 05**: [Wandbaggern](artifacts/stations/station-05-wall-bagging.html) - Technik-Anwendung
 6. **Station 06**: [Wandbaggern Alternative](artifacts/stations/station-06-wall-bagging-alt.html) - Zusatz-Station
+
+---
+
+## ✅ **UE 2: OBERES ZUSPIEL VERTIEFUNG - COMPLETED**
+
+### **Innovations-Highlights:**
+- ✅ **6-Stationen-System** mit Präzisions-Fokus 
+- ✅ **iPad-Integration** mit professionellen HTML-Stationskarten
+- ✅ **Systematische Technik-Vertiefung** nach Marc Kunz Standard
+- ✅ **3-Level-Differenzierung** für heterogene Lerngruppe
+- ✅ **Spielnahe Anwendung** durch Transferübungen
+
+### **Dokumentation:**
+- **Verlaufsplan**: [`UE2_Pritschen/UE2_Verlaufsplan.html`](UE2_Pritschen/UE2_Verlaufsplan.html)
+- **Material-Übersicht**: [`UE2_Pritschen/UE2_Materialien.html`](UE2_Pritschen/UE2_Materialien.html)
+- **Stationskarten**: [`UE2_Pritschen/Stationen/`](UE2_Pritschen/Stationen/)
+- **BUV-Dokumentation**: [`volleyball-ue2-buv.html`](volleyball-ue2-buv.html)
+
+### **Stationskarten-Übersicht:**
+1. **Station 01**: [Finger-Prisma-Drill](UE2_Pritschen/Stationen/Station1_Finger_Prisma_Drill.html) - Prisma-Bildung über der Stirn
+2. **Station 02**: [Hand-Koordination](UE2_Pritschen/Stationen/Station2_Hand_Koordination.html) - Feinmotorik und Ballgefühl
+3. **Station 03**: [Positionierung am Netz](UE2_Pritschen/Stationen/Station3_Positionierung_Netz.html) - Stoppschritt-Training
+4. **Station 04**: [Ball-Kopf-Koordination](UE2_Pritschen/Stationen/Station4_Ball_Kopf_Koordination.html) - Stirnhöhe und Timing
+5. **Station 05**: [Wand-Pritschen](UE2_Pritschen/Stationen/Station5_Wand_Pritschen.html) - Kontinuierliche Ballkontrolle
+6. **Station 06**: [Ziel-Pritschen](UE2_Pritschen/Stationen/Station6_Ziel_Pritschen.html) - Präzision und Richtungskontrolle
 
 ---
 

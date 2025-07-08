@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UE2 Verlaufsplan - Oberes Zuspiel Vertiefung</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <style>
+        .lesson-plan-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .lesson-header {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .lesson-title {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .lesson-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .meta-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        
+        .phase-container {
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .phase-header {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        
+        .phase-content {
+            padding: 25px;
+        }
+        
+        .time-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .time-table th, .time-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .time-table th {
+            background: #f8f9fa;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .time-col { width: 8%; }
+        .phase-col { width: 15%; }
+        .content-col { width: 35%; }
+        .method-col { width: 25%; }
+        .material-col { width: 17%; }
+        
+        .station-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .station-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .station-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .objectives-list {
+            background: #e3f2fd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .back-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .back-button:hover {
+            background: white;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="lesson-plan-container">
+        <a href="../index.html" class="back-button">← Zurück zur Volleyball-Übersicht</a>
+        
+        <div class="lesson-header">
+            <h1 class="lesson-title">UE2: Oberes Zuspiel - Vertiefung</h1>
+            <p style="font-size: 1.3em; color: #6c757d; margin: 10px 0;">Präzision und Kontrolle durch Stationentraining</p>
+            
+            <div class="lesson-meta">
+                <div class="meta-item">
+                    <strong>Klasse</strong><br>8ab (16 SuS)
+                </div>
+                <div class="meta-item">
+                    <strong>Dauer</strong><br>45 Minuten
+                </div>
+                <div class="meta-item">
+                    <strong>Datum</strong><br>KW 22 (2025)
+                </div>
+                <div class="meta-item">
+                    <strong>Schwerpunkt</strong><br>Pritschen-Vertiefung
+                </div>
+            </div>
+        </div>
+        
+        <div class="phase-container">
+            <div class="phase-header">
+                🎯 Lernziele der Stunde
+            </div>
+            <div class="phase-content">
+                <div class="objectives-list">
+                    <h3 style="margin-top: 0; color: #1976d2;">Hauptziel:</h3>
+                    <p>Die Schüler verbessern ihre Pritschen-Technik durch systematisches Stationentraining und entwickeln Präzision sowie Kontrolle bei verschiedenen Ballhöhen und -geschwindigkeiten.</p>
+                    
+                    <h3 style="color: #1976d2;">Teilziele:</h3>
+                    <ul>
+                        <li><strong>TZ1:</strong> Präzises Prisma-Formen mit den Fingerspitzen über der Stirn</li>
+                        <li><strong>TZ2:</strong> Kontrollierte Ballberührung bei unterschiedlichen Zuspielgeschwindigkeiten</li>
+                        <li><strong>TZ3:</strong> Verbesserung der Hand-Auge-Koordination durch komplexe Übungsformen</li>
+                        <li><strong>TZ4:</strong> Anwendung der Technik in spielnahen Situationen</li>
+                        <li><strong>TZ5:</strong> Reflexion des eigenen Lernfortschritts und konstruktives Feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="phase-container">
+            <div class="phase-header">
+                ⏱️ Detaillierter Stundenverlauf
+            </div>
+            <div class="phase-content">
+                <table class="time-table">
+                    <thead>
+                        <tr>
+                            <th class="time-col">Zeit</th>
+                            <th class="phase-col">Phase</th>
+                            <th class="content-col">Inhalt & Aktivitäten</th>
+                            <th class="method-col">Methode & Sozialform</th>
+                            <th class="material-col">Material</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3 Min</td>
+                            <td><strong>Begrüßung & Einstieg</strong></td>
+                            <td>Anwesenheit, Sicherheitscheck, Wiederholung UE1-Erkenntnisse, Stundenthema vorstellen</td>
+                            <td>Plenum, Lehrerimpuls</td>
+                            <td>Anwesenheitsliste</td>
+                        </tr>
+                        <tr>
+                            <td>5 Min</td>
+                            <td><strong>Allgemeine Erwärmung</strong></td>
+                            <td>Laufen entlang Volleyballfeld mit Laufschule: Seitschritte, Rückwärtslaufen, Armkreisen</td>
+                            <td>Einzelarbeit → Plenum</td>
+                            <td>Volleyballfeld</td>
+                        </tr>
+                        <tr>
+                            <td>7 Min</td>
+                            <td><strong>Spezielle Erwärmung</strong></td>
+                            <td>Partnerpritschen in verschiedenen Distanzen, Ballgewöhnung nach Pause, Prisma-Erinnerung</td>
+                            <td>Partnerarbeit</td>
+                            <td>13 Volleybälle</td>
+                        </tr>
+                        <tr>
+                            <td>3 Min</td>
+                            <td><strong>Technik-Demonstration</strong></td>
+                            <td>Wortkarten-Review: Stoppschritt, Prisma, Stirnhöhe. Bewegungsvorbild durch Lehrer</td>
+                            <td>Demonstration, UGS</td>
+                            <td>3 Wortkarten, Ball</td>
+                        </tr>
+                        <tr>
+                            <td>23 Min</td>
+                            <td><strong>Stationsbetrieb</strong></td>
+                            <td>6 Stationen à 3:30 Min + 30 Sek Wechsel. Systematische Technik-Vertiefung durch differenzierte Übungen</td>
+                            <td>GA (3er-Teams), Stationenrotation</td>
+                            <td>iPad-Stationskarten, Verschiedene Materialien</td>
+                        </tr>
+                        <tr>
+                            <td>3 Min</td>
+                            <td><strong>Transfer: Spielformen</strong></td>
+                            <td>Pritschen-Kreis: 6er-Gruppen, Ziel 15 Ballkontakte ohne Bodenkontakt</td>
+                            <td>Gruppenarbeit</td>
+                            <td>3 Volleybälle</td>
+                        </tr>
+                        <tr>
+                            <td>1 Min</td>
+                            <td><strong>Abschluss & Reflexion</strong></td>
+                            <td>Kurze Reflexion: "Was ist heute beim Pritschen besser gelungen?" Ausblick UE3</td>
+                            <td>Plenum, UGS</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="phase-container">
+            <div class="phase-header">
+                🎮 Stationen-Übersicht (iPad-gestützt)
+            </div>
+            <div class="phase-content">
+                <div class="station-grid">
+                    <div class="station-card">
+                        <div class="station-number">1</div>
+                        <h4>Finger-Prisma-Drill</h4>
+                        <p><strong>Fokus:</strong> Prisma-Bildung über der Stirn</p>
+                        <p><strong>Übung:</strong> Ball durch Ring pritschen, 3 Schwierigkeitsstufen</p>
+                        <p><strong>Material:</strong> Ringe, Bälle</p>
+                    </div>
+                    
+                    <div class="station-card">
+                        <div class="station-number">2</div>
+                        <h4>Hand-Koordination</h4>
+                        <p><strong>Fokus:</strong> Feinmotorik und Ballgefühl</p>
+                        <p><strong>Übung:</strong> Koordinative Aufgaben mit Ball und Stab</p>
+                        <p><strong>Material:</strong> Gymnastikstäbe, Bälle</p>
+                    </div>
+                    
+                    <div class="station-card">
+                        <div class="station-number">3</div>
+                        <h4>Positionierung am Netz</h4>
+                        <p><strong>Fokus:</strong> Stoppschritt-Technik</p>
+                        <p><strong>Übung:</strong> Ballzuspiele in verschiedenen Höhen und Geschwindigkeiten</p>
+                        <p><strong>Material:</strong> Netz, Kästen, Bälle</p>
+                    </div>
+                    
+                    <div class="station-card">
+                        <div class="station-number">4</div>
+                        <h4>Ball-Kopf-Koordination</h4>
+                        <p><strong>Fokus:</strong> Stirnhöhe und Timing</p>
+                        <p><strong>Übung:</strong> Präzisionstraining mit Zielvorgaben</p>
+                        <p><strong>Material:</strong> Bälle, Markierungen</p>
+                    </div>
+                    
+                    <div class="station-card">
+                        <div class="station-number">5</div>
+                        <h4>Wand-Pritschen</h4>
+                        <p><strong>Fokus:</strong> Kontinuierliche Ballkontrolle</p>
+                        <p><strong>Übung:</strong> Pritschen gegen Wand mit Netzsimulation</p>
+                        <p><strong>Material:</strong> Wandmarkierung, Bälle</p>
+                    </div>
+                    
+                    <div class="station-card">
+                        <div class="station-number">6</div>
+                        <h4>Ziel-Pritschen</h4>
+                        <p><strong>Fokus:</strong> Präzision und Richtungskontrolle</p>
+                        <p><strong>Übung:</strong> Gezielte Zusiele zu verschiedenen Zielen</p>
+                        <p><strong>Material:</strong> Zielmarkierungen, Bälle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="phase-container">
+            <div class="phase-header">
+                📚 Didaktisch-methodische Hinweise
+            </div>
+            <div class="phase-content">
+                <h3 style="color: #667eea;">Differenzierung:</h3>
+                <ul>
+                    <li><strong>Anfänger:</strong> Kürzere Distanzen, langsamere Zusiele, größere Ziele</li>
+                    <li><strong>Fortgeschrittene:</strong> Normale Distanzen, moderate Geschwindigkeit</li>
+                    <li><strong>Experten:</strong> Weitere Distanzen, schnellere Zusiele, Präzisionsaufgaben</li>
+                </ul>
+                
+                <h3 style="color: #667eea; margin-top: 25px;">Sicherheitshinweise:</h3>
+                <ul>
+                    <li>Ausreichende Abstände zwischen Stationen beachten</li>
+                    <li>Schmuck und Uhren vor Stundenbeginn ablegen</li>
+                    <li>Bei Kopfballarbeit besondere Vorsicht</li>
+                    <li>Rutschfeste Hallenschuhe vorausgesetzt</li>
+                </ul>
+                
+                <h3 style="color: #667eea; margin-top: 25px;">Beobachtungsschwerpunkte:</h3>
+                <ul>
+                    <li>Prisma-Bildung: Finger formen Dreieck über der Stirn</li>
+                    <li>Stoppschritt: Rechtzeitige Positionierung zum Ball</li>
+                    <li>Stirnhöhe: Ball wird oberhalb der Stirn berührt</li>
+                    <li>Kontrolle: Ruhige, kontrollierte Bewegungsausführung</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

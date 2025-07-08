@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUV: Volleyball UE2 - Oberes Zuspiel (Pritschen)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        
+        .buv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .meta-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #667eea;
+        }
+        
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .meta-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            margin-top: 25px;
+        }
+        
+        .kompetenz-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .lernziel-box {
+            background: #f0f8f0;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .sequence-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .sequence-table th,
+        .sequence-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .sequence-table th {
+            background: #667eea;
+            color: white;
+        }
+        
+        .sequence-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .sequence-table tr:nth-child(3) {
+            background: #fff3cd;
+            font-weight: bold;
+        }
+        
+        .verlaufsplan {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .verlaufsplan th,
+        .verlaufsplan td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .verlaufsplan th {
+            background: #764ba2;
+            color: white;
+            font-size: 0.9em;
+        }
+        
+        .verlaufsplan .time-cell {
+            background: #f0f0f0;
+            font-weight: bold;
+            text-align: center;
+            width: 60px;
+        }
+        
+        .bewegungsmerkmale {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .merkmal-card {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .merkmal-number {
+            background: #ff9800;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        
+        .station-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .station-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .station-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .station-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .material-list {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .material-category {
+            margin: 15px 0;
+        }
+        
+        .material-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .material-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .material-item {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .highlight-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .navigation-section {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .nav-button {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 5px;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .nav-button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .buv-container {
+                padding: 15px;
+            }
+            
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bewegungsmerkmale {
+                grid-template-columns: 1fr;
+            }
+            
+            .station-preview {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="buv-container">
+        <div class="header">
+            <h1>🏐 BESONDERE UNTERRICHTSVORBEREITUNG (BUV)</h1>
+            <div class="subtitle">Volleyball UE2 - Oberes Zuspiel (Pritschen)</div>
+            <div class="subtitle">Klasse 8 | 22 SuS | Frieden Mittelschule Schweinfurt</div>
+        </div>
+
+        <div class="navigation-section">
+            <h3>🧭 Navigation</h3>
+            <a href="../index.html" class="nav-button">← Zurück zur Sport-Übersicht</a>
+            <a href="index.html" class="nav-button">📁 Volleyball-Sequenz</a>
+            <a href="#stationen" class="nav-button">📱 Zu den Stationskarten</a>
+        </div>
+
+        <div class="meta-info">
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <strong>Seminarist:</strong>
+                    <span>LAA Mustermann</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Einsatzschule:</strong>
+                    <span>Frieden Mittelschule Schweinfurt</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Datum:</strong>
+                    <span>[Datum einsetzen]</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Uhrzeit:</strong>
+                    <span>7:55-8:40 (1. Stunde)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Klasse:</strong>
+                    <span>8 (22 SuS)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Fach:</strong>
+                    <span>Sport (koedukativ)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>1. STUNDENTHEMA UND ZIELSETZUNG</h2>
+            
+            <h3>Thema der Unterrichtsstunde</h3>
+            <p>In der geplanten Volleyball-Stunde soll die Technik des <strong>oberen Zuspiels (Pritschen)</strong> systematisch erlernt und verbessert werden. Die Schülerinnen und Schüler lernen die Grundlagen der präzisen Ballbehandlung mit den Fingerspitzen kennen. Das obere Zuspiel stellt eine zentrale Basistechnik dar, die für kontrollierte Spieleröffnung und präzise Pässe unverzichtbar ist.</p>
+
+            <div class="lernziel-box">
+                <h4>🎯 Stundenziel</h4>
+                <p>Die Schülerinnen und Schüler erlernen und verbessern die Grundtechnik des oberen Zuspiels (Pritschen), indem sie die Bewegungsmerkmale analysieren, in differenzierten Stationen üben und in spielnahen Situationen anwenden.</p>
+            </div>
+
+            <h4>Teilziele:</h4>
+            <ul>
+                <li><strong>TZ1:</strong> Die SuS erarbeiten die Bewegungsmerkmale des oberen Zuspiels durch Demonstration und Wortkarten</li>
+                <li><strong>TZ2:</strong> Die SuS erwärmen sich sportartspezifisch und bereiten gezielt Finger, Handgelenke und Schultern vor</li>
+                <li><strong>TZ3:</strong> Die SuS üben das obere Zuspiel in 6 differenzierten Stationen mit individueller Leistungsanpassung</li>
+                <li><strong>TZ4:</strong> Die SuS wenden das obere Zuspiel in spielerischen Formen an und reflektieren ihren Lernfortschritt</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. SEQUENZEINBETTUNG</h2>
+            
+            <h3>Sequenztitel: Volleyball - Ballkontrolle und Zuspiel</h3>
+            <p><strong>Klasse:</strong> 8 | <strong>Zeitraum:</strong> [Datum] – [Datum] | <strong>Lehrplanbezug:</strong> S8 Lernbereich 4.3</p>
+
+            <table class="sequence-table">
+                <thead>
+                    <tr>
+                        <th>UE</th>
+                        <th>Datum</th>
+                        <th>Schwerpunkt</th>
+                        <th>Kompetenzen</th>
+                        <th>Stundenthema</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>[Datum]</td>
+                        <td>Ballgewöhnung</td>
+                        <td>Wahrnehmen, Gestalten</td>
+                        <td>"Volleyball-Feeling - Erste Ballkontakte"</td>
+                    </tr>
+                    <tr style="background: #fff3cd; font-weight: bold;">
+                        <td>2</td>
+                        <td>[Datum]</td>
+                        <td><strong>Oberes Zuspiel</strong></td>
+                        <td><strong>Leisten, Analysieren</strong></td>
+                        <td><strong>"Pritschen lernen - Das obere Zuspiel"</strong></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>[Datum]</td>
+                        <td>Unteres Zuspiel</td>
+                        <td>Leisten, Bewerten</td>
+                        <td>"Unteres Zuspiel - Baggern lernen"</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>[Datum]</td>
+                        <td>Aufschlag</td>
+                        <td>Leisten, Kooperieren</td>
+                        <td>"Service von unten - Spielbeginn meistern"</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>[Datum]</td>
+                        <td>Spielformen</td>
+                        <td>Spielen, Kommunizieren</td>
+                        <td>"3 gegen 3 - Taktische Grundmuster"</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>[Datum]</td>
+                        <td>Turnier</td>
+                        <td>Alle Kompetenzen</td>
+                        <td>"Volleyball-Turnier - Anwendung und Bewertung"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>3. LEHRPLANBEZUG (LehrplanPLUS Bayern)</h2>
+            
+            <div class="kompetenz-box">
+                <h4>Lernbereich 4: Sportliche Handlungsfelder</h4>
+                <p><strong>4.3 Spielen und Wetteifern mit und ohne Ball / Kleine Spiele und Sportspiele</strong></p>
+                
+                <h5>Die Schülerinnen und Schüler...</h5>
+                <ul>
+                    <li><strong>verwenden</strong> sportartspezifische Techniken im Volleyball zur Lösung von spielnahen Situationsaufgaben</li>
+                    <li><strong>wenden</strong> koordinative Fähigkeiten beim oberen Zuspiel frontal und mit Richtungsänderung an</li>
+                    <li><strong>beschreiben</strong> sportartspezifische Bewegungsmerkmale fachgerecht und setzen diese um</li>
+                    <li><strong>würdigen</strong> den Fairplay-Gedanken als übergeordnetes Ziel</li>
+                    <li><strong>akzeptieren</strong> Stärken und Schwächen, nehmen Feedback an und integrieren Mitschüler aktiv</li>
+                </ul>
+            </div>
+
+            <h4>Inhalte zu den Kompetenzen:</h4>
+            <ul>
+                <li><strong>Technik:</strong> Oberes Zuspiel frontal und mit Richtungsänderung, kontrollierte Ballberührung</li>
+                <li><strong>Koordination:</strong> Hand-Finger-Koordination, Timing, Raumwahrnehmung</li>
+                <li><strong>Taktik:</strong> Positionierung im Raum, Antizipation der Ballflugkurve</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. BEWEGUNGSMERKMALE OBERES ZUSPIEL</h2>
+            
+            <div class="bewegungsmerkmale">
+                <div class="merkmal-card">
+                    <div class="merkmal-number">1</div>
+                    <h4>STOPPSCHRITT</h4>
+                    <p>Rechtzeitig zum Ball bewegen</p>
+                    <small>Bleibt gleich wie beim unteren Zuspiel</small>
+                </div>
+                
+                <div class="merkmal-card">
+                    <div class="merkmal-number">2</div>
+                    <h4>PRISMA FORMEN</h4>
+                    <p>Finger bilden Dreieck über der Stirn</p>
+                    <small>NICHT "Spielbrett" wie beim Baggern!</small>
+                </div>
+                
+                <div class="merkmal-card">
+                    <div class="merkmal-number">3</div>
+                    <h4>STIRNHÖHE</h4>
+                    <p>Ball über der Stirn berühren</p>
+                    <small>NICHT Hüfthöhe wie beim Baggern!</small>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>🔄 Adaptation von UE3 (Unteres Zuspiel):</h4>
+                <p><strong>Geändert:</strong> "Spielbrett" → "Prisma formen" | "Hüfthöhe" → "Stirnhöhe"</p>
+                <p><strong>Beibehalten:</strong> "Stoppschritt" | 6-Stationen-System | 3-Level-Differenzierung</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>5. PÄDAGOGISCHE ANALYSE - KLASSE 8 (22 SuS)</h2>
+            
+            <h3>Klassensituation angepasst für 22 SuS</h3>
+            <p>Die Klasse 8 umfasst 22 Schülerinnen und Schüler im Alter von 13-14 Jahren. Die größere Gruppengröße erfordert angepasste Organisationsformen.</p>
+
+            <div class="warning-box">
+                <h4>⚠️ Besondere Herausforderungen bei 22 SuS:</h4>
+                <ul>
+                    <li><strong>Stationsorganisation:</strong> 6 Stationen à 3-4 SuS (statt 3 SuS)</li>
+                    <li><strong>Wartezeiten:</strong> Kürzere Übungszeiten pro Schüler</li>
+                    <li><strong>Ballbedarf:</strong> Mehr Volleybälle für gleichzeitige Übungen nötig</li>
+                    <li><strong>Betreuungsintensität:</strong> Weniger individuelle Korrekturen möglich</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h4>✅ Lösungsansätze für 22 SuS:</h4>
+                <ul>
+                    <li><strong>Peer-Learning verstärken:</strong> Erfahrenere SuS als Stationshelfer</li>
+                    <li><strong>Rotation optimieren:</strong> 2,5 Min pro Station (statt 3 Min)</li>
+                    <li><strong>Zusatzmaterial:</strong> Mehr Bälle und Differenzierungshilfen</li>
+                    <li><strong>Beobachtungsaufträge:</strong> SuS beobachten sich gegenseitig</li>
+                </ul>
+            </div>
+
+            <h3>Motorische Voraussetzungen</h3>
+            <ul>
+                <li>Hand-Finger-Koordination bei den meisten SuS entwickelt</li>
+                <li>Unterschiedliche Vorerfahrungen mit Ballsportarten</li>
+                <li>Oberes Zuspiel komplexer als unteres Zuspiel (höhere Anforderungen)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. VERLAUFSPLAN (45 Minuten)</h2>
+            
+            <table class="verlaufsplan">
+                <thead>
+                    <tr>
+                        <th>Zeit</th>
+                        <th>Phase</th>
+                        <th>Handlungsschritte</th>
+                        <th>Lehr-Lern-Aktivitäten</th>
+                        <th>Sozialform</th>
+                        <th>Material</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-cell">2 Min</td>
+                        <td><strong>Begrüßung</strong></td>
+                        <td>Anwesenheit & Sicherheit</td>
+                        <td>L führt Anwesenheitskontrolle durch, Schmuck-Check, Gesundheitskontrolle</td>
+                        <td>Plenum</td>
+                        <td>Anwesenheitsliste</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">4 Min</td>
+                        <td><strong>Motivation</strong></td>
+                        <td>Bewegungsmerkmale erarbeiten</td>
+                        <td>L präsentiert 3 Wortkarten: "Wie geht Pritschen?" → Stoppschritt, Prisma formen, Stirnhöhe. Demonstration mit starkem Schüler</td>
+                        <td>Lehrerimpuls → Demo</td>
+                        <td>3 Wortkarten, Volleybälle</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">8 Min</td>
+                        <td><strong>Aufwärmen</strong></td>
+                        <td>Allgemein & spezifisch</td>
+                        <td>Phase 1: Lauf-ABC mit Fokus auf Finger/Handgelenke (4 Min)<br>Phase 2: Partner-Pritschen in 4er-Teams (4 Min)</td>
+                        <td>Gruppenarbeit (4er-Teams)</td>
+                        <td>Kreppband A/B/C/D/E/F, 11 Volleybälle</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">3 Min</td>
+                        <td><strong>Stationsbegehung</strong></td>
+                        <td>Orientierung</td>
+                        <td>L führt durch alle 6 Stationen, erklärt Übungen kurz, SuS äußern, welches Bewegungsmerkmal fokussiert wird</td>
+                        <td>Plenum</td>
+                        <td>6 Stationskarten, iPads</td>
+                    </tr>
+                    <tr style="background: #fff3cd;">
+                        <td class="time-cell">20 Min</td>
+                        <td><strong>HAUPTTEIL</strong><br>Stationsbetrieb</td>
+                        <td>6 Stationen à 3-4 SuS</td>
+                        <td><strong>Station 1:</strong> Finger-Prisma-Drill<br><strong>Station 2:</strong> Hand-Koordination mit Ball<br><strong>Station 3:</strong> Positionierung am Netz<br><strong>Station 4:</strong> Ball-Kopf-Koordination<br><strong>Station 5:</strong> Wand-Pritschen<br><strong>Station 6:</strong> Ziel-Pritschen<br><br>Rotation: 2,5 Min + 30 Sek Wechsel</td>
+                        <td>Kleingruppenarbeit (3-4 SuS)</td>
+                        <td>16 Volleybälle, 6 iPads, Stationsmaterial (siehe Detailliste)</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">2 Min</td>
+                        <td><strong>Zwischenreflexion</strong></td>
+                        <td>Bewegungsmerkmale-Check</td>
+                        <td>L zeigt Wortkarten: "Welches Merkmal ist euch heute besser gelungen?" SuS melden sich und erklären</td>
+                        <td>Unterrichtsgespräch</td>
+                        <td>3 Wortkarten</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">4 Min</td>
+                        <td><strong>Transfer</strong></td>
+                        <td>Spielformen</td>
+                        <td>Kreis-Pritschen: 6er-Gruppen (A+B, C+D, E+F), Ziel: 8 Ballkontakte ohne Bodenkontakt</td>
+                        <td>Gruppenarbeit</td>
+                        <td>3 Volleybälle</td>
+                    </tr>
+                    <tr>
+                        <td class="time-cell">2 Min</td>
+                        <td><strong>Reflexion</strong></td>
+                        <td>Lernzuwachs verbalisieren</td>
+                        <td>L zeigt nochmals 3 Wortkarten. SuS erklären: "Beschreibt einem Freund, wie man richtig pritscht!" Ausblick auf nächste UE</td>
+                        <td>Plenum</td>
+                        <td>3 Wortkarten</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="stationen">
+            <h2>7. STATIONSÜBERSICHT (6 iPad-Stationen)</h2>
+            
+            <div class="station-preview">
+                <div class="station-card" onclick="window.open('artifacts/stations/station-ue2-01-finger-prisma-drill.html', '_blank')">
+                    <div class="station-number">1</div>
+                    <h4>Finger-Prisma-Drill</h4>
+                    <p>Ring-Target durch "Prisma" formen</p>
+                    <small>Fokus: Fingerhaltung</small>
+                </div>
+                
+                <div class="station-card" onclick="window.open('artifacts/stations/station-ue2-02-hand-koordination.html', '_blank')">
+                    <div class="station-number">2</div>
+                    <h4>Hand-Koordination</h4>
+                    <p>Ball balancieren mit Fingerspitzen</p>
+                    <small>Fokus: Ballgefühl</small>
+                </div>
+                
+                <div class="station-card" onclick="window.open('artifacts/stations/station-ue2-03-positionierung-netz.html', '_blank')">
+                    <div class="station-number">3</div>
+                    <h4>Positionierung Netz</h4>
+                    <p>Stoppschritt + Stirnhöhe-Annahme</p>
+                    <small>Fokus: Positioning</small>
+                </div>
+                
+                <div class="station-card" onclick="window.open('artifacts/stations/station-ue2-04-ball-kopf-koordination.html', '_blank')">
+                    <div class="station-number">4</div>
+                    <h4>Ball-Kopf-Koordination</h4>
+                    <p>Ball über Kopf balancieren</p>
+                    <small>Fokus: Körperhaltung</small>
+                </div>
+                
+                <div class="station-card" onclick="window.open('artifacts/stations/station-ue2-05-wand-pritschen.html', '_blank')">
+                    <div class="station-number">5</div>
+                    <h4>Wand-Pritschen</h4>
+                    <p>Kontrolliertes Wandspiel</p>
+                    <small>Fokus: Präzision</small>
+                </div>
+                
+                <div class="station-card" onclick="window.open('artifacts/stations/station-ue2-06-ziel-pritschen.html', '_blank')">
+                    <div class="station-number">6</div>
+                    <h4>Ziel-Pritschen</h4>
+                    <p>Gerichtete Pässe zu Markierungen</p>
+                    <small>Fokus: Anwendung</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>8. MATERIAL UND MEDIEN (für 22 SuS)</h2>
+            
+            <div class="material-list">
+                <div class="material-category">
+                    <h4>🏐 Bälle und Spielgeräte:</h4>
+                    <div class="material-items">
+                        <div class="material-item">16 Volleybälle (Standard)</div>
+                        <div class="material-item">6 Softbälle (Differenzierung)</div>
+                        <div class="material-item">6 Ringe/Hula-Hoop</div>
+                        <div class="material-item">6 Gymnastikstäbe</div>
+                        <div class="material-item">3 Ballwägen</div>
+                    </div>
+                </div>
+
+                <div class="material-category">
+                    <h4>🏗️ Geräte und Aufbauten:</h4>
+                    <div class="material-items">
+                        <div class="material-item">1 Volleyball-Netz (2,24m)</div>
+                        <div class="material-item">2 große Kästen</div>
+                        <div class="material-item">6 kleine Kästen (iPad-Ständer)</div>
+                        <div class="material-item">6 Stationsschilder</div>
+                        <div class="material-item">Kreppband (6 Farben: A-F)</div>
+                        <div class="material-item">Markierungshütchen</div>
+                    </div>
+                </div>
+
+                <div class="material-category">
+                    <h4>📱 Medien und Technik:</h4>
+                    <div class="material-items">
+                        <div class="material-item">6 iPads (Stationskarten)</div>
+                        <div class="material-item">3 Wortkarten (DIN A4)</div>
+                        <div class="material-item">Musik-Anlage + Timer</div>
+                        <div class="material-item">Stoppuhr</div>
+                        <div class="material-item">Anwesenheitsliste</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>9. DIFFERENZIERUNG UND SICHERHEIT</h2>
+            
+            <h3>3-Level-System pro Station:</h3>
+            <ul>
+                <li><strong>Level 1 (Basis):</strong> Kurze Distanzen, große Zielbereiche, weiche Bälle</li>
+                <li><strong>Level 2 (Standard):</strong> Normale Distanzen, reguläre Volleybälle</li>
+                <li><strong>Level 3 (Expert):</strong> Herausfordernde Distanzen, Präzisionsziele, Zusatzaufgaben</li>
+            </ul>
+
+            <h3>Anpassungen für 22 SuS:</h3>
+            <ul>
+                <li><strong>Gruppengrößen:</strong> 6 Teams à 3-4 SuS (flexibel je nach Teilnehmerzahl)</li>
+                <li><strong>Mehr Peer-Learning:</strong> Stärkere SuS unterstützen schwächere</li>
+                <li><strong>Verkürzte Stationszeit:</strong> 2,5 Min statt 3 Min pro Station</li>
+                <li><strong>Zusätzliche Helferrollen:</strong> Balljungen, Beobachter, Feedback-Geber</li>
+            </ul>
+
+            <div class="warning-box">
+                <h4>⚠️ Sicherheitshinweise:</h4>
+                <ul>
+                    <li>Fingerverletzungen vermeiden: Korrekter Prisma-Griff essentiell</li>
+                    <li>Ausreichende Abstände zwischen Stationen</li>
+                    <li>Erste-Hilfe-Kasten griffbereit</li>
+                    <li>Bei größerer Gruppe: Verstärkte Aufsicht nötig</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>10. DIDAKTISCHE REFLEXION</h2>
+            
+            <h3>Adaptation der bewährten UE3-Struktur</h3>
+            <p>Diese UE basiert auf der erfolgreichen Struktur der UE3 (Unteres Zuspiel) und wurde systematisch für das obere Zuspiel angepasst:</p>
+
+            <div class="highlight-box">
+                <h4>🔄 Erfolgreiche Übernahmen:</h4>
+                <ul>
+                    <li><strong>6-Stationen-System:</strong> Bewährte Organisation beibehalten</li>
+                    <li><strong>3-Level-Differenzierung:</strong> Individualisierung für alle Leistungsniveaus</li>
+                    <li><strong>iPad-Integration:</strong> Moderne Mediennutzung</li>
+                    <li><strong>Wortkarten-Methode:</strong> Strukturierte Bewegungsmerkmale</li>
+                </ul>
+            </div>
+
+            <div class="success-box">
+                <h4>✅ Fachspezifische Anpassungen:</h4>
+                <ul>
+                    <li><strong>Technik-Fokus:</strong> Baggern → Pritschen (andere Bewegungslogik)</li>
+                    <li><strong>Körperregion:</strong> Unterarme → Fingerspitzen</li>
+                    <li><strong>Ballkontakthöhe:</strong> Hüfthöhe → Stirnhöhe</li>
+                    <li><strong>Bewegungsmerkmale:</strong> "Spielbrett" → "Prisma formen"</li>
+                </ul>
+            </div>
+
+            <h3>Erwartete Lerneffekte</h3>
+            <ul>
+                <li><strong>Motorisch:</strong> Präzise Ballbehandlung mit Fingerspitzen</li>
+                <li><strong>Kognitiv:</strong> Verstehen der Bewegungslogik des Pritschens</li>
+                <li><strong>Sozial:</strong> Kooperatives Lernen durch Partnerübungen</li>
+                <li><strong>Methodisch:</strong> Selbstständiges Arbeiten an Stationen</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>11. AUSBLICK AUF UE 3</h2>
+            
+            <p>In der nächsten Unterrichtseinheit wird das <strong>untere Zuspiel (Baggern)</strong> eingeführt. Die SuS können dann die beiden Grundtechniken des Volleyballs vergleichen und situativ anwenden.</p>
+
+            <div class="highlight-box">
+                <h4>🔗 Sequenzlogik:</h4>
+                <p><strong>UE 2:</strong> Oberes Zuspiel → <strong>UE 3:</strong> Unteres Zuspiel → <strong>UE 4:</strong> Kombiniertes Spiel</p>
+            </div>
+        </div>
+
+        <div class="navigation-section">
+            <h3>🔗 Weiterführende Links</h3>
+            <a href="volleyball-ue3-buv.html" class="nav-button">UE3: Unteres Zuspiel →</a>
+            <a href="artifacts/stations/station-ue2-01-finger-prisma-drill.html" class="nav-button">📱 Station 1 öffnen</a>
+            <a href="../index.html" class="nav-button">← Zurück zur Sport-Übersicht</a>
+        </div>
+
+        <div class="footer" style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <p><strong>Erstellt mit:</strong> Unterrichtsgestaltung AI-Assistent</p>
+            <p><strong>Basierend auf:</strong> Bewährter UE3-Struktur (Unteres Zuspiel)</p>
+            <p><strong>LAA:</strong> Mustermann | <strong>Schule:</strong> Frieden Mittelschule Schweinfurt</p>
+            <p><strong>Repository:</strong> <a href="https://github.com/paulad/snflsknfkldnfs.github.io" target="_blank">snflsknfkldnfs.github.io</a></p>
+        </div>
+    </div>
+</body>
+</html>

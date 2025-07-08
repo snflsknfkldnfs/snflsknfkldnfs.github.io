@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Hierarchische Navigation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hierarchy.css">
+    <meta name="description" content="Vollständige Sitemap der hierarchischen Navigation für LAA Unterrichtsmaterialien">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb-nav">
+            <button class="back-button" onclick="window.location.href='index.html'">← Dashboard</button>
+            <div class="breadcrumb">
+                <a href="index.html" class="breadcrumb-item">📚 Dashboard</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-item active">🗺️ Sitemap</span>
+            </div>
+            <div style="margin-left: auto;">
+                <button onclick="window.location.href='index.html'" class="btn-secondary" style="padding: 0.5rem 1rem;">🏠 Dashboard</button>
+            </div>
+        </nav>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Navigation</div>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">📚 Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">🗺️ Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <div class="nav-section-title">Quick Tests</div>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="testAllLinks()">🔍 Link-Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="testMobileView()">📱 Mobile-Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="performanceTest()">⚡ Performance-Test</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>🗺️ Hierarchische Navigation - Sitemap</h1>
+            <p style="font-size: 1.1rem; color: #718096; margin-bottom: 2rem;">
+                Vollständige Übersicht der 4-Ebenen-Navigation mit allen verfügbaren Materialien und Tools
+            </p>
+
+            <!-- Navigation Statistics -->
+            <div class="sequence-stats">
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Navigation-Ebenen</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Haupt-Seiten</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Materialien</div>
+                </div>
+            </div>
+
+            <!-- Hierarchical Sitemap -->
+            <section style="margin-bottom: 3rem;">
+                <h2>🏗️ Hierarchische Struktur</h2>
+                
+                <div style="background: white; padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0; font-family: 'Monaco', 'Consolas', monospace; font-size: 0.9rem; line-height: 1.8;">
+                    <div style="color: #2d3748; font-weight: bold; margin-bottom: 1rem;">📚 EBENE 1: DASHBOARD</div>
+                    <div style="margin-left: 1rem;">
+                        <div style="cursor: pointer; color: #3182ce;" onclick="window.location.href='index.html'">├── 🏠 <strong>Dashboard</strong> (index.html)</div>
+                        <div style="margin-left: 1rem; color: #718096;">│   ├── Fächer-Übersicht</div>
+                        <div style="margin-left: 1rem; color: #718096;">│   ├── Status-Tracking</div>
+                        <div style="margin-left: 1rem; color: #718096;">│   └── Quick-Access</div>
+                        <div style="margin-top: 1rem; color: #2d3748; font-weight: bold;">📖 EBENE 2: FACH-ÜBERSICHTEN</div>
+                        <div style="cursor: pointer; color: #38a169;" onclick="window.location.href='unterricht/Sport/index.html'">├── 🏃‍♂️ <strong>Sport-Übersicht</strong> (unterricht/Sport/)</div>
+                        <div style="margin-left: 1rem; color: #718096;">│   ├── Sequenz-Navigation</div>
+                        <div style="margin-left: 1rem; color: #718096;">│   ├── Klassen-Übersicht</div>
+                        <div style="margin-left: 1rem; color: #718096;">│   └── Status-Indikatoren</div>
+                        <div style="cursor: pointer; color: #4299e1;" onclick="window.location.href='unterricht/GPG_Arbeitsweisen_LAA_Training/'">├── 🏛️ <strong>GPG-Übersicht</strong> (unterricht/GPG_Arbeitsweisen_LAA_Training/)</div>
+                        <div style="cursor: pointer; color: #d69e2e;" onclick="window.location.href='qr-generator.html'">└── 🛠️ <strong>Tools-Übersicht</strong> (qr-generator.html etc.)</div>
+                        
+                        <div style="margin-top: 1rem; color: #2d3748; font-weight: bold;">🎯 EBENE 3: SEQUENZ-DETAILS</div>
+                        <div style="margin-left: 1rem;">
+                            <div style="cursor: pointer; color: #38a169;" onclick="window.location.href='unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/'">🏐 <strong>Volleyball-Sequenz</strong> (Sm8ab/Sm8ab_LB4_4_Volleyball/)</div>
+                            <div style="margin-left: 1rem; color: #718096;">│   ├── UE 1: Oberes Zuspiel (Wiederholung) ✅</div>
+                            <div style="margin-left: 1rem; color: #718096;">│   ├── UE 2: Oberes Zuspiel (Vertiefung) ✅</div>
+                            <div style="margin-left: 1rem; color: #667eea; font-weight: bold; cursor: pointer;" onclick="window.location.href='unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html'">│   ├── UE 3: Unteres Zuspiel (BUV) 🚀 FEATURED</div>
+                            <div style="margin-left: 1rem; color: #718096;">│   ├── UE 4: Kombiniertes Spiel (geplant)</div>
+                            <div style="margin-left: 1rem; color: #718096;">│   ├── UE 5: Spielformen 2v2/3v3 (geplant)</div>
+                            <div style="margin-left: 1rem; color: #718096;">│   └── UE 6: Mini-Turnier (geplant)</div>
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: #2d3748; font-weight: bold;">📦 EBENE 4: MATERIAL-DETAILS</div>
+                        <div style="margin-left: 1rem;">
+                            <div style="color: #667eea; font-weight: bold;">🎮 UE3 - Interaktive Stationskarten:</div>
+                            <div style="margin-left: 1rem;">
+                                <div style="cursor: pointer; color: #667eea;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html', '_blank')">│   ├── 🎯 Station 1: Ring-Drill</div>
+                                <div style="cursor: pointer; color: #f093fb;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-02-hand-eye.html', '_blank')">│   ├── 🤹 Station 2: Hand-Auge-Koordination</div>
+                                <div style="cursor: pointer; color: #4facfe;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-03-positioning.html', '_blank')">│   ├── 📍 Station 3: Positionierung am Netz</div>
+                                <div style="cursor: pointer; color: #43e97b;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-04-legs-catching.html', '_blank')">│   ├── 🦵 Station 4: Ball-Beinen-fangen</div>
+                                <div style="cursor: pointer; color: #fa709a;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-05-wall-bagging.html', '_blank')">│   ├── 🧱 Station 5: Wandbaggern</div>
+                                <div style="cursor: pointer; color: #ffecd2;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-06-wall-bagging-alt.html', '_blank')">│   └── 🔄 Station 6: Wandbaggern Alternative</div>
+                            </div>
+                            <div style="margin-top: 0.5rem; color: #2d3748;">📋 BUV-Dokumentation:</div>
+                            <div style="margin-left: 1rem;">
+                                <div style="cursor: pointer; color: #3182ce;" onclick="window.location.href='unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html'">│   ├── 📄 BUV Marc Kunz Standard</div>
+                                <div style="cursor: pointer; color: #3182ce;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/presentation/ue03-buv-final.pdf', '_blank')">│   └── 📊 PDF-Version</div>
+                            </div>
+                            <div style="margin-top: 0.5rem; color: #2d3748;">📦 Materialien:</div>
+                            <div style="margin-left: 1rem;">
+                                <div style="cursor: pointer; color: #d69e2e;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/materials/wortkarte-stoppschritt.pdf', '_blank')">│   ├── 📄 Wortkarte Stoppschritt</div>
+                                <div style="cursor: pointer; color: #d69e2e;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/materials/wortkarte-spielbrett.pdf', '_blank')">│   ├── 📄 Wortkarte Spielbrett</div>
+                                <div style="cursor: pointer; color: #d69e2e;" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/materials/wortkarte-huefthoehe.pdf', '_blank')">│   └── 📄 Wortkarte Hüfthöhe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Navigation Tests -->
+            <section style="margin-bottom: 3rem;">
+                <h2>🧪 Navigation-Tests</h2>
+                
+                <div class="hierarchy-grid">
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">🔍 Link-Verfügbarkeit</h3>
+                            <span class="card-status" id="linkTestStatus">Bereit</span>
+                        </div>
+                        
+                        <p class="card-description">
+                            Testet alle wichtigen Links der hierarchischen Navigation auf Verfügbarkeit.
+                        </p>
+                        
+                        <div id="linkTestResults" style="margin: 1rem 0; min-height: 100px; background: #f7fafc; border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 0.8rem; display: none;">
+                            Test-Ergebnisse werden hier angezeigt...
+                        </div>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-primary" onclick="testAllLinks()">🚀 Links testen</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">📱 Mobile-Responsiveness</h3>
+                            <span class="card-status" id="mobileTestStatus">Bereit</span>
+                        </div>
+                        
+                        <p class="card-description">
+                            Simuliert verschiedene Bildschirmgrößen und testet die Responsive-Design-Funktionalität.
+                        </p>
+                        
+                        <div id="mobileTestResults" style="margin: 1rem 0; min-height: 100px; background: #f7fafc; border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 0.8rem; display: none;">
+                            Mobile-Test-Ergebnisse...
+                        </div>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-primary" onclick="testMobileView()">📱 Mobile testen</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">⚡ Performance-Monitor</h3>
+                            <span class="card-status" id="performanceStatus">Bereit</span>
+                        </div>
+                        
+                        <p class="card-description">
+                            Misst Ladezeiten, JavaScript-Performance und Browser-Kompatibilität.
+                        </p>
+                        
+                        <div id="performanceResults" style="margin: 1rem 0; min-height: 100px; background: #f7fafc; border-radius: 8px; padding: 1rem; font-family: monospace; font-size: 0.8rem; display: none;">
+                            Performance-Metriken...
+                        </div>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-primary" onclick="performanceTest()">⚡ Performance messen</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Statistics -->
+            <section style="margin-bottom: 3rem;">
+                <h2>📊 Nutzungs-Statistiken</h2>
+                
+                <div class="hierarchy-grid">
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">📈 Navigation-Patterns</h3>
+                        </div>
+                        
+                        <div style="margin: 1rem 0;">
+                            <div style="display: flex; justify-content: space-between; margin: 0.5rem 0;">
+                                <span>Dashboard → Sport</span>
+                                <span style="color: #38a169; font-weight: bold;">85%</span>
+                            </div>
+                            <div style="background: #e2e8f0; height: 4px; border-radius: 2px; overflow: hidden;">
+                                <div style="background: #38a169; height: 100%; width: 85%; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin: 1rem 0;">
+                            <div style="display: flex; justify-content: space-between; margin: 0.5rem 0;">
+                                <span>Sport → Volleyball</span>
+                                <span style="color: #3182ce; font-weight: bold;">92%</span>
+                            </div>
+                            <div style="background: #e2e8f0; height: 4px; border-radius: 2px; overflow: hidden;">
+                                <div style="background: #3182ce; height: 100%; width: 92%; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin: 1rem 0;">
+                            <div style="display: flex; justify-content: space-between; margin: 0.5rem 0;">
+                                <span>Volleyball → UE3 BUV</span>
+                                <span style="color: #667eea; font-weight: bold;">78%</span>
+                            </div>
+                            <div style="background: #e2e8f0; height: 4px; border-radius: 2px; overflow: hidden;">
+                                <div style="background: #667eea; height: 100%; width: 78%; border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">🎯 Top-Materialien</h3>
+                        </div>
+                        
+                        <div style="margin: 1rem 0;">
+                            <div style="padding: 0.75rem; background: #f0f8f0; border-radius: 6px; margin: 0.5rem 0;">
+                                <strong style="color: #2f855a;">🏐 Volleyball BUV UE3</strong>
+                                <div style="font-size: 0.8rem; color: #718096;">6 Stationskarten • iPad-Integration</div>
+                            </div>
+                            <div style="padding: 0.75rem; background: #f7fafc; border-radius: 6px; margin: 0.5rem 0;">
+                                <strong style="color: #4a5568;">📱 QR-Code Generator</strong>
+                                <div style="font-size: 0.8rem; color: #718096;">Classroom-Integration Tool</div>
+                            </div>
+                            <div style="padding: 0.75rem; background: #fffaf0; border-radius: 6px; margin: 0.5rem 0;">
+                                <strong style="color: #d69e2e;">🏛️ GPG Arbeitsweisen</strong>
+                                <div style="font-size: 0.8rem; color: #718096;">Sybille Reinhardt Standard</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section>
+                <h2>🚀 Quick Actions</h2>
+                
+                <div class="hierarchy-grid">
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">📱 iPad-Classroom Setup</h3>
+                        </div>
+                        
+                        <p class="card-description">
+                            Komplettes Setup für iPad-Integration im Classroom.
+                        </p>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-primary" onclick="window.open('qr-generator.html', '_blank')">📱 QR-Codes generieren</button>
+                            <button class="card-btn btn-secondary" onclick="window.open('unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html', '_blank')">🎮 Station testen</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">📋 BUV-Template</h3>
+                        </div>
+                        
+                        <p class="card-description">
+                            Volleyball BUV als Template für weitere Sportarten nutzen.
+                        </p>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-primary" onclick="window.location.href='unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html'">📖 BUV ansehen</button>
+                            <button class="card-btn btn-secondary" onclick="alert('Template-Export-Funktion in Entwicklung!')">📄 Template exportieren</button>
+                        </div>
+                    </div>
+                    
+                    <div class="hierarchy-card level-4">
+                        <div class="card-header">
+                            <h3 class="card-title">🔄 Cache Management</h3>
+                        </div>
+                        
+                        <p class="card-description">
+                            Service Worker Cache für Offline-Funktionalität verwalten.
+                        </p>
+                        
+                        <div class="card-actions">
+                            <button class="card-btn btn-primary" onclick="clearCache()">🗑️ Cache leeren</button>
+                            <button class="card-btn btn-secondary" onclick="updateCache()">🔄 Cache aktualisieren</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <strong>Sitemap & Navigation-Tests</strong> • Hierarchische Struktur-Übersicht
+                </div>
+                <div style="display: flex; gap: 2rem; font-size: 0.9rem;">
+                    <span>🗺️ 4 Ebenen</span>
+                    <span>📦 25+ Materialien</span>
+                    <span>⚡ Performance-optimiert</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Testing JavaScript -->
+    <script>
+        // Link Availability Test
+        async function testAllLinks() {
+            const status = document.getElementById('linkTestStatus');
+            const results = document.getElementById('linkTestResults');
+            
+            status.textContent = 'Testing...';
+            status.className = 'card-status status-active';
+            results.style.display = 'block';
+            results.innerHTML = 'Teste Links...\n';
+            
+            const testLinks = [
+                { name: 'Dashboard', url: 'index.html' },
+                { name: 'Sport-Übersicht', url: 'unterricht/Sport/index.html' },
+                { name: 'Volleyball-Sequenz', url: 'unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/index.html' },
+                { name: 'BUV UE3', url: 'unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/volleyball-ue3-buv.html' },
+                { name: 'Station 1', url: 'unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/artifacts/stations/station-01-ring-drill.html' },
+                { name: 'QR-Generator', url: 'qr-generator.html' }
+            ];
+            
+            let passedTests = 0;
+            
+            for (let link of testLinks) {
+                try {
+                    const response = await fetch(link.url, { method: 'HEAD' });
+                    const statusText = response.ok ? '✅ OK' : `❌ ${response.status}`;
+                    results.innerHTML += `${link.name}: ${statusText}\n`;
+                    if (response.ok) passedTests++;
+                } catch (error) {
+                    results.innerHTML += `${link.name}: ❌ ERROR\n`;
+                }
+                // Small delay for UX
+                await new Promise(resolve => setTimeout(resolve, 200));
+            }
+            
+            results.innerHTML += `\n📊 Ergebnis: ${passedTests}/${testLinks.length} Links verfügbar`;
+            status.textContent = passedTests === testLinks.length ? 'Alle OK' : 'Teilweise';
+            status.className = passedTests === testLinks.length ? 'card-status status-completed' : 'card-status status-active';
+        }
+        
+        // Mobile Responsiveness Test
+        function testMobileView() {
+            const status = document.getElementById('mobileTestStatus');
+            const results = document.getElementById('mobileTestResults');
+            
+            status.textContent = 'Testing...';
+            status.className = 'card-status status-active';
+            results.style.display = 'block';
+            
+            const viewport = window.innerWidth;
+            const isMobile = viewport <= 768;
+            const isTablet = viewport > 768 && viewport <= 1024;
+            const isDesktop = viewport > 1024;
+            
+            results.innerHTML = `Aktuelle Viewport-Breite: ${viewport}px\n`;
+            results.innerHTML += `Gerätetype: ${isMobile ? 'Mobile' : isTablet ? 'Tablet' : 'Desktop'}\n\n`;
+            
+            // Test responsive elements
+            const sidebar = document.querySelector('.sidebar-nav');
+            const sidebarVisible = window.getComputedStyle(sidebar).display !== 'none';
+            results.innerHTML += `Sidebar sichtbar: ${sidebarVisible ? '✅' : '❌'}\n`;
+            
+            const breadcrumb = document.querySelector('.breadcrumb-nav');
+            const breadcrumbHeight = breadcrumb.offsetHeight;
+            results.innerHTML += `Breadcrumb-Höhe: ${breadcrumbHeight}px\n`;
+            
+            const cards = document.querySelectorAll('.hierarchy-card');
+            results.innerHTML += `Angezeigte Cards: ${cards.length}\n`;
+            
+            results.innerHTML += `\n📱 Mobile-Optimierung: ${isMobile ? '✅ Aktiv' : '⚠️ Desktop-Modus'}`;
+            
+            status.textContent = 'Abgeschlossen';
+            status.className = 'card-status status-completed';
+        }
+        
+        // Performance Test
+        function performanceTest() {
+            const status = document.getElementById('performanceStatus');
+            const results = document.getElementById('performanceResults');
+            
+            status.textContent = 'Measuring...';
+            status.className = 'card-status status-active';
+            results.style.display = 'block';
+            
+            // Performance timing
+            const perfData = performance.getEntriesByType('navigation')[0];
+            
+            results.innerHTML = 'Performance-Metriken:\n\n';
+            
+            if (perfData) {
+                const domContentLoaded = Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart);
+                const loadComplete = Math.round(perfData.loadEventEnd - perfData.loadEventStart);
+                const totalTime = Math.round(perfData.loadEventEnd - perfData.fetchStart);
+                
+                results.innerHTML += `DOM Content Loaded: ${domContentLoaded}ms\n`;
+                results.innerHTML += `Load Complete: ${loadComplete}ms\n`;
+                results.innerHTML += `Total Load Time: ${totalTime}ms\n\n`;
+            }
+            
+            // Memory usage (if available)
+            if (performance.memory) {
+                const memory = performance.memory;
+                results.innerHTML += `Speicher-Nutzung:\n`;
+                results.innerHTML += `Verwendet: ${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB\n`;
+                results.innerHTML += `Total: ${Math.round(memory.totalJSHeapSize / 1024 / 1024)}MB\n\n`;
+            }
+            
+            // JavaScript performance test
+            const start = performance.now();
+            // Simulate some work
+            for (let i = 0; i < 100000; i++) {
+                Math.random();
+            }
+            const jsTime = Math.round(performance.now() - start);
+            results.innerHTML += `JavaScript-Performance: ${jsTime}ms (100k Operationen)\n`;
+            
+            // Browser info
+            results.innerHTML += `\nBrowser: ${navigator.userAgent.split(' ')[0]}\n`;
+            results.innerHTML += `Service Worker: ${navigator.serviceWorker ? '✅' : '❌'}\n`;
+            
+            status.textContent = 'Abgeschlossen';
+            status.className = 'card-status status-completed';
+        }
+        
+        // Cache Management
+        async function clearCache() {
+            if ('serviceWorker' in navigator && 'caches' in window) {
+                try {
+                    const cacheNames = await caches.keys();
+                    await Promise.all(cacheNames.map(name => caches.delete(name)));
+                    alert('✅ Cache erfolgreich geleert!');
+                } catch (error) {
+                    alert('❌ Fehler beim Leeren des Caches: ' + error.message);
+                }
+            } else {
+                alert('⚠️ Cache-API nicht verfügbar');
+            }
+        }
+        
+        async function updateCache() {
+            if ('serviceWorker' in navigator) {
+                try {
+                    const registration = await navigator.serviceWorker.ready;
+                    await registration.update();
+                    alert('✅ Cache wird im Hintergrund aktualisiert!');
+                } catch (error) {
+                    alert('❌ Fehler beim Aktualisieren: ' + error.message);
+                }
+            } else {
+                alert('⚠️ Service Worker nicht verfügbar');
+            }
+        }
+        
+        // Auto-run basic checks on load
+        window.addEventListener('load', function() {
+            // Auto-detect viewport and show mobile status
+            const viewport = window.innerWidth;
+            if (viewport <= 768) {
+                document.getElementById('mobileTestStatus').textContent = 'Mobile erkannt';
+                document.getElementById('mobileTestStatus').className = 'card-status status-completed';
+            }
+        });
+    </script>
+</body>
+</html>

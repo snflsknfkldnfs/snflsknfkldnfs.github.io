@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 6: Wandbaggern</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7941E 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .station-card {
+            max-width: 450px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .station-header {
+            background: linear-gradient(135deg, #FF6B35, #F7941E);
+            color: white;
+            padding: 25px 20px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .timer-indicator {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .station-number {
+            background: white;
+            color: #FF6B35;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+        
+        .station-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .video-placeholder {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .video-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .focus-section {
+            background: linear-gradient(135deg, #DC143C, #FF1744);
+            color: white;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+        }
+        
+        .setup-section {
+            background: linear-gradient(135deg, #2196F3, #21CBF3);
+            color: white;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 12px;
+        }
+        
+        .instructions {
+            background: #E8F5E8;
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .instructions h3 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            color: #1B5E20;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .rotation-section {
+            background: linear-gradient(135deg, #FF9800, #FFB74D);
+            color: white;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .levels {
+            background: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .levels h3 {
+            color: #E65100;
+            margin-bottom: 15px;
+        }
+        
+        .level {
+            background: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #FF9800;
+        }
+        
+        .level strong {
+            color: #E65100;
+        }
+        
+        .tips {
+            background: #E3F2FD;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .tips h3 {
+            color: #1565C0;
+            margin-bottom: 15px;
+        }
+        
+        .movement-check {
+            background: #FFF8E1;
+            border: 2px solid #FFB300;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px;
+        }
+        
+        .movement-check h3 {
+            color: #E65100;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .check-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .check-number {
+            background: #FFB300;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 600px) {
+            .station-card {
+                margin: 10px;
+            }
+            
+            .station-title {
+                font-size: 24px;
+            }
+            
+            .instructions, .levels, .tips, .movement-check {
+                margin: 15px 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="station-card">
+        <div class="station-header">
+            <div class="timer-indicator">⏱ bis Musikwechsel</div>
+            <div class="station-number">6</div>
+            <h1 class="station-title">Wandbaggern</h1>
+            
+            <div class="video-placeholder">
+                <div class="video-icon">📱</div>
+                <div>SCHAU ZUERST DAS VIDEO!</div>
+                <div style="font-size: 14px; margin-top: 5px;">Dann erst mit der Übung starten</div>
+            </div>
+        </div>
+        
+        <div class="focus-section">
+            ✨ HEUTE WICHTIG: ALLE 3 Merkmale kombiniert
+        </div>
+        
+        <div class="setup-section">
+            <h3>🔧 SETUP: Kreppband-Linie an der Wand</h3>
+            <p>Ball muss ÜBER die Linie gespielt werden</p>
+        </div>
+        
+        <div class="instructions">
+            <h3>SO GEHT'S</h3>
+            <ol>
+                <li>A steht 2 Meter von der Wand weg</li>
+                <li>Ball gegen Wand baggern (über Kreppband-Linie)</li>
+                <li>B baggert zurückprallenden Ball zu A</li>
+                <li>Kontinuierlich weiterspielen</li>
+                <li>Bis Musikwechsel: dann Rollen tauschen</li>
+            </ol>
+            
+            <div style="background: #C8E6C9; padding: 10px; border-radius: 8px; margin-top: 15px;">
+                <strong>✅ KONTINUIERLICH:</strong> Nicht nach jedem Ball stoppen!<br>
+                Versucht einen Rhythmus zu finden
+            </div>
+        </div>
+        
+        <div class="rotation-section">
+            ⏱ bis Musikwechsel → Rollenwechsel
+        </div>
+        
+        <div class="levels">
+            <h3>📊 SCHWIERIGKEITSSTUFEN</h3>
+            <div class="level">
+                <strong>Level 1:</strong> Kurze Distanz zur Wand (1,5m)
+            </div>
+            <div class="level">
+                <strong>Level 2:</strong> Normale Distanz (2,5m)
+            </div>
+            <div class="level">
+                <strong>Level 3:</strong> Zielgenauigkeit - Ball muss in bestimmtem Bereich landen
+            </div>
+        </div>
+        
+        <div class="movement-check">
+            <h3>✅ BEWEGUNGSMERKMALE CHECKEN</h3>
+            <div class="check-item">
+                <div class="check-number">1</div>
+                <div><strong>STOPPSCHRITT:</strong> Rechtzeitig zum Ball bewegen</div>
+            </div>
+            <div class="check-item">
+                <div class="check-number">2</div>
+                <div><strong>SPIELBRETT:</strong> Unterarme gestreckt und parallel</div>
+            </div>
+            <div class="check-item">
+                <div class="check-number">3</div>
+                <div><strong>HÜFTHÖHE:</strong> Ball auf richtiger Höhe treffen</div>
+            </div>
+        </div>
+        
+        <div class="tips">
+            <h3>💡 TIPPS</h3>
+            <p><strong>Zu einfach?</strong> Mehr Abstand zur Wand oder schnellerer Rhythmus</p>
+            <p><strong>Zu schwer?</strong> Näher zur Wand oder erst einmal Bälle baggern</p>
+        </div>
+    </div>
+</body>
+</html>

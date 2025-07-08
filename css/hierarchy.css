@@ -1,0 +1,545 @@
+/* ===================================================================
+   HIERARCHICAL NAVIGATION CSS FRAMEWORK
+   Zoomende Navigation für LAA Unterrichtsmaterialien
+   =================================================================== */
+
+:root {
+    /* Hierarchical Colors */
+    --level-1-color: #1a365d;    /* Fächer-Ebene */
+    --level-2-color: #2c5282;    /* Sequenz-Ebene */
+    --level-3-color: #3182ce;    /* UE-Ebene */
+    --level-4-color: #4299e1;    /* Material-Ebene */
+    
+    /* Navigation States */
+    --nav-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --zoom-scale: 1.05;
+    --preview-height: 200px;
+    
+    /* Layout Variables */
+    --sidebar-width: 280px;
+    --breadcrumb-height: 60px;
+    --card-gap: 1.5rem;
+    --border-radius-lg: 12px;
+}
+
+/* =================
+   LAYOUT FOUNDATION
+   ================= */
+
+.app-container {
+    display: grid;
+    grid-template-areas: 
+        "breadcrumb breadcrumb"
+        "sidebar main"
+        "sidebar footer";
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: var(--breadcrumb-height) 1fr auto;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.breadcrumb-nav {
+    grid-area: breadcrumb;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar-nav {
+    grid-area: sidebar;
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.app-footer {
+    grid-area: footer;
+    background: #f7fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* ==================
+   BREADCRUMB NAVIGATION
+   ================== */
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #718096;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: var(--nav-transition);
+}
+
+.breadcrumb-item:hover {
+    background: #f7fafc;
+    color: var(--level-2-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--level-2-color);
+    font-weight: 600;
+}
+
+.breadcrumb-separator {
+    color: #cbd5e0;
+    font-size: 0.8rem;
+}
+
+.back-button {
+    background: var(--level-2-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--nav-transition);
+    margin-right: 1rem;
+}
+
+.back-button:hover {
+    background: var(--level-1-color);
+    transform: translateY(-1px);
+}
+
+/* ==================
+   HIERARCHICAL CARDS
+   ================== */
+
+.hierarchy-grid {
+    display: grid;
+    gap: var(--card-gap);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.hierarchy-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    transition: var(--nav-transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hierarchy-card:hover {
+    transform: translateY(-2px) scale(var(--zoom-scale));
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.hierarchy-card.level-1 {
+    border-left: 4px solid var(--level-1-color);
+}
+
+.hierarchy-card.level-2 {
+    border-left: 4px solid var(--level-2-color);
+}
+
+.hierarchy-card.level-3 {
+    border-left: 4px solid var(--level-3-color);
+}
+
+.hierarchy-card.level-4 {
+    border-left: 4px solid var(--level-4-color);
+}
+
+/* ==================
+   CARD COMPONENTS
+   ================== */
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0;
+}
+
+.card-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-completed {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status-active {
+    background: #bee3f8;
+    color: #2a4365;
+}
+
+.status-planned {
+    background: #fed7d7;
+    color: #742a2a;
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.card-description {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.card-preview {
+    height: var(--preview-height);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.card-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.card-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--nav-transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--level-2-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--level-1-color);
+}
+
+.btn-secondary {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+    background: #edf2f7;
+}
+
+/* ==================
+   SIDEBAR NAVIGATION
+   ================== */
+
+.nav-section {
+    margin-bottom: 2rem;
+}
+
+.nav-section-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #a0aec0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+}
+
+.nav-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 0.25rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--nav-transition);
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    background: #f7fafc;
+    color: var(--level-2-color);
+}
+
+.nav-link.active {
+    background: var(--level-2-color);
+    color: white;
+}
+
+.nav-badge {
+    background: #e2e8f0;
+    color: #4a5568;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+/* ==================
+   PROGRESS INDICATORS
+   ================== */
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--level-3-color), var(--level-4-color));
+    transition: width 0.3s ease;
+}
+
+.sequence-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--level-2-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-top: 0.25rem;
+}
+
+/* ==================
+   SEARCH & FILTERS
+   ================== */
+
+.search-bar {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-tab {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    color: #718096;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: var(--nav-transition);
+}
+
+.filter-tab.active {
+    color: var(--level-2-color);
+    border-bottom-color: var(--level-2-color);
+}
+
+/* ==================
+   RESPONSIVE DESIGN
+   ================== */
+
+@media (max-width: 1024px) {
+    .app-container {
+        grid-template-areas: 
+            "breadcrumb"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: var(--breadcrumb-height) 1fr auto;
+    }
+    
+    .sidebar-nav {
+        position: fixed;
+        top: var(--breadcrumb-height);
+        left: -100%;
+        width: var(--sidebar-width);
+        height: calc(100vh - var(--breadcrumb-height));
+        z-index: 100;
+        transition: left 0.3s ease;
+    }
+    
+    .sidebar-nav.open {
+        left: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--level-2-color);
+    }
+}
+
+@media (max-width: 768px) {
+    .hierarchy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .breadcrumb-nav {
+        padding: 0 1rem;
+    }
+    
+    .breadcrumb {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .sequence-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================
+   ZOOM ANIMATIONS
+   ================== */
+
+.zoom-enter {
+    animation: zoomIn 0.3s ease-out;
+}
+
+.zoom-exit {
+    animation: zoomOut 0.3s ease-in;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+/* ==================
+   UTILITY CLASSES
+   ================== */
+
+.hidden { display: none; }
+.loading { opacity: 0.6; pointer-events: none; }
+.favorite { color: #f6ad55; }
+.text-center { text-align: center; }
+.mb-0 { margin-bottom: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mr-2 { margin-right: 1rem; }

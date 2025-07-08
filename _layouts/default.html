@@ -1,9 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.lang | default: 'de' }}">
 <head>
-  <title>{{ site.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% if page.title %}
+        <title>{{ page.title }} | {{ site.title }}</title>
+    {% else %}
+        <title>{{ site.title }}</title>
+    {% endif %}
+    
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ page.author | default: site.author }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/favicon.ico' | relative_url }}">
+    
+    <!-- SEO -->
+    {% seo %}
+    
+    <!-- RSS -->
+    {% feed_meta %}
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    
+    <!-- Additional head content -->
+    {% if page.additional_head %}
+        {{ page.additional_head }}
+    {% endif %}
 </head>
 <body>
-  {{ content }}
+    <!-- Main Content -->
+    <main id="main-content">
+        {{ content }}
+    </main>
+    
+    <!-- Footer (if not already in content) -->
+    {% unless page.no_footer %}
+        {% unless content contains '<footer>' %}
+            <footer style="margin-top: 3rem; padding: 2rem 0; border-top: 1px solid #e2e8f0; text-align: center; background-color: #f7fafc;">
+                <div class="container">
+                    <p><strong>{{ site.title }}</strong> | Entwickelt mit PATA-Standards und DiSoAn-Prinzipien</p>
+                    <p><em>Schwerpunkt: Innovative iPad-Integration im Unterricht • Marc Kunz Standard • Systemtheorie</em></p>
+                    <p><strong>Repository:</strong> <a href="https://github.com/{{ site.github_username }}/{{ site.repository | split: '/' | last }}" target="_blank">GitHub</a> | 
+                    <strong>Powered by:</strong> GitHub Pages + Jekyll</p>
+                </div>
+            </footer>
+        {% endunless %}
+    {% endunless %}
+    
+    <!-- Service Worker for PWA -->
+    {% unless page.no_service_worker %}
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').catch(console.error);
+            }
+        </script>
+    {% endunless %}
+    
+    <!-- Additional scripts -->
+    {% if page.additional_scripts %}
+        {{ page.additional_scripts }}
+    {% endif %}
 </body>
 </html>

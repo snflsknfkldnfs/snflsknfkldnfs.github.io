@@ -11,14 +11,12 @@
             "id": "6994df80d284a5cb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "html-view",
               "state": {
-                "file": "notizen/meta_prozesse/NAVIGATION_STANDARDS_INTEGRATION_V2.md",
-                "mode": "source",
-                "source": false
+                "file": "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/index.html"
               },
-              "icon": "lucide-file",
-              "title": "NAVIGATION_STANDARDS_INTEGRATION_V2"
+              "icon": "code-glyph",
+              "title": "index"
             }
           }
         ]
@@ -171,15 +169,30 @@
   },
   "active": "85c6e86c6f472718",
   "lastOpenFiles": [
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/html_components/dialogue_cards_complete_set.html",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/html_components/dialogue_card_green_B.html",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/html_components/dialogue_card_green_A.html",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/html_components/classroom_screen_beamer_final.html",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/html_components",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/classroom_screen_beamer_während Erarbeitung.html",
+    "notizen/meta_prozesse/SYSTEM_UPDATE_Stakeholder_Integration_Erfolgreich.md",
+    "notizen/meta_prozesse/DiSoAn_Stakeholder_Integration_Framework_Final.md",
+    "notizen/meta_prozesse/Stakeholder_Integration_Mittelschulen_Digitalisierung_2025.md",
+    "notizen/meta_prozesse/DiSoAn_Integration_Rieger_System_Evolution.md",
+    "notizen/meta_prozesse/Live_Lern_Prompts_Rieger.md",
+    "notizen/meta_prozesse/Ausbildungstag_Rieger_DiSoAn_Framework.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/UE2_Materialien.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/UE2_Verlaufsplan.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station6_Ziel_Pritschen.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station5_Wand_Pritschen.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station4_Ball_Kopf_Koordination.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station3_Positionierung_Netz.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station2_Hand_Koordination.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station1_Finger_Prisma_Drill.html",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen",
+    "notizen/meta_prozesse/NAVIGATION_STANDARDS_INTEGRATION_V2.md",
+    "meta/chat-transitions/CONTINUATION_PROMPT_SESSION_11.md",
+    "meta/chat-transitions/session-10-to-11-hierarchical-navigation.md",
+    "HIERARCHICAL_NAVIGATION_IMPLEMENTED.md",
+    "GITHUB_PAGES_FIXED.md",
+    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/meta/chat-transitions/session-09-to-10-github-pages-preparation.md",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/buv_final_documentation_v6.1.md",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/Tafel_Mindmap_Konzept.md",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/image",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben swimming.png",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben ate.png",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben 1.png",
@@ -190,12 +203,8 @@
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.39.png",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.33.png",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.46.21.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/E5b_My Weekend_Wortkarten_do_did.txt",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Verlaufsplan_v6.0_Final.md",
     "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback",
-    "unterricht/E5_Unit5_People_and_Places/v5.1_components_archive/phase1_bens_weekend_v5.0_20240620.html",
     "unterricht/E5_Unit5_People_and_Places/Wortkarten_Liste_v4.0.md",
     "unterricht/E5_Unit5_People_and_Places/Sequenzplan_Unit5_People_and_Places.md",
     "unterricht/E5_Unit5_People_and_Places/STATUS_QUO_BUV_v4.0_17062025.md",
@@ -205,17 +214,6 @@
     "unterricht/E5_Unit5_People_and_Places/BUV_v4.0_Finale_Dokumentation.md",
     "unterricht/E5_Unit5_People_and_Places/BUV_v3.0_Aenderungsuebersicht.md",
     "unterricht/E5_Unit5_People_and_Places/BUV_Verlaufsplan_Betreuungslehrerin_v2.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Tafelbild_Fahrplan_v1.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Speaking_MyWeekend_v5.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Speaking_MyWeekend_v3.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Speaking_MyWeekend_v2.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Speaking_MyWeekend_v1.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Materialien_Speaking_v1.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Executive_Summary_v1.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Dokumentation_Uebersicht_v2.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Dokumentation_Uebersicht.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Betreuungslehrerin_Final_v4.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Betreuungslehrerin_Final_v3.0.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/STATUS_QUO_PROMPT_2025-06-22.md"
+    "unterricht/E5_Unit5_People_and_Places/BUV_Tafelbild_Fahrplan_v1.0.md"
   ]
 }

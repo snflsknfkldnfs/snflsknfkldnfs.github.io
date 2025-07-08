@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station 3: Positionierung am Netz - UE2 Oberes Zuspiel</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .station-card { background: rgba(255,255,255,0.95); color: #333; border-radius: 20px; padding: 25px; max-width: 600px; margin: 0 auto; box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+        .station-header { text-align: center; padding-bottom: 20px; border-bottom: 3px solid #667eea; margin-bottom: 20px; }
+        .station-number { background: #667eea; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; font-weight: bold; margin: 0 auto 10px; }
+        .station-title { font-size: 2.2em; font-weight: bold; margin: 0; color: #333; }
+        .ue-info { background: #e3f2fd; padding: 10px; border-radius: 8px; margin: 10px 0; text-align: center; font-size: 0.9em; color: #1976d2; font-weight: bold; }
+        .video-section { background: #f8f9fa; border: 2px solid #667eea; border-radius: 15px; padding: 15px; text-align: center; margin: 20px 0; }
+        .video-icon { font-size: 3em; margin-bottom: 10px; }
+        .movement-focus { background: #ff6b6b; color: white; padding: 15px; border-radius: 15px; text-align: center; margin: 20px 0; font-size: 1.3em; font-weight: bold; }
+        .roles-section { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .role { background: #e3f2fd; padding: 15px; border-radius: 10px; text-align: center; border: 2px solid #2196f3; }
+        .role-title { font-weight: bold; color: #1976d2; font-size: 1.1em; margin-bottom: 8px; }
+        .task-section { background: #f0f8f0; border: 2px solid #4caf50; border-radius: 15px; padding: 20px; margin: 20px 0; }
+        .task-title { font-size: 1.4em; font-weight: bold; color: #2e7d32; margin-bottom: 15px; text-align: center; }
+        .task-steps { font-size: 1.1em; line-height: 1.6; }
+        .rotation-box { background: #ff9800; color: white; padding: 15px; border-radius: 10px; text-align: center; font-size: 1.2em; font-weight: bold; margin: 20px 0; }
+        .movement-checklist { background: #fff3e0; border: 2px solid #ff9800; border-radius: 10px; padding: 15px; margin: 20px 0; }
+        .movement-item { display: flex; align-items: center; margin: 10px 0; font-size: 1.1em; font-weight: bold; }
+        .movement-icon { background: #ff9800; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; }
+        .optional-section { background: #f5f5f5; border-radius: 8px; padding: 10px; margin: 15px 0; font-size: 0.9em; color: #666; }
+        .timer { position: fixed; top: 20px; right: 20px; background: rgba(0,0,0,0.8); color: white; padding: 10px 15px; border-radius: 25px; font-weight: bold; font-size: 1.1em; }
+        .navigation { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center; }
+        .nav-button { background: rgba(255,255,255,0.2); color: white; border: 2px solid white; padding: 8px 16px; border-radius: 20px; text-decoration: none; margin: 5px; display: inline-block; transition: all 0.3s; font-weight: bold; }
+        .nav-button:hover { background: white; color: #667eea; }
+        @media (max-width: 768px) { .roles-section { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="timer" id="timer">⏱️ 2:30 bis Musikwechsel</div>
+    <div class="navigation">
+        <a href="Station2_Hand_Koordination.html" class="nav-button">← Station 2</a>
+        <a href="../../volleyball-ue2-buv.html" class="nav-button">Zurück zur BUV</a>
+        <a href="Station4_Ball_Kopf_Koordination.html" class="nav-button">Station 4 →</a>
+    </div>
+    <div class="station-card">
+        <div class="station-header">
+            <div class="station-number">3</div>
+            <h1 class="station-title">Positionierung am Netz</h1>
+            <div class="ue-info">UE2: Oberes Zuspiel (Pritschen) - Klasse 8</div>
+        </div>
+        <div class="video-section">
+            <div class="video-icon">📱</div>
+            <strong>SCHAU ZUERST DAS VIDEO!</strong><br>
+            Dann erst mit der Übung starten
+        </div>
+        <div class="movement-focus">
+            🎯 HEUTE WICHTIG: STOPPSCHRITT zum Ball
+        </div>
+        <div class="roles-section">
+            <div class="role"><div class="role-title">Werfer</div>Ball über Netz spielen</div>
+            <div class="role"><div class="role-title">Pritscher</div>Sich positionieren + Ball annehmen</div>
+            <div class="role"><div class="role-title">Beobachter</div>Bewegungsmerkmale checken</div>
+        </div>
+        <div class="task-section">
+            <div class="task-title">SO GEHT'S</div>
+            <div class="task-steps">
+                1. Werfer steht auf Kasten hinter dem Netz<br>
+                2. Ball wird über Netz in verschiedene Bereiche gespielt<br>
+                3. Pritscher macht Stoppschritt zum Ball<br>
+                4. Ball in Stirnhöhe fangen oder pritschen<br>
+                5. Nach 3 Versuchen: Rollen wechseln
+            </div>
+        </div>
+        <div class="rotation-box">↻ 3 Versuche → Rollenwechsel</div>
+        <div class="movement-checklist">
+            <h3 style="margin-top: 0; color: #e65100;">✅ BEWEGUNGSMERKMALE CHECKEN</h3>
+            <div class="movement-item"><div class="movement-icon">1</div><div>STOPPSCHRITT: Rechtzeitig zum Ball bewegen</div></div>
+            <div class="movement-item"><div class="movement-icon">2</div><div>PRISMA: Finger bereit für Ballkontakt</div></div>
+            <div class="movement-item"><div class="movement-icon">3</div><div>STIRNHÖHE: Ball auf richtiger Höhe treffen</div></div>
+        </div>
+        <div class="optional-section">
+            <strong>Level 1:</strong> Ball fangen statt pritschen<br>
+            <strong>Level 2:</strong> Ball zurückpritschen<br>
+            <strong>Level 3:</strong> Gezielte Rückgabe durch Ring
+        </div>
+    </div>
+    <script>
+        let timeLeft = 150;
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            const timeString = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            if (timeLeft > 0) {
+                document.getElementById('timer').innerHTML = `⏱️ ${timeString} bis Musikwechsel`;
+                timeLeft--;
+            } else {
+                document.getElementById('timer').innerHTML = `🔔 STATIONSWECHSEL!`;
+                document.getElementById('timer').style.background = '#ff4444';
+                setTimeout(() => { timeLeft = 150; document.getElementById('timer').style.background = 'rgba(0,0,0,0.8)'; }, 5000);
+            }
+        }
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
