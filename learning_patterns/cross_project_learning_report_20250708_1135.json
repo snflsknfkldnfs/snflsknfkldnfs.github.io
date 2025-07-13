@@ -1,0 +1,473 @@
+{
+  "timestamp": "2025-07-08T11:35:04.686517",
+  "analysis_summary": {
+    "total_projects_analyzed": 9,
+    "high_quality_projects": 9,
+    "unique_stakeholders": 68,
+    "unique_methodologies": 20,
+    "recommendations_generated": 2
+  },
+  "patterns": {
+    "high_quality_elements": [
+      {
+        "project": "GPG6",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      },
+      {
+        "project": "Seminar",
+        "quality": 100,
+        "version": "1.0.1",
+        "update_count": 2
+      },
+      {
+        "project": "M6",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      },
+      {
+        "project": "E6",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      },
+      {
+        "project": "WiB5",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      },
+      {
+        "project": "GPG5",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      },
+      {
+        "project": "M5",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      },
+      {
+        "project": "WiB6",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      },
+      {
+        "project": "E5",
+        "quality": 100,
+        "version": "1.0.0",
+        "update_count": 1
+      }
+    ],
+    "stakeholder_patterns": {
+      "Museen": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Historische Vereine": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Kommunalpolitik": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Unterrichtsmaterialien": [
+        "GPG6",
+        "WiB5",
+        "M5",
+        "E5",
+        "M6",
+        "E6",
+        "WiB6",
+        "GPG5"
+      ],
+      "Fach-Notizen": [
+        "GPG6",
+        "WiB5",
+        "M5",
+        "E5",
+        "M6",
+        "E6",
+        "WiB6",
+        "GPG5"
+      ],
+      "Digitale Integration": [
+        "GPG6",
+        "WiB5",
+        "M5",
+        "E5",
+        "M6",
+        "E6",
+        "WiB6",
+        "GPG5"
+      ],
+      "22 Schüler": [
+        "GPG6",
+        "WiB5",
+        "M5",
+        "E5",
+        "M6",
+        "E6",
+        "WiB6",
+        "GPG5"
+      ],
+      "Ausstattung": [
+        "GPG6",
+        "WiB5",
+        "M5",
+        "E5",
+        "M6",
+        "E6",
+        "WiB6",
+        "GPG5"
+      ],
+      "Raum": [
+        "GPG6",
+        "GPG6",
+        "WiB5",
+        "M5",
+        "E5",
+        "M6",
+        "E6",
+        "WiB6",
+        "GPG5",
+        "GPG5"
+      ],
+      "Sozialraum": [
+        "GPG6",
+        "WiB5",
+        "M5",
+        "E5",
+        "M6",
+        "E6",
+        "WiB6",
+        "GPG5"
+      ],
+      "Demokratie": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Gesellschaft": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Zeit": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Rollespiele": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Projektarbeit": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Exkursionen": [
+        "GPG6",
+        "GPG5"
+      ],
+      "Betriebe": [
+        "WiB5",
+        "WiB6"
+      ],
+      "IHK/HWK": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Berufsberatung": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Eltern": [
+        "WiB5",
+        "M5",
+        "M6",
+        "WiB6"
+      ],
+      "Projektmethodik": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Berufsorientierung": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Wirtschaftsverständnis": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Schülerfirma": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Betriebserkundung": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Expertengespräche": [
+        "WiB5",
+        "WiB6"
+      ],
+      "Nachhilfe": [
+        "M5",
+        "M6"
+      ],
+      "Förderlehrer": [
+        "M5",
+        "M6"
+      ],
+      "Grundrechenarten": [
+        "M5",
+        "M6"
+      ],
+      "Geometrie": [
+        "M5",
+        "M6"
+      ],
+      "Größen": [
+        "M5",
+        "M6"
+      ],
+      "Daten": [
+        "M5",
+        "M6"
+      ],
+      "Handlungsorientierung": [
+        "M5",
+        "M6"
+      ],
+      "Differenzierung": [
+        "M5",
+        "M6"
+      ],
+      "Digitale Tools": [
+        "M5",
+        "M6"
+      ],
+      "Native Speakers": [
+        "E5",
+        "E6"
+      ],
+      "Kulturvereine": [
+        "E5",
+        "E6"
+      ],
+      "Austauschprogramme": [
+        "E5",
+        "E6"
+      ],
+      "Communication": [
+        "E5",
+        "E6"
+      ],
+      "Intercultural Competence": [
+        "E5",
+        "E6"
+      ],
+      "Language Awareness": [
+        "E5",
+        "E6"
+      ],
+      "Task-Based Learning": [
+        "E5",
+        "E6"
+      ],
+      "Content Integration": [
+        "E5",
+        "E6"
+      ],
+      "Authentic Materials": [
+        "E5",
+        "E6"
+      ],
+      "Seminarleitung": [
+        "Seminar"
+      ],
+      "Seminarlehrkräfte": [
+        "Seminar"
+      ],
+      "LAA-Kohorte": [
+        "Seminar"
+      ],
+      "Mentorlehrkräfte": [
+        "Seminar"
+      ],
+      "Ausbildungsschulen": [
+        "Seminar"
+      ],
+      "Universitäten": [
+        "Seminar"
+      ],
+      "Staatl. Prüfungsamt": [
+        "Seminar"
+      ],
+      "und Leistungsstandards\n- Ministerium": [
+        "Seminar"
+      ],
+      "Seminarcloud-Materialien": [
+        "Seminar"
+      ],
+      "Meta-Prozesse": [
+        "Seminar"
+      ],
+      "Template-System": [
+        "Seminar"
+      ],
+      "Reflexions-Engine": [
+        "Seminar"
+      ],
+      "und Erfahrungsreflexion\n- Praxis-Theorie-Interface": [
+        "Seminar"
+      ],
+      "Kollegialitäts-Facilitator": [
+        "Seminar"
+      ],
+      "Kompetenz-Tracker": [
+        "Seminar"
+      ],
+      "und Erfahrungsreflexion\n2. Theoriebrücke": [
+        "Seminar"
+      ],
+      "Erwachsenenlernen": [
+        "Seminar"
+      ],
+      "Konstruktivistische Didaktik": [
+        "Seminar"
+      ],
+      "Systemische Beratung": [
+        "Seminar"
+      ],
+      "Evidenzbasierte Praxis": [
+        "Seminar"
+      ],
+      "LAA-Feedback → Seminar-Anpassung\n- Mentor-Evaluationen → Praxis-Theorie-Balance  \n- Prüfungsergebnisse → Qualitätsoptimierung\n- Alumni-Tracking → Langzeit-Wirksamkeit\n\nPATA-Protokoll aktiv": [
+        "Seminar"
+      ],
+      "KI-System kennt Grenzen pädagogischer Intuition und situativer Kontextualisierung\n- LAA-Individualität und Schulkontexte erfordern menschliche Interpretation\n- Komplexität realer Unterrichtssituationen übersteigt algorithmische Erfassung\n\nRückkopplungseffekte beachten": [
+        "Seminar"
+      ],
+      "Unterstützungssystem kann Abhängigkeiten schaffen statt Autonomie fördern\n- Kontinuierliche Reflexion über Empowerment vs. Bevormundung\n- Balance zwischen Struktur und Freiraum für LAA-Entwicklung\n\nBlinde Flecken identifizieren": [
+        "Seminar"
+      ],
+      "Technische Rationalität könnte pädagogische Intuition dominieren  \n- Macht-Asymmetrien zwischen KI-System und LAA systematisch reflektieren\n- Kulturelle und biografische Vielfalt der LAA angemessen berücksichtigen\n\n📊 VERSION & QUALITÄT\nProjektversion": [
+        "Seminar"
+      ]
+    },
+    "methodology_effectiveness": {
+      "Rollespiele": 2,
+      "Projektarbeit": 2,
+      "Exkursionen": 2,
+      "Schülerfirma": 2,
+      "Betriebserkundung": 2,
+      "Expertengespräche": 2,
+      "Handlungsorientierung": 2,
+      "Differenzierung": 2,
+      "Digitale Tools": 2,
+      "Task-Based Learning": 2,
+      "Content Integration": 2,
+      "Authentic Materials": 2,
+      "Erwachsenenlernen": 1,
+      "Konstruktivistische Didaktik": 1,
+      "Systemische Beratung": 1,
+      "Evidenzbasierte Praxis": 1,
+      "LAA-Feedback → Seminar-Anpassung\n- Mentor-Evaluationen → Praxis-Theorie-Balance  \n- Prüfungsergebnisse → Qualitätsoptimierung\n- Alumni-Tracking → Langzeit-Wirksamkeit\n\nPATA-Protokoll aktiv": 1,
+      "KI-System kennt Grenzen pädagogischer Intuition und situativer Kontextualisierung\n- LAA-Individualität und Schulkontexte erfordern menschliche Interpretation\n- Komplexität realer Unterrichtssituationen übersteigt algorithmische Erfassung\n\nRückkopplungseffekte beachten": 1,
+      "Unterstützungssystem kann Abhängigkeiten schaffen statt Autonomie fördern\n- Kontinuierliche Reflexion über Empowerment vs. Bevormundung\n- Balance zwischen Struktur und Freiraum für LAA-Entwicklung\n\nBlinde Flecken identifizieren": 1,
+      "Technische Rationalität könnte pädagogische Intuition dominieren  \n- Macht-Asymmetrien zwischen KI-System und LAA systematisch reflektieren\n- Kulturelle und biografische Vielfalt der LAA angemessen berücksichtigen\n\n📊 VERSION & QUALITÄT\nProjektversion": 1
+    },
+    "content_structures": {},
+    "version_evolution_patterns": [
+      {
+        "project": "GPG6",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.192079"
+      },
+      {
+        "project": "Seminar",
+        "version": "1.0.1",
+        "update_count": 2,
+        "last_updated": "2025-07-08T11:14:25.126582"
+      },
+      {
+        "project": "M6",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.320309"
+      },
+      {
+        "project": "E6",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.386411"
+      },
+      {
+        "project": "WiB5",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.225849"
+      },
+      {
+        "project": "GPG5",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.161554"
+      },
+      {
+        "project": "M5",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.289548"
+      },
+      {
+        "project": "WiB6",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.257249"
+      },
+      {
+        "project": "E5",
+        "version": "1.0.0",
+        "update_count": 1,
+        "last_updated": "2025-07-08T11:14:25.354584"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "type": "stakeholder_standardization",
+      "priority": "medium",
+      "suggestion": "Gemeinsame Stakeholder standardisieren: Unterrichtsmaterialien, Fach-Notizen, Digitale Integration, 22 Schüler, Ausstattung, Raum, Sozialraum, Eltern",
+      "data": {
+        "Unterrichtsmaterialien": 8,
+        "Fach-Notizen": 8,
+        "Digitale Integration": 8,
+        "22 Schüler": 8,
+        "Ausstattung": 8,
+        "Raum": 10,
+        "Sozialraum": 8,
+        "Eltern": 4
+      },
+      "action": "create_stakeholder_templates"
+    },
+    {
+      "type": "structure_standardization",
+      "priority": "low",
+      "suggestion": "Inkonsistente Strukturen harmonisieren: KERNAUFTRAG, STAKEHOLDER, HANDLUNGSLOGIK, SELBSTREFLEXION",
+      "data": [
+        "KERNAUFTRAG",
+        "STAKEHOLDER",
+        "HANDLUNGSLOGIK",
+        "SELBSTREFLEXION"
+      ],
+      "action": "standardize_content_structure"
+    }
+  ]
+}

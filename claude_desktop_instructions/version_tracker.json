@@ -1,0 +1,61 @@
+{
+  "current_version": "3.0.0",
+  "projects": {
+    "Seminar": {
+      "version": "1.0.1",
+      "created_at": "2025-07-08T11:12:16.154238",
+      "last_updated": "2025-07-08T11:14:25.126582",
+      "update_count": 2
+    },
+    "GPG5": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.161554",
+      "last_updated": "2025-07-08T11:14:25.161554",
+      "update_count": 1
+    },
+    "GPG6": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.192079",
+      "last_updated": "2025-07-08T11:14:25.192079",
+      "update_count": 1
+    },
+    "WiB5": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.225849",
+      "last_updated": "2025-07-08T11:14:25.225849",
+      "update_count": 1
+    },
+    "WiB6": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.257249",
+      "last_updated": "2025-07-08T11:14:25.257249",
+      "update_count": 1
+    },
+    "M5": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.289548",
+      "last_updated": "2025-07-08T11:14:25.289548",
+      "update_count": 1
+    },
+    "M6": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.320309",
+      "last_updated": "2025-07-08T11:14:25.320309",
+      "update_count": 1
+    },
+    "E5": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.354584",
+      "last_updated": "2025-07-08T11:14:25.354584",
+      "update_count": 1
+    },
+    "E6": {
+      "version": "1.0.0",
+      "created_at": "2025-07-08T11:14:25.386411",
+      "last_updated": "2025-07-08T11:14:25.386411",
+      "update_count": 1
+    }
+  },
+  "last_global_update": "2025-07-08T11:12:16.118781",
+  "update_history": []
+}

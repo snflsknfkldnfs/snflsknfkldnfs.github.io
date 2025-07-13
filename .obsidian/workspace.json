@@ -4,22 +4,97 @@
     "type": "split",
     "children": [
       {
+        "id": "4a7b4e4b646b3628",
+        "type": "tabs",
+        "dimension": 32.22857142857143,
+        "children": [
+          {
+            "id": "5eb9ef9808a354ff",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "seminarcloud/Seminare/24-25/Seminar_Klassenleitung/Tipps zur Klassenleitung 2025.26.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Tipps zur Klassenleitung 2025.26"
+            }
+          }
+        ]
+      },
+      {
         "id": "5efc95c3a28a5a39",
         "type": "tabs",
+        "dimension": 67.77142857142857,
         "children": [
+          {
+            "id": "dbb4701682fdeba1",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "kanban/Board_1_Schulalltag_Klassenleitung.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": []
+                }
+              },
+              "pinned": true,
+              "icon": "lucide-trello",
+              "title": "Board_1_Schulalltag_Klassenleitung"
+            }
+          },
+          {
+            "id": "49aed7a2ff0a78d9",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "kanban/Board_2_Seminar_LAA_Ausbildung.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": []
+                }
+              },
+              "pinned": true,
+              "icon": "lucide-trello",
+              "title": "Board_2_Seminar_LAA_Ausbildung"
+            }
+          },
+          {
+            "id": "eaf7612832d9b24e",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "kanban/Board_3_Meta_Prozesse_KI_System.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": []
+                }
+              },
+              "icon": "lucide-trello",
+              "title": "Board_3_Meta_Prozesse_KI_System"
+            }
+          },
           {
             "id": "6994df80d284a5cb",
             "type": "leaf",
             "state": {
-              "type": "html-view",
+              "type": "markdown",
               "state": {
-                "file": "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/index.html"
+                "file": "unterricht/Sm8ab/Sm8ab_LB4_4_Volleyball/UE3_Baggern/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/BUV_Volleyball_UE3_MarcKunz_Standard.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "code-glyph",
-              "title": "index"
+              "icon": "lucide-file",
+              "title": "BUV_Volleyball_UE3_MarcKunz_Standard"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -51,7 +126,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gpg5b",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,7 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 537.5031242370605
+    "width": 645.5031242370605
   },
   "right": {
     "id": "a198139a98d2334a",
@@ -164,56 +239,58 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-importer:Open Importer": false
+      "obsidian-importer:Open Importer": false,
+      "big-calendar:Big Calendar": false,
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "85c6e86c6f472718",
   "lastOpenFiles": [
-    "notizen/meta_prozesse/SYSTEM_UPDATE_Stakeholder_Integration_Erfolgreich.md",
-    "notizen/meta_prozesse/DiSoAn_Stakeholder_Integration_Framework_Final.md",
-    "notizen/meta_prozesse/Stakeholder_Integration_Mittelschulen_Digitalisierung_2025.md",
-    "notizen/meta_prozesse/DiSoAn_Integration_Rieger_System_Evolution.md",
-    "notizen/meta_prozesse/Live_Lern_Prompts_Rieger.md",
-    "notizen/meta_prozesse/Ausbildungstag_Rieger_DiSoAn_Framework.md",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/UE2_Materialien.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/UE2_Verlaufsplan.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station6_Ziel_Pritschen.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station5_Wand_Pritschen.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station4_Ball_Kopf_Koordination.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station3_Positionierung_Netz.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station2_Hand_Koordination.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen/Station1_Finger_Prisma_Drill.html",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen/Stationen",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/UE2_Pritschen",
-    "notizen/meta_prozesse/NAVIGATION_STANDARDS_INTEGRATION_V2.md",
-    "meta/chat-transitions/CONTINUATION_PROMPT_SESSION_11.md",
-    "meta/chat-transitions/session-10-to-11-hierarchical-navigation.md",
-    "HIERARCHICAL_NAVIGATION_IMPLEMENTED.md",
-    "GITHUB_PAGES_FIXED.md",
-    "unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball/meta/chat-transitions/session-09-to-10-github-pages-preparation.md",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/buv_final_documentation_v6.1.md",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/Tafel_Mindmap_Konzept.md",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben swimming.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben ate.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben 1.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.53.57.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.53.40.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.52.32.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.48.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.39.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.33.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.46.21.png",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Verlaufsplan_v6.0_Final.md",
-    "unterricht/E5_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
-    "unterricht/E5_Unit5_People_and_Places/Wortkarten_Liste_v4.0.md",
-    "unterricht/E5_Unit5_People_and_Places/Sequenzplan_Unit5_People_and_Places.md",
-    "unterricht/E5_Unit5_People_and_Places/STATUS_QUO_BUV_v4.0_17062025.md",
-    "unterricht/E5_Unit5_People_and_Places/KI_Anweisung_Partnerzuteilung_v1.0.md",
-    "unterricht/E5_Unit5_People_and_Places/Entscheidungsdokumentation_BUV_v2.0.md",
-    "unterricht/E5_Unit5_People_and_Places/Eisenhower_Matrix_BUV_Neukonzeption_v1.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_v4.0_Finale_Dokumentation.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_v3.0_Aenderungsuebersicht.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Verlaufsplan_Betreuungslehrerin_v2.0.md",
-    "unterricht/E5_Unit5_People_and_Places/BUV_Tafelbild_Fahrplan_v1.0.md"
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/QUICK_ACCESS.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/README.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/SYSTEM_ACTIVATION_MASTER.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Git_Integration_v1.0.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Claude_Integration_v1.0.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Pattern_Extraction_Engine_v1.0.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Auto_Trigger_System_v1.0.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/MASTER_Reflexion_Framework_v1.0.md",
+    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine",
+    "unterricht/Sm8ab/Sm8ab_LB4_4_Volleyball/UE3_Baggern/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/FINALE_VERSION_COMPLETE.md",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/buv_final_documentation_v6.1.md",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_4_Antikes_Griechenland_Habus Entdeckung Politik?/GPG5b_LB4_2_4_Antikes_Griechenland_Habus Entdeckung Politik.md",
+    "unterricht/3. BUV/Reflexion 3. BUV.md",
+    "unterricht/3. BUV/3. BUV_Cebulla_GPG_E.pdf",
+    "notizen/reflexionen/seminartage/2025-07-10_Seminartag_Werneck.md",
+    "seminarcloud/Seminare/24-25/Seminar_Klassenleitung/Tipps zur Klassenleitung 2025.26.pdf",
+    "kanban/Board_1_Schulalltag_Klassenleitung.md",
+    "kanban/Board_3_Meta_Prozesse_KI_System.md",
+    "kanban/Board_2_Seminar_LAA_Ausbildung.md",
+    "kanban/APPLE_NOTES_SCANNER_IMPLEMENTATION.md",
+    "kanban/APPLE_NOTES_KANBAN_AUTOMATION.md",
+    "kanban/FINAL_3_BOARD_SUCCESS.md",
+    "kanban/Executive_Kanban_Board.md",
+    "kanban/archive/Legacy_Executive_Kanban_Board.md",
+    "kanban/CLAUDE_WORKFLOWS_3_BOARDS.md",
+    "kanban/UNIFIED_DASHBOARD.md",
+    "kanban/3_BOARD_ARCHITECTURE.md",
+    "kanban/KLASSENLEITER_BOARD_UPDATE.md",
+    "seminarcloud/Seminare/24-25/Seminar_Klassenleitung/LDO_Klassenleitung_Stand 6.2024.pdf",
+    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten/Vorlage_Spitzkosten_Abrechnung.pdf",
+    "kanban/archive",
+    "kanban",
+    "notizen/reflexionen/seminartage",
+    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten/Unterrichtsvergütung_gesetzliche Verankerung.png",
+    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten/2025_02_11_b860_abrechnung-unterrichtsverguetung-_reader.pdf",
+    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben swimming.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben ate.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben 1.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.53.57.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.53.40.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.52.32.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.48.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.39.png",
+    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.33.png"
   ]
 }

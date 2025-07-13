@@ -1,0 +1,17 @@
+[
+  {
+    "timestamp": "2025-07-08T14:46:52.511418",
+    "repository_state_hash": "0705446bf4a7a53a0c05acf7fcf8b77635010a509edb8823caa7b245010b8279",
+    "orientation_output_checksum": "f7556e20f662804131f5202b6a5c73c3",
+    "execution_context": {
+      "trigger": "manual_test",
+      "version": "1.0"
+    },
+    "output_length": 83,
+    "quality_metrics": {
+      "completeness_score": 20.0,
+      "consistency_score": 40.0,
+      "overall_quality": 30.0
+    }
+  }
+]
