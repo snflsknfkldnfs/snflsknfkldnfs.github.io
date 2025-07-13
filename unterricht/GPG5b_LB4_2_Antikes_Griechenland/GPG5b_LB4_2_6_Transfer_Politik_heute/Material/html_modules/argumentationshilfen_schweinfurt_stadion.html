@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argumentationshilfen: Schweinfurter Stadionausbau | GPG 5b Transfer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #d32f2f 0%, #f57c00 100%);
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 3px solid #ffd700;
+        }
+        
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: #ffd700;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .argument-panel {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .pro-panel {
+            border: 3px solid #27ae60;
+        }
+        
+        .contra-panel {
+            border: 3px solid #e74c3c;
+        }
+        
+        .panel-title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .pro-title {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .contra-title {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .argument-category {
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .category-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffd700;
+        }
+        
+        .argument-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .argument-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 16px;
+            line-height: 1.4;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .facts-section {
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 3px solid #ffd700;
+        }
+        
+        .facts-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .fact-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .fact-label {
+            font-size: 14px;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+        
+        .fact-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .instructions {
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 20px;
+            border: 3px solid #ffd700;
+        }
+        
+        .instructions-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .instruction-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .instruction-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .instruction-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        
+        .instruction-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .instruction-step {
+            background: rgba(255,255,255,0.05);
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 14px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            .header, .argument-panel, .facts-section, .instructions {
+                border: 2px solid black;
+                background: white;
+            }
+            .panel-title {
+                background: #f0f0f0 !important;
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">🏟️ ARGUMENTATIONSHILFEN 🏟️</div>
+        <div class="subtitle">Schweinfurter Stadionausbau: Pro & Contra</div>
+    </div>
+    
+    <div class="content-grid">
+        <!-- PRO-ARGUMENTE -->
+        <div class="argument-panel pro-panel">
+            <div class="panel-title pro-title">✅ FÜR DAS STADION</div>
+            
+            <div class="argument-category">
+                <div class="category-header">⚽ SPORT & VEREIN</div>
+                <div class="argument-list">
+                    <div class="argument-item">"Der FC ist endlich wieder Profi!"</div>
+                    <div class="argument-item">"Das alte Stadion ist zu klein für 3. Liga!"</div>
+                    <div class="argument-item">"Ohne Umbau müssen wir nach Frankfurt!"</div>
+                    <div class="argument-item">"Schweinfurt wird berühmt!"</div>
+                </div>
+            </div>
+            
+            <div class="argument-category">
+                <div class="category-header">🔨 ARBEITSPLÄTZE</div>
+                <div class="argument-list">
+                    <div class="argument-item">"Neue Baustellen = neue Jobs!"</div>
+                    <div class="argument-item">"Handwerker haben 2 Jahre Arbeit!"</div>
+                    <div class="argument-item">"Mehr Fans = mehr Kunden!"</div>
+                </div>
+            </div>
+            
+            <div class="argument-category">
+                <div class="category-header">💰 WIRTSCHAFT</div>
+                <div class="argument-list">
+                    <div class="argument-item">"Restaurants verdienen mehr!"</div>
+                    <div class="argument-item">"Hotels haben mehr Gäste!"</div>
+                    <div class="argument-item">"Schweinfurt wird bekannter!"</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTRA-ARGUMENTE -->
+        <div class="argument-panel contra-panel">
+            <div class="panel-title contra-title">❌ GEGEN DAS STADION</div>
+            
+            <div class="argument-category">
+                <div class="category-header">🏫 SCHULEN WICHTIGER</div>
+                <div class="argument-list">
+                    <div class="argument-item">"3,6 Mio könnten 10 Schulen reparieren!"</div>
+                    <div class="argument-item">"Bildung ist wichtiger als Fußball!"</div>
+                    <div class="argument-item">"Unsere Kinder brauchen gute Schulen!"</div>
+                </div>
+            </div>
+            
+            <div class="argument-category">
+                <div class="category-header">🏠 ANWOHNER-PROBLEME</div>
+                <div class="argument-list">
+                    <div class="argument-item">"Noch mehr Lärm an Spieltagen!"</div>
+                    <div class="argument-item">"Mehr Verkehr und Parkplatzchaos!"</div>
+                    <div class="argument-item">"Mehr Müll nach den Spielen!"</div>
+                    <div class="argument-item">"Kinder können nicht schlafen!"</div>
+                </div>
+            </div>
+            
+            <div class="argument-category">
+                <div class="category-header">🚲 ANDERE PRIORITÄTEN</div>
+                <div class="argument-list">
+                    <div class="argument-item">"Radwege sind gefährlich!"</div>
+                    <div class="argument-item">"Straßen haben Schlaglöcher!"</div>
+                    <div class="argument-item">"Das Geld gehört allen Bürgern!"</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="facts-section">
+        <div class="facts-title">📊 WICHTIGE FAKTEN</div>
+        <div class="facts-grid">
+            <div class="fact-box">
+                <div class="fact-label">GESAMTKOSTEN</div>
+                <div class="fact-value">4,5 Mio €</div>
+            </div>
+            <div class="fact-box">
+                <div class="fact-label">STADT ZAHLT</div>
+                <div class="fact-value">3,6 Mio € (80%)</div>
+            </div>
+            <div class="fact-box">
+                <div class="fact-label">FC ZAHLT</div>
+                <div class="fact-value">0,9 Mio € (20%)</div>
+            </div>
+            <div class="fact-box">
+                <div class="fact-label">NEUE PLÄTZE</div>
+                <div class="fact-value">15.000 statt 5.000</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <div class="instructions-title">📝 SO DISKUTIERT IHR</div>
+        <div class="instruction-grid">
+            <div class="instruction-box">
+                <div class="instruction-header">🎭 REDEAUFBAU</div>
+                <div class="instruction-steps">
+                    <div class="instruction-step">1. "Wir sind Familie [Name]"</div>
+                    <div class="instruction-step">2. "Wir sind FÜR/GEGEN das Stadion"</div>
+                    <div class="instruction-step">3. "Weil..." (2-3 Argumente)</div>
+                    <div class="instruction-step">4. "Deshalb stimmen wir FÜR/GEGEN"</div>
+                </div>
+            </div>
+            
+            <div class="instruction-box">
+                <div class="instruction-header">⚖️ DEMOKRATIE-REGELN</div>
+                <div class="instruction-steps">
+                    <div class="instruction-step">• Jede Familie darf sprechen</div>
+                    <div class="instruction-step">• Alle hören respektvoll zu</div>
+                    <div class="instruction-step">• Maximal 2 Minuten Redezeit</div>
+                    <div class="instruction-step">• Am Ende stimmen alle ab</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

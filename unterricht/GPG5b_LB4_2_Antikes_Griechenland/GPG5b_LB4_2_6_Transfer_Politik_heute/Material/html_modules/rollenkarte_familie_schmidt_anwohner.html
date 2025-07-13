@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollenkarte: Familie Schmidt (Anwohner)</title>
+    <style>
+        .rollenkarte {
+            width: 300px; height: 450px; border: 3px solid #e74c3c; border-radius: 15px; padding: 20px;
+            background: linear-gradient(135deg, #fff0f0 0%, #ffe6e6 100%); font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px; page-break-inside: avoid;
+        }
+        .name { font-size: 24px; font-weight: bold; color: #e74c3c; text-align: center; margin-bottom: 10px; border-bottom: 2px solid #e74c3c; padding-bottom: 8px; }
+        .gruppe { font-size: 16px; color: #666; text-align: center; margin-bottom: 20px; font-style: italic; }
+        .emoji { font-size: 40px; text-align: center; margin: 15px 0; }
+        .position { background-color: #e74c3c; color: white; padding: 8px; border-radius: 8px; text-align: center; font-weight: bold; margin: 15px 0; }
+        .argumente { background-color: #fff; border: 2px dashed #e74c3c; padding: 15px; border-radius: 10px; margin-top: 15px; }
+        .argument { margin: 8px 0; font-size: 14px; line-height: 1.4; }
+        .sprechhilfe { background-color: #fffacd; padding: 8px; border-radius: 5px; border-left: 4px solid #ffd700; margin: 8px 0; font-size: 12px; }
+        @media print { .rollenkarte { page-break-after: always; box-shadow: none; border: 2px solid black; } }
+    </style>
+</head>
+<body>
+    <div class="rollenkarte">
+        <div class="name">FAMILIE SCHMIDT</div>
+        <div class="gruppe">Anwohner Stadionnähe</div>
+        <div class="emoji">🏠</div>
+        <div class="position">WIR SIND GEGEN DAS STADION!</div>
+        <div class="argumente">
+            <strong>UNSERE ARGUMENTE:</strong>
+            <div class="argument">🔊 "Es ist jetzt schon sehr laut an Spieltagen!"</div>
+            <div class="argument">😴 "Unsere Kinder können nicht schlafen bei Abendspielen!"</div>
+            <div class="argument">🏠 "Wir wollen unsere Ruhe und Lebensqualität behalten!"</div>
+            <div class="sprechhilfe"><strong>SO SPRECHT IHR:</strong><br>"Wir sind Familie Schmidt. Wir wohnen in der Nähe..."</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,7 +2,8 @@
 
 ## Anleitung für Lehrkraft
 - Karten ausschneiden und ggf. laminieren
-- Pro Rolle 2-3 Karten vorbereiten (je nach Klassengröße)
+- **Verteilung bei 20 SuS:** 1x Versammlungsleiter + 10 Familien-Rollen
+- **Empfohlene Aufteilung:** Manche Familien mit 2 SuS (Elternpaar), andere mit 1 SuS
 - Symbole helfen bei der Orientierung
 - Differenzierung: Leistungsstarke SuS können eigene Argumente ergänzen
 - **DSGVO-konform:** Alle Namen sind fiktiv und pseudonymisiert
@@ -146,21 +147,6 @@
 
 ---
 
-## BÜRGER (Zuhörer) 👥
-
-**Deine Aufgabe:**
-- Du hörst allen Familien zu
-- Du überlegst dir deine Meinung
-- Du stimmst am Ende ab
-
-**Das kannst du rufen:**
-- "Das stimmt!" 
-- "Gutes Argument!"
-- "Nein, das sehe ich anders!"
-- Bei der Abstimmung: Hand hoch! ✅ oder ❌
-
----
-
 ## Vergleich: Athen → Schweinfurt
 
 ### Damals in Athen:
@@ -190,7 +176,9 @@
 - Die Symbole helfen dir: ⚽🏠🏫🚲🔨💰
 
 ### Tipp:
-Sprich laut und deutlich! Alle Schweinfurter sollen dich hören!
+- Spricht laut und deutlich! Alle Schweinfurter sollen euch hören!
+- **ALLE sind aktiv:** Jeder SuS hat eine Rolle - keine passiven Zuhörer!
+- Familien mit 2 SuS können sich vor dem Sprechen beraten
 
 ---
 
