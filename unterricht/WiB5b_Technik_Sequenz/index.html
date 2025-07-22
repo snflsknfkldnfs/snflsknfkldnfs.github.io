@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiB 5b Kulturtechniken - iPad-Materialien</title>
+    
+    <!-- CSS Framework -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/hierarchy.css">
+    
+    <!-- Meta Information -->
+    <meta name="description" content="WiB 5b Kulturtechniken-Sequenz - iPad-optimierte Materialien mit Think-Pair-Share und Gallery Walk">
+    <meta name="keywords" content="WiB, Kulturtechniken, iPad, Think-Pair-Share, Gallery Walk, Technik">
+    
+    <!-- PWA & Mobile -->
+    <link rel="manifest" href="../../../manifest.json">
+    <link rel="icon" type="image/png" href="../../../favicon.ico">
+    <meta name="theme-color" content="#2c5282">
+    
+    <style>
+        .wib-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .material-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .material-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .material-card.featured {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+        }
+        
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #718096;
+        }
+        
+        .card-description {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: #3182ce;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2c5282;
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-completed {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .status-active {
+            background: #bee3f8;
+            color: #1a365d;
+        }
+        
+        .qr-button {
+            background: #38a169;
+            color: white;
+        }
+        
+        .qr-button:hover {
+            background: #2f855a;
+        }
+        
+        .navigation-breadcrumb {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #718096;
+        }
+        
+        .breadcrumb-link {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        
+        .breadcrumb-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container" style="padding: 2rem;">
+        
+        <!-- Navigation Breadcrumb -->
+        <div class="navigation-breadcrumb">
+            <a href="../../../index.html" class="breadcrumb-link">📚 Dashboard</a>
+            →
+            <a href="#" class="breadcrumb-link" onclick="nav.navigateTo(2, {subject: 'wib'})">💼 WiB</a>
+            →
+            <span>💻 Kulturtechniken</span>
+        </div>
+        
+        <!-- Header -->
+        <div class="wib-header">
+            <h1>💻 WiB 5b - Kulturtechniken-Sequenz</h1>
+            <p style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 1.1rem;">
+                LB 4: Technik verändert uns - iPad-Integration mit Think-Pair-Share & Gallery Walk
+            </p>
+        </div>
+        
+        <!-- UE3 Materials -->
+        <section>
+            <h2 style="color: #2d3748; margin-bottom: 1rem;">📋 UE 3: Kulturtechniken entschlüsseln</h2>
+            <div style="margin-bottom: 1rem;">
+                <span class="status-badge status-completed">✅ Durchgeführt</span>
+                <span style="margin-left: 1rem; color: #718096;">Think-Pair-Share Methode</span>
+            </div>
+            
+            <div class="material-grid">
+                <div class="material-card featured">
+                    <div class="card-title">📱 AB Informieren (iPad-optimiert)</div>
+                    <div class="card-meta">
+                        <span>💻 HTML5</span>
+                        <span>👥 Think-Pair-Share</span>
+                        <span>📝 Ausfüllbar</span>
+                    </div>
+                    <div class="card-description">
+                        Interaktives Arbeitsblatt zu Kulturtechniken des Informierens. Optimiert für Touch-Eingabe mit Dreischritt-Schema.
+                    </div>
+                    <div class="btn-group">
+                        <a href="03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_INFORMIEREN_v2.html" 
+                           class="btn btn-primary" target="_blank">
+                            📱 Öffnen (iPad)
+                        </a>
+                        <button onclick="generateQR('AB_INFORMIEREN_v2.html', 'AB Informieren')" 
+                                class="btn qr-button">
+                            📱 QR-Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="material-card featured">
+                    <div class="card-title">🎭 AB Unterhalten (iPad-optimiert)</div>
+                    <div class="card-meta">
+                        <span>💻 HTML5</span>
+                        <span>👥 Think-Pair-Share</span>
+                        <span>📝 Ausfüllbar</span>
+                    </div>
+                    <div class="card-description">
+                        Interaktives Arbeitsblatt zu Kulturtechniken des Unterhaltens. Touch-freundliche Eingabefelder für iPad-Nutzung.
+                    </div>
+                    <div class="btn-group">
+                        <a href="03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_UNTERHALTEN_v2.html" 
+                           class="btn btn-primary" target="_blank">
+                            📱 Öffnen (iPad)
+                        </a>
+                        <button onclick="generateQR('AB_UNTERHALTEN_v2.html', 'AB Unterhalten')" 
+                                class="btn qr-button">
+                            📱 QR-Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="material-card featured">
+                    <div class="card-title">🏭 AB Produzieren (iPad-optimiert)</div>
+                    <div class="card-meta">
+                        <span>💻 HTML5</span>
+                        <span>👥 Think-Pair-Share</span>
+                        <span>📝 Ausfüllbar</span>
+                    </div>
+                    <div class="card-description">
+                        Interaktives Arbeitsblatt zu Kulturtechniken des Produzierens. Vollständig für iPad-Classroom-Integration optimiert.
+                    </div>
+                    <div class="btn-group">
+                        <a href="03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_PRODUZIEREN_v2.html" 
+                           class="btn btn-primary" target="_blank">
+                            📱 Öffnen (iPad)
+                        </a>
+                        <button onclick="generateQR('AB_PRODUZIEREN_v2.html', 'AB Produzieren')" 
+                                class="btn qr-button">
+                            📱 QR-Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-title">📊 AB Organisieren (PDF)</div>
+                    <div class="card-meta">
+                        <span>📄 PDF</span>
+                        <span>👥 Think-Pair-Share</span>
+                        <span>✏️ Handschriftlich</span>
+                    </div>
+                    <div class="card-description">
+                        Forschungsbogen für Kulturtechniken des Organisierens. PDF-Format für Ausdruck oder händische Bearbeitung.
+                    </div>
+                    <div class="btn-group">
+                        <a href="03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/WiB5b_Technik_Forschungsbogen_Organisieren.pdf" 
+                           class="btn btn-primary" target="_blank">
+                            📄 PDF öffnen
+                        </a>
+                        <button onclick="generateQR('WiB5b_Technik_Forschungsbogen_Organisieren.pdf', 'AB Organisieren')" 
+                                class="btn qr-button">
+                            📱 QR-Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-title">📝 Tafelbild Kommunizieren</div>
+                    <div class="card-meta">
+                        <span>📄 PDF</span>
+                        <span>👨‍🏫 Beispiel</span>
+                        <span>🎯 Einstieg</span>
+                    </div>
+                    <div class="card-description">
+                        Beispiel-Tafelbild für den gemeinsamen Think-Pair-Share-Einstieg mit der Kulturtechnik "Kommunizieren".
+                    </div>
+                    <div class="btn-group">
+                        <a href="03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/WiB5b_Technik_Kulturtechnik_Tafelbild.pdf" 
+                           class="btn btn-primary" target="_blank">
+                            📄 PDF öffnen
+                        </a>
+                        <button onclick="generateQR('WiB5b_Technik_Kulturtechnik_Tafelbild.pdf', 'Tafelbild Kommunizieren')" 
+                                class="btn btn-secondary">
+                            📱 QR-Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- UE4 Materials -->
+        <section style="margin-top: 3rem;">
+            <h2 style="color: #2d3748; margin-bottom: 1rem;">🚀 UE 4: Zukunftswerkstatt Kulturtechniken</h2>
+            <div style="margin-bottom: 1rem;">
+                <span class="status-badge status-active">🔄 Geplant</span>
+                <span style="margin-left: 1rem; color: #718096;">Gallery Walk mit KI-Bildern</span>
+            </div>
+            
+            <div class="material-grid">
+                <div class="material-card featured">
+                    <div class="card-title">🏃‍♂️ Zukunfts-Gallery Laufzettel</div>
+                    <div class="card-meta">
+                        <span>💻 HTML5</span>
+                        <span>🚶‍♀️ Gallery Walk</span>
+                        <span>📝 Ausfüllbar</span>
+                    </div>
+                    <div class="card-description">
+                        iPad-optimierter Laufzettel für den Gallery Walk. SuS erkunden Zukunftstechnologien und reflektieren über Auswirkungen.
+                    </div>
+                    <div class="btn-group">
+                        <a href="04_Technik in der Zukunft bewerten/04_Materialien/Laufzettel_Zukunfts_Gallery_v2_iPad.html" 
+                           class="btn btn-primary" target="_blank">
+                            📱 Öffnen (iPad)
+                        </a>
+                        <button onclick="generateQR('Laufzettel_Zukunfts_Gallery_v2_iPad.html', 'Zukunfts Gallery Laufzettel')" 
+                                class="btn qr-button">
+                            📱 QR-Code
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-title">🤖 15 KI-Bild-Prompts</div>
+                    <div class="card-meta">
+                        <span>📝 Markdown</span>
+                        <span>🎨 KI-Generierung</span>
+                        <span>🖼️ 15 Prompts</span>
+                    </div>
+                    <div class="card-description">
+                        Fertige Prompts für KI-Bilder-Generierung: 5x Kommunikation, 5x Information, 5x Organisation. Bereit für A3-Druck.
+                    </div>
+                    <div class="btn-group">
+                        <a href="04_Technik in der Zukunft bewerten/04_Materialien/KI_Bilder_Generierungs_Prompts.md" 
+                           class="btn btn-primary" target="_blank">
+                            📖 Prompts öffnen
+                        </a>
+                        <button onclick="generateQR('KI_Bilder_Generierungs_Prompts.md', 'KI Bild Prompts')" 
+                                class="btn btn-secondary">
+                            📱 QR-Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tools Section -->
+        <section style="margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 2rem;">
+            <h2 style="color: #2d3748; margin-bottom: 1rem;">🛠️ Tools & Hilfsmittel</h2>
+            
+            <div class="material-grid">
+                <div class="material-card">
+                    <div class="card-title">📱 QR-Code Generator</div>
+                    <div class="card-meta">
+                        <span>🔧 Tool</span>
+                        <span>📱 iPad-Integration</span>
+                        <span>⚡ Sofort-Zugang</span>
+                    </div>
+                    <div class="card-description">
+                        Erstellen Sie QR-Codes für alle Materialien. Perfekt für iPad-Classroom Integration und schnellen SuS-Zugang.
+                    </div>
+                    <div class="btn-group">
+                        <a href="../../../qr-generator.html" class="btn btn-primary" target="_blank">
+                            🔧 QR-Generator öffnen
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="card-title">📊 Navigation Dashboard</div>
+                    <div class="card-meta">
+                        <span>🎯 Dashboard</span>
+                        <span>📱 Responsive</span>
+                        <span>🔍 Übersicht</span>
+                    </div>
+                    <div class="card-description">
+                        Zurück zum Hauptdashboard mit hierarchischer Navigation durch alle Unterrichtsmaterialien.
+                    </div>
+                    <div class="btn-group">
+                        <a href="../../../index.html" class="btn btn-secondary">
+                            📚 Dashboard öffnen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer style="margin-top: 3rem; text-align: center; color: #718096; font-size: 0.9rem; border-top: 1px solid #e2e8f0; padding-top: 2rem;">
+            <strong>WiB 5b Kulturtechniken</strong> • iPad-optimierte Materialien • Think-Pair-Share & Gallery Walk
+            <br>
+            🎯 Repository-basiert • 📱 Touch-optimiert • 🚀 GitHub Pages
+        </footer>
+    </div>
+    
+    <!-- JavaScript für QR-Code Generation -->
+    <script>
+        function generateQR(filename, title) {
+            const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '');
+            let fullUrl;
+            
+            if (filename.includes('/')) {
+                fullUrl = baseUrl + '/' + filename;
+            } else {
+                // Handle different material paths
+                if (filename.startsWith('AB_') || filename.includes('Forschungsbogen') || filename.includes('Tafelbild')) {
+                    fullUrl = baseUrl + '/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/' + filename;
+                } else if (filename.includes('Laufzettel') || filename.includes('Prompts')) {
+                    fullUrl = baseUrl + '/04_Technik in der Zukunft bewerten/04_Materialien/' + filename;
+                } else {
+                    fullUrl = baseUrl + '/' + filename;
+                }
+            }
+            
+            const qrUrl = '../../../qr-generator.html?url=' + encodeURIComponent(fullUrl) + '&title=' + encodeURIComponent(title);
+            window.open(qrUrl, '_blank');
+        }
+        
+        // Load navigation if available
+        if (typeof nav !== 'undefined') {
+            // Navigation is available from main system
+        }
+        
+        // Add loading indicator
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('WiB Kulturtechniken Index loaded successfully');
+        });
+    </script>
+</body>
+</html>

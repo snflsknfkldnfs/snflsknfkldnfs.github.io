@@ -139,7 +139,7 @@ Die SuS **unterscheiden** direkte und repräsentative Demokratie, **indem** sie 
 
 | Zeit | Lehrerhandeln | Erwartetes Schülerhandeln | Sozialform | Medien |
 |------|---------------|---------------------------|------------|---------|
-| 10 Min | **L:** Verteilt Rollenkarten "Schweinfurter Familien"<br>**L:** "Lest eure Familie und Argumente"<br>**L:** "Sammelt Pro/Kontra wie in Athen" | **S:** Lesen Rollenkarten<br>**S:** "Familie Weber: FÜR Stadion!"<br>**S:** "Familie Al-Ahmad: GEGEN, Geld für Schule!"<br>**S:** Entwickeln Argumente | GA | [Rollenkarten Schweinfurter Familien](Material/Rollenkarten_Schweinfurter_Stadionausbau.md) |
+| 10 Min | **L:** Verteilt Rollenkarten "Schweinfurter Familien"<br>**L:** "Lest eure Familie und Argumente"<br>**L:** "Sammelt Pro/Kontra wie in Athen" | **S:** Lesen Rollenkarten<br>**S:** "Familie Weber: FÜR Stadion!"<br>**S:** "Familie Al-Ahmad: GEGEN, Geld für Schule!"<br>**S:** Entwickeln Argumente | GA | [Rollenkarten Schweinfurter Familien](Entwurf_Rollenkarten_Schweinfurter_Stadionausbau.md) |
 
 ### Phase 3: Resolution - Verfahren festlegen (5 Min.)
 
@@ -192,8 +192,8 @@ FUNKTIONIERT HEUTE:         PROBLEM BEI 83.000 MENSCHEN:
 - **3 Phasen-Screens** (Problem, Bürgerversammlung, Transfer)
 
 ### Kategorie B: Physische Materialien
-- **[Rollenkarten Schweinfurter Familien](Material/Rollenkarten_Schweinfurter_Stadionausbau.md)** (11 Rollen, 3 Niveaus)
-- **[Arbeitsblatt Transfer](Material/AB_Transfer_Volksversammlung_heute.md)** (strukturgleich zur Vorstunde)
+- **[Rollenkarten Schweinfurter Familien](Entwurf_Rollenkarten_Schweinfurter_Stadionausbau.md)** (11 Rollen, 3 Niveaus)
+- **[Arbeitsblatt Transfer](Entwurf_AB_Transfer_Volksversammlung_heute.md)** (strukturgleich zur Vorstunde)
 - **Timer** für 2-Minuten-Redezeit
 
 ### Kategorie C: Differenzierung

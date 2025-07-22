@@ -6,7 +6,7 @@
       {
         "id": "4a7b4e4b646b3628",
         "type": "tabs",
-        "dimension": 32.22857142857143,
+        "dimension": 48.74675885911841,
         "children": [
           {
             "id": "5eb9ef9808a354ff",
@@ -19,13 +19,96 @@
               "icon": "lucide-file-text",
               "title": "Tipps zur Klassenleitung 2025.26"
             }
+          },
+          {
+            "id": "0fd68c87b1c2d49e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_6_Transfer_Politik_heute/GPG5b_LB4_2_6_Transfer_Politik_heute_TUV.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GPG5b_LB4_2_6_Transfer_Politik_heute_TUV"
+            }
+          },
+          {
+            "id": "03a4e6a621432465",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "seminarcloud/Seminare/24-25/Seminar_Klassenrat/Sminarübung_Klassenrat.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sminarübung_Klassenrat"
+            }
+          },
+          {
+            "id": "2e2ba088752e0660",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "seminarcloud/Seminare/24-25/Seminar_Klassenrat/Seminarübung_Klassenrat.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Seminarübung_Klassenrat"
+            }
+          },
+          {
+            "id": "37b39dd977346fc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/Hospitationen/6c/6c_Hospitation_14_07_2025.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6c_Hospitation_14_07_2025"
+            }
+          },
+          {
+            "id": "cdd44132eeab6550",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GEW_Personalrat_Wahlkampf/GEW_Schulsanierung/GEW_Argumentationsgrundlage_Schulsanierung_Eichstätt.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GEW_Argumentationsgrundlage_Schulsanierung_Eichstätt"
+            }
+          },
+          {
+            "id": "c06bf67240e60e45",
+            "type": "leaf",
+            "state": {
+              "type": "html-view",
+              "state": {
+                "file": "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Laufzettel_Zukunfts_Gallery_v2_iPad.html"
+              },
+              "icon": "code-glyph",
+              "title": "Laufzettel_Zukunfts_Gallery_v2_iPad"
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       },
       {
         "id": "5efc95c3a28a5a39",
         "type": "tabs",
-        "dimension": 67.77142857142857,
+        "dimension": 51.25324114088159,
         "children": [
           {
             "id": "dbb4701682fdeba1",
@@ -80,17 +163,43 @@
             }
           },
           {
-            "id": "6994df80d284a5cb",
+            "id": "7bb410c7beff6c6b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/Sm8ab/Sm8ab_LB4_4_Volleyball/UE3_Baggern/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/BUV_Volleyball_UE3_MarcKunz_Standard.md",
+                "file": "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/KI_Bilder_Generierungs_Prompts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BUV_Volleyball_UE3_MarcKunz_Standard"
+              "title": "KI_Bilder_Generierungs_Prompts"
+            }
+          },
+          {
+            "id": "d7424a6035176e55",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "seminarcloud/Seminare/24-25/Seminar_Trainingsraummethode_Auszeitsystem/Trainingsraummethode_Seminarübung.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Trainingsraummethode_Seminarübung"
+            }
+          },
+          {
+            "id": "18113a422aa73392",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "unterricht/Hospitationen/6c/6c_Hospitation_Schülerbeobachtungen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6c_Hospitation_Schülerbeobachtungen"
             }
           }
         ],
@@ -126,7 +235,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "hospi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -151,7 +260,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 645.5031242370605
+    "width": 327.50312423706055
   },
   "right": {
     "id": "a198139a98d2334a",
@@ -244,53 +353,53 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "85c6e86c6f472718",
+  "active": "7bb410c7beff6c6b",
   "lastOpenFiles": [
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/QUICK_ACCESS.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/README.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/SYSTEM_ACTIVATION_MASTER.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Git_Integration_v1.0.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Claude_Integration_v1.0.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Pattern_Extraction_Engine_v1.0.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/Auto_Trigger_System_v1.0.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine/MASTER_Reflexion_Framework_v1.0.md",
-    "notizen/meta_prozesse/Selbstlernende_Reflexion_Engine",
-    "unterricht/Sm8ab/Sm8ab_LB4_4_Volleyball/UE3_Baggern/BUV_Volleyball_8_Klasse_16SuS_BACKUP_20250707/original/FINALE_VERSION_COMPLETE.md",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/BUV_Final_Abgabe_v6.2.md",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/buv_final_documentation_v6.1.md",
-    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_4_Antikes_Griechenland_Habus Entdeckung Politik?/GPG5b_LB4_2_4_Antikes_Griechenland_Habus Entdeckung Politik.md",
-    "unterricht/3. BUV/Reflexion 3. BUV.md",
-    "unterricht/3. BUV/3. BUV_Cebulla_GPG_E.pdf",
-    "notizen/reflexionen/seminartage/2025-07-10_Seminartag_Werneck.md",
-    "seminarcloud/Seminare/24-25/Seminar_Klassenleitung/Tipps zur Klassenleitung 2025.26.pdf",
-    "kanban/Board_1_Schulalltag_Klassenleitung.md",
+    "chat_transitions/SESSION_TRANSITION_WiB_iPad_Integration_FINAL_2025-07-22.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/image.png",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft_Informieren_2.png",
+    "chat_transitions/SESSION_TRANSITION_WiB_iPad_Final_2025-07-22.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Laufzettel_Zukunfts_Gallery_v2_iPad.html",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft_Informieren.png",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/KI_Bilder_Generierungs_Prompts.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft Organisieren.png",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Laufzettel_Zukunfts_Gallery_v1.html",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Kulturtechnik_Zukunft_bewerten_GLNW_v2.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Technik_bewerten_GLNW.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Zukunftswerkstatt_Kulturtechniken_v2.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Zukunftswerkstatt_Kulturtechniken_v1.md",
+    "unterricht/Hospitationen/6c/6c_Hospitation_Generelle Beobachtungen.md",
+    "unterricht/WiB5b_Technik_Sequenz/README_iPad_Integration.md",
+    "js/wib-ipad-storage.js",
+    "unterricht/WiB5b_Technik_Sequenz/index.html",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft Kulturtechnik Informieren.png",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft_Kommunizieren.png",
+    "chat_transitions/SESSION_TRANSITION_WiB5b_Kulturtechniken_2025-07-20.md",
+    "zukunfts-gallery.html",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_INFORMIEREN_v2.html",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/MATERIAL_ÜBERSICHT_UE4.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_UNTERHALTEN_v2.html",
+    "unterricht/Hospitationen/6c/6c_Hospitation_21_07_2025.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/README_VOLLSTÄNDIG_v3.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_PRODUZIEREN_v2.html",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/MATERIAL_STATUS_v3.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_UE_Kulturtechniken_entschluesseln_v3.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/WiB5b_Technik_Kulturtechnik_Tafelbild.pdf",
+    "unterricht/Hospitationen/6c/6c_Hospitation_Schülerbeobachtungen.md",
+    "unterricht/Hospitationen/6c/6c_Hospitation_14_07_2025.md",
     "kanban/Board_3_Meta_Prozesse_KI_System.md",
-    "kanban/Board_2_Seminar_LAA_Ausbildung.md",
-    "kanban/APPLE_NOTES_SCANNER_IMPLEMENTATION.md",
-    "kanban/APPLE_NOTES_KANBAN_AUTOMATION.md",
-    "kanban/FINAL_3_BOARD_SUCCESS.md",
-    "kanban/Executive_Kanban_Board.md",
-    "kanban/archive/Legacy_Executive_Kanban_Board.md",
-    "kanban/CLAUDE_WORKFLOWS_3_BOARDS.md",
-    "kanban/UNIFIED_DASHBOARD.md",
-    "kanban/3_BOARD_ARCHITECTURE.md",
-    "kanban/KLASSENLEITER_BOARD_UPDATE.md",
-    "seminarcloud/Seminare/24-25/Seminar_Klassenleitung/LDO_Klassenleitung_Stand 6.2024.pdf",
-    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten/Vorlage_Spitzkosten_Abrechnung.pdf",
-    "kanban/archive",
-    "kanban",
-    "notizen/reflexionen/seminartage",
-    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten/Unterrichtsvergütung_gesetzliche Verankerung.png",
-    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten/2025_02_11_b860_abrechnung-unterrichtsverguetung-_reader.pdf",
-    "seminarcloud/Seminare/24-25/Seminar_Spitzkosten",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben swimming.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben ate.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/ben 1.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.53.57.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.53.40.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.52.32.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.48.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.39.png",
-    "unterricht/E5b_Unit5_People_and_Places/v6.0_gabi_feedback/In .pdf einzufügen/Bildschirmfoto 2025-06-21 um 14.49.33.png"
+    "GEW_Personalrat_Wahlkampf/GEW_Schulsanierung/GEW_Argumentationsgrundlage_Schulsanierung_Eichstätt.md",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/kulturtechnik_kommunizieren.png",
+    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/html-modules/png-exports/forschungsbogen_organisieren.png",
+    "seminarcloud/Seminare/24-25/Seminar_Trainingsraummethode_Auszeitsystem/Trainingsraummethode_Umfassende_Ausarbeitung.md",
+    "unterricht/Hospitationen/6c/6c_Hospitation_18_07_2025.md",
+    "GEW_Personalrat_Wahlkampf/GEW_Schulsanierung/GEW_Argumentation_Schulasanierung_Eichstätt selbst geschrieben.md",
+    "GEW_Personalrat_Wahlkampf/GEW_claude_desktop_instructions/GEW_Personalrat_Wahlkampf_Claude_Instructions.md",
+    "notizen/gpg/didaktik/geographie/👨‍🏫 Unterrichtsmethoden.md",
+    "notizen/gpg/didaktik/geographie/☝️ Unterrichtsprinzipien.md",
+    "notizen/gpg/didaktik/geographie/vernetzendes Denken.md",
+    "Bildschirmfoto 2025-07-17 um 09.37.19.png",
+    "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_6_Transfer_Politik_heute/Material/html_modules/png exports/Classroom_Screen_Stundenfrage.png"
   ]
 }

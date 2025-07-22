@@ -25,23 +25,32 @@ class HierarchicalNavigation {
         return {
             level1: {
                 sport: {
-                    title: "🏃‍♂️ Sport",
-                    description: "Innovative Sportunterrichtsmaterialien mit iPad-Integration",
-                    status: "active",
-                    classes: ["Sm8ab"],
-                    path: "unterricht/Sport",
-                    sequences: 3,
-                    completed: 1
+                title: "🏃‍♂️ Sport",
+                description: "Innovative Sportunterrichtsmaterialien mit iPad-Integration",
+                status: "active",
+                classes: ["Sm8ab"],
+                path: "unterricht/Sport",
+                sequences: 3,
+                completed: 1
                 },
-                gpg: {
-                    title: "🏛️ GPG",
-                    description: "Systemtheoretische Politikdidaktik nach Sybille Reinhardt",
-                    status: "active",
-                    classes: ["5b", "5c"],
-                    path: "unterricht/GPG_Arbeitsweisen_LAA_Training",
-                    sequences: 2,
-                    completed: 1
+                wib: {
+                title: "💼 WiB",
+                description: "Kulturtechniken-Sequenz mit iPad-Integration und Think-Pair-Share",
+                status: "active",
+                classes: ["5b"],
+                path: "unterricht/WiB5b_Technik_Sequenz",
+                sequences: 1,
+                completed: 1
                 },
+            gpg: {
+                title: "🏛️ GPG",
+                description: "Systemtheoretische Politikdidaktik nach Sybille Reinhardt",
+                status: "active",
+                classes: ["5b", "5c"],
+                path: "unterricht/GPG_Arbeitsweisen_LAA_Training",
+                sequences: 2,
+                completed: 1
+            },
                 tools: {
                     title: "🛠️ Tools & Ressourcen",
                     description: "Generatoren, Templates und Organisationstools",
@@ -74,6 +83,21 @@ class HierarchicalNavigation {
                         class: "Sm8ab",
                         status: "planned",
                         ues: 4
+                    }
+                }
+            },
+            wib: {
+                sequences: {
+                    kulturtechniken: {
+                        title: "💻 Kulturtechniken",
+                        class: "WiB5b",
+                        students: 22,
+                        duration: "Sequenz 4",
+                        lernbereich: "LB 4 - Technik verändert uns",
+                        ues: 4,
+                        completed: 2,
+                        status: "active",
+                        path: "unterricht/WiB5b_Technik_Sequenz"
                     }
                 }
             },
@@ -118,6 +142,31 @@ class HierarchicalNavigation {
                         title: "UE 6: Mini-Turnier",
                         status: "planned",
                         competencies: ["Wettkampf", "Fairplay"]
+                    }
+                }
+            },
+            kulturtechniken: {
+                ues: {
+                    ue3: {
+                        title: "UE 3: Kulturtechniken entschlüsseln",
+                        date: "Durchgeführt",
+                        status: "completed",
+                        type: "Think-Pair-Share",
+                        competencies: ["Informieren", "Unterhalten", "Produzieren", "Organisieren"],
+                        materials: 4,
+                        method: "Think-Pair-Share",
+                        path: "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute",
+                        featured: true
+                    },
+                    ue4: {
+                        title: "UE 4: Zukunftswerkstatt Kulturtechniken",
+                        date: "Geplant",
+                        status: "active",
+                        type: "Gallery Walk",
+                        competencies: ["Bewerten", "Zukunftsvorstellungen", "Präsentieren"],
+                        materials: 2,
+                        method: "Gallery Walk + KI-Bilder",
+                        path: "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten"
                     }
                 }
             },
@@ -188,6 +237,81 @@ class HierarchicalNavigation {
                             { name: "Wortkarte Spielbrett", path: "artifacts/materials/wortkarte-spielbrett.pdf" },
                             { name: "Wortkarte Hüfthöhe", path: "artifacts/materials/wortkarte-huefthoehe.pdf" }
                         ]
+                    },
+                    qr: {
+                        title: "📱 QR-Code Generator",
+                        type: "tool",
+                        path: "/qr-generator.html",
+                        description: "Für iPad-Classroom Integration"
+                    }
+                }
+            },
+            kulturtechniken_ue3: {
+                materials: {
+                    arbeitsblatter: {
+                        title: "📋 4 Think-Pair-Share Arbeitsblätter",
+                        type: "interactive",
+                        count: 4,
+                        technology: "HTML5 + iPad-optimiert",
+                        items: [
+                            {
+                                id: "ab-informieren",
+                                title: "AB Informieren",
+                                focus: "Informationen suchen und finden",
+                                path: "03_Materialien/AB_INFORMIEREN_v2.html",
+                                preview: true
+                            },
+                            {
+                                id: "ab-unterhalten",
+                                title: "AB Unterhalten",
+                                focus: "Medien und Unterhaltung",
+                                path: "03_Materialien/AB_UNTERHALTEN_v2.html",
+                                preview: true
+                            },
+                            {
+                                id: "ab-produzieren",
+                                title: "AB Produzieren",
+                                focus: "Herstellung und Produktion",
+                                path: "03_Materialien/AB_PRODUZIEREN_v2.html",
+                                preview: true
+                            },
+                            {
+                                id: "ab-organisieren",
+                                title: "AB Organisieren",
+                                focus: "Organisation und Planung",
+                                path: "03_Materialien/WiB5b_Technik_Forschungsbogen_Organisieren.pdf",
+                                preview: false
+                            }
+                        ]
+                    },
+                    tafelbild: {
+                        title: "📝 Tafelbild Kommunizieren",
+                        type: "documentation",
+                        path: "03_Materialien/WiB5b_Technik_Kulturtechnik_Tafelbild.pdf",
+                        description: "Beispiel-Tafelbild für Think-Pair-Share Einstieg"
+                    },
+                    qr: {
+                        title: "📱 QR-Code Generator",
+                        type: "tool",
+                        path: "/qr-generator.html",
+                        description: "Für iPad-Classroom Integration"
+                    }
+                }
+            },
+            kulturtechniken_ue4: {
+                materials: {
+                    laufzettel: {
+                        title: "🏃‍♂️ Zukunfts-Gallery Laufzettel",
+                        type: "interactive",
+                        path: "04_Materialien/Laufzettel_Zukunfts_Gallery_v2_iPad.html",
+                        description: "iPad-optimierter Laufzettel für Gallery Walk",
+                        preview: true
+                    },
+                    ki_prompts: {
+                        title: "🤖 15 KI-Bild-Prompts",
+                        type: "resource",
+                        path: "04_Materialien/KI_Bilder_Generierungs_Prompts.md",
+                        description: "Fertige Prompts für KI-Bilder-Generierung (5x je Kulturtechnik)"
                     },
                     qr: {
                         title: "📱 QR-Code Generator",
@@ -285,15 +409,15 @@ class HierarchicalNavigation {
 
             <div class="sequence-stats">
                 <div class="stat-item">
-                    <div class="stat-number">3</div>
+                    <div class="stat-number">4</div>
                     <div class="stat-label">Aktive Fächer</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">6</div>
+                    <div class="stat-number">7</div>
                     <div class="stat-label">Unterrichtssequenzen</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">12</div>
+                    <div class="stat-number">18</div>
                     <div class="stat-label">Materialsammlungen</div>
                 </div>
             </div>
@@ -454,7 +578,12 @@ class HierarchicalNavigation {
 
     renderMaterialDetails(container) {
         const { subject, sequence, ue } = this.currentData;
-        const data = this.repositoryStructure[ue];
+        // Handle different UE material structures
+        let dataKey = ue;
+        if (subject === 'wib' && sequence === 'kulturtechniken') {
+            dataKey = `kulturtechniken_${ue}`;
+        }
+        const data = this.repositoryStructure[dataKey];
         
         container.innerHTML = `
             <h1>${this.getUETitle(subject, sequence, ue)} - Materialien</h1>
@@ -603,6 +732,11 @@ class HierarchicalNavigation {
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="nav.navigateTo(4, {subject: 'wib', sequence: 'kulturtechniken', ue: 'ue3'})">
+                            💻 WiB Kulturtechniken <span class="nav-badge">iPad</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="/qr-generator.html" class="nav-link" target="_blank">
                             📱 QR-Generator <span class="nav-badge">Tool</span>
                         </a>
@@ -670,6 +804,7 @@ class HierarchicalNavigation {
     getSubjectTitle(subject) {
         const titles = {
             'sport': '🏃‍♂️ Sport',
+            'wib': '💼 WiB',
             'gpg': '🏛️ GPG',
             'tools': '🛠️ Tools'
         };
@@ -680,15 +815,22 @@ class HierarchicalNavigation {
         if (subject === 'sport' && sequence === 'volleyball') return '🏐 Volleyball';
         if (subject === 'sport' && sequence === 'basketball') return '🏀 Basketball';
         if (subject === 'sport' && sequence === 'fussball') return '⚽ Fußball';
+        if (subject === 'wib' && sequence === 'kulturtechniken') return '💻 Kulturtechniken';
         return sequence;
     }
 
     getUETitle(subject, sequence, ue) {
-        if (ue === 'ue3') return 'UE 3: Unteres Zuspiel (BUV)';
+        if (subject === 'sport' && sequence === 'volleyball' && ue === 'ue3') return 'UE 3: Unteres Zuspiel (BUV)';
+        if (subject === 'wib' && sequence === 'kulturtechniken' && ue === 'ue3') return 'UE 3: Kulturtechniken entschlüsseln';
+        if (subject === 'wib' && sequence === 'kulturtechniken' && ue === 'ue4') return 'UE 4: Zukunftswerkstatt';
         return ue;
     }
 
     getBasePath() {
+        const { subject, sequence } = this.currentData || {};
+        if (subject === 'wib' && sequence === 'kulturtechniken') {
+            return 'unterricht/WiB5b_Technik_Sequenz';
+        }
         return 'unterricht/Sport/Sm8ab/Sm8ab_LB4_4_Volleyball';
     }
 

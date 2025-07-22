@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Zukunfts-Gallery Entdecker - Digital</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Zukunfts-Gallery">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+            color: #333;
+            touch-action: manipulation;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .save-status {
+            background: #00b894;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .personal-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            background: #f8f9fa;
+        }
+        
+        .input-group input:focus,
+        .input-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+        }
+        
+        .mission-box {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .bild-card {
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .bild-card.completed {
+            border-color: #00b894;
+            background: #f0fff4;
+        }
+        
+        .bild-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .bild-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .station-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .station-input input {
+            width: 80px;
+            padding: 8px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .questions-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .question-item textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+        
+        .lieblings-section {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 3px solid #fdcb6e;
+        }
+        
+        .lieblings-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #d63031;
+        }
+        
+        .reflexion-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 3px solid #6c757d;
+        }
+        
+        .reflexion-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #6c757d;
+        }
+        
+        .reflexion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .reflexion-box {
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .reflexion-positiv {
+            background: #d4edda;
+            border: 2px solid #c3e6cb;
+        }
+        
+        .reflexion-negativ {
+            background: #f8d7da;
+            border: 2px solid #f5c6cb;
+        }
+        
+        .praesentation-section {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .praesentation-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .praesentation-input {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            border-radius: 10px;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        .praesentation-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .btn {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            touch-action: manipulation;
+        }
+        
+        .btn-save {
+            background: #00b894;
+            color: white;
+        }
+        
+        .btn-save:hover {
+            background: #00a085;
+            transform: translateY(-2px);
+        }
+        
+        .btn-export {
+            background: #74b9ff;
+            color: white;
+        }
+        
+        .btn-export:hover {
+            background: #0984e3;
+            transform: translateY(-2px);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .completion-message {
+            background: #00b894;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .reflexion-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .personal-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head><body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 ZUKUNFTS-GALLERY ENTDECKER</h1>
+            <p class="subtitle">Kulturtechniken der Zukunft erforschen</p>
+        </div>
+        
+        <div class="save-status" id="saveStatus">
+            💾 Automatisch gespeichert
+        </div>
+        
+        <div class="content">
+            <!-- Persönliche Informationen -->
+            <div class="personal-info">
+                <div class="input-group">
+                    <label for="studentName">Dein Name:</label>
+                    <input type="text" id="studentName" placeholder="Vor- und Nachname">
+                </div>
+                <div class="input-group">
+                    <label for="datum">Datum:</label>
+                    <input type="date" id="datum">
+                </div>
+            </div>
+            
+            <!-- Fortschrittsanzeige -->
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            
+            <!-- Mission -->
+            <div class="mission-box">
+                🎯 MEINE MISSION: Finde 2-3 spannende Zukunftstechnologien!
+            </div>
+            
+            <!-- Bild 1 -->
+            <div class="bild-card" id="bildCard1">
+                <div class="bild-header">
+                    <div class="bild-title">📸 BILD 1</div>
+                    <div class="station-input">
+                        <label>Station Nr.:</label>
+                        <input type="number" id="station1" min="1" max="15" placeholder="?">
+                    </div>
+                </div>
+                
+                <div class="questions-grid">
+                    <div class="input-group">
+                        <label>Was siehst du?</label>
+                        <textarea id="beschreibung1" placeholder="Beschreibe kurz, was auf dem Bild zu sehen ist..."></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Wofür könnte es verwendet werden?</label>
+                        <textarea id="verwendung1" placeholder="Welche Funktionen könnte diese Technologie haben?"></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Was gefällt dir daran?</label>
+                        <textarea id="positiv1" placeholder="Was ist cool, praktisch oder interessant?"></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Was findest du problematisch?</label>
+                        <textarea id="negativ1" placeholder="Was könnte schwierig oder gefährlich sein?"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bild 2 -->
+            <div class="bild-card" id="bildCard2">
+                <div class="bild-header">
+                    <div class="bild-title">📸 BILD 2</div>
+                    <div class="station-input">
+                        <label>Station Nr.:</label>
+                        <input type="number" id="station2" min="1" max="15" placeholder="?">
+                    </div>
+                </div>
+                
+                <div class="questions-grid">
+                    <div class="input-group">
+                        <label>Was siehst du?</label>
+                        <textarea id="beschreibung2" placeholder="Beschreibe kurz, was auf dem Bild zu sehen ist..."></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Wofür könnte es verwendet werden?</label>
+                        <textarea id="verwendung2" placeholder="Welche Funktionen könnte diese Technologie haben?"></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Was gefällt dir daran?</label>
+                        <textarea id="positiv2" placeholder="Was ist cool, praktisch oder interessant?"></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Was findest du problematisch?</label>
+                        <textarea id="negativ2" placeholder="Was könnte schwierig oder gefährlich sein?"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bild 3 (optional) -->
+            <div class="bild-card" id="bildCard3">
+                <div class="bild-header">
+                    <div class="bild-title">📸 BILD 3 (optional)</div>
+                    <div class="station-input">
+                        <label>Station Nr.:</label>
+                        <input type="number" id="station3" min="1" max="15" placeholder="?">
+                    </div>
+                </div>
+                
+                <div class="questions-grid">
+                    <div class="input-group">
+                        <label>Was siehst du?</label>
+                        <textarea id="beschreibung3" placeholder="Beschreibe kurz, was auf dem Bild zu sehen ist..."></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Wofür könnte es verwendet werden?</label>
+                        <textarea id="verwendung3" placeholder="Welche Funktionen könnte diese Technologie haben?"></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Was gefällt dir daran?</label>
+                        <textarea id="positiv3" placeholder="Was ist cool, praktisch oder interessant?"></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Was findest du problematisch?</label>
+                        <textarea id="negativ3" placeholder="Was könnte schwierig oder gefährlich sein?"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lieblingsbild -->
+            <div class="lieblings-section">
+                <div class="lieblings-header">
+                    <span>⭐</span>
+                    <span>MEIN LIEBLINGSBILD</span>
+                </div>
+                
+                <div class="input-group">
+                    <label>Station Nr. meines Lieblingsbildes:</label>
+                    <input type="number" id="lieblingStation" min="1" max="15" placeholder="Welche Station?">
+                </div>
+                
+                <div class="input-group">
+                    <label>Das würde ich gerne haben, weil:</label>
+                    <textarea id="lieblingGrund" placeholder="Warum ist das dein Favorit?"></textarea>
+                </div>
+            </div>
+            
+            <!-- Zukunfts-Reflexion -->
+            <div class="reflexion-section">
+                <div class="reflexion-header">
+                    <span>💭</span>
+                    <span>ZUKUNFTS-GEDANKEN</span>
+                </div>
+                
+                <div class="reflexion-grid">
+                    <div class="reflexion-box reflexion-positiv">
+                        <div class="input-group">
+                            <label style="color: #155724;">Das Leben wird einfacher, weil:</label>
+                            <textarea id="zukunftPositiv" placeholder="Welche Vorteile siehst du?"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="reflexion-box reflexion-negativ">
+                        <div class="input-group">
+                            <label style="color: #721c24;">Das Leben wird schwieriger, weil:</label>
+                            <textarea id="zukunftNegativ" placeholder="Welche Probleme könnten entstehen?"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Präsentations-Vorbereitung -->
+            <div class="praesentation-section">
+                <div class="praesentation-header">
+                    <span>🎤</span>
+                    <span>PRÄSENTATION - Vorbereitung (20 Sekunden)</span>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="color: white; font-weight: bold;">Mein Lieblingsobjekt kann:</label>
+                    <input type="text" class="praesentation-input" id="praesentationKann" placeholder="z.B. Gedanken übertragen...">
+                </div>
+                
+                <div>
+                    <label style="color: white; font-weight: bold;">In 20 Jahren hilft es Menschen beim:</label>
+                    <input type="text" class="praesentation-input" id="praesentationHilft" placeholder="z.B. schneller kommunizieren...">
+                </div>
+            </div>
+            
+            <!-- Abschluss-Nachricht -->
+            <div class="completion-message" id="completionMessage">
+                🎉 Fantastisch! Du hast deine Zukunfts-Forschung abgeschlossen!
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-save" onclick="saveData()">
+                    💾 Speichern
+                </button>
+                <button class="btn btn-export" onclick="exportData()">
+                    📧 Ergebnisse teilen
+                </button>
+            </div>
+            
+            <!-- Hinweis -->
+            <div style="text-align: center; margin-top: 20px; font-size: 14px; color: #666;">
+                💡 Tipp: Deine Eingaben werden automatisch gespeichert!
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Automatisches Speichern und Laden
+        let autoSaveTimeout;
+        
+        // Heute als Standard-Datum setzen
+        document.getElementById('datum').value = new Date().toISOString().split('T')[0];
+        
+        // Event Listener für alle Eingabefelder
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            
+            // Auto-Save bei jeder Eingabe
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    clearTimeout(autoSaveTimeout);
+                    autoSaveTimeout = setTimeout(autoSave, 1000);
+                    updateProgress();
+                    checkCompletion();
+                });
+            });
+            
+            updateProgress();
+        });
+        
+        function autoSave() {
+            const data = collectData();
+            localStorage.setItem('zukunftsGalleryData', JSON.stringify(data));
+            showSaveStatus();
+        }
+        
+        function saveData() {
+            const data = collectData();
+            localStorage.setItem('zukunftsGalleryData', JSON.stringify(data));
+            showSaveStatus();
+            
+            // Vollständigkeits-Check
+            if (isDataComplete(data)) {
+                document.getElementById('completionMessage').style.display = 'block';
+            }
+        }
+        
+        function loadData() {
+            const savedData = localStorage.getItem('zukunftsGalleryData');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                
+                // Persönliche Daten laden
+                if (data.studentName) document.getElementById('studentName').value = data.studentName;
+                if (data.datum) document.getElementById('datum').value = data.datum;
+                
+                // Bild-Daten laden
+                for (let i = 1; i <= 3; i++) {
+                    if (data[`station${i}`]) document.getElementById(`station${i}`).value = data[`station${i}`];
+                    if (data[`beschreibung${i}`]) document.getElementById(`beschreibung${i}`).value = data[`beschreibung${i}`];
+                    if (data[`verwendung${i}`]) document.getElementById(`verwendung${i}`).value = data[`verwendung${i}`];
+                    if (data[`positiv${i}`]) document.getElementById(`positiv${i}`).value = data[`positiv${i}`];
+                    if (data[`negativ${i}`]) document.getElementById(`negativ${i}`).value = data[`negativ${i}`];
+                }
+                
+                // Lieblings- und Reflexionsdaten laden
+                if (data.lieblingStation) document.getElementById('lieblingStation').value = data.lieblingStation;
+                if (data.lieblingGrund) document.getElementById('lieblingGrund').value = data.lieblingGrund;
+                if (data.zukunftPositiv) document.getElementById('zukunftPositiv').value = data.zukunftPositiv;
+                if (data.zukunftNegativ) document.getElementById('zukunftNegativ').value = data.zukunftNegativ;
+                if (data.praesentationKann) document.getElementById('praesentationKann').value = data.praesentationKann;
+                if (data.praesentationHilft) document.getElementById('praesentationHilft').value = data.praesentationHilft;
+            }
+        }
+        
+        function collectData() {
+            const data = {
+                studentName: document.getElementById('studentName').value,
+                datum: document.getElementById('datum').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Bild-Daten sammeln
+            for (let i = 1; i <= 3; i++) {
+                data[`station${i}`] = document.getElementById(`station${i}`).value;
+                data[`beschreibung${i}`] = document.getElementById(`beschreibung${i}`).value;
+                data[`verwendung${i}`] = document.getElementById(`verwendung${i}`).value;
+                data[`positiv${i}`] = document.getElementById(`positiv${i}`).value;
+                data[`negativ${i}`] = document.getElementById(`negativ${i}`).value;
+            }
+            
+            // Lieblings- und Reflexionsdaten
+            data.lieblingStation = document.getElementById('lieblingStation').value;
+            data.lieblingGrund = document.getElementById('lieblingGrund').value;
+            data.zukunftPositiv = document.getElementById('zukunftPositiv').value;
+            data.zukunftNegativ = document.getElementById('zukunftNegativ').value;
+            data.praesentationKann = document.getElementById('praesentationKann').value;
+            data.praesentationHilft = document.getElementById('praesentationHilft').value;
+            
+            return data;
+        }
+        
+        function updateProgress() {
+            const data = collectData();
+            const totalFields = 16; // Anzahl wichtiger Felder
+            let filledFields = 0;
+            
+            // Zähle ausgefüllte Felder
+            if (data.studentName) filledFields++;
+            if (data.station1 && data.beschreibung1) filledFields += 2;
+            if (data.station2 && data.beschreibung2) filledFields += 2;
+            if (data.verwendung1) filledFields++;
+            if (data.verwendung2) filledFields++;
+            if (data.positiv1) filledFields++;
+            if (data.positiv2) filledFields++;
+            if (data.negativ1) filledFields++;
+            if (data.negativ2) filledFields++;
+            if (data.lieblingStation) filledFields++;
+            if (data.lieblingGrund) filledFields++;
+            if (data.zukunftPositiv) filledFields++;
+            if (data.zukunftNegativ) filledFields++;
+            if (data.praesentationKann) filledFields++;
+            if (data.praesentationHilft) filledFields++;
+            
+            const progress = (filledFields / totalFields) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            
+            // Karten-Status aktualisieren
+            updateCardStatus(1, data.station1 && data.beschreibung1 && data.verwendung1);
+            updateCardStatus(2, data.station2 && data.beschreibung2 && data.verwendung2);
+            updateCardStatus(3, data.station3 && data.beschreibung3);
+        }
+        
+        function updateCardStatus(cardNumber, isCompleted) {
+            const card = document.getElementById(`bildCard${cardNumber}`);
+            if (isCompleted) {
+                card.classList.add('completed');
+            } else {
+                card.classList.remove('completed');
+            }
+        }
+        
+        function checkCompletion() {
+            const data = collectData();
+            if (isDataComplete(data)) {
+                document.getElementById('completionMessage').style.display = 'block';
+            }
+        }
+        
+        function isDataComplete(data) {
+            return data.studentName && 
+                   data.station1 && data.beschreibung1 && data.verwendung1 &&
+                   data.station2 && data.beschreibung2 && data.verwendung2 &&
+                   data.lieblingStation && data.lieblingGrund &&
+                   data.zukunftPositiv && data.zukunftNegativ;
+        }
+        
+        function showSaveStatus() {
+            const status = document.getElementById('saveStatus');
+            status.style.display = 'block';
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 2000);
+        }
+        
+        function exportData() {
+            const data = collectData();
+            const text = formatDataForExport(data);
+            
+            // Text in Zwischenablage kopieren
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('✅ Deine Ergebnisse wurden in die Zwischenablage kopiert! Du kannst sie jetzt per E-Mail oder in eine andere App einfügen.');
+                });
+            } else {
+                // Fallback für ältere Browser
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('✅ Deine Ergebnisse wurden kopiert!');
+            }
+        }
+        
+        function formatDataForExport(data) {
+            return `🚀 ZUKUNFTS-GALLERY FORSCHUNG
+Name: ${data.studentName}
+Datum: ${data.datum}
+
+📸 BILD 1 (Station ${data.station1}):
+Was ich sehe: ${data.beschreibung1}
+Verwendung: ${data.verwendung1}
+Positiv: ${data.positiv1}
+Problematisch: ${data.negativ1}
+
+📸 BILD 2 (Station ${data.station2}):
+Was ich sehe: ${data.beschreibung2}
+Verwendung: ${data.verwendung2}
+Positiv: ${data.positiv2}
+Problematisch: ${data.negativ2}
+
+${data.station3 ? `📸 BILD 3 (Station ${data.station3}):
+Was ich sehe: ${data.beschreibung3}
+Verwendung: ${data.verwendung3}
+Positiv: ${data.positiv3}
+Problematisch: ${data.negativ3}
+
+` : ''}⭐ LIEBLINGSBILD: Station ${data.lieblingStation}
+Grund: ${data.lieblingGrund}
+
+💭 ZUKUNFTS-GEDANKEN:
+Leben wird einfacher: ${data.zukunftPositiv}
+Leben wird schwieriger: ${data.zukunftNegativ}
+
+🎤 PRÄSENTATION:
+Mein Lieblingsobjekt kann: ${data.praesentationKann}
+In 20 Jahren hilft es beim: ${data.praesentationHilft}`;
+        }
+        
+        // PWA Features
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

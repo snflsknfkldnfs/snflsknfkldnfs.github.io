@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zukunfts-Gallery Entdecker - Laufzettel</title>
+    <style>
+        @page { size: A4 portrait; margin: 1.5cm; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 15px; background: white; color: #333; line-height: 1.4; }
+        .laufzettel { width: 100%; max-width: 18cm; margin: 0 auto; background: white; border: 3px solid #667eea; border-radius: 15px; padding: 20px; }
+        .header { text-align: center; margin-bottom: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 10px; }
+        .header h1 { font-size: 24px; margin: 0 0 5px 0; font-weight: bold; }
+        .header .subtitle { font-size: 14px; opacity: 0.9; margin: 0; }
+        .personal-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; font-size: 14px; font-weight: bold; }
+        .info-field { display: flex; align-items: center; }
+        .fill-line { flex: 1; height: 2px; border-bottom: 2px solid #667eea; margin-left: 10px; }
+        .mission-box { background: #f0f7ff; border: 2px solid #667eea; border-radius: 10px; padding: 15px; margin-bottom: 20px; text-align: center; }
+        .mission-text { font-size: 16px; font-weight: bold; color: #667eea; margin: 0; }
+        .bild-section { border: 2px solid #e0e0e0; border-radius: 10px; padding: 15px; margin-bottom: 15px; background: #fafafa; }
+        .bild-header { display: flex; align-items: center; margin-bottom: 12px; font-size: 16px; font-weight: bold; color: #667eea; }
+        .bild-icon { font-size: 20px; margin-right: 8px; }
+        .station-nummer { margin-left: auto; background: #667eea; color: white; padding: 5px 15px; border-radius: 15px; font-size: 14px; }
+        .frage-gruppe { margin-bottom: 10px; }
+        .frage-label { font-size: 13px; color: #555; margin-bottom: 3px; font-weight: bold; }
+        .antwort-feld { width: 100%; height: 25px; border: none; border-bottom: 1px solid #ccc; background: transparent; font-size: 14px; padding: 2px 0; }
+        .antwort-feld-gross { height: 35px; }
+        .lieblings-section { background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); border-radius: 10px; padding: 15px; margin: 20px 0; border: 2px solid #fdcb6e; }
+        .lieblings-header { display: flex; align-items: center; margin-bottom: 10px; font-size: 16px; font-weight: bold; color: #d63031; }
+        .lieblings-icon { font-size: 24px; margin-right: 8px; }
+        .reflexion-section { background: #f8f9fa; border: 2px solid #6c757d; border-radius: 10px; padding: 15px; margin: 20px 0; }
+        .reflexion-header { display: flex; align-items: center; margin-bottom: 12px; font-size: 16px; font-weight: bold; color: #6c757d; }
+        .reflexion-icon { font-size: 20px; margin-right: 8px; }
+        .reflexion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .reflexion-box { padding: 10px; border-radius: 5px; }
+        .reflexion-positiv { background: #d4edda; border: 1px solid #c3e6cb; }
+        .reflexion-negativ { background: #f8d7da; border: 1px solid #f5c6cb; }
+        .praesentation-section { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); color: white; border-radius: 10px; padding: 15px; margin-top: 20px; }
+        .praesentation-header { display: flex; align-items: center; margin-bottom: 10px; font-size: 16px; font-weight: bold; }
+        .praesentation-icon { font-size: 20px; margin-right: 8px; }
+        .praesentation-text { font-size: 13px; margin-bottom: 8px; font-style: italic; }
+        .praesentation-feld { width: 100%; height: 25px; border: none; border-bottom: 2px solid white; background: transparent; color: white; font-size: 14px; padding: 2px 0; }
+        @media print { body { margin: 0; padding: 0; } .laufzettel { width: 100%; border: 2px solid #000; page-break-inside: avoid; } .header { background: #e0e0e0 !important; color: #000 !important; } .praesentation-section { background: #f0f0f0 !important; color: #000 !important; } }
+    </style>
+</head><body>
+    <div class="laufzettel">
+        <!-- Header -->
+        <div class="header">
+            <h1>🚀 ZUKUNFTS-GALLERY ENTDECKER</h1>
+            <p class="subtitle">Kulturtechniken der Zukunft erforschen</p>
+        </div>
+        
+        <!-- Persönliche Informationen -->
+        <div class="personal-info">
+            <div class="info-field">
+                <span>Name:</span>
+                <div class="fill-line"></div>
+            </div>
+            <div class="info-field">
+                <span>Datum:</span>
+                <div class="fill-line"></div>
+            </div>
+        </div>
+        
+        <!-- Mission -->
+        <div class="mission-box">
+            <p class="mission-text">🎯 MEINE MISSION: Finde 2-3 spannende Zukunftstechnologien!</p>
+        </div>
+        
+        <!-- Bild 1 -->
+        <div class="bild-section">
+            <div class="bild-header">
+                <span class="bild-icon">📸</span>
+                <span>BILD 1</span>
+                <div class="station-nummer">Station Nr. ____</div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was siehst du?</div>
+                <div class="antwort-feld"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Wofür könnte es verwendet werden?</div>
+                <div class="antwort-feld antwort-feld-gross"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was gefällt dir daran?</div>
+                <div class="antwort-feld"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was findest du problematisch?</div>
+                <div class="antwort-feld"></div>
+            </div>
+        </div>
+        
+        <!-- Bild 2 -->
+        <div class="bild-section">
+            <div class="bild-header">
+                <span class="bild-icon">📸</span>
+                <span>BILD 2</span>
+                <div class="station-nummer">Station Nr. ____</div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was siehst du?</div>
+                <div class="antwort-feld"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Wofür könnte es verwendet werden?</div>
+                <div class="antwort-feld antwort-feld-gross"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was gefällt dir daran?</div>
+                <div class="antwort-feld"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was findest du problematisch?</div>
+                <div class="antwort-feld"></div>
+            </div>
+        </div>
+        
+        <!-- Bild 3 (optional) -->
+        <div class="bild-section">
+            <div class="bild-header">
+                <span class="bild-icon">📸</span>
+                <span>BILD 3 (optional)</span>
+                <div class="station-nummer">Station Nr. ____</div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was siehst du?</div>
+                <div class="antwort-feld"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Wofür könnte es verwendet werden?</div>
+                <div class="antwort-feld antwort-feld-gross"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was gefällt dir daran?</div>
+                <div class="antwort-feld"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Was findest du problematisch?</div>
+                <div class="antwort-feld"></div>
+            </div>
+        </div>
+        
+        <!-- Lieblingsbild -->
+        <div class="lieblings-section">
+            <div class="lieblings-header">
+                <span class="lieblings-icon">⭐</span>
+                <span>MEIN LIEBLINGSBILD</span>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Station Nr.:</div>
+                <div class="antwort-feld" style="width: 80px; display: inline-block;"></div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <div class="frage-label">Das würde ich gerne haben, weil:</div>
+                <div class="antwort-feld antwort-feld-gross"></div>
+            </div>
+        </div>
+        
+        <!-- Zukunfts-Reflexion -->
+        <div class="reflexion-section">
+            <div class="reflexion-header">
+                <span class="reflexion-icon">💭</span>
+                <span>ZUKUNFTS-GEDANKEN</span>
+            </div>
+            
+            <div class="reflexion-grid">
+                <div class="reflexion-box reflexion-positiv">
+                    <div class="frage-label" style="color: #155724;">Das Leben wird einfacher, weil:</div>
+                    <div class="antwort-feld antwort-feld-gross"></div>
+                </div>
+                
+                <div class="reflexion-box reflexion-negativ">
+                    <div class="frage-label" style="color: #721c24;">Das Leben wird schwieriger, weil:</div>
+                    <div class="antwort-feld antwort-feld-gross"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Präsentations-Vorbereitung -->
+        <div class="praesentation-section">
+            <div class="praesentation-header">
+                <span class="praesentation-icon">🎤</span>
+                <span>PRÄSENTATION - Vorbereitung (20 Sekunden)</span>
+            </div>
+            
+            <div class="praesentation-text">Bereite deinen kurzen Vortrag vor:</div>
+            
+            <div style="margin-bottom: 8px;">
+                <span style="font-weight: bold;">"Mein Lieblingsobjekt kann </span>
+                <div class="praesentation-feld" style="width: 200px; display: inline-block;"></div>
+            </div>
+            
+            <div>
+                <span style="font-weight: bold;">In 20 Jahren hilft es Menschen beim </span>
+                <div class="praesentation-feld" style="width: 200px; display: inline-block;"></div>
+                <span style="font-weight: bold;">"</span>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 15px; font-size: 11px; color: #999;">
+            💡 Tipp: Laufe durch die Gallery, lass dich inspirieren und denke kreativ!
+        </div>
+    </div>
+</body>
+</html>

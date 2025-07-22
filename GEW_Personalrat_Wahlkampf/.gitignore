@@ -1,0 +1,58 @@
+# GEW Personalrat Wahlkampf - Vertrauliche Dateien
+
+## Persönliche Daten (NIEMALS committen)
+**/echte_kontakte/**
+**/persoenliche_daten/**
+**/private_notizen/**
+kontakte_echt.xlsx
+kontakte_privat.md
+telefonnummern.txt
+email_adressen.txt
+
+## Sensitive Wahlkampf-Informationen
+**/opposition_research/**
+**/interne_strategien/**
+**/vertrauliche_gespraeche/**
+gegner_analyse.md
+interne_polls.xlsx
+private_meetings.md
+
+## System-Dateien
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+## Editor-Dateien  
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+## Backup-Dateien
+*.backup
+*.bak
+*.orig
+
+## Temp-Dateien
+*.tmp
+*.temp
+temp/
+tmp/
+
+## Logs
+*.log
+logs/
+
+## Cache
+cache/
+.cache/
+
+---
+# WICHTIG: Dieses Repository ist VERTRAULICH
+# Niemals öffentlich machen oder in public repositories pushen!
+# Alle persönlichen Daten gehören in separate, verschlüsselte Dateien!

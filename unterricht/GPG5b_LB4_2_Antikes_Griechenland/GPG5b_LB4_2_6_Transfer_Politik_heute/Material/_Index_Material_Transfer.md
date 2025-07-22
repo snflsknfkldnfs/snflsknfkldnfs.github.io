@@ -14,14 +14,14 @@
 - **Meta-Prozesse:** DSGVO-konform, systemtheoretisch reflektiert
 
 ### Rollenkarten (KERN-MATERIAL)
-- **[Rollenkarten_Schweinfurter_Stadionausbau.md](Rollenkarten_Schweinfurter_Stadionausbau.md)**
+- **[Rollenkarten_Schweinfurter_Stadionausbau.md](Entwurf_Rollenkarten_Schweinfurter_Stadionausbau.md)**
   - 11 differenzierte Familien-Rollen
   - 3 Schwierigkeitsniveaus (Basis/Standard/Erweitert)
   - DSGVO-konform pseudonymisiert
   - Strukturgleich zur Vorstunde (athenische Bürger → Schweinfurter Familien)
 
 ### Arbeitsblatt
-- **[AB_Transfer_Volksversammlung_heute.md](AB_Transfer_Volksversammlung_heute.md)**
+- **[AB_Transfer_Volksversammlung_heute.md](Entwurf_AB_Transfer_Volksversammlung_heute.md)**
   - Strukturgleichheit Athen ↔ Schweinfurt
   - Direkte vs. repräsentative Demokratie
   - Transfer-Aufgaben für verschiedene Niveaus

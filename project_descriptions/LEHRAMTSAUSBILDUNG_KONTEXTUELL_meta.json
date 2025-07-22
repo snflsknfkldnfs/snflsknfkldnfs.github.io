@@ -1,0 +1,43 @@
+{
+  "project_name": "LEHRAMTSAUSBILDUNG_KONTEXTUELL",
+  "generated_at": "2025-07-18T17:30:00.000000",
+  "quality_score": 95,
+  "version": "3.0",
+  "generator": "Kontextuell-adaptive Orientierung - DiSoAn-Übergewichtung korrigiert",
+  "repository_pfad": "/Users/paulad/snflsknfkldnfs.github.io/",
+  "kontext_priorisierung": {
+    "primär": [
+      "Praktische Unterrichtsvorbereitung",
+      "BUV-System",
+      "Seminarausbildungs-Standards",
+      "Standard-Workflows"
+    ],
+    "sekundär": [
+      "DSGVO-Compliance",
+      "Strukturierte Dokumentation", 
+      "Interdisziplinäre Perspektiven"
+    ],
+    "tertiär": [
+      "DiSoAn-Forschungskontext (nur bei explizitem Bezug)",
+      "Systemtheoretische Tiefenanalyse (nur auf Nachfrage)",
+      "Wissenschaftliche Forschungsstandards (nur bei Forschungsaufgaben)"
+    ]
+  },
+  "zentrale_arbeitsverzeichnisse": [
+    "/unterricht/ - Unterrichtspraxis, BUV-System, Fachsequenzen",
+    "/notizen/ - Fachspezifisch, Didaktik, Classroom Management", 
+    "/seminarcloud/ - BUV-Materialien, Bausteine, Schriftwesen"
+  ],
+  "standard_workflows": [
+    "./create_ue.sh [UE_NAME] \"[TITEL]\"",
+    "./add_reflection.sh",
+    "./add_best_practice.sh",
+    "BUV-Entwicklung: Planung → Material → Durchführung → Reflexion"
+  ],
+  "adaptive_regeln": {
+    "bei_disoan_bezug": "Erweitere Standards um wissenschaftliche Methodik",
+    "bei_forschungsanfragen": "Integriere systemtheoretische Perspektiven", 
+    "standard_modus": "Fokus auf praktische Unterrichtsvorbereitung"
+  },
+  "korrektur_ziel": "DiSoAn-Kontextualisierung auf angemessene Tertiär-Ebene"
+}

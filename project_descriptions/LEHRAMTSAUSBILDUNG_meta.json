@@ -1,0 +1,36 @@
+{
+  "project_name": "LEHRAMTSAUSBILDUNG",
+  "generated_at": "2025-07-18T16:30:00.000000",
+  "quality_score": 95,
+  "version": "2.0",
+  "generator": "Adaptive Orientation Engine - Korrigiert nach User-Feedback",
+  "zentrale_arbeitsverzeichnisse": [
+    "/unterricht/ - BUV-System, Fachsequenzen, Hospitationen, Templates",
+    "/notizen/ - Fachspezifisch, Didaktik, Classroom Management, Meta-Prozesse", 
+    "/seminarcloud/ - BUV-Materialien, Bausteine, Pädagogik, Schriftwesen"
+  ],
+  "uebliche_vorgehen": [
+    "BUV-Entwicklungsprozess",
+    "UE-Erstellung mit create_ue.sh",
+    "Systematische Reflexionsprozesse",
+    "DSGVO-konforme Dokumentation"
+  ],
+  "qualitaetsstandards": [
+    "DSGVO-Compliance automatisiert",
+    "Professionelle Dokumentation", 
+    "Seminar-Anforderungen",
+    "Reflexive Praxis kontinuierlich"
+  ],
+  "navigation_strukturen": [
+    "ACADEMIC/INDEX.md - Zentrale Navigation",
+    "/scripts/ - Automation & Workflows",
+    "/notizen/meta_prozesse/ - Systematische Optimierung"
+  ],
+  "faecher": ["GPG", "WiB", "NT", "E", "M", "D"],
+  "stakeholder": [
+    "Auen Mittelschule Schweinfurt",
+    "Seminarleiter und Mentoren",
+    "Fachkollegium und Lerngruppen"
+  ],
+  "korrektur_grund": "DiSoAn zu spezifisch - Fokus auf zentrale Repository-Strukturen"
+}

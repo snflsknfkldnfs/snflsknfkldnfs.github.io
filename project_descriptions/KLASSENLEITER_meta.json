@@ -1,0 +1,31 @@
+{
+  "project_name": "KLASSENLEITER",
+  "generated_at": "2025-07-18T15:45:00.000000",
+  "quality_score": 95,
+  "version": "1.0",
+  "generator": "Adaptive Orientation Engine + DiSoAn-Framework",
+  "domains": [
+    "klassengemeinschaft_entwicklung",
+    "elternarbeit_systematisch", 
+    "organisation_digital",
+    "konfliktmanagement_professionell"
+  ],
+  "stakeholders": [
+    "eltern",
+    "kollegium", 
+    "schulleitung",
+    "beratungsstellen",
+    "schueler_innen"
+  ],
+  "compliance": [
+    "dsgvo_konforme_schuelerdaten",
+    "privacy_by_design",
+    "audit_trail_dokumentation"
+  ],
+  "orientation_engine": {
+    "baseline_quality": "80%",
+    "target_quality": "95%",
+    "adaptive_learning": true,
+    "pfad_unabhaengig": true
+  }
+}

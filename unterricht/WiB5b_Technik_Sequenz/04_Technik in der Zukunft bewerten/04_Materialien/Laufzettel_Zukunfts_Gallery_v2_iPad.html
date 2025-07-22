@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zukunfts-Gallery Entdecker - iPad Laufzettel</title>
+    <style>
+        /* iPad-optimierte Styles */
+        body { 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; 
+            padding: 15px; 
+            background: #f5f7fa; 
+            color: #333; 
+            line-height: 1.5; 
+            -webkit-text-size-adjust: none;
+        }
+        
+        .laufzettel { 
+            width: 100%; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: white; 
+            border: 3px solid #667eea; 
+            border-radius: 15px; 
+            padding: 20px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header { 
+            text-align: center; 
+            margin-bottom: 25px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 20px; 
+            border-radius: 12px; 
+        }
+        
+        .header h1 { 
+            font-size: 28px; 
+            margin: 0 0 8px 0; 
+            font-weight: bold; 
+        }
+        
+        .header .subtitle { 
+            font-size: 16px; 
+            opacity: 0.9; 
+            margin: 0; 
+        }
+        
+        .personal-info { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+            margin-bottom: 25px; 
+            font-size: 16px; 
+            font-weight: bold; 
+        }
+        
+        .info-field { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px;
+        }
+        
+        .info-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+            transition: border-color 0.3s;
+        }
+        
+        .info-input:focus {
+            outline: none;
+            border-color: #764ba2;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+        
+        .mission-box { 
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f2ff 100%); 
+            border: 2px solid #667eea; 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 25px; 
+            text-align: center; 
+        }
+        
+        .mission-text { 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #667eea; 
+            margin: 0; 
+        }
+        
+        .bild-section { 
+            border: 2px solid #e2e8f0; 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            background: #fafbfc; 
+            transition: border-color 0.3s;
+        }
+        
+        .bild-section:focus-within {
+            border-color: #667eea;
+        }
+        
+        .bild-header { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #667eea; 
+        }
+        
+        .bild-icon { 
+            font-size: 24px; 
+            margin-right: 10px; 
+        }
+        
+        .station-nummer-container {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .station-nummer-input {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            width: 60px;
+            text-align: center;
+        }
+        
+        .station-nummer-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .frage-gruppe { 
+            margin-bottom: 15px; 
+        }
+        
+        .frage-label { 
+            font-size: 15px; 
+            color: #4a5568; 
+            margin-bottom: 6px; 
+            font-weight: bold; 
+            display: block;
+        }
+        
+        .antwort-feld { 
+            width: 100%; 
+            padding: 12px; 
+            border: 2px solid #e2e8f0; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            background: white;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            resize: vertical;
+            min-height: 45px;
+        }
+        
+        .antwort-feld:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+        
+        .antwort-feld-gross { 
+            min-height: 80px; 
+        }
+        
+        .lieblings-section { 
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin: 25px 0; 
+            border: 2px solid #fdcb6e; 
+        }
+        
+        .lieblings-header { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #d63031; 
+        }
+        
+        .lieblings-icon { 
+            font-size: 28px; 
+            margin-right: 10px; 
+        }
+        
+        .reflexion-section { 
+            background: #f8f9fa; 
+            border: 2px solid #6c757d; 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin: 25px 0; 
+        }
+        
+        .reflexion-header { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #6c757d; 
+        }
+        
+        .reflexion-icon { 
+            font-size: 24px; 
+            margin-right: 10px; 
+        }
+        
+        .reflexion-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 15px; 
+        }
+        
+        @media (min-width: 600px) {
+            .reflexion-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .reflexion-box { 
+            padding: 15px; 
+            border-radius: 8px; 
+        }
+        
+        .reflexion-positiv { 
+            background: #d4edda; 
+            border: 2px solid #c3e6cb; 
+        }
+        
+        .reflexion-negativ { 
+            background: #f8d7da; 
+            border: 2px solid #f5c6cb; 
+        }
+        
+        .praesentation-section { 
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); 
+            color: white; 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-top: 25px; 
+        }
+        
+        .praesentation-header { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+        }
+        
+        .praesentation-icon { 
+            font-size: 24px; 
+            margin-right: 10px; 
+        }
+        
+        .praesentation-text { 
+            font-size: 15px; 
+            margin-bottom: 12px; 
+            font-style: italic; 
+        }
+        
+        .praesentation-input {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .praesentation-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .praesentation-input:focus {
+            outline: none;
+            border-color: white;
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .lieblings-station-input {
+            background: rgba(214, 48, 49, 0.1);
+            border: 2px solid #d63031;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            width: 80px;
+            display: inline-block;
+        }
+        
+        .footer-tip {
+            text-align: center; 
+            margin-top: 20px; 
+            font-size: 14px; 
+            color: #718096; 
+            font-style: italic;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 8px;
+        }
+        
+        /* Mobile Optimierung */
+        @media (max-width: 600px) {
+            .personal-info {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .bild-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .station-nummer-container {
+                margin-left: 0;
+            }
+        }
+        
+        /* Auto-Save Indicator */
+        .save-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #38a169;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+        
+        .save-indicator.show {
+            opacity: 1;
+        }
+        
+        /* Touch-optimierte Buttons */
+        .touch-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            min-height: 48px;
+        }
+        
+        .touch-btn:hover {
+            background: #5a6fd8;
+        }
+        
+        .touch-btn:active {
+            background: #4c63d2;
+        }
+    </style>
+</head>
+<body>
+    <form id="zukunfts_gallery_form" class="laufzettel">
+        <!-- Header -->
+        <div class="header">
+            <h1>🚀 ZUKUNFTS-GALLERY ENTDECKER</h1>
+            <p class="subtitle">Kulturtechniken der Zukunft erforschen • iPad-Version</p>
+        </div>
+        
+        <!-- Persönliche Informationen -->
+        <div class="personal-info">
+            <div class="info-field">
+                <label for="schueler_name">Name:</label>
+                <input type="text" id="schueler_name" name="schueler_name" class="info-input" placeholder="Dein Name">
+            </div>
+            <div class="info-field">
+                <label for="datum">Datum:</label>
+                <input type="date" id="datum" name="datum" class="info-input">
+            </div>
+        </div>
+        
+        <!-- Mission -->
+        <div class="mission-box">
+            <p class="mission-text">🎯 MEINE MISSION: Finde 2-3 spannende Zukunftstechnologien!</p>
+        </div>
+        
+        <!-- Bild 1 -->
+        <div class="bild-section">
+            <div class="bild-header">
+                <span class="bild-icon">📸</span>
+                <span>BILD 1</span>
+                <div class="station-nummer-container">
+                    <span style="color: #667eea; font-weight: bold;">Station Nr.:</span>
+                    <input type="text" name="station_1" class="station-nummer-input" placeholder="1" maxlength="3">
+                </div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild1_was" class="frage-label">Was siehst du?</label>
+                <textarea id="bild1_was" name="bild1_was" class="antwort-feld" placeholder="Beschreibe, was du auf dem Bild siehst..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild1_verwendung" class="frage-label">Wofür könnte es verwendet werden?</label>
+                <textarea id="bild1_verwendung" name="bild1_verwendung" class="antwort-feld antwort-feld-gross" placeholder="Erkläre mögliche Anwendungen..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild1_positiv" class="frage-label">Was gefällt dir daran?</label>
+                <textarea id="bild1_positiv" name="bild1_positiv" class="antwort-feld" placeholder="Positive Aspekte..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild1_problematisch" class="frage-label">Was findest du problematisch?</label>
+                <textarea id="bild1_problematisch" name="bild1_problematisch" class="antwort-feld" placeholder="Kritische Aspekte..."></textarea>
+            </div>
+        </div>
+        
+        <!-- Bild 2 -->
+        <div class="bild-section">
+            <div class="bild-header">
+                <span class="bild-icon">📸</span>
+                <span>BILD 2</span>
+                <div class="station-nummer-container">
+                    <span style="color: #667eea; font-weight: bold;">Station Nr.:</span>
+                    <input type="text" name="station_2" class="station-nummer-input" placeholder="2" maxlength="3">
+                </div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild2_was" class="frage-label">Was siehst du?</label>
+                <textarea id="bild2_was" name="bild2_was" class="antwort-feld" placeholder="Beschreibe, was du auf dem Bild siehst..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild2_verwendung" class="frage-label">Wofür könnte es verwendet werden?</label>
+                <textarea id="bild2_verwendung" name="bild2_verwendung" class="antwort-feld antwort-feld-gross" placeholder="Erkläre mögliche Anwendungen..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild2_positiv" class="frage-label">Was gefällt dir daran?</label>
+                <textarea id="bild2_positiv" name="bild2_positiv" class="antwort-feld" placeholder="Positive Aspekte..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild2_problematisch" class="frage-label">Was findest du problematisch?</label>
+                <textarea id="bild2_problematisch" name="bild2_problematisch" class="antwort-feld" placeholder="Kritische Aspekte..."></textarea>
+            </div>
+        </div>
+        
+        <!-- Bild 3 (optional) -->
+        <div class="bild-section">
+            <div class="bild-header">
+                <span class="bild-icon">📸</span>
+                <span>BILD 3 (optional)</span>
+                <div class="station-nummer-container">
+                    <span style="color: #667eea; font-weight: bold;">Station Nr.:</span>
+                    <input type="text" name="station_3" class="station-nummer-input" placeholder="3" maxlength="3">
+                </div>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild3_was" class="frage-label">Was siehst du?</label>
+                <textarea id="bild3_was" name="bild3_was" class="antwort-feld" placeholder="Beschreibe, was du auf dem Bild siehst..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild3_verwendung" class="frage-label">Wofür könnte es verwendet werden?</label>
+                <textarea id="bild3_verwendung" name="bild3_verwendung" class="antwort-feld antwort-feld-gross" placeholder="Erkläre mögliche Anwendungen..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild3_positiv" class="frage-label">Was gefällt dir daran?</label>
+                <textarea id="bild3_positiv" name="bild3_positiv" class="antwort-feld" placeholder="Positive Aspekte..."></textarea>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="bild3_problematisch" class="frage-label">Was findest du problematisch?</label>
+                <textarea id="bild3_problematisch" name="bild3_problematisch" class="antwort-feld" placeholder="Kritische Aspekte..."></textarea>
+            </div>
+        </div>
+        
+        <!-- Lieblingsbild -->
+        <div class="lieblings-section">
+            <div class="lieblings-header">
+                <span class="lieblings-icon">⭐</span>
+                <span>MEIN LIEBLINGSBILD</span>
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="lieblings_station" class="frage-label">Station Nr.:</label>
+                <input type="text" id="lieblings_station" name="lieblings_station" class="lieblings-station-input" placeholder="Nr." maxlength="3">
+            </div>
+            
+            <div class="frage-gruppe">
+                <label for="lieblings_grund" class="frage-label">Das würde ich gerne haben, weil:</label>
+                <textarea id="lieblings_grund" name="lieblings_grund" class="antwort-feld antwort-feld-gross" placeholder="Begründe deine Wahl..."></textarea>
+            </div>
+        </div>
+        
+        <!-- Zukunfts-Reflexion -->
+        <div class="reflexion-section">
+            <div class="reflexion-header">
+                <span class="reflexion-icon">💭</span>
+                <span>ZUKUNFTS-GEDANKEN</span>
+            </div>
+            
+            <div class="reflexion-grid">
+                <div class="reflexion-box reflexion-positiv">
+                    <label for="leben_einfacher" class="frage-label" style="color: #155724;">Das Leben wird einfacher, weil:</label>
+                    <textarea id="leben_einfacher" name="leben_einfacher" class="antwort-feld antwort-feld-gross" placeholder="Positive Zukunftsaspekte..."></textarea>
+                </div>
+                
+                <div class="reflexion-box reflexion-negativ">
+                    <label for="leben_schwieriger" class="frage-label" style="color: #721c24;">Das Leben wird schwieriger, weil:</label>
+                    <textarea id="leben_schwieriger" name="leben_schwieriger" class="antwort-feld antwort-feld-gross" placeholder="Kritische Zukunftsaspekte..."></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Präsentations-Vorbereitung -->
+        <div class="praesentation-section">
+            <div class="praesentation-header">
+                <span class="praesentation-icon">🎤</span>
+                <span>PRÄSENTATION - Vorbereitung (20 Sekunden)</span>
+            </div>
+            
+            <div class="praesentation-text">Bereite deinen kurzen Vortrag vor:</div>
+            
+            <div style="margin-bottom: 12px;">
+                <label for="praesentation_kann" style="font-weight: bold; display: block; margin-bottom: 5px;">"Mein Lieblingsobjekt kann..."</label>
+                <input type="text" id="praesentation_kann" name="praesentation_kann" class="praesentation-input" placeholder="z.B. Menschen beim Lernen helfen">
+            </div>
+            
+            <div>
+                <label for="praesentation_hilft" style="font-weight: bold; display: block; margin-bottom: 5px;">"In 20 Jahren hilft es Menschen beim..."</label>
+                <input type="text" id="praesentation_hilft" name="praesentation_hilft" class="praesentation-input" placeholder="z.B. Arbeiten, Kommunizieren, Entspannen">
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer-tip">
+            💡 <strong>Tipp:</strong> Laufe durch die Gallery, lass dich inspirieren und denke kreativ!<br>
+            💾 Deine Eingaben werden automatisch gespeichert.
+        </div>
+    </form>
+    
+    <!-- Auto-Save Indicator -->
+    <div id="save_indicator" class="save-indicator">💾 Gespeichert</div>
+    
+    <!-- WiB iPad Storage System -->
+    <script src="../../../../js/wib-ipad-storage.js"></script>
+    
+    <script>
+        // Formular-spezifische Konfiguration für Zukunfts-Gallery
+        document.addEventListener('DOMContentLoaded', function() {
+            // Datum automatisch auf heute setzen
+            const datumField = document.getElementById('datum');
+            if (datumField && !datumField.value) {
+                datumField.value = new Date().toISOString().split('T')[0];
+            }
+            
+            // Auto-Save Indicator
+            const saveIndicator = document.getElementById('save_indicator');
+            
+            function showSaveIndicator() {
+                saveIndicator.classList.add('show');
+                setTimeout(() => {
+                    saveIndicator.classList.remove('show');
+                }, 2000);
+            }
+            
+            // Custom save notification für dieses Formular
+            if (window.wibStorage) {
+                const originalSave = window.wibStorage.showSaveNotification;
+                window.wibStorage.showSaveNotification = function(message, type) {
+                    if (type !== 'error') {
+                        showSaveIndicator();
+                    }
+                    // Fallback auf original notification
+                    originalSave.call(this, message, type);
+                };
+            }
+            
+            // Focus-Management für bessere iPad-Nutzung
+            document.addEventListener('focusin', function(e) {
+                if (e.target.matches('input, textarea')) {
+                    e.target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+            
+            // Touch-optimierte Textarea-Größe
+            document.querySelectorAll('textarea').forEach(textarea => {
+                textarea.addEventListener('input', function() {
+                    this.style.height = 'auto';
+                    this.style.height = Math.max(this.scrollHeight, 45) + 'px';
+                });
+            });
+            
+            console.log('Zukunfts-Gallery Laufzettel iPad-Version geladen');
+        });
+        
+        // Export-Funktion für Lehrer
+        function exportGalleryData() {
+            if (window.wibStorage) {
+                window.wibStorage.exportAllData();
+            }
+        }
+        
+        // Debug-Info
+        function showFormData() {
+            const formData = new FormData(document.getElementById('zukunfts_gallery_form'));
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            console.log('Current Form Data:', data);
+            alert('Form Data logged to console');
+        }
+    </script>
+</body>
+</html>

@@ -1,7 +1,45 @@
+# ===== PRIVATE INFRASTRUKTUR - NIEMALS COMMITEN =====
+PRIVATE_INFRASTRUCTURE/
+**/PRIVATE_INFRASTRUCTURE/
+PRIVATE_NICHT_IN_GIT/
+**/PRIVATE_NICHT_IN_GIT/
+
+# Persönliche und charakterbezogene Dateien
+*persönlich*
+*privat*
+*Persönlichkeit*
+*Charakter*
+*Biografie*
+*biografisch*
+*Authentizität*
+*Ideologie*
+*Weltanschauung*
+*theoretischer_unterbau*
+*AKADEMISCH*
+
+# Strategische Analysen (sensibel)
+*Strategieanalyse_INTERN*
+*Gegner_Analyse*
+*Schwachstellen*
+*Risiko_Management_INTERN*
+*VERTRAULICH*
+*CONFIDENTIAL*
+
+# Zettelkasten-Inhalte (falls versehentlich kopiert)
+*Zettelkasten*
+*Baudrillard*
+*Systemtheorie_PRIVAT*
+
+# Wahlkampf-spezifisch (falls relevant)
+*Wahlkampf_PRIVAT*
+*GEW_INTERN*
+*Cannabis*
+*politisch_sensibel*
+
+# ===== BESTEHENDE SNF-REPOSITORY IGNORES =====
 node_modules/
 *.pdf
 *.pptx
-node_modules/
 .DS_Store
 notizen/anleitungen/03_Bücherregal/
 .env
