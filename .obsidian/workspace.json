@@ -103,7 +103,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       },
       {
         "id": "5efc95c3a28a5a39",
@@ -194,16 +194,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "unterricht/Hospitationen/6c/6c_Hospitation_Schülerbeobachtungen.md",
+                "file": "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Zukunftswerkstatt_Kulturtechniken_v2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6c_Hospitation_Schülerbeobachtungen"
+              "title": "04_UE_Zukunftswerkstatt_Kulturtechniken_v2"
+            }
+          },
+          {
+            "id": "699a0e54c701e6df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "WEITERGEHTS_ARCHITEKTUR/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -260,7 +274,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.50312423706055
+    "width": 239.50312423706055
   },
   "right": {
     "id": "a198139a98d2334a",
@@ -353,20 +367,32 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7bb410c7beff6c6b",
+  "active": "699a0e54c701e6df",
   "lastOpenFiles": [
+    "WEITERGEHTS_ARCHITEKTUR/01_Projektvision.md",
+    "WEITERGEHTS_ARCHITEKTUR/03_Systemarchitektur.md",
+    "WEITERGEHTS_ARCHITEKTUR/05_Implementierungsanforderungen.md",
+    "WEITERGEHTS_ARCHITEKTUR/CHANGELOG.md",
+    "seminarcloud/Seminare/24-25/Seminar_Informatik/Inf9_Inf10_Grundlegende Kompetenzen und Lernbereiche.md",
+    "WEITERGEHTS_ARCHITEKTUR/04_PATA_Spezifikation.md",
+    "WEITERGEHTS_ARCHITEKTUR/02_Problemanalyse.md",
+    "WEITERGEHTS_ARCHITEKTUR/README.md",
+    "WEITERGEHTS_ARCHITEKTUR",
+    "unterricht/Hospitationen/6c/6c_Hospitation_14_07_2025.md",
+    "seminarcloud/Seminare/24-25/Seminar_Informatik",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Zukunftswerkstatt_Kulturtechniken_v2.md",
+    "unterricht/Hospitationen/6c/6c_Hospitation_Schülerbeobachtungen.md",
+    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/KI_Bilder_Generierungs_Prompts.md",
     "chat_transitions/SESSION_TRANSITION_WiB_iPad_Integration_FINAL_2025-07-22.md",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/image.png",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft_Informieren_2.png",
     "chat_transitions/SESSION_TRANSITION_WiB_iPad_Final_2025-07-22.md",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Laufzettel_Zukunfts_Gallery_v2_iPad.html",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft_Informieren.png",
-    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/KI_Bilder_Generierungs_Prompts.md",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Zukunft Organisieren.png",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_Materialien/Laufzettel_Zukunfts_Gallery_v1.html",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Kulturtechnik_Zukunft_bewerten_GLNW_v2.md",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Technik_bewerten_GLNW.md",
-    "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Zukunftswerkstatt_Kulturtechniken_v2.md",
     "unterricht/WiB5b_Technik_Sequenz/04_Technik in der Zukunft bewerten/04_UE_Zukunftswerkstatt_Kulturtechniken_v1.md",
     "unterricht/Hospitationen/6c/6c_Hospitation_Generelle Beobachtungen.md",
     "unterricht/WiB5b_Technik_Sequenz/README_iPad_Integration.md",
@@ -382,23 +408,11 @@
     "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_UNTERHALTEN_v2.html",
     "unterricht/Hospitationen/6c/6c_Hospitation_21_07_2025.md",
     "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/README_VOLLSTÄNDIG_v3.md",
-    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/AB_PRODUZIEREN_v2.html",
     "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/MATERIAL_STATUS_v3.md",
     "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_UE_Kulturtechniken_entschluesseln_v3.md",
-    "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/WiB5b_Technik_Kulturtechnik_Tafelbild.pdf",
-    "unterricht/Hospitationen/6c/6c_Hospitation_Schülerbeobachtungen.md",
-    "unterricht/Hospitationen/6c/6c_Hospitation_14_07_2025.md",
     "kanban/Board_3_Meta_Prozesse_KI_System.md",
-    "GEW_Personalrat_Wahlkampf/GEW_Schulsanierung/GEW_Argumentationsgrundlage_Schulsanierung_Eichstätt.md",
     "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/03_Materialien/kulturtechnik_kommunizieren.png",
     "unterricht/WiB5b_Technik_Sequenz/03_Kulturtechniken in der Vergangenheit und heute/html-modules/png-exports/forschungsbogen_organisieren.png",
-    "seminarcloud/Seminare/24-25/Seminar_Trainingsraummethode_Auszeitsystem/Trainingsraummethode_Umfassende_Ausarbeitung.md",
-    "unterricht/Hospitationen/6c/6c_Hospitation_18_07_2025.md",
-    "GEW_Personalrat_Wahlkampf/GEW_Schulsanierung/GEW_Argumentation_Schulasanierung_Eichstätt selbst geschrieben.md",
-    "GEW_Personalrat_Wahlkampf/GEW_claude_desktop_instructions/GEW_Personalrat_Wahlkampf_Claude_Instructions.md",
-    "notizen/gpg/didaktik/geographie/👨‍🏫 Unterrichtsmethoden.md",
-    "notizen/gpg/didaktik/geographie/☝️ Unterrichtsprinzipien.md",
-    "notizen/gpg/didaktik/geographie/vernetzendes Denken.md",
     "Bildschirmfoto 2025-07-17 um 09.37.19.png",
     "unterricht/GPG5b_LB4_2_Antikes_Griechenland/GPG5b_LB4_2_6_Transfer_Politik_heute/Material/html_modules/png exports/Classroom_Screen_Stundenfrage.png"
   ]

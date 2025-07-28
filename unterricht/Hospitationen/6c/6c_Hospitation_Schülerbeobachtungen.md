@@ -67,7 +67,7 @@
 ### Artem 
 - Schüchtern aber kompetent
 - DaZ
-- Heftführung/Schriftbild schlampig 
+- Heftführung/Schriftbild schlampig
 
 ### Nazar: 
 - Schüchtern aber kompetent
@@ -86,7 +86,9 @@
 - Neben Milana, funktioniert gut 
 
 ### Malak 
-
+- Kommt von der G-Schule, niedriger IQ 
+- Praktische Intelligenz 
+- 
 ### Beatrice
 - Kam während dem Schuljahr 
 - 
